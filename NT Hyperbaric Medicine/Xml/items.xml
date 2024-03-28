@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+ <!-- Calyxanide override -->
+  <Override>
+  <Calyxanide name="" identifier="calyxanide" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
+    <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.03" />
+    <PreferredContainer primary="medcab" secondary="medcontainer"/>
+    <Price baseprice="510">
+      <Price storeidentifier="merchantoutpost" minavailable="5" />
+      <Price storeidentifier="merchantcity" minavailable="5" />
+      <Price storeidentifier="merchantresearch" minavailable="7" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.1" minavailable="5" />
+      <Price storeidentifier="merchantmine" multiplier="1.1" minavailable="5" />
+      <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="7" />
+      <Price storeidentifier="merchanthusk" minavailable="3" maxavailable="5">
+        <Reputation faction="huskcult" min="30"/>
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" >
+      <RequiredSkill identifier="medical" level="22" />
+      <RequiredItem identifier="huskeggs" />
+      <RequiredItem identifier="antibiotics" />
+      <RequiredItem identifier="stabilozine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="antibiotics" />
+      <Item identifier="stabilozine" />
+    </Deconstruct>
+    <SuitableTreatment identifier="huskinfection" suitability="100" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="10.2" waterdragcoefficient="1"/>
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <RequiredSkill identifier="medical" level="38" />
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
+      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
+        <Conditional huskinfection="lt 100.0" />
+        <Affliction identifier="af_calyxanide" amount="100" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
+        <Conditional huskinfection="lt 100.0" />
+        <Affliction identifier="af_calyxanide" amount="100" />
+      </StatusEffect>
+      <!-- Injecting a still-conscious Husk will only piss it off and kill the "conscious" faster -->
+      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
+        <Conditional huskinfection="eq 100.0" />
+        <Affliction identifier="organdamage" amount="3" />
+      </StatusEffect>
+      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0" comparison="or">
+        <Conditional IsHusk="true" />
+        <Affliction identifier="organdamage" amount="4" />
+      </StatusEffect>
+      <!-- vfx & sfx -->
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Conditional entitytype="eq Character"/>
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <Conditional entitytype="eq Character"/>
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+        <Affliction identifier="stun" amount="0.1" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+    <SkillRequirementHint identifier="medical" level="38" />
+  </Calyxanide>
+  </Override>
+
+  <!-- Ritual lantern override -->
+  <Override>
+  <Item name="" identifier="rituallantern" category="Equipment" maxstacksize="12" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,huskcult" impactsoundtag="impact_soft" isshootable="true">
+    <PreferredContainer primary="crewcab"/>
+    <Price baseprice="100" canbespecial="false" sold="false">
+      <Price storeidentifier="merchanthusk" minavailable="1" maxavailable="4" sold="true">
+        <Reputation faction="huskcult" min="70"/>
+      </Price>
+    </Price>
+    <Deconstruct time="5"/>
+    <InventoryIcon texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="169,137,45,60" origin="0.5,0.5" />
+    <Sprite texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="218,137,41,54" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="50" density="12" />
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="70,-70" handle1="-5,10" holdangle="0" throwforce="4.0" aimpos="30,-30" msg="ItemMsgPickUpSelect" />
+    <LightComponent LightColor="219,100,239,80" Flicker="0.2" pulsefrequency="0.2" pulseamount="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnUse" targettype="This" IsOn="true" />
+      <StatusEffect type="OnActive" targettype="This" Condition="-0.25" />
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional PhysicsBodyActive="eq true" />
+        <ParticleEmitter particle="flare" particlespersecond="15" scalemin="0.1" scalemax="0.1" />
+        <ParticleEmitter particle="ritualsmoke" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="10" velocitymax="150" scalemin="0.5" scalemax="1.0" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="NearbyCharacters" range="800" interval="0.5" disabledeltatime="true">
+        <Affliction identifier="disguisedashusk" amount="1.0" />
+        <Affliction identifier="husklamp" amount="5"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+    </LightComponent>
+  </Item>
+  </Override>
+
+  <Item name="." identifier="ntsfx_huskhurt" category="hidden" description=".">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="0.3" stackable="false">
+        <Sound file="Content/Characters/Husk/HUSK_damage1.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Characters/Husk/HUSK_damage2.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Characters/Husk/HUSK_damage3.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="0.3" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <Item name="." identifier="ntsfx_huskdeath" category="hidden" description=".">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="0.3" stackable="false">
+        <Sound file="Content/Characters/Husk/HUSK_death1.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Characters/Husk/HUSK_death2.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="0.3" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+</Items>

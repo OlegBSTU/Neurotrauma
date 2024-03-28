@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+<!-- Calyxanide buff, only visible on hematology analyzer -->
+  <Affliction
+    name=""
+    identifier="af_calyxanide"
+    description=""
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"
+    affectmachines="false"
+    showiconthreshold="1000"
+    showinhealthscannerthreshold="1000"
+    MedicalSkillGain="0.01">
+    <Effect minstrength="0" maxstrength="600"
+      strengthchange="-0.5"
+      resistancefor="huskinfection"
+      minresistance="0.99"
+      maxresistance="0.99"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- husk health during surgery, a.k.a. the reverse treatment progress bar -->
+  <Affliction
+    name=""
+    identifier="surgery_huskhealth"
+    description=""
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"
+    showiconthreshold="0.1"
+    indicatorlimb="Torso"
+    showinhealthscannerthreshold="1000"
+    iconcolors="60,0,195,255">
+    <Description
+        textidentifier="afflictiondescription.surgery_huskhealth.low"
+        minstrength="0"
+        maxstrength="20"/>
+    <Description
+        textidentifier="afflictiondescription.surgery_huskhealth.medium"
+        minstrength="20"
+        maxstrength="90"/>
+    <Description
+        textidentifier="afflictiondescription.surgery_huskhealth.high"
+        minstrength="90"
+        maxstrength="100"/>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,7" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Bones Sawed -->
+  <Affliction
+    name=""
+    identifier="bonecuttorso"
+    description=""
+    healableinmedicalclinic="false"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="1"
+    indicatorlimb="Torso"
+    iconcolors="84,211,211,255;84,211,211,255">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
+        <Affliction identifier="traumaticshock" amount="1.5"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,7" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <Override>
+  <AfflictionHusk
+    name="Husk infection"
+    identifier="huskinfection"
+    description="Something dark and unpleasant moves in the mouth. They are rendered completely mute, save for occasional clicking sounds apparently emanating from deep within the throat."
+    type="alieninfection"
+    targets="human,crawler"
+    huskedspeciesname="husk"
+    causeofdeathdescription="Taken over by a husk parasite"
+    selfcauseofdeathdescription="You have been taken over by the husk parasite."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    showiconthreshold="40"
+    showinhealthscannerthreshold="0.1"
+    karmachangeonapplied="-1"
+    maxstrength="100"
+    transferbuffs="true"
+    achievementonremoved="healhusk"
+    dormantthreshold="50"
+    activethreshold="75"
+    transformthresholdondeath="75"
+    transitionthreshold="100"
+    IgnoreTreatmentIfAfflictedBy="husktransformimmunity,husktransformimmunitytemporary"
+    healcostmultiplier="2.5"
+    basehealcost="500"
+    iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+     <Description
+      textidentifier="afflictiondescription.huskinfection.dormant.self"
+      target="Self"
+      minstrength="0"
+      maxstrength="50"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.transition.self"
+      target="Self"
+      minstrength="50"
+      maxstrength="75"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.active.self"
+      target="Self"
+      minstrength="75"
+      maxstrength="99"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.dormant.other"
+      target="OtherCharacter"
+      minstrength="0"
+      maxstrength="50"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.transition.other"
+      target="OtherCharacter"
+      minstrength="50"
+      maxstrength="75"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.active.other"
+      target="OtherCharacter"
+      minstrength="75"
+      maxstrength="99"/>
+    <Description
+      textidentifier="afflictiondescription.huskinfection.final"
+      minstrength="99"
+      maxstrength="101"/>
+    <Effect minstrength="0" maxstrength="75"
+      maxvitalitydecrease="0"
+      strengthchange="0.3"
+      minbodytint="195,195,195,0"
+      maxbodytint="195,195,195,150"/>
+    <Effect minstrength="75" maxstrength="100"
+      maxvitalitydecrease="0"
+      strengthchange="0.3"
+      minbodytint="195,195,195,150"
+      maxbodytint="195,195,195,200"
+      tag="huskinfected"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="60,107,195,255" origin="0,0"/>
+  </AfflictionHusk>
+  </Override>
+
+  <Affliction
+    name=""
+    identifier="husklamp"
+    description=""
+    isbuff="true"
+    limbspecific="false"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="0.1"
+    maxstrength="10">
+    <Effect minstrength="0" maxstrength="10"
+      strengthchange="-1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="huskstasis"
+    description=""
+    isbuff="true"
+    limbspecific="false"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="0.1"
+    maxstrength="10">
+    <Effect minstrength="0" maxstrength="10"
+      resistancefor="bloodloss"
+      minresistance="0.5"
+      maxresistance="0.5">
+      <StatusEffect target="Character" comparison="and">
+        <ReduceAffliction type="damage" amount="1"/>
+        <ReduceAffliction type="bleeding" amount="1"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+</Afflictions>
