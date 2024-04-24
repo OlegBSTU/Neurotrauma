@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+  <Item identifier="nitroxtank" />
+  <Item identifier="helioxtank" />
+  <Item identifier="hydroxtank" />
+  <Item identifier="alg" />
+  <Item identifier="rerstank" />
+  <Item identifier="klonopin" />
+  <Item identifier="recoverychamber" />
+  <Item identifier="strobelight" />
+  <Item identifier="reres" />
+  <Item identifier="tankrefillstation" />
+  <Item identifier="divingcomputer" />
+  <Item identifier="recoveryvest" />
+  <Item identifier="twinbottleupgrade" />
+  <Item identifier="algsuit" />
+
+</Items>

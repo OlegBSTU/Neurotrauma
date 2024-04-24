@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="NT Hyperbarics" path="%ModDir%/filelist.xml" corepackage="false">
+  <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
+  <Item file="%ModDir%/Xml/items.xml" />
+  <Text file="%ModDir%/Localization/English/English.xml" />
+	<None file="%ModDir%/Lua/Autorun/init.lua" />
+</contentpackage>

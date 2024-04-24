@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+  <Affliction
+      identifier="hypercapnia">
+  </Affliction>
+
+  <Affliction
+    identifier="decompressionsickness">
+  </Affliction>
+
+  <Affliction
+    identifier="barotrauma">
+<!-- Actually, you probably would want to override pressure here instead, but I'll leave that to someone else -->
+  </Affliction>
+
+  <Affliction
+    identifier="depthrush">
+<!-- I only have the german version of the suggestion document and didnt know how else to translate it lol -->
+  </Affliction>
+
+</Afflictions>
