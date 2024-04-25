@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<!-- Translated by profole / Übersetzt von profole -->
+
+<!-- ITEMS -->
+
+<entityname.sharkricator>Ha-j-nator</entityname.sharkricator>
+<entitydescription.sharkricator>Fabriziert Haj Items</entitydescription.sharkricator>
+
+<entityname.blahajaltar>Blahaj Altar</entityname.blahajaltar>
+<entitydescription.blahajaltar>Manifestiert einen Teil des hajes wahre Kraft.</entitydescription.blahajaltar>
+
+<entityname.blahajplus>Blahaj +</entityname.blahajplus>
+<entitydescription.blahajplus>Dreifach so groß, dreifach to akzeptant. Denke daran einen Kopfschutz während Blahaj Kämpfen zu tragen.</entitydescription.blahajplus>
+
+<entityname.blahajplusplus>Blahaj ++</entityname.blahajplusplus>
+<entitydescription.blahajplusplus>Manche beschreiben die Erfahrung mit diesem Ding wie mit einer hydraulische Presse zu kuscheln.</entitydescription.blahajplusplus>
+
+<entityname.blahajarmor>Blahaj Rüstung</entityname.blahajarmor>
+<entitydescription.blahajarmor>Sorgt für zusätlichen Schutz und Effekte basierend auf dem Inhalt.</entitydescription.blahajarmor>
+
+<entityname.bpposter_blahaj1>Blahaj Poster 1</entityname.bpposter_blahaj1>
+<entitydescription.bpposter_blahaj1>Der großartige Blahaj.
+Postereffekt: Schadensresistenz
+Rüstungseffekt: Schadensresistenz</entitydescription.bpposter_blahaj1>
+
+<entityname.bpposter_blahaj2>Blahaj Poster 2</entityname.bpposter_blahaj2>
+<entitydescription.bpposter_blahaj2>Ein müder Blahaj.
+Postereffekt: Geschwindigkeitsschub
+Rüstungseffekt: Geschwindigkeitsschub</entitydescription.bpposter_blahaj2>
+
+<entityname.bpposter_blahaj3>Blahaj Poster 3</entityname.bpposter_blahaj3>
+<entitydescription.bpposter_blahaj3>Freundf des Blahaj.
+Postereffekt: Regeneration
+Rüstungseffekt: Regeneration</entitydescription.bpposter_blahaj3>
+
+<entityname.bpposter_superblahaj>Super Blahaj Poster</entityname.bpposter_superblahaj>
+<entitydescription.bpposter_superblahaj>Edler Blahaj
+Postereffekt: Alle
+Rüstungseffekt: Alle</entitydescription.bpposter_superblahaj>
+
+<entityname.bpposter_trans>Transflaggenposter</entityname.bpposter_trans>
+<entitydescription.bpposter_trans>Postereffekt: Fähigkeitsschub; Erhöhte Akzeptanz Rüstungseffekt: Fähigkeitsschub; Erhöhte Akzeptanz </entitydescription.bpposter_trans>
+
+<entityname.blahajrifle>Haj-Wehr</entityname.blahajrifle>
+<entitydescription.blahajrifle>Manchmal ist Angriff die beste Verteidigung.</entitydescription.blahajrifle>
+
+<entityname.blahajriflemagazine>Haj-Wehr Magazin</entityname.blahajriflemagazine>
+<entitydescription.blahajriflemagazine>Sieht aus wie eine Flosse! Wie süß!</entitydescription.blahajriflemagazine>
+
+<entityname.sharkmask>Haj-Maske</entityname.sharkmask>
+<entitydescription.sharkmask>Ermöhlicht dem Träger die RAM-Lüftung (Was auch immer das ist. LG der Übersetzer).</entitydescription.sharkmask>
+
+<entityname.sharkscooter>Haj-Scooter</entityname.sharkscooter>
+<entitydescription.sharkscooter>Dieser aquadynamische Unterwasserscooter ist im Gegensatz zum Standardgerät schneller.</entitydescription.sharkscooter>
+
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.blahajpower>Blahaj Kraft</afflictionname.blahajpower>
+<afflictiondescription.blahajpower>Blahaj wacht über dich.</afflictiondescription.blahajpower>
+
+<afflictionname.blahajattac>Blahaj Angriff</afflictionname.blahajattac>
+<afflictiondescription.blahajattac>Blahaj ermächtigt dich.</afflictiondescription.blahajattac>
+
+<afflictionname.blahajcrisis>Identitätskrise</afflictionname.blahajcrisis>
+<afflictiondescription.blahajcrisis>Blahaj beschleunigt deine Charakterentwicklung.</afflictiondescription.blahajcrisis>
+
+<afflictionname.blahajprotecc>Blahaj Schutz</afflictionname.blahajprotecc>
+<afflictiondescription.blahajprotecc>Blahaj beschützt dich.</afflictiondescription.blahajprotecc>
+
+<afflictionname.blahajgotbacc>Blahaj steht dir bei</afflictionname.blahajgotbacc>
+<afflictiondescription.blahajgotbacc>Das Schicksal lässt Kugeln um dich verschwinden.</afflictiondescription.blahajgotbacc>
+
+<afflictionname.blahajspeed>Blahaj Geschwindigkeit</afflictionname.blahajspeed>
+<afflictiondescription.blahajspeed>Blahaj hilft dir da zu sein, wo du sein willst.</afflictiondescription.blahajspeed>
+
+<afflictionname.blahajregen>Blahaj Regeneration</afflictionname.blahajregen>
+<afflictiondescription.blahajregen>Blahaj hilft dir bei der Heilung.</afflictiondescription.blahajregen>
+
+
+<!-- JOBS -->
+
+<jobname.swedic>Schwede</jobname.swedic>
+<jobdescription.swedic>Du bist dir unsicher wieso jemand der so besessen ist überhaupt auf ein Atom-U-Boot gelassen. Aber hier sind wir nun, der Kapitän lässt ihn bleiben. Einsweilen.</jobdescription.swedic>
+
+<skillname.swedical>Schwedisch</skillname.swedical>
+
+<!-- TALENTS -->
+
+<talenttree.shark>Haj</talenttree.shark>
+<talenttree.obsession>Besessenheit</talenttree.obsession>
+<talenttree.posterperson>Poster Person</talenttree.posterperson>
+
+
+
+<talentname.ntbp_divinglessions>Tauchstunden</talentname.ntbp_divinglessions>
+<talentname.ntbp_cuddles>Umarmungen</talentname.ntbp_cuddles>
+<talentname.ntbp_fluffy>Fluffig</talentname.ntbp_fluffy>
+<talentname.ntbp_mighty>Mächtig</talentname.ntbp_mighty>
+<talentname.ntbp_fangs>Haj Zähne</talentname.ntbp_fangs>
+<talentname.ntbp_supplyanddemand>Angebot und Nachfrage</talentname.ntbp_supplyanddemand>
+<talentdescription.ntbp_supplyanddemand>Erhalte eine [probability]% Chance in Monstern Blahajs zu finden.</talentdescription.ntbp_supplyanddemand>
+<talentname.ntbp_handholding>Händchen Halten</talentname.ntbp_handholding>
+<talentname.ntbp_restock>Aufstocken</talentname.ntbp_restock>
+<talentdescription.ntbp_restock>Erhalte einen Blahaj am Ende jeder Runde in der du eine Mission erfüllt hast.</talentdescription.ntbp_restock>
+
+
+
+<talentname.ntbp_identitycrisis>Identitätskrise</talentname.ntbp_identitycrisis>
+<talentdescription.ntbp_identitycrisis>Die Kraft des Blahaj verbessert deine Fähigkeiten.</talentdescription.ntbp_identitycrisis>
+
+<talentname.ntbp_ramventilation>RAM-Lüftung</talentname.ntbp_ramventilation>
+<talentdescription.ntbp_ramventilation>Bewegungen im Wasser heilen Sauerstoffmangel.</talentdescription.ntbp_ramventilation>
+
+<talentname.ntbp_hajdivingops>H.A.J. Tauchoperation</talentname.ntbp_hajdivingops>
+
+<talentname.ntbp_advancedcuddles>Fortgeschrittene Umarmungen</talentname.ntbp_advancedcuddles>
+<talentdescription.ntbp_advancedcuddles>Die Chance auf schwere Verletzung kann auf Blahaj Kraft basierend bist zu 70% verringert werden.</talentdescription.ntbp_advancedcuddles>
+
+
+
+<talentname.ntbp_blahajpower>Erwachen</talentname.ntbp_blahajpower>
+<talentdescription.ntbp_blahajpower>Schaltet die Blahaj Kraft frei, welche Bewegungsgeschwindigkeit erhöht und mit den Blahajs in deinem Inventar skaliert.</talentdescription.ntbp_blahajpower>
+
+<talentname.ntbp_heprotecc>Er bschützt</talentname.ntbp_heprotecc>
+<talentdescription.ntbp_heprotecc>Blahaj Kraft bringt auch erhöhte Schadensresistenz.</talentdescription.ntbp_heprotecc>
+
+<talentname.ntbp_heattacc>Er greift an</talentname.ntbp_heattacc>
+<talentdescription.ntbp_heattacc>Blahaj Kraft bringt auch erhöhten Nahkampfschaden.</talentdescription.ntbp_heattacc>
+
+<talentname.ntbp_gotbacc>Er steht uns bei</talentname.ntbp_gotbacc>
+<talentdescription.ntbp_gotbacc>Blahaj Kraft lässt dich ab und zu ein paar Schüsse ignorieren.</talentdescription.ntbp_gotbacc>
+
+<talentname.ntbp_altar>Wahrer Anhänger des Haj</talentname.ntbp_altar>
+
+
+
+<talentname.ntbp_posterascension>Poster Aufstieg</talentname.ntbp_posterascension>
+<talentdescription.ntbp_posterascension>Schaltet Postereffekte frei. Crewmitglieder in der Nähe von Postern erhalten positive Effekte.</talentdescription.ntbp_posterascension>
+
+<talentname.ntbp_neonpaint>Neonfarben</talentname.ntbp_neonpaint>
+<talentdescription.ntbp_neonpaint>Verdoppelt die Reichweite von Postereffekten.</talentdescription.ntbp_neonpaint>
+
+<talentname.ntbp_gimmickbridge>Gimmick Brücke</talentname.ntbp_gimmickbridge>
+<talentdescription.ntbp_gimmickbridge>Die Stärke von Postereffekten wird von der Blahaj Kraft beeinflusst.</talentdescription.ntbp_gimmickbridge>
+
+<talentname.ntbp_freehandouts>Gratisverteilung</talentname.ntbp_freehandouts>
+<talentdescription.ntbp_freehandouts>Poster in deinem Inventar erhöhen die Blahaj Kraft.</talentdescription.ntbp_freehandouts>
+
+<!-- MISC -->
+
+<label.ba_start>Herstellen</label.ba_start>
+
+</infotexts>

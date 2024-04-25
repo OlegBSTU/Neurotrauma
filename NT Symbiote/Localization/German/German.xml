@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<!-- Translated by profole / Übersetzt von profole -->
+
+	<!-- Afflictions -->
+	<afflictionname.af_calyxanide>Calyxanid</afflictionname.af_calyxanide>
+	<afflictiondescription.af_calyxanide>Du solltest das nicht sehen.</afflictiondescription.af_calyxanide>
+
+	<afflictionname.surgery_huskhealth>Hüllenparasite</afflictionname.surgery_huskhealth>
+	<afflictiondescription.surgery_huskhealth.low>Der Parasit bewegt sich nicht mehr, ist aber immer noch da. Zeit in zu entfernen.</afflictiondescription.surgery_huskhealth.low>
+	<afflictiondescription.surgery_huskhealth.medium>Du hast den Parasiten geschwächt, aber reicht das aus...?</afflictiondescription.surgery_huskhealth.medium>
+	<afflictiondescription.surgery_huskhealth.high>Du siehst eine unruhige Masse von Tentakeln. Pass auf, sie könnten auf dich losgehen.</afflictiondescription.surgery_huskhealth.high>
+
+	<afflictionname.bonecuttorso>Gesägte Rippen</afflictionname.bonecuttorso>
+	<afflictiondescription.bonecuttorso>Die Rippen wurden aufgesägt. Man kann den Parasiten nun deutlich sehen.</afflictiondescription.bonecuttorso>
+
+	<afflictionname.husklamp>Rituallampen Dampf</afflictionname.husklamp>
+	<afflictiondescription.husklamp>Der stärkende Dampf der Rituallampe zieht in deine Nase.</afflictiondescription.husklamp>
+
+	<afflictionname.huskstasis>Symbiotenstase</afflictionname.huskstasis>
+	<afflictiondescription.huskstasis>Es scheint als würde der Parasite durch die Hölle gehen, nur um seinen Wirt am leben zu halten.</afflictiondescription.huskstasis>
+
+	
+</infotexts>

@@ -6,6 +6,7 @@
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Text file="%ModDir%/Localization/SimplifiedChinese/SimplifiedChinese.xml" />
 	<None file="%ModDir%/Lua/Autorun/init.lua" />
+  <Text file="%ModDir%/Localization/German/German.xml" />
   <None file="%ModDir%/Lua/Scripts/humanupdate.lua" />
   <None file="%ModDir%/Lua/Scripts/helperfunctions.lua" />
   <None file="%ModDir%/Lua/Scripts/items.lua" />
