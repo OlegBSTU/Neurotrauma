@@ -3,5 +3,6 @@
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
+  <Text file="%ModDir%/Localization/German/German.xml" />
 	<None file="%ModDir%/Lua/Autorun/init.lua" />
 </contentpackage>
