@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<!-- Translated by profole / Übersetzt von profole -->
+
+	<!-- ChemMaster 2k -->
+	<entityname.chemmaster>ChemMaster 2000</entityname.chemmaster>
+	<entitydescription.chemmaster>Eine Maschine die Pillen aus Zutaten herstellt.</entitydescription.chemmaster>
+	
+	<lua.chemerror.header>ChemMaster 2000 - FEHLER!:</lua.chemerror.header>
+	<lua.chemerror.invaliditem>{id} ist keine valide Zutat.</lua.chemerror.invaliditem>
+	<lua.chemerror.invalidcategory.base>{id} ist keine valide Pillenbasis.</lua.chemerror.invalidcategory.base>
+	<lua.chemerror.invalidcategory.binder>{id} ist kein valider Bindungsstoff.</lua.chemerror.invalidcategory.binder>
+	<lua.chemerror.invalidcategory.filler>{id} ist kein valider Füllstoff.</lua.chemerror.invalidcategory.filler>
+	<lua.chemerror.invalidcategory.active>{id} ist keine valide, aktive Zutat.</lua.chemerror.invalidcategory.active>
+	<lua.chemerror.invalidcategory.dye>{id} ist keine valider Pillenfarbstoff.</lua.chemerror.invalidcategory.dye>
+	<lua.chemerror.outputfull>Kein Platz im Ausgabeschacht.</lua.chemerror.outputfull>
+	<lua.chemerror.missingbase>Fehlende Pillenbasis.</lua.chemerror.missingbase>
+	<lua.chemerror.missingbinder>Fehlender Bindungsstoff.</lua.chemerror.missingbinder>
+	<lua.chemerror.missingactive>Fehlende, aktive Zutat.</lua.chemerror.missingactive>
+	<lua.chemerror.capacity>Diese Konfiguration hat ein maximum von {cap} aktiven Zutaten.</lua.chemerror.capacity>
+	<lua.chemerror.yield>Diese Konfiguration würde keine Pillen ausgeben.</lua.chemerror.yield>
+	<label.cm_makeone>Herstellen (Eine)</label.cm_makeone>
+	<label.cm_makeall>Herstellen (Maximum)</label.cm_makeall>
+	<label.cm_description>Pillenbeschreibung</label.cm_description>
+
+	<ItemMsgDetachCrowbar>Lösen (Brecheisen)</ItemMsgDetachCrowbar>
+	
+	<!-- Pill analyzer -->
+	<entityname.chemalyzer>Pillenanalysator</entityname.chemalyzer>
+	<entitydescription.chemalyzer>Analysiert die Zusammensetzung von Pillen.</entitydescription.chemalyzer>
+	<label.ca_analyze>Analysieren</label.ca_analyze>
+	<lua.chemalyzer.header>Zutaten:</lua.chemalyzer.header>
+	<label.ca_rename>Beschreibung ändern</label.ca_rename>
+	
+	<!-- pill combos -->
+	<pillcombo.antihusk>Antihülle</pillcombo.antihusk>
+	
+	<!-- other items -->
+	<entityname.custompill>Herkömmliche Pille</entityname.custompill>
+	<entityname.custompill_horsepill>Pferde-Pille</entityname.custompill_horsepill>
+	<entityname.custompill_tablets>Tabletten</entityname.custompill_tablets>
+	<entitydescription.custompill>Was für Effekte könnte diese Pille nur haben? Spoiler: Kein Tears Up.</entitydescription.custompill>
+	<entitydescription.custompill_horsepill>Relativ groß dafür, das man sie sich in den Mund schieben soll.</entitydescription.custompill_horsepill>
+	<entitydescription.custompill_tablets>So schlecht können die Effekt auch wiederrum nicht sein, oder?</entitydescription.custompill_tablets>
+	
+	<!-- containers -->
+	<entityname.antidotetoolbox>Gegenkiftkoffer</entityname.antidotetoolbox>
+	<entityname.machinetoolbox>Maschinenkoffer</entityname.machinetoolbox>
+	<entityname.bonetoolbox>Knochenkoffer</entityname.bonetoolbox>
+	<entityname.biohazardtoolbox>Biologischer Gefahrengutkoffer</entityname.biohazardtoolbox>
+	<entityname.bufftoolbox>Stärkungskoffer</entityname.bufftoolbox>
+	
+	<entityname.surgerycrate>Operationskiste</entityname.surgerycrate>
+	<entityname.antidotecrate>Gegengiftkiste</entityname.antidotecrate>
+	<entityname.machinecrate>Maschinenkiste</entityname.machinecrate>
+	<entityname.bonecrate>Knochenkiste</entityname.bonecrate>
+	<entityname.biohazardcrate>Biologische Gefahrengutkiste</entityname.biohazardcrate>
+	<entityname.buffcrate>Stärkungskiste</entityname.buffcrate>
+
+</infotexts>

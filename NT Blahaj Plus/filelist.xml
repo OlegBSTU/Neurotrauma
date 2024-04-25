@@ -3,6 +3,7 @@
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
+  <Text file="%ModDir%/Localization/German/German.xml" />
   <Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Talents file="%ModDir%/Xml/TalentsBlahaj.xml" />
   <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />

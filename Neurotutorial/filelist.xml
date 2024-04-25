@@ -2,5 +2,6 @@
 <contentpackage name="Neurotutorial" modversion="1.0.1" corepackage="False" gameversion="0.18.15.0">
   <Submarine file="%ModDir%/Mercy Hospital.sub" />
   <Text file="%ModDir%/Localization/English.xml" />
+  <Text file="%ModDir%/Localization/German.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
 </contentpackage>

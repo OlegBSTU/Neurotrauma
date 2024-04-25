@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<!-- Translated by profole / Übersetzt von profole -->
+
+  <!-- ITEMS -->
+  <!-- signal components -->
+
+  <entityname.nttut_subjectcomponent>Szenario Komponent</entityname.nttut_subjectcomponent>
+  <entitydescription.nttut_subjectcomponent>Benötigt Lua, kontrolliert Szenarien.</entitydescription.nttut_subjectcomponent>
+
+  <!-- connections -->
+  <connection.subject_scenario_in>szenario_ein</connection.subject_scenario_in>
+  <connection.subject_scenario_out>szenario_aus</connection.subject_scenario_out>
+  <connection.subject_state_out>zustand_aus</connection.subject_state_out>
+  <connection.subject_special_out>spezial_aus</connection.subject_special_out>
+
+  <roomname.simulacrum>Simulakrum/roomname.simulacrum>
+  <roomname.garden>Garten</roomname.garden>
+
+</infotexts>

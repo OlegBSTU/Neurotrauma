@@ -7,6 +7,7 @@
   <Text file="%ModDir%/Localization/Polish/Polish.xml" />
   <Text file="%ModDir%/Localization/French/French.xml" />
   <Text file="%ModDir%/Localization/Korean/Korean.xml" />
+  <Text file="%ModDir%/Localization/German/German.xml" />
 	<Text file="%ModDir%/Localization/Portuguese/Portuguese.xml" />
 	<Text file="%ModDir%/Localization/Turkish/Turkish.xml" />
 	<Text file="%ModDir%/Localization/Spanish/Spanish.xml" />
