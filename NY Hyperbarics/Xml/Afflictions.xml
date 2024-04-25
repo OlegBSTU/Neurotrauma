@@ -10,6 +10,18 @@
   </Affliction>
 
   <Affliction
+  identifier="decompressiontime">
+</Affliction>
+
+  <Affliction
+    identifier="osteonecrosis">
+  </Affliction>
+
+  <Affliction
+    identifier="arterialgasembolism">
+  </Affliction>
+
+  <Affliction
     identifier="barotrauma">
 <!-- Actually, you probably would want to override the vanilla pressure affliction here instead, but I'll leave that to someone else to decide -->
   </Affliction>
@@ -18,5 +30,7 @@
     identifier="depthrush">
 <!-- I only have the german version of the suggestion document and didnt know how else to translate it lol -->
   </Affliction>
+
+<!-- I am missing afflictions from the document here (at least I think so) but considering I suck at writing afflictions anyways, I'll just leave it here for someone else to do! -->
 
 </Afflictions>

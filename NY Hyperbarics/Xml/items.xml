@@ -297,11 +297,11 @@
   <Item identifier="hydroxcanister" />
 
 <!-- Dont know why we need the diving computer in the first place. New idea different from the one in the suggestion document:
-- Put depth indicator on handheld sonar (if it isnt already)
+- Put depth indicator on handheld sonar (if it isnt already, unsure rn)
 - People should be required to figure out their status on decompression time using symptoms
 - What gas you are using really isnt that hard to figure out, just fucking check
-- Current thing isnt required
-- Max tank depth should be in their description
+- Current indicator isnt required
+- Max tank depth should be in the tank descriptions
 -->
   <Item identifier="divingcomputer" />
 
