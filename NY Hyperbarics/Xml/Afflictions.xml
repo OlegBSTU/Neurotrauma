@@ -11,7 +11,7 @@
 
   <Affliction
     identifier="barotrauma">
-<!-- Actually, you probably would want to override pressure here instead, but I'll leave that to someone else -->
+<!-- Actually, you probably would want to override the vanilla pressure affliction here instead, but I'll leave that to someone else to decide -->
   </Affliction>
 
   <Affliction
