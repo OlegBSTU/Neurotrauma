@@ -57,229 +57,315 @@
   </Item>
 
   <Item name="" identifier="helioxtank" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-    <!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
-        <Price baseprice="75">
-          <Price storeidentifier="merchantoutpost" minavailable="10"/>
-          <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
-          <Price storeidentifier="merchantresearch" minavailable="10"/>
-          <Price storeidentifier="merchantmilitary" minavailable="10"/>
-          <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
-        </Price>
-        <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
-        <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
-        <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
-        <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
-        <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
-        <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
-        <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
-        <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
-        <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
-        <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
-        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
-    <!-- idk what displayname does lol, probably remove? -->
-        <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
-         <RequiredSkill identifier="mechanical" level="30" />
-    <!-- Skills should also be adjusted later -->
-         <RequiredItem identifier="oxygentank" mincondition="0.9" />
-         <RequiredItem identifier="lithium" />
-        </Fabricate>
-    <!-- Adjust later, if it should be available at vending machines at all -->
-        <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
-        <Deconstruct time="10">
-          <Item identifier="lithium" />
-        </Deconstruct>
-    <!-- Adjust later, basic oxygen tank is placeholder for now -->
-        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
-        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
-        <Body width="22" height="64" density="9.7" />
-    <!-- Adjust later, basic oxygen tank is placeholder for now -->
-        <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-    <!-- Its still oxygen, so it probably should still be flammable and explode -->
-          <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
-          <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
-            <Conditional HasStatusTag="onfire" />
-            <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
-            <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
-            <Explosion range="150.0" force="3" debris="true" >
-              <Affliction identifier="burn" strength="25" />
-              <Affliction identifier="stun" strength="5" />
-            </Explosion>  
-          </StatusEffect>
-        </Holdable>
-        <Quality>
-          <QualityStat stattype="Condition" value="0.1"/>
-        </Quality>
-      </Item>
+<!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="10"/>
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+      <Price storeidentifier="merchantresearch" minavailable="10"/>
+      <Price storeidentifier="merchantmilitary" minavailable="10"/>
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
+    </Price>
+    <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
+    <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
+    <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
+    <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
+    <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+    <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+<!-- idk what displayname does lol, probably remove? -->
+    <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
+      <RequiredSkill identifier="mechanical" level="30" />
+<!-- Skills should also be adjusted later -->
+      <RequiredItem identifier="oxygentank" mincondition="0.9" />
+      <RequiredItem identifier="lithium" />
+    </Fabricate>
+<!-- Adjust later, if it should be available at vending machines at all -->
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+    <Deconstruct time="10">
+      <Item identifier="lithium" />
+    </Deconstruct>
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+    <Body width="22" height="64" density="9.7" />
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+<!-- Its still oxygen, so it probably should still be flammable and explode -->
+      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+        <Conditional HasStatusTag="onfire" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+        <Explosion range="150.0" force="3" debris="true" >
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>  
+      </StatusEffect>
+    </Holdable>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
 
-      <Item name="" identifier="hydroxtank" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-        <!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
-            <Price baseprice="75">
-              <Price storeidentifier="merchantoutpost" minavailable="10"/>
-              <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
-              <Price storeidentifier="merchantresearch" minavailable="10"/>
-              <Price storeidentifier="merchantmilitary" minavailable="10"/>
-              <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
-            </Price>
-            <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
-            <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
-            <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
-            <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
-            <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
-            <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
-            <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
-            <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
-            <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
-            <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
-            <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
-        <!-- idk what displayname does lol, probably remove? -->
-            <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
-             <RequiredSkill identifier="mechanical" level="30" />
-        <!-- Skills should also be adjusted later -->
-             <RequiredItem identifier="oxygentank" mincondition="0.9" />
-             <RequiredItem identifier="lithium" />
-             <RequiredItem identifier="sodium" />
-            </Fabricate>
-        <!-- Adjust later, if it should be available at vending machines at all -->
-            <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
-            <Deconstruct time="10">
-              <Item identifier="lithium" />
-            </Deconstruct>
-        <!-- Adjust later, basic oxygen tank is placeholder for now -->
-            <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
-            <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
-            <Body width="22" height="64" density="9.7" />
-        <!-- Adjust later, basic oxygen tank is placeholder for now -->
-            <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-        <!-- Its still oxygen, so it probably should still be flammable and explode -->
-              <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
-              <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
-                <Conditional HasStatusTag="onfire" />
-                <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
-                <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
-                <Explosion range="150.0" force="3" debris="true" >
-                  <Affliction identifier="burn" strength="25" />
-                  <Affliction identifier="stun" strength="5" />
-                </Explosion>  
-              </StatusEffect>
-            </Holdable>
-            <Quality>
-              <QualityStat stattype="Condition" value="0.1"/>
-            </Quality>
-          </Item>
+  <Item name="" identifier="hydroxtank" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+<!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="10"/>
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+      <Price storeidentifier="merchantresearch" minavailable="10"/>
+      <Price storeidentifier="merchantmilitary" minavailable="10"/>
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
+    </Price>
+    <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
+    <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
+    <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
+    <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
+    <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+    <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+<!-- idk what displayname does lol, probably remove? -->
+    <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
+    <RequiredSkill identifier="mechanical" level="30" />
+<!-- Skills should also be adjusted later -->
+    <RequiredItem identifier="oxygentank" mincondition="0.9" />
+    <RequiredItem identifier="lithium" />
+    <RequiredItem identifier="sodium" />
+    </Fabricate>
+<!-- Adjust later, if it should be available at vending machines at all -->
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+    <Deconstruct time="10">
+      <Item identifier="lithium" />
+    </Deconstruct>
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+    <Body width="22" height="64" density="9.7" />
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+<!-- Its still oxygen, so it probably should still be flammable and explode -->
+      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+        <Conditional HasStatusTag="onfire" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+        <Explosion range="150.0" force="3" debris="true" >
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>  
+      </StatusEffect>
+    </Holdable>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
 
-          <Item name="" identifier="alg" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-            <!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
-                <Price baseprice="75">
-                  <Price storeidentifier="merchantoutpost" minavailable="10"/>
-                  <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
-                  <Price storeidentifier="merchantresearch" minavailable="10"/>
-                  <Price storeidentifier="merchantmilitary" minavailable="10"/>
-                  <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
-                </Price>
-                <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
-                <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
-                <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
-                <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
-                <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
-                <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
-                <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
-                <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
-                <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
-                <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
-                <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
-            <!-- idk what displayname does lol, probably remove? -->
-                <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
-                 <RequiredSkill identifier="mechanical" level="30" />
-            <!-- Skills should also be adjusted later -->
-                 <RequiredItem identifier="oxygentank" mincondition="0.9" />
-                 <RequiredItem identifier="lithium" />
-                </Fabricate>
-            <!-- Adjust later, if it should be available at vending machines at all -->
-                <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
-                <Deconstruct time="10">
-                  <Item identifier="lithium" />
-                </Deconstruct>
-            <!-- Adjust later, basic oxygen tank is placeholder for now -->
-                <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
-                <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
-                <Body width="22" height="64" density="9.7" />
-            <!-- Adjust later, basic oxygen tank is placeholder for now -->
-                <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-            <!-- Its still oxygen, so it probably should still be flammable and explode -->
-                  <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
-                  <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
-                    <Conditional HasStatusTag="onfire" />
-                    <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
-                    <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
-                    <Explosion range="150.0" force="3" debris="true" >
-                      <Affliction identifier="burn" strength="25" />
-                      <Affliction identifier="stun" strength="5" />
-                    </Explosion>  
-                  </StatusEffect>
-                </Holdable>
-                <Quality>
-                  <QualityStat stattype="Condition" value="0.1"/>
-                </Quality>
-              </Item>
+  <Item name="" identifier="alg" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+<!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later -->
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="10"/>
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+      <Price storeidentifier="merchantresearch" minavailable="10"/>
+      <Price storeidentifier="merchantmilitary" minavailable="10"/>
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
+    </Price>
+    <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
+    <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
+    <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
+    <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
+    <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+    <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+<!-- idk what displayname does lol, probably remove? -->
+    <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
+      <RequiredSkill identifier="mechanical" level="30" />
+<!-- Skills should also be adjusted later -->
+      <RequiredItem identifier="oxygentank" mincondition="0.9" />
+      <RequiredItem identifier="lithium" />
+    </Fabricate>
+<!-- Adjust later, if it should be available at vending machines at all -->
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+    <Deconstruct time="10">
+      <Item identifier="lithium" />
+    </Deconstruct>
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+    <Body width="22" height="64" density="9.7" />
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+<!-- Its still oxygen, so it probably should still be flammable and explode -->
+      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+        <Conditional HasStatusTag="onfire" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+        <Explosion range="150.0" force="3" debris="true" >
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>  
+      </StatusEffect>
+    </Holdable>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
 
-              <Item name="" identifier="rerstank" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-                <!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later b-->
-                    <Price baseprice="75">
-                      <Price storeidentifier="merchantoutpost" minavailable="10"/>
-                      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
-                      <Price storeidentifier="merchantresearch" minavailable="10"/>
-                      <Price storeidentifier="merchantmilitary" minavailable="10"/>
-                      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
-                    </Price>
-                    <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
-                    <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
-                    <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
-                    <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
-                    <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
-                    <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
-                    <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
-                    <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
-                    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
-                    <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
-                    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
-                <!-- idk what displayname does lol, probably remove? -->
-                    <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
-                     <RequiredSkill identifier="mechanical" level="30" />
-                <!-- Skills should also be adjusted later -->
-                     <RequiredItem identifier="oxygentank" mincondition="0.9" />
-                     <RequiredItem identifier="lithium" />
-                    </Fabricate>
-                <!-- Adjust later, if it should be available at vending machines at all -->
-                    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
-                    <Deconstruct time="10">
-                      <Item identifier="lithium" />
-                    </Deconstruct>
-                <!-- Adjust later, basic oxygen tank is placeholder for now -->
-                    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
-                    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
-                    <Body width="22" height="64" density="9.7" />
-                <!-- Adjust later, basic oxygen tank is placeholder for now -->
-                    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-                <!-- Its still oxygen, so it probably should still be flammable and explode -->
-                      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
-                      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
-                        <Conditional HasStatusTag="onfire" />
-                        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
-                        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
-                        <Explosion range="150.0" force="3" debris="true" >
-                          <Affliction identifier="burn" strength="25" />
-                          <Affliction identifier="stun" strength="5" />
-                        </Explosion>  
-                      </StatusEffect>
-                    </Holdable>
-                    <Quality>
-                      <QualityStat stattype="Condition" value="0.1"/>
-                    </Quality>
-                  </Item>
+  <Item name="" identifier="rerstank" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+<!-- Entire thing is just from oxygen tank, slightly adjusted. Adjust price and prefferedcontainer later b-->
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="10"/>
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+      <Price storeidentifier="merchantresearch" minavailable="10"/>
+      <Price storeidentifier="merchantmilitary" minavailable="10"/>
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
+    </Price>
+    <PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
+    <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
+    <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
+    <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
+    <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
+    <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+    <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+<!-- idk what displayname does lol, probably remove? -->
+    <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="1">
+      <RequiredSkill identifier="mechanical" level="30" />
+<!-- Skills should also be adjusted later -->
+      <RequiredItem identifier="oxygentank" mincondition="0.9" />
+      <RequiredItem identifier="lithium" />
+    </Fabricate>
+<!-- Adjust later, if it should be available at vending machines at all -->
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+    <Deconstruct time="10">
+      <Item identifier="lithium" />
+    </Deconstruct>
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+    <Body width="22" height="64" density="9.7" />
+<!-- Adjust later, basic oxygen tank is placeholder for now -->
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+<!-- Its still oxygen, so it probably should still be flammable and explode -->
+      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+        <Conditional HasStatusTag="onfire" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+        <Explosion range="150.0" force="3" debris="true" >
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>  
+      </StatusEffect>
+    </Holdable>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
 
+  <Item name="" identifier="nitroxcanister" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="refillingcanister" description="" scale="0.5" impacttolerance="0.2" impactsoundtag="impact_metal_heavy">
+<!-- Stolen from immersive repairs, adjust later -->
+    <Price baseprice="750" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" minavailable="3" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+      <Price storeidentifier="merchantengineering" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" amount="3" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" amount="4" />
+      <RequiredItem identifier="sodium" amount="10" />
+    </Fabricate>
+<!-- Make custom textuers later -->
+    <InventoryIcon texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="172,91,90,90" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="115,0,56,284" depth="0.55" />
+    <Body width="54" height="282" density="11.7" />
+    <Holdable canbecombined="false" slots="LeftHand+RightHand" holdpos="30,15" handle1="17,-70" handle2="60,80" holdangle="285" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character" multiplyafflictionsbymaxvitality="true" comparison="And" allowwhenbroken="true">
+        <Affliction identifier="ammoboxslowdown2" amount="1" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="" identifier="helioxcanister" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="refillingcanister" description="" scale="0.5" impacttolerance="0.2" impactsoundtag="impact_metal_heavy">
+<!-- Stolen from immersive repairs, adjust later -->
+    <Price baseprice="750" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" minavailable="3" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+      <Price storeidentifier="merchantengineering" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" amount="3" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" amount="4" />
+      <RequiredItem identifier="sodium" amount="10" />
+    </Fabricate>
+<!-- Make custom textuers later -->
+    <InventoryIcon texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="172,91,90,90" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="115,0,56,284" depth="0.55" />
+    <Body width="54" height="282" density="11.7" />
+    <Holdable canbecombined="false" slots="LeftHand+RightHand" holdpos="30,15" handle1="17,-70" handle2="60,80" holdangle="285" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character" multiplyafflictionsbymaxvitality="true" comparison="And" allowwhenbroken="true">
+        <Affliction identifier="ammoboxslowdown2" amount="1" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="" identifier="hydroxcanister" category="Diving,Equipment" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="refillingcanister" description="" scale="0.5" impacttolerance="0.2" impactsoundtag="impact_metal_heavy">
+  <!-- Stolen from immersive repairs, adjust later -->
+    <Price baseprice="750" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" minavailable="3" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+      <Price storeidentifier="merchantengineering" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" amount="3" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="aluminium" amount="4" />
+      <RequiredItem identifier="sodium" amount="10" />
+    </Fabricate>
+<!-- Make custom textuers later -->
+    <InventoryIcon texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="172,91,90,90" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:3114087512%/Content/Items/Misc/misc.png" sourcerect="115,0,56,284" depth="0.55" />
+    <Body width="54" height="282" density="11.7" />
+    <Holdable canbecombined="false" slots="LeftHand+RightHand" holdpos="30,15" handle1="17,-70" handle2="60,80" holdangle="285" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character" multiplyafflictionsbymaxvitality="true" comparison="And" allowwhenbroken="true">
+        <Affliction identifier="ammoboxslowdown2" amount="1" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
 
 <!-- Drug, dont have anything else to say about this one -->
-  <Item identifier="klonopin" />
+<Item identifier="klonopin" />
 
 <!-- I think this should just be completely replaced by medication stuff instead -->
   <Item identifier="recoverychamber" />
@@ -290,16 +376,13 @@
 <!-- Dont know about this. Have a feeling it wont be used? -->
   <Item identifier="reres" />
 
-<!-- For these ones you can literally just pull and modify from immersive repairs, I'm sure marc wont mind :P -->
+<!-- Just copy from immersive repairs, I am sure marc wont mind-->
   <Item identifier="tankrefillstation" />
-  <Item identifier="nitroxcanister" />
-  <Item identifier="helioxcanister" />
-  <Item identifier="hydroxcanister" />
 
 <!-- Dont know why we need the diving computer in the first place. New idea different from the one in the suggestion document:
 - Put depth indicator on handheld sonar (if it isnt already, unsure rn)
 - People should be required to figure out their status on decompression time using symptoms
-- What gas you are using really isnt that hard to figure out, just fucking check
+- What gas you are using really isnt that hard to figure out, just check
 - Current indicator isnt required
 - Max tank depth should be in the tank descriptions
 -->
@@ -309,7 +392,7 @@
   <Item identifier="recoveryvest" />
   <Item identifier="twinbottleupgrade" />
 
-<!-- Dont think a new suit is a good idea for this really, I have a feeling people wont use it. How about you need a specific scuba device in your face/hat slot? -->
+<!-- Dont think a new suit is a good idea for this really, I have a feeling people wont use it. How about you need a specific scuba device in your face/hat slot to use it instead? -->
   <Item identifier="algsuit" />
 
 </Items>
