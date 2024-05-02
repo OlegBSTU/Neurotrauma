@@ -822,7 +822,7 @@
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="locker"/>
-    <Fabricate suitablefabricators="fabricator">
+    <Fabricate suitablefabricators="fabricator" requiresrecipe="true">
       <RequiredSkill identifier="medical" level="60"/>
       <RequiredSkill identifier="mechanical" level="20"/>
       <RequiredItem identifier="advscalpel"/>
@@ -4431,4 +4431,57 @@
     </Item>
 
   </Override>
+
+
+
+<!-- /// Talent Gear /// -->
+
+<!-- "Sydney's Way" talent, cheap version of ringers solution -->
+  <Item name="" identifier="ringerssolutioncheap" nameidentifier="ringerssolution" variantof="ringerssolution">
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
+      <RequiredSkill identifier="medical" level="35"/>
+      <RequiredItem identifier="sodium"  />
+      <RequiredItem identifier="chlorine" amount="2" />
+    </Fabricate>
+    <Deconstruct time="5"/>
+  </Item>
+
+<!-- "Alexis' Way" talent, hartmanns solution, better version of ringers solution that heals bloodloss; NOT YET IMPLEMENTED -->
+  <Item identifier="hartmannssolution" />
+
+<!-- "Bloodworker" talent, allows you to turn alien blood into O- blood -->
+  <Item name="" identifier="alienbloodconversion" nameidentifier="bloodpackominus" variantof="antibloodloss2">
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+        <RequiredSkill identifier="medical" level="70"/>
+        <RequiredItem identifier="alienblood"  />
+        <RequiredItem identifier="stabilozine" amount="3" />
+        <RequiredItem identifier="antibiotics" />
+        <RequiredItem identifier="immunosuppressant" />
+      </Fabricate>
+      <Deconstruct time="5"/>
+  </Item>
+
+<!-- "Neuro Vision Pro" talent, craftable basegame health googles (this is completely copied from vanilla, probably wanna adjust -->
+  <Item name="" identifier="medicalstatushud" scale="0.5" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
+    <Price baseprice="0" sold="false" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="copper" />
+      <Item identifier="plastic" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />
+    <Sprite name="Health Scanner" texture="Content/Items/Jobgear/headgears.png" sourcerect="115,349,75,26" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Health Scanner Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="115,349,75,26" origin="0.55,0.85" />
+    </Wearable>
+    <StatusHUD drawhudwhenequipped="true" />
+  </Item>
+
 </Items>

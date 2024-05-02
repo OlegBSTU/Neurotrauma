@@ -1,3 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Talents>
 
 <!-- /// Medic Talents /// -->
+
+
+
+<!--  Implemented -->
+
+<!-- "Multipurpose Medicine", allows you to craft multipurpose scalpel -->
+  <Talent identifier="multipurposemedicine">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.multiscalpel" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="multiscalpel"/>
+  </Talent>
+
+<!-- "Bloodworker", allows you to craft alien blood into O- blood -->
+  <Talent identifier="bloodworker">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.alienbloodconversion" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="alienbloodconversion"/>
+  </Talent>
+
+<!-- "Neuro Vision Pro", allows you to craft the vanilla health scanner googles -->
+  <Talent identifier="neurovisionpro">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.medicalstatushud" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="medicalstatushud"/>
+  </Talent>
+
+
+
+<!--  Not implemented  -->
+
+<!-- "Sydney's Way", allows you to craft ringerssolution from the ingredients of saline; should be mutually exclusive to alexisway -->
+  <Talent identifier="sydneysway">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.ringerssolution" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="ringerssolutioncheap"/>
+  </Talent>
+
+<!-- "Alexis' Way", allows you to craft hartmanns solution, a better version of ringers solution which heals bloodloss; should be mutually exclusive to sydneysway  -->
+  <Talent identifier="alexisway">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.hartmannssolution" color="gui.orange"/>
+    </Description>
+    <AddedRecipe itemidentifier="hartmannssolution"/>
+  </Talent>
+
+<!-- "AWaRe", antibiotics cause less organ damage, the husk resistance buff lasts longer and it heals more husk infection -->
+  <Talent identifier="aware">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+<!--  Insest lua here -->
+  </Talent>
+
+<!-- "Don't worry, ribs grow back", allows you to but gypsum casts on torso and head to heal broken ribs/skull-->
+  <Talent identifier="dontworryribsgrowback">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128"/>
+<!--  Insest lua here -->
+  </Talent>
+
+</Talents>
