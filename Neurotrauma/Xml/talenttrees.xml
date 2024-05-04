@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <Override>
+    <TalentTree jobidentifier="medicaldoctor">
+
+
+
+        <SubTree identifier="medical_primary" nameidentifier="talenttree.primary" type="primary">
+
+        <TalentOptions requiredtalents="2" maxchosentalents="6">
+            <TalentOption identifier="healthinsurance"/>
+            <TalentOption identifier="nobodyimportantdies"/>
+            <TalentOption identifier="exampleofhealth"/>
+            <TalentOption identifier="laresistance"/>
+            <TalentOption identifier="selfcare"/>
+            <TalentOption identifier="stayinalive"/>
+        </TalentOptions>
+
+        <TalentOptions requiredtalents="2" maxchosentalents="5">
+            <TalentOption identifier="firemanscarry"/>
+            <TalentOption identifier="medicalcompanion"/>
+            <TalentOption identifier="dontdieonme"/>
+            <TalentOption identifier="nopressure"/>
+            <TalentOption identifier="blooddonor"/>
+        </TalentOptions>
+
+        </SubTree>
+
+
+
+        <SubTree identifier="xenologist" type="specialization" requires="medical_primary" blocks="medic,surgeonplus">
+
+        <TalentOptions>
+            <TalentOption identifier="geneharvester"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="bloodybusiness"/>
+            <TalentOption identifier="genesplicer"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="blackmarketgenes"/>
+            <TalentOption identifier="genetampering"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="geneticgenious"/>
+        </TalentOptions>
+
+        </SubTree>
+
+
+
+<!-- This is probably the best tree when playing with neuro, however most stuff is still pretty useless. We should just replace this with more interesting perks. -->
+        <SubTree identifier="medic" type="specialization" requires="medical_primary" blocks="xenologist,surgeonplus">
+
+        <TalentOptions>
+            <TalentOption identifier="medicalexpertise"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="medicalassistance"/>
+            <TalentOption identifier="emergencyresponse"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="drsubmarine"/>
+            <TalentOption identifier="vitaminsupplements"/>
+        </TalentOptions>
+
+        <TalentOptions>
+            <TalentOption identifier="miracleworker"/>
+        </TalentOptions>
+
+        </SubTree>
+
+
+
+<!-- Acid and poisons are afaik pretty useless with neuro. How about we replace this completely with surgery perks instead? Name it like "Surgeon Plus" -->
+        <SubTree identifier="surgeonplus" type="specialization" requires="medical_primary" blocks="xenologist,medic">
+
+        <TalentOptions>
+<!-- Idea: Allows you to craft bionic organ transplants. I dont really have another idea, must be every expensive tho -->
+            <TalentOption identifier="PLACEHOLDER"/>
+<!-- Idea: Items used during surgery dont get used (probably not good enough to be ever picked if it ends up being this) -->
+            <TalentOption identifier="PLACEHOLDER"/>
+        </TalentOptions>
+
+        <TalentOptions>
+<!-- Insert multipurpose medicine here -->
+            <TalentOption identifier="multipurposemedicine"/>
+<!-- No idea for this one yet -->
+            <TalentOption identifier="???"/>
+        </TalentOptions>
+
+        <TalentOptions>
+<!-- Idea: How about "organs you transplant never get rejected (copied from surgery+)" -->
+            <TalentOption identifier="PLACEHOLDER"/>
+<!--Idea: As the second choice "blood you transfuse will never cause hemotransfusion shock" -->
+            <TalentOption identifier="PLACEHOLDER"/>
+        </TalentOptions>
+
+        <TalentOptions>
+<!-- Idea: Something like "you never cause traumatic shock and surgical infection" maybe? -->
+            <TalentOption identifier="PLACEHOLDER"/>
+        </TalentOptions>
+
+        </SubTree>
+
+
+
+    </TalentTree>
+  </Override>
+</TalentTrees>

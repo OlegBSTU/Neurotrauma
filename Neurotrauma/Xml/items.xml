@@ -4438,12 +4438,14 @@
 
 <!-- "Sydney's Way" talent, cheap version of ringers solution -->
   <Item name="" identifier="ringerssolutioncheap" nameidentifier="ringerssolution" variantof="ringerssolution">
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" requiresrecipe="true">
       <RequiredSkill identifier="medical" level="35"/>
       <RequiredItem identifier="sodium"  />
       <RequiredItem identifier="chlorine" amount="2" />
     </Fabricate>
-    <Deconstruct time="5"/>
+    <Deconstruct time="5">
+      <Item identifier="chlorine" />
+    </Deconstruct>
   </Item>
 
 <!-- "Alexis' Way" talent, hartmanns solution, better version of ringers solution that heals bloodloss; NOT YET IMPLEMENTED -->
@@ -4458,12 +4460,15 @@
         <RequiredItem identifier="antibiotics" />
         <RequiredItem identifier="immunosuppressant" />
       </Fabricate>
-      <Deconstruct time="5"/>
+      <Deconstruct time="5">
+        <Item identifier="alienblood" />
+        <Item identifier="stabilozine" amount="2" />
+      </Deconstruct>
   </Item>
 
-<!-- "Neuro Vision Pro" talent, craftable basegame health googles (this is completely copied from vanilla, probably wanna adjust -->
+<!-- "Neuro Vision Pro" talent, craftable basegame health googles (this is completely copied from vanilla, probably wanna adjust fabrication recipe) -->
   <Item name="" identifier="medicalstatushud" scale="0.5" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
+    <PreferredContainer primary="medcab" />
     <Price baseprice="0" sold="false" />
     <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
       <RequiredSkill identifier="mechanical" level="40" />
