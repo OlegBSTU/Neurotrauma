@@ -1,185 +1,167 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<Override>
+
 <Afflictions>
 
-<!-- Calyxanide buff, only visible on hematology analyzer -->
-  <Affliction
-    name=""
-    identifier="af_calyxanide"
-    description=""
-    type="resistance"
-    isbuff="true"
-    limbspecific="false"
-    maxstrength="100"
-    affectmachines="false"
-    showiconthreshold="1000"
-    showinhealthscannerthreshold="1000"
-    MedicalSkillGain="0.01">
-    <Effect minstrength="0" maxstrength="600"
-      strengthchange="-0.5"
-      resistancefor="huskinfection"
-      minresistance="0.99"
-      maxresistance="0.99"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
-  </Affliction>
+  <!-- /// Meta /// -->
 
-  <!-- husk health during surgery, a.k.a. the reverse treatment progress bar -->
+  <!-- //// 4 "horsemen of apocalypse" //// -->
+  
+  <!-- Hypercapnia
+  Scanned Symptom, causes headache, muscle twitching,
+  dizziness, panic, CO2 narcosis -->
   <Affliction
     name=""
-    identifier="surgery_huskhealth"
-    description=""
-    isbuff="true"
-    limbspecific="false"
-    maxstrength="100"
-    showiconthreshold="0.1"
-    indicatorlimb="Torso"
-    showinhealthscannerthreshold="1000"
-    iconcolors="60,0,195,255">
-    <Description
-        textidentifier="afflictiondescription.surgery_huskhealth.low"
-        minstrength="0"
-        maxstrength="20"/>
-    <Description
-        textidentifier="afflictiondescription.surgery_huskhealth.medium"
-        minstrength="20"
-        maxstrength="90"/>
-    <Description
-        textidentifier="afflictiondescription.surgery_huskhealth.high"
-        minstrength="90"
-        maxstrength="100"/>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,7" sheetelementsize="128,128" origin="0,0"/>
-  </Affliction>
-
-  <!-- Bones Sawed -->
-  <Affliction
-    name=""
-    identifier="bonecuttorso"
+    identifier="hypercapnia"
     description=""
     healableinmedicalclinic="false"
-    isbuff="true"
-    limbspecific="false"
-    maxstrength="100"
-    showinhealthscannerthreshold="700"
-    showiconthreshold="1"
-    indicatorlimb="Torso"
-    iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="100" strengthchange="10">
-      <StatusEffect target="Character" comparison="and">
-        <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
-        <Affliction identifier="traumaticshock" amount="1.5"/>
-      </StatusEffect>
-    </Effect>
-    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,7" sheetelementsize="128,128" origin="0,0"/>
-  </Affliction>
-
-  <Override>
-  <AfflictionHusk
-    name="Husk infection"
-    identifier="huskinfection"
-    description="Something dark and unpleasant moves in the mouth. They are rendered completely mute, save for occasional clicking sounds apparently emanating from deep within the throat."
-    type="alieninfection"
-    targets="human,crawler"
-    huskedspeciesname="husk"
-    causeofdeathdescription="Taken over by a husk parasite"
-    selfcauseofdeathdescription="You have been taken over by the husk parasite."
     limbspecific="false"
     indicatorlimb="Torso"
-    activationthreshold="0"
-    showiconthreshold="40"
-    showinhealthscannerthreshold="0.1"
-    karmachangeonapplied="-1"
     maxstrength="100"
-    transferbuffs="true"
-    achievementonremoved="healhusk"
-    dormantthreshold="50"
-    activethreshold="75"
-    transformthresholdondeath="75"
-    transitionthreshold="100"
-    IgnoreTreatmentIfAfflictedBy="husktransformimmunity,husktransformimmunitytemporary"
-    healcostmultiplier="2.5"
-    basehealcost="500"
-    iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
-     <Description
-      textidentifier="afflictiondescription.huskinfection.dormant.self"
-      target="Self"
-      minstrength="0"
-      maxstrength="50"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.transition.self"
-      target="Self"
-      minstrength="50"
-      maxstrength="75"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.active.self"
-      target="Self"
-      minstrength="75"
-      maxstrength="99"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.dormant.other"
-      target="OtherCharacter"
-      minstrength="0"
-      maxstrength="50"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.transition.other"
-      target="OtherCharacter"
-      minstrength="50"
-      maxstrength="75"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.active.other"
-      target="OtherCharacter"
-      minstrength="75"
-      maxstrength="99"/>
-    <Description
-      textidentifier="afflictiondescription.huskinfection.final"
-      minstrength="99"
-      maxstrength="101"/>
-    <Effect minstrength="0" maxstrength="75"
-      maxvitalitydecrease="0"
-      strengthchange="0.3"
-      minbodytint="195,195,195,0"
-      maxbodytint="195,195,195,150"/>
-    <Effect minstrength="75" maxstrength="100"
-      maxvitalitydecrease="0"
-      strengthchange="0.3"
-      minbodytint="195,195,195,150"
-      maxbodytint="195,195,195,200"
-      tag="huskinfected"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="60,107,195,255" origin="0,0"/>
-  </AfflictionHusk>
-  </Override>
+    targets="human"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    type="gaze"
+    isbuff="false"
+    damageoverlayalpha="0">
 
-  <Affliction
-    name=""
-    identifier="husklamp"
-    description=""
-    isbuff="true"
-    limbspecific="false"
-    showinhealthscannerthreshold="700"
-    showiconthreshold="0.1"
-    maxstrength="10">
-    <Effect minstrength="0" maxstrength="10"
-      strengthchange="-1"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
+<!--   Caisson's disease
+  Scanned Symptom, causes severe itching, disorientation,
+  arterial gas embolism, osteonecrosis -->
   <Affliction
     name=""
-    identifier="huskstasis"
+    identifier="caissondisease"
     description=""
-    isbuff="true"
+    healableinmedicalclinic="false"
     limbspecific="false"
-    showinhealthscannerthreshold="700"
-    showiconthreshold="0.1"
-    maxstrength="10">
-    <Effect minstrength="0" maxstrength="10"
-      resistancefor="bloodloss"
-      minresistance="0.5"
-      maxresistance="0.5">
-      <StatusEffect target="Character" comparison="and">
-        <ReduceAffliction type="damage" amount="1"/>
-        <ReduceAffliction type="bleeding" amount="1"/>
+    indicatorlimb="Torso"
+    maxstrength="100"
+    targets="human"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    type="gaze"
+    isbuff="false"
+    damageoverlayalpha="0">
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+
+  <!-- Barotrauma
+  Scanned Symptom, causes lung damage, hyposphagma,
+  pneumothorax, vomiting blood, disorientation and finally immediate death -->
+  <!-- Vanilla affliction override start -->
+  <Affliction
+    name="Barotrauma"
+    identifier="pressure"
+    description="There is obvious massive organ damage and the blood vessels of the eye have burst, creating an unnerving red gaze."
+    type="pressure"
+    causeofdeathdescription="Crushed by water pressure"
+    selfcauseofdeathdescription="You have been crushed by water pressure."
+    limbspecific="false"
+    maxstrength="100"
+    showiconthreshold="51"
+    showinhealthscannerthreshold="0"
+    damageoverlayalpha="0.6">
+    <Effect minstrength="0" maxstrength="99">
+      <StatusEffect target="Character" type="OnActive" LowPassMultiplier="1" PressureProtection="10000.0" setvalue="true" disabledeltatime="true" Interval="4.5" Duration="0.01">
+        <Conditional vitality="gt -85" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
+    <Effect minstrength="100" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="10"
+      maxvitalitydecrease="10"
+      minbodytint="60,0,0,0"
+      maxbodytint="60,0,0,200"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,768,128,128" color="143,111,160,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+
+  <!-- //// SYMPTOMS //// -->
+  <!-- as a rule of thumb, exposed symptoms arent visible on the scanner to reduce clutter -->
+ <Affliction
+	name=""
+	identifier="co2narc"
+	type="co2narc"
+	maxstrength="10"
+	limbspecific="false"
+	indicatorlimb="Head"
+	showiconthreshold="0"
+	showinhealthscannerthreshold="500">
+	
+    <Effect
+	  minstrength="0"
+	  maxstrength="5"
+	  minafflictionoverlayalphamultiplier="0"
+	  maxafflictionoverlayalphamultiplier="1"
+      MultiplyByMaxVitality="true"
+	  minvitalitydecrease="0"
+	  maxvitalitydecrease="0.1"
+	  strengthchange="1.0"
+	  graincolor="0,0,0,255"
+	  mingrainstrength="0.0"
+	  maxgrainstrength="20000.0"
+	  minscreenblur="0"
+	  maxscreenblur="15">
+    </Effect>
+    <Effect
+	  minstrength="5"
+	  maxstrength="10"
+	  minafflictionoverlayalphamultiplier="1"
+	  maxafflictionoverlayalphamultiplier="1"
+      MultiplyByMaxVitality="true"
+	  minvitalitydecrease="0.1"
+	  maxvitalitydecrease="2"
+	  strengthchange="1.0"
+	  graincolor="0,0,0,255"
+	  mingrainstrength="20000.0"
+	  maxgrainstrength="20000.0"
+	  minscreenblur="15"
+	  maxscreenblur="15">
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+    <AfflictionOverlay texture="%ModDir%\Images\co2narc.png" />
+  </Affliction>
+
+  <!-- Stamina mechanic for swimming
+  Hidden -->
+ <Affliction
+    name=""
+	identifier="fatigue"
+	description=""
+	type="fatigue"
+	causeofdeathdescription=""
+	selfcauseofdeathdescription=""
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="0"
+	showinhealthscannerthreshold="500"
+	maxstrength="100">
+
+<!-- no effects at this point -->
+    <Effect minstrength="0" maxstrength="40"/>
+    <Effect minstrength="40" maxstrength="60" minfacetint="0,51,102,0" maxfacetint="0,51,102,25">
+	  <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional anesthesia="lte 0" sym_unconsciousness="lte 0"/>
+        <LuaHook name="NT.causeBreath" />
+      </StatusEffect>
+	</Effect>
+    <Effect minstrength="60" maxstrength="90" minfacetint="0,51,102,25" maxfacetint="0,51,102,50">
+      <StatusEffect target="Character">
+        <Sound file="%ModDir%/Sounds/panting.ogg" range="500" volumenum="2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100" dialogflag="" minfacetint="0,51,102,100" maxfacetint="0,51,102,150">
+      <StatusEffect target="Character">
+        <Sound file="%ModDir%/Sounds/panting.ogg" range="500" volumenum="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
   </Affliction>
 
 </Afflictions>
+
+</Override>

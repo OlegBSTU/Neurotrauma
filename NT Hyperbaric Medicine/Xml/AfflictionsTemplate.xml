@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+
+<Afflictions>
+
+  <!-- Barotrauma
+  Scanned Symptom, causes lung damage, hyposphagma,
+  pneumothorax, vomiting blood, disorientation and finally immediate death -->
+  <!-- Vanilla affliction override start -->
+  <Affliction
+    name="Barotrauma"
+    identifier="pressure"
+    description="There is obvious massive organ damage and the blood vessels of the eye have burst, creating an unnerving red gaze."
+    type="pressure"
+    causeofdeathdescription="Crushed by water pressure"
+    selfcauseofdeathdescription="You have been crushed by water pressure."
+    limbspecific="false"
+    maxstrength="100"
+    showiconthreshold="51"
+    showinhealthscannerthreshold="0"
+    damageoverlayalpha="0.6">
+    <Effect minstrength="0" maxstrength="99">
+      <StatusEffect target="Character" type="OnActive" LowPassMultiplier="1" PressureProtection="10000.0" setvalue="true" disabledeltatime="true" Interval="4.5" Duration="0.01">
+        <Conditional vitality="gt -85" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="100" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="10"
+      maxvitalitydecrease="10"
+      minbodytint="60,0,0,0"
+      maxbodytint="60,0,0,200"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,768,128,128" color="143,111,160,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+</Afflictions>
+
+</Override>

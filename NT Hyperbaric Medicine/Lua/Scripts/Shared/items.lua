@@ -2,6 +2,33 @@
 Timer.Wait(function()
 
 
+	local tempOstImplantFunction = NT.ItemMethods.osteosynthesisimplants
+	NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCharacter, limb) 
+		tempOstImplantFunction(item,usingCharacter,targetCharacter,limb)
+		if(HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAfflictionLimb(targetCharacter,"drilledbones",limbtype,99)) then
+			if(HF.GetSurgerySkillRequirementMet(usingCharacter,45))
+				local ostenecrosisafflictions = {
+					ll_osteonecrosis={xpgain=200},
+					ll_osteonecrosis={xpgain=200},
+					la_osteonecrosis={xpgain=200},
+					ra_osteonecrosis={xpgain=200},
+				}
+				
+				for key, value in pairs(ostenecrosisafflictions) do
+					local prefab = AfflictionPrefab.Prefabs[key]
+					if prefab ~= nil and (value.case == nil or HF.HasAfflictionLimb(targetCharacter,value.case,limbtype)) then
+						local skillgain = value.xpgain or 0
+						if prefab.LimbSpecific then
+							removeAfflictionPlusGainSkill(key,skillgain)
+						elseif prefab.IndicatorLimb == limbtype then
+							removeAfflictionNonLimbSpecificPlusGainSkill(key,skillgain)
+						end
+					end
+				end
+			end
+		end
+	end
+
     -- make it so ending surgery gets rid of stuff
     NT.SutureAfflictions.surgery_huskhealth = {}
     NT.SutureAfflictions.bonecuttorso = {}
