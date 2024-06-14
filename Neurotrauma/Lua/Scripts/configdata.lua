@@ -70,6 +70,7 @@ NT.ConfigData = {
     NT_vanillaSkillCheck =              {name="vanilla skill check formula",default=false,type="bool",description="changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100"},
     NT_disableBotAlgorithms =           {name="disable bot treatment algorithms",default=true,type="bool",description="prevents bots from attempting to treat afflictions. This is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely."},
     NT_screams =                        {name="screams",default=true,type="bool",description="makes much pain much loud"},
+    NT_blooddrip =                      {name="blood drip",default=true,type="bool",description="makes much bleeding much loud"},
     NT_ignoreModConflicts =             {name="ignore mod conflicts",default=false,type="bool",description="prevent the mod conflict affliction from showing up"},
 
     NT_organRejection =                 {name="organ rejection",default=false,type="bool",          difficultyCharacteristics={multiplier=0.5},description="when transplanting an organ, there is a chance that the organ gets rejected. The higher the patients immunity at the time of the transplant, the higher the chance."},

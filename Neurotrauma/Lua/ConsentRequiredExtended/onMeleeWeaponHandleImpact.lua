@@ -27,7 +27,7 @@ local function onMeleeWeaponHandleImpact(meleeweapon, target)
             targetUser = targetUserData
         end
         if targetUser ~= nil then
-			Api.onAffectedItemApplied(user, targetUser)
+            Api.onAffectedItemApplied(user, targetUser)
         end
     end
 end

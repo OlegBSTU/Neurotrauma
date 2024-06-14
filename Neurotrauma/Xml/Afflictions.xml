@@ -305,6 +305,32 @@
 
   <!-- /// Blood Stuff /// -->
 
+  <!-- Blood dripping -->
+  <Affliction
+	  name=""
+    identifier="blooddripping"
+    targets="human"
+    healableinmedicalclinic="false"
+    isbuff="false"
+    limbspecific="False"
+    maxstrength="2"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="700">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1000">
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional ishuman="true" inwater="false"/>
+        <sound file="%ModDir%/Sound/heavy_blood_drip_01.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sound/heavy_blood_drip_02.ogg" />
+        <Sound file="%ModDir%/Sound/heavy_blood_drip_03.ogg" />
+        <Sound file="%ModDir%/Sound/heavy_blood_drip_04.ogg" />
+        <Sound file="%ModDir%/Sound/heavy_blood_drip_05.ogg" />
+        <Sound file="%ModDir%/Sound/heavy_blood_drip_06.ogg" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+  </Affliction>
+
   <!-- Blood Pressure
   Scanned Symptom -->
   <Affliction
@@ -786,6 +812,46 @@
           <TriggerAnimation Type="SwimFast" filename="HumanProneSwimFast" priority="1" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- Stasis bag overlay
+  Invisible (yet very apparent) Status
+  -->
+  <Affliction
+      name=""
+      identifier="stasisbagoverlay"
+      type="gaze"
+      isbuff="false"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      maxstrength="2"
+      showinhealthscannerthreshold="10000"
+      showiconthreshold="10000"
+      healableinmedicalclinic="false">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1"/>
+    <AfflictionOverlay texture="%ModDir%\Images\Suits\StasisBagOverlay.png" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- Body bag overlay
+  Invisible (yet very apparent) Status
+  -->
+  <Affliction
+      name=""
+      identifier="bodybagoverlay"
+      type="gaze"
+      isbuff="false"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      maxstrength="2"
+      showinhealthscannerthreshold="10000"
+      showiconthreshold="10000"
+      healableinmedicalclinic="false">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1"/>
+    <AfflictionOverlay texture="%ModDir%\Images\Suits\BodyBagOverlay.png" />
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
   </Affliction>
 
@@ -1323,6 +1389,7 @@
       <StatusEffect target="Character" targetlimb="LeftLeg" comparison="and">
         <Conditional arteriesclamp="lte 1"/>
         <Conditional bloodloss="lte 99.5"/>
+        <ParticleEmitter particle="waterblood" particlespersecond="20" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
@@ -1335,6 +1402,11 @@
       <StatusEffect target="Character" targetlimb="LeftLeg" comparison="and">
         <Conditional arteriesclamp="eq 0"/>
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional inwater="false"/>
+        <Conditional bloodloss="lte 99.5"/>
+        <LuaHook name="NT.causeBlooddrip"/>
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
@@ -1353,6 +1425,7 @@
       <StatusEffect target="Character" targetlimb="RightLeg" comparison="and">
         <Conditional arteriesclamp="lte 1"/>
         <Conditional bloodloss="lte 99.5"/>
+        <ParticleEmitter particle="waterblood" particlespersecond="20" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
@@ -1365,6 +1438,11 @@
       <StatusEffect target="Character" targetlimb="RightLeg" comparison="and">
         <Conditional arteriesclamp="eq 0"/>
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional inwater="false"/>
+        <Conditional bloodloss="lte 99.5"/>
+        <LuaHook name="NT.causeBlooddrip"/>
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
@@ -1384,6 +1462,7 @@
       <StatusEffect target="Character" targetlimb="LeftArm" comparison="and">
         <Conditional arteriesclamp="lte 1"/>
         <Conditional bloodloss="lte 99.5"/>
+        <ParticleEmitter particle="waterblood" particlespersecond="20" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
@@ -1396,6 +1475,11 @@
       <StatusEffect target="Character" targetlimb="LeftArm" comparison="and">
         <Conditional arteriesclamp="eq 0"/>
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional inwater="false"/>
+        <Conditional bloodloss="lte 99.5"/>
+        <LuaHook name="NT.causeBlooddrip"/>
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
@@ -1414,6 +1498,7 @@
       <StatusEffect target="Character" targetlimb="RightArm" comparison="and">
         <Conditional arteriesclamp="lte 1"/>
         <Conditional bloodloss="lte 99.5"/>
+        <ParticleEmitter particle="waterblood" particlespersecond="20" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
@@ -1426,6 +1511,11 @@
       <StatusEffect target="Character" targetlimb="RightArm" comparison="and">
         <Conditional arteriesclamp="eq 0"/>
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional inwater="false"/>
+        <Conditional bloodloss="lte 99.5"/>
+        <LuaHook name="NT.causeBlooddrip"/>
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
@@ -1472,6 +1562,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="100" >
       <StatusEffect target="Character" targetlimb="Head" comparison="and">
         <Conditional bloodloss="lte 99.5"/>
+        <ParticleEmitter particle="waterblood" particlespersecond="20" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
@@ -1483,6 +1574,11 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" targetlimb="Head" comparison="and">
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" duration="3" checkconditionalalways="false">
+        <Conditional inwater="false"/>
+        <Conditional bloodloss="lte 99.5"/>
+        <LuaHook name="NT.causeBlooddrip"/>
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
@@ -2536,6 +2632,10 @@
         <Sound file="%ModDir%/Sound/Voice/female_cough5.ogg" />
         <Sound file="%ModDir%/Sound/Voice/female_cough6.ogg" />
       </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="0.1">
+        <ParticleEmitter particle="damagebubbles" particlespersecond="50" anglemin="90" anglemax="80" velocitymin="50" velocitymax="100" scalemin="0.2" scalemax="0.4" />
+        <Conditional inwater="true"/>
+      </StatusEffect>
     </PeriodicEffect>
 
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0"/>
@@ -2828,7 +2928,11 @@
         <Affliction identifier="stun" strength="0.1"/>
         <LuaHook name="NT.vomitblood" />
       </StatusEffect>
+      <StatusEffect target="Character" duration="2">
+        <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
+      </StatusEffect>
       <StatusEffect target="Character" targetlimbs="Head" duration="1">
+        <ParticleEmitter particle="waterblood" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="20" velocitymin="60" velocitymax="120" scalemin="0.2" scalemax="0.4" />
         <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="100" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
         <Conditional HideFace="eq False" />

@@ -857,6 +857,7 @@ NT.LimbAfflictions = {
     -- damage
     bleeding={update=function(c,limbaff,i)
         if(limbaff[i].strength > 0 and math.abs(c.stats.clottingrate-1) > 0.05) then limbaff[i].strength = limbaff[i].strength - (c.stats.clottingrate-1) * 0.1 * NT.Deltatime end
+        if(limbaff[i].strength > 50 and not NTConfig.Get("NT_blooddrip",true)) then NT.SetAffliction(c.character,"blooddripping",10)
     end
     },
     burn={max=200,update=function(c,limbaff,i)
