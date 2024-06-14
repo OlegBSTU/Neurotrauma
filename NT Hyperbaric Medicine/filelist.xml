@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Hyperbaric Medicine" path="%ModDir%/filelist.xml" corepackage="false" gameversion="0.17.15.0">
-  <None file="%ModDir%/Images/AfflictionIcons.png" />
+<contentpackage name="NT Hyperbaric Medicine" path="%ModDir%/filelist.xml" corepackage="false">
+<!--   <None file="%ModDir%/Images/AfflictionIcons.png" /> -->
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
-  <Item file="%ModDir%/Xml/items.xml" />
+<!--   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
-  <Text file="%ModDir%/Localization/SimplifiedChinese/SimplifiedChinese.xml" />
-	<None file="%ModDir%/Lua/Autorun/init.lua" />
+  <None file="%ModDir%/Lua/Autorun/init.lua" />
   <None file="%ModDir%/Lua/Scripts/humanupdate.lua" />
   <None file="%ModDir%/Lua/Scripts/helperfunctions.lua" />
   <None file="%ModDir%/Lua/Scripts/items.lua" />
-  <None file="%ModDir%/Lua/Scripts/testing.lua" />
+  <None file="%ModDir%/Lua/Scripts/testing.lua" /> -->
 </contentpackage>

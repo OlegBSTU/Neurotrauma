@@ -20,7 +20,6 @@ namespace CharacterHealthMod
   class CharacterHealthMod : IAssemblyPlugin
   {
     public Harmony harmony;
-	public Item armor;
 	
     public void Initialize()
     {
@@ -45,7 +44,7 @@ namespace CharacterHealthMod
         {
 			CharacterHealth _ = __instance;
             //DebugConsole.NewMessage("s");
-			if (_.Character.IsHuman && !_.Character.AnimController.IsUsingItem && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimFastParams)
+/* 			if (_.Character.IsHuman && !_.Character.AnimController.IsUsingItem && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimFastParams)
 			{
 				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_fatigue"].Instantiate(10f * deltaTime));
 			}
@@ -61,13 +60,13 @@ namespace CharacterHealthMod
 				{
 				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_motionless"].Instantiate(2f * deltaTime));
 				}
-			}
+			} */
 			if (_.Character.IsHuman && !_.Character.IsDead)
 			{
 				_.Character.PressureTimer = 0.0f
-				if (_.Character.PressureProtection < _.Character.WorldPosition.Y && _.Character.InPressure)
+				if (!_.Character.IsProtectedFromPressure && _.Character.InPressure)
 				{
-					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(4f * deltaTime));
+					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(20f * deltaTime));
 				}
 				else
 				{
