@@ -1006,10 +1006,17 @@ NT.LimbAfflictions = {
         end
     end},
     burn_deg3={update=function(c,limbaff,i)
-        if limbaff.burn.strength <= 50 then
+        if limbaff.burn.strength <= 50 or limbaff.burn.strength > 100 then
             limbaff[i].strength=0
         else
-            limbaff[i].strength=HF.Clamp((limbaff.burn.strength-50)/50*100,5,100)
+            limbaff[i].strength=math.max(5,(limbaff.burn.strength-50)/50*100)
+        end
+    end},
+    burn_deg4={update=function(c,limbaff,i)
+        if limbaff.burn.strength <= 100 then
+            limbaff[i].strength=0
+        else
+            limbaff[i].strength=math.max(5,(limbaff.burn.strength-100)/200*100)
         end
     end},
     infection={update=function(c,limbaff,i,type)

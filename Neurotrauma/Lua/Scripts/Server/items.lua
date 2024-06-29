@@ -465,7 +465,10 @@ NT.ItemMethods.adrenaline = function(item, usingCharacter, targetCharacter, limb
     HF.GiveItem(targetCharacter,"ntsfx_syringe")
 end
 local function limbHasThirdDegreeBurns(char,limbtype)
-    return HF.GetAfflictionStrengthLimb(char,limbtype,"burn",0) > 50
+    return HF.GetAfflictionStrengthLimb(char,limbtype,"burn",0) > 50 and HF.GetAfflictionStrengthLimb(char,limbtype,"burn",0) <= 100
+end
+local function limbHasFourthDegreeBurns(char,limbtype)
+    return HF.GetAfflictionStrengthLimb(char,limbtype,"burn",0) > 100
 end
 NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
@@ -494,7 +497,7 @@ NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, l
 end
 NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
-    local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",22),1)
+    local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",25),1)
     HF.AddAfflictionLimb(targetCharacter,"dirtybandage",limbtype,-100,usingCharacter)
     HF.AddAfflictionLimb(targetCharacter,"bandaged",limbtype,50+success*50,usingCharacter)
     HF.AddAfflictionLimb(targetCharacter,"bleeding",limbtype,-24-success*24,usingCharacter)
@@ -502,8 +505,8 @@ NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, l
     if HF.HasAfflictionLimb(targetCharacter,"retractedskin",limbtype) then
         -- remove all burn if applied during surgery
         HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-100-success*100,usingCharacter)
-    elseif not limbHasThirdDegreeBurns(targetCharacter,limbtype) then
-        -- remove normal amount of burn if not third degree
+    elseif not limbHasThirdDegreeBurns(targetCharacter,limbtype) and not limbHasFourthDegreeBurns(targetCharacter,limbtype) then
+        -- remove normal amount of burn if not third degree or fourth degree
         HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-12-success*12,usingCharacter)
     end
     HF.RemoveItem(item)
