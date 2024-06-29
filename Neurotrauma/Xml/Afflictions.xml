@@ -766,7 +766,7 @@
   Invisible Status
   immunity against blunt force trauma
   -->
-  <Affliction
+<!--   <Affliction
     identifier="cpr_fracturebuff"  
     healableinmedicalclinic="false"
     isbuff="true"
@@ -786,7 +786,7 @@
       maxresistance="1">
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
-  </Affliction>
+  </Affliction> -->
 
   <!-- Forced prone
   Invisible (yet very apparent) Status

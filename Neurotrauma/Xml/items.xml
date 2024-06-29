@@ -156,7 +156,7 @@
             <Containable items="weldingtoolfuel,oxygensource,paint"/>
         </ItemContainer>
     </Item>
-  <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40"
+<!--   <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40"
           cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.9.3.0" scale="0.40"/>
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -213,7 +213,7 @@
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
       <Containable items="mobilebattery"/>
     </ItemContainer>
-  </Item>
+  </Item> -->
   <Item name="" identifier="traumashears" category="Equipment" cargocontaineridentifier="mediccrate"
         Tags="smallitem,medical,surgerytool" description="" useinhealthinterface="True" scale="0.5">
       <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
@@ -2974,7 +2974,7 @@
           <Remove/>
         </StatusEffect>
       </MeleeWeapon>
-      <SkillRequirementHint identifier="medical" level="22"/>
+      <SkillRequirementHint identifier="medical" level="25"/>
     </Item>
   <!-- Beds -->
     <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5"

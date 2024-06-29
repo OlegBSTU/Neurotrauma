@@ -44,7 +44,7 @@ AffectedItems = {
 "crowbardementonite", -- 攝魂撬棍
 "crowbarhardened", -- 硬化撬棍
 "stasisbag", -- 冷藏袋
-"autocpr", -- 全自动CPR
+-- "autocpr", -- 全自动CPR
 -- NeuroEyes
 "organscalpel_eyes", -- 器官切割刀：眼睛
 -- blahaj 布罗艾鲨鱼
