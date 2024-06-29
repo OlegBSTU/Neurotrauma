@@ -229,10 +229,11 @@ end
 NT.OnDamagedMethods.blunttrauma = function(character,strength,limbtype) 
     limbtype = HF.NormalizeLimbType(limbtype)
 
-    local fractureImmune = HF.HasAffliction(character,"cpr_fracturebuff")
+    -- local fractureImmune = HF.HasAffliction(character,"cpr_fracturebuff")
 
     -- torso
-    if not fractureImmune and strength >= 1 and limbtype==LimbType.Torso then
+    -- if not fractureImmune and strength >= 1 and limbtype==LimbType.Torso then
+    if strength >= 1 and limbtype==LimbType.Torso then
         if HF.Chance(strength/50*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             NT.BreakLimb(character,limbtype) end
 
@@ -247,7 +248,8 @@ NT.OnDamagedMethods.blunttrauma = function(character,strength,limbtype)
     end
 
     -- head
-    if not fractureImmune and strength >= 1 and limbtype==LimbType.Head then
+    -- if not fractureImmune and strength >= 1 and limbtype==LimbType.Head then
+    if strength >= 1 and limbtype==LimbType.Head then
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)) then
             HF.AddAfflictionResisted(character,"concussion",10) end
         if strength >= 15 and HF.Chance(math.min((strength-10)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
@@ -259,7 +261,8 @@ NT.OnDamagedMethods.blunttrauma = function(character,strength,limbtype)
     end
 
     -- extremities
-    if not fractureImmune and strength >= 1 and HF.LimbIsExtremity(limbtype) then
+    -- if not fractureImmune and strength >= 1 and HF.LimbIsExtremity(limbtype) then
+    if strength >= 1 and HF.LimbIsExtremity(limbtype) then
         if strength > 15 and NT.LimbIsBroken(character,limbtype) and not NT.LimbIsAmputated(character,limbtype) and HF.Chance(strength/100*NTC.GetMultiplier(character,"traumamputatechance")) then
             NT.TraumamputateLimb(character,limbtype) end
         if HF.Chance((strength-2)/60*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then

@@ -715,9 +715,9 @@
     <Effect minstrength="0" maxstrength="2"
       strengthchange="-0.5">
       <StatusEffect tags="medical" target="Character">
-        <ReduceAffliction identifier="cardiacarrest"  amount="2" />
-        <ReduceAffliction identifier="fibrillation"  amount="1" />
-        <Affliction identifier="bloodpressure" amount="4"/>
+        <ReduceAffliction identifier="cardiacarrest"  amount="4" />
+        <!-- <ReduceAffliction identifier="fibrillation"  amount="1" /> -->
+        <Affliction identifier="bloodpressure" amount="5"/>
       </StatusEffect>
       <StatusEffect tags="medical" target="Character" disabledeltatime="true" comparison="and">
         <Conditional cardiacarrest="lte 0.5"/>
@@ -731,7 +731,7 @@
 
   <!-- Auto CPR
   Invisible Status -->
-  <Affliction
+<!--   <Affliction
     name="CPR"
     identifier="cpr_buff_auto"  
     healableinmedicalclinic="false"
@@ -760,7 +760,7 @@
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
-  </Affliction>
+  </Affliction> -->
 
   <!-- CPR fracture immunity
   Invisible Status
@@ -3261,6 +3261,19 @@ thats what the vomiting symptom is for -->
     <icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="2,1" sheetelementsize="128,128" color="235,86,14,255" origin="0,0"/>
   </Affliction>
 
+  <!-- fourth degree burn -->
+  <Affliction
+    name=""
+    identifier="burn_deg4"
+    description=""
+    healableinmedicalclinic="false"
+    type=""
+    limbspecific="true"
+    maxstrength="100"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="0">
+    <icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="3,1" sheetelementsize="128,128" color="235,86,14,255" origin="0,0"/>
+  </Affliction>
 
   <!-- /// PAIN /// -->
 

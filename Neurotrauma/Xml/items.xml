@@ -3957,14 +3957,14 @@
         </StatusEffect>
         <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="2.0">
           <ReduceAffliction type="bleeding" amount="40" />
-          <ReduceAffliction type="burn" amount="20" />
+          <!-- <ReduceAffliction type="burn" amount="20" /> -->
         </StatusEffect>
         <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="60.0">
           <ReduceAffliction type="infectedwound" amount="10" />
         </StatusEffect>
         <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="2.0">
           <ReduceAffliction type="bleeding" amount="30" />
-          <ReduceAffliction type="burn" amount="15" />
+          <!-- <ReduceAffliction type="burn" amount="15" /> -->
         </StatusEffect>
         <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="60.0">
           <ReduceAffliction type="infectedwound" amount="8" />

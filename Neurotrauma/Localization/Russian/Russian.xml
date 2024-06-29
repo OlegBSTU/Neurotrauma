@@ -655,6 +655,9 @@
 <afflictionname.burn_deg3>Ожог третьей степени</afflictionname.burn_deg3>
 <afflictiondescription.burn_deg3>Кожа погрубела и потеряла чувствительность</afflictiondescription.burn_deg3>
 
+<afflictionname.burn_deg4>Ожог четвертой степени</afflictionname.burn_deg4>
+<afflictiondescription.burn_deg4>Ткань обуглилась и по всей области видны следы некроза</afflictiondescription.burn_deg4>
+
 <!-- /// Хирургия /// -->
 
 <afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>

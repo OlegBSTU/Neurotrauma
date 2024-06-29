@@ -473,7 +473,7 @@ NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb)
     local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",10),1)
 
     HF.AddAfflictionLimb(targetCharacter,"ointmented",limbtype,60*(success+1),usingCharacter)
-    if not limbHasThirdDegreeBurns(targetCharacter,limbtype) then
+    if not limbHasThirdDegreeBurns(targetCharacter,limbtype) and not limbHasFourthDegreeBurns(targetCharacter,limbtype) then
     HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-7.2-success*4.8,usingCharacter) end
     HF.AddAfflictionLimb(targetCharacter,"infectedwound",limbtype,-24-success*48,usingCharacter)
 
@@ -508,6 +508,19 @@ NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, l
     end
     HF.RemoveItem(item)
     HF.GiveItem(targetCharacter,"ntsfx_bandage")
+end
+NT.ItemMethods.antibleeding3 = function(item, usingCharacter, targetCharacter, limb) 
+    local limbtype = limb.type
+    
+    local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",55),1)
+
+    -- partial Lua burn treatment
+    if not limbHasFourthDegreeBurns(targetCharacter,limbtype) then
+    HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-30-success*10,usingCharacter) end
+
+    -- HF.RemoveItem(item)
+    item.Condition = item.Condition - 12.5
+    HF.GiveItem(targetCharacter,"ntsfx_ointment")
 end
 
 NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, limb)
@@ -1301,30 +1314,6 @@ NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, 
 
     InfuseBloodpack(item,"ominus", usingCharacter, targetCharacter, limb)
 end
-NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
-    local condition = item.Condition
-    if condition <= 0 or usingCharacter == targetCharacter then return end
-    
-    local targetInventory = targetCharacter.Inventory
-    if targetInventory~=nil then
-        if targetInventory.TryPutItem(item,4,false,true,usingCharacter,true,true) then
-            HF.GiveItem(targetCharacter,"ntsfx_zipper")
-        end
-    end
-end
-NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
-    local condition = item.Condition
-    if targetCharacter.InWater then return end
-    
-    local targetInventory = targetCharacter.Inventory
-    if targetInventory~=nil then
-        HF.GiveItem(targetCharacter,"ntsfx_zipper")
-        if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
-            HF.GiveItem(targetCharacter,"ntsfx_zipper")
-        end
-    end
-end
-
 -- startswith region begins
 
 -- transplants
@@ -1421,17 +1410,7 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
 
         if(not HF.HasAffliction(targetCharacter,"analgesia",0.5)) then
             HF.AddAffliction(targetCharacter,"severepain",5,usingCharacter) end
-    elseif not HF.HasAffliction(targetCharacter,"sym_unconsciousness",0.1) then
-		local outerWearId = HF.GetOuterWearIdentifier(targetCharacter)
-		if outerWearId == "stasisbag" or
-			outerWearId == "bodybag" or
-			outerWearId == "autocpr" then
-			
-			HF.GiveItem(targetCharacter,"ntsfx_velcro")
-			local equippedOuterItem = HF.GetOuterWear(targetCharacter)
-			equippedOuterItem.Drop()
-		end
-	end
+    end
 end
 NT.ItemMethods.heavywrench = NT.ItemStartsWithMethods.wrench
 
