@@ -2756,7 +2756,7 @@
               depth="0.6" origin="0.5,0.5"/>
       <Body width="112" height="96" density="25"/>
 
-      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect">
+      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-23" aimpos="100,0" handle1="-33,-4" handle2="-33,-4" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Voltage="1.0" setvalue="true">
           <RequiredItem items="mobilebattery" type="Contained"/>
         </StatusEffect>
