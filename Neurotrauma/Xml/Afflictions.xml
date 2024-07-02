@@ -815,7 +815,7 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
   </Affliction>
 
-  <!-- Stasis bag overlay
+  <!-- Stasis bag overlay (Huge thanks to |_M_| for overlays)
   Invisible (yet very apparent) Status
   -->
   <Affliction
@@ -835,7 +835,7 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
   </Affliction>
 
-  <!-- Body bag overlay
+  <!-- Body bag overlay (Huge thanks to |_M_| for overlays)
   Invisible (yet very apparent) Status
   -->
   <Affliction
