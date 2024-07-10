@@ -12,7 +12,7 @@ PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDis
 DisableDistance="25000" SoundInterval="10">
   <name firstname="Content/Characters/Human/firstnames_[GENDER].txt" lastname="Content/Characters/Human/lastnames.txt" />
   <ragdolls folder="%ModDir%\Characters\Human\Ragdolls"/>
-  <animations folder="%ModDir%\Characters\Human\Animations"/>
+  <animations folder="Content\Characters\Human\Animations"/>
 
   <StatusEffect type="always" target="This" delay="1" stackable="false" disabledeltatime="true">
     <Conditional IsDead="false"/>
