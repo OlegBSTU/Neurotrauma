@@ -49,37 +49,6 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
-
-  <!-- Barotrauma
-  Scanned Symptom, causes lung damage, hyposphagma,
-  pneumothorax, vomiting blood, disorientation and finally immediate death -->
-  <!-- Vanilla affliction override start -->
-  <Affliction
-    name="Barotrauma"
-    identifier="pressure"
-    description="There is obvious massive organ damage and the blood vessels of the eye have burst, creating an unnerving red gaze."
-    type="pressure"
-    causeofdeathdescription="Crushed by water pressure"
-    selfcauseofdeathdescription="You have been crushed by water pressure."
-    limbspecific="false"
-    maxstrength="100"
-    showiconthreshold="51"
-    showinhealthscannerthreshold="0"
-    damageoverlayalpha="0.6">
-    <Effect minstrength="0" maxstrength="99">
-      <StatusEffect target="Character" type="OnActive" LowPassMultiplier="1" PressureProtection="10000.0" setvalue="true" disabledeltatime="true" Interval="4.5" Duration="0.01">
-        <Conditional vitality="gt -85" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="100" maxstrength="100" multiplybymaxvitality="true"
-      minvitalitydecrease="10"
-      maxvitalitydecrease="10"
-      minbodytint="60,0,0,0"
-      maxbodytint="60,0,0,200"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,768,128,128" color="143,111,160,255" origin="0,0"/>
-  </Affliction>
-  <!-- Vanilla affliction override end -->
-
   <!-- Barotrauma
   Scanned Symptom, causes lung damage, hyposphagma,
   pneumothorax, vomiting blood, disorientation and finally immediate death -->
@@ -88,7 +57,8 @@
     name="Diver Barotrauma"
     identifier="nthm_diversbarotrauma"
     description="There is obvious massive organ damage and the blood vessels of the eye have burst, creating an unnerving red gaze."
-    type="pressure"
+    type="nthm_pressure"
+    isbuff="false"
     causeofdeathdescription="Crushed by water pressure"
     selfcauseofdeathdescription="You have been crushed by water pressure."
     limbspecific="false"
@@ -96,26 +66,55 @@
     showiconthreshold="51"
     showinhealthscannerthreshold="0"
     damageoverlayalpha="0.6">
-    <Effect minstrength="0" maxstrength="99">
-      <StatusEffect target="Character" type="OnActive" LowPassMultiplier="1" PressureProtection="10000.0" setvalue="true" disabledeltatime="true">
-      </StatusEffect>
+    <Effect minstrength="0" maxstrength="51" strengthchange="-2">
+      <!-- <AbilityFlag flagtype="ImmuneToPressure" /> -->
+      <!-- <StatusEffect target="Character" LowPassMultiplier="1" PressureProtection="50000.0" setvalue="true" disabledeltatime="true"/> -->
     </Effect>
-    <Effect minstrength="100" maxstrength="100" multiplybymaxvitality="true"
-      minvitalitydecrease="10"
-      maxvitalitydecrease="10"
+    <Effect minstrength="51" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="2"
       minbodytint="60,0,0,0"
-      maxbodytint="60,0,0,200"/>
+      maxbodytint="60,0,0,200"
+      strengthchange="-2"/>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,768,128,128" color="143,111,160,255" origin="0,0"/>
   </Affliction>
   <!-- Vanilla affliction override end -->
 
   <!-- //// SYMPTOMS //// -->
   <!-- as a rule of thumb, exposed symptoms arent visible on the scanner to reduce clutter -->
- <Affliction
+
+  <!-- CO2 Narcosis, character is immobile and screen goes black / scanned symptom -->
+  <Affliction
 	name=""
-	identifier="co2narc"
-	type="co2narc"
+	identifier="sym_co2narc"
+	type="gaze"
 	maxstrength="10"
+	limbspecific="false"
+	showiconthreshold="500"
+	showinhealthscannerthreshold="0">
+	
+    <Effect
+	  minstrength="0"
+	  maxstrength="5"
+	  minafflictionoverlayalphamultiplier="0"
+	  maxafflictionoverlayalphamultiplier="1"
+	  strengthchange="1.0"/>
+    <Effect
+	  minstrength="5"
+	  maxstrength="10"
+	  minafflictionoverlayalphamultiplier="1"
+	  maxafflictionoverlayalphamultiplier="1"
+	  strengthchange="1.0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+    <AfflictionOverlay texture="%ModDir%\Images\co2narc.png" />
+  </Affliction>
+
+  <!-- Hyposphagma, screen turns red and slightly blurred / exposed symptom -->
+  <Affliction
+	name=""
+	identifier="sym_hyposphagma"
+	type="gaze"
+	maxstrength="2"
 	limbspecific="false"
 	indicatorlimb="Head"
 	showiconthreshold="0"
@@ -123,36 +122,84 @@
 	
     <Effect
 	  minstrength="0"
-	  maxstrength="5"
-	  minafflictionoverlayalphamultiplier="0"
-	  maxafflictionoverlayalphamultiplier="1"
-      MultiplyByMaxVitality="true"
-	  minvitalitydecrease="0"
-	  maxvitalitydecrease="0.1"
-	  strengthchange="1.0"
-	  graincolor="0,0,0,255"
-	  mingrainstrength="0.0"
-	  maxgrainstrength="20000.0"
-	  minscreenblur="0"
-	  maxscreenblur="15">
-    </Effect>
-    <Effect
-	  minstrength="5"
-	  maxstrength="10"
+	  maxstrength="2"
 	  minafflictionoverlayalphamultiplier="1"
 	  maxafflictionoverlayalphamultiplier="1"
-      MultiplyByMaxVitality="true"
-	  minvitalitydecrease="0.1"
-	  maxvitalitydecrease="2"
-	  strengthchange="1.0"
-	  graincolor="0,0,0,255"
-	  mingrainstrength="20000.0"
-	  maxgrainstrength="20000.0"
-	  minscreenblur="15"
-	  maxscreenblur="15">
+	  minscreenblur="0"
+	  maxscreenblur="0.5">
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
-    <AfflictionOverlay texture="%ModDir%\Images\co2narc.png" />
+    <AfflictionOverlay texture="%ModDir%\Images\hyposphagma.png" />
+  </Affliction>
+
+  <!-- Disorientation, screen is partially blacked out and hearing is muffled / exposed symptom -->
+  <Affliction
+	name=""
+	identifier="sym_disorientation"
+	type="gaze"
+	maxstrength="2"
+	limbspecific="false"
+	indicatorlimb="Head"
+	showiconthreshold="0"
+	showinhealthscannerthreshold="500">
+	
+    <Effect
+	  minstrength="0"
+	  maxstrength="2"
+	  minafflictionoverlayalphamultiplier="1"
+	  maxafflictionoverlayalphamultiplier="1"
+	  minscreenblur="0"
+	  maxscreenblur="0.5">
+      <StatusEffect target="Character" LowPassMultiplier="0.8" setvalue="true"/>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+    <AfflictionOverlay texture="%ModDir%\Images\disorientation.png" />
+  </Affliction>
+
+  <!-- Coughing blood / Exposed Symptom -->
+  <Affliction
+    name=""
+    identifier="sym_coughblood"
+    description=""
+    healableinmedicalclinic="false"
+    type="gaze"
+    isbuff="false"
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="100"
+    maxstrength="2"
+    iconcolors="255,90,0,255;255,90,0,255">
+
+    <PeriodicEffect mininterval="12" maxinterval="26">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true"/>
+        <Conditional sym_coughblood="gte 1"/>
+        <Sound file="%ModDir%/Sound/Voice/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sound/Voice/male_cough2.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/male_cough3.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/male_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true"/>
+        <Conditional sym_coughblood="gte 1"/>
+        <Sound file="%ModDir%/Sound/Voice/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sound/Voice/female_cough2.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/female_cough3.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/female_cough4.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/female_cough5.ogg" />
+        <Sound file="%ModDir%/Sound/Voice/female_cough6.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="0.1">
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="100" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <Conditional HideFace="eq False" />
+      </StatusEffect>
+    </PeriodicEffect>
+
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
   <!-- Stamina mechanic for swimming
@@ -190,6 +237,8 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
   </Affliction>
+
+
 
 </Afflictions>
 

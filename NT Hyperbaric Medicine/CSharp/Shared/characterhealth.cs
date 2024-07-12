@@ -15,35 +15,36 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 
+// patching this method https://github.com/evilfactory/LuaCsForBarotrauma/blob/c518b696f61a139680d51c182573f7046adf8018/Barotrauma/BarotraumaShared/SharedSource/Characters/Health/CharacterHealth.cs#L843
+
 namespace CharacterHealthMod
 {
-  class CharacterHealthMod : IAssemblyPlugin
-  {
-    public Harmony harmony;
+	class CharacterHealthMod : IAssemblyPlugin
+	{
+		public Harmony harmony;
 	
-    public void Initialize()
-    {
-      harmony = new Harmony("CharacterHealth");
+		public void Initialize()
+		{
+			harmony = new Harmony("CharacterHealth");
 
-	harmony.Patch(
-		original: typeof(CharacterHealth).GetMethod("Update"),
-		prefix: new HarmonyMethod(typeof(CharacterHealthMod).GetMethod("Update"))
-	);
-	
-    }
-    public void OnLoadCompleted() { }
-    public void PreInitPatching() { }
+			harmony.Patch(
+				original: typeof(CharacterHealth).GetMethod("Update"),
+				postfix: new HarmonyMethod(typeof(CharacterHealthMod).GetMethod("Update"))
+			);
+		}
+		public void OnLoadCompleted() { }
+		public void PreInitPatching() { }
 
-    public void Dispose()
-    {
-      harmony.UnpatchAll();
-      harmony = null;
-    }
+		public void Dispose()
+		{
+			harmony.UnpatchAll();
+			harmony = null;
+		}
 	
-	public static void Update(CharacterHealth __instance, float deltaTime)
-        {
+		public static void Update(CharacterHealth __instance, float deltaTime)
+		{
 			CharacterHealth _ = __instance;
-            //DebugConsole.NewMessage("s");
+			//DebugConsole.NewMessage("s");
 /* 			if (_.Character.IsHuman && !_.Character.AnimController.IsUsingItem && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimFastParams)
 			{
 				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_fatigue"].Instantiate(10f * deltaTime));
@@ -63,19 +64,14 @@ namespace CharacterHealthMod
 			} */
 			if (_.Character.IsHuman && !_.Character.IsDead)
 			{
-				_.Character.PressureTimer = 0.0f
+				// _.Character.PressureTimer = 0.0f
 				if (!_.Character.IsProtectedFromPressure && _.Character.InPressure)
 				{
-					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(20f * deltaTime));
-				}
-				else
-				{
-					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(-2f * deltaTime));
+					_.Character.PressureTimer = 0.0f;
+					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(6.0f * deltaTime));
 				}
 			}
 		
 		}
-
-	
-  }
+	}
 }

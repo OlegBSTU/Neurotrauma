@@ -9,4 +9,5 @@
   <None file="%ModDir%/Lua/Scripts/helperfunctions.lua" />
   <None file="%ModDir%/Lua/Scripts/items.lua" />
   <None file="%ModDir%/Lua/Scripts/testing.lua" /> -->
+  <Item file="%ModDir%/dummyitem.xml" />
 </contentpackage>
