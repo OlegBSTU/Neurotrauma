@@ -22,7 +22,7 @@ namespace CharacterHealthMod
 	class CharacterHealthMod : IAssemblyPlugin
 	{
 		public Harmony harmony;
-	
+
 		public void Initialize()
 		{
 			harmony = new Harmony("CharacterHealth");
@@ -40,38 +40,37 @@ namespace CharacterHealthMod
 			harmony.UnpatchAll();
 			harmony = null;
 		}
-	
+
 		public static void Update(CharacterHealth __instance, float deltaTime)
 		{
 			CharacterHealth _ = __instance;
 			//DebugConsole.NewMessage("s");
-/* 			if (_.Character.IsHuman && !_.Character.AnimController.IsUsingItem && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimFastParams)
+			if (_.Character.IsPlayer && !_.Character.AnimController.IsUsingItem && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimFastParams)
 			{
-				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_fatigue"].Instantiate(10f * deltaTime));
+				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["swimfatigue"].Instantiate(11f * deltaTime));
 			}
-			else if (_.Character.IsHuman && _.Character.AnimController.CurrentAnimationParams == _.Character.AnimController.SwimSlowParams)
+			else if (_.Character.IsPlayer && !_.Character.IsDead)
 			{
-				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_fatigue"].Instantiate(-10f * deltaTime));
-			}
-			else if (_.Character.IsHuman && !_.Character.IsDead)
-			{
-				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_fatigue"].Instantiate(-20f * deltaTime));
-				Vector2 velocity = _.Character.AnimController.MainLimb.body.LinearVelocity
-				if (Math.Pow(Math.Pow(velocity.X,2) + (Math.Pow(velocity.Y,2)),0.5) <= 0.1)
+				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["hypercapnia"].Instantiate(-1f * deltaTime));
+				Vector2 velocity = _.Character.AnimController.MainLimb.body.LinearVelocity;
+				if (_.isUnconscious)
 				{
-				_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_motionless"].Instantiate(2f * deltaTime));
+					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["hypercapnia"].Instantiate(-1f * deltaTime));
 				}
-			} */
+				else if (Math.Pow(Math.Pow(velocity.X, 2) + (Math.Pow(velocity.Y, 2)), 0.5) <= 0.1)
+				{
+					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["hypercapnia"].Instantiate(-1f * deltaTime));
+				}
+			}
 			if (_.Character.IsHuman && !_.Character.IsDead)
 			{
 				// _.Character.PressureTimer = 0.0f
 				if (!_.Character.IsProtectedFromPressure && _.Character.InPressure)
 				{
 					_.Character.PressureTimer = 0.0f;
-					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["nthm_diversbarotrauma"].Instantiate(6.0f * deltaTime));
+					_.ApplyAffliction(_.Character.AnimController.MainLimb, AfflictionPrefab.Prefabs["diversbarotrauma"].Instantiate(6.0f * deltaTime));
 				}
 			}
-		
 		}
 	}
 }

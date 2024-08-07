@@ -24,7 +24,7 @@ local function GetOuterWearContainedIdentifier(c)
 		return "default"
 	end
 end
-local function BreathingGasPressureGrade(c) 
+local function BreathingGasPressureGrade(c)
 	local gasTankIdentifier = GetOuterWearContainedIdentifier(c)
 	return gasSafePressures[gasTankIdentifier]
 end
@@ -36,10 +36,10 @@ Timer.Wait(function()
 	-- high CO2 presence in blood, cause symptoms, CO2 narcosis if severe enough, caused by fatigue underwater
     NT.Afflictions.nthm_hypercapnia = {max=100,update=function(c,i)
 		if c.stats.stasis then return end
-		-- liquid oxygenite treatment and prevention 
+		-- liquid oxygenite treatment and prevention
 		-- (rework neurotrauma liquid oxygenite)
 		-- if c.afflictions.loxygenite > 0 then c.afflictions[i].strength = 0 return end
-		
+
 		-- apply different symptoms on severity
 		if c.afflictions[i].strength > 0 and c.afflictions[i].strength < 31 then
 			NTC.SetSymptomTrue(c.character,"sym_headache",2)
@@ -65,7 +65,7 @@ Timer.Wait(function()
 	NT.Afflictions.nthm_co2narc = {update=function(c,i)
 		local isUnconscious = not HF.HasAffliction(c.character,"implacable",0.05)
 			and (c.afflictions.hypercapnia.strength >= 100 or c.afflictions.co2narc.strength > 0.1)
-		if isUnconscious then 
+		if isUnconscious then
 			c.afflictions.stun.strength = math.max(7,c.afflictions.stun.strength)
 			HF.AddAffliction(c.character,"co2narc", NT.Deltatime * 0.5)
 		end
@@ -94,10 +94,10 @@ Timer.Wait(function()
 		if c.character.InPressure and c.afflictions.motionless < 0.1 and GetOuterWearContainedIdentifier(c.character) != "liquidgastank" then
 			if GetOuterWearContainedIdentifier(c.character) != "nitroxtank" then
 				c.afflictions[i].strength = HF.Clamp(
-					c.afflictions[i].strength + NT.Deltatime * 0.3 + 
-					NT.Deltatime*(c.afflictions.bloodpressure.strength-100)/100*0.1 + 
-					NT.Deltatime*c.afflictions.lungdamage.strength/100*0.1 + 
-					NT.Deltatime*c.afflictions.heartdamage.strength/100*0.1 + 
+					c.afflictions[i].strength + NT.Deltatime * 0.3 +
+					NT.Deltatime*(c.afflictions.bloodpressure.strength-100)/100*0.1 +
+					NT.Deltatime*c.afflictions.lungdamage.strength/100*0.1 +
+					NT.Deltatime*c.afflictions.heartdamage.strength/100*0.1 +
 					NT.Deltatime*c.afflictions.drunk.strength/200*0.1 -- gain 0.3 strength/s by default then add 0.1 strength/s for every condition with severity
 				,0,100)
 			else
@@ -109,11 +109,11 @@ Timer.Wait(function()
 	end
 	}
 	-- gas inside arteries
-	NT.Afflictions.nthm_arterialgasembolism = {max=10,update=function(c,i)
+	NT.Afflictions.nthm_gasembolism = {max=10,update=function(c,i)
 		if c.stats.stasis then return end
 		-- hyperbaric oxygen chamber treatment
 		-- if c.stats.hoc > 0 then c.afflictions[i].strength = 0 return end
-		if HF.Chance(0.07) and c.afflictions.caissondisease > 30 then
+		if HF.Chance(0.07) then
 			c.afflictions[i].strength = 10
             if HF.Chance(0.5) then
 				HF.AddAffliction(c.character,"heartattack",50)
@@ -123,16 +123,16 @@ Timer.Wait(function()
 		end
 	end
 	}
-	-- oxygen intoxication, triggered by inhaling gas at unsafe pressure
-	NT.Afflictions.nthm_diversrapture = {max=100,update=function(c,i)
+	-- oxygen intoxication, triggered by inhaling gas with unsafe pressure
+	NT.Afflictions.nthm_rapture = {max=100,update=function(c,i)
 		if c.stats.stasis then return end
 		-- hyperbaric oxygen chamber treatment
-		-- if c.stats.hocsuccess > 0 then c.afflictions[i].strength = 0 end
+		-- if c.stats.hoc > 0 then c.afflictions[i].strength = 0 end
 		if c.afflictions[i].strength > 70 and c.afflictions.klonopin < 0.1 then
             HF.AddAffliction(c.character,"statusepilepticus",50 * NT.Deltatime)
 		end
 		local charPosY = c.character.WorldPosition.Y
-		if charPosY < 3500 or (c.character.InPressure and BreathingGasPressureGrade(c) < charPosY) then
+		if (c.character.InPressure and BreathingGasPressureGrade(c) < charPosY) then
             c.afflictions[i].strength = HF.Clamp(
                 c.afflictions[i].strength + NT.Deltatime * 0.5 -- gain 0.5 strength/s
             ,0,100)
@@ -147,40 +147,27 @@ Timer.Wait(function()
 		if (c.afflictions[i].strength > 0.1) then
 			c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5)
 			for type in limbtypes do
-				if(HF.Chance(0.6)) then 
+				if(HF.Chance(0.6)) then
 					HF.AddAfflictionLimb(c.character,"spasm",type,10)
 				end
 			end
 		end
 	end
 	}
-	NT.Afflictions.pressure = {max=100,update=function(c,i)
+	NT.Afflictions.nthm_barotrauma = {max=100,update=function(c,i)
 		-- if c.afflictions[i].strength < 0.1 then
-			-- if c.character.InPressure and PressureProtection < c.character.WorldPosition.Y then 
-				-- c.afflictions[i].strength = NT.Deltatime * 4 
+			-- if c.character.InPressure and PressureProtection < c.character.WorldPosition.Y then
+				-- c.afflictions[i].strength = NT.Deltatime * 4
 				-- c.character.IsImmuneToPressure = true
-			-- return end -- gain 4/s. Handled in a hook
+			-- return end -- gain 4/s. Handled in a patch
 		-- end
 		if c.afflictions[i].strength > 0 and c.afflictions[i].strength <= 30 then -- gain 2% lung damage/s
 			if HasLungs(c.character) then c.afflictions.lungdamage.strength = HF.Clamp(c.afflictions.lungdamage.strength + NT.Deltatime * 2,0,100) end
-		elseif c.afflictions[i].strength > 30 then
+		elseif c.afflictions[i].strength < 50 then
 			if HasLungs(c.character) and c.afflictions.pneumothorax.strength < 0.1 then -- develop pneumothorax
 				HF.AddAffliction(c.character,"pneumothorax",5) end
-		elseif c.afflictions[i].strength > 50 and c.afflictions[i].strength <= 99 then -- vomit blood
+		elseif c.afflictions[i].strength < 100 and c.afflictions[i].strength <= 99 then -- vomit blood
             NTC.SetSymptomTrue(c.character,"sym_hematemesis",2)
-		elseif c.afflictions[i].strength == 100 then  -- implosion
-			c.character.IsImmuneToPressure = false
-			c.character.PressureTimer = 100.0
-		end
-		
-		if c.afflictions[i].strength > 0 and c.character.IsProtectedFromPressure
-			c.afflictions[i].strength = HF.Clamp(
-				c.afflictions[i].strength - NT.Deltatime * 2 -- lose 2% barotrauma/s
-			,0,100)
-        elseif c.afflictions[i].strength > 0 and not c.character.IsProtectedFromPressure
-			c.afflictions[i].strength = HF.Clamp(
-				c.afflictions[i].strength + NT.Deltatime * 4 -- gain 4% barotrauma/s
-			,0,100)
 		end
 	end
 	}
@@ -201,53 +188,53 @@ Timer.Wait(function()
 		c.afflictions[i].strength = HF.BoolToNum(
 			not NTC.GetSymptomFalse(c.character,i) and (NTC.GetSymptom(c.character,i)
 			or (c.afflictions.hypercapnia.strength>0 and c.afflictions.hypercapnia.strength < 31)),2)
-		
+
 		if (c.afflictions[i].strength > 0.1) then
 			for type in limbtypes do
-				if(HF.Chance(0.2)) then 
+				if(HF.Chance(0.2)) then
 					HF.AddAfflictionLimb(c.character,"spasm",type,10)
 				end
 			end
 		end
 	end
 	}
-	NT.Afflictions.nthm_sym_panic = {update=function(c,i)
+	NT.Afflictions.sym_panic = {update=function(c,i)
 		c.afflictions[i].strength = HF.BoolToNum(
-		not NTC.GetSymptomFalse(c.character,i) and 
-		(NTC.GetSymptom(c.character,i) or 
+		not NTC.GetSymptomFalse(c.character,i) and
+		(NTC.GetSymptom(c.character,i) or
 		(not c.afflictions.sym_unconsciousness.strength>0 and c.afflictions.hypercapnia.strength>60 and c.afflictions.hypercapnia.strength < 100)),2)end
 	}
-	NT.Afflictions.nthm_sym_diverfleas={update=function(c,i)
+	NT.Afflictions.sym_diverfleas={update=function(c,i)
 		c.afflictions[i].strength = HF.BoolToNum(
 			not NTC.GetSymptomFalse(c.character,i) and (NTC.GetSymptom(c.character,i)
 			or (not c.afflictions.sym_unconsciousness.strength>0 and c.afflictions.caissondisease.strength>0 and c.afflictions.caissondisease.strength < 31)),2)
-		
+
 		if (c.afflictions[i].strength > 0.1) then
 			for type in limbtypes do
-				if(HF.Chance(0.1)) then 
+				if(HF.Chance(0.1)) then
 					HF.AddAfflictionLimb(c.character,"spasm",type,10)
 				end
 			end
 		end
 	end
 	}
-	NT.Afflictions.nthm_sym_disoriented = {update=function(c,i)
+	NT.Afflictions.sym_disoriented = {update=function(c,i)
 		c.afflictions[i].strength = HF.BoolToNum(
-		not NTC.GetSymptomFalse(c.character,i) and 
-		(NTC.GetSymptom(c.character,i) or 
+		not NTC.GetSymptomFalse(c.character,i) and
+		(NTC.GetSymptom(c.character,i) or
 		(not c.afflictions.sym_unconsciousness.strength>0 and ((c.afflictions.caissondisease.strength>30 and c.afflictions.caissondisease.strength < 61) or
 		c.afflictions.diverbarotrauma.strength>50))),2)end
 	}
-	NT.Afflictions.nthm_sym_hyposphagma = {update=function(c,i)
+	NT.Afflictions.sym_hyposphagma = {update=function(c,i)
 		c.afflictions[i].strength = HF.BoolToNum(
 			not NTC.GetSymptomFalse(c.character,i) and (NTC.GetSymptom(c.character,i)
 			or c.afflictions.diverbarotrauma.strength>30),2)
 	end
 	}
-	NT.Afflictions.nthm_sym_euphoria = {update=function(c,i)
+	NT.Afflictions.sym_euphoria = {update=function(c,i)
 		c.afflictions[i].strength = HF.BoolToNum(
-		not NTC.GetSymptomFalse(c.character,i) and 
-		(NTC.GetSymptom(c.character,i) or 
+		not NTC.GetSymptomFalse(c.character,i) and
+		(NTC.GetSymptom(c.character,i) or
 		(not c.afflictions.sym_unconsciousness.strength>0 and c.afflictions.diversrapture.strength>0)),2)end
 	}
 end,1)
