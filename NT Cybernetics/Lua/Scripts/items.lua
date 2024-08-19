@@ -27,34 +27,44 @@ NTCyb.ItemMethods.fpgacircuit = function(item, usingCharacter, targetCharacter, 
     local limbtype = HF.NormalizeLimbType(limb.type)
 
     if not NTCyb.HF.LimbIsCyber(targetCharacter,limbtype) then return end
-    if HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"ntc_damagedelectronics",0) < 0.1 then return end
+    local limbDamage = HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"ntc_damagedelectronics",0)
+    if limbDamage < 0.1 then return end
 
     if(HF.GetSkillRequirementMet(usingCharacter,"electrical",40)) then
         HF.AddAfflictionLimb(targetCharacter,"ntc_damagedelectronics",limbtype,-50)
+        item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 50)*2)
     else
         HF.AddAfflictionLimb(targetCharacter,"ntc_damagedelectronics",limbtype,-20)
+        item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 20)*4)
     end
 
     HF.GiveItem(targetCharacter,"ntcsfx_screwdriver")
-    HF.RemoveItem(item)
+    if item.Condition <= 0 then
+        HF.RemoveItem(item)
+    end
 end
 
 NTCyb.ItemMethods.steel = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = HF.NormalizeLimbType(limb.type)
 
     if not NTCyb.HF.LimbIsCyber(targetCharacter,limbtype) then return end
-    if HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"ntc_materialloss",0) < 0.1 then return end
+    local limbDamage = HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"ntc_materialloss",0)
+    if limbDamage < 0.1 then return end
 
     if(HF.GetSkillRequirementMet(usingCharacter,"mechanical",60)) then
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,-50)
+        item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 50)*2)
     else
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,-20)
+        item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 20)*4)
     end
 
     if math.random() < 0.5 then 
         HF.GiveItem(targetCharacter,"ntcsfx_screwdriver") else 
         HF.GiveItem(targetCharacter,"ntcsfx_welding") end
-    HF.RemoveItem(item)
+    if item.Condition <= 0 then
+        HF.RemoveItem(item)
+    end
 end
 
 NTCyb.ItemMethods.weldingtool = function(item, usingCharacter, targetCharacter, limb) 
