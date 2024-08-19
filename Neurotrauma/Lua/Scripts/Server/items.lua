@@ -309,7 +309,11 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
                 limbtoitem[LimbType.LeftArm] = "larm"
                 if limbtoitem[limbtype] ~= nil then
                     HF.GiveItem(usingCharacter,limbtoitem[limbtype])
-                    if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill",true) then HF.GiveSkill(usingCharacter,"surgery",0.5) end
+                    if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill",true) then
+                        HF.GiveSkill(usingCharacter,"surgery",0.5)
+                    else
+                        HF.GiveSkill(usingCharacter,"medical",0.25)
+                    end
                 end
             end
         end
