@@ -103,7 +103,8 @@ NTCyb.ItemMethods.cyberarm = function(item, usingCharacter, targetCharacter, lim
         NTCyb.CyberifyLimb(targetCharacter,limbtype,false)
         HF.RemoveItem(item)
     else
-        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+        HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(15,50))
+        HF.GiveItem(targetCharacter,"ntsfx_slash")
     end
 end
 
@@ -118,7 +119,8 @@ NTCyb.ItemMethods.waterproofcyberarm = function(item, usingCharacter, targetChar
         NTCyb.CyberifyLimb(targetCharacter,limbtype,true)
         HF.RemoveItem(item)
     else
-        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+        HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(15,50))
+        HF.GiveItem(targetCharacter,"ntsfx_slash")
     end
 end
 
@@ -133,7 +135,8 @@ NTCyb.ItemMethods.waterproofcyberleg = function(item, usingCharacter, targetChar
         NTCyb.CyberifyLimb(targetCharacter,limbtype,true)
         HF.RemoveItem(item)
     else
-        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+        HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(15,50))
+        HF.GiveItem(targetCharacter,"ntsfx_slash")
     end
 end
 
@@ -148,7 +151,8 @@ NTCyb.ItemMethods.cyberleg = function(item, usingCharacter, targetCharacter, lim
         NTCyb.CyberifyLimb(targetCharacter,limbtype,false)
         HF.RemoveItem(item)
     else
-        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+        HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(15,50))
+        HF.GiveItem(targetCharacter,"ntsfx_slash")
     end
 end
 
@@ -157,17 +161,42 @@ NTCyb.ItemMethods.crowbar = function(item, usingCharacter, targetCharacter, limb
 
     if not NTCyb.HF.LimbIsCyber(targetCharacter,limbtype) then return end
 
-    -- removing the limb yourself
-    if usingCharacter == targetCharacter then
-        NTCyb.UncyberifyLimb(targetCharacter,limbtype)
-        NT.TraumamputateLimbMinusItem(targetCharacter,limbtype)
-        HF.GiveItem(targetCharacter,"ntcsfx_cyberdeath")
-        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,HF.RandomRange(10,20))
-        return
-    end
+    local isWaterproof = HF.HasAfflictionLimb(targetCharacter,"ntc_waterproof",limbtype,99)
+    local isGoodCondition =
+        not HF.HasAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,20)
+        and not HF.HasAfflictionLimb(targetCharacter,"ntc_damagedelectronics",limbtype,20)
+        and not HF.HasAfflictionLimb(targetCharacter,"ntc_bentmetal",limbtype,20)
 
-    -- getting your limb removed by someone else
-    if(HF.GetSkillRequirementMet(usingCharacter,"weapons",50)) then
+    if isGoodCondition and (HF.GetSkillRequirementMet(usingCharacter, "mechanical", 50) or HF.GetSkillRequirementMet(usingCharacter, "medical", 70)) then
+        NTCyb.UncyberifyLimb(targetCharacter,limbtype)
+        HF.GiveItem(targetCharacter,"ntcsfx_cyberdeath")
+        if not HF.GetSkillRequirementMet(usingCharacter, "medical", 50) then
+            HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(10,40))
+            HF.GiveItem(targetCharacter,"ntsfx_slash")
+        else
+            HF.AddAfflictionLimb(targetCharacter,"bleeding",LimbType.Torso,HF.RandomRange(5,10))
+        end
+
+        NT.SurgicallyAmputateLimb(targetCharacter,limbtype)
+        local limbItem
+        if limbtype == LimbType.LeftLeg or limbtype == LimbType.RightLeg then
+            if isWaterproof then
+                limbItem = "waterproofcyberleg"
+            else
+                limbItem = "cyberleg"
+            end
+        elseif limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm then
+            if isWaterproof then
+                limbItem = "waterproofcyberarm"
+            else
+                limbItem = "cyberarm"
+            end
+        end
+        if limbItem ~= nil then
+            HF.GiveItem(usingCharacter,limbItem)
+            HF.GiveSkill(usingCharacter,"mechanical",0.125)
+        end
+    elseif(HF.GetSkillRequirementMet(usingCharacter,"weapons",50)) then
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,20)
     else
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,10)
