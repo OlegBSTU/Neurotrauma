@@ -44,19 +44,19 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
     <PreferredContainer primary="locker" />
-    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
-      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
-      <RequiredItem identifier="steel" amount="5" />
-      <RequiredItem identifier="fpgacircuit" amount="4" />
-      <RequiredItem identifier="fulgurium" amount="3" />
+      <RequiredItem identifier="cyberarm" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="rubber" amount="4" />
     </Fabricate>
     <Deconstruct time="30">
       <Item identifier="titaniumaluminiumalloy" />
       <Item identifier="steel" amount="3" />
       <Item identifier="fpgacircuit" amount="3" />
-      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="rubber" amount="3" />
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
     <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
@@ -114,19 +114,19 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="locker"/>
-    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
-      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
-      <RequiredItem identifier="steel" amount="5" />
-      <RequiredItem identifier="fpgacircuit" amount="4" />
-      <RequiredItem identifier="fulgurium" amount="3" />
+      <RequiredItem identifier="cyberleg" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="rubber" amount="4" />
     </Fabricate>
     <Deconstruct time="30">
       <Item identifier="titaniumaluminiumalloy"/>
       <Item identifier="steel" amount="3"/>
       <Item identifier="fpgacircuit" amount="3"/>
-      <Item identifier="fulgurium"/>
+      <Item identifier="fulgurium" amount="2"/>
+      <Item identifier="rubber" amount="3"/>
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
     <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5"/>
