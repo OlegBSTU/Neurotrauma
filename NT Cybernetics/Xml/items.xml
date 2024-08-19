@@ -36,6 +36,41 @@
     <SkillRequirementHint identifier="mechanical" level="70" />
   </Item>
 
+  <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="2000" soldbydefault="false">
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
+    <PreferredContainer primary="locker" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="steel" amount="5" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="fulgurium" amount="3" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" amount="3" />
+      <Item identifier="fpgacircuit" amount="3" />
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Body width="114" height="23" density="50" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
   <Item name="" identifier="cyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
     <Price baseprice="500" soldbydefault="false">
@@ -51,6 +86,41 @@
       <RequiredItem identifier="steel" amount="4"/>
       <RequiredItem identifier="fpgacircuit" amount="4"/>
       <RequiredItem identifier="fulgurium"/>
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy"/>
+      <Item identifier="steel" amount="3"/>
+      <Item identifier="fpgacircuit" amount="3"/>
+      <Item identifier="fulgurium"/>
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5"/>
+    <Body width="30" height="115" density="50"/>
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
+  <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="2000" soldbydefault="false">
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+    <PreferredContainer primary="locker"/>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="steel" amount="5" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="fulgurium" amount="3" />
     </Fabricate>
     <Deconstruct time="30">
       <Item identifier="titaniumaluminiumalloy"/>

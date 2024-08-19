@@ -13,6 +13,9 @@ function NTCyb.UncyberifyLimb(character,limbtype)
     HF.SetAfflictionLimb(character,"ntc_cyberlimb",limbtype,0)
     HF.SetAfflictionLimb(character,"ntc_cyberarm",limbtype,0)
     HF.SetAfflictionLimb(character,"ntc_cyberleg",limbtype,0)
+    HF.SetAfflictionLimb(character,"ntc_legspeed",limbtype,0)
+    HF.SetAfflictionLimb(character,"ntc_armspeed",limbtype,0)
+    HF.SetAfflictionLimb(character,"ntc_waterproof",limbtype,0)
     HF.SetAfflictionLimb(character,"ntc_loosescrews",limbtype,0)
     HF.SetAfflictionLimb(character,"ntc_damagedelectronics",limbtype,0)
     HF.SetAfflictionLimb(character,"ntc_bentmetal",limbtype,0)
@@ -24,20 +27,36 @@ function NTCyb.UncyberifyLimb(character,limbtype)
     elseif limbtype == LimbType.LeftLeg then HF.SetAffliction(character,"ll_cyber",0) end
 end
 
-function NTCyb.CyberifyLimb(character,limbtype)
+function NTCyb.CyberifyLimb(character,limbtype,iswaterproof)
     
     if limbtype == LimbType.RightArm then 
         HF.SetAffliction(character,"ra_cyber",100)
         HF.SetAfflictionLimb(character,"ntc_cyberarm",limbtype,100)
+        HF.SetAfflictionLimb(character,"ntc_armspeed",limbtype,100)
+        if iswaterproof == true then
+            HF.SetAfflictionLimb(character,"ntc_waterproof",limbtype,100)
+        end
     elseif limbtype == LimbType.LeftArm then 
         HF.SetAffliction(character,"la_cyber",100)
         HF.SetAfflictionLimb(character,"ntc_cyberarm",limbtype,100)
+        HF.SetAfflictionLimb(character,"ntc_armspeed",limbtype,100)
+        if iswaterproof == true then
+            HF.SetAfflictionLimb(character,"ntc_waterproof",limbtype,100)
+        end
     elseif limbtype == LimbType.RightLeg then 
         HF.SetAffliction(character,"rl_cyber",100)
         HF.SetAfflictionLimb(character,"ntc_cyberleg",limbtype,100)
+        HF.SetAfflictionLimb(character,"ntc_legspeed",limbtype,100)
+        if iswaterproof == true then
+            HF.SetAfflictionLimb(character,"ntc_waterproof",limbtype,100)
+        end
     elseif limbtype == LimbType.LeftLeg then 
         HF.SetAffliction(character,"ll_cyber",100) 
         HF.SetAfflictionLimb(character,"ntc_cyberleg",limbtype,100)
+        HF.SetAfflictionLimb(character,"ntc_legspeed",limbtype,100)
+        if iswaterproof == true then
+            HF.SetAfflictionLimb(character,"ntc_waterproof",limbtype,100)
+        end
     end
 
     -- get rid of all the flesh-only stuff

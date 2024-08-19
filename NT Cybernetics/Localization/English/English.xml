@@ -9,6 +9,12 @@
 <entityname.cyberleg>Cyberleg</entityname.cyberleg>
 <entitydescription.cyberleg>A leg made of metal and electronics. Doesn't bleed. Use after amputation to install.</entitydescription.cyberleg>
 
+<entityname.waterproofcyberarm>Waterproof Cyberarm</entityname.waterproofcyberarm>
+<entitydescription.waterproofcyberarm>A waterproofed cyberleg made of metal and electronics. Doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberarm>
+
+<entityname.waterproofcyberleg>Waterproof Cyberleg</entityname.waterproofcyberleg>
+<entitydescription.waterproofcyberleg>A waterproofed cyberarm made of metal and electronics. Doesn't bleed. Use after amputation to install.</entitydescription.waterproofcyberleg>
+
 <!-- AFFLICTIONS -->
 
 <afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>

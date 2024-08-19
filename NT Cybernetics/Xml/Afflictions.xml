@@ -38,6 +38,42 @@
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,0" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
+  <Affliction
+    name="Arm Speed"
+    identifier="ntc_armspeed"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100" strengthchange="0">
+      <StatValue stattype="SwimmingSpeed" minvalue="0.25" maxvalue="0.25" />
+      <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.5" />
+    </Effect>
+  </Affliction>
+
+  <Affliction
+    name="WaterProof"
+    identifier="ntc_waterproof"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,4" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+
   <!-- Cyberleg
   converts the leg into a cyberleg -->
   <Affliction
@@ -54,6 +90,26 @@
     showinhealthscannerthreshold="500"
     iconcolors="76,102,145,255;76,102,145,255">
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="6,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Leg
+    Speed"
+    identifier="ntc_legspeed"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0">
+      <Statvalue stattype="WalkingSpeed" minvalue="0.125" maxvalue="0.25" />
+    </Effect>
   </Affliction>
 
   <!-- /// cyberlimb damage types /// -->

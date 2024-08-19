@@ -90,7 +90,37 @@ NTCyb.ItemMethods.cyberarm = function(item, usingCharacter, targetCharacter, lim
     if limbtype ~= LimbType.LeftArm and limbtype~=LimbType.RightArm then return end
 
     if(HF.GetSkillRequirementMet(usingCharacter,"mechanical",70)) then
-        NTCyb.CyberifyLimb(targetCharacter,limbtype)
+        NTCyb.CyberifyLimb(targetCharacter,limbtype,false)
+        HF.RemoveItem(item)
+    else
+        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+    end
+end
+
+NTCyb.ItemMethods.waterproofcyberarm = function(item, usingCharacter, targetCharacter, limb)
+    local limbtype = HF.NormalizeLimbType(limb.type)
+
+    if NTCyb.HF.LimbIsCyber(targetCharacter,limbtype) then return end
+    if not NT.LimbIsSurgicallyAmputated(targetCharacter,limbtype) then return end
+    if limbtype ~= LimbType.LeftArm and limbtype~=LimbType.RightArm then return end
+
+    if(HF.GetSkillRequirementMet(usingCharacter,"mechanical",70)) then
+        NTCyb.CyberifyLimb(targetCharacter,limbtype,true)
+        HF.RemoveItem(item)
+    else
+        HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
+    end
+end
+
+NTCyb.ItemMethods.waterproofcyberleg = function(item, usingCharacter, targetCharacter, limb)
+    local limbtype = HF.NormalizeLimbType(limb.type)
+
+    if NTCyb.HF.LimbIsCyber(targetCharacter,limbtype) then return end
+    if not NT.LimbIsSurgicallyAmputated(targetCharacter,limbtype) then return end
+    if limbtype ~= LimbType.LeftLeg and limbtype~=LimbType.RightLeg then return end
+
+    if(HF.GetSkillRequirementMet(usingCharacter,"mechanical",70)) then
+        NTCyb.CyberifyLimb(targetCharacter,limbtype,true)
         HF.RemoveItem(item)
     else
         HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
@@ -105,7 +135,7 @@ NTCyb.ItemMethods.cyberleg = function(item, usingCharacter, targetCharacter, lim
     if limbtype ~= LimbType.LeftLeg and limbtype~=LimbType.RightLeg then return end
 
     if(HF.GetSkillRequirementMet(usingCharacter,"mechanical",70)) then
-        NTCyb.CyberifyLimb(targetCharacter,limbtype)
+        NTCyb.CyberifyLimb(targetCharacter,limbtype,false)
         HF.RemoveItem(item)
     else
         HF.AddAfflictionLimb(targetCharacter,"internaldamage",limbtype,20)
