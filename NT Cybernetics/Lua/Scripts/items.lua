@@ -19,6 +19,11 @@ Hook.Add("item.applyTreatment", "NTCyb.itemused", function(item, usingCharacter,
 
 end)
 
+local function forceSyncAfflictions(character)
+    -- force sync afflictions, as normally they aren't synced for dead characters
+    Networking.CreateEntityEvent(character, Character.CharacterStatusEventData.__new(true))
+end
+
 -- storing all of the item-specific functions in a table
 NTCyb.ItemMethods = {} -- with the identifier as the key
 NTCyb.ItemStartsWithMethods = {} -- with the start of the identifier as the key
@@ -37,6 +42,7 @@ NTCyb.ItemMethods.fpgacircuit = function(item, usingCharacter, targetCharacter, 
         HF.AddAfflictionLimb(targetCharacter,"ntc_damagedelectronics",limbtype,-20)
         item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 20)*4)
     end
+    forceSyncAfflictions(targetCharacter)
 
     HF.GiveItem(targetCharacter,"ntcsfx_screwdriver")
     if item.Condition <= 0 then
@@ -58,6 +64,7 @@ NTCyb.ItemMethods.steel = function(item, usingCharacter, targetCharacter, limb)
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,-20)
         item.Condition = item.Condition - math.min(item.Condition, math.min(limbDamage, 20)*4)
     end
+    forceSyncAfflictions(targetCharacter)
 
     if math.random() < 0.5 then 
         HF.GiveItem(targetCharacter,"ntcsfx_screwdriver") else 
@@ -85,6 +92,7 @@ NTCyb.ItemMethods.weldingtool = function(item, usingCharacter, targetCharacter, 
         else
             HF.AddAfflictionLimb(targetCharacter,"ntc_bentmetal",limbtype,-5)
         end
+        forceSyncAfflictions(targetCharacter)
     end,1)
     
 
@@ -156,6 +164,7 @@ NTCyb.ItemMethods.cyberleg = function(item, usingCharacter, targetCharacter, lim
     end
 end
 
+-- Crowbar: detaches a Cyberlimb (if skilled and intact)
 NTCyb.ItemMethods.crowbar = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = HF.NormalizeLimbType(limb.type)
 
@@ -201,11 +210,10 @@ NTCyb.ItemMethods.crowbar = function(item, usingCharacter, targetCharacter, limb
     else
         HF.AddAfflictionLimb(targetCharacter,"ntc_materialloss",limbtype,10)
     end
+    forceSyncAfflictions(targetCharacter)
 
     HF.GiveItem(targetCharacter,"ntcsfx_cyberblunt")
 end
-
--- startswith region begins
 
 NTCyb.ItemStartsWithMethods.screwdriver = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
@@ -218,6 +226,7 @@ NTCyb.ItemStartsWithMethods.screwdriver = function(item, usingCharacter, targetC
     else
         HF.AddAfflictionLimb(targetCharacter,"ntc_loosescrews",limbtype,-5)
     end
+    forceSyncAfflictions(targetCharacter)
 
     HF.GiveItem(targetCharacter,"ntcsfx_screwdriver")
 end
