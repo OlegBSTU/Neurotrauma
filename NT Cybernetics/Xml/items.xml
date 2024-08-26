@@ -48,7 +48,8 @@
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
       <RequiredItem identifier="cyberarm" />
-      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="plastic" amount="3"/>
       <RequiredItem identifier="rubber" amount="4" />
     </Fabricate>
     <Deconstruct time="30">
@@ -56,7 +57,8 @@
       <Item identifier="steel" amount="3" />
       <Item identifier="fpgacircuit" amount="3" />
       <Item identifier="fulgurium" amount="2" />
-      <Item identifier="rubber" amount="3" />
+      <Item identifier="plastic" amount="2"/>
+      <Item identifier="rubber" amount="2"/>
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
     <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
@@ -118,7 +120,8 @@
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
       <RequiredItem identifier="cyberleg" />
-      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="plastic" amount="3" />
       <RequiredItem identifier="rubber" amount="4" />
     </Fabricate>
     <Deconstruct time="30">
@@ -126,7 +129,8 @@
       <Item identifier="steel" amount="3"/>
       <Item identifier="fpgacircuit" amount="3"/>
       <Item identifier="fulgurium" amount="2"/>
-      <Item identifier="rubber" amount="3"/>
+      <Item identifier="plastic" amount="2"/>
+      <Item identifier="rubber" amount="2"/>
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
     <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5"/>
