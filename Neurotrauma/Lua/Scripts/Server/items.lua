@@ -250,6 +250,7 @@ end
 
 NT.SutureAfflictions = {
     bonecut={xpgain=0,case="surgeryincision"},
+    skullcut={xpgain=0,case="surgeryincision"},
     drilledbones={xpgain=0,case="surgeryincision"},
 
     ll_arterialcut={xpgain=1,case="retractedskin"},
@@ -656,8 +657,10 @@ NT.ItemMethods.surgerysaw = function(item, usingCharacter, targetCharacter, limb
         and not HF.HasAfflictionLimb(targetCharacter,"bonecut",limbtype,1)
     ) then
         if(HF.GetSurgerySkillRequirementMet(usingCharacter,50)) then
-            if limbtype~=LimbType.Torso then
-                HF.AddAfflictionLimb(targetCharacter,"bonecut",limbtype,1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
+            if limbtype==LimbType.Head and not HF.HasAffliction(targetCharacter,"skullcut") then
+				HF.AddAfflictionLimb(targetCharacter,"skullcut",limbtype,1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
+			elseif limbtype~=LimbType.Torso then	
+				HF.AddAfflictionLimb(targetCharacter,"bonecut",limbtype,1+HF.GetSurgerySkill(usingCharacter)/2,usingCharacter)
             end
         else
             HF.AddAfflictionLimb(targetCharacter,"bleeding",limbtype,15,usingCharacter)
@@ -978,7 +981,7 @@ end
 NT.ItemMethods.organscalpel_brain = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
 
-    if(limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter,"retractedskin",limbtype,1)) then
+    if(limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter,"skullcut",limbtype,1)) then
         local damage = HF.GetAfflictionStrength(targetCharacter,"cerebralhypoxia",0)
         local removed = HF.GetAfflictionStrength(targetCharacter,"brainremoved",0)
         if(removed <= 0) then

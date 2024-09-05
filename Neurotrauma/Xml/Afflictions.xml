@@ -3623,7 +3623,7 @@ thats what the vomiting symptom is for -->
     name=""
     identifier="bonecut"
     description=""
-    healableinmedicalclinic="true"
+    healableinmedicalclinic="false"
     type="gaze"
     isbuff="true"
     limbspecific="true"
@@ -3638,6 +3638,28 @@ thats what the vomiting symptom is for -->
       </StatusEffect>
     </Effect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,7" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>  
+  
+  <!-- Skull Sawed -->
+  <Affliction
+    name=""
+    identifier="skullcut"
+    description=""
+    healableinmedicalclinic="false"
+    type="gaze"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="1"
+    iconcolors="84,211,211,255;84,211,211,255">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
+        <Affliction identifier="traumaticshock" amount="1.5"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,7" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
   <!-- Traumatic Shock / caused by operating w/o table or analgesia

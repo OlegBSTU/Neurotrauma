@@ -727,6 +727,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.bonecut>Bones Sawed</afflictionname.bonecut>
 <afflictiondescription.bonecut>The bone has been severed.</afflictiondescription.bonecut>
 
+<afflictionname.skullcut>Skull Sawed</afflictionname.skullcut>
+<afflictiondescription.skullcut>The skull has been cut open.</afflictiondescription.skullcut>
+
 <!-- /// SIGNALS /// -->
 <connection.aliveout>Alive</connection.aliveout>
 <connection.consciousout>Conscious</connection.consciousout>
