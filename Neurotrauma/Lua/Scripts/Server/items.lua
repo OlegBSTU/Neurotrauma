@@ -702,7 +702,7 @@ NT.ItemMethods.tweezers = function(item, usingCharacter, targetCharacter, limb)
             local scrapdropchance = math.min(foreignbody,5)/5*0.05 -- 5% chance to drop scrap
             if HF.Chance(scrapdropchance) then HF.GiveItem(usingCharacter,"scrap") end
 
-            healAfflictionGiveSkill("foreignbody",5,15)
+            healAfflictionGiveSkill("foreignbody",5,15) -- TODO: this should be randomized
 
             if usecase=="surgery" then
                 healAfflictionGiveSkill("internaldamage",5,3)
@@ -1204,7 +1204,7 @@ NT.ItemMethods.braintransplant = function(item, usingCharacter, targetCharacter,
     local conditionmodifier = 0
     if (not HF.GetSurgerySkillRequirementMet(usingCharacter,100)) then conditionmodifier = -40 end
     local workcondition = HF.Clamp(item.Condition+conditionmodifier,0,100)
-    if(HF.HasAffliction(targetCharacter,"brainremoved",1) and limbtype == LimbType.Head and HF.HasAffliction(targetCharacter,"skullcut", 99)) then
+    if(HF.HasAffliction(targetCharacter,"brainremoved",1) and limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter,"skullcut", limbtype, 99)) then
         HF.AddAffliction(targetCharacter,"cerebralhypoxia",-(workcondition),usingCharacter)
         HF.SetAffliction(targetCharacter,"brainremoved",0,usingCharacter)
 
@@ -1266,6 +1266,7 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
     (targethasantibodyRh or not packhasantibodyRh) and
     (targethasantibodyA or not packhasantibodyA) and
     (targethasantibodyB or not packhasantibodyB)
+    -- TODO: give always true to team of bots on enemy submarines for future medic AI logic
 
     local bloodloss = HF.GetAfflictionStrength(targetCharacter,"bloodloss",0)
     local usefulFraction = HF.Clamp(bloodloss/30,0,1)
@@ -1495,6 +1496,7 @@ NT.FixCondition = {
     "healthscanner",
     "bloodanalyzer",
     "defibrillator",
+    "antisepticspray",
     "bvm",
     "autocpr"
 }

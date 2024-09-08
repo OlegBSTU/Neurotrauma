@@ -48,6 +48,10 @@ function isOnSameTeam(char1, char2)
     return team1 == team2
 end
 
+-- TODO: implement this as a function: params are charTarget (type of Barotrauma_Character). Compares charTarget to characters in mission.requireRescue then tags the character with "consentgiven" and returns True (type of bool) if it finds a matching value, False if otherwise.
+-- LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
+
+-- lua for mission in  Game.GameSession.Missions do if mission.Prefab.Type == MissionType.AbandonedOutpost then for character in mission.requireRescue do print(character.name) end end end
 ---@param user Barotrauma_Character The character who desires consent.
 ---@param target Barotrauma_Character The character who gives consent
 ---@return boolean consent True if consent is given, false otherwise.
