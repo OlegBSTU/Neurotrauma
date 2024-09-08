@@ -2283,6 +2283,9 @@
       <StatusEffect type="Always" target="This" condition="-0.5">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
       </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="0.5" conditionalComparison="And" >
+        <Conditional hastag="eq medicalfabricator" Locked="eq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+      </StatusEffect>
       <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
         <Conditional condition="gte 90" />
         <Conditional hastag="refrigerated" targetcontainer="true" />
@@ -2324,6 +2327,9 @@
       <!-- making the organ go kaputt if left outside of refrigeration -->
       <StatusEffect type="Always" target="This" condition="-0.5">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="0.5" conditionalComparison="And" >
+        <Conditional hastag="eq medicalfabricator" Locked="eq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
       <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
         <Conditional condition="gte 90" />
@@ -2367,6 +2373,9 @@
       <StatusEffect type="Always" target="This" condition="-0.5">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
       </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="0.5" conditionalComparison="And" >
+        <Conditional hastag="eq medicalfabricator" Locked="eq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+      </StatusEffect>
       <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
         <Conditional condition="gte 90" />
         <Conditional hastag="refrigerated" targetcontainer="true" />
@@ -2408,6 +2417,9 @@
       <!-- making the organ go kaputt if left outside of refrigeration -->
       <StatusEffect type="Always" target="This" condition="-0.5">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="0.5" conditionalComparison="And" >
+        <Conditional hastag="eq medicalfabricator" Locked="eq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
       <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
         <Conditional condition="gte 90" />
@@ -2452,6 +2464,9 @@
       <StatusEffect type="Always" target="This" condition="-2" comparison="and">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
         <Conditional hastag="neq braincontainer" targetcontainer="true" />
+      </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="2" conditionalComparison="And" >
+        <Conditional hastag="eq medicalfabricator" Locked="eq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
       <StatusEffect type="OnContained" target="This" condition="-0.2" comparison="and">
         <Conditional hastag="refrigerated" targetcontainer="true" />
