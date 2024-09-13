@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Hyperbaric Medicine" path="%ModDir%/filelist.xml" corepackage="false">
+<contentpackage name="NT Hyperbaric" path="%ModDir%/filelist.xml" corepackage="false">
 <!--   <None file="%ModDir%/Images/AfflictionIcons.png" /> -->
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
 <!--   <Item file="%ModDir%/Xml/items.xml" />
@@ -9,5 +9,4 @@
   <None file="%ModDir%/Lua/Scripts/helperfunctions.lua" />
   <None file="%ModDir%/Lua/Scripts/items.lua" />
   <None file="%ModDir%/Lua/Scripts/testing.lua" /> -->
-  <Item file="%ModDir%/dummyitem.xml" />
 </contentpackage>
