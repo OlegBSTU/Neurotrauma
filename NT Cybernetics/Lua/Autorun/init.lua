@@ -28,5 +28,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
         NTC.AddPreHumanUpdateHook(NTCyb.UpdateHuman)
     end,1)
-
+else
+    Timer.Wait(function()
+        dofile(NTCyb.Path.."/Lua/Scripts/items.client.lua")
+    end, 1)
 end
