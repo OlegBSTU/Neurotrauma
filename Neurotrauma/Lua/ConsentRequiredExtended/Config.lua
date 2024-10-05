@@ -7,7 +7,7 @@ local _ENV = Environment.PrepareEnvironment(_ENV)
 
 AffectedItems = { 
 -- Neurotrauma
-"healthscanner", --健康扫描仪
+-- "healthscanner", --健康扫描仪 -- whats a tiny bit of radiation damage between friends?
 "bloodanalyzer", --血液分析仪
 "opium", --药用鸦片
 "antidama1", --吗啡
@@ -47,8 +47,8 @@ AffectedItems = {
 -- NeuroEyes
 "organscalpel_eyes", -- 器官切割刀：眼睛
 -- blahaj 布罗艾鲨鱼
-"blahaj", -- 布罗艾鲨鱼
-"blahajplus", -- 大鲨鲨
+-- "blahaj", -- 布罗艾鲨鱼 -- Blahaj never hurt anyone
+-- "blahajplus", -- 大鲨鲨
 "blahajplusplus", -- 超大鲨鲨
 -- Pharmacy 制药大师
 "custompill", -- 自制药丸
