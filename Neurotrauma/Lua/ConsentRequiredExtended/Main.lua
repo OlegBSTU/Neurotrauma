@@ -15,11 +15,13 @@ local HOOK_NAME_ITEM_APPLYTREATMENT = "ConsentRequiredExtended.onItemApplyTreatm
 local LUA_EVENT_MELEEWEAPON_HANDLEIMPACT = "meleeWeapon.handleImpact"
 local HOOK_NAME_MELEEWEAPON_HANDLEIMPACT = "ConsentRequiredExtended.onMeleeWeaponHandleImpact"
 
--- Set up affected items from config.
-for _, affectedItem in pairs(Config.AffectedItems) do
-    Api.AddAffectedItem(affectedItem)
-end
-
+Timer.Wait(function()
+	-- Set up affected items from config.
+	for _, affectedItem in pairs(Config.AffectedItems) do
+		Api.AddAffectedItem(affectedItem)
+	end
+--delay so that config can load
+end,110)
 Hook.Add(LUA_EVENT_ITEM_APPLYTREATMENT, HOOK_NAME_ITEM_APPLYTREATMENT, OnItemApplied)
 
 -- damn meleeWeapon

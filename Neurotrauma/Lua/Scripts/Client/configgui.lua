@@ -57,7 +57,7 @@ easySettings.AddMenu("Neurotrauma", function (parent)
     OnChanged()
 	
 	--info text
-    GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform), "Only the host can edit the servers config.\nEnter \"reloadlua\" in console to apply changes.\nFor dedicated servers you need to edit the file config.json, this GUI wont work.".."\n\n"..difficultyRate, Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
+    GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform), "Only the host can edit the servers config.\nEnter \"reloadlua\" in console to apply changes.\nFor dedicated servers you need to edit the file config.json, this GUI will not work.".."\n\n"..difficultyRate, Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
 
 	--empty space
 	--GUI.TextBlock(GUI.RectTransform(Vector2(0.2, 0.1), list.Content.RectTransform), "", Color(255,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
