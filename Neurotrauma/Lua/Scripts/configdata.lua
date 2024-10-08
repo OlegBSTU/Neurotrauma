@@ -48,7 +48,7 @@ function NTConfig.LoadConfig()
 end
 
 function NTConfig.Get(key, default)
-    if NTConfig.Entries[key] then 
+    if NTConfig.Entries[key] then
         return NTConfig.Entries[key].value
     end
     return default
@@ -81,7 +81,8 @@ NT.ConfigData = {
 
     NT_vanillaSkillCheck =              {name="Vanilla skill check formula",default=false,type="bool",description="Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100"},
     NT_disableBotAlgorithms =           {name="Disable bot treatment algorithms",default=true,type="bool",description="Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely."},
-    NT_screams =                        {name="Screams",default=true,type="bool",description="Characters scream when in pain."},
+    NT_disableConsentRequired =         {name="Disable Consent Required",default=false,type="bool",description="Disable integrated consent required mod.\n(If ticked, bots will not get aggravated by medical interactions.)"},
+	NT_screams =                        {name="Screams",default=true,type="bool",description="Characters scream when in pain."},
     NT_ignoreModConflicts =             {name="Ignore mod conflicts",default=false,type="bool",description="Prevent the mod conflict affliction from showing up."},
 
     NT_organRejection =                 {name="Organ rejection",default=false,type="bool",          difficultyCharacteristics={multiplier=0.5},description="When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance."},
@@ -98,6 +99,6 @@ Timer.Wait(function()
     Timer.Wait(function()
         NTConfig.SaveConfig()
     end,1000)
-
+	
 end,50)
 
