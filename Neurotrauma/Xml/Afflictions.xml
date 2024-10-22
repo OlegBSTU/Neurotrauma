@@ -5226,6 +5226,75 @@ thats what the vomiting symptom is for -->
     <icon texture="Content/UI/TalentsIcons4.png" sourcerect="0,384,128,128" color="84,171,90,255" origin="0,0"/>
   </Affliction>
   <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Burning name="Burning" identifier="burning" description="The target is burning." type="burn" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true" activationthreshold="1.0" showiconthreshold="1000" maxstrength="15">
+    <!-- A buildup for burning, you don't burn yet until reaching 5 -->
+    <Effect minstrength="0" maxstrength="5" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1.0">
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- You actively start burning here -->
+    <Effect minstrength="5" maxstrength="10" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1.0">
+      <StatusEffect target="Limb">
+        <Conditional InWater="false" />
+        <ParticleEmitter particle="flameburningcharacter" DistanceMin="0" DistanceMax="30" ParticlesPerSecond="200" AngleMin="60" AngleMax="120" VelocityMax="20"/>
+        <ParticleEmitter particle="smoke" particlespersecond="6" scalemin="4" scalemax="3" distancemin="10" distancemax="50" />
+        <Affliction identifier="burn" amount="1.2" />
+      </StatusEffect>
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional InWater="false" />
+        <sound file="Content/Sounds/FireSmall.ogg" range="200.0" volume="0.5" />
+      </StatusEffect>
+      <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
+        <Conditional ishuman="true" burning="gte 5" />
+        <Affliction identifier="severepainlite" amount="10" />
+      </StatusEffect>
+    </Effect>
+    <!-- Past 10, you've fully caught on fire and burning reduces at a much slower rate -->
+    <Effect minstrength="10" maxstrength="15" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-0.2">
+      <StatusEffect target="Limb">
+        <Conditional InWater="false" />
+        <ParticleEmitter particle="flameburningcharacter" DistanceMin="0" DistanceMax="30" ParticlesPerSecond="200" AngleMin="60" AngleMax="120" VelocityMax="20"/>
+        <ParticleEmitter particle="smoke" particlespersecond="6" scalemin="4" scalemax="3" distancemin="10" distancemax="50" />
+        <Affliction identifier="burn" amount="1.6" />
+      </StatusEffect>
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional InWater="false" />
+        <sound file="Content/Sounds/FireSmall.ogg" range="200.0" />
+      </StatusEffect>
+      <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
+        <Conditional ishuman="true" onfire="gte 10" />
+        <Affliction identifier="severepainlite" amount="10" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,0,0,255" origin="0,0" />
+  </Burning>
+  <!-- Vanilla affliction override end -->
   <!-- /// Override section ends /// -->
 
 </Afflictions>
