@@ -5288,7 +5288,7 @@ thats what the vomiting symptom is for -->
         <sound file="Content/Sounds/FireSmall.ogg" range="200.0" />
       </StatusEffect>
       <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
-        <Conditional ishuman="true" onfire="gte 10" />
+        <Conditional ishuman="true" burning="gte 10" />
         <Affliction identifier="severepainlite" amount="10" />
       </StatusEffect>
     </Effect>
