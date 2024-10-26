@@ -1475,7 +1475,7 @@
 
   <Override>
     <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8"
-          cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag" useinhealthinterface="true"
+          cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,antibloodloss2" useinhealthinterface="true"
           description="" scale="0.5" impactsoundtag="impact_soft">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="2" maxamount="3" notcampaign="true"/>
