@@ -11,9 +11,9 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
         <RequiredSkill identifier="electrical" level="40"/>
         <RequiredSkill identifier="medical" level="40"/>
-        <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+        <RequiredItem identifier="plastic"/>
         <RequiredItem identifier="fpgacircuit"/>
-        <RequiredItem identifier="aluminium" mincondition="0.5" usecondition="true"/>
+        <RequiredItem identifier="aluminium"/>
     </Fabricate>
     <Deconstruct time="5">
         <Item identifier="plastic" mincondition="0.1"/>
@@ -170,9 +170,9 @@
     <!-- TODO: remove all of this when defibs get better -->
     <Fabricate suitablefabricators="fabricator" requiredtime="30">
       <RequiredSkill identifier="medical" level="40"/>
-      <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+      <RequiredItem identifier="plastic"/>
       <RequiredItem identifier="fpgacircuit"/>
-      <RequiredItem identifier="steel" mincondition="0.5" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
     </Fabricate>
     <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,64,64,64"
                    origin="0.5,0.5"/>
@@ -217,8 +217,8 @@
       <Fabricate suitablefabricators="fabricator">
         <RequiredSkill identifier="medical" level="10"/>
         <RequiredSkill identifier="mechanical" level="10"/>
-          <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-          <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
+          <RequiredItem identifier="steel"/>
+          <RequiredItem identifier="plastic"/>
       </Fabricate>
       <Deconstruct time="5">
       </Deconstruct>
@@ -360,8 +360,8 @@
       <Fabricate suitablefabricators="fabricator">
         <RequiredSkill identifier="medical" level="20"/>
         <RequiredSkill identifier="mechanical" level="15"/>
-        <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-        <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        <RequiredItem identifier="steel"/>
+        <RequiredItem identifier="zinc"/>
       </Fabricate>
       <Deconstruct>
       </Deconstruct>
@@ -386,8 +386,8 @@
         <Fabricate suitablefabricators="fabricator">
           <RequiredSkill identifier="medical" level="20"/>
           <RequiredSkill identifier="mechanical" level="15"/>
-          <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-          <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+          <RequiredItem identifier="steel"/>
+          <RequiredItem identifier="zinc"/>
         </Fabricate>
         <Deconstruct>
         </Deconstruct>
@@ -410,8 +410,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="20"/>
       <RequiredSkill identifier="mechanical" level="15"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -435,8 +435,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="30"/>
       <RequiredSkill identifier="mechanical" level="30"/>
-        <RequiredItem identifier="steel" mincondition="0.5" usecondition="true"/>
-        <RequiredItem identifier="zinc" mincondition="0.5" usecondition="true"/>
+        <RequiredItem identifier="steel"/>
+        <RequiredItem identifier="zinc"/>
         <RequiredItem identifier="fpgacircuit"/>
     </Fabricate>
     <Deconstruct>
@@ -467,7 +467,7 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="30"/>
       <RequiredSkill identifier="mechanical" level="30"/>
-      <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.5" usecondition="true"/>
+      <RequiredItem identifier="titaniumaluminiumalloy"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -498,8 +498,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="20"/>
       <RequiredSkill identifier="mechanical" level="15"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -519,17 +519,17 @@
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>
-  <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="1" cargocontaineridentifier="mediccrate"
+  <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="2" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool"
           description=""
           useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
-    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
-    <Fabricate suitablefabricators="medicalfabricator" amount="1">
+    <PreferredContainer primary="medcab" minamount="0" maxamount="2" spawnprobability="0.5"/>
+    <Fabricate suitablefabricators="medicalfabricator" amount="2">
       <RequiredSkill identifier="medical" level="25"/>
-      <RequiredItem identifier="organicfiber" mincondition="0.5" usecondition="true"/>
-      <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
-      <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
+      <RequiredItem identifier="organicfiber"/>
+      <RequiredItem identifier="plastic"/>
+      <RequiredItem identifier="rubber"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -550,17 +550,17 @@
       </StatusEffect>
     </MeleeWeapon>
   </Item>
-  <Item name="" identifier="medstent" category="Medical" maxstacksize="1" cargocontaineridentifier="mediccrate"
+  <Item name="" identifier="medstent" category="Medical" maxstacksize="2" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,syringe,surgerytool"
           description=""
           useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
-    <Fabricate suitablefabricators="medicalfabricator" amount="1">
+    <Fabricate suitablefabricators="medicalfabricator" amount="2">
       <RequiredSkill identifier="medical" level="25"/>
-      <RequiredItem identifier="organicfiber" mincondition="0.5" usecondition="true"/>
-      <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
-      <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
+      <RequiredItem identifier="organicfiber"/>
+      <RequiredItem identifier="plastic"/>
+      <RequiredItem identifier="rubber"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -620,8 +620,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="35"/>
       <RequiredSkill identifier="mechanical" level="20"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -656,8 +656,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="35"/>
       <RequiredSkill identifier="mechanical" level="20"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -692,8 +692,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="35"/>
       <RequiredSkill identifier="mechanical" level="20"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -728,8 +728,8 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="35"/>
       <RequiredSkill identifier="mechanical" level="20"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -764,9 +764,9 @@
     <Fabricate suitablefabricators="fabricator">
       <RequiredSkill identifier="medical" level="60"/>
       <RequiredSkill identifier="mechanical" level="20"/>
-      <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="steel"/>
       <RequiredItem identifier="oxygeniteshard"/>
-      <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="zinc"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -855,8 +855,8 @@
       <RequiredItem identifier="calcium"/>
     </Fabricate>
     <Deconstruct time="10">
-      <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
-      <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="calcium" />
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="87,403,84,67" origin="0.5,0.5" depth="0.6" />
     <Body width="65" height="15" density="50"/>
@@ -886,8 +886,8 @@
       <RequiredItem identifier="calcium"/>
     </Fabricate>
     <Deconstruct time="10">
-      <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
-      <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
+      <Item identifier="titaniumaluminiumalloy"/>
+      <Item identifier="calcium"/>
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="344,403,84,67" origin="0.5,0.5" depth="0.6" />
     <Body width="60" height="90" density="20"/>
@@ -908,10 +908,10 @@
     <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
-    <Fabricate suitablefabricators="medicalfabricator" amount="8" requiredtime="10">
+    <Fabricate suitablefabricators="medicalfabricator" amount="32" requiredtime="20">
       <RequiredSkill identifier="medical" level="25"/>
-      <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
-      <RequiredItem identifier="organicfiber"/>
+      <RequiredItem identifier="aluminium"/>
+      <RequiredItem identifier="organicfiber" amount="4"/>
     </Fabricate>
     <Deconstruct/>
     <Price baseprice="30">
@@ -988,10 +988,10 @@
     <Price baseprice="80" soldbydefault="false">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
     </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="40">
+    <Fabricate suitablefabricators="medicalfabricator" amount="4" requiredtime="60">
       <RequiredSkill identifier="medical" level="20"/>
       <RequiredItem identifier="plastic"/>
-      <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="aluminium"/>
     </Fabricate>
     <Deconstruct>
     </Deconstruct>
@@ -1579,9 +1579,9 @@
         <Price baseprice="25">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
         </Price>
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <Fabricate suitablefabricators="medicalfabricator" amount="2" requiredtime="10">
             <RequiredSkill identifier="medical" level="10"/>
-            <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="plastic"/>
         </Fabricate>
         <Deconstruct time="5">
         </Deconstruct>
@@ -1719,9 +1719,9 @@
     <Price baseprice="5">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
     </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="5">
+    <Fabricate suitablefabricators="medicalfabricator" amount="4" requiredtime="20">
       <RequiredSkill identifier="medical" level="30"/>
-      <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
+      <RequiredItem identifier="plastic"/>
     </Fabricate>
     <Deconstruct/>
 
