@@ -5252,6 +5252,11 @@ thats what the vomiting symptom is for -->
         <Conditional InWater="true" />
         <ReduceAffliction identifier="burning" amount="7.5" />
       </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
       <StatusEffect target="Character">
         <Conditional InWater="false" />
         <sound file="Content/Sounds/FireSmall.ogg" range="200.0" volume="0.5" />
@@ -5272,6 +5277,11 @@ thats what the vomiting symptom is for -->
       <StatusEffect target="Limb" disabledeltatime="true">
         <Conditional InWater="true" />
         <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
       </StatusEffect>
       <StatusEffect target="Character">
         <Conditional InWater="false" />
