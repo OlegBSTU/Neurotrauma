@@ -1708,7 +1708,7 @@
 
     <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
       <Containable
-              items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard"/>
+              items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard, bloodbag, allblood"/>
     </ItemContainer>
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>

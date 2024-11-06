@@ -96,7 +96,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
     -- spawn donor card
     local containedItem = item.OwnInventory.GetItemAt(0)
-    local hasCartridge = containedItem ~= nil
+    local hasCartridge = containedItem ~= nil and (containedItem.Prefab.Identifier.Value == "bloodcollector" or containedItem.HasTag("donorCard"))
     if hasCartridge then 
         HF.RemoveItem(containedItem)
         local bloodtype = NT.GetBloodtype(targetCharacter)
