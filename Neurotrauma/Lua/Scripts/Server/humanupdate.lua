@@ -1248,10 +1248,6 @@ function NT.UpdateHuman(character)
         end
     end
 
-    if character.IsPlayer then
-        NT.RunBloodAnalyzers(character)
-    end
-
     -- compatibility
     NTC.TickCharacter(character)
     -- humanupdate hooks
@@ -1294,53 +1290,4 @@ function NT.AddTickTask(type,duration,character)
     newtask.character=character
     NT.tickTasks[NT.tickTaskID]=newtask
     NT.tickTaskID = NT.tickTaskID+1
-end
-
-local lastScannedBloodPack = {}
-function NT.RunBloodAnalyzers(character)
-    -- Look for Hematology Analyzers in the quickbar containing blood packs
-    for item in character.Inventory.AllItems do
-        if item.Prefab.Identifier.Value == "bloodanalyzer" then
-            local contained = item.OwnInventory.GetItemAt(0)
-
-            -- NT adds bloodbag; NT Blood Work or 'Real Sonar Medical Item Recipes Patch for Neurotrauma' add allblood, lets check for either
-            if contained ~= nil and (contained.HasTag("bloodbag") or contained.HasTag("allblood")) and lastScannedBloodPack[item] ~= contained then
-                lastScannedBloodPack[item] = contained
-                local identifier = contained.Prefab.Identifier.Value
-                local packtype = "o-"
-                if identifier ~= "antibloodloss2" then
-                    packtype = string.sub(identifier, string.len("bloodpack")+1)
-                end
-
-                local bloodTypeDisplay = string.gsub(packtype, "abc", "c")
-                bloodTypeDisplay = string.gsub(bloodTypeDisplay, "plus", "+")
-                bloodTypeDisplay = string.gsub(bloodTypeDisplay, "minus", "-")
-                bloodTypeDisplay = string.upper(bloodTypeDisplay)
-                local readoutString = "Bloodpack: " .. bloodTypeDisplay .. "\n"
-                -- check if acidosis, alkalosis or sepsis
-                local tags = HF.SplitString(contained.Tags,",")
-                for tag in tags do
-                    if tag == "sepsis" then
-                        readoutString = readoutString .. "Sepsis detected\n"
-                     end
-
-                    if HF.StartsWith(tag,"acid") then
-                        local split = HF.SplitString(tag,":")
-                        if split[2] ~= nil then
-                            readoutString = readoutString .. "Acidosis: " .. tonumber(split[2]) .. "%\n"
-                        end
-                    elseif HF.StartsWith(tag,"alkal") then
-                        local split = HF.SplitString(tag,":")
-                        if split[2] ~= nil then
-                            readoutString = readoutString .. "Alkalosis: " .. tonumber(split[2]) .. "%\n"
-                        end
-                    end
-                end
-
-                HF.DMClient(HF.CharacterToClient(character), readoutString, Color(127,255,255,255))
-                HF.GiveItem(character,"ntsfx_syringe")
-            end
-            break
-        end
-    end
 end

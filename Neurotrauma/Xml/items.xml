@@ -1707,8 +1707,11 @@
     <Pickable msg="ItemMsgPickUpSelect"/>
 
     <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
-      <Containable
-              items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard, bloodbag, allblood"/>
+      <Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard, bloodbag, allblood">
+        <StatusEffect type="OnInserted" target="this">
+          <LuaHook name="OnInsertedIntoBloodAnalyzer" />
+        </StatusEffect>
+      </Containable>
     </ItemContainer>
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>
