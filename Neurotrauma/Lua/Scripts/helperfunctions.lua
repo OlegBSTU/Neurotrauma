@@ -313,8 +313,9 @@ function HF.SetAfflictionLimb(character,identifier,limbtype,strength,aggressor,p
     local affliction = prefab.Instantiate(
         strength
         ,aggressor)
+    local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
 
-    character.CharacterHealth.ApplyAffliction(character.AnimController.GetLimb(limbtype),affliction,false)
+    character.CharacterHealth.ApplyAffliction(character.AnimController.GetLimb(limbtype), affliction, false, recalculateVitality)
 
     -- turn target aggressive if damaging
 --    if(aggressor ~= nil and character~=aggressor) then 

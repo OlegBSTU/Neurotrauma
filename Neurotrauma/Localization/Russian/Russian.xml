@@ -85,7 +85,7 @@
 <entitydescription.organscalpel_brain>Специализированный скальпель для удаления мозга.</entitydescription.organscalpel_brain>
 
 <entityname.multiscalpel>Универсальный скальпель</entityname.multiscalpel>
-<entitydescription.multiscalpel>Скальпель для выполнения надрезов, извлечения органов, снятия бинтов / гипсовых слепков или небрежной медицинской практики.</entitydescription.multiscalpel>
+<entitydescription.multiscalpel>Передовой скальпель. В руках практикующего врача, кнопочная панель может использоваться для переключения между операциями: выполнением надрезов, извлечением органов, снятием повязок или совершением зловредной практики.</entitydescription.multiscalpel>
 <multiscalpel.incision>Режим: Хирургический надрез.</multiscalpel.incision>
 <multiscalpel.kidneys>Режим: Извлечь почки</multiscalpel.kidneys>
 <multiscalpel.liver>Режим: Извлечь печень</multiscalpel.liver>

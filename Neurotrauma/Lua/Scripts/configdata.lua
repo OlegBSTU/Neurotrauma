@@ -14,25 +14,28 @@ function NTConfig.AddConfigOptions(expansion)
 end
 
 function NTConfig.SaveConfig()
-    File.CreateDirectory(configDirectoryPath)
+    --prevent both owner client and server saving config at the same time and potentially erroring from file access
+    if Game.IsMultiplayer and CLIENT and Game.Client.MyClient.IsOwner then return end
 
     local tableToSave = {}
     for key,entry in pairs(NTConfig.Entries) do
         tableToSave[key] = entry.value
     end
+
+    File.CreateDirectory(configDirectoryPath)
     File.Write(configFilePath, json.serialize(tableToSave))
 end
 
 function NTConfig.ResetConfig()
-    File.CreateDirectory(configDirectoryPath)
-	
-	local tableToSave = {}
-	for key,entry in pairs(NTConfig.Entries) do
+    local tableToSave = {}
+    for key,entry in pairs(NTConfig.Entries) do
         tableToSave[key] = entry.default
         NTConfig.Entries[key] = entry
         NTConfig.Entries[key].value = entry.default
     end
-	File.Write(configFilePath, json.serialize(tableToSave))
+
+    -- File.CreateDirectory(configDirectoryPath)
+    -- File.Write(configFilePath, json.serialize(tableToSave))
 end
 
 function NTConfig.LoadConfig()
@@ -57,6 +60,29 @@ end
 function NTConfig.Set(key, value)
     if NTConfig.Entries[key] then 
         NTConfig.Entries[key].value = value
+    end
+end
+
+function NTConfig.SendConfig(reciverClient)
+    local tableToSend = {}
+    for key,entry in pairs(NTConfig.Entries) do
+        tableToSend[key] = entry.value
+    end
+
+    local msg = Networking.Start("NT.ConfigUpdate")
+    msg.WriteString(json.serialize(tableToSend))
+    if SERVER then
+        Networking.Send(msg, reciverClient and reciverClient.Connection or nil)
+    else
+        Networking.Send(msg)
+    end
+end
+
+function NTConfig.ReceiveConfig(msg)
+    local RecivedTable = {}
+    RecivedTable = json.parse(msg.ReadString())
+    for key,value in pairs(RecivedTable) do 
+        NTConfig.Set(key, value)
     end
 end
 

@@ -779,11 +779,11 @@
       healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="2">
         <StatusEffect target="Character">
-          <TriggerAnimation Type="Crouch" filename="HumanProneCrouch" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Walk" filename="HumanProneWalkProperBowthWays" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Run" filename="HumanProneRunProperBowthWays" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="SwimSlow" filename="HumanProneSwimSlow" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="SwimFast" filename="HumanProneSwimFast" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Crouch" path="%ModDir%\Characters\Human\Animations\HumanProneCrouch.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Walk" path="%ModDir%\Characters\Human\Animations\HumanProneWalkProperBowthWays.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" path="%ModDir%\Characters\Human\Animations\HumanProneRunProperBowthWays.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimSlow" path="%ModDir%\Characters\Human\Animations\HumanProneSwimSlow.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimFast" path="%ModDir%\Characters\Human\Animations\HumanProneSwimFast.xml" priority="10" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
@@ -806,11 +806,11 @@
       healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="2">
         <StatusEffect target="Character">
-          <TriggerAnimation Type="Crouch" filename="HumanWheelchairCrouch" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Walk" filename="HumanWheelchairWalk" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Run" filename="HumanWheelchairRun" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="SwimSlow" filename="HumanProneSwimSlow" priority="10" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="SwimFast" filename="HumanProneSwimFast" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Crouch" path="%ModDir%\Characters\Human\Animations\HumanWheelchairCrouch.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Walk" path="%ModDir%\Characters\Human\Animations\HumanWheelchairWalk.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" path="%ModDir%\Characters\Human\Animations\HumanWheelchairRun.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimSlow" path="%ModDir%\Characters\Human\Animations\HumanProneSwimSlow.xml" priority="10" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimFast" path="%ModDir%\Characters\Human\Animations\HumanProneSwimFast.xml" priority="10" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>

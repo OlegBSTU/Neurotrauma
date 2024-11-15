@@ -62,6 +62,27 @@ Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect
     end,nil,item.OwnInventory,3)
 
     HF.SpawnItemPlusFunction("bloodanalyzer",nil,nil,item.OwnInventory,6)
-    HF.SpawnItemPlusFunction("healthscanner",nil,nil,item.OwnInventory,7)
+    HF.SpawnItemPlusFunction("healthscanner",function(params)
+        local prefab = ItemPrefab.GetItemPrefab("batterycell")
+        Entity.Spawner.AddItemToSpawnQueue(prefab, params["item"].WorldPosition, nil, nil, function(batteryItem)
+            params["item"].OwnInventory.TryPutItem(batteryItem)
+        end)
+    end,nil,item.OwnInventory,7)
     end,35)
+end)
+
+Hook.Add("character.giveJobItems", "NT.giveHealthScannersBatteries", function (character)
+    Timer.Wait(function()
+        for item in character.Inventory.AllItems do
+            local thisIdentifier = item.Prefab.Identifier.Value
+            if thisIdentifier == "healthscanner" then
+                if item.OwnInventory ~= nil and item.OwnInventory.GetItemAt(0) == nil then
+                    local prefab = ItemPrefab.GetItemPrefab("batterycell")
+                    Entity.Spawner.AddItemToSpawnQueue(prefab, character.WorldPosition, nil, nil, function(batteryItem)
+                        item.OwnInventory.TryPutItem(batteryItem, character)
+                    end)
+                end
+            end
+        end
+    end, 1000)
 end)

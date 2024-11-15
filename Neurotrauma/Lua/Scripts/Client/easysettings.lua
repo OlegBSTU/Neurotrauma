@@ -84,7 +84,11 @@ easySettings.SaveButton = function (parent)
     local button = GUI.Button(GUI.RectTransform(Vector2(0.33, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft), "Save and Exit", GUI.Alignment.Center, "GUIButton")
 
     button.OnClicked = function ()
-		NTConfig.SaveConfig()
+        if Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings) then
+            NTConfig.SendConfig()
+        elseif Game.IsSingleplayer then
+            NTConfig.SaveConfig()
+        end
         GUI.GUI.TogglePauseMenu()
     end
 
@@ -108,12 +112,31 @@ easySettings.ResetButton = function (parent)
     local button = GUI.Button(GUI.RectTransform(Vector2(0.33, 0.05), parent.RectTransform, GUI.Anchor.BottomRight), "Reset Config", GUI.Alignment.Center, "GUIButton")
 
     button.OnClicked = function ()
-		NTConfig.ResetConfig()
-        GUI.GUI.TogglePauseMenu()
+        if Game.IsSingleplayer or (Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings)) then
+            easySettings.ResetMessage(parent)
+        end
     end
-
     return button
 end
 
+easySettings.ResetMessage = function(parent)
+    local ResetMessage = GUI.MessageBox("Reset neurotrauma settings", "Are you sure you want to reset neurotrauma settings to default values?", {"Yes", "No"})
+    ResetMessage.DrawOnTop = true
+    ResetMessage.Text.TextAlignment = GUI.Alignment.Center
+    ResetMessage.Buttons[1].OnClicked = function()
+        NTConfig.ResetConfig()
+        if Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings) then
+            NTConfig.SendConfig()
+        elseif Game.IsSingleplayer then
+            NTConfig.SaveConfig()
+        end
+        GUI.GUI.TogglePauseMenu()
+        ResetMessage.Close()
+    end
+    ResetMessage.Buttons[2].OnClicked = function()
+        ResetMessage.Close()
+    end
+    return ResetMessage
+end
 
 return easySettings

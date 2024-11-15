@@ -8,6 +8,7 @@ end
 ---@param user Barotrauma_Character The character that is applying the item.
 ---@param target Barotrauma_Character The character of the target of the item's application.
 local function OnItemApplied(item, user, target)
+    if not NTConfig.Get("NTCRE_ConsentRequired",true) then return end
     local itemIdentifier = item.Prefab.Identifier.Value
     if isItemAffected(itemIdentifier) then
         Api.onAffectedItemApplied(user, target)

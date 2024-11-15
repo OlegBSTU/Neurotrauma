@@ -29,6 +29,7 @@ AffectedItems = {
 "organscalpel_heart", -- 器官切割刀：心脏
 "organscalpel_brain", -- 器官切割刀：大脑
 "emptybloodpack", -- 空血袋
+"bloodpack",
 "alienblood", -- 异星血浆
 "tourniquet", -- 止血带
 "defibrillator", -- 手动除颤器

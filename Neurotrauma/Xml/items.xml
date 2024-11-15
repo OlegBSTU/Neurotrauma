@@ -4,6 +4,10 @@
   <!-- /// Gear /// -->
   <!-- TODO: add "bundled" items for crafting to optimize medfab recipes count -->
   <!-- TODO: add Lua StatusEffects to syringes to handle by Consent Required code -->
+  <!-- TODO: one manned stretcher with minor rest buffs and remove normal speed drag buffs from bags -->
+  <!-- TODO: bloody murder meat skull / bagged head for traumatic/surgery amputations -->
+  <!-- TODO: make all amputated limbs placeable -->
+  <!-- TODO: increase the blood pack loot a little more -->
   <Item name="" identifier="defibrillator" category="Equipment" cargocontaineridentifier="mediccrate"
         Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -1475,7 +1479,7 @@
 
   <Override>
     <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8"
-          cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true"
+          cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag" useinhealthinterface="true"
           description="" scale="0.5" impactsoundtag="impact_soft">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medcab" minamount="2" maxamount="3" notcampaign="true"/>
@@ -1707,8 +1711,11 @@
     <Pickable msg="ItemMsgPickUpSelect"/>
 
     <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
-      <Containable
-              items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard"/>
+      <Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard, bloodbag, allblood">
+        <StatusEffect type="OnInserted" target="this">
+          <LuaHook name="OnInsertedIntoBloodAnalyzer" />
+        </StatusEffect>
+      </Containable>
     </ItemContainer>
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>

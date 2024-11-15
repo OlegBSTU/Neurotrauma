@@ -1,8 +1,8 @@
 
 NTP = {} -- Neurotrauma Pharmacy
 NTP.Name="Pharmacy"
-NTP.Version = "A1.0.6h2"
-NTP.VersionNum = 01000602
+NTP.Version = "A1.0.6h3"
+NTP.VersionNum = 01000603
 NTP.MinNTVersion = "A1.9.0"
 NTP.MinNTVersionNum = 01090000
 NTP.Path = table.pack(...)[1]

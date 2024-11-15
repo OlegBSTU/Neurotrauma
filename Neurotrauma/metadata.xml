@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <meta>
+        <author>guns</author>
+        <id>guns.Neurotrauma</id>
+    </meta>
+
+    <dependencies>
+        <requirement name="Lua For Barotrauma" steamID="2559634234" ID="EvilFactory.LuaForBarotrauma" />
+        <conflict name="Neurotrauma" steamID="2776270649" ID="Mannatu.Neurotrauma" />
+    </dependencies>
+</metadata>

@@ -85,7 +85,7 @@
 <entitydescription.organscalpel_brain>A specialized scalpel for the removal of the brain.</entitydescription.organscalpel_brain>
 
 <entityname.multiscalpel>Multipurpose scalpel</entityname.multiscalpel>
-<entitydescription.multiscalpel>A scalpel you can choose what to do with, be it make an incision, extract organs, remove bandages, or do malpractice.</entitydescription.multiscalpel>
+<entitydescription.multiscalpel>Novelty scalpel. In the practitioner’s hands, a button pad can be utilised to switch between various operations: making incisions, extracting organs, removing bandages, or doing malpractice.</entitydescription.multiscalpel>
 <multiscalpel.incision>Mode: Surgery incision</multiscalpel.incision>
 <multiscalpel.kidneys>Mode: Extract kidneys</multiscalpel.kidneys>
 <multiscalpel.liver>Mode: Extract liver</multiscalpel.liver>

@@ -1,7 +1,7 @@
 --easysettings by Evil Factory
 local easySettings = dofile(NT.Path .. "/Lua/Scripts/Client/easysettings.lua")
 local GUIComponent = LuaUserData.CreateStatic("Barotrauma.GUIComponent")
-
+local configUI
 
 --calculate difficulty
 local function DetermineDifficulty()
@@ -45,41 +45,40 @@ local function DetermineDifficulty()
 end
 
 --bulk of the GUI code
-easySettings.AddMenu("Neurotrauma", function (parent)
-	local list = easySettings.BasicList(parent)
+local function ConstructUI(parent)
 
+    local list = easySettings.BasicList(parent)
 
-	
-	--set difficulty text (why does this even exist in the first place)
-	local function OnChanged()
+    --info text
+    local userBlock = GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform), "Server config can be changed by owner or a client with manage settings permission. If the server doesn't allow writing into the config folder, then it must be edited manually.", Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
+    local difficultyBlock = GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform), "", Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
+
+    --set difficulty text (why does this even exist in the first place)
+    local function OnChanged()
         difficultyRate="Calculated difficulty rating: "..DetermineDifficulty()
+        difficultyBlock.Text = difficultyRate
     end
     OnChanged()
-	
-	--info text
-    GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform), "Only the host can edit the servers config.\nEnter \"reloadlua\" in console to apply changes.\nFor dedicated servers you need to edit the file config.json, this GUI wont work.".."\n\n"..difficultyRate, Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
 
-	--empty space
-	--GUI.TextBlock(GUI.RectTransform(Vector2(0.2, 0.1), list.Content.RectTransform), "", Color(255,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
-											
-
+    --empty space
+    --GUI.TextBlock(GUI.RectTransform(Vector2(0.2, 0.1), list.Content.RectTransform), "", Color(255,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
 
     -- procedurally construct config UI
     for key,entry in pairs(NTConfig.Entries) do
         if entry.type=="float" then
-		
+        
 
-			-- scalar value
-			 --grab range
-			local minrange=""
-			local maxrange=""
+            -- scalar value
+             --grab range
+            local minrange=""
+            local maxrange=""
             local count=0
-			for _, rangegrab in pairs(entry.range) do
-				if count==0 then minrange=rangegrab end
-				if count==1 then maxrange=rangegrab end
-				count=count+1
-			end
-			
+            for _, rangegrab in pairs(entry.range) do
+                if count==0 then minrange=rangegrab end
+                if count==1 then maxrange=rangegrab end
+                count=count+1
+            end
+            
             local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
             local textBlock = GUI.TextBlock(rect, entry.name.." ("..minrange.."-"..maxrange..")", Color(230,230,170), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
             if entry.description then textBlock.ToolTip = entry.description end
@@ -119,4 +118,31 @@ easySettings.AddMenu("Neurotrauma", function (parent)
         end
     end
 
+    --empty space as last tickbox was getting cutoff
+    GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform), "", Color(255,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
+
+    if Game.IsMultiplayer and not Game.Client.HasPermission(ClientPermissions.ManageSettings) then
+        for guicomponent in list.GetAllChildren() do
+            guicomponent.enabled = false
+        end
+    end
+
+    return list
+end
+
+Networking.Receive("NT.ConfigUpdate", function(msg)
+    NTConfig.ReceiveConfig(msg)
+    local parent = configUI.Parent.Parent
+    configUI.RectTransform.Parent = nil
+    configUI = nil
+    configUI = ConstructUI(parent)
+end)
+
+
+easySettings.AddMenu("Neurotrauma", function (parent)
+    if Game.IsMultiplayer then
+        local msg = Networking.Start("NT.ConfigRequest")
+        Networking.Send(msg)
+    end
+    configUI = ConstructUI(parent)
 end)

@@ -2,8 +2,8 @@
 
 NT = {} -- Neurotrauma
 NT.Name="Neurotrauma"
-NT.Version = "A1.10.0"
-NT.VersionNum = 01100000
+NT.Version = "A1.10.1h2"
+NT.VersionNum = 01100102
 NT.Path = table.pack(...)[1]
 
 dofile(NT.Path.."/Lua/Scripts/helperfunctions.lua")
@@ -57,6 +57,20 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
     dofile(NT.Path.."/Lua/Scripts/Server/modconflict.lua")
     
     dofile(NT.Path.."/Lua/Scripts/testing.lua")
+end
+
+-- server-side code only
+if SERVER then
+    Networking.Receive("NT.ConfigUpdate", function(msg, sender)
+        if not sender.HasPermission(ClientPermissions.ManageSettings) then return end
+        NTConfig.ReceiveConfig(msg)
+        NTConfig.SaveConfig()
+    end)
+
+    Networking.Receive("NT.ConfigRequest", function(msg, sender)
+        if not sender then return end
+        NTConfig.SendConfig(sender)
+    end)
 end
 
 -- client-side code

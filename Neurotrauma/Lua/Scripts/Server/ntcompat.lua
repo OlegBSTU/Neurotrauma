@@ -171,6 +171,30 @@ function NTC.AddSuturedAffliction(identifier,surgeryskillgain,requiredaffliction
     end,1)
 end
 
+NTC.AfflictionsAffectingVitality = {
+    bleeding = true,
+    bleedingnonstop = true,
+    burn = true,
+    acidburn = true,
+    lacerations = true,
+    gunshotwound = true,
+    bitewounds = true,
+    explosiondamage = true,
+    blunttrauma = true,
+    internaldamage = true,
+    organdamage = true,
+    cerebralhypoxia = true,
+    gangrene = true,
+    th_amputation = true,
+    sh_amputation = true,
+    suturedw = true,
+    alcoholaddiction = true,
+    opiateaddiction = true,
+}
+function NTC.AddAfflictionAffectingVitality(identifier)
+    NTC.AfflictionsAffectingVitality[identifier] = true
+end
+
 -- these functions are used by neurotrauma to check for symptom overrides
 function NTC.GetSymptom(character,symptomidentifer)
     local chardata = NTC.GetCharacterData(character)

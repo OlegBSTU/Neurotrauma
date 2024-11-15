@@ -19,6 +19,8 @@ function AddAffectedItem(identifier)
 end
 
 LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
+
+
 -- Character type doesn't have tags we can assign a custom "rescuetarget" tag to
 -- So instead we just hold characters which need rescue in a table and compare their entity IDs
 -- This table is only resfreshed on roundstart
@@ -29,7 +31,7 @@ local rescuetargets = {}
 ---@return boolean isAffected True if the item is affected, false otherwise.
 function IsItemAffected(identifier)
     for _, item in pairs(affectedItems) do
-        if item == identifier then
+        if item == identifier or HF.StartsWith(identifier, item) then
             return true
         end
     end
@@ -58,21 +60,24 @@ end
 function UpdateRescueTargets()
     rescuetargets = {}
     for mission in Game.GameSession.Missions do 
-        if mission.Prefab.Type == MissionType.AbandonedOutpost then 
-            for character in mission.requireRescue do 
-                table.insert(rescuetargets, character) 
+        if LuaUserData.IsTargetType(mission.Prefab.MissionClass, "Barotrauma.AbandonedOutpostMission") then 
+            for character in mission.requireRescue do
+                rescuetargets[character.ID] = character
+                --table.insert(rescuetargets, character)
             end
         end
     end
     -- print('rescue targets =')
     -- for char in rescuetargets do print(char.Name) end
 end
+
 ---@param target Barotrauma_Character The character we want to confirm as being rescued
 ---@return boolean consent True if target is rescue mission target, false otherwise
 function IsRescueTarget(target)
-    for char in rescuetargets do
-        if target.ID == char.ID then return true end
-    end
+    -- for char in rescuetargets do
+    --     if target.ID == char.ID then return true end
+    -- end
+    if rescuetargets[target.ID] ~= nil then return true end
     return false
 end
 
@@ -80,8 +85,7 @@ end
 ---@param target Barotrauma_Character The character who gives consent
 ---@return boolean consent True if consent is given, false otherwise.
 function hasConsent(user, target)
-	if not NTConfig.Get("NTCRE_ConsentRequired",true) then return true end
-	return isOnSameTeam(user, target) or target.IsEscorted or IsRescueTarget(target) -- No longer needs to be shared.
+    return isOnSameTeam(user, target) or target.IsEscorted or IsRescueTarget(target) -- No longer needs to be shared.
 end
 
 ---@param aiChar Barotrauma_Character The (AI but not necessarily) character whose sight is being tested.
