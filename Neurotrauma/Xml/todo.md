@@ -5,3 +5,4 @@
 - bloody murder meat skull / bagged head for traumatic/surgery amputations
 - make all amputated limbs placeable
 - increase the blood pack loot a little more
+- add mobile stretchers that you lie down onto for surgeries / stabilizes fractures to avoid complications

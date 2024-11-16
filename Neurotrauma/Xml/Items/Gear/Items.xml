@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3"/>
+
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
+            <RequiredSkill identifier="medical" level="30"/>
+            <RequiredItem identifier="plastic"/>
+        </Fabricate>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="100" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="512,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="90" height="80" density="20"/>
+        <SuitableTreatment identifier="oxygenlow" suitability="50"/>
+
+        <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <RequiredItems identifier="weldingtoolfuel,oxygensource,paint" type="Contained" msg="ItemMsgOxygenTankRequired"/>
+            <StatusEffect type="OnUse" target="UseTarget">
+                <ReduceAffliction identifier="oxygenlow" amount="10" />
+                <Conditional IsDead="false"/>
+                <Sound file="%ModDir%/Sound/pump.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="This" Condition="-100"/>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="1" stackable="false"/>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-2" comparison="and">
+                <RequiredItem items="oxygentank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <ReduceAffliction identifier="oxygenlow" amount="90" />
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-2" comparison="and">
+                <RequiredItem items="oxygenitetank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <ReduceAffliction identifier="oxygenlow" amount="90" />
+                <ReduceAffliction identifier="respiratoryarrest" amount="100" />
+            </StatusEffect>
+            <!-- We do a little trolling  -->
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-5" comparison="and">
+                <RequiredItem items="weldingfueltank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="oxygenlow" amount="110" />
+                <Affliction identifier="lungdamage" amount="10" />
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-7" comparison="and">
+                <RequiredItem items="incendiumfueltank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="oxygenlow" amount="110" />
+                <Affliction identifier="lungdamage" amount="20" />
+                <Affliction identifier="burn" amount="10" />
+            </StatusEffect>
+            <!-- Huff paint -->
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-5" comparison="and">
+                <RequiredItem items="paint" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="oxygenlow" amount="50" />
+                <Affliction identifier="chemaddiction" amount="5" />
+                <ReduceAffliction identifier="chemwithdrawal" amount="20" />
+                <Affliction identifier="lungdamage" amount="3" />
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <Pickable msg="ItemMsgPickUpSelect"/>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+            <Containable items="weldingtoolfuel,oxygensource,paint"/>
+        </ItemContainer>
+    </Item>
+
+    <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+        <Upgrade gameversion="0.9.3.0" scale="0.40"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25"/>
+
+        <Price baseprice="300" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+        </Price>
+
+        <Deconstruct time="10">
+            <Item identifier="steel"/>
+        </Deconstruct>
+
+        <!-- TODO: remove all of this when defibs get better -->
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="medical" level="40"/>
+            <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="fpgacircuit"/>
+            <RequiredItem identifier="steel" mincondition="0.5" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="640,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body radius="45" height="50" density="40"/>
+
+        <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnWearing" target="This" Condition="-100" disabledeltatime="true" delay="0.3" stackable="false">
+                <Condition Condition="gte 99"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="3" stackable="false"/>
+            <StatusEffect type="OnWearing" target="Contained,Character,This" Condition="-0.2" comparison="And">
+                <RequiredItem items="mobilebattery" type="Contained"/>
+                <Conditional IsDead="false"/>
+            </StatusEffect>
+            <StatusEffect type="OnWearing" target="Character,This" comparison="Or" disabledeltatime="true">
+                <RequiredItem items="mobilebattery" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="cpr_buff_auto" amount="10" />
+            </StatusEffect>
+            <StatusEffect type="OnWearing" target="Character,This" comparison="And">
+                <RequiredItem items="mobilebattery" type="Contained"/>
+                <Conditional IsDead="false" Condition="gte 99"/>
+                <Sound file="%ModDir%/Sound/pump.ogg" range="500"/>
+            </StatusEffect>
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
+            <sprite name="AutoPulse" texture="%ModDir%/Images/InGameItemIconAtlas.png" limb="Torso" scale="0.8" hidelimb="false" inherittexturescale="true" sourcerect="640,0,128,128" origin="0.5,0.6"/>
+        </Wearable>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+            <Containable items="mobilebattery"/>
+        </ItemContainer>
+    </Item>
+
+    <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="1" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="1">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="organicfiber" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="30" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+</Items>
