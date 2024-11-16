@@ -4,9 +4,7 @@
         <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
         <PreferredContainer primary="locker"/>
 
-        <Price baseprice="35" soldbydefault="true">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-        </Price>
+
 
         <Deconstruct/>
 
@@ -36,6 +34,10 @@
             <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,188,122,8" depth="0.55" origin="0.5,0.5"/>
@@ -111,6 +113,10 @@
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
 
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
         <SkillRequirementHint identifier="medical" level="40"/>
@@ -123,6 +129,10 @@
             <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
@@ -137,6 +147,10 @@
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
 
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
         <SkillRequirementHint identifier="medical" level="50"/>
@@ -149,6 +163,10 @@
             <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
@@ -163,6 +181,10 @@
             <RequiredItem identifier="oxygeniteshard"/>
             <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>

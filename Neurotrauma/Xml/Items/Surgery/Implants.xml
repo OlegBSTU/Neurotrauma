@@ -2,10 +2,6 @@
 <Items>
     <!-- I'm not entirely sure about the identifier. It's just that basic_implant is more suitable for something that can be stuck anywhere, and not for a healing implant. By: TheManyFacedDemon -->
     <Item name="." identifier="base_heal_implant" hideinmenus="true">
-        <Price baseprice="200" soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-        </Price>
-
         <Deconstruct time="10">
             <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
             <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
@@ -18,6 +14,10 @@
     <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4" variantof="base_heal_implant">
         <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
+
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
@@ -42,6 +42,10 @@
 
     <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" variantof="base_heal_implant">
         <PreferredContainer primary="toxcontainer" spawnprobability="0.5"/>
+
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
 
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="70"/>
