@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Item name="." identifier="base_consumable" hideinmenus="true">
+        <Deconstruct/>
+
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
             <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
             <StatusEffect type="OnUse" tags="medical" target="This, Limb">
@@ -22,8 +24,6 @@
             <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
             <RequiredItem identifier="organicfiber"/>
         </Fabricate>
-
-        <Deconstruct/>
 
         <Price baseprice="30">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="25"/>
@@ -53,8 +53,6 @@
             <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
         </Fabricate>
 
-        <Deconstruct/>
-
         <Price baseprice="70" soldbydefault="true">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -73,8 +71,6 @@
             <RequiredSkill identifier="medical" level="25"/>
             <RequiredItem identifier="plastic"/>
         </Fabricate>
-
-        <Deconstruct/>
 
         <Price baseprice="25" soldbydefault="true">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
