@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="." identifier="base_scalpel" hideinmenus="true">
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="locker"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Deconstruct/>
+
+        <Body width="65" height="15" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+            <!-- extracting organ -->
+            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+                <Conditional retractedskin="gte 1"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500"/>
+                <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500"/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+
+
+    <Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="20"/>
+            <RequiredSkill identifier="mechanical" level="15"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,188,122,8" depth="0.55" origin="0.5,0.5"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and" />
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="60"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="advscalpel"/>
+            <RequiredItem identifier="organscalpel_heart"/>
+            <RequiredItem identifier="traumashears"/>
+            <RequiredItem identifier="fulgurium"/>
+        </Fabricate>
+
+        <Deconstruct>
+            <Item identifier="advscalpel"/>
+            <Item identifier="traumashears"/>
+        </Deconstruct>
+
+        <Price baseprice="200" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,256,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,218,122,8" depth="0.55" origin="0.5,0.5"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+            <!-- extracting organ -->
+            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true" />
+        </MeleeWeapon>
+
+        <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+            <GuiFrame relativesize="0.14,0.25" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,0" style="ItemUI" />
+
+            <Button text="multiscalpel.btn.incision">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.incision"/>
+                </StatusEffect>
+            </Button>
+
+            <Button text="multiscalpel.btn.bandage">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.bandage"/>
+                </StatusEffect>
+            </Button>
+
+            <Button text="multiscalpel.btn.speedflex">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.speedflex"/>
+                </StatusEffect>
+            </Button>
+
+            <!--<Button text="multiscalpel.btn.kidneys"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.kidneys"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.liver"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.liver"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.lungs"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.lungs"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.heart"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.heart"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.brain"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.brain"/></StatusEffect></Button>-->
+        </CustomInterface>
+    </Item>
+
+    <Item name="" identifier="organscalpel_liver" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
+        <SkillRequirementHint identifier="medical" level="40"/>
+    </Item>
+
+    <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
+        <SkillRequirementHint identifier="medical" level="50"/>
+    </Item>
+
+    <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
+        <SkillRequirementHint identifier="medical" level="60"/>
+    </Item>
+
+    <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="60"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="oxygeniteshard"/>
+            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5"/>
+        <SkillRequirementHint identifier="medical" level="100"/>
+    </Item>
+</Items>
