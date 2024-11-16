@@ -26,6 +26,7 @@
   <Item         file="%ModDir%/Xml/Items/Surgery/Implants.xml" />
   <Item         file="%ModDir%/Xml/Items/Surgery/Instruments.xml" />
   <Item         file="%ModDir%/Xml/Items/Surgery/Scalpels.xml" />
+  <Item         file="%ModDir%/Xml/Items/Chemicals.xml" />
   <Item         file="%ModDir%/Xml/Items/Consumables.xml" />
   <Item         file="%ModDir%/Xml/Items/Etc.xml" />
   <Item         file="%ModDir%/Xml/Items/FirstAID.xml" />
