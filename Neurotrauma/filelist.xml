@@ -23,6 +23,7 @@
   <Item         file="%ModDir%/Xml/items.xml" />
   <Item         file="%ModDir%/Xml/Items/Gear/Defibrillators.xml" />
   <Item         file="%ModDir%/Xml/Items/Surgery/Implants.xml" />
+  <Item         file="%ModDir%/Xml/Items/Surgery/Instruments.xml" />
   <Item         file="%ModDir%/Xml/Items/Surgery/Scalpels.xml" />
   <Item         file="%ModDir%/Xml/Items/Override.xml" />
   <Item         file="%ModDir%/Xml/Items/SFX.xml" />
