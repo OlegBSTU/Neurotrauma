@@ -243,6 +243,33 @@
             <SkillRequirementHint identifier="medical" level="10"/>
         </Item>
 
+        <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+            <Upgrade gameversion="0.10.0.0" scale="0.5" />
+            <PreferredContainer primary="medcab" minamount="2" maxamount="3" notcampaign="true"/>
+            <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
+            <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.05"/>
+            <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.2" />
+            <PreferredContainer secondary="medcontainer"/>
+            <PreferredContainer secondary="researchcontainer" spawnprobability="0.02"/>
+            <Price baseprice="240">
+                <Price storeidentifier="merchantmedical" multiplier="0.9"/>
+                <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="2"/>
+            </Price>
+            <Deconstruct time="5">
+                <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1"/>
+                <Item identifier="stabilozine" copycondition="true" mincondition="0.1"/>
+            </Deconstruct>
+            <SuitableTreatment identifier="bloodloss" suitability="100"/>
+            <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5"/>
+            <Body width="80" height="42" density="11"/>
+            <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+                <StatusEffect type="OnBroken" target="This">
+                    <Remove/>
+                </StatusEffect>
+            </Holdable>
+            <AiTarget sightrange="1000" static="true"/>
+        </Item>
+
         <!-- Bandages -->
         <Item name="" identifier="antibleeding1" aliases="Bandage" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_soft" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
