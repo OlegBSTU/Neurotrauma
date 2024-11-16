@@ -153,74 +153,7 @@
 
   <!-- /// Surgery /// -->
 
-  <Item name="" identifier="operatingtable" scale="0.4" Tags="" maxstacksize="1" category="medical" description="" isshootable="true">
-    <Upgrade gameversion="0.12.0.0" noninteractable="false"/>
-    <Body width="416" height="192" density="40"/>
-    <Price baseprice="200" soldbydefault="false">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-    </Price>
-    <Deconstruct time="10">
-      <Item identifier="steel"/>
-      <Item identifier="aluminium"/>
-    </Deconstruct>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
-      <RequiredSkill identifier="medical" level="50"/>
-      <RequiredItem identifier="fpgacircuit"/>
-      <RequiredItem identifier="plastic"/>
-      <RequiredItem identifier="steel"/>
-      <RequiredItem identifier="aluminium"/>
-    </Fabricate>
-    <InventoryIcon texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" origin="0.5,0.5"/>
-    <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.75" premultiplyalpha="false" origin="0.5,0.5"/>
-    <Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="5" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
-      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="200" stackable="true">
-        <Affliction identifier="table" amount="2"/>
-        <Affliction identifier="alv" amount="10"/>
-      </StatusEffect>
-      <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
-        <LuaHook name="surgerytable.update" />
-      </StatusEffect>
-    </Holdable>
-    <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
-      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0"/>
-    </LightComponent>
-    <Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-      <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
-      <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
-      <limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
-      <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
-      <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
-      <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
-      <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
 
-      <!--
-      <StatusEffect type="Always" target="NearbyCharacters" range="100">
-        <Conditional sym_unconsciousness="gt 0.1"/>
-        <LuaHook name="surgerytable.forceon" />
-      </StatusEffect>
-      -->
-    </Controller>
-    <!-- Controller output was made editable in v1.1.4.0, disallow it on surgery tables -->
-    <Upgrade gameversion="1.1.4.0" allowingameediting="false" />
-    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.15,0.6" minsize="300,450" maxsize="380,500" anchor="Center" style="ConnectionPanel" />
-      <RequiredItem items="screwdriver" type="Equipped" />
-      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
-      <output name="alive_out" displayname="connection.aliveout"/>
-      <output name="conscious_out" displayname="connection.consciousout"/>
-      <output name="name_out" displayname="connection.nameout" />
-      <output name="vitality_out" displayname="connection.vitalityout" />
-      <output name="heartrate_out" displayname="connection.heartrateout" />
-      <output name="breathingrate_out" displayname="connection.breathingrateout" />
-      <output name="bloodpressure_out" displayname="connection.bloodpressureout" />
-      <output name="bloodoxygen_out" displayname="connection.bloodoxygenout" />
-      <output name="neurotrauma_out" displayname="connection.neurotraumaout" />
-      <output name="organdamage_out" displayname="connection.organdamageout" />
-      <output name="insurgery_out" displayname="connection.insurgeryout" />
-      <output name="causeofdeath_out" displayname="connection.causeofdeathout" />
-      <output name="bloodph_out" displayname="connection.bloodphout" />
-    </ConnectionPanel>
-  </Item>
   <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="1" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
