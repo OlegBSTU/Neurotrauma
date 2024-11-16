@@ -27,7 +27,7 @@
     </Item>
 
 
-    <Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
 
         <Fabricate suitablefabricators="fabricator">
@@ -47,7 +47,7 @@
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
 
-    <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="60"/>
             <RequiredSkill identifier="mechanical" level="20"/>
@@ -103,7 +103,7 @@
         </CustomInterface>
     </Item>
 
-    <Item name="" identifier="organscalpel_liver" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="organscalpel_liver" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
             <RequiredSkill identifier="mechanical" level="20"/>
@@ -116,7 +116,7 @@
         <SkillRequirementHint identifier="medical" level="40"/>
     </Item>
 
-    <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
             <RequiredSkill identifier="mechanical" level="20"/>
@@ -129,7 +129,7 @@
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
 
-    <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
             <RequiredSkill identifier="mechanical" level="20"/>
@@ -142,7 +142,7 @@
         <SkillRequirementHint identifier="medical" level="50"/>
     </Item>
 
-    <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
             <RequiredSkill identifier="mechanical" level="20"/>
@@ -155,7 +155,7 @@
         <SkillRequirementHint identifier="medical" level="60"/>
     </Item>
 
-    <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_scalpel">
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="60"/>
             <RequiredSkill identifier="mechanical" level="20"/>
