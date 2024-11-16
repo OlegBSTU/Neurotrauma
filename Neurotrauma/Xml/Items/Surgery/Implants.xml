@@ -2,6 +2,8 @@
 <Items>
     <!-- I'm not entirely sure about the identifier. It's just that basic_implant is more suitable for something that can be stuck anywhere, and not for a healing implant. By: TheManyFacedDemon -->
     <Item name="." identifier="base_heal_implant" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+
         <Deconstruct time="10">
             <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
             <Item identifier="calcium" copycondition="true" mincondition="0.1"/>

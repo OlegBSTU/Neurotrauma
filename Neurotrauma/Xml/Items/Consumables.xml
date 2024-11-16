@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Item name="." identifier="base_consumable" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+
         <Deconstruct />
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
@@ -90,7 +92,7 @@
         <Body width="100" height="100" density="50"/>
     </Item>
 
-    <Item name="" identifier="gypsum" category="Medical" Tags="smallitem,medical" maxstacksize="16" maxstacksizecharacterinventory="4" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.3" impactsoundtag="impact_soft" variantof="base_consumable">
+    <Item name="" identifier="gypsum" category="Medical" Tags="smallitem,medical" maxstacksize="16" maxstacksizecharacterinventory="4" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.3" impactsoundtag="impact_soft">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>

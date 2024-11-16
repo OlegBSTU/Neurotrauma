@@ -4,7 +4,7 @@
         <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
         <PreferredContainer primary="locker"/>
 
-
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
 
         <Deconstruct/>
 
