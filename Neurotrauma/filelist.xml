@@ -20,10 +20,12 @@
   <Other file="%ModDir%/Images/Human/Human_male_mask.png" />
 
   <Afflictions  file="%ModDir%/Xml/Afflictions.xml" />
-  <Item         file="%ModDir%/Xml/items.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/BloodPacks.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/DonorCard.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/Gear.xml" />
+  <Item         file="%ModDir%/Xml/Items/BodyParts/Limbs.xml" />
+  <Item         file="%ModDir%/Xml/Items/BodyParts/Locks.xml" />
+  <Item         file="%ModDir%/Xml/Items/BodyParts/Organs.xml" />
   <Item         file="%ModDir%/Xml/Items/Gear/Defibrillators.xml" />
   <Item         file="%ModDir%/Xml/Items/Gear/Items.xml" />
   <Item         file="%ModDir%/Xml/Items/Surgery/Implants.xml" />
