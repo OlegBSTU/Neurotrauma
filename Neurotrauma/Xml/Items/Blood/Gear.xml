@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!-- Blood type analyzer + collection cartridge -->
+    <Item name="" description="" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,medical" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.25"/>
+
+        <Price baseprice="250">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Deconstruct time="10">
+            <Item identifier="plastic"/>
+            <Item identifier="silicon"/>
+        </Deconstruct>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+            <RequiredSkill identifier="medical" level="50"/>
+            <RequiredItem identifier="plastic"/>
+            <RequiredItem identifier="silicon"/>
+            <RequiredItem identifier="fpgacircuit"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="512,128,128,128" depth="0.6" origin="0.5,0.5"/>
+        <Body width="50" height="50" density="40"/>
+
+        <ItemComponent>
+            <StatusEffect type="OnUse" target="This, Character" comparison="And">
+                <Conditional condition="gt 90"/>
+                <Sound file="%ModDir%/Sound/hypospray.ogg"/>
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="This" Condition="-100"/>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false"/>
+        </ItemComponent>
+
+        <Pickable msg="ItemMsgPickUpSelect"/>
+
+        <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
+            <Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard, bloodscannercard, donorCard, bloodbag, allblood">
+                <StatusEffect type="OnInserted" target="this">
+                    <LuaHook name="OnInsertedIntoBloodAnalyzer" />
+                </StatusEffect>
+            </Containable>
+        </ItemContainer>
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="bloodcollector" category="Equipment" description="" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial,medical,bloodscannercard" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1"/>
+
+        <Price baseprice="5">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="5">
+            <RequiredSkill identifier="medical" level="30"/>
+            <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+
+        <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,0" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </Holdable>
+    </Item>
+</Items>
