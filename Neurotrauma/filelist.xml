@@ -21,6 +21,7 @@
 
   <Afflictions  file="%ModDir%/Xml/Afflictions.xml" />
   <Item         file="%ModDir%/Xml/items.xml" />
+  <Item         file="%ModDir%/Xml/Items/Override.xml" />
   <Sounds       file="%ModDir%/Xml/sounds.xml" />
 
   <Text file="%ModDir%/Localization/English/English.xml" />
