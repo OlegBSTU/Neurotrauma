@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="." identifier="base_consumable" hideinmenus="true">
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="This, Limb">
+                <Sound file="%ModDir%/Sound/suture.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+
+    <Item name="" identifier="suture" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_consumable">
+        <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="8" requiredtime="10">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
+            <RequiredItem identifier="organicfiber"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="30">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="25"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,128,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="65" height="45" density="50"/>
+        <SuitableTreatment identifier="lacerations" suitability="20"/>
+        <SuitableTreatment identifier="bitewounds" suitability="20"/>
+        <SuitableTreatment identifier="explosiondamage" suitability="20"/>
+        <SuitableTreatment identifier="gunshotwound" suitability="20"/>
+        <SuitableTreatment identifier="bleeding" suitability="40"/>
+        <SuitableTreatment identifier="surgeryincision" suitability="100"/>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="medstent" category="Medical" maxstacksize="1" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,syringe,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_consumable">
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="1">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="organicfiber" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="70" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+        <SuitableTreatment identifier="arterialcut5" suitability="50"/>
+    </Item>
+
+    <Item name="" identifier="drainage" category="Medical" maxstacksize="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,syringe,surgerytool" description="" useinhealthinterface="True" scale="0.250" variantof="base_consumable">
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="1">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="plastic"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="25" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+    </Item>
+</Items>
