@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!-- /// this is unelegant, pls fix, lua man! /// -->
+    <Item name="." identifier="ntvfx_explosion" description="." hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+        <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+            <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+                <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="2000" />
+                <Explosion range="150.0" structuredamage="0" force="0" applyfireeffects="false">
+                </Explosion>
+            </StatusEffect>
+            <StatusEffect type="always" target="This" disabledeltatime="true" delay="0.3" stackable="false">
+                <Remove/>
+            </StatusEffect>
+        </ItemComponent>
+    </Item>
+</Items>
