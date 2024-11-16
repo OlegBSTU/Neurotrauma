@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Item name="." identifier="base_consumable" hideinmenus="true">
-        <Deconstruct time="5"/>
+        <Deconstruct />
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
             <StatusEffect type="OnUse" target="This" condition="-100">
@@ -103,6 +103,8 @@
             <RequiredSkill identifier="medical" level="15"/>
             <RequiredItem identifier="calcium"/>
         </Fabricate>
+
+        <Deconstruct time="5"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,192,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="914,250,86,134" depth="0.6" origin="0.5,0.5"/>
