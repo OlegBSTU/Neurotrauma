@@ -21,6 +21,7 @@
 
   <Afflictions  file="%ModDir%/Xml/Afflictions.xml" />
   <Item         file="%ModDir%/Xml/items.xml" />
+  <Item         file="%ModDir%/Xml/Items/Gear/defibrillators.xml" />
   <Item         file="%ModDir%/Xml/Items/Override.xml" />
   <Item         file="%ModDir%/Xml/Items/SFX.xml" />
   <Item         file="%ModDir%/Xml/Items/VFX.xml" />
