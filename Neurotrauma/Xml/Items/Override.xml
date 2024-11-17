@@ -947,7 +947,6 @@
             <SuitableTreatment identifier="cardiacarrest" suitability="100"/>
             <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
             </MeleeWeapon>
-            <!-- TODO: some effect for adrenaline, sticktocharacters false until there is an effect. -->
             <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
         </Item>
 
