@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="." identifier="base_limb" hideinmenus="true">
-        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+        <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
+        <Body width="46" height="90" density="20"/>
 
         <Deconstruct time="10">
             <Item identifier="calcium" amount="2" />
         </Deconstruct>
 
-        <Price baseprice="50" soldbydefault="false"/>
+        <Price baseprice="50" soldbydefault="false"></Price>
 
         <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
             <StatusEffect target="Character" type="OnSpawn">
@@ -24,42 +26,124 @@
             </StatusEffect>
             <StatusEffect type="OnFire" target="This" Condition="-25.0" />
             <!-- yuck! severed limbs on the floor!
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-                <Affliction identifier="nausea" amount="0.2"/>
-            </StatusEffect>
-            -->
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+            <Affliction identifier="nausea" amount="0.2"/>
+          </StatusEffect>-->
             <StatusEffect type="OnBroken" target="This">
                 <LuaHook name="NT.RotOrgan" />
             </StatusEffect>
         </Throwable>
     </Item>
 
-    <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3" variantof="base_limb">
+    <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="46" height="90" density="20"/>
+
+        <Deconstruct time="10">
+            <Item identifier="calcium" amount="2" />
+        </Deconstruct>
+
+        <Price baseprice="50" soldbydefault="false"></Price>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect target="Character" type="OnSpawn">
+                <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
+            </StatusEffect>
+            <!-- making the limb go kaputt if left outside of refrigeration -->
+            <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
+                <Conditional hastag="neq refrigerated" targetcontainer="true" />
+                <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+                <Conditional condition="gte 95" />
+                <Conditional hastag="refrigerated" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+            <!-- yuck! severed limbs on the floor!
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+            <Affliction identifier="nausea" amount="0.2"/>
+          </StatusEffect>-->
+            <StatusEffect type="OnBroken" target="This">
+                <LuaHook name="NT.RotOrgan" />
+            </StatusEffect>
+        </Throwable>
     </Item>
 
-    <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3" variantof="base_limb">
-        <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
-        <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
-        <Body width="46" height="90" density="20"/>
-    </Item>
-
-    <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3" variantof="base_limb">
+    <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
+
+        <Deconstruct time="10">
+            <Item identifier="calcium" amount="2" />
+        </Deconstruct>
+
+        <Price baseprice="50" soldbydefault="false"></Price>
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect target="Character" type="OnSpawn">
+                <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
+            </StatusEffect>
+            <!-- making the limb go kaputt if left outside of refrigeration -->
+            <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
+                <Conditional hastag="neq refrigerated" targetcontainer="true" />
+                <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+                <Conditional condition="gte 95" />
+                <Conditional hastag="refrigerated" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+            <!-- yuck! severed limbs on the floor!
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+            <Affliction identifier="nausea" amount="0.2"/>
+          </StatusEffect>-->
+            <StatusEffect type="OnBroken" target="This">
+                <LuaHook name="NT.RotOrgan" />
+            </StatusEffect>
+        </Throwable>
     </Item>
 
-    <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3" variantof="base_limb">
+    <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
+
+        <Deconstruct time="10">
+            <Item identifier="calcium" amount="2" />
+        </Deconstruct>
+
+        <Price baseprice="50" soldbydefault="false"></Price>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect target="Character" type="OnSpawn">
+                <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
+            </StatusEffect>
+            <!-- making the limb go kaputt if left outside of refrigeration -->
+            <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
+                <Conditional hastag="neq refrigerated" targetcontainer="true" />
+                <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+                <Conditional condition="gte 95" />
+                <Conditional hastag="refrigerated" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+            <!-- yuck! severed limbs on the floor!
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+            <Affliction identifier="nausea" amount="0.2"/>
+          </StatusEffect>-->
+            <StatusEffect type="OnBroken" target="This">
+                <LuaHook name="NT.RotOrgan" />
+            </StatusEffect>
+        </Throwable>
     </Item>
 
-    <!-- Bionic -->
-    <Item name="." identifier="base_limbp" hideinmenus="true">
+    <Item name="" identifier="llegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
+        <Price baseprice="500" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
         <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6"/>
         <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
@@ -71,27 +155,51 @@
         </Throwable>
     </Item>
 
-    <Item name="" identifier="llegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" variantof="base_limbp">
+    <Item name="" identifier="rlegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
         <Price baseprice="500" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
+
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6"/>
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="90" density="20"/>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </Throwable>
     </Item>
 
-    <Item name="" identifier="rlegp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" variantof="base_limbp">
+    <Item name="" identifier="larmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
         <Price baseprice="500" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
+
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6"/>
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="90" density="20"/>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </Throwable>
     </Item>
 
-    <Item name="" identifier="larmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" variantof="base_limbp">
+    <Item name="" identifier="rarmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery">
         <Price baseprice="500" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
-    </Item>
 
-    <Item name="" identifier="rarmp" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" variantof="base_limbp">
-        <Price baseprice="500" soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-        </Price>
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6"/>
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="90" density="20"/>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </Throwable>
     </Item>
 </Items>
