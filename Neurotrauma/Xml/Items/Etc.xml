@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <!-- I wouldn't say that I understand approximately how to sort the following subjects, so I'll just throw them here. By: TheManyFacedDemon -->
-
     <Item name="" identifier="operatingtable" scale="0.4" Tags="" maxstacksize="1" category="medical" description="" isshootable="true">
         <Upgrade gameversion="0.12.0.0" noninteractable="false"/>
         <Body width="416" height="192" density="40"/>
