@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="." identifier="base_defibrillator" hideinmenus="true">
-        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
-
-        <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
-        <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
-            <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
-            <StatusEffect type="OnUse" target="This" Condition="-100"/>
-            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false"/>
-        </MeleeWeapon>
-
-        <Pickable msg="ItemMsgPickUpSelect"/>
-
-        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
-            <Containable items="mobilebattery"/>
-        </ItemContainer>
-    </Item>
-
-    <Item name="" identifier="defibrillator" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3" variantof="base_defibrillator">
+    <Item name="" identifier="defibrillator" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3"/>
 
@@ -43,9 +26,22 @@
         <SuitableTreatment identifier="tachycardia" suitability="50"/>
         <SuitableTreatment identifier="fibrillation" suitability="50"/>
         <SuitableTreatment identifier="cardiacarrest" suitability="10"/>
+
+        <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
+        <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
+            <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
+            <StatusEffect type="OnUse" target="This" Condition="-100"/>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false"/>
+        </MeleeWeapon>
+
+        <Pickable msg="ItemMsgPickUpSelect"/>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+            <Containable items="mobilebattery"/>
+        </ItemContainer>
     </Item>
 
-    <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3" variantof="base_defibrillator">
+    <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
         <PreferredContainer primary="medcab"/>
 
         <Fabricate suitablefabricators="fabricator" requiredtime="60">
@@ -68,5 +64,18 @@
         <SuitableTreatment identifier="tachycardia" suitability="60"/>
         <SuitableTreatment identifier="fibrillation" suitability="60"/>
         <SuitableTreatment identifier="cardiacarrest" suitability="15"/>
+
+        <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
+        <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
+            <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
+            <StatusEffect type="OnUse" target="This" Condition="-100"/>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false"/>
+        </MeleeWeapon>
+
+        <Pickable msg="ItemMsgPickUpSelect"/>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+            <Containable items="mobilebattery"/>
+        </ItemContainer>
     </Item>
 </Items>
