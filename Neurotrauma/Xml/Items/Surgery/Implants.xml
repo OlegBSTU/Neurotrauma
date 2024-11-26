@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <!-- I'm not entirely sure about the identifier. It's just that basic_implant is more suitable for something that can be stuck anywhere, and not for a healing implant. By: TheManyFacedDemon -->
-    <Item name="." identifier="base_heal_implant" hideinmenus="true">
-        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
-
-        <Deconstruct time="10">
-            <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
-            <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
-        </Deconstruct>
-
-        <Body width="65" height="15" density="50"/>
-        <SkillRequirementHint identifier="medical" level="45"/>
-    </Item>
-
-    <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4" variantof="base_heal_implant">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
-        <PreferredContainer primary="locker"/>
-
+    <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
         <Price baseprice="200" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
+
+        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+        <PreferredContainer primary="locker"/>
 
         <Fabricate suitablefabricators="fabricator">
             <RequiredSkill identifier="medical" level="35"/>
@@ -29,7 +16,14 @@
             <RequiredItem identifier="calcium"/>
         </Fabricate>
 
+        <Deconstruct time="10">
+            <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
+            <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
+        </Deconstruct>
+
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="87,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="65" height="15" density="50"/>
+
         <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
             <StatusEffect type="OnUse" target="Limb, this" comparison="and">
                 <Conditional drilledbones="gte 99"/>
@@ -40,9 +34,11 @@
                 <Remove/>
             </StatusEffect>
         </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
     </Item>
 
-    <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" variantof="base_heal_implant">
+    <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool">
         <PreferredContainer primary="toxcontainer" spawnprobability="0.5"/>
 
         <Price baseprice="200" soldbydefault="false">
@@ -57,7 +53,13 @@
             <RequiredItem identifier="calcium"/>
         </Fabricate>
 
+        <Deconstruct time="10">
+            <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.1"/>
+            <Item identifier="calcium" copycondition="true" mincondition="0.1"/>
+        </Deconstruct>
+
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="344,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="60" height="90" density="20"/>
 
         <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
@@ -67,5 +69,7 @@
                 <Remove/>
             </StatusEffect>
         </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
     </Item>
 </Items>
