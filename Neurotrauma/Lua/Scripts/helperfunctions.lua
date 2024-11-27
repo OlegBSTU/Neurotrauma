@@ -30,6 +30,30 @@ function NT.BreakLimb(character,limbtype,strength)
         HF.SetAfflictionLimb(character,"gypsumcast",limbtype,0)
     end
 end
+function NT.SurgicallyAmputateLimbAndGenerateItem(usingCharacter, targetCharacter, limbtype)
+    -- drop previously worn headgear item
+    local previtem = HF.GetHeadWear(targetCharacter)
+    if(previtem ~= nil and limbtype == LimbType.Head) then
+        previtem.Drop(usingCharacter,true)
+    end
+
+    local droplimb =
+        not NT.LimbIsAmputated(targetCharacter,limbtype)
+        and not HF.HasAfflictionLimb(targetCharacter,"gangrene",limbtype,15)
+
+    NT.SurgicallyAmputateLimb(targetCharacter,limbtype)
+    if (droplimb) then
+        local limbtoitem = {}
+        limbtoitem[LimbType.RightLeg] = "rleg"
+        limbtoitem[LimbType.LeftLeg] = "lleg"
+        limbtoitem[LimbType.RightArm] = "rarm"
+        limbtoitem[LimbType.LeftArm] = "larm"
+        if limbtoitem[limbtype] ~= nil then
+            HF.GiveItem(usingCharacter,limbtoitem[limbtype])
+            HF.GiveSurgerySkill(usingCharacter,0.5)
+        end
+    end
+end
 function NT.SurgicallyAmputateLimb(character,limbtype,strength,traumampstrength)
     strength = strength or 100
     traumampstrength = traumampstrength or 0
@@ -50,6 +74,9 @@ function NT.SurgicallyAmputateLimb(character,limbtype,strength,traumampstrength)
     limbtoaffliction[LimbType.LeftArm] = "tla_amputation"
     limbtoaffliction[LimbType.Head] = "th_amputation"
     HF.SetAffliction(character,limbtoaffliction[limbtype],traumampstrength)
+
+    NT.DislocateLimb(character,limbtype,-1000)
+    HF.SetAfflictionLimb(character,"gangrene",limbtype,0)
 end
 function NT.TraumamputateLimb(character,limbtype)
     local limbtoaffliction = {}
