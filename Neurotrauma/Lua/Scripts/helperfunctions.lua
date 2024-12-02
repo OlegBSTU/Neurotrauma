@@ -310,7 +310,7 @@ function HF.SetAfflictionLimb(character,identifier,limbtype,strength,aggressor,p
     print('Resistance found for ' .. character.Name .. ' resistance value... ' .. tostring(resistance))
     if resistance >= 1 then return end
 
-    local strength = strength*character.CharacterHealth.MaxVitality/100/(1-resistance)
+    local strength = strength*(1-resistance)*character.CharacterHealth.MaxVitality/100
     local affliction = prefab.Instantiate(
         strength
         ,aggressor)
