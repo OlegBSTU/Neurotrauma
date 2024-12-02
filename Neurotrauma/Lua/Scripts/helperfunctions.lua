@@ -307,6 +307,7 @@ end
 function HF.SetAfflictionLimb(character,identifier,limbtype,strength,aggressor,prevstrength)
     local prefab = AfflictionPrefab.Prefabs[identifier]
     local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
+    print('Resistance found for ' .. character.Name .. ' resistance value... ' .. tostring(resistance))
     if resistance >= 1 then return end
 
     local strength = strength*character.CharacterHealth.MaxVitality/100/(1-resistance)
@@ -314,6 +315,7 @@ function HF.SetAfflictionLimb(character,identifier,limbtype,strength,aggressor,p
         strength
         ,aggressor)
     local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
+    print('Affliction received for ' .. character.Name .. ' id-' .. tostring(identifier) .. ' dmg... ' .. tostring(strength))
 
     character.CharacterHealth.ApplyAffliction(character.AnimController.GetLimb(limbtype), affliction, false, recalculateVitality)
 
