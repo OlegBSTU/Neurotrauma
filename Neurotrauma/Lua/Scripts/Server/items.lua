@@ -258,7 +258,8 @@ NT.SutureAfflictions = {
     la_arterialcut={xpgain=1,case="retractedskin"},
     ra_arterialcut={xpgain=1,case="retractedskin"},
     h_arterialcut={xpgain=1,case="retractedskin"},
-    t_arterialcut={xpgain=2,case="retractedskin"},
+    --Aortic rapture shouldnt be fixed by open-close or it invalidates ballon and stent
+    --t_arterialcut={xpgain=2,case="retractedskin"},
     arteriesclamp={xpgain=0,case="retractedskin"},
     tamponade={xpgain=1,case="retractedskin"},
     internalbleeding={xpgain=1,case="retractedskin"},
