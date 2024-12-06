@@ -1,6 +1,7 @@
 NTTypes = {}
 
 ---@enum BloodType
+--- All kinds of blood types
 NTTypes.BloodType = {
     o_minus = "ominus",
     o_plus = "oplus",
