@@ -1,4 +1,3 @@
-
 -- THIS FILE IS NO LONGER IN USE
 -- the defunct item in question has been removed from the mod
 -- i'm keeping it here for...safekeeping i guess
@@ -23,7 +22,7 @@ Hook.HookMethod("Barotrauma.Location", "LoadStores", function(instance, ptable)
             local itemId = purchasedItem.ItemPrefabIdentifier
             if itemId == DEFUNCT_PREFAB_ID then
                 -- print("Removing defunct bloodpack (qty " .. purchasedItem.Quantity .. ") from " .. tostring(storeId))
-                store.RemoveStock({purchasedItem})
+                store.RemoveStock({ purchasedItem })
             end
         end
     end
