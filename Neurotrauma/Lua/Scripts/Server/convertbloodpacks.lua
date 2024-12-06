@@ -13,9 +13,7 @@ local DEFUNCT_PREFAB_ID = "bloodpackominus"
 -- NOTE: stores that had their stocks generated before installing this mod
 -- won't have any new medical items added.
 Hook.HookMethod("Barotrauma.Location", "LoadStores", function(instance, ptable)
-    if instance.Stores == nil then
-        return
-    end
+    if instance.Stores == nil then return end
 
     for storeId, store in pairs(instance.Stores) do
         for _, purchasedItem in pairs(store.Stock) do
@@ -41,9 +39,7 @@ local function replaceItems()
         local id = tostring(item.Prefab.Identifier)
         if id == DEFUNCT_PREFAB_ID then
             -- Don't replace decorative blood packs
-            if item.NonInteractable then
-                return
-            end
+            if item.NonInteractable then return end
 
             local pos = item.WorldPosition
             local inv = item.ParentInventory

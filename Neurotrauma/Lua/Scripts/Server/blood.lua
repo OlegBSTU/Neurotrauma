@@ -82,17 +82,13 @@ end)
 
 Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, deltaTime, item, targets, position)
     -- Hematology Analyzer (bloodanalyzer) can scan inserted blood bags
-    if item.ParentInventory == nil or item.ParentInventory.Owner == nil or not item.ParentInventory.Owner.IsPlayer then
-        return
-    end
+    if item.ParentInventory == nil or item.ParentInventory.Owner == nil or not item.ParentInventory.Owner.IsPlayer then return end
 
     local character = item.ParentInventory.Owner
     local contained = item.OwnInventory.GetItemAt(0)
 
     -- NT adds bloodbag; NT Blood Work or 'Real Sonar Medical Item Recipes Patch for Neurotrauma' add allblood, lets check for either
-    if contained == nil or not (contained.HasTag("bloodbag") or contained.HasTag("allblood")) then
-        return
-    end
+    if contained == nil or not (contained.HasTag("bloodbag") or contained.HasTag("allblood")) then return end
 
     HF.GiveItem(character, "ntsfx_syringe")
     Timer.Wait(function()
