@@ -2,28 +2,16 @@
 -- Hooks Lua event "characterCreated" to create a randomized blood type for spawned character and sets their immunity to 100
 ---@diagnostic disable: undefined-global
 
--- blood types and chance in percent
-local bloodTypeChance = {
-    { NTTypes.BloodType.o_minus,  7 },
-    { NTTypes.BloodType.o_plus,   37 },
-    { NTTypes.BloodType.a_minus,  6 },
-    { NTTypes.BloodType.a_plus,   36 },
-    { NTTypes.BloodType.b_minus,  2 },
-    { NTTypes.BloodType.b_plus,   8 },
-    { NTTypes.BloodType.ab_minus, 1 },
-    { NTTypes.BloodType.ab_plus,  3 }
-}
-
 -- functions
 
---- Assigns a random blood type based on the percentages in the `bloodTypeChance` table
+--- Assigns a random blood type based on the percentages in the `NTTypes.BloodChance ` table
 --- @param character Character
 --- @return string NT.BloodType
 function NT.RandomizeBlood(character)
     local rand = math.random(1, 100)
     local sum = 0
 
-    for _, bloodTypeAndChance in ipairs(bloodTypeChance) do
+    for _, bloodTypeAndChance in ipairs(NTTypes.BloodChance) do
         sum = sum + bloodTypeAndChance[2]
         if rand <= sum then
             HF.SetAffliction(character, bloodTypeAndChance[1], 100)
