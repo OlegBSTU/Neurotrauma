@@ -4,10 +4,10 @@
 ---@param env table The _ENV table.
 local function prepareEnvironment(env)
     return setmetatable(
-            {},
-            {
-                __index = _G,
-            }
+        {},
+        {
+            __index = _G,
+        }
     )
 end
 
@@ -21,11 +21,11 @@ PrepareEnvironment = prepareEnvironment
 ---@return table Empty table that interfaces with _ENV.
 function Export(env)
     return setmetatable(
-            {},
-            {
-                __index = function(t, k) return env[k] end,
-                __newindex = function() error("Attempted to modify a protected table.") end
-            }
+        {},
+        {
+            __index = function(t, k) return env[k] end,
+            __newindex = function() error("Attempted to modify a protected table.") end
+        }
     )
 end
 

@@ -7,7 +7,7 @@ end
 ---@param meleeweapon Weapon target
 ---@param target The target of the hit could be a limb or just a character.
 local function onMeleeWeaponHandleImpact(meleeweapon, target)
-    if not NTConfig.Get("NTCRE_ConsentRequired",true) then return end
+    if not NTConfig.Get("NTCRE_ConsentRequired", true) then return end
     if meleeweapon == nil or target == nil then
         return
     end
@@ -28,7 +28,7 @@ local function onMeleeWeaponHandleImpact(meleeweapon, target)
             targetUser = targetUserData
         end
         if targetUser ~= nil then
-			Api.onAffectedItemApplied(user, targetUser)
+            Api.onAffectedItemApplied(user, targetUser)
         end
     end
 end

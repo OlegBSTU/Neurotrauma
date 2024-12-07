@@ -43,7 +43,7 @@ local ADD_ATTACKER_DAMAGE = 130 -- Heelge: this used to max out negative rep gai
 ---@param aiChar Barotrauma_Character The AI character to be made hostile.
 ---@param instigator Barotrauma_Character The character to be the target of the AI's wrath.
 function makeHostile(aiChar, instigator)
-	aiChar.AIController.OnAttacked(instigator, Barotrauma.AttackResult.NewAttackResultFromDamage(ADD_ATTACKER_DAMAGE))
+    aiChar.AIController.OnAttacked(instigator, Barotrauma.AttackResult.NewAttackResultFromDamage(ADD_ATTACKER_DAMAGE))
     aiChar.AddAttacker(instigator, ADD_ATTACKER_DAMAGE)
 end
 
@@ -59,8 +59,8 @@ end
 ---Updates current rescue targets list, separate so we dont cycle thru all missions every time we apply item to chacter. Use IsRescueTarget(target) after this.
 function UpdateRescueTargets()
     rescuetargets = {}
-    for mission in Game.GameSession.Missions do 
-        if LuaUserData.IsTargetType(mission.Prefab.MissionClass, "Barotrauma.AbandonedOutpostMission") then 
+    for mission in Game.GameSession.Missions do
+        if LuaUserData.IsTargetType(mission.Prefab.MissionClass, "Barotrauma.AbandonedOutpostMission") then
             for character in mission.requireRescue do
                 rescuetargets[character.ID] = character
                 --table.insert(rescuetargets, character)
