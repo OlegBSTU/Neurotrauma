@@ -52,19 +52,23 @@ function NT.HasBloodtype(character)
     return false
 end
 
+--- Adds immunity to the character if it is not present
+--- @param character Character
+function NT.AddImmunity(character)
+    local conditional2 = character.CharacterHealth.GetAffliction("immunity")
+    if (conditional2 == nil) then
+        HF.SetAffliction(character, "immunity", 100)
+    end
+end
+
 -- hooks
 
 Hook.Add("characterCreated", "NT.BloodAndImmunity", function(createdCharacter)
     Timer.Wait(function()
-        if (createdCharacter.IsHuman and not createdCharacter.IsDead) then
-            NT.RandomizeBlood(createdCharacter)
+        if (not createdCharacter.IsHuman or createdCharacter.IsDead) then return end
 
-            -- add immunity
-            local conditional2 = createdCharacter.CharacterHealth.GetAffliction("immunity")
-            if (conditional2 == nil) then
-                HF.SetAffliction(createdCharacter, "immunity", 100)
-            end
-        end
+        NT.RandomizeBlood(createdCharacter)
+        NT.AddImmunity(createdCharacter)
     end, 1000)
 end)
 
