@@ -106,10 +106,14 @@ local function addNullableImmutableArrayElements(builder, array)
     end
 end
 local function evaluateExtraSkillRequirementHints()
-    LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1')
-    LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray')
-    LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1+Builder') -- todo is this wanted
-    local ImmutableArray = LuaUserData.CreateStatic('System.Collections.Immutable.ImmutableArray')
+    if CLIENT then
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1[[Barotrauma.SkillRequirementHint,Barotrauma]]')
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1+Builder[[Barotrauma.SkillRequirementHint,Barotrauma]]')
+    elseif SERVER then
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1[[Barotrauma.SkillRequirementHint,DedicatedServer]]')
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableArray`1+Builder[[Barotrauma.SkillRequirementHint,DedicatedServer]]')
+    end 
+
     LuaUserData.RegisterType('Barotrauma.SkillRequirementHint')
     SkillRequirementHint = LuaUserData.CreateStatic('Barotrauma.SkillRequirementHint')
     LuaUserData.MakeMethodAccessible(Descriptors['Barotrauma.ItemPrefab'], 'set_SkillRequirementHints')
@@ -119,8 +123,15 @@ local function evaluateExtraSkillRequirementHints()
         local itemIdentifier = xdoc.Root.GetAttributeString("identifier")
         if ItemPrefab.Prefabs.ContainsKey(itemIdentifier) then
             local item = ItemPrefab.Prefabs[itemIdentifier]
-            local skillReqsBuilder = ImmutableArray.CreateBuilder(SkillRequirementHint)
-            addNullableImmutableArrayElements(skillReqsBuilder, item.get_SkillRequirementHints())
+            local skillReqsBuilder = nil
+            if item.get_SkillRequirementHints().IsDefaultOrEmpty then
+                skillReqsBuilder = item.get_SkillRequirementHints().Empty.ToBuilder()
+            else
+                skillReqsBuilder = item.get_SkillRequirementHints().ToBuilder()
+            end
+
+            --addNullableImmutableArrayElements(skillReqsBuilder, item.get_SkillRequirementHints())
+
             for element in xdoc.Root.Elements() do
                 local skillReq = SkillRequirementHint.__new(ContentXElement(item.ContentPackage, element))
                 if not skillReqsBuilder.Contains(skillReq) then
@@ -201,25 +212,22 @@ NTCyb.ExtraTreatmentSuitability = {
 
 local function evaluateExtraTreatmentSuitability()
     LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.ItemPrefab'], 'treatmentSuitability')
-    LuaUserData.RegisterType('System.Single')
-    local SystemSingle = LuaUserData.CreateStatic('System.Single')
-    local wasAlreadyRegistered = LuaUserData.IsRegistered('System.Collections.Immutable.ImmutableDictionary')
+
+    local wasAlreadyRegistered = LuaUserData.IsRegistered('System.Collections.Immutable.ImmutableDictionary`2[[Barotrauma.Identifier,BarotraumaCore],[System.Single,mscorlib]]')
 
     if not wasAlreadyRegistered then
-        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableDictionary')
-        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableDictionary`2')
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableDictionary`2[[Barotrauma.Identifier,BarotraumaCore],[System.Single,mscorlib]]')
+        LuaUserData.RegisterType('System.Collections.Immutable.ImmutableDictionary`2+Builder[[Barotrauma.Identifier,BarotraumaCore],[System.Single,mscorlib]]')
     end
-    LuaUserData.RegisterType('System.Collections.Immutable.ImmutableDictionary`2+Builder')
-    local ImmutableDictionary = LuaUserData.CreateStatic('System.Collections.Immutable.ImmutableDictionary')
 
     for _, xml in ipairs(NTCyb.ExtraTreatmentSuitability) do
         local xdoc = XDocument.Parse(xml)
         local itemIdentifier = xdoc.Root.GetAttributeString("identifier")
         if ItemPrefab.Prefabs.ContainsKey(itemIdentifier) then
             local item = ItemPrefab.Prefabs[itemIdentifier]
-            local dictBuilder = ImmutableDictionary.CreateBuilder(Identifier, SystemSingle)
+            local dictBuilder = item.treatmentSuitability.ToBuilder()
             for element in xdoc.Root.Elements() do
-                dictBuilder.Add(Identifier(element.GetAttributeString("identifier")), SystemSingle.Parse(element.GetAttributeString("suitability")))
+                dictBuilder.Add(Identifier(element.GetAttributeString("identifier")), Single(element.GetAttributeString("suitability")).Value)
             end
             item.treatmentSuitability = dictBuilder.ToImmutable()
             item.set_UseInHealthInterface(true)
@@ -227,9 +235,8 @@ local function evaluateExtraTreatmentSuitability()
     end
     -- unregister for compatability, as when unregistered these will be converted into lua tables, and eg. BetterFabricatorUI expects that
     if not wasAlreadyRegistered then
-        LuaUserData.UnregisterType('System.Collections.Immutable.ImmutableDictionary`2+Builder')
-        LuaUserData.UnregisterType('System.Collections.Immutable.ImmutableDictionary`2')
-        LuaUserData.UnregisterType('System.Collections.Immutable.ImmutableDictionary')
+        LuaUserData.UnregisterType('System.Collections.Immutable.ImmutableDictionary`2+Builder[[Barotrauma.Identifier,BarotraumaCore],[System.Single,mscorlib]]')
+        LuaUserData.UnregisterType('System.Collections.Immutable.ImmutableDictionary`2[[Barotrauma.Identifier,BarotraumaCore],[System.Single,mscorlib]]')
     end
 end
 
