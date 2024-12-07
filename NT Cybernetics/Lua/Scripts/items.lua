@@ -20,6 +20,7 @@ Hook.Add("item.applyTreatment", "NTCyb.itemused", function(item, usingCharacter,
 end)
 
 local function forceSyncAfflictions(character)
+    if Game.IsSingleplayer then return end
     -- force sync afflictions, as normally they aren't synced for dead characters
     Networking.CreateEntityEvent(character, Character.CharacterStatusEventData.__new(true))
 end
