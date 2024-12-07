@@ -3,6 +3,8 @@ NTTypes = {}
 
 ---@enum BloodType
 --- All kinds of blood types
+--- [1] - Type
+--- [2] - Affliction ID
 NTTypes.BloodType = {
     o_minus = "ominus",
     o_plus = "oplus",
@@ -16,6 +18,8 @@ NTTypes.BloodType = {
 
 ---@enum BloodChance
 --- All kinds of blood Chance
+--- [1] - Type
+--- [2] - Chance of appearance
 NTTypes.BloodChance = {
     { NTTypes.BloodType.o_minus,  7 },
     { NTTypes.BloodType.o_plus,   37 },
