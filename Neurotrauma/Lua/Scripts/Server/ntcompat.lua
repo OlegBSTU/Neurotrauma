@@ -16,7 +16,7 @@ NTC = {} -- a class containing compatibility functions for other mods to make us
 
 NTC.RegisteredExpansions = {}
 function NTC.RegisterExpansion(expansionMainObject)
-    table.insert(NTC.RegisteredExpansions,expansionMainObject)
+    table.insert(NTC.RegisteredExpansions, expansionMainObject)
 end
 
 -- a table of tables, each character that has some custom data has an entry
@@ -24,26 +24,26 @@ NTC.CharacterData = {}
 
 -- use this function to induce symptoms temporarily
 -- duration is in humanupdates (~2 seconds), should at least be 2 to prevent symptom flickering
-function NTC.SetSymptomTrue(character,symptomidentifer,duration)
-    if duration==nil then duration=2 end
+function NTC.SetSymptomTrue(character, symptomidentifer, duration)
+    if duration == nil then duration = 2 end
 
     NTC.AddEmptyCharacterData(character)
     local data = NTC.GetCharacterData(character)
-    data[symptomidentifer]=duration
+    data[symptomidentifer] = duration
 
-    NTC.CharacterData[character.ID]=data
+    NTC.CharacterData[character.ID] = data
 end
 
 -- use this function to suppress symptoms temporarily. this takes precedence over NTC.SetSymptomTrue.
 -- duration is in humanupdates (~2 seconds), should at least be 2 to prevent symptom flickering
-function NTC.SetSymptomFalse(character,symptomidentifer,duration)
-    if duration==nil then duration=2 end
+function NTC.SetSymptomFalse(character, symptomidentifer, duration)
+    if duration == nil then duration = 2 end
 
     NTC.AddEmptyCharacterData(character)
     local data = NTC.GetCharacterData(character)
-    data["!"..symptomidentifer]=duration
+    data["!" .. symptomidentifer] = duration
 
-    NTC.CharacterData[character.ID]=data
+    NTC.CharacterData[character.ID] = data
 end
 
 -- usage example: anywhere in your lua code, cause 4 seconds (2 humanupdates) of pale skin with this:
@@ -98,11 +98,9 @@ end
 function NTC.DebugPrintAllData()
     local res = "neurotrauma compatibility data:\n"
     for key, value in pairs(NTC.CharacterData) do
-
-        res=res.."\n"..value["character"].Name
-        for key2,value2 in pairs(value) do
-        
-            res =res.."\n   "..tostring(key2).." : "..tostring(value2)
+        res = res .. "\n" .. value["character"].Name
+        for key2, value2 in pairs(value) do
+            res = res .. "\n   " .. tostring(key2) .. " : " .. tostring(value2)
         end
     end
 
@@ -112,46 +110,47 @@ end
 NTC.PreHumanUpdateHooks = {}
 -- use this function to add a function to be executed before humanupdate with a character parameter
 function NTC.AddPreHumanUpdateHook(func)
-    NTC.PreHumanUpdateHooks[#NTC.PreHumanUpdateHooks+1] = func
+    NTC.PreHumanUpdateHooks[#NTC.PreHumanUpdateHooks + 1] = func
 end
 
 NTC.HumanUpdateHooks = {}
 -- use this function to add a function to be executed after humanupdate with a character parameter
 function NTC.AddHumanUpdateHook(func)
-    NTC.HumanUpdateHooks[#NTC.HumanUpdateHooks+1] = func
+    NTC.HumanUpdateHooks[#NTC.HumanUpdateHooks + 1] = func
 end
 
 NTC.OnDamagedHooks = {}
 -- use this function to add a function to be executed after ondamaged
 -- with a characterhealth, attack result and limb parameter
 function NTC.AddOnDamagedHook(func)
-    NTC.OnDamagedHooks[#NTC.OnDamagedHooks+1] = func
+    NTC.OnDamagedHooks[#NTC.OnDamagedHooks + 1] = func
 end
 
 NTC.ModifyingOnDamagedHooks = {}
 -- use this function to add a function to be executed before ondamaged
 -- with a characterhealth, afflictions and limb parameter, and afflictions return type
 function NTC.AddModifyingOnDamagedHook(func)
-    NTC.ModifyingOnDamagedHooks[#NTC.ModifyingOnDamagedHooks+1] = func
+    NTC.ModifyingOnDamagedHooks[#NTC.ModifyingOnDamagedHooks + 1] = func
 end
 
 NTC.CharacterSpeedMultipliers = {}
 -- use this function to multiply a characters speed for one human update.
 -- should always be called from within a prehumanupdate hook
-function NTC.MultiplySpeed(character,multiplier)
+function NTC.MultiplySpeed(character, multiplier)
     if NTC.CharacterSpeedMultipliers[character] == nil then
         NTC.CharacterSpeedMultipliers[character] = multiplier
-    else 
-        NTC.CharacterSpeedMultipliers[character] = NTC.CharacterSpeedMultipliers[character]*multiplier
+    else
+        NTC.CharacterSpeedMultipliers[character] = NTC.CharacterSpeedMultipliers[character] * multiplier
     end
 end
 
 -- use this function to register an affliction to be detected by the hematology analyzer
 function NTC.AddHematologyAffliction(identifier)
     Timer.Wait(function()
-        if not HF.TableContains(NT.HematologyDetectable,identifier) then
-        table.insert(NT.HematologyDetectable,identifier) end
-    end,1)
+        if not HF.TableContains(NT.HematologyDetectable, identifier) then
+            table.insert(NT.HematologyDetectable, identifier)
+        end
+    end, 1)
 end
 
 -- use this function to register an affliction to be healed by sutures
@@ -160,15 +159,16 @@ end
 -- requiredaffliction: what affliction has to be present alongside the healed affliction for it to get healed (optional, default: none)
 -- func: a function that gets run if the affliction is present. if provided, doesnt heal the affliction automatically (optional, default: none)
 -- func(item, usingCharacter, targetCharacter, limb)
-function NTC.AddSuturedAffliction(identifier,surgeryskillgain,requiredaffliction,func)
+function NTC.AddSuturedAffliction(identifier, surgeryskillgain, requiredaffliction, func)
     Timer.Wait(function()
-        if not HF.TableContains(NT.SutureAfflictions,identifier) then
+        if not HF.TableContains(NT.SutureAfflictions, identifier) then
             NT.SutureAfflictions[identifier] = {
                 xpgain = surgeryskillgain,
                 case = requiredaffliction,
                 func = func
-            } end
-    end,1)
+            }
+        end
+    end, 1)
 end
 
 NTC.AfflictionsAffectingVitality = {
@@ -196,49 +196,52 @@ function NTC.AddAfflictionAffectingVitality(identifier)
 end
 
 -- these functions are used by neurotrauma to check for symptom overrides
-function NTC.GetSymptom(character,symptomidentifer)
+function NTC.GetSymptom(character, symptomidentifer)
     local chardata = NTC.GetCharacterData(character)
     if chardata == nil then return false end
 
     local durationleft = chardata[symptomidentifer]
 
-    if(durationleft == nil) then return false end
+    if (durationleft == nil) then return false end
 
     return true
 end
-function NTC.GetSymptomFalse(character,symptomidentifer)
+
+function NTC.GetSymptomFalse(character, symptomidentifer)
     local chardata = NTC.GetCharacterData(character)
     if chardata == nil then return false end
 
-    local durationleft = chardata["!"..symptomidentifer]
+    local durationleft = chardata["!" .. symptomidentifer]
 
-    if(durationleft == nil) then return false end
+    if (durationleft == nil) then return false end
 
     return true
 end
 
 -- sets multiplier data for one humanupdate, should be called from within a humanupdate hook
-function NTC.SetMultiplier(character,multiplieridentifier,multiplier)
+function NTC.SetMultiplier(character, multiplieridentifier, multiplier)
     NTC.AddEmptyCharacterData(character)
     local data = NTC.GetCharacterData(character)
-    data["mult_"..multiplieridentifier]=NTC.GetMultiplier(character,multiplieridentifier)*multiplier
-    NTC.CharacterData[character.ID]=data
+    data["mult_" .. multiplieridentifier] = NTC.GetMultiplier(character, multiplieridentifier) * multiplier
+    NTC.CharacterData[character.ID] = data
 end
-function NTC.GetMultiplier(character,multiplieridentifier)
+
+function NTC.GetMultiplier(character, multiplieridentifier)
     local data = NTC.GetCharacterData(character)
-    if data == nil or data["mult_"..multiplieridentifier] == nil then return 1 end
-    return data["mult_"..multiplieridentifier]
+    if data == nil or data["mult_" .. multiplieridentifier] == nil then return 1 end
+    return data["mult_" .. multiplieridentifier]
 end
 
 -- sets tag data for one humanupdate, should be called from within a humanupdate hook
-function NTC.SetTag(character,tagidentifier)
+function NTC.SetTag(character, tagidentifier)
     NTC.AddEmptyCharacterData(character)
     local data = NTC.GetCharacterData(character)
-    data["tag_"..tagidentifier]=1
+    data["tag_" .. tagidentifier] = 1
 end
-function NTC.HasTag(character,tagidentifier)
+
+function NTC.HasTag(character, tagidentifier)
     local data = NTC.GetCharacterData(character)
-    if data == nil or data["tag_"..tagidentifier] == nil then return false end
+    if data == nil or data["tag_" .. tagidentifier] == nil then return false end
     return true
 end
 
@@ -247,8 +250,9 @@ function NTC.AddEmptyCharacterData(character)
     if NTC.GetCharacterData(character) ~= nil then return end
     local newdat = {}
     newdat["character"] = character
-    NTC.CharacterData[character.ID]=newdat
+    NTC.CharacterData[character.ID] = newdat
 end
+
 function NTC.CheckChardataEmpty(character)
     local chardat = NTC.GetCharacterData(character)
     if (chardat == nil or HF.TableSize(chardat) > 1) then return end
@@ -256,23 +260,25 @@ function NTC.CheckChardataEmpty(character)
     -- remove entry from data
     NTC.CharacterData[character.ID] = nil
 end
+
 function NTC.GetCharacterData(character)
     return NTC.CharacterData[character.ID]
 end
+
 function NTC.TickCharacter(character)
     local chardata = NTC.GetCharacterData(character)
-    if chardata==nil then return end
+    if chardata == nil then return end
 
-    for key,value in pairs(chardata) do
-        if key ~="character" then
-            if HF.StartsWith(key,"mult_") then -- multipliers
+    for key, value in pairs(chardata) do
+        if key ~= "character" then
+            if HF.StartsWith(key, "mult_") then -- multipliers
                 chardata[key] = nil
                 NTC.CheckChardataEmpty(character)
             else -- symptoms
                 local durationleft = value
                 if durationleft ~= nil and durationleft > 1 then
-                    chardata[key] = durationleft-1
-                else 
+                    chardata[key] = durationleft - 1
+                else
                     chardata[key] = nil
                     NTC.CheckChardataEmpty(character)
                 end
@@ -282,6 +288,7 @@ function NTC.TickCharacter(character)
 
     NTC.CharacterData[character.ID] = chardata
 end
+
 function NTC.GetSpeedMultiplier(character)
     if NTC.CharacterSpeedMultipliers[character] ~= nil then return NTC.CharacterSpeedMultipliers[character] end
     return 1

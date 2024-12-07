@@ -1,4 +1,4 @@
--- Modders, please use ModDir:Neurotrauma when taking dependencies, and 
+-- Modders, please use ModDir:Neurotrauma when taking dependencies, and
 -- name your patches with the word "neurotrauma" (letter case doesnt matter)
 
 -- sets NT.modconflict to true if incompatible mod detected
@@ -8,12 +8,12 @@
 NT.modconflict = false
 function NT.CheckModConflicts()
     NT.modconflict = false
-    if NTConfig.Get("NT_ignoreModConflicts",false) then return end
+    if NTConfig.Get("NT_ignoreModConflicts", false) then return end
 
-    local itemsToCheck = {"antidama2","opdeco_hospitalbed"}
+    local itemsToCheck = { "antidama2", "opdeco_hospitalbed" }
 
     for prefab in ItemPrefab.Prefabs do
-        if HF.TableContains(itemsToCheck,prefab.Identifier.Value) then
+        if HF.TableContains(itemsToCheck, prefab.Identifier.Value) then
             local mod = prefab.ConfigElement.ContentPackage.Name
             if not string.find(string.lower(mod), "neurotrauma") then
                 NT.modconflict = true
@@ -23,14 +23,13 @@ function NT.CheckModConflicts()
             end
         end
     end
-
 end
+
 Timer.Wait(function()
     NT.CheckModConflicts()
-end,1000)
+end, 1000)
 Hook.Add("roundStart", "NT.RoundStart.modconflicts", function()
     Timer.Wait(function()
         NT.CheckModConflicts()
-    end,10000)
-    
+    end, 10000)
 end)
