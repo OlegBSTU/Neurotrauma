@@ -26,7 +26,6 @@ function NT.CheckModConflicts()
 		end
 	end
 end
-
 Timer.Wait(function()
 	NT.CheckModConflicts()
 end, 1000)

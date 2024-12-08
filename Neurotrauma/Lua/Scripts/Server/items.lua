@@ -1830,7 +1830,6 @@ function NT.RefreshCondition()
 		end
 	end
 end
-
 Timer.Wait(function()
 	NT.RefreshCondition()
 end, 1000)
