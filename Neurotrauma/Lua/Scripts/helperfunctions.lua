@@ -205,7 +205,7 @@ end
 HF = {} -- Helperfunctions
 
 function HF.Lerp(a, b, t)
-    return a + (b - a) * t
+	return a + (b - a) * t
 end
 
 function HF.Round(num, numDecimalPlaces)
@@ -239,17 +239,17 @@ function HF.Minimum(num, min, defaultvalue)
 end
 
 function HF.DistanceBetween(point1, point2)
-    local xd = point1.X - point2.X
-    local yd = point1.Y - point2.Y
-    return math.sqrt(xd * xd + yd * yd)
+	local xd = point1.X - point2.X
+	local yd = point1.Y - point2.Y
+	return math.sqrt(xd * xd + yd * yd)
 end
 
 function HF.FindDepth(item)
-    if SERVER then
-        return Level.Loaded.GetRealWorldDepth(item.WorldPosition.Y)
-    else
-        return item.WorldPosition.Y * Physics.DisplayToRealWorldRatio
-    end
+	if SERVER then
+		return Level.Loaded.GetRealWorldDepth(item.WorldPosition.Y)
+	else
+		return item.WorldPosition.Y * Physics.DisplayToRealWorldRatio
+	end
 end
 
 -- /// affliction magic ///

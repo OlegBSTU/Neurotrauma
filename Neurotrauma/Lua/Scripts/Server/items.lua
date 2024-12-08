@@ -27,7 +27,7 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
 end)
 -- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
 -- storing all of the item-specific functions in a table
-NT.ItemMethods = {}           -- with the identifier as the key
+NT.ItemMethods = {} -- with the identifier as the key
 NT.ItemStartsWithMethods = {} -- with the start of the identifier as the key
 
 -- misc
