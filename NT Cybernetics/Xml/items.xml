@@ -824,7 +824,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="225,33,36,36" origin="0.5,0.5" />
       <Body width="36" height="36" density="15" />
-      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" canBeCombined="true" removeOnCombined="true">
         <!-- Remove the item when fully used (not used by the vanilla game) -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
