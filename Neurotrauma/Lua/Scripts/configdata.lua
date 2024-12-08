@@ -5,115 +5,240 @@ local configFilePath = configDirectoryPath .. "/Neurotrauma.json"
 
 -- this is the function that gets used in other mods to add their own settings to the config
 function NTConfig.AddConfigOptions(expansion)
-    table.insert(NTConfig.Expansions, expansion)
+	table.insert(NTConfig.Expansions, expansion)
 
-    for key, entry in pairs(expansion.ConfigData) do
-        NTConfig.Entries[key] = entry
-        NTConfig.Entries[key].value = entry.default
-    end
+	for key, entry in pairs(expansion.ConfigData) do
+		NTConfig.Entries[key] = entry
+		NTConfig.Entries[key].value = entry.default
+	end
 end
 
 function NTConfig.SaveConfig()
-    --prevent both owner client and server saving config at the same time and potentially erroring from file access
-    if Game.IsMultiplayer and CLIENT and Game.Client.MyClient.IsOwner then return end
+	--prevent both owner client and server saving config at the same time and potentially erroring from file access
+	if Game.IsMultiplayer and CLIENT and Game.Client.MyClient.IsOwner then
+		return
+	end
 
-    local tableToSave = {}
-    for key, entry in pairs(NTConfig.Entries) do
-        tableToSave[key] = entry.value
-    end
+	local tableToSave = {}
+	for key, entry in pairs(NTConfig.Entries) do
+		tableToSave[key] = entry.value
+	end
 
-    File.CreateDirectory(configDirectoryPath)
-    File.Write(configFilePath, json.serialize(tableToSave))
+	File.CreateDirectory(configDirectoryPath)
+	File.Write(configFilePath, json.serialize(tableToSave))
 end
 
 function NTConfig.ResetConfig()
-    local tableToSave = {}
-    for key, entry in pairs(NTConfig.Entries) do
-        tableToSave[key] = entry.default
-        NTConfig.Entries[key] = entry
-        NTConfig.Entries[key].value = entry.default
-    end
+	local tableToSave = {}
+	for key, entry in pairs(NTConfig.Entries) do
+		tableToSave[key] = entry.default
+		NTConfig.Entries[key] = entry
+		NTConfig.Entries[key].value = entry.default
+	end
 
-    -- File.CreateDirectory(configDirectoryPath)
-    -- File.Write(configFilePath, json.serialize(tableToSave))
+	-- File.CreateDirectory(configDirectoryPath)
+	-- File.Write(configFilePath, json.serialize(tableToSave))
 end
 
 function NTConfig.LoadConfig()
-    if not File.Exists(configFilePath) then return end
+	if not File.Exists(configFilePath) then
+		return
+	end
 
-    local readConfig = json.parse(File.Read(configFilePath))
+	local readConfig = json.parse(File.Read(configFilePath))
 
-    for key, value in pairs(readConfig) do
-        if NTConfig.Entries[key] then
-            NTConfig.Entries[key].value = value
-        end
-    end
+	for key, value in pairs(readConfig) do
+		if NTConfig.Entries[key] then
+			NTConfig.Entries[key].value = value
+		end
+	end
 end
 
 function NTConfig.Get(key, default)
-    if NTConfig.Entries[key] then
-        return NTConfig.Entries[key].value
-    end
-    return default
+	if NTConfig.Entries[key] then
+		return NTConfig.Entries[key].value
+	end
+	return default
 end
 
 function NTConfig.Set(key, value)
-    if NTConfig.Entries[key] then
-        NTConfig.Entries[key].value = value
-    end
+	if NTConfig.Entries[key] then
+		NTConfig.Entries[key].value = value
+	end
 end
 
 function NTConfig.SendConfig(reciverClient)
-    local tableToSend = {}
-    for key, entry in pairs(NTConfig.Entries) do
-        tableToSend[key] = entry.value
-    end
+	local tableToSend = {}
+	for key, entry in pairs(NTConfig.Entries) do
+		tableToSend[key] = entry.value
+	end
 
-    local msg = Networking.Start("NT.ConfigUpdate")
-    msg.WriteString(json.serialize(tableToSend))
-    if SERVER then
-        Networking.Send(msg, reciverClient and reciverClient.Connection or nil)
-    else
-        Networking.Send(msg)
-    end
+	local msg = Networking.Start("NT.ConfigUpdate")
+	msg.WriteString(json.serialize(tableToSend))
+	if SERVER then
+		Networking.Send(msg, reciverClient and reciverClient.Connection or nil)
+	else
+		Networking.Send(msg)
+	end
 end
 
 function NTConfig.ReceiveConfig(msg)
-    local RecivedTable = {}
-    RecivedTable = json.parse(msg.ReadString())
-    for key, value in pairs(RecivedTable) do
-        NTConfig.Set(key, value)
-    end
+	local RecivedTable = {}
+	RecivedTable = json.parse(msg.ReadString())
+	for key, value in pairs(RecivedTable) do
+		NTConfig.Set(key, value)
+	end
 end
 
 NT.ConfigData = {
-    NT_header1 = { name = "Neurotrauma", type = "category" },
+	NT_header1 = { name = "Neurotrauma", type = "category" },
 
-    NT_dislocationChance = { name = "Dislocation chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { max = 5 } },
-    NT_fractureChance = { name = "Fracture chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 2, max = 5 } },
-    NT_pneumothoraxChance = { name = "Pneumothorax chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { max = 5 } },
-    NT_tamponadeChance = { name = "Tamponade chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { max = 3 } },
-    NT_heartattackChance = { name = "Heart attack chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 1 } },
-    NT_strokeChance = { name = "Stroke chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 1 } },
-    NT_infectionRate = { name = "Infection rate", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 1.5, max = 5 } },
-    NT_CPRFractureChance = { name = "CPR fracture chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 1 } },
-    NT_traumaticAmputationChance = { name = "Traumatic amputation chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { max = 3 } },
-    NT_neurotraumaGain = { name = "Neurotrauma gain", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 3, max = 10 } },
-    NT_organDamageGain = { name = "Organ damage gain", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 2, max = 8 } },
-    NT_fibrillationSpeed = { name = "Fibrillation rate", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 1.5, max = 8 } },
-    NT_gangrenespeed = { name = "Gangrene rate", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 5 } },
-    NT_falldamage = { name = "Falldamage", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 5 } },
-    NT_falldamageSeriousInjuryChance = { name = "Falldamage serious injury chance", default = 1, range = { 0, 100 }, type = "float", difficultyCharacteristics = { multiplier = 0.5, max = 5 } },
+	NT_dislocationChance = {
+		name = "Dislocation chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { max = 5 },
+	},
+	NT_fractureChance = {
+		name = "Fracture chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 2, max = 5 },
+	},
+	NT_pneumothoraxChance = {
+		name = "Pneumothorax chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { max = 5 },
+	},
+	NT_tamponadeChance = {
+		name = "Tamponade chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { max = 3 },
+	},
+	NT_heartattackChance = {
+		name = "Heart attack chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+	},
+	NT_strokeChance = {
+		name = "Stroke chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+	},
+	NT_infectionRate = {
+		name = "Infection rate",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 1.5, max = 5 },
+	},
+	NT_CPRFractureChance = {
+		name = "CPR fracture chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+	},
+	NT_traumaticAmputationChance = {
+		name = "Traumatic amputation chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { max = 3 },
+	},
+	NT_neurotraumaGain = {
+		name = "Neurotrauma gain",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 3, max = 10 },
+	},
+	NT_organDamageGain = {
+		name = "Organ damage gain",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 2, max = 8 },
+	},
+	NT_fibrillationSpeed = {
+		name = "Fibrillation rate",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 1.5, max = 8 },
+	},
+	NT_gangrenespeed = {
+		name = "Gangrene rate",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+	},
+	NT_falldamage = {
+		name = "Falldamage",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+	},
+	NT_falldamageSeriousInjuryChance = {
+		name = "Falldamage serious injury chance",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+	},
+	NT_vanillaSkillCheck = {
+		name = "Vanilla skill check formula",
+		default = false,
+		type = "bool",
+		description = "Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100",
+	},
+	NT_disableBotAlgorithms = {
+		name = "Disable bot treatment algorithms",
+		default = true,
+		type = "bool",
+		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely.",
+	},
+	NT_screams = { name = "Screams", default = true, type = "bool", description = "Characters scream when in pain." },
+	NT_ignoreModConflicts = {
+		name = "Ignore mod conflicts",
+		default = false,
+		type = "bool",
+		description = "Prevent the mod conflict affliction from showing up.",
+	},
+	NT_organRejection = {
+		name = "Organ rejection",
+		default = false,
+		type = "bool",
+		difficultyCharacteristics = { multiplier = 0.5 },
+		description = "When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance.",
+	},
+	NT_fracturesRemoveCasts = {
+		name = "Fractures remove casts",
+		default = true,
+		type = "bool",
+		difficultyCharacteristics = { multiplier = 0.5 },
+		description = "When receiving damage that would cause a fracture, remove plaster casts on the limb",
+	},
 
-    NT_vanillaSkillCheck = { name = "Vanilla skill check formula", default = false, type = "bool", description = "Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100" },
-    NT_disableBotAlgorithms = { name = "Disable bot treatment algorithms", default = true, type = "bool", description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely." },
-    NT_screams = { name = "Screams", default = true, type = "bool", description = "Characters scream when in pain." },
-    NT_ignoreModConflicts = { name = "Ignore mod conflicts", default = false, type = "bool", description = "Prevent the mod conflict affliction from showing up." },
-
-    NT_organRejection = { name = "Organ rejection", default = false, type = "bool", difficultyCharacteristics = { multiplier = 0.5 }, description = "When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance." },
-    NT_fracturesRemoveCasts = { name = "Fractures remove casts", default = true, type = "bool", difficultyCharacteristics = { multiplier = 0.5 }, description = "When receiving damage that would cause a fracture, remove plaster casts on the limb" },
-    NTCRE_header1 = { name = 'Consent Required', type = "category" },
-    NTCRE_ConsentRequired = { name = "Enable Consent Required", default = true, type = "bool", description = "Integrated consent required mod. Requires C# scripting enabled.\n(If disabled, none of NPCs will get aggravated by medical interactions.)" }
+	NTCRE_header1 = { name = "Consent Required", type = "category" },
+	NTCRE_ConsentRequired = {
+		name = "Enable Consent Required",
+		default = true,
+		type = "bool",
+		description = "Integrated consent required mod.\nIf disabled, none of NPCs will get aggravated by medical interactions.",
+	},
 }
 NTConfig.AddConfigOptions(NT)
 
@@ -121,9 +246,9 @@ NTConfig.AddConfigOptions(NT)
 -- do note that this unintentionally causes a couple ticks time on load during which the config is always the default
 -- remember to put default values in your NTConfig.Get calls!
 Timer.Wait(function()
-    NTConfig.LoadConfig()
+	NTConfig.LoadConfig()
 
-    Timer.Wait(function()
-        NTConfig.SaveConfig()
-    end, 1000)
+	Timer.Wait(function()
+		NTConfig.SaveConfig()
+	end, 1000)
 end, 50)

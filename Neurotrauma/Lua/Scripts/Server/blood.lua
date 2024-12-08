@@ -34,7 +34,7 @@ function NT.GetBloodtype(character)
         end
     end
 
-    return NT.RandomizeBlood(character)
+	return NT.RandomizeBlood(character)
 end
 
 --- Get character's blood type
@@ -44,12 +44,12 @@ function NT.HasBloodtype(character)
     for _, affliction in pairs(NTTypes.BloodType) do
         local conditional = character.CharacterHealth.GetAffliction(affliction)
 
-        if (conditional ~= nil and conditional.Strength > 0) then
-            return true
-        end
-    end
+		if conditional ~= nil and conditional.Strength > 0 then
+			return true
+		end
+	end
 
-    return false
+	return false
 end
 
 --- Adds immunity to the character if it is not present

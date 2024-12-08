@@ -3,33 +3,52 @@
 local Environment = require 'ConsentRequiredExtended.Util.Environment'
 local _ENV = Environment.PrepareEnvironment(_ENV)
 
-local Clr = require 'ConsentRequiredExtended.Util.Clr'
-local UserData = require 'ConsentRequiredExtended.Util.UserData'
+-- local Clr = require 'ConsentRequiredExtended.Util.Clr'
+-- local UserData = require 'ConsentRequiredExtended.Util.UserData'
 
 ---Functions related to working with Barotrauma.AttackResult.
 AttackResult = {}
 
 ---Initialise AttackResults.
+-- local function Init_AttackResult()
+--     -- Registrations.
+--     UserData.RegisterStandardType("System.Reflection.FieldInfo")
+    
+--     -- Construct a List<Affliction> generic type.
+--     local afflictionsListClrType = Clr.CreateConstructedGenericType("System.Collections.Generic.List`1", "Barotrauma.Affliction")
+--     local attackResultAfflictionsField = Clr.GetRawClrType("Barotrauma.AttackResult").GetField("Afflictions")
+
+--     ---Instantiates a new AttackResult with damage and empty afflictions.
+--     ---@param damage number An amount of damage.
+--     function AttackResult.NewAttackResultFromDamage(damage)
+--         -- Instantiate a new AttackResult.
+--         local attackResult = _G.AttackResult(damage, nil)
+        
+--         -- Instantiate an empty List<Afflictions> (this is to prevent NREs),
+--         -- and set it to attackResult.Afflictions. This is a readonly field,
+--         -- hence the use of reflection.
+--         local afflictionsList = UserData.FromClrType({}, afflictionsListClrType)
+--         attackResultAfflictionsField.SetValue(attackResult, afflictionsList)
+        
+--         return attackResult
+--     end
+-- end
+
+---Initialise AttackResults without needing to register system.type and reflections
 local function Init_AttackResult()
     -- Registrations.
-    UserData.RegisterStandardType("System.Reflection.FieldInfo")
-
-    -- Construct a List<Affliction> generic type.
-    local afflictionsListClrType = Clr.CreateConstructedGenericType("System.Collections.Generic.List`1",
-        "Barotrauma.Affliction")
-    local attackResultAfflictionsField = Clr.GetRawClrType("Barotrauma.AttackResult").GetField("Afflictions")
+    LuaUserData.MakePropertyAccessible(Descriptors['Barotrauma.AttackResult'], 'Damage')
 
     ---Instantiates a new AttackResult with damage and empty afflictions.
     ---@param damage number An amount of damage.
     function AttackResult.NewAttackResultFromDamage(damage)
-        -- Instantiate a new AttackResult.
-        local attackResult = _G.AttackResult(damage, nil)
+        -- I have not noticed any NREs from affliction list being null
+        -- but just in case here is version which intializes with empty list
+        -- Also uncomment MakePropertyAccessible Damage above
+        local attackResult = _G.AttackResult({}, nil, {})
+        attackResult.Damage = damage
 
-        -- Instantiate an empty List<Afflictions> (this is to prevent NREs),
-        -- and set it to attackResult.Afflictions. This is a readonly field,
-        -- hence the use of reflection.
-        local afflictionsList = UserData.FromClrType({}, afflictionsListClrType)
-        attackResultAfflictionsField.SetValue(attackResult, afflictionsList)
+        --local attackResult = _G.AttackResult(damage)
 
         return attackResult
     end
