@@ -214,20 +214,12 @@ function HF.Round(num, numDecimalPlaces)
 end
 
 --- Truncates a number within a given range.
---- If the number is less than the minimum, the minimum value is returned.
---- If the number is greater than the maximum, the maximum value is returned.
---- If the number is within the range, it is returned unchanged.
 ---@param num number The value to be truncated.
 ---@param min number The minimum value of the range.
 ---@param max number The maximum value of the range.
 ---@return number
 function HF.Clamp(num, min, max)
-	if num < min then
-		num = min
-	elseif num > max then
-		num = max
-	end
-	return num
+	return math.max(min, math.min(num, max))
 end
 
 -- returns num if num > min, else defaultvalue
