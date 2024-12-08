@@ -92,7 +92,6 @@ function NT.RefreshAllMultiscalpels()
 		NT.RefreshScalpelDescription(scalpel)
 	end
 end
-
 Timer.Wait(function()
 	NT.RefreshAllMultiscalpels()
 end, 50)

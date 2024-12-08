@@ -266,7 +266,6 @@ function NTC.AddEmptyCharacterData(character)
 	newdat["character"] = character
 	NTC.CharacterData[character.ID] = newdat
 end
-
 function NTC.CheckChardataEmpty(character)
 	local chardat = NTC.GetCharacterData(character)
 	if chardat == nil or HF.TableSize(chardat) > 1 then
@@ -276,11 +275,9 @@ function NTC.CheckChardataEmpty(character)
 	-- remove entry from data
 	NTC.CharacterData[character.ID] = nil
 end
-
 function NTC.GetCharacterData(character)
 	return NTC.CharacterData[character.ID]
 end
-
 function NTC.TickCharacter(character)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -306,7 +303,6 @@ function NTC.TickCharacter(character)
 
 	NTC.CharacterData[character.ID] = chardata
 end
-
 function NTC.GetSpeedMultiplier(character)
 	if NTC.CharacterSpeedMultipliers[character] ~= nil then
 		return NTC.CharacterSpeedMultipliers[character]
