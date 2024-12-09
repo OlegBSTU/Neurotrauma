@@ -194,7 +194,6 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 			0
 		)
 	end
-	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
 
 	-- additionally calculate the affliction reduced damage
 	local prefab = AfflictionPrefab.Prefabs["blunttrauma"]
@@ -203,6 +202,7 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 		return
 	end
 	strength = strength * (1 - resistance)
+	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
 
 	-- return earlier if the strength value is not high enough for damage checks
 	if strength < 1 then

@@ -378,8 +378,8 @@ function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggress
 	if resistance >= 1 then
 		return
 	end
-
-	local strength = strength * (1 - resistance) * character.CharacterHealth.MaxVitality / 100
+	-- We need to reverse the resistance effect so that proper values are given in our CharacterHealth.ApplyAffliction, as we are using this command for our internal affliction updates and functions, that do not account for resistance in the first place.
+	local strength = strength * character.CharacterHealth.MaxVitality / 100 / (1 - resistance)
 	local affliction = prefab.Instantiate(strength, aggressor)
 	local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
 
