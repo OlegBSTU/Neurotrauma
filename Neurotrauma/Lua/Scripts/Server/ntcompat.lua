@@ -194,6 +194,7 @@ NTC.AfflictionsAffectingVitality = {
 	alcoholaddiction = true,
 	opiateaddiction = true,
 }
+
 function NTC.AddAfflictionAffectingVitality(identifier)
 	NTC.AfflictionsAffectingVitality[identifier] = true
 end
@@ -213,6 +214,7 @@ function NTC.GetSymptom(character, symptomidentifer)
 
 	return true
 end
+
 function NTC.GetSymptomFalse(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -235,6 +237,7 @@ function NTC.SetMultiplier(character, multiplieridentifier, multiplier)
 	data["mult_" .. multiplieridentifier] = NTC.GetMultiplier(character, multiplieridentifier) * multiplier
 	NTC.CharacterData[character.ID] = data
 end
+
 function NTC.GetMultiplier(character, multiplieridentifier)
 	local data = NTC.GetCharacterData(character)
 	if data == nil or data["mult_" .. multiplieridentifier] == nil then
@@ -249,6 +252,7 @@ function NTC.SetTag(character, tagidentifier)
 	local data = NTC.GetCharacterData(character)
 	data["tag_" .. tagidentifier] = 1
 end
+
 function NTC.HasTag(character, tagidentifier)
 	local data = NTC.GetCharacterData(character)
 	if data == nil or data["tag_" .. tagidentifier] == nil then
@@ -266,6 +270,7 @@ function NTC.AddEmptyCharacterData(character)
 	newdat["character"] = character
 	NTC.CharacterData[character.ID] = newdat
 end
+
 function NTC.CheckChardataEmpty(character)
 	local chardat = NTC.GetCharacterData(character)
 	if chardat == nil or HF.TableSize(chardat) > 1 then
@@ -275,9 +280,11 @@ function NTC.CheckChardataEmpty(character)
 	-- remove entry from data
 	NTC.CharacterData[character.ID] = nil
 end
+
 function NTC.GetCharacterData(character)
 	return NTC.CharacterData[character.ID]
 end
+
 function NTC.TickCharacter(character)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -303,9 +310,11 @@ function NTC.TickCharacter(character)
 
 	NTC.CharacterData[character.ID] = chardata
 end
+
 function NTC.GetSpeedMultiplier(character)
 	if NTC.CharacterSpeedMultipliers[character] ~= nil then
 		return NTC.CharacterSpeedMultipliers[character]
 	end
+
 	return 1
 end

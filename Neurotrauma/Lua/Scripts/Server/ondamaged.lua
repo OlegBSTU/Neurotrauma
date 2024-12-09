@@ -1,5 +1,5 @@
 -- Hooks Lua event "character.applyDamage" to cause NT afflictions after attacks depending on the damaging affliction defined here in NT.OnDamagedMethods
-local function getCalculatedConcussionReduction(armor, strength)
+local function getCalculatedConcussionReduction(armor, strength) -- Почему эта штука повторяется тут, помимо failldamage.lua?
 	if armor == nil then
 		return 0
 	end
@@ -22,6 +22,7 @@ local function getCalculatedConcussionReduction(armor, strength)
 	end
 	return reduction
 end
+
 Hook.Add("character.applyDamage", "NT.ondamaged", function(characterHealth, attackResult, hitLimb)
 	--print(hitLimb.HealthIndex or hitLimb ~= nil)
 
@@ -74,6 +75,7 @@ NT.OnDamagedMethods = {}
 local function HasLungs(c)
 	return not HF.HasAffliction(c, "lungremoved")
 end
+
 local function HasHeart(c)
 	return not HF.HasAffliction(c, "heartremoved")
 end
@@ -236,8 +238,8 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 		local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
 		local reduceddmg = math.max(
 			10
-				- getCalculatedConcussionReduction(armor1, 10, limbtype)
-				- getCalculatedConcussionReduction(armor2, 10, limbtype),
+				- getCalculatedConcussionReduction(armor1, 10)
+				- getCalculatedConcussionReduction(armor2, 10),
 			0
 		)
 		if strength >= 15 and HF.Chance(math.min(strength / 60, 0.7)) then
@@ -339,8 +341,8 @@ NT.OnDamagedMethods.bitewounds = function(character, strength, limbtype)
 		local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
 		local reduceddmg = math.max(
 			10
-				- getCalculatedConcussionReduction(armor1, 10, limbtype)
-				- getCalculatedConcussionReduction(armor2, 10, limbtype),
+				- getCalculatedConcussionReduction(armor1, 10)
+				- getCalculatedConcussionReduction(armor2, 10),
 			0
 		)
 		if strength >= 15 and HF.Chance(math.min(strength / 60, 0.7)) then
@@ -504,8 +506,8 @@ NT.OnDamagedMethods.blunttrauma = function(character, strength, limbtype)
 		local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
 		local reduceddmg = math.max(
 			10
-				- getCalculatedConcussionReduction(armor1, 10, limbtype)
-				- getCalculatedConcussionReduction(armor2, 10, limbtype),
+				- getCalculatedConcussionReduction(armor1, 10)
+				- getCalculatedConcussionReduction(armor2, 10),
 			0
 		)
 		if strength >= 15 and HF.Chance(math.min(strength / 60, 0.7)) then
@@ -611,8 +613,8 @@ NT.OnDamagedMethods.internaldamage = function(character, strength, limbtype)
 		local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
 		local reduceddmg = math.max(
 			10
-				- getCalculatedConcussionReduction(armor1, 10, limbtype)
-				- getCalculatedConcussionReduction(armor2, 10, limbtype),
+				- getCalculatedConcussionReduction(armor1, 10)
+				- getCalculatedConcussionReduction(armor2, 10),
 			0
 		)
 		if strength >= 15 and HF.Chance(math.min(strength / 60, 0.7)) then

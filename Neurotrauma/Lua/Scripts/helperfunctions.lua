@@ -213,13 +213,13 @@ function HF.Round(num, numDecimalPlaces)
 	return math.floor(num * mult + 0.5) / mult
 end
 
+--- Truncates a number within a given range.
+---@param num number The value to be truncated.
+---@param min number The minimum value of the range.
+---@param max number The maximum value of the range.
+---@return number
 function HF.Clamp(num, min, max)
-	if num < min then
-		num = min
-	elseif num > max then
-		num = max
-	end
-	return num
+	return math.max(min, math.min(num, max))
 end
 
 -- returns num if num > min, else defaultvalue
@@ -501,6 +501,14 @@ function HF.DMClient(client, msg, color)
 	end
 end
 
+--- Checks if an event will happen with a given probability.
+--
+--- Chance must be a number in the range [0, 1], where:
+--- - 0 means the event is impossible.
+--- - 1 means the event will always happen.
+--
+--- @param chance number probability of the event (0-1)
+--- @return boolean
 function HF.Chance(chance)
 	return math.random() < chance
 end
