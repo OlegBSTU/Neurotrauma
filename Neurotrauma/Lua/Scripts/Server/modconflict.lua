@@ -6,6 +6,7 @@
 -- prints out the warning and incompatible mod on server startup
 -- Hooks Lua event "roundStart" to do the above each round
 NT.modconflict = false
+
 function NT.CheckModConflicts()
 	NT.modconflict = false
 	if NTConfig.Get("NT_ignoreModConflicts", false) then
@@ -26,9 +27,11 @@ function NT.CheckModConflicts()
 		end
 	end
 end
+
 Timer.Wait(function()
 	NT.CheckModConflicts()
 end, 1000)
+
 Hook.Add("roundStart", "NT.RoundStart.modconflicts", function()
 	Timer.Wait(function()
 		NT.CheckModConflicts()

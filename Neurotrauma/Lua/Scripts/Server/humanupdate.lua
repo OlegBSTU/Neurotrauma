@@ -83,12 +83,14 @@ local function limbLockedInitial(c, limbtype, key)
 			)
 		)
 end
+
 NT.organDamageCalc = function(c, damagevalue)
 	if damagevalue >= 99 then
 		return 100
 	end
 	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
 end
+
 local function kidneyDamageCalc(c, damagevalue)
 	if damagevalue >= 99 then
 		return 100
@@ -101,17 +103,10 @@ local function kidneyDamageCalc(c, damagevalue)
 	end
 	return damagevalue - 0.02 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
 end
+
 local function isExtremity(type)
 	return type ~= LimbType.Torso and type ~= LimbType.Head
 end
-local limbtypes = {
-	LimbType.Torso,
-	LimbType.Head,
-	LimbType.LeftArm,
-	LimbType.RightArm,
-	LimbType.LeftLeg,
-	LimbType.RightLeg,
-}
 
 -- define all the afflictions and their update functions
 NT.Afflictions = {
@@ -702,7 +697,7 @@ NT.Afflictions = {
 
 			-- check for spasm trigger
 			if c.afflictions[i].strength > 0.1 then
-				for type in limbtypes do
+				for _, type in ipairs(NTTypes.LimbTypes) do
 					if HF.Chance(0.5) then
 						HF.AddAfflictionLimb(c.character, "spasm", type, 10)
 					end
@@ -1732,12 +1727,14 @@ NT.CharStats = {
 			return NTC.GetMultiplier(c.character, "healingrate")
 		end,
 	},
+
 	specificOrganDamageHealMultiplier = {
 		getter = function(c)
 			return NTC.GetMultiplier(c.character, "anyspecificorgandamage")
 				+ HF.Clamp(c.afflictions.afthiamine.strength, 0, 1) * 4
 		end,
 	},
+
 	neworgandamage = {
 		getter = function(c)
 			return (
@@ -1750,6 +1747,7 @@ NT.CharStats = {
 				* NT.Deltatime
 		end,
 	},
+
 	clottingrate = {
 		getter = function(c)
 			return HF.Clamp(1 - c.afflictions.liverdamage.strength / 100, 0, 1)
@@ -1764,11 +1762,13 @@ NT.CharStats = {
 			return HF.Clamp(100 - c.afflictions.bloodloss.strength, 0, 100)
 		end,
 	},
+
 	stasis = {
 		getter = function(c)
 			return c.afflictions.stasis.strength > 0
 		end,
 	},
+
 	sedated = {
 		getter = function(c)
 			return c.afflictions.analgesia.strength > 0
@@ -1777,6 +1777,7 @@ NT.CharStats = {
 				or c.stats.stasis
 		end,
 	},
+
 	withdrawal = {
 		getter = function(c)
 			return math.max(
@@ -1786,6 +1787,7 @@ NT.CharStats = {
 			)
 		end,
 	},
+
 	availableoxygen = {
 		getter = function(c)
 			local res = HF.Clamp(c.character.Oxygen, 0, 100)
@@ -1798,6 +1800,7 @@ NT.CharStats = {
 			return res
 		end,
 	},
+
 	speedmultiplier = {
 		getter = function(c)
 			local res = 1
@@ -1847,16 +1850,19 @@ NT.CharStats = {
 			return limbLockedInitial(c, LimbType.LeftArm, "lockleftarm")
 		end,
 	},
+
 	lockrightarm = {
 		getter = function(c)
 			return limbLockedInitial(c, LimbType.RightArm, "lockrightarm")
 		end,
 	},
+
 	lockleftleg = {
 		getter = function(c)
 			return limbLockedInitial(c, LimbType.LeftLeg, "lockleftleg")
 		end,
 	},
+
 	lockrightleg = {
 		getter = function(c)
 			return limbLockedInitial(c, LimbType.RightLeg, "lockrightleg")
@@ -1896,7 +1902,7 @@ NT.CharStats = {
 	bonegrowthCount = {
 		getter = function(c)
 			local res = 0
-			for type in limbtypes do
+			for _, type in ipairs(NTTypes.LimbTypes) do
 				if HF.GetAfflictionStrengthLimb(c.character, type, "bonegrowth", 0) > 0 then
 					res = res + 1
 				end
@@ -1907,7 +1913,7 @@ NT.CharStats = {
 	burndamage = {
 		getter = function(c)
 			local res = 0
-			for type in limbtypes do
+			for _, type in ipairs(NTTypes.LimbTypes) do
 				res = res + HF.GetAfflictionStrengthLimb(c.character, type, "burn", 0)
 			end
 			return res
@@ -1979,14 +1985,14 @@ function NT.UpdateHuman(character)
 	end
 
 	-- stasis completely halts activity in limbs
-	if not charData.stats.stasis then
-		for type in limbtypes do
+	if not charData.stats.stasis then -- Блять какого хуя это вообще так считается? Документация? Не, не слышали
+		for _, type in ipairs(NTTypes.LimbTypes) do
 			FetchLimbData(type)
 		end
-		for type in limbtypes do
+		for _, type in ipairs(NTTypes.LimbTypes) do
 			UpdateLimb(type)
 		end
-		for type in limbtypes do
+		for _, type in ipairs(NTTypes.LimbTypes) do
 			ApplyLimb(type)
 		end
 	end

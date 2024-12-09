@@ -92,6 +92,7 @@ function NT.RefreshAllMultiscalpels()
 		NT.RefreshScalpelDescription(scalpel)
 	end
 end
+
 Timer.Wait(function()
 	NT.RefreshAllMultiscalpels()
 end, 50)
@@ -103,24 +104,31 @@ Hook.Add(
 		NT.SetMultiscalpelFunction(item, "incision")
 	end
 )
+
 Hook.Add("NT.multiscalpel.kidneys", "NT.multiscalpel.kidneys", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "kidneys")
 end)
+
 Hook.Add("NT.multiscalpel.liver", "NT.multiscalpel.liver", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "liver")
 end)
+
 Hook.Add("NT.multiscalpel.lungs", "NT.multiscalpel.lungs", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "lungs")
 end)
+
 Hook.Add("NT.multiscalpel.heart", "NT.multiscalpel.heart", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "heart")
 end)
+
 Hook.Add("NT.multiscalpel.brain", "NT.multiscalpel.brain", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "brain")
 end)
+
 Hook.Add("NT.multiscalpel.bandage", "NT.multiscalpel.bandage", function(effect, deltaTime, item, targets, worldPosition)
 	NT.SetMultiscalpelFunction(item, "bandage")
 end)
+
 Hook.Add(
 	"NT.multiscalpel.speedflex",
 	"NT.multiscalpel.speedflex",
@@ -269,6 +277,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
 				end
 			end
 		end,
+
 		speedflex = function(item, usingCharacter, targetCharacter, limb)
 			local animcontroller = targetCharacter.AnimController
 			local torsoLimb = limb
