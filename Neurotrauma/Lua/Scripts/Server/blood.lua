@@ -25,7 +25,7 @@ end
 --- @param character Character
 --- @return string NT.BloodType
 function NT.GetBloodtype(character)
-	for _, affliction in pairs(NTTypes.BloodType) do
+	for _, affliction in ipairs(NTTypes.BloodType) do
 		local conditional = character.CharacterHealth.GetAffliction(affliction)
 
 		if conditional ~= nil and conditional.Strength > 0 then
