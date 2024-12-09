@@ -1,5 +1,7 @@
 -- Hooks Lua event "changeFallDamage" to cause more damage and NT afflictions like fractures and artery cuts on extremities depending on severity
 
+-- Functions
+
 local function getCalculatedReduction(armor, strength, afflictionType)
 	local modifiers = armor.GetComponentString("Wearable").DamageModifiers
 
@@ -209,6 +211,7 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 end
 
 -- Hooks
+
 Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, impactPos, velocity)
 	-- dont bother with creatures
 	if not character.IsHuman then

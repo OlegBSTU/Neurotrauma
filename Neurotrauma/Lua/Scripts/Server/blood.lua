@@ -1,8 +1,7 @@
 -- Neurotrauma blood types functions
 -- Hooks Lua event "characterCreated" to create a randomized blood type for spawned character and sets their immunity to 100
----@diagnostic disable: undefined-global
 
--- functions
+-- Functions
 
 --- Assigns a random blood type based on the percentages in the `NTTypes.BloodChance ` table
 --- @param character Character
@@ -61,7 +60,7 @@ function NT.AddImmunity(character)
 	end
 end
 
--- hooks
+-- Hooks
 
 Hook.Add("characterCreated", "NT.BloodAndImmunity", function(createdCharacter)
 	Timer.Wait(function()
