@@ -1,100 +1,214 @@
 -- Hooks Lua event "changeFallDamage" to cause more damage and NT afflictions like fractures and artery cuts on extremities depending on severity
-local limbtypes = {
-	LimbType.Torso,
-	LimbType.Head,
-	LimbType.LeftArm,
-	LimbType.RightArm,
-	LimbType.LeftLeg,
-	LimbType.RightLeg,
-}
-local function HasLungs(c)
-	return not HF.HasAffliction(c, "lungremoved")
+
+local function getCalculatedReduction(armor, strength, afflictionType)
+	local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+
+	for modifier in modifiers do
+		if string.find(modifier.AfflictionIdentifiers, afflictionType) ~= nil then
+			return strength - strength * modifier.DamageMultiplier
+		end
+	end
+
+	return 0
 end
 
 local function getCalculatedReductionSuit(armor, strength, limbtype)
 	if armor == nil then
 		return 0
 	end
-	local reduction = 0
 
 	if armor.HasTag("deepdivinglarge") or armor.HasTag("deepdiving") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "blunttrauma") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "blunttrauma")
 	elseif armor.HasTag("clothing") and armor.HasTag("smallitem") and limbtype == LimbType.Torso then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "blunttrauma") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "blunttrauma")
 	end
-	return reduction
+
+	return 0
 end
-local function getCalculatedReductionClothes(armor, strength, limbtype)
+
+local function getCalculatedReductionClothes(armor, strength)
 	if armor == nil then
 		return 0
 	end
-	local reduction = 0
+
 	if armor.HasTag("deepdiving") or armor.HasTag("diving") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "blunttrauma") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "blunttrauma")
 	elseif armor.HasTag("clothing") and armor.HasTag("smallitem") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "blunttrauma") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "blunttrauma")
 	end
-	return reduction
+
+	return 0
 end
+
 local function getCalculatedReductionHelmet(armor, strength)
 	if armor == nil then
 		return 0
 	end
-	local reduction = 0
 
 	if armor.HasTag("smallitem") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "blunttrauma") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "blunttrauma")
 	end
-	return reduction
+
+	return 0
 end
+
 local function getCalculatedConcussionReduction(armor, strength)
 	if armor == nil then
 		return 0
 	end
-	local reduction = 0
 
 	if armor.HasTag("deepdiving") or armor.HasTag("deepdivinglarge") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "concussion") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
-			end
-		end
+		return getCalculatedReduction(armor, strength, "concussion")
 	elseif armor.HasTag("smallitem") then
-		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
-		for modifier in modifiers do
-			if string.find(modifier.AfflictionIdentifiers, "concussion") ~= nil then
-				reduction = strength - strength * modifier.DamageMultiplier
+		return getCalculatedReduction(armor, strength, "concussion")
+	end
+
+	return 0
+end
+
+local function doTorsoDamage(strength, character, limbtype, injuryChanceMultiplier)
+	if
+		HF.Chance(
+			(strength - 15)
+				/ 100
+				* NTC.GetMultiplier(character, "anyfracturechance")
+				* NTConfig.Get("NT_fractureChance", 1)
+				* injuryChanceMultiplier
+		)
+	then
+		NT.BreakLimb(character, limbtype)
+
+		if
+			strength >= 5
+			and not HF.HasAffliction(character, "lungremoved")
+			and HF.Chance(
+				strength
+					/ 70
+					* NTC.GetMultiplier(character, "pneumothoraxchance")
+					* NTConfig.Get("NT_pneumothoraxChance", 1)
+			)
+		then
+			HF.AddAffliction(character, "pneumothorax", 5)
+		end
+	end
+end
+
+local function doHeadDamage(strength, character, limbtype, injuryChanceMultiplier, armor1, armor2)
+	if strength >= 5 then
+		if HF.Chance(0.7) then
+			HF.AddAffliction(character, "cerebralhypoxia", strength * HF.RandomRange(0.1, 0.4))
+		end
+
+		if strength >= 15 then
+			if HF.Chance(math.min(strength / 100, 0.7)) then
+				HF.AddAfflictionResisted(
+					character,
+					"concussion",
+					math.max(
+						10 - getCalculatedConcussionReduction(armor1, 10) - getCalculatedConcussionReduction(armor2, 10),
+						0
+					)
+				)
+			end
+
+			local multiplayer = NTC.GetMultiplier(character, "anyfracturechance")
+				* NTConfig.Get("NT_fractureChance", 1)
+				* injuryChanceMultiplier
+
+			if HF.Chance(math.min((strength - 15) / 100, 0.7) * multiplayer) then
+				NT.BreakLimb(character, limbtype)
+			end
+
+			if strength >= 55 and HF.Chance(math.min((strength - 55) / 100, 0.7) * multiplayer) then
+				HF.AddAffliction(character, "n_fracture", 5)
 			end
 		end
 	end
-	return reduction
 end
+
+local function doLimbDamage(strength, character, limbtype, injuryChanceMultiplier)
+	if
+		HF.Chance(
+			(strength - 15)
+				/ 100
+				* NTC.GetMultiplier(character, "anyfracturechance")
+				* NTConfig.Get("NT_fractureChance", 1)
+				* injuryChanceMultiplier
+		)
+	then
+		NT.BreakLimb(character, limbtype)
+		if HF.Chance((strength - 2) / 60) then
+			NT.ArteryCutLimb(character, limbtype) -- this is here to simulate open fractures
+		end
+	end
+
+	if
+		not NT.LimbIsAmputated(character, limbtype)
+		and HF.Chance(
+			HF.Clamp((strength - 5) / 120, 0, 0.5)
+				* NTC.GetMultiplier(character, "dislocationchance")
+				* NTConfig.Get("NT_dislocationChance", 1)
+				* injuryChanceMultiplier
+		)
+	then
+		NT.DislocateLimb(character, limbtype)
+	end
+end
+
+NT.CauseFallDamage = function(character, limbtype, strength)
+	local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+	local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.InnerClothes)
+	if limbtype ~= LimbType.Head then
+		strength = math.max(
+			strength
+				- getCalculatedReductionSuit(armor1, strength, limbtype)
+				- getCalculatedReductionClothes(armor2, strength),
+			0
+		)
+	else
+		armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+		strength = math.max(
+			strength
+				- getCalculatedReductionSuit(armor1, strength, limbtype)
+				- getCalculatedReductionHelmet(armor2, strength),
+			0
+		)
+	end
+
+	-- additionally calculate the affliction reduced damage
+	local resistance = character.CharacterHealth.GetResistance(AfflictionPrefab.Prefabs["blunttrauma"], limbtype)
+
+	if resistance >= 1 then
+		return
+	end
+
+	strength = strength * (1 - resistance)
+	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
+
+	-- return earlier if the strength value is not high enough for damage checks
+	if strength < 1 then
+		return
+	end
+
+	local injuryChanceMultiplier = NTConfig.Get("NT_falldamageSeriousInjuryChance", 1)
+
+	-- torso
+	if limbtype == LimbType.Torso then
+		doTorsoDamage(strength, character, limbtype, injuryChanceMultiplier)
+	end
+
+	-- head
+	if limbtype == LimbType.Head then
+		doHeadDamage(strength, character, limbtype, injuryChanceMultiplier, armor1, armor2)
+	end
+
+	-- extremities
+	if HF.LimbIsExtremity(limbtype) then
+		doLimbDamage(strength, character, limbtype, injuryChanceMultiplier)
+	end
+end
+
+-- Hooks
 Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, impactPos, velocity)
 	-- dont bother with creatures
 	if not character.IsHuman then
@@ -121,7 +235,7 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 	local minDotRes = 1000
 
 	for limb in character.AnimController.Limbs do
-		for type in limbtypes do
+		for _, type in ipairs(NTTypes.LimbTypes) do
 			if limb.type == type then
 				-- fetch the direction of each limb relative to the torso
 				local limbPosition = limb.WorldPosition
@@ -143,6 +257,7 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 				if minDotRes > limbDot then
 					minDotRes = limbDot
 				end
+
 				break
 			end
 		end
@@ -169,144 +284,10 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 			relativeWeight * math.max(0, velocityMagnitude - 10) ^ 1.5 * NTConfig.Get("NT_falldamage", 1) * 0.5,
 			200
 		)
+
 		NT.CauseFallDamage(character, type, damageInflictedToThisLimb)
 	end
 
 	-- make the normal damage not run
 	return 0
 end)
-NT.CauseFallDamage = function(character, limbtype, strength)
-	local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
-	local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.InnerClothes)
-	if limbtype ~= LimbType.Head then
-		strength = math.max(
-			strength
-				- getCalculatedReductionSuit(armor1, strength, limbtype)
-				- getCalculatedReductionClothes(armor2, strength, limbtype),
-			0
-		)
-	else
-		armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
-		strength = math.max(
-			strength
-				- getCalculatedReductionSuit(armor1, strength, limbtype)
-				- getCalculatedReductionHelmet(armor2, strength, limbtype),
-			0
-		)
-	end
-
-	-- additionally calculate the affliction reduced damage
-	local prefab = AfflictionPrefab.Prefabs["blunttrauma"]
-	local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
-	if resistance >= 1 then
-		return
-	end
-	strength = strength * (1 - resistance)
-	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
-
-	-- return earlier if the strength value is not high enough for damage checks
-	if strength < 1 then
-		return
-	end
-
-	local fractureImmune = false
-
-	local injuryChanceMultiplier = NTConfig.Get("NT_falldamageSeriousInjuryChance", 1)
-
-	-- torso
-	if not fractureImmune and strength >= 1 and limbtype == LimbType.Torso then
-		if
-			HF.Chance(
-				(strength - 15)
-					/ 100
-					* NTC.GetMultiplier(character, "anyfracturechance")
-					* NTConfig.Get("NT_fractureChance", 1)
-					* injuryChanceMultiplier
-			)
-		then
-			NT.BreakLimb(character, limbtype)
-			if
-				HasLungs(character)
-				and strength >= 5
-				and HF.Chance(
-					strength
-						/ 70
-						* NTC.GetMultiplier(character, "pneumothoraxchance")
-						* NTConfig.Get("NT_pneumothoraxChance", 1)
-				)
-			then
-				HF.AddAffliction(character, "pneumothorax", 5)
-			end
-		end
-	end
-
-	-- head
-	if not fractureImmune and strength >= 1 and limbtype == LimbType.Head then
-		if strength >= 15 and HF.Chance(math.min(strength / 100, 0.7)) then
-			HF.AddAfflictionResisted(
-				character,
-				"concussion",
-				math.max(
-					10
-						- getCalculatedConcussionReduction(armor1, 10, limbtype)
-						- getCalculatedConcussionReduction(armor2, 10, limbtype),
-					0
-				)
-			)
-		end
-		if
-			strength >= 15
-			and HF.Chance(
-				math.min((strength - 15) / 100, 0.7)
-					* NTC.GetMultiplier(character, "anyfracturechance")
-					* NTConfig.Get("NT_fractureChance", 1)
-					* injuryChanceMultiplier
-			)
-		then
-			NT.BreakLimb(character, limbtype)
-		end
-		if
-			strength >= 55
-			and HF.Chance(
-				math.min((strength - 55) / 100, 0.7)
-					* NTC.GetMultiplier(character, "anyfracturechance")
-					* NTConfig.Get("NT_fractureChance", 1)
-					* injuryChanceMultiplier
-			)
-		then
-			HF.AddAffliction(character, "n_fracture", 5)
-		end
-		if strength >= 5 and HF.Chance(0.7) then
-			HF.AddAffliction(character, "cerebralhypoxia", strength * HF.RandomRange(0.1, 0.4))
-		end
-	end
-
-	-- extremities
-	if not fractureImmune and strength >= 1 and HF.LimbIsExtremity(limbtype) then
-		if
-			HF.Chance(
-				(strength - 15)
-					/ 100
-					* NTC.GetMultiplier(character, "anyfracturechance")
-					* NTConfig.Get("NT_fractureChance", 1)
-					* injuryChanceMultiplier
-			)
-		then
-			NT.BreakLimb(character, limbtype)
-			if HF.Chance((strength - 2) / 60) then
-				-- this is here to simulate open fractures
-				NT.ArteryCutLimb(character, limbtype)
-			end
-		end
-		if
-			HF.Chance(
-				HF.Clamp((strength - 5) / 120, 0, 0.5)
-					* NTC.GetMultiplier(character, "dislocationchance")
-					* NTConfig.Get("NT_dislocationChance", 1)
-					* injuryChanceMultiplier
-			) and not NT.LimbIsAmputated(character, limbtype)
-		then
-			NT.DislocateLimb(character, limbtype)
-		end
-	end
-end
