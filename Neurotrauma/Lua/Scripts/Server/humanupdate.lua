@@ -1951,23 +1951,23 @@ function NT.UpdateHuman(character)
 
 	-- update and apply limb specific stuff
 	local function FetchLimbData(type)
-		local keystring = tostring(type) .. "afflictions"
+		local keystring = tostring(type) .. "afflictions" 
 		charData[keystring] = {}
-		for identifier, data in pairs(NT.LimbAfflictions) do
+		for identifier, data in pairs(NT.LimbAfflictions) do -- <-- вот тут думаю можно сократить количество операций
 			local strength = HF.GetAfflictionStrengthLimb(character, type, identifier, data.default or 0)
 			charData[keystring][identifier] = { prev = strength, strength = strength }
 		end
 	end
 	local function UpdateLimb(type)
-		local keystring = tostring(type) .. "afflictions"
-		for identifier, data in pairs(NT.LimbAfflictions) do
+		local keystring = tostring(type) .. "afflictions" 
+		for identifier, data in pairs(NT.LimbAfflictions) do 
 			if data.update ~= nil then
 				data.update(charData, charData[keystring], identifier, type)
 			end
 		end
 	end
 	local function ApplyLimb(type)
-		local keystring = tostring(type) .. "afflictions"
+		local keystring = tostring(type) .. "afflictions" 
 		for identifier, data in pairs(charData[keystring]) do
 			local newval = HF.Clamp(
 				data.strength,
