@@ -1838,3 +1838,4 @@ Hook.Add("roundStart", "NT.RoundStart.ConditionItems", function()
 		NT.RefreshCondition()
 	end, 10000)
 end)
+--- бля убейте меня
