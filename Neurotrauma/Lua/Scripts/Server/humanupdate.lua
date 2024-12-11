@@ -1953,7 +1953,7 @@ function NT.UpdateHuman(character)
 	local function FetchLimbData(type)
 		local keystring = tostring(type) .. "afflictions" 
 		charData[keystring] = {}
-		for identifier, data in pairs(NT.LimbAfflictions) do -- <-- вот тут думаю можно сократить количество операций
+		for identifier, data in pairs(NT.LimbAfflictions) do 
 			local strength = HF.GetAfflictionStrengthLimb(character, type, identifier, data.default or 0)
 			charData[keystring][identifier] = { prev = strength, strength = strength }
 		end
@@ -1985,7 +1985,7 @@ function NT.UpdateHuman(character)
 	end
 
 	-- stasis completely halts activity in limbs
-	if not charData.stats.stasis then -- Блять какого хуя это вообще так считается? Документация? Не, не слышали
+	if not charData.stats.stasis then 
 		for _, type in ipairs(NTTypes.LimbTypes) do
 			FetchLimbData(type)
 		end
