@@ -48,11 +48,26 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		HF.AddAffliction(usingCharacter, "radiationsickness", 0.6)
 
 		-- print readout of afflictions
-		local readoutstring = "Affliction readout for "
-			.. targetCharacter.Name
-			.. " on limb "
-			.. HF.LimbTypeToString(limbtype)
-			.. ":\n"
+		local startReadout = "‖color:100,100,200‖"
+		.."Affliction readout for "
+		.."‖color:end‖"
+		.."‖color:125,125,225‖"
+		..targetCharacter.Name
+		.."‖color:end‖"
+		.."‖color:100,100,200‖"
+		.." on limb "
+		..HF.LimbTypeToString(limbtype)
+		..":\n".."‖color:end‖"
+		local LowPressureReadout = ""
+		local HighPressureReadout = ""
+		local LowStrengthReadout = ""
+		local MediumStrengthReadout = ""
+		local HighStrengthReadout = ""
+		local VitalReadout = ""
+		local RemovalReadout = ""
+		local GeneReadout = ""
+		
+		
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
 		for value in afflictionlist do

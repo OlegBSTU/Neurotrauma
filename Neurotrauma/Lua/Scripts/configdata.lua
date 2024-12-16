@@ -239,6 +239,46 @@ NT.ConfigData = {
 		type = "bool",
 		description = "Integrated consent required mod.\nIf disabled, none of NPCs will get aggravated by medical interactions.",
 	},
+	
+	NTSCAN_header1 = { name="Scanner Settings", type="category" },
+	NTSCAN_lowcolor = {
+		name = "Low Priority Color",
+		default = "100,200,100",
+		type = "string",
+		description = "Scanner text color for afflictions that have less than 35 progress.",
+	},
+	
+	NTSCAN_medcolor = {
+		name = "Medium Priority Color",
+		default = "200,200,100",
+		type = "string",
+		description = "Scanner text color for afflictions that have progress between 35 and 65.",
+	},
+	
+	NTSCAN_highcolor = {
+		name = "High Priority Color",
+		default = "250,100,100",
+		type = "string",
+		description = "Scanner text color for afflictions that have more than 65 progress.",
+	},
+	NTSCAN_vitalcolor = {
+		name = "Vital Priority Color",
+		default = "255,0,0",
+		type = "string",
+		description = "Scanner text color for vital afflictions (Arterial bleed, Traumatic amputation).",
+	},
+	NTSCAN_removalcolor = {
+		name = "Removed Organ Color",
+		default = "0,255,255",
+		type = "string",
+		description = "Scanner text color for removed organs (Heart removed, leg amputation).",
+	},
+	NTSCAN_genecolor = {
+		name = "Gene Color",
+		default = "180,50,200",
+		type = "string",
+		description = "Scanner text color for genes (Husk genes, Mudraptor genes).",
+	},
 }
 NTConfig.AddConfigOptions(NT)
 
