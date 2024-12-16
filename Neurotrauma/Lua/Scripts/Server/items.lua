@@ -42,19 +42,30 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 	local hasVoltage = containedItem.Condition > 0
 
 	if hasVoltage then
+	
+		local BaseColor = NTConfig.Get("NTSCAN_basecolor", 1)
+		local NameColor = NTConfig.Get("NTSCAN_namecolor", 1)
+		local LowColor = NTConfig.Get("NTSCAN_lowcolor", 1)
+		local MedColor = NTConfig.Get("NTSCAN_medcolor", 1)
+		local HighColor = NTConfig.Get("NTSCAN_highcolor", 1)
+		local VitalColor = NTConfig.Get("NTSCAN_vitalcolor", 1)
+		local RemovalColor = NTConfig.Get("NTSCAN_removalcolor", 1)
+		local GeneColor = NTConfig.Get("NTSCAN_genecolor", 1)
+		
+		
 		HF.GiveItem(targetCharacter, "ntsfx_selfscan")
 		containedItem.Condition = containedItem.Condition - 5
 		HF.AddAffliction(targetCharacter, "radiationsickness", 1, usingCharacter)
 		HF.AddAffliction(usingCharacter, "radiationsickness", 0.6)
 
 		-- print readout of afflictions
-		local startReadout = "‖color:100,100,200‖"
+		local startReadout = "‖color:"..BaseColor.."‖"
 		.."Affliction readout for "
 		.."‖color:end‖"
-		.."‖color:125,125,225‖"
+		.."‖color:"..NameColor.."‖"
 		..targetCharacter.Name
 		.."‖color:end‖"
-		.."‖color:100,100,200‖"
+		.."‖color:"..BaseColor.."‖"
 		.." on limb "
 		..HF.LimbTypeToString(limbtype)
 		..":\n".."‖color:end‖"
@@ -67,6 +78,8 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		local RemovalReadout = ""
 		local GeneReadout = ""
 		
+		--remove this 
+		local readoutstring = ""
 		
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
@@ -97,7 +110,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		end
 
 		Timer.Wait(function()
-			HF.DMClient(HF.CharacterToClient(usingCharacter), readoutstring, Color(127, 255, 255, 255))
+			HF.DMClient(HF.CharacterToClient(usingCharacter), startReadout, Color(127, 255, 255, 255))
 		end, 2000)
 	end
 end

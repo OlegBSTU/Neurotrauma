@@ -249,6 +249,22 @@ NT.ConfigData = {
 		description = "Enable colored health scanner text messages.",
 	},
 	
+	NTSCAN_basecolor = {
+		name = "Base Text Color",
+		default = "100,100,200",
+		style = "R,G,B",
+		type = "string",
+		description = "Scanner text color for afflictions that have less than 35 progress.",
+	},		
+	
+	NTSCAN_namecolor = {
+		name = "Name Text Color",
+		default = "125,125,225",
+		style = "R,G,B",
+		type = "string",
+		description = "Scanner text color for afflictions that have less than 35 progress.",
+	},	
+	
 	NTSCAN_lowcolor = {
 		name = "Low Priority Color",
 		default = "100,200,100",
