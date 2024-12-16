@@ -241,6 +241,14 @@ NT.ConfigData = {
 	},
 	
 	NTSCAN_header1 = { name="Scanner Settings", type="category" },
+	
+	NTSCAN_enablecoloredscanner = {
+		name = "Enable Colored Scanner",
+		default = true,
+		type = "bool",
+		description = "Enable colored health scanner text messages.",
+	},
+	
 	NTSCAN_lowcolor = {
 		name = "Low Priority Color",
 		default = "100,200,100",

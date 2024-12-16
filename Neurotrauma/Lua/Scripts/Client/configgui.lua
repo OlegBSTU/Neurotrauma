@@ -134,7 +134,39 @@ local function ConstructUI(parent)
 			scalar.OnValueChanged = function()
 				NTConfig.Set(key2, scalar.FloatValue)
 				OnChanged()
-			end
+			end 
+			
+		elseif entry.type == "string" then
+			--user string input
+			local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
+			local textBlock = GUI.TextBlock(
+				rect,
+				entry.name,
+				Color(230, 230, 170),
+				nil,
+				GUI.Alignment.Center,
+				true,
+				nil,
+				Color(0, 0, 0)
+			) 
+			if entry.description then
+				textBlock.ToolTip = entry.description
+			end	
+			
+			local stringinput = 
+				GUI.TextBox(
+					GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), 
+						nil, 
+						nil, 
+						nil, 
+						GUI.Alignment.Center)
+			local key2=key
+				stringinput.ReceiveTextInput(NTConfig.Get(key2, true))
+				
+				stringinput.OnTextChangedDelegate = function() 
+					NTConfig.Set(key2, stringinput.Text)
+				end
+				
 		elseif entry.type == "bool" then
 			-- toggle
 			local rect = GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform)
