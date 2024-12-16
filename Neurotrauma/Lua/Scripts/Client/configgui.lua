@@ -138,10 +138,18 @@ local function ConstructUI(parent)
 			
 		elseif entry.type == "string" then
 			--user string input
+			
+			local style = ""
+			--get custom style
+			if entry.style ~= nil then
+				style = " (" .. entry.style .. ")"
+			end
+
+			
 			local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
 			local textBlock = GUI.TextBlock(
 				rect,
-				entry.name,
+				entry.name..style,
 				Color(230, 230, 170),
 				nil,
 				GUI.Alignment.Center,

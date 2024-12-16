@@ -252,6 +252,7 @@ NT.ConfigData = {
 	NTSCAN_lowcolor = {
 		name = "Low Priority Color",
 		default = "100,200,100",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for afflictions that have less than 35 progress.",
 	},
@@ -259,6 +260,7 @@ NT.ConfigData = {
 	NTSCAN_medcolor = {
 		name = "Medium Priority Color",
 		default = "200,200,100",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for afflictions that have progress between 35 and 65.",
 	},
@@ -266,24 +268,28 @@ NT.ConfigData = {
 	NTSCAN_highcolor = {
 		name = "High Priority Color",
 		default = "250,100,100",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for afflictions that have more than 65 progress.",
 	},
 	NTSCAN_vitalcolor = {
 		name = "Vital Priority Color",
 		default = "255,0,0",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for vital afflictions (Arterial bleed, Traumatic amputation).",
 	},
 	NTSCAN_removalcolor = {
 		name = "Removed Organ Color",
 		default = "0,255,255",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for removed organs (Heart removed, leg amputation).",
 	},
 	NTSCAN_genecolor = {
 		name = "Gene Color",
 		default = "180,50,200",
+		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for genes (Husk genes, Mudraptor genes).",
 	},
