@@ -249,6 +249,22 @@ NT.ConfigData = {
 		description = "Enable colored health scanner text messages.",
 	},
 	
+	NTSCAN_lowmedThreshold = {
+		name = "Low-Medium Text Threshold",
+		default = 25,
+		range = { 0, 100 },
+		type = "float",
+		description = "Where the Low priority color ends and Medium priority color begins.",
+	},
+	
+	NT_medhighThreshold = {
+		name = "Medium-High Text Threshold",
+		default = 65,
+		range = { 0, 100 },
+		type = "float",
+		description = "Where the Medium priority color ends and High priority color begins.",
+	},
+	
 	NTSCAN_basecolor = {
 		name = "Base Text Color",
 		default = "100,100,200",
@@ -308,6 +324,38 @@ NT.ConfigData = {
 		style = "R,G,B",
 		type = "string",
 		description = "Scanner text color for genes (Husk genes, Mudraptor genes).",
+	},	
+	
+	NTSCAN_VitalCategory = {
+		name = "Included Vital Afflictions",
+		default = 'cardiacarrest, ll_arterialcut, rl_arterialcut, la_arterialcut, ra_arterialcut, t_arterialcut, h_arterialcut, tra_amputation, tla_amputation, trl_amputation, tll_amputation, th_amputation',
+		style = '"identifier", "identifier"',
+		type = "string",
+		description = "You can add or remove afflictions to customize this list to your liking.",
+	},		
+	
+	NTSCAN_RemovalCategory = {
+		name = "Included Removal Affictions",
+		default = '"heartremoved", "brainremoved", "lungremoved", "kidneyremoved", "liverremoved", "sra_amputation", "sla_amputation", "srl_amputation", "sll_amputation", "sh_amputation"',
+		style = '"identifier", "identifier"',
+		type = "string",
+		description = "You can add or remove afflictions to customize this list to your liking.",
+	},	
+	
+	NTSCAN_GeneCategory = {
+		name = "Included Gene Afflictions",
+		default = '"husktransformimmunity","increasedmeleedamageondamage","hyperactivityondamage","vigorondamage","healdamage","increasedmeleedamage","increasedwalkingspeed","decreasedoxygenconsumption","damageresistance","naturalrangedweapon","naturalmeleeweapon","increasedswimmingspeed","inflamedlung","musculardystrophy","decrepify","glassjaw","outsideinfluence","increasedswimmingspeed","xenobiology","hypersensitivity","rigidjoints","tunnelvision"',
+		style = '"identifier", "identifier"',
+		type = "string",
+		description = "You can add or remove afflictions to customize this list to your liking.",
+	},	
+	
+	NTSCAN_IgnoredCategory = {
+		name = "Ignored Afflictions",
+		default = "",
+		style = '"identifier", "identifier"',
+		type = "string",
+		description = "Afflictions added to this category will be ignored by the health scanner.",
 	},
 }
 NTConfig.AddConfigOptions(NT)

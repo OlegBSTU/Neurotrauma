@@ -52,6 +52,14 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		local RemovalColor = NTConfig.Get("NTSCAN_removalcolor", 1)
 		local GeneColor = NTConfig.Get("NTSCAN_genecolor", 1)
 		
+		local LowMedThreshold = NTConfig.Get("NTSCAN_lowmedThreshold", 1)
+		local MedHighThreshold = NTConfig.Get("NT_medhighThreshold", 1)
+		
+		local VitalCategory = {NTConfig.Get("NTSCAN_VitalCategory", 1)}
+		local RemovalCategory = { NTConfig.Get("NTSCAN_RemovalCategory", 1) }
+		local GeneCategory = { NTConfig.Get("NTSCAN_GeneCategory", 1) }
+		local PressureCategory = {"bloodpressure"}
+		local IgnoredCategory = { NTConfig.Get("NTSCAN_IgnoredCategory", 1) }
 		
 		HF.GiveItem(targetCharacter, "ntsfx_selfscan")
 		containedItem.Condition = containedItem.Condition - 5
@@ -78,9 +86,6 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		local RemovalReadout = ""
 		local GeneReadout = ""
 		
-		--remove this 
-		local readoutstring = ""
-		
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
 		for value in afflictionlist do
@@ -98,19 +103,91 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 			afflimbtype = HF.NormalizeLimbType(afflimbtype)
 
 			if strength >= prefab.ShowInHealthScannerThreshold and afflimbtype == limbtype then
-				-- add the affliction to the readout
-				readoutstring = readoutstring .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			
+				
+				if --low readout
+					(strength < LowMedThreshold)
+					and not HF.TableContains(VitalCategory, value.Identifier) 
+					and not HF.TableContains(RemovalCategory, value.Identifier) 
+					and not HF.TableContains(PressureCategory, value.Identifier) 
+					and not HF.TableContains(GeneCategory, value.Identifier) 
+				then
+					LowStrengthReadout = LowStrengthReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%"
+				end
+			
+				if --medium readout
+					(strength >= LowMedThreshold) and (strength < MedHighThreshold) 
+					and not HF.TableContains(VitalCategory, value.Identifier) 
+					and not HF.TableContains(RemovalCategory, value.Identifier) 
+					and not HF.TableContains(PressureCategory, value.Identifier) 
+					and not HF.TableContains(GeneCategory, value.Identifier) 
+				then	
+					MediumStrengthReadout = MediumStrengthReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end
+				
+				if --high readout
+					(strength >= MedHighThreshold)
+					and not HF.TableContains(VitalCategory, value.Identifier) 
+					and not HF.TableContains(RemovalCategory, value.Identifier) 
+					and not HF.TableContains(PressureCategory, value.Identifier) 
+					and not HF.TableContains(GeneCategory, value.Identifier) 
+				then 
+					HighStrengthReadout = HighStrengthReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end
+				
+				if --vital readout
+					HF.TableContains(VitalCategory, value.Identifier) 
+				then
+					VitalReadout = VitalReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end				
+				
+				if --removed readout
+					HF.TableContains(RemovalCategory, value.Identifier) 
+				then
+					RemovalReadout = RemovalReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end				
+				
+				if --gene readout
+					HF.TableContains(GeneCategory, value.Identifier) 
+				then
+					GeneReadout = GeneReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end				
+				
+				if --bloodpressure readout
+					HF.TableContains(PressureCategory, value.Identifier) 
+					and ((strength > 130) or (strength < 70)) 
+				then
+					HighPressureReadout = HighPressureReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				elseif
+					HF.TableContains(PressureCategory, value.Identifier) 
+				then
+					LowPressureReadout = LowPressureReadout.."\n"..value.Prefab.Name.Value..": "..strength.."%" 
+				end
+				
 				afflictionsdisplayed = afflictionsdisplayed + 1
+				
 			end
 		end
 
 		-- add a message in case there is nothing to display
 		if afflictionsdisplayed <= 0 then
-			readoutstring = readoutstring .. "\nNo afflictions! Good work!"
+			LowStrengthReadout = LowStrengthReadout .. "\nNo afflictions! Good work!"
 		end
 
 		Timer.Wait(function()
-			HF.DMClient(HF.CharacterToClient(usingCharacter), startReadout, Color(127, 255, 255, 255))
+			HF.DMClient(
+			HF.CharacterToClient(usingCharacter), 
+			
+			startReadout
+			.."‖color:"..LowColor.."‖"..LowPressureReadout.."‖color:end‖"
+			.."‖color:"..HighColor.."‖"..HighPressureReadout .."‖color:end‖"
+			.."‖color:"..LowColor.."‖"..LowStrengthReadout.."‖color:end‖"
+			.."‖color:"..MedColor.."‖"..MediumStrengthReadout.."‖color:end‖"
+			.."‖color:"..HighColor.."‖"..HighStrengthReadout.."‖color:end‖"
+			.."‖color:"..VitalColor.."‖"..VitalReadout.."‖color:end‖"
+			.."‖color:"..RemovalColor.."‖"..RemovalReadout.."‖color:end‖"
+			.."‖color:"..GeneColor.."‖"..GeneReadout.."‖color:end‖"
+			)
 		end, 2000)
 	end
 end

@@ -167,7 +167,8 @@ local function ConstructUI(parent)
 						nil, 
 						nil, 
 						nil, 
-						GUI.Alignment.Center)
+						GUI.Alignment.Center,
+						true)
 			local key2=key
 				stringinput.ReceiveTextInput(NTConfig.Get(key2, true))
 				
