@@ -1089,7 +1089,7 @@ NT.ItemMethods.surgicaldrill = function(item, usingCharacter, targetCharacter, l
 				usingCharacter
 			)
 		else
-			HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
+			HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, 12, usingCharacter)
 			HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 10, usingCharacter)
 		end
 	end
