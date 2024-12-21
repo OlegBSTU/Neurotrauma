@@ -239,16 +239,16 @@ NT.ConfigData = {
 		type = "bool",
 		description = "Integrated consent required mod.\nIf disabled, none of NPCs will get aggravated by medical interactions.",
 	},
-	
-	NTSCAN_header1 = { name="Scanner Settings", type="category" },
-	
+
+	NTSCAN_header1 = { name = "Scanner Settings", type = "category" },
+
 	NTSCAN_enablecoloredscanner = {
 		name = "Enable Colored Scanner",
 		default = true,
 		type = "bool",
 		description = "Enable colored health scanner text messages.",
 	},
-	
+
 	NTSCAN_lowmedThreshold = {
 		name = "Low-Medium Text Threshold",
 		default = 25,
@@ -256,7 +256,7 @@ NT.ConfigData = {
 		type = "float",
 		description = "Where the Low progress color ends and Medium progress color begins.",
 	},
-	
+
 	NT_medhighThreshold = {
 		name = "Medium-High Text Threshold",
 		default = 65,
@@ -264,46 +264,46 @@ NT.ConfigData = {
 		type = "float",
 		description = "Where the Medium progress color ends and High progress color begins.",
 	},
-	
+
 	NTSCAN_basecolor = {
 		name = "Base Text Color",
-		default = {"100,100,200"},
+		default = { "100,100,200" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color.",
-	},		
-	
+	},
+
 	NTSCAN_namecolor = {
 		name = "Name Text Color",
-		default = {"125,125,225"},
+		default = { "125,125,225" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for player names.",
-	},	
-	
+	},
+
 	NTSCAN_lowcolor = {
 		name = "Low Priority Color",
-		default = {"100,200,100"},
+		default = { "100,200,100" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for afflictions that have low progress.",
 	},
-	
+
 	NTSCAN_medcolor = {
 		name = "Medium Priority Color",
-		default = {"200,200,100"},
+		default = { "200,200,100" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for afflictions that have medium progress.",
 	},
-	
+
 	NTSCAN_highcolor = {
 		name = "High Priority Color",
-		default = {"250,100,100"},
+		default = { "250,100,100" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
@@ -311,7 +311,7 @@ NT.ConfigData = {
 	},
 	NTSCAN_vitalcolor = {
 		name = "Vital Priority Color",
-		default = {"255,0,0"},
+		default = { "255,0,0" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
@@ -319,7 +319,7 @@ NT.ConfigData = {
 	},
 	NTSCAN_removalcolor = {
 		name = "Removed Organ Color",
-		default = {"0,255,255"},
+		default = { "0,255,255" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
@@ -327,44 +327,91 @@ NT.ConfigData = {
 	},
 	NTSCAN_genecolor = {
 		name = "Gene Color",
-		default = {"180,50,200"},
+		default = { "180,50,200" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for genes (Husk genes, Mudraptor genes).",
-	},	
-	
+	},
+
 	NTSCAN_VitalCategory = {
 		name = "Included Vital Afflictions",
-		default = {"cardiacarrest", "ll_arterialcut", "rl_arterialcut", "la_arterialcut", "ra_arterialcut", "t_arterialcut", "h_arterialcut", "tra_amputation", "tla_amputation", "trl_amputation", "tll_amputation", "th_amputation"},
-		style = 'identifier,identifier',
+		default = {
+			"cardiacarrest",
+			"ll_arterialcut",
+			"rl_arterialcut",
+			"la_arterialcut",
+			"ra_arterialcut",
+			"t_arterialcut",
+			"h_arterialcut",
+			"tra_amputation",
+			"tla_amputation",
+			"trl_amputation",
+			"tll_amputation",
+			"th_amputation",
+		},
+		style = "identifier,identifier",
 		type = "string",
 		boxsize = 0.1,
 		description = "You can add or remove afflictions to customize this list to your liking.",
-	},		
-	
+	},
+
 	NTSCAN_RemovalCategory = {
 		name = "Included Removal Affictions",
-		default = {"heartremoved", "brainremoved", "lungremoved", "kidneyremoved", "liverremoved", "sra_amputation", "sla_amputation", "srl_amputation", "sll_amputation", "sh_amputation"},
-		style = 'identifier, identifier',
+		default = {
+			"heartremoved",
+			"brainremoved",
+			"lungremoved",
+			"kidneyremoved",
+			"liverremoved",
+			"sra_amputation",
+			"sla_amputation",
+			"srl_amputation",
+			"sll_amputation",
+			"sh_amputation",
+		},
+		style = "identifier, identifier",
 		type = "string",
 		boxsize = 0.1,
 		description = "You can add or remove afflictions to customize this list to your liking.",
-	},	
-	
+	},
+
 	NTSCAN_GeneCategory = {
 		name = "Included Gene Afflictions",
-		default = {"husktransformimmunity","increasedmeleedamageondamage","hyperactivityondamage","vigorondamage","healdamage","increasedmeleedamage","increasedwalkingspeed","decreasedoxygenconsumption","damageresistance","naturalrangedweapon","naturalmeleeweapon","increasedswimmingspeed","inflamedlung","musculardystrophy","decrepify","glassjaw","outsideinfluence","increasedswimmingspeed","xenobiology","hypersensitivity","rigidjoints","tunnelvision"},
-		style = 'identifier,identifier',
+		default = {
+			"husktransformimmunity",
+			"increasedmeleedamageondamage",
+			"hyperactivityondamage",
+			"vigorondamage",
+			"healdamage",
+			"increasedmeleedamage",
+			"increasedwalkingspeed",
+			"decreasedoxygenconsumption",
+			"damageresistance",
+			"naturalrangedweapon",
+			"naturalmeleeweapon",
+			"increasedswimmingspeed",
+			"inflamedlung",
+			"musculardystrophy",
+			"decrepify",
+			"glassjaw",
+			"outsideinfluence",
+			"increasedswimmingspeed",
+			"xenobiology",
+			"hypersensitivity",
+			"rigidjoints",
+			"tunnelvision",
+		},
+		style = "identifier,identifier",
 		type = "string",
 		boxsize = 0.1,
 		description = "You can add or remove afflictions to customize this list to your liking.",
-	},	
-	
+	},
+
 	NTSCAN_IgnoredCategory = {
 		name = "Ignored Afflictions",
-		default = {""},
-		style = 'identifier,identifier',
+		default = { "" },
+		style = "identifier,identifier",
 		type = "string",
 		boxsize = 0.1,
 		description = "Afflictions added to this category will be ignored by the health scanner.",
