@@ -1,7 +1,18 @@
 --easysettings by Evil Factory
 local easySettings = dofile(NT.Path .. "/Lua/Scripts/Client/easysettings.lua")
+local MultiLineTextBox = dofile(NT.Path .. "/Lua/Scripts/Client/MultiLineTextBox.lua")
 local GUIComponent = LuaUserData.CreateStatic("Barotrauma.GUIComponent")
 local configUI
+
+local function CommaStringToTable(str)
+	local tbl = {}
+
+	for word in string.gmatch(str, "([^,]+)") do
+		table.insert(tbl, word)
+	end
+
+	return tbl
+end
 
 --calculate difficulty
 local function DetermineDifficulty()
@@ -134,6 +145,36 @@ local function ConstructUI(parent)
 			scalar.OnValueChanged = function()
 				NTConfig.Set(key2, scalar.FloatValue)
 				OnChanged()
+			end
+		elseif entry.type == "string" then
+			--user string input
+			local style = ""
+			--get custom style
+			if entry.style ~= nil then
+				style = " (" .. entry.style .. ")"
+			end
+
+			local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
+			local textBlock = GUI.TextBlock(
+				rect,
+				entry.name .. style,
+				Color(230, 230, 170),
+				nil,
+				GUI.Alignment.Center,
+				true,
+				nil,
+				Color(0, 0, 0)
+			)
+			if entry.description then
+				textBlock.ToolTip = entry.description
+			end
+
+			local stringinput = MultiLineTextBox(list.Content.RectTransform, "", entry.boxsize)
+
+			stringinput.Text = table.concat(entry.value, ",")
+
+			stringinput.OnTextChangedDelegate = function(textBox)
+				entry.value = CommaStringToTable(textBox.Text)
 			end
 		elseif entry.type == "bool" then
 			-- toggle

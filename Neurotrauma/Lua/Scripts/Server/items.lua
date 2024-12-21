@@ -42,17 +42,68 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 	local hasVoltage = containedItem.Condition > 0
 
 	if hasVoltage then
+		--set base color values
+		local BaseColor = "100,230,230"
+		local NameColor = "100,230,230"
+		local LowColor = "100,230,230"
+		local MedColor = "100,230,230"
+		local HighColor = "100,230,230"
+		local VitalColor = "100,230,230"
+		local RemovalColor = "100,230,230"
+		local GeneColor = "100,230,230"
+
+		if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
+			BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
+			NameColor = table.concat(NTConfig.Get("NTSCAN_namecolor", 1), ",")
+			LowColor = table.concat(NTConfig.Get("NTSCAN_lowcolor", 1), ",")
+			MedColor = table.concat(NTConfig.Get("NTSCAN_medcolor", 1), ",")
+			HighColor = table.concat(NTConfig.Get("NTSCAN_highcolor", 1), ",")
+			VitalColor = table.concat(NTConfig.Get("NTSCAN_vitalcolor", 1), ",")
+			RemovalColor = table.concat(NTConfig.Get("NTSCAN_removalcolor", 1), ",")
+			GeneColor = table.concat(NTConfig.Get("NTSCAN_genecolor", 1), ",")
+		end
+
+		local LowMedThreshold = NTConfig.Get("NTSCAN_lowmedThreshold", 1)
+		local MedHighThreshold = NTConfig.Get("NT_medhighThreshold", 1)
+
+		local VitalCategory = NTConfig.Get("NTSCAN_VitalCategory", 1)
+		local RemovalCategory = NTConfig.Get("NTSCAN_RemovalCategory", 1)
+		local GeneCategory = NTConfig.Get("NTSCAN_GeneCategory", 1)
+		local PressureCategory = { "bloodpressure" }
+		local IgnoredCategory = NTConfig.Get("NTSCAN_IgnoredCategory", 1)
+
 		HF.GiveItem(targetCharacter, "ntsfx_selfscan")
 		containedItem.Condition = containedItem.Condition - 5
 		HF.AddAffliction(targetCharacter, "radiationsickness", 1, usingCharacter)
 		HF.AddAffliction(usingCharacter, "radiationsickness", 0.6)
 
 		-- print readout of afflictions
-		local readoutstring = "Affliction readout for "
+		local startReadout = "‖color:"
+			.. BaseColor
+			.. "‖"
+			.. "Affliction readout for "
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. NameColor
+			.. "‖"
 			.. targetCharacter.Name
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. BaseColor
+			.. "‖"
 			.. " on limb "
 			.. HF.LimbTypeToString(limbtype)
 			.. ":\n"
+			.. "‖color:end‖"
+		local LowPressureReadout = ""
+		local HighPressureReadout = ""
+		local LowStrengthReadout = ""
+		local MediumStrengthReadout = ""
+		local HighStrengthReadout = ""
+		local VitalReadout = ""
+		local RemovalReadout = ""
+		local GeneReadout = ""
+
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
 		for value in afflictionlist do
@@ -70,19 +121,146 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 			afflimbtype = HF.NormalizeLimbType(afflimbtype)
 
 			if strength >= prefab.ShowInHealthScannerThreshold and afflimbtype == limbtype then
-				-- add the affliction to the readout
-				readoutstring = readoutstring .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+				if --low readout
+					(strength < LowMedThreshold)
+					and not HF.TableContains(VitalCategory, value.Identifier)
+					and not HF.TableContains(RemovalCategory, value.Identifier)
+					and not HF.TableContains(PressureCategory, value.Identifier)
+					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
+				then
+					LowStrengthReadout = LowStrengthReadout
+						.. "\n"
+						.. value.Prefab.Name.Value
+						.. ": "
+						.. strength
+						.. "%"
+				end
+
+				if --medium readout
+					(strength >= LowMedThreshold)
+					and (strength < MedHighThreshold)
+					and not HF.TableContains(VitalCategory, value.Identifier)
+					and not HF.TableContains(RemovalCategory, value.Identifier)
+					and not HF.TableContains(PressureCategory, value.Identifier)
+					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
+				then
+					MediumStrengthReadout = MediumStrengthReadout
+						.. "\n"
+						.. value.Prefab.Name.Value
+						.. ": "
+						.. strength
+						.. "%"
+				end
+
+				if --high readout
+					(strength >= MedHighThreshold)
+					and not HF.TableContains(VitalCategory, value.Identifier)
+					and not HF.TableContains(RemovalCategory, value.Identifier)
+					and not HF.TableContains(PressureCategory, value.Identifier)
+					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
+				then
+					HighStrengthReadout = HighStrengthReadout
+						.. "\n"
+						.. value.Prefab.Name.Value
+						.. ": "
+						.. strength
+						.. "%"
+				end
+
+				if --vital readout
+					HF.TableContains(VitalCategory, value.Identifier)
+				then
+					VitalReadout = VitalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+				end
+
+				if --removed readout
+					HF.TableContains(RemovalCategory, value.Identifier)
+				then
+					RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+				end
+
+				if --gene readout
+					HF.TableContains(GeneCategory, value.Identifier)
+				then
+					GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+				end
+
+				if --bloodpressure readout
+					HF.TableContains(PressureCategory, value.Identifier) and ((strength > 130) or (strength < 70))
+				then
+					HighPressureReadout = HighPressureReadout
+						.. "\n"
+						.. value.Prefab.Name.Value
+						.. ": "
+						.. strength
+						.. "%"
+				elseif HF.TableContains(PressureCategory, value.Identifier) then
+					LowPressureReadout = LowPressureReadout
+						.. "\n"
+						.. value.Prefab.Name.Value
+						.. ": "
+						.. strength
+						.. "%"
+				end
+
 				afflictionsdisplayed = afflictionsdisplayed + 1
 			end
 		end
 
 		-- add a message in case there is nothing to display
 		if afflictionsdisplayed <= 0 then
-			readoutstring = readoutstring .. "\nNo afflictions! Good work!"
+			LowStrengthReadout = LowStrengthReadout .. "\nNo afflictions! Good work!"
 		end
 
 		Timer.Wait(function()
-			HF.DMClient(HF.CharacterToClient(usingCharacter), readoutstring, Color(127, 255, 255, 255))
+			HF.DMClient(
+				HF.CharacterToClient(usingCharacter),
+
+				startReadout
+					.. "‖color:"
+					.. LowColor
+					.. "‖"
+					.. LowPressureReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. HighColor
+					.. "‖"
+					.. HighPressureReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. LowColor
+					.. "‖"
+					.. LowStrengthReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. MedColor
+					.. "‖"
+					.. MediumStrengthReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. HighColor
+					.. "‖"
+					.. HighStrengthReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. VitalColor
+					.. "‖"
+					.. VitalReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. RemovalColor
+					.. "‖"
+					.. RemovalReadout
+					.. "‖color:end‖"
+					.. "‖color:"
+					.. GeneColor
+					.. "‖"
+					.. GeneReadout
+					.. "‖color:end‖"
+			)
 		end, 2000)
 	end
 end
@@ -92,7 +270,6 @@ NT.HematologyDetectable = {
 	"acidosis",
 	"alkalosis",
 	"bloodloss",
-	"bloodpressure",
 	"afimmunosuppressant",
 	"afthiamine",
 	"afadrenaline",
@@ -134,13 +311,64 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 		end
 	end
 
+	local LowPressureReadout = ""
+	local HighPressureReadout = ""
+	local LowStrengthReadout = ""
+	local MediumStrengthReadout = ""
+	local HighStrengthReadout = ""
+	local VitalReadout = ""
+	local RemovalReadout = ""
+	local GeneReadout = ""
+
+	--set base color values
+	local BaseColor = "100,230,230"
+	local NameColor = "100,230,230"
+	local LowColor = "100,230,230"
+	local MedColor = "100,230,230"
+	local HighColor = "100,230,230"
+	local VitalColor = "100,230,230"
+	local RemovalColor = "100,230,230"
+	local GeneColor = "100,230,230"
+
+	if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
+		BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
+		NameColor = table.concat(NTConfig.Get("NTSCAN_namecolor", 1), ",")
+		LowColor = table.concat(NTConfig.Get("NTSCAN_lowcolor", 1), ",")
+		MedColor = table.concat(NTConfig.Get("NTSCAN_medcolor", 1), ",")
+		HighColor = table.concat(NTConfig.Get("NTSCAN_highcolor", 1), ",")
+		VitalColor = table.concat(NTConfig.Get("NTSCAN_vitalcolor", 1), ",")
+		RemovalColor = table.concat(NTConfig.Get("NTSCAN_removalcolor", 1), ",")
+		GeneColor = table.concat(NTConfig.Get("NTSCAN_genecolor", 1), ",")
+	end
+
+	local LowMedThreshold = NTConfig.Get("NTSCAN_lowmedThreshold", 1)
+	local MedHighThreshold = NTConfig.Get("NT_medhighThreshold", 1)
+
+	local VitalCategory = NTConfig.Get("NTSCAN_VitalCategory", 1)
+	local RemovalCategory = NTConfig.Get("NTSCAN_RemovalCategory", 1)
+	local GeneCategory = NTConfig.Get("NTSCAN_GeneCategory", 1)
+	local PressureCategory = { "bloodpressure" }
+	local IgnoredCategory = NTConfig.Get("NTSCAN_IgnoredCategory", 1)
+
 	-- print readout of afflictions
 	local bloodtype = AfflictionPrefab.Prefabs[NT.GetBloodtype(targetCharacter)].Name.Value
-	local readoutstring = "Bloodtype: "
+	local startReadout = "‖color:"
+		.. NameColor
+		.. "‖"
+		.. "Bloodtype: "
 		.. bloodtype
+		.. "‖color:end‖"
+		.. "‖color:"
+		.. BaseColor
+		.. "‖"
 		.. "\nAffliction readout for the blood of "
+		.. "‖color:end‖"
+		.. "‖color:"
+		.. NameColor
+		.. "‖"
 		.. targetCharacter.Name
 		.. ":\n"
+		.. "‖color:end‖"
 	local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 	local afflictionsdisplayed = 0
 	for value in afflictionlist do
@@ -149,17 +377,110 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 		if strength > 2 and HF.TableContains(NT.HematologyDetectable, prefab.Identifier.Value) then
 			-- add the affliction to the readout
-			readoutstring = readoutstring .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			if --low readout
+				(strength < LowMedThreshold) and not HF.TableContains(IgnoredCategory, value.Identifier)
+			then
+				LowStrengthReadout = LowStrengthReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
+			if --medium readout
+				(strength >= LowMedThreshold)
+				and (strength < MedHighThreshold)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+			then
+				MediumStrengthReadout = MediumStrengthReadout
+					.. "\n"
+					.. value.Prefab.Name.Value
+					.. ": "
+					.. strength
+					.. "%"
+			end
+
+			if --high readout
+				(strength >= MedHighThreshold) and not HF.TableContains(IgnoredCategory, value.Identifier)
+			then
+				HighStrengthReadout = HighStrengthReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
+			if --vital readout
+				HF.TableContains(VitalCategory, value.Identifier)
+			then
+				VitalReadout = VitalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
+			if --removed readout
+				HF.TableContains(RemovalCategory, value.Identifier)
+			then
+				RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
+			if --gene readout
+				HF.TableContains(GeneCategory, value.Identifier)
+			then
+				GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
+			if --bloodpressure readout
+				HF.TableContains(PressureCategory, value.Identifier) and ((strength > 130) or (strength < 70))
+			then
+				HighPressureReadout = HighPressureReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			elseif HF.TableContains(PressureCategory, value.Identifier) then
+				LowPressureReadout = LowPressureReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+			end
+
 			afflictionsdisplayed = afflictionsdisplayed + 1
 		end
 	end
 
 	-- add a message in case there is nothing to display
 	if afflictionsdisplayed <= 0 then
-		readoutstring = readoutstring .. "\nNo blood pressure detected..."
+		LowStrengthReadout = LowStrengthReadout .. "\nNo blood pressure detected..."
 	end
 
-	HF.DMClient(HF.CharacterToClient(usingCharacter), readoutstring, Color(127, 255, 255, 255))
+	HF.DMClient(
+		HF.CharacterToClient(usingCharacter),
+		startReadout
+			.. "‖color:"
+			.. LowColor
+			.. "‖"
+			.. LowPressureReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. HighColor
+			.. "‖"
+			.. HighPressureReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. LowColor
+			.. "‖"
+			.. LowStrengthReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. MedColor
+			.. "‖"
+			.. MediumStrengthReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. HighColor
+			.. "‖"
+			.. HighStrengthReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. VitalColor
+			.. "‖"
+			.. VitalReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. RemovalColor
+			.. "‖"
+			.. RemovalReadout
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. GeneColor
+			.. "‖"
+			.. GeneReadout
+			.. "‖color:end‖"
+	)
 end
 
 -- trauma shears and diving knife
