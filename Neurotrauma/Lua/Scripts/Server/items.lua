@@ -68,7 +68,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 
 		local VitalCategory = NTConfig.Get("NTSCAN_VitalCategory", 1)
 		local RemovalCategory = NTConfig.Get("NTSCAN_RemovalCategory", 1)
-		local GeneCategory = NTConfig.Get("NTSCAN_GeneCategory", 1)
+		local CustomCategory = NTConfig.Get("NTSCAN_CustomCategory", 1)
 		local PressureCategory = { "bloodpressure" }
 		local IgnoredCategory = NTConfig.Get("NTSCAN_IgnoredCategory", 1)
 
@@ -126,7 +126,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					and not HF.TableContains(VitalCategory, value.Identifier)
 					and not HF.TableContains(RemovalCategory, value.Identifier)
 					and not HF.TableContains(PressureCategory, value.Identifier)
-					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(CustomCategory, value.Identifier)
 					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					LowStrengthReadout = LowStrengthReadout
@@ -143,7 +143,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					and not HF.TableContains(VitalCategory, value.Identifier)
 					and not HF.TableContains(RemovalCategory, value.Identifier)
 					and not HF.TableContains(PressureCategory, value.Identifier)
-					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(CustomCategory, value.Identifier)
 					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					MediumStrengthReadout = MediumStrengthReadout
@@ -159,7 +159,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					and not HF.TableContains(VitalCategory, value.Identifier)
 					and not HF.TableContains(RemovalCategory, value.Identifier)
 					and not HF.TableContains(PressureCategory, value.Identifier)
-					and not HF.TableContains(GeneCategory, value.Identifier)
+					and not HF.TableContains(CustomCategory, value.Identifier)
 					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					HighStrengthReadout = HighStrengthReadout
@@ -182,8 +182,8 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
 
-				if --gene readout
-					HF.TableContains(GeneCategory, value.Identifier)
+				if --custom readout
+					HF.TableContains(CustomCategory, value.Identifier)
 				then
 					GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
@@ -346,7 +346,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 	local VitalCategory = NTConfig.Get("NTSCAN_VitalCategory", 1)
 	local RemovalCategory = NTConfig.Get("NTSCAN_RemovalCategory", 1)
-	local GeneCategory = NTConfig.Get("NTSCAN_GeneCategory", 1)
+	local CustomCategory = NTConfig.Get("NTSCAN_CustomCategory", 1)
 	local PressureCategory = { "bloodpressure" }
 	local IgnoredCategory = NTConfig.Get("NTSCAN_IgnoredCategory", 1)
 
@@ -414,8 +414,8 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 				RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
-			if --gene readout
-				HF.TableContains(GeneCategory, value.Identifier)
+			if --custom readout
+				HF.TableContains(CustomCategory, value.Identifier)
 			then
 				GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
