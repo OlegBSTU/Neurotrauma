@@ -90,11 +90,8 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 	local BaseColor = "127,255,255"
 	local NameColor = "127,255,255"
 	local LowColor = "127,255,255"
-	local MedColor = "127,255,255"
 	local HighColor = "127,255,255"
 	local VitalColor = "127,255,255"
-	local RemovalColor = "127,255,255"
-	local CustomColor = "127,255,255"
 
 	if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
 		BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
