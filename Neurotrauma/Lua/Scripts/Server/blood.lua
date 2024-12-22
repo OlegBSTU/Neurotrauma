@@ -87,6 +87,23 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 	local character = item.ParentInventory.Owner
 	local contained = item.OwnInventory.GetItemAt(0)
 
+	local BaseColor = "127,255,255"
+	local NameColor = "127,255,255"
+	local LowColor = "127,255,255"
+	local MedColor = "127,255,255"
+	local HighColor = "127,255,255"
+	local VitalColor = "127,255,255"
+	local RemovalColor = "127,255,255"
+	local CustomColor = "127,255,255"
+
+	if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
+		BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
+		NameColor = table.concat(NTConfig.Get("NTSCAN_namecolor", 1), ",")
+		LowColor = table.concat(NTConfig.Get("NTSCAN_lowcolor", 1), ",")
+		HighColor = table.concat(NTConfig.Get("NTSCAN_highcolor", 1), ",")
+		VitalColor = table.concat(NTConfig.Get("NTSCAN_vitalcolor", 1), ",")
+	end
+
 	-- NT adds bloodbag; NT Blood Work or 'Real Sonar Medical Item Recipes Patch for Neurotrauma' add allblood, lets check for either
 	if contained ~= nil and (contained.HasTag("bloodbag") or contained.HasTag("allblood")) then
 		HF.GiveItem(character, "ntsfx_syringe")
@@ -105,31 +122,59 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 			bloodTypeDisplay = string.gsub(bloodTypeDisplay, "minus", "-")
 			bloodTypeDisplay = string.upper(bloodTypeDisplay)
 
-			local readoutString = "Bloodpack: " .. bloodTypeDisplay
+			local readoutString = "‖color:"
+				.. BaseColor
+				.. "‖"
+				.. "Bloodpack: "
+				.. "‖color:end‖"
+				.. "‖color:"
+				.. NameColor
+				.. "‖"
+				.. bloodTypeDisplay
+				.. "‖color:end‖"
 			-- check if acidosis, alkalosis or sepsis
 			local tags = HF.SplitString(contained.Tags, ",")
 			local defects = ""
 			for tag in tags do
 				if tag == "sepsis" then
-					defects = defects .. "\nSepsis detected"
+					defects = defects .. "‖color:" .. VitalColor .. "‖" .. "\nSepsis detected" .. "‖color:end‖"
 				end
 
 				if HF.StartsWith(tag, "acid") then
 					local split = HF.SplitString(tag, ":")
 					if split[2] ~= nil then
-						defects = defects .. "\nAcidosis: " .. tonumber(split[2]) .. "%"
+						defects = defects
+							.. "‖color:"
+							.. HighColor
+							.. "‖"
+							.. "\nAcidosis: "
+							.. tonumber(split[2])
+							.. "%"
+							.. "‖color:end‖"
 					end
 				elseif HF.StartsWith(tag, "alkal") then
 					local split = HF.SplitString(tag, ":")
 					if split[2] ~= nil then
-						defects = defects .. "\nAlkalosis: " .. tonumber(split[2]) .. "%"
+						defects = defects
+							.. "‖color:"
+							.. HighColor
+							.. "‖"
+							.. "\nAlkalosis: "
+							.. tonumber(split[2])
+							.. "%"
+							.. "‖color:end‖"
 					end
 				end
 			end
-			if defects ~= "" then 
+			if defects ~= "" then
 				readoutString = readoutString .. defects
 			else
-				readoutString = readoutString .. "\nNo blood defects"
+				readoutString = readoutString
+					.. "‖color:"
+					.. LowColor
+					.. "‖"
+					.. "\nNo blood defects"
+					.. "‖color:end‖"
 			end
 
 			HF.DMClient(HF.CharacterToClient(character), readoutString, Color(127, 255, 255, 255))

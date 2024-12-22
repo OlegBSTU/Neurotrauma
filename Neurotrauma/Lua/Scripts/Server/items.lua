@@ -43,14 +43,14 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 
 	if hasVoltage then
 		--set base color values
-		local BaseColor = "100,230,230"
-		local NameColor = "100,230,230"
-		local LowColor = "100,230,230"
-		local MedColor = "100,230,230"
-		local HighColor = "100,230,230"
-		local VitalColor = "100,230,230"
-		local RemovalColor = "100,230,230"
-		local CustomColor = "100,230,230"
+		local BaseColor = "127,255,255"
+		local NameColor = "127,255,255"
+		local LowColor = "127,255,255"
+		local MedColor = "127,255,255"
+		local HighColor = "127,255,255"
+		local VitalColor = "127,255,255"
+		local RemovalColor = "127,255,255"
+		local CustomColor = "127,255,255"
 
 		if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
 			BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
@@ -172,24 +172,29 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 
 				if --vital readout
 					HF.TableContains(VitalCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					VitalReadout = VitalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
 
 				if --removed readout
 					HF.TableContains(RemovalCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
 
 				if --custom readout
 					HF.TableContains(CustomCategory, value.Identifier)
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					CustomReadout = CustomReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
 
 				if --bloodpressure readout
-					HF.TableContains(PressureCategory, value.Identifier) and ((strength > 130) or (strength < 70))
+					HF.TableContains(PressureCategory, value.Identifier)
+					and ((strength > 130) or (strength < 70))
+					and not HF.TableContains(IgnoredCategory, value.Identifier)
 				then
 					HighPressureReadout = HighPressureReadout
 						.. "\n"
@@ -270,6 +275,7 @@ NT.HematologyDetectable = {
 	"acidosis",
 	"alkalosis",
 	"bloodloss",
+	"bloodpressure",
 	"afimmunosuppressant",
 	"afthiamine",
 	"afadrenaline",
@@ -321,14 +327,14 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 	local CustomReadout = ""
 
 	--set base color values
-	local BaseColor = "100,230,230"
-	local NameColor = "100,230,230"
-	local LowColor = "100,230,230"
-	local MedColor = "100,230,230"
-	local HighColor = "100,230,230"
-	local VitalColor = "100,230,230"
-	local RemovalColor = "100,230,230"
-	local CustomColor = "100,230,230"
+	local BaseColor = "127,255,255"
+	local NameColor = "127,255,255"
+	local LowColor = "127,255,255"
+	local MedColor = "127,255,255"
+	local HighColor = "127,255,255"
+	local VitalColor = "127,255,255"
+	local RemovalColor = "127,255,255"
+	local CustomColor = "127,255,255"
 
 	if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
 		BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
@@ -378,7 +384,9 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 		if strength > 2 and HF.TableContains(NT.HematologyDetectable, prefab.Identifier.Value) then
 			-- add the affliction to the readout
 			if --low readout
-				(strength < LowMedThreshold) and not HF.TableContains(IgnoredCategory, value.Identifier)
+				(strength < LowMedThreshold)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				LowStrengthReadout = LowStrengthReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
@@ -387,6 +395,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 				(strength >= LowMedThreshold)
 				and (strength < MedHighThreshold)
 				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				MediumStrengthReadout = MediumStrengthReadout
 					.. "\n"
@@ -397,34 +406,47 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 			end
 
 			if --high readout
-				(strength >= MedHighThreshold) and not HF.TableContains(IgnoredCategory, value.Identifier)
+				(strength >= MedHighThreshold)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				HighStrengthReadout = HighStrengthReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
 			if --vital readout
 				HF.TableContains(VitalCategory, value.Identifier)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				VitalReadout = VitalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
 			if --removed readout
 				HF.TableContains(RemovalCategory, value.Identifier)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				RemovalReadout = RemovalReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
 			if --custom readout
 				HF.TableContains(CustomCategory, value.Identifier)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+				and not HF.TableContains(PressureCategory, value.Identifier)
 			then
 				CustomReadout = CustomReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
 			if --bloodpressure readout
-				HF.TableContains(PressureCategory, value.Identifier) and ((strength > 130) or (strength < 70))
+				HF.TableContains(PressureCategory, value.Identifier)
+				and ((strength > 130) or (strength < 70))
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
 			then
 				HighPressureReadout = HighPressureReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
-			elseif HF.TableContains(PressureCategory, value.Identifier) then
+			elseif
+				HF.TableContains(PressureCategory, value.Identifier)
+				and not HF.TableContains(IgnoredCategory, value.Identifier)
+			then
 				LowPressureReadout = LowPressureReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
