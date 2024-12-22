@@ -50,7 +50,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		local HighColor = "100,230,230"
 		local VitalColor = "100,230,230"
 		local RemovalColor = "100,230,230"
-		local GeneColor = "100,230,230"
+		local CustomColor = "100,230,230"
 
 		if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
 			BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
@@ -60,7 +60,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 			HighColor = table.concat(NTConfig.Get("NTSCAN_highcolor", 1), ",")
 			VitalColor = table.concat(NTConfig.Get("NTSCAN_vitalcolor", 1), ",")
 			RemovalColor = table.concat(NTConfig.Get("NTSCAN_removalcolor", 1), ",")
-			GeneColor = table.concat(NTConfig.Get("NTSCAN_genecolor", 1), ",")
+			CustomColor = table.concat(NTConfig.Get("NTSCAN_customcolor", 1), ",")
 		end
 
 		local LowMedThreshold = NTConfig.Get("NTSCAN_lowmedThreshold", 1)
@@ -102,7 +102,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		local HighStrengthReadout = ""
 		local VitalReadout = ""
 		local RemovalReadout = ""
-		local GeneReadout = ""
+		local CustomReadout = ""
 
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
@@ -185,7 +185,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 				if --custom readout
 					HF.TableContains(CustomCategory, value.Identifier)
 				then
-					GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+					CustomReadout = CustomReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 				end
 
 				if --bloodpressure readout
@@ -256,9 +256,9 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					.. RemovalReadout
 					.. "‖color:end‖"
 					.. "‖color:"
-					.. GeneColor
+					.. CustomColor
 					.. "‖"
-					.. GeneReadout
+					.. CustomReadout
 					.. "‖color:end‖"
 			)
 		end, 2000)
@@ -318,7 +318,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 	local HighStrengthReadout = ""
 	local VitalReadout = ""
 	local RemovalReadout = ""
-	local GeneReadout = ""
+	local CustomReadout = ""
 
 	--set base color values
 	local BaseColor = "100,230,230"
@@ -328,7 +328,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 	local HighColor = "100,230,230"
 	local VitalColor = "100,230,230"
 	local RemovalColor = "100,230,230"
-	local GeneColor = "100,230,230"
+	local CustomColor = "100,230,230"
 
 	if NTConfig.Get("NTSCAN_enablecoloredscanner", 1) then
 		BaseColor = table.concat(NTConfig.Get("NTSCAN_basecolor", 1), ",")
@@ -338,7 +338,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 		HighColor = table.concat(NTConfig.Get("NTSCAN_highcolor", 1), ",")
 		VitalColor = table.concat(NTConfig.Get("NTSCAN_vitalcolor", 1), ",")
 		RemovalColor = table.concat(NTConfig.Get("NTSCAN_removalcolor", 1), ",")
-		GeneColor = table.concat(NTConfig.Get("NTSCAN_genecolor", 1), ",")
+		CustomColor = table.concat(NTConfig.Get("NTSCAN_customcolor", 1), ",")
 	end
 
 	local LowMedThreshold = NTConfig.Get("NTSCAN_lowmedThreshold", 1)
@@ -417,7 +417,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 			if --custom readout
 				HF.TableContains(CustomCategory, value.Identifier)
 			then
-				GeneReadout = GeneReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
+				CustomReadout = CustomReadout .. "\n" .. value.Prefab.Name.Value .. ": " .. strength .. "%"
 			end
 
 			if --bloodpressure readout
@@ -476,9 +476,9 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 			.. RemovalReadout
 			.. "‖color:end‖"
 			.. "‖color:"
-			.. GeneColor
+			.. CustomColor
 			.. "‖"
-			.. GeneReadout
+			.. CustomReadout
 			.. "‖color:end‖"
 	)
 end
