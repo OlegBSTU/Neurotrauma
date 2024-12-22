@@ -325,13 +325,13 @@ NT.ConfigData = {
 		boxsize = 0.05,
 		description = "Scanner text color for removed organs (Heart removed, leg amputation).",
 	},
-	NTSCAN_genecolor = {
-		name = "Gene Color",
+	NTSCAN_customcolor = {
+		name = "Custom Category Color",
 		default = { "180,50,200" },
 		style = "R,G,B",
 		type = "string",
 		boxsize = 0.05,
-		description = "Scanner text color for genes (Husk genes, Mudraptor genes).",
+		description = "Scanner text color for the custom category.",
 	},
 
 	NTSCAN_VitalCategory = {
