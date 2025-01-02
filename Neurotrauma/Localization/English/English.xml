@@ -31,6 +31,11 @@
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
 
+<itemmsgmodifytable>[[attack]] Interact</itemmsgmodifytable>
+
+<operatingtabellabel>Surgery Table Upgrades</operatingtabellabel>
+
+
 <Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
