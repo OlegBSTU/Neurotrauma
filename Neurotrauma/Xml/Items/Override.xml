@@ -93,14 +93,9 @@
 
             <Propulsion force="0">
                 <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+                
                 <StatusEffect type="OnUse" target="Contained" Condition="-1.0">
-                    <RequiredItem items="batterycell" type="Contained" />
-                </StatusEffect>
-                <StatusEffect type="OnUse" target="Contained" Condition="-0.5">
-                    <RequiredItem items="fulguriumbatterycell" type="Contained" />
-                </StatusEffect>
-                <StatusEffect type="OnUse" target="Contained" Condition="-1.0">
-                    <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+                  <RequiredItem items="mobilebattery" type="Contained" />
                 </StatusEffect>
 
                 <StatusEffect type="OnUse" target="NearbyCharacters,Character" range="80" multiplyafflictionsbymaxvitality="true">
