@@ -31,6 +31,23 @@
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
 
+<entityname.analgesictank>Analgesic Tank</entityname.analgesictank>
+<entitydescription.analgesictank>A tank of gaseous analgesics that can be installed on a surgery table or used in an ambubag.</entitydescription.analgesictank>
+
+<entityname.anesthetictank>Anesthetic Tank</entityname.anesthetictank>
+<entitydescription.anesthetictank>A tank of gaseous anesthetics that can be installed on a surgery table or used in an ambubag.</entitydescription.anesthetictank>
+
+<entityname.dialysisunit>Dialysis Unit</entityname.dialysisunit>
+<entitydescription.dialysisunit>An advanced device, which will filter the blood of the patient when installed on surgery tables using a dialyzer.</entitydescription.dialysisunit>
+
+<entityname.dialyzer>Dialyzer</entityname.dialyzer>
+<entitydescription.dialyzer>An advanced filter, which can installed on a dialysis unit.</entitydescription.dialyzer>
+
+<itemmsgmodifytable>[[attack]] Interact</itemmsgmodifytable>
+
+<operatingtabellabel>Surgery Table Upgrades</operatingtabellabel>
+
+
 <Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
