@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+  <Manual_Description_Morphine>###Sprawdzenie umiejętności medycznych: 30
+ 
+ Umiarkowanie silny lek przeciwbólowy stosowany do wywołania @efektu-przeciwbólowego.
+ 
+ ###Sukces aplikacji:
+ +50% @efektu-przeciwbólowego
+ +10% Uzależnienia od opioidów
+ +10% @przedawkowania-opioidów
+ -30% @odstawienia-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmienia się na:
+ +100% @efektu-przeciwbólowego
+ +10% Uzależnienia od opioidów
+ +20% @przedawkowania-opioidów
+ -30% @odstawienia-opioidów.
+ 
+ ###Niepowodzenie aplikacji:
+ +30% @efektu-przeciwbólowego
+ +25% Uzależnienia od opioidów
+ +20% @przedawkowania-opioidów
+ -30% @odstawienia-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmienia się na:
+ +60% @efektu-przeciwbólowego
+ +25% Uzależnienia od opioidów
+ +40% @przedawkowania-opioidów
+ -30% @odstawienia-opioidów.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Sprawdzenie umiejętności medycznych: 39
+ Nalokson jest stosowany w leczeniu odstawienia od opioidów, przedawkowania opioidów i w analgezji. Efekty występują w ciągu 30 sekund.
+ 
+ ###Sukces aplikacji:
+ -60% odstawienia od opioidów
+ -60% przedawkowania opioidów
+ -60% analgezji
+ 
+ ###Niepowodzenie aplikacji:
+ -30% odstawienia od opioidów
+ -30% przedawkowania opioidów
+ -60% analgezji
+ 50% szansa na wprowadzenie pacjenta w stan śpiączki.</Manual_Description_Naloxone>
+  <Manual_Description_Needle>Igła jest jednorazowym narzędziem do zmniejszenia siły @pneumothorax do 5% i zapobiegania jego pogorszeniu. Jednakże, nie leczy w pełni pneumothoraxu. Użycie igły na pacjencie bez pneumothoraxu spowoduje u niego pneumothorax.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###Sprawdzenie umiejętności medycznych: 35
+ Słoik zawierający bardzo lotną substancję, podatną na wybuch przy uderzeniu lub narażeniu na ciepło. Funkcjonuje dokładnie tak samo jak @sodium-nitroprusside, z wyjątkiem sprawdzenia umiejętności medycznych wynoszącego 35.
+ 
+ ###Sukces aplikacji:
+ 400 sekund obniżonego ciśnienia krwi
+ 
+ ###Niepowodzenie aplikacji:
+ 200 sekund obniżonego ciśnienia krwi</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###Sprawdzenie umiejętności medycznych: 15
+ 
+ Słaby środek przeciwbólowy stosowany do wywołania @efektu-przeciwbólowego.
+ 
+ ###Sukces aplikacji:
+ +20% @efektu-przeciwbólowego
+ +5% Uzależnienie od opioidów
+ +8,75% @przedawkowanie-opioidów
+ -15% @odstawienie-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmienia się na:
+ +40% @efektu-przeciwbólowego
+ +5% Uzależnienie od opioidów
+ +18,75% @przedawkowanie-opioidów
+ -15% @odstawienie-opioidów.
+ 
+ ###Niepowodzenie aplikacji:
+ +10% @efektu-przeciwbólowego
+ +20% Uzależnienie od opioidów
+ +15% @przedawkowanie-opioidów
+ -15% @odstawienie-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmienia się na:
+ +20% @efektu-przeciwbólowego
+ +20% Uzależnienie od opioidów
+ +30% @przedawkowanie-opioidów
+ -15% @odstawienie-opioidów.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>Skalpel do pobierania narządów jest używany do wyjęcia narządu, którego nazwa nosi w czasie przeszczepu narządów. Istnieje jeden rodzaj dla każdego narządu, jak następuje: mózg, serce, płuca, wątroba i nerki.
+ 
+ - Skalpel do mózgu ma sprawdzian umiejętności medycznych wynoszący 100, aby niezawodnie usunąć mózg.
+ 
+ - Skalpel do serca ma sprawdzian umiejętności medycznych wynoszący 60, aby niezawodnie usunąć serce.
+ 
+ - Skalpel do płuc ma sprawdzian umiejętności medycznych wynoszący 50, aby niezawodnie usunąć płuca.
+ 
+ - Skalpel do wątroby ma sprawdzian umiejętności medycznych wynoszący 40, aby niezawodnie usunąć wątrobę.
+ 
+ - Skalpel do nerek ma sprawdzian umiejętności medycznych wynoszący 30, aby niezawodnie usunąć nerki.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>### Sprawdzenie umiejętności medycznych: 45
+ 
+ Szósty krok w chirurgii osteosyntetycznej.
+ 
+ ### Sukces aplikacji:
+ 
+ Wylecza wszystkie złamania kończyny, na której zostały użyte implanty, zużywając 25% z nich.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +5% krwawienia
+ +5% uszkodzenia wewnętrznego.</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### Sprawdzenie umiejętności medycznych: 22
+ 
+ Ulepszona wersja @opatrunków, które mogą skuteczniej leczyć rany.
+ 
+ ### Sukces aplikacji:
+ 
+ \\+100% @opatrzonych
+ \\-48% krwawienia
+ \\-24% @oparzeń
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ \\+50% @opatrzonych
+ \\-24% krwawienia
+ \\-12% @oparzeń
+ 
+ Nakładanie plastiseal zastąpi również brudne opatrunki na kończynie, na którą jest nakładany opatrunek. Plastiseal może być również stosowany po @odciągniętej-skórze w celu leczenia oparzeń trzeciego stopnia.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>Propofol nie jest już możliwe do wytworzenia.
+ 
+ Propofol to substancja chemiczna używana do wywołania nieświadomości u człowieka. Najlepiej stosować go w chirurgii wykonywanej poza statkiem, ponieważ zapobiega to pacjentowi doznaniu @traumatycznego szoku. Nie wymaga sprawdzania umiejętności medycznych.
+ 
+ Po podaniu, osoba otrzymująca propofol stopniowo zaczyna odczuwać @znieczulenie w tempie 0,3% na sekundę. Od 1% do 15% siły, gracz odczuwa 5% @znieczulenia miejscowego.
+ 
+ Gdy dolegliwość postępuje powyżej 16%, gracz wpada w stan @nieprzytomności i pozostaje nieprzytomny, aż do momentu, gdy dolegliwość postępuje do 100% przez oczekiwanie lub zostanie zmniejszona do 0% przez @anaparalityk. W tym czasie gracz nie odczuwa @intensywnego bólu / @bólu brzucha / @bólu klatki piersiowej, a na nim można przeprowadzić operację.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>Ekstrakt Raptor Bane jest stosowany w leczeniu @kwasicy poprzez wywołanie u pacjenta @wymiotów, co prowadzi do uzyskania @alkalozy. Pamiętaj, że cierpienie to efekt, więc w tłumaczeniu słowa "affliction" należy użyć słowa "efekt".</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### Sprawdzenie umiejętności medycznych: 30
+ 
+ Czwarty krok w większości procedur chirurgicznych. Retraktory nie będą działać bez 100% @zaciśniętej-krwawienia.
+ 
+ ### Sukces aplikacji:
+ 
+ Daje pacjentowi @odciągniętą-skórę na kończynie, na której użyto narzędzia.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +10% @uszkodzenia-wewnętrznego</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>Roztwór Ringer'a jest stosowany do zwiększenia ciśnienia krwi. W przeciwieństwie do soli fizjologicznej, roztwór Ringer'a nie spowoduje kwasicy i tylko zwiększy ciśnienie krwi. Należy jednak pamiętać, że może zwiększyć ciśnienie krwi do niepożądanych poziomów.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###Sprawdzenie umiejętności medycznych: 10
+ Sól fizjologiczna to płyn stosowany do leczenia @alkalozy poprzez wywołanie @kwasicy.
+ 
+ ###Sukces aplikacji:
+ Zwiększa ciśnienie krwi
+ +20% @kwasicy
+ 
+ ###Niepowodzenie aplikacji:
+ Zwiększa ciśnienie krwi
+ +12% @kwasicy</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###Sprawdzenie umiejętności medycznych: 30
+ Drugi krok we wszystkich procedurach chirurgicznych. Skalpel nie będzie działał bez @analgezji.
+ 
+ ###Sukces aplikacji:
+ Nadaje @nacięcie-chirurgiczne na kończynie, na której użyto narzędzia, i usunie wszelkie gipsy lub @bandaże.
+ 
+ ###Niepowodzenie aplikacji:
+ +15% krwawienia
+ +10% rozerwań</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###Sprawdzenie umiejętności medycznych: 10
+ Lek na obniżenie ciśnienia krwi. Przyjmowanie azotanu sodu spowoduje obniżenie ciśnienia krwi o 45%. Podczas działania tego leku, @migotanie wywołane przez @niedociśnienie zostanie zmniejszone.
+ 
+ ###Sukces aplikacji:
+ Daje 200 sekund obniżonego ciśnienia krwi.
+ 
+ ###Niepowodzenie aplikacji:
+ Daje 120 sekund obniżonego ciśnienia krwi.</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>### Sprawdzenie umiejętności medycznych: 45
+ 
+ Implanty stosowane do leczenia @urazu-rdzenia-kręgowego.
+ 
+ ### Sukces aplikacji:
+ 
+ Skuteczne użycie implantów wyleczy kręgosłup pacjenta. Należy jednak zauważyć, że jeśli pacjent ma złamanie szyi, po prostu wróci.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +5% krwawienie
+ +5% @uszkodzenie-wewnętrzne</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>Specjalna torba, która utrzymuje ciało w stanie stazy w celu transportu do odpowiedniego leczenia w przypadku poważnych obrażeń. Torba stazy jest noszona w slocie skafandra nurkowego, a jej noszenie będzie zużywać jej stan o 0,25% na sekundę, co oznacza, że torba stazy będzie działać przez 400 sekund lub około 6 i pół minuty. Noszenie torby stazy ochroni użytkownika przed ciśnieniem do 10 000 metrów, pozwoli na przeciąganie użytkownika z pełną prędkością i zatrzyma negatywne skutki następujących dolegliwości:
+ 
+ - @zawał-serca
+ - @zatrzymanie-oddechu
+ - @atak-serca
+ - @uraz-neurologiczny
+ - @uszkodzenie-nerek
+ - @uszkodzenie-wątroby
+ - @uszkodzenie-serca
+ - @uszkodzenie-płuc
+ - @uszkodzenie-kości
+ - @posocznica
+ - @hipoksemia
+ - @hipotonia
+ - @nadciśnienie
+ - @kwasica
+ - @alkaloza
+ - @krwotok-wewnętrzny
+ - @udar
+ - @drgawki
+ - @śpiączka
+ - @zainfekowane-rany
+ - Krwawienie
+ 
+ Należy zauważyć, że nie można przeprowadzać operacji na osobach znajdujących się w torbie stazy. Muszą zostać usunięci z torby przed operacją. Pacjenci usunięci z torby stazy będą mieli @zawał-serca i będą potrzebować leczenia tych dolegliwości.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###Sprawdzenie umiejętności medycznych: Brak
+ Rozrzedzacz krwi. Użycie streptokinazy zapobiegnie naturalnej regeneracji krwawienia i pogorszy @udar mózgu, gdy jest aktywna.
+ 
+ ###Po zastosowaniu:
+ - W pełni leczy @zawał serca i @wstrząs hemotransfuzyjny.</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>Stół operacyjny to przedmiot, który można kupić w stacji lub wykonać i umieścić na ziemi. Pacjent nie musi być na stole, musi być tylko w pobliżu. Stół operacyjny zapewnia sztuczne wentylowanie dla każdego w pobliżu i zapobiega @traumatycznemu wstrząsowi, pod warunkiem, że pacjent jest pod @analgezją. Dodatkowo, stół zmniejszy niedobór tlenu i zapobiegnie @zatrzymaniu-oddechu z powodu zwiększonej @kwasicy.
+ 
+ Stół ma również wyprowadzenia przewodów, które można wykorzystać do przesyłania ważnych informacji, takich jak ciśnienie krwi, @uraz-neurologiczny, tętno i częstość oddechów.
+ 
+ Należy zauważyć, że stół operacyjny jest funkcjonalnie identyczny z łóżkiem szpitalnym. Inne łóżka zapobiegają traumatycznemu wstrząsowi, jeśli na nich leżysz, ale nie zapewniają sztucznego wentylowania.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### Sprawdzenie umiejętności medycznych: 45
+ 
+ Piąty krok w chirurgii osteosyntetycznej.
+ 
+ ### Sukces aplikacji:
+ 
+ Prawidłowe użycie wiertła chirurgicznego spowoduje, że pacjent otrzyma wiertłowane kości na kończynie, na której narzędzie zostało użyte.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +15% krwawienie
+ +10% uszkodzenie wewnętrzne</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### Sprawdzenie umiejętności medycznych: 45
+ 
+ Piąty krok w @operacji-amputacji.
+ 
+ ### Sukces aplikacji:
+ 
+ Prawidłowe użycie piły chirurgicznej spowoduje, że pacjent otrzyma @piłowane-kości na kończynie, na której narzędzie zostało użyte.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +15% krwawienia
+ +6% @uszkodzenia-wewnętrznego
+ +4% skaleczenia</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### Sprawdzenie umiejętności medycznych: 30
+ 
+ Ostatni krok we wszystkich procedurach chirurgicznych. Bardzo przydatny również do leczenia większości ran krwawiących.
+ 
+ ### Sukces aplikacji:
+ 
+ Usuwa wszystkie dolegliwości związane z chirurgią (takie jak @surgery-incision)
+ -20% ran postrzałowych
+ -20% skaleczeń
+ -20% ran po ugryzieniach
+ -20% głębokich obrażeń tkanek
+ -40% krwawienia
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ +6% @internal-damage</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### Sprawdzenie umiejętności medycznych: 10
+ 
+ Pojemnik z tabletkami witaminy B1 stosowanymi do wspomagania gojenia się organów.
+ 
+ ### Sukces aplikacji:
+ 
+ 200 sekund czasu gojenia organów
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ 120 sekund czasu gojenia organów
+ 
+ 200 sekund czasu gojenia organów wyleczy około 8% uszkodzeń organów (z wyłączeniem @neurotrauma), a 120 sekund wyleczy 4,8%. Jest to dodatkowe leczenie wraz z naturalnym gojeniem się organów. Tiamina nie może przywrócić martwych organów.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>Sprawdzenie umiejętności medycznych: 30
+ Przedmiot używany do ograniczenia przepływu krwi do określonej kończyny w celu zmniejszenia krwawienia regularnego i tętniczego. 
+ Opaska uciskowa nie będzie działać bez krwawienia tętniczego. Może zostać odcięta za pomocą nożyc do traumatologii.
+ 
+ ###Powodzenie aplikacji:
+ Tymczasowo zatrzymuje negatywne skutki krwawienia tętniczego i powoli leczy krwawienie regularne, ale spowoduje gangrenę, jeśli zostanie nałożona na dłuższy czas. Użycie opaski uciskowej na głowie spowoduje 15% neurotraumy i 200% niedotlenienia u ofiary.
+ 
+ ###Niepowodzenie aplikacji:
+ +6% urazu tępego.</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###Sprawdzenie umiejętności medycznych: 10
+ Para nożyc używanych do usuwania gipsów i opatrunków.
+ 
+ ###Sukces aplikacji:
+ Usuwa wszystkie gipsy, opatrunki i karty triażowe na kończynie, na której użyto nożyc.
+ 
+ ###Niepowodzenie aplikacji:
+ +15% krwawienie
+ +10% skaleczenia</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>###Sprawdzenie umiejętności medycznych: 30
+ Para pęset używanych do usuwania uszkodzonego tkanki lub kul.
+ 
+ ###Sukces aplikacji:
+ -5% @uszkodzenia-wewnętrzne
+ -5% urazy tępe
+ -5% @ciała-obce
+ +5% rany szarpane
+ 
+ ###Niepowodzenie aplikacji:
+ +6% @uszkodzenia-wewnętrzne
+ 
+ Pęsety mogą działać bez @odciągniętej-skóry, jeśli kończyna, którą się pęsetuje, ma rany postrzałowe lub głębokie obrażenia tkanek. Używanie pęsety przez rany postrzałowe lub głębokie obrażenia tkanek spowoduje 5% @traumatyczny-wstrząs. Usuwanie ciał obcych również ma 5% szansę na uzyskanie skrobaka.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###Sprawdzenie umiejętności medycznych: 60 (30 jeśli pacjent ma @analgezję)
+ Klucz do rur jest używany do leczenia @przemieszczeń. Aby leczyć przemieszczenia, przeciągnij go na przemieszczoną kończynę w interfejsie zdrowia i użyj go jako leczenia, tak jakbyś użył bandaża.
+ 
+ ###Sukces aplikacji:
+ Wylecza przemieszczenie na tej kończynie.
+ 
+ ###Niepowodzenie aplikacji:
+ Powoduje złamanie na tej kończynie.</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>Schock pourazowy jest bardzo niebezpieczny, a jeśli pacjent nabędzie go w jakimkolwiek momencie, natychmiast przerwij operację, przywróć go do bliskiego otoczenia stołu operacyjnego lub ponownie podaj mu środek uspokajający. Wstrząs pourazowy zmniejszy swoją siłę 4-krotnie szybciej, jeśli ofiara jest pod wpływem znieczulenia lub ma znieczulenie miejscowe, będąc w pobliżu stołu operacyjnego.
+ 
+ ---
+ ##Przyczyny:
+ 
+ - Wykonywanie niebezpiecznych operacji (bez stołu lub bez znieczulenia)
+ - Używanie pęset przez rany postrzałowe lub głębokie obrażenia tkanek (powoduje bardzo niewielki szok, który zazwyczaj można zignorować)
+ 
+ ##Efekty:
+ 
+ - Hipotensja (i to dużo)
+ - Zatrzymanie akcji serca (powyżej 40%)
+ - Zatrzymanie oddechu (powyżej 30%)
+ - Neurotrauma (równa sile podzielonej przez 100 na sekundę, 10% lub więcej to punkt, w którym przewyższa naturalną regenerację)
+ - Psychoza (równa sile podzielonej przez 100 na sekundę)
+ 
+ ##Leczenie:
+ 
+ - Przerwanie operacji i oczekiwanie
+ - Przywrócenie do bliskiego otoczenia stołu operacyjnego i upewnienie się, że pacjent jest znieczulony
+ 
+ ##Zapobieganie:
+ 
+ - Upewnienie się, że operacja jest bezpieczna przed przekroczeniem etapu @retracted-skin
+ - Upewnienie się, że @analgesia nie kończy się w trakcie operacji</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>Drugi krok we wszystkich procedurach chirurgicznych. Posiadanie nieszczelnego nacięcia chirurgicznego spowoduje utratę krwi w wysokości 0,7% na sekundę dla każdego nacięcia, a posiadanie nacięcia chirurgicznego bez znieczulenia lub innego środka uspokajającego spowoduje wstrząs pourazowy w wysokości 2% na sekundę dla każdego nacięcia. Ta dolegliwość nie spowoduje wstrząsu pourazowego, jeśli zostanie wykonana bez stołu operacyjnego, co czyni bezpiecznym krwawienie bez niego.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>Trzeci krok w większości procedur chirurgicznych. Zaciskanie krwawienia zapobiegnie utracie krwi spowodowanej nacięciem chirurgicznym. Ten efekt jest wymagany do kolejnego kroku, czyli użycia odwodników.</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>Czwarty krok w większości procedur chirurgicznych. Wycofywanie skóry bez obecności stołu operacyjnego spowoduje 2% szoku traumatycznego na sekundę dla każdego przypadku wycofywania skóry. Większość procedur chirurgicznych, takich jak chirurgia osteosyntetyczna czy przeszczep organów, wywodzi się z tego kroku.</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>Piąty krok w chirurgii osteosyntetycznej. Wiercenie kości bez pobliskiego stołu operacyjnego spowoduje 1,5% szoku pourazowego na sekundę dla każdego przypadku wiercenia kości. (Note: I did not translate "osteosynthetic-surgery" and "traumatic-shock" as there are no direct translations for these terms in Polish. I left them in English.)</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>Piąty krok w operacji amputacji. Piłowanie kości bez obecności stołu operacyjnego spowoduje 1,5% szoku traumatycznego na sekundę dla każdego przypadku piłowania kości. (Note: Some of the technical terms may not have direct translations in Polish, so they may be left in English or explained in context.)</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##Kroki:
+ 
+ 1. Środek znieczulający według wyboru
+ 2. @skalpel
+ 3. @hemostat
+ 4. @retraktory
+ 5. @szwy</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##Kroki:
+ 
+ 1. Środek znieczulający według wyboru
+ 2. @skalpel
+ 3. @hemostat
+ 4. @odciągacze
+ 5. @wiertło-chirurgiczne
+ 6. @implanty-osteosyntezy
+ 7. @szwy
+ 
+ Należy wykonać na każdej części ciała w celu leczenia @śmierci-kości.</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>Kroki:
+ 
+ 1. Środek znieczulający według wyboru
+ 2. Skalpel
+ 3. Balon endowaskularny
+ 4. Stent medyczny
+ 5. Sztuczne szwy</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## Kroki:
+ 
+ 1. Środek znieczulający według wyboru (@analgezja)
+ 2. @skalpel
+ 3. @hemostat
+ 4. @odciągacze
+ 5. @piła-chirurgiczna
+ 6. Opcjonalnie: zastąpienie amputowanej kończyny bionikami lub ludzkimi kończynami.
+ 7. @szwy
+ 8. Opcjonalnie: kończyny cybernetyczne (nie implanty bioniczne) mogą być umieszczone na amputowanej kończynie. Operacja nie musi być otwarta, aby przymocować cyberkończyny. (Wymaga dodatku NT Cybernetics)
+ 
+ Wykonanie tej procedury nie przyniesie skutku, jeśli kończyna ma więcej niż 15% @gangrena.
+ 
+ Ta procedura powoduje @chirurgiczna-amputacja.</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>Upewnij się, że użyjesz @azatiopryny przed umieszczeniem narządu i upewnij się, że ich odporność wynosi 10% lub mniej. Jeśli uszkodzenie narządu wynosi 100% po jego umieszczeniu, oznacza to, że został odrzucony. Nie dotyczy to, jeśli odrzucenie narządu jest wyłączone w konfiguracji.
+ 
+ ##Kroki:
+ 
+ 1. Środek znieczulający według wyboru
+ 2. @skalpel
+ 3. @hemostat
+ 4. @odciągacze
+ 5. Odpowiednie @narzędzia-do-pobierania-organów
+ 6. Odpowiedni przedmiot do przeszczepu narządu (musi to być zrobione dwa razy dla nerek)
+ 7. @szwy</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>Chirurgiczne płachty są elementem odzieży używanym do zwiększenia sterylności noszącego i tym samym zmniejszenia ryzyka zakażenia chirurgicznego.
+ 
+ +100 Bazowa sterylność
+ -50% Zysk wstrząsu traumatycznego podczas noszenia.</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>Maska chirurgiczna to przedmiot noszony na ciele, który zwiększa sterylność, zmniejszając ryzyko zakażenia pooperacyjnego.
+ 
+ -10% Skaleczeń
+ -20% Krwawienia</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>Ubranie chirurga to przedmiot do noszenia, który zwiększa sterylność podczas noszenia, zmniejszając ryzyko zakażenia pooperacyjnego.
+ 
+ -10% Siła uderzenia tępego
+ -10% Rozdarcia
+ -10% Rany po ugryzieniach</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>Zakażenie pooperacyjne to mechanizm powodujący @sepsa w zależności od stopnia sterylności otoczenia pacjenta.
+ 
+ ---
+ 
+ Następujące czynniki _zwiększą_ sterylność:
+ 
+ - Pacjent noszący @chirurgiczne-nakrycie
+ - Osoby w pobliżu noszące @maski-chirurgiczne
+ - Posiadanie umiejętności chirurgicznych (sterylność zyskiwana na podstawie równania: 10 + umiejętności chirurgiczne / 5)
+ - Posiadanie @maści
+ 
+ ---
+ 
+ Następujące czynniki _zmniejszą_ sterylność:
+ 
+ - Pacjent bez @chirurgiczne-nakrycie
+ - Osoby w pobliżu bez @maski-chirurgiczne
+ 
+ ---
+ 
+ Przy minimalnej sterylności istnieje 10% szansa na nabycie @sepsa co dwie sekundy przez pacjenta.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>Mannitol Plus to przedmiot talentowy, co oznacza, że wymaga talentu do wykonania. Po podaniu, przez okres 10 sekund, leczy 30% @neurotrauma, nawet jeśli pacjent jest niestabilny, i stosuje efekty @mannitol bez powodowania uszkodzeń wątroby / płuc / serca / nerek / uszkodzeń organów.</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>Leczenie eksperymentalne to przedmiot talentu odblokowywany przez klasę Chirurga. Może on losowo dawać efekty zarówno negatywne, jak i pozytywne, chociaż zwykle daje więcej pozytywnych efektów niż negatywnych.
+ 
+ Istnieje teoretyczna szansa na uzyskanie nieskończonej liczby efektów z jednego użycia tego przedmiotu. Wyobraź sobie rzucanie monetą i przestawianie się tylko wtedy, gdy wypadnie orzeł. Za każdym razem, gdy wypadnie reszka, otrzymujesz dodatkowy efekt z tego przedmiotu.
+ 
+ Lista możliwych pozytywnych efektów jest następująca:
+ 
+ ---
+ - Wigor (losowo wybiera z siły 200-400%)
+ - Hiperaktywność (losowo wybiera z siły 200-400%)
+ - Odporność na psychozę (losowo wybiera z siły 200-400%)
+ - Odporność na zakażenie skorupą (losowo wybiera z siły 200-400%)
+ - Odporność na paraliż (losowo wybiera z siły 300-600%)
+ - @analgezja (losowo wybiera z siły 20-100%)
+ - @anestezja (losowo wybiera z siły 1-100%)
+ - @maść (losowo wybiera z siły 20-100%)
+ - Stymulant bojowy (losowo wybiera z siły 30-100%)
+ - Stabilizacja ciśnienia (losowo wybiera z siły 30-100%)
+ - Pełne uleczenie (leczy 20-100% @ran, uszkodzenia narządów, @neurotraumy i @krwotoki oraz całkowicie leczy @sepsę)
+ 
+ ---
+ 
+ Lista możliwych negatywnych efektów jest następująca:
+ 
+ ---
+ - Dowolne @rany (losowo wybiera z krwawienia 30-80%, wybiera z 5-20% dla wszystkiego innego)
+ - Ogłuszenia na 2-15 sekund</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>Karty triażowe są używane do oznaczania pacjentów na podstawie ciężkości urazu. Istnieją dwa rodzaje kart triażowych, ręczne i automatyczne. Ręczna karta triażowa działa w następujący sposób:
+ 
+ Przyczepienie karty triażowej do nóg oznacza ją jako zieloną, co oznacza, że pacjent ma minimalne obrażenia i najprawdopodobniej przeżyje.
+ Przyczepienie karty triażowej do ramion oznacza ją jako żółtą, co oznacza, że pacjent jest ranny i najprawdopodobniej umrze, jeśli leczenie zostanie opóźnione na dłuższy czas.
+ Przyczepienie karty triażowej do tułowia oznacza ją jako czerwoną, co oznacza, że pacjent jest krytycznie ranny i potrzebuje natychmiastowej pomocy.
+ Przyczepienie karty triażowej do głowy oznacza ją jako czarną, co oznacza, że pacjent jest albo martwy, albo bardzo bliski śmierci.
+ 
+ Automatyczne karty triażowe ocenią stan zdrowia ofiary na podstawie jej dolegliwości i witalności i przypiszą jej ocenę zieloną, żółtą, czerwoną lub czarną.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>Słoik na mózg jest przedmiotem talentu odblokowywanym przez Chirurga. W przeciwieństwie do chłodzonych pojemników, które mogą tylko opóźnić rozkład mózgu, a nie całkowicie go zatrzymać, słoik na mózg nie tylko może przechowywać mózg czas nieokreślony, ale będzie powoli naprawiać mózg w tempie 1% na 10 sekund.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>Zastępuje mózg pacjenta po jego usunięciu. Chroni przed nabyciem neurotraumy z powodu braku mózgu. Nic więcej nie robi.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>Daje poziomy umiejętności po przeczytaniu
+ 
+ ### Z włączoną umiejętnością chirurgiczną:
+ 
+ +8 umiejętności chirurgicznej
+ +2 umiejętności medycznej
+ 
+ ### Z wyłączoną umiejętnością chirurgiczną:
+ 
+ +8 umiejętności medycznej</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>Ramię cybernetyczne, które można przyczepić do każdego chirurgicznie amputowanego gniazda ramienia. Może być usunięty za pomocą łomu. Powoduje to traumatyczną amputację wybranej kończyny.
+ 
+ ### Zalety cyberkończyn:
+ 
+ - Doskonałe w wytrzymywaniu ostrzału bez awarii.
+ - Doskonałe w wytrzymywaniu ataków ze strony stworzeń bez awarii lub pęknięć.
+ - Idealne do wytrzymywania ataków, które w przeciwnym razie spowodowałyby zagrażające życiu krwawienie.
+ - Kiedy jest dobrze utrzymywany, jest znacznie mniej podatny na przymusową amputację podczas ataku.
+ - Nie pęka ani nie przemieszcza się. Upewnij się, że naprawisz wszelkie przemieszczenia lub pęknięcia PRZED dodaniem cyberkończyny, w przeciwnym razie będzie ona trwała do czasu zdjęcia kończyny.
+ 
+ #### Wady cyberkończyn:
+ 
+ - Nie mieszają się dobrze z wodą. Nie porażą cię prądem, ale z czasem się zepsują, jeśli nie będziesz nosił kombinezonu.
+ - Wymaga naprawy w przypadku uszkodzenia.
+ - Kosztowna konserwacja, zwłaszcza jeśli twoja łódź podwodna nie ma wystarczającego źródła stali i układów FPGA.
+ - Kosztowne/drogie do wykonania/kupienia.
+ - Gwałtownie odłączają się w przypadku krytycznego uszkodzenia przez utratę materiału.
+ 
+ ### Wymagane umiejętności mechaniczne: 70
+ 
+ ### Sukces aplikacji:
+ 
+ Nakłada cyberkończynę na wybraną kończynę i leczy wszelkie wewnętrzne uszkodzenia spowodowane wcześniejszymi nieudanymi próbami.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ Nakłada 20% @uszkodzenia-wewnętrzne na kończynę. Nie usuwa cyberkończyny.
+ 
+ ### Jak dodać:
+ 
+ Najpierw wykonaj operację amputacji na wybranej kończynie, a następnie użyj cyberkończyny na wybranej kończynie.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>Cybernetyczna noga, która może być przymocowana do każdego chirurgicznie amputowanego gniazda nogi. Może być usunięta za pomocą łomu. Powoduje to traumatyczną amputację wybranej kończyny.
+ 
+ ### Zalety cyberkończyn:
+ 
+ - Doskonale radzą sobie z wytrzymywaniem ognia bez awarii.
+ - Doskonałe w absorbowaniu ataków ze strony stworzeń bez awarii lub pęknięć.
+ - Idealne do wytrzymywania ataków, które w przeciwnym razie spowodowałyby zagrażające życiu krwawienie.
+ - Kiedy są dobrze utrzymywane, są znacznie mniej podatne na przymusową amputację podczas ataku.
+ - Nie pękają ani nie przemieszczają się. Upewnij się, że naprawisz wszelkie przemieszczenia lub pęknięcia PRZED dodaniem cyberkończyny, w przeciwnym razie będzie ona trwała aż do zdjęcia kończyny.
+ 
+ #### Wady cyberkończyn:
+ 
+ - Nie mieszają się dobrze z wodą. Nie porażą cię prądem, ale z czasem się zepsują, jeśli nie będziesz nosił kombinezonu.
+ - Wymagają naprawy w przypadku uszkodzenia.
+ - Kosztowna konserwacja, zwłaszcza jeśli twoja łódź podwodna nie ma wystarczającej ilości stali i układów FPGA.
+ - Kosztowne/drogie do wykonania/kupienia.
+ - Gwałtownie odłączają się w przypadku krytycznego uszkodzenia przez utratę materiału.
+ 
+ ### Wymagane umiejętności mechaniczne: 70
+ 
+ ### Sukces aplikacji:
+ 
+ Nakłada cyberkończynę na wybraną kończynę i leczy wszelkie wewnętrzne uszkodzenia spowodowane poprzednimi nieudanymi próbami.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ Nakłada 20% @uszkodzenia-wewnętrzne na kończynę. Nie usuwa cyberkończyny.
+ 
+ ### Jak dodać:
+ 
+ Najpierw wykonaj operację amputacji na wybranej kończynie, a następnie użyj cyberkończyny na wybranej kończynie.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>Masz @cybernetyczną rękę w tym gnieździe.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>Masz @cybernetyczną nogę w tym gnieździe.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>Główną szkodą wynikającą z korzystania z cyberkończyn jest uszkodzenie ich elektroniki podczas narażenia na wodę.
+ 
+ Podczas otrzymywania uszkodzeń cyberkończyny, każdy rodzaj uszkodzenia ma szansę spowodować różne rodzaje i ilości uszkodzeń specyficznych dla cyberkończyny, zamiast normalnego typu uszkodzenia.
+ 
+ Ilość uszkodzonej elektroniki zależy od ilości @material-loss.
+ 
+ ## Spowodowane przez:
+ 
+ - Bycie w wodzie bez skafandra
+ - 75% szansy, że @burns spowodują 200% swojego uszkodzenia jako uszkodzona elektronika
+ - 85% szansy, że rany postrzałowe spowodują 75% swojego uszkodzenia jako uszkodzona elektronika
+ - 50% szansy, że rany po ugryzieniach spowodują 25% swojego uszkodzenia jako uszkodzona elektronika
+ - 50% szansy, że uszkodzenia tkanki głębokiej spowodują 50% swojego uszkodzenia jako uszkodzona elektronika
+ - 50% szansy, że urazy pourazowe spowodują 100% swojego uszkodzenia jako uszkodzona elektronika
+ - 75% szansy, że @internal-damage spowoduje 100% swojego uszkodzenia jako uszkodzona elektronika
+ - 75% szansy, że @foreign-bodies spowodują 75% swojego uszkodzenia jako uszkodzona elektronika
+ 
+ ## Efekty:
+ 
+ - Kończyna czasami przestaje działać tymczasowo, częstotliwość skaluje się ze siłą
+ - Kończyna staje się nieużywalna (przy 99% lub więcej)
+ 
+ ## Leczenie:
+ 
+ - @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>Przy otrzymaniu obrażeń w cyberkończynę, każdy rodzaj obrażeń ma szansę spowodować różne rodzaje i ilości uszkodzeń specyficznych dla cyberkończyny, zamiast normalnego typu obrażeń.
+ 
+ ## Spowodowane przez:
+ 
+ - 85% szansy na to, że @oparzenia spowodują 25% swojego obrażenia jako zagięty metal
+ - 50% szansy na to, że @rany kłute spowodują 25% swojego obrażenia jako zagięty metal
+ - 50% szansy na to, że @rany po ugryzieniach spowodują 50% swojego obrażenia jako zagięty metal
+ - 85% szansy na to, że @uszkodzenia tkanki głębokiej spowodują 100% swojego obrażenia jako zagięty metal
+ - 75% szansy na to, że @trauma siły uderzenia spowoduje 200% swojego obrażenia jako zagięty metal
+ 
+ ## Efekty:
+ 
+ - Sprawia, że jesteś wolniejszy, jeśli dotyczy to cybernogi, skaluje się z siłą
+ - Kończyna staje się niezdatna do użytku (przy 99% lub więcej)
+ 
+ ## Leczenie:
+ 
+ - @narzędzie spawalnicze</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>Spowodowane przez:
+ 
+ - Luźne śruby podczas przeprowadzki (30% lub więcej)
+ - 75% szansy na to, że rany cięte spowodują 25% swojego uszkodzenia jako luźne śruby
+ - 80% szansy na to, że uszkodzenie tkanki głębokiej spowoduje 100% swojego uszkodzenia jako luźne śruby
+ - 50% szansy na to, że uraz zamknięty spowoduje 50% swojego uszkodzenia jako luźne śruby
+ - 75% szansy na to, że uszkodzenie wewnętrzne spowoduje 100% swojego uszkodzenia jako luźne śruby
+ - 50% szansy na to, że rany po ugryzieniach spowodują 50% swojego uszkodzenia jako luźne śruby
+ - 75% szansy na to, że ciała obce spowodują 75% swojego uszkodzenia jako luźne śruby
+ 
+ Efekty:
+ 
+ - Luźne śruby i utrata materiału
+ 
+ Leczenie:
+ 
+ - Śrubokręt</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>Przy otrzymaniu obrażeń przez cyberkończynę, każdy rodzaj obrażeń ma szansę spowodować różne rodzaje i ilości uszkodzeń specyficznych dla cyberkończyny, zamiast normalnego typu obrażeń.
+ 
+ Ilość utraty materiału zwiększa się wraz z ilością @loose-screws.
+ 
+ ## Spowodowane przez:
+ 
+ - @loose-screws
+ - 75% szansy, że rany szarpane spowodują utratę materiału w wysokości 25% ich obrażeń
+ - 80% szansy, że rany postrzałowe spowodują utratę materiału w wysokości 80% ich obrażeń
+ - 75% szansy, że rany od ugryzień spowodują utratę materiału w wysokości 60% ich obrażeń
+ - 100% szansy, że głębokie obrażenia tkanek spowodują utratę materiału w wysokości 100% ich obrażeń
+ - 80% szansy, że obce ciała spowodują utratę materiału w wysokości 50% ich obrażeń
+ 
+ ## Efekty:
+ 
+ - Utrata cyberkończyny i @traumatic-amputation
+ 
+ ## Leczenie:
+ 
+ - @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### Sprawdzenie umiejętności elektrycznych: 40
+ 
+ Używane do naprawy @uszkodzonej-elektroniki na cyberkończynach.
+ 
+ ### Sukces aplikacji:
+ 
+ -50% @uszkodzonej-elektroniki
+ 
+ ### Porażka aplikacji:
+ 
+ -20% @uszkodzonej-elektroniki</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### Sprawdzenie umiejętności mechanicznych: 50
+ 
+ Używane do naprawy @zgiętego-metalu na cyberkończynach.
+ 
+ ### Sukces aplikacji:
+ 
+ -20% @zgięty-metal
+ 
+ ### Porażka aplikacji:
+ 
+ -5% @zgięty-metal</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### Sprawdzenie umiejętności mechanicznych: 40
+ 
+ Używane do naprawy @luźnych-śrub na cyberkończynach.
+ 
+ ### Sukces aplikacji:
+ 
+ -20% @luźnych-śrub
+ 
+ ### Porażka aplikacji:
+ 
+ -5% @luźnych-śrub</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### Sprawdzenie umiejętności mechanicznych: 60
+ 
+ Używane do naprawy utraty materiału na cyberkończynach.
+ 
+ ### Sukces aplikacji:
+ 
+ -50% utraty materiału
+ 
+ ### Porażka aplikacji:
+ 
+ -20% utraty materiału</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>Witaj w Podręczniku Medycznym, twoim kompleksowym przewodniku do zrozumienia systemów mod neurotraumy oraz powszechnych chorób medycznych. Ten podręcznik został zaprojektowany, aby dostarczyć Ci informacji na temat szerokiego zakresu zagadnień medycznych:
+ 
+ - @informacje
+ - @objawy
+ - @głowamózg
+ - @płuca
+ - @serce
+ - @tułów
+ - @kończyny
+ - @kości
+ - @dowolna-część-ciała
+ - @krew
+ - @przedmioty-część-1
+ - @przedmioty-część-2
+ - @przedmioty-część-3
+ - @przedmioty-część-4
+ - @operacja
+ - @operacja
+ - @rozszerzenie</Manual_Description_Start_Page>
+  <Manual_Description_Information>Witaj w zakładce Informacje, tutaj możesz przeczytać ogólne informacje:
+ 
+ - @faq
+ - @rekomendacje-medyczne
+ - @jak-zdiagnozować
+ - @kolejność-leczenia
+ - @5-przykazań-neurotraumy</Manual_Description_Information>
+  <Manual_Description_Symptoms>Witaj w zakładce Symptomy:
+ 
+ - @wymioty-krwi
+ - @blada-skóra
+ - @duszność
+ - @kaszel
+ - @zwiększone-tętno
+ - @zamieszanie
+ - @zawroty-głowy
+ - @rozmyte-widzenie
+ - @obrzęk-nóg
+ - @świszczący-oddech
+ - @osłabienie
+ - @gorączka
+ - @pocenie-się
+ - @wzdęcie
+ - @zapalenie
+ - @żółtaczka
+ - @dyskomfort-brzuszny
+ - @ból-głowy
+ - @pragnienie
+ - @palpitacje
+ - @skurcze</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>Witaj w zakładce Głowa/Mózg:
+ 
+ - @neurotrauma
+ - @udar
+ - @odstawienie
+ - @przedawkowanie opioidów
+ - @drgawki
+ - @nieprzytomność
+ - @śpiączka
+ - @uraz rdzenia kręgowego
+ - @wstrząśnienie mózgu</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>Witaj w zakładce Płuca:
+ 
+ - @zatrzymanie-oddechu
+ - @uszkodzenie-płuc
+ - @pneumotoraks
+ - @hiperwentylacja
+ - @hipowentylacja
+ - @niski-poziom-tlenu</Manual_Description_Lungs>
+  <Manual_Description_Heart>Witaj w zakładce Serce:
+ 
+ - Tamponada serca
+ - Zatrzymanie akcji serca
+ - Zawał serca
+ - Uszkodzenie serca
+ - Nieregularne bicie serca
+ - Migotanie przedsionków</Manual_Description_Heart>
+  <Manual_Description_Torso>Witaj w zakładce Torso:
+ 
+ - @pęknięcie aorty
+ - @krwotok wewnętrzny
+ - @choroba popromienna
+ - @uszkodzenie nerek
+ - @uszkodzenie wątroby
+ - @morbusine
+ - @zatrucie cyjankiem
+ - @uszkodzenie narządu waniliowego
+ - @analgezja
+ - @anestezja
+ - @ból brzucha
+ - @wymioty
+ - @nudności
+ - @ból klatki piersiowej</Manual_Description_Torso>
+  <Manual_Description_Extremities>Witaj w zakładce "Kończyny skrajne":
+ 
+ - @traumatyczna-amputacja
+ - @gangrena
+ - @amputacja-chirurgiczna
+ - @intensywny-ból</Manual_Description_Extremities>
+  <Manual_Description_Bones>Witaj w zakładce Kości:
+ 
+ - @śmierć-kości
+ - @uszkodzenia-kości
+ - @złamania
+ - @przemieszczenia</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Witaj w zakładce Dowolna Część Ciała:
+ 
+ - @krwotok-tętniczy
+ - @uszkodzenie-wewnętrzne
+ - @oparzenia
+ - @zainfekowane-rany
+ - @ciała-obce
+ - @rany
+ - @opatrzone
+ - @opatrunki
+ - @gips</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>Witaj w zakładce Krwi:
+ 
+ - @hipoksemia
+ - @sepsa
+ - @wstrząs po transfuzji krwi
+ - @utrata krwi
+ - @hipotonia
+ - @nadciśnienie
+ - @kwasica
+ - @alkaloza</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Witaj w zakładce Części 1 przedmiotów:
+ 
+ - @adrenalina
+ - @aed
+ - @alien-blood
+ - @ambubag
+ - @anaparalityk
+ - @antybiotyk-klej
+ - @maść-antybiotykowa
+ - @antyseptyk
+ - @rozpylacz-antyseptyczny
+ - @autopulse
+ - @azatiopryna
+ - @bandaże
+ - @pakiety-krwi
+ - @blue-shark
+ - @worek-na-ciało
+ - @antybiotyki-o-szerokim-spektrum
+ - @stymulant-bojowy
+ - @deusizyna
+ - @nóż-do-nurkowania
+ - @drenaż</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>Witaj w zakładce Części 2 przedmiotów:
+ 
+ - @pusty-pakiet-krwi
+ - @balon-endowaskularny
+ - @fentanyl
+ - @gips
+ - @skaner-zdrowia
+ - @analizator-hematologiczny
+ - @hemostat
+ - @hiperzyna
+ - @płynny-tlenek
+ - @mannitol
+ - @ręczny-defibrylator
+ - @stent-medyczny
+ - @metamfetamina
+ - @morfina
+ - @nalokson
+ - @igła
+ - @nitrogliceryna
+ - @opium
+ - @skalpele-do-pobierania-organów
+ - @implanty-osteosyntezy</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>Witaj w zakładce Części 3 przedmiotów:
+ 
+ - @plastiseal
+ - @propofol
+ - @wyciąg-z-owadobójczego-raptora
+ - @odciągacze
+ - @roztwór-ringerowski
+ - @roztwór-soli-fizjologicznej
+ - @skalpel
+ - @azotan-sodu
+ - @implanty-rdzeniowe
+ - @worek-stazy
+ - @streptokinaza
+ - @stół-operacyjny
+ - @wiertło-chirurgiczne
+ - @piła-chirurgiczna
+ - @szwy
+ - @tiamina
+ - @staza
+ - @nożyczki-traumatyczne
+ - @pęsety
+ - @klucz-więzowy</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>Witaj w zakładce Części 4 przedmiotów:
+ 
+ PUSTO</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>Witaj w zakładce Chirurgia:
+ 
+ - @traumatyczny szok
+ - @nacięcie chirurgiczne
+ - @zaciśnięte krwawienie
+ - @odciągnięta skóra
+ - @wiercone kości
+ - @piłowane kości</Manual_Description_Surgery>
+  <Manual_Description_Procedures>Witaj w zakładce Procedury:
+ 
+ - @operacja-otwarcia-zamknięcia
+ - @operacja-osteosyntetyczna
+ - @operacja-pęknięcia-aorty
+ - @operacja-amputacji
+ - @operacja-przeszczepu-organów</Manual_Description_Procedures>
+  <Manual_Description_Expansion>Witaj w zakładce Rozszerzenie:
+ 
+ - @chirurgiczne-ścierki
+ - @maska-chirurgiczna
+ - @ubrania-chirurga
+ - @infekcja-chirurgiczna
+ - @mannitol-plus
+ - @eksperymentalne-leczenie
+ - @karta-triażowa
+ - @słoik-mózgowy
+ - @sztuczny-mózg
+ - @niedopełnienie-obowiązków-medycznych
+ - @cybernetyczna-rama
+ - @cybernetyczna-noga
+ - @cyber-rama
+ - @cyber-noga
+ - @uszkodzone-elektroniki
+ - @zgięty-metal
+ - @luźne-śruby
+ - @utrata-materiału
+ - @układ-fpga
+ - @narzędzie-spawalnicze
+ - @śrubokręt
+ - @pręt-stalowy</Manual_Description_Expansion>
+</infotexts>

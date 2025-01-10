@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Castilian Spanish" nowhitespace="false" translatedname="Castellano">
+  <Manual_Description_Morphine>###Comprobación de habilidad médica: 30
+ 
+ Un analgésico moderadamente potente utilizado para inducir @analgesia.
+ 
+ ###Éxito en la aplicación:
+ +50% @analgesia
+ +10% Adicción a opiáceos
+ +10% @sobredosis-de-opiáceos
+ -30% Abstinencia de opiáceos.
+ 
+ ####Mientras está borracho (&gt;30% borracho) cambia a:
+ +100% @analgesia
+ +10% Adicción a opiáceos
+ +20% @sobredosis-de-opiáceos
+ -30% Abstinencia de opiáceos.
+ 
+ ###Fracaso en la aplicación:
+ +30% @analgesia
+ +25% Adicción a opiáceos
+ +20% @sobredosis-de-opiáceos
+ -30% Abstinencia de opiáceos.
+ 
+ ####Mientras está borracho (&gt;30% borracho) cambia a:
+ +60% @analgesia
+ +25% Adicción a opiáceos
+ +40% @sobredosis-de-opiáceos
+ -30% Abstinencia de opiáceos.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Comprobación de habilidad médica: 39
+ La naloxona se utiliza para tratar la @abstinencia de opiáceos, la sobredosis de opiáceos y la analgesia. Los efectos ocurren en un lapso de 30 segundos.
+ 
+ ###Éxito en la aplicación:
+ -60% de abstinencia de opiáceos
+ -60% de sobredosis de opiáceos
+ -60% de analgesia
+ 
+ ###Fracaso en la aplicación:
+ -30% de abstinencia de opiáceos
+ -30% de sobredosis de opiáceos
+ -60% de analgesia
+ 50% de probabilidad de poner al paciente en un @coma</Manual_Description_Naloxone>
+  <Manual_Description_Needle>La aguja es un elemento de un solo uso para reducir el @neumotórax a una fuerza del 5%, y evita que empeore. Sin embargo, no trata completamente el neumotórax. Usar la aguja en un paciente sin neumotórax les dará neumotórax en su lugar.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###Comprobación de habilidad médica: 35
+ Un frasco que contiene una sustancia muy volátil, propensa a explotar por impacto o exposición al calor. Funciona exactamente igual que el @sodium-nitroprusside, excepto por la comprobación de habilidad médica de 35.
+ 
+ ###Éxito en la aplicación:
+ 400 segundos de presión arterial reducida
+ 
+ ###Fracaso en la aplicación:
+ 200 segundos de presión arterial reducida</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###Comprobación de habilidad médica: 15
+ 
+ Un analgésico débil utilizado para inducir @analgesia.
+ 
+ ###Éxito en la aplicación:
+ +20% @analgesia
+ +5% Adicción a opiáceos
+ +8.75% @sobredosis-de-opiáceos
+ -15% Abstinencia de opiáceos.
+ 
+ ####Mientras está borracho (&gt;30% borracho) cambia a:
+ +40% @analgesia
+ +5% Adicción a opiáceos
+ +18.75% @sobredosis-de-opiáceos
+ -15% Abstinencia de opiáceos.
+ 
+ ###Fracaso en la aplicación:
+ +10% @analgesia
+ +20% Adicción a opiáceos
+ +15% @sobredosis-de-opiáceos
+ -15% Abstinencia de opiáceos.
+ 
+ ####Mientras está borracho (&gt;30% borracho) cambia a:
+ +20% @analgesia
+ +20% Adicción a opiáceos
+ +30% @sobredosis-de-opiáceos
+ -15% Abstinencia de opiáceos.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>Un escalpelo de obtención de órganos se utiliza para extraer el órgano que lleva su nombre en la cirugía de trasplante de órganos. Hay un tipo para cada órgano de la siguiente manera: cerebro, corazón, pulmones, hígado y riñones.
+ 
+ - El escalpelo para el cerebro tiene una comprobación de habilidad médica de 100 para extraer el cerebro de manera confiable.
+ 
+ - El escalpelo para el corazón tiene una comprobación de habilidad médica de 60 para extraer el corazón de manera confiable.
+ 
+ - El escalpelo para los pulmones tiene una comprobación de habilidad médica de 50 para extraer los pulmones de manera confiable.
+ 
+ - El escalpelo para el hígado tiene una comprobación de habilidad médica de 40 para extraer el hígado de manera confiable.
+ 
+ - El escalpelo para los riñones tiene una comprobación de habilidad médica de 30 para extraer los riñones de manera confiable.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>### Comprobación de habilidad médica: 45
+ 
+ El sexto paso en la cirugía osteosintética.
+ 
+ ### Éxito en la aplicación:
+ 
+ Cura todas las fracturas en la extremidad en la que se utilizaron los implantes y utiliza el 25% de los mismos.
+ 
+ ### Fallo en la aplicación:
+ 
+ +5% de sangrado
+ +5% de daño interno.</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### Comprobación de habilidad médica: 22
+ 
+ Una versión mejorada de @vendajes, que puede tratar las heridas de manera más efectiva.
+ 
+ ### Éxito de la aplicación:
+ 
+ \\+100% @vendado
+ \\-48% sangrado
+ \\-24% @quemaduras
+ 
+ ### Fallo de la aplicación:
+ 
+ \\+50% @vendado
+ \\-24% sangrado
+ \\-12% @quemaduras
+ 
+ Aplicar plastiseal también reemplazará cualquier vendaje sucio en la extremidad a la que se aplica el vendaje. Plastiseal también se puede usar después de @piel-retraída para tratar quemaduras de tercer grado.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>Propofol ya no se puede crear.
+ 
+ Propofol es un químico utilizado para dejar inconsciente a un ser humano. Se utiliza mejor en cirugías que deben realizarse fuera de la nave, ya que evita que el paciente sufra un @traumatic-shock. No requiere de una comprobación de habilidad médica.
+ 
+ Al inyectarlo, la persona que lo recibe ganará lentamente @anesthesia a una tasa de 0.3% por segundo. Desde el 1% hasta el 15% de fuerza, el jugador tendrá un 5% de @analgesia.
+ 
+ Una vez que la aflicción progrese más allá del 16%, el jugador caerá en @unconsciousness y permanecerá inconsciente hasta que la aflicción progrese al 100% esperando o se reduzca al 0% con un @anaparalyzant. Durante este tiempo, el jugador no sentirá @intense-pain / @abdominal-pain / @chest-pain y se le puede realizar una cirugía.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>El Extracto de Raptor Bane se utiliza en el tratamiento de la acidosis al inducir el vómito en el paciente para darles alcalosis. Recuerda que la aflicción es un efecto.</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### Comprobación de habilidad médica: 30
+ 
+ El cuarto paso en la mayoría de los procedimientos quirúrgicos. Los retractores no funcionarán sin un 100% de @sangrado-abrazado.
+ 
+ ### Éxito en la aplicación:
+ 
+ Proporciona al paciente @piel-retraída en la extremidad en la que se utilizó la herramienta.
+ 
+ ### Fallo en la aplicación:
+ 
+ +10% de @daño-interno.</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>La solución de Ringer se utiliza para aumentar la presión arterial. A diferencia de la solución salina, la solución de Ringer no causará acidosis y solo aumentará la presión arterial. Sin embargo, ten cuidado, ya que puede aumentar tu presión arterial a niveles no deseados.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###Comprobación de habilidad médica: 10
+ La solución salina es un líquido utilizado para tratar la alcalosis al inducir la acidosis.
+ 
+ ###Éxito en la aplicación:
+ Aumenta la presión arterial
+ +20% de acidosis
+ 
+ ###Fracaso en la aplicación:
+ Aumenta la presión arterial
+ +12% de acidosis</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###Comprobación de habilidad médica: 30
+ El segundo paso en todos los procedimientos quirúrgicos. El bisturí no funcionará sin @analgesia.
+ 
+ ###Éxito en la aplicación:
+ Da @cirugía-incisión en la extremidad en la que se usó la herramienta y eliminará cualquier yeso o @vendaje.
+ 
+ ###Fracaso en la aplicación:
+ +15% sangrado
+ +10% laceraciones</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###Comprobación de habilidad médica: 10
+ Un medicamento para reducir la presión arterial. Tomar nitroprusiato sódico reducirá su presión arterial en un 45%. Mientras este medicamento esté activo, la @fibrilación causada por la @hipotensión se reducirá.
+ 
+ ###Éxito en la aplicación:
+ Proporciona 200 segundos de presión arterial reducida.
+ 
+ ###Fracaso en la aplicación:
+ Proporciona 120 segundos de presión arterial reducida.</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>### Comprobación de habilidad médica: 45
+ 
+ Implantes utilizados para tratar lesiones de la médula espinal.
+ 
+ ### Éxito en la aplicación:
+ 
+ El uso exitoso de los implantes curará la columna vertebral del paciente. Tenga en cuenta que si el paciente tiene una fractura de cuello, simplemente volverá.
+ 
+ ### Fallo en la aplicación:
+ 
+ +5% de sangrado
+ +5% de daño interno.</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>Una bolsa especial que mantiene el cuerpo en estasis para su transporte al tratamiento adecuado si las lesiones son graves. Una bolsa de estasis se lleva en la ranura del traje de buceo, y usarla drenará su condición en un 0,25% por segundo, lo que significa que una bolsa de estasis durará 400 segundos o aproximadamente 6 minutos y medio. Usar una bolsa de estasis protegerá al usuario de la presión hasta los 10.000 metros, permitirá que el usuario sea arrastrado a toda velocidad y detendrá los efectos negativos de las siguientes afecciones:
+ 
+ - @paro-cardíaco
+ - @paro-respiratorio
+ - @ataque-cardíaco
+ - @neurotrauma
+ - @daño-renal
+ - @daño-hepático
+ - @daño-cardíaco
+ - @daño-pulmonar
+ - @daño-óseo
+ - @sepsis
+ - @hipoxemia
+ - @hipotensión
+ - @hipertensión
+ - @acidosis
+ - @alcalosis
+ - @hemorragia-interna
+ - @derrame-cerebral
+ - @convulsión
+ - @coma
+ - @heridas-infectadas
+ - Sangrado
+ 
+ Cabe destacar que no se puede realizar cirugía en personas mientras están dentro de una Bolsa de Estasis. Deberán ser retirados de la bolsa antes de la cirugía. Los pacientes retirados de la Bolsa de Estasis tendrán @paro-cardíaco y necesitarán que se traten esas afecciones.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###Comprobación de habilidad médica: Ninguna
+ Un diluyente de la sangre. El uso de estreptoquinasa evitará la regeneración natural del sangrado y empeorará el @stroke mientras esté activo.
+ 
+ ###En la aplicación:
+ - Trata completamente el @heart-attack y el @hemotransfusion-shock.</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>La Mesa de Cirugía es un objeto que se puede comprar en una estación o fabricar y luego colocar. El paciente no necesita estar en la mesa, solo necesita estar cerca de ella. La Mesa de Cirugía proporciona ventilación artificial a todos los que están cerca de la mesa y previene el @traumatic-shock siempre y cuando el paciente esté bajo @analgesia. Además, la mesa disminuirá la falta de oxígeno y evitará el @respiratory-arrest al aumentar la @acidosis.
+ 
+ La mesa también tiene pines de cableado que se pueden usar para mostrar información importante, como la presión arterial, el @neurotrauma, la frecuencia cardíaca y la frecuencia respiratoria.
+ 
+ Cabe señalar que la Mesa de Cirugía es funcionalmente idéntica a una Cama de Hospital. Las otras camas previenen el Traumatic Shock si te acuestas en ellas, pero no proporcionan ventilación artificial.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### Comprobación de habilidad médica: 45
+ 
+ El quinto paso en la cirugía osteosintética.
+ 
+ ### Éxito en la aplicación:
+ 
+ El uso exitoso del taladro quirúrgico dará al paciente huesos perforados en la extremidad en la que se utilizó la herramienta.
+ 
+ ### Fallo en la aplicación:
+ 
+ +15% de sangrado
+ +10% de daño interno.</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### Comprobación de habilidad médica: 45
+ 
+ El quinto paso en la cirugía de amputación.
+ 
+ ### Éxito en la aplicación:
+ 
+ El uso exitoso de la sierra quirúrgica dará al paciente huesos serrados en la extremidad en la que se utilizó la herramienta.
+ 
+ ### Fallo en la aplicación:
+ 
+ +15% sangrado
+ +6% daño interno
+ +4% laceraciones</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### Comprobación de habilidad médica: 30
+ 
+ El paso final en todos los procedimientos quirúrgicos. También es muy útil para curar la mayoría de las heridas que sangran.
+ 
+ ### Éxito en la aplicación:
+ 
+ Elimina todas las aflicciones relacionadas con la cirugía (como la incisión de la cirugía)
+ -20% heridas de bala
+ -20% laceraciones
+ -20% mordeduras
+ -20% lesiones de tejidos profundos
+ -40% sangrado
+ 
+ ### Fallo en la aplicación:
+ 
+ +6% daño interno</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### Chequeo de habilidad médica: 10
+ 
+ Un contenedor de pastillas de vitamina B1 utilizadas para ayudar en la curación de órganos.
+ 
+ ### Éxito en la aplicación:
+ 
+ 200 segundos de tiempo de curación de órganos
+ 
+ ### Fallo en la aplicación:
+ 
+ 120 segundos de tiempo de curación de órganos
+ 
+ 200 segundos de tiempo de curación de órganos sanarán alrededor del 8% del daño del órgano (excluyendo el @neurotrauma), y 120 segundos sanarán el 4.8%. Esto es además de la curación natural del órgano al mismo tiempo. La tiamina no puede revivir órganos muertos.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>###Comprobación de habilidad médica: 30
+ Un objeto utilizado para restringir el flujo sanguíneo a una extremidad específica para disminuir el sangrado regular y arterial. El torniquete no funcionará sin @arterial-bleeding. Puede ser cortado usando @trauma-shears.
+ 
+ ###Éxito en la aplicación:
+ Detiene temporalmente los efectos negativos del sangrado arterial y trata lentamente el sangrado regular, pero causará @gangrena si se mantiene durante un período prolongado de tiempo. Usar un torniquete en la cabeza dará a la víctima un 15% de @neurotrauma y una baja de oxígeno del 200%.
+ 
+ ###Fracaso en la aplicación:
+ +6% de traumatismo contundente.</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###Comprobación de habilidad médica: 10
+ Un par de tijeras utilizadas para quitar yesos y vendajes.
+ 
+ ###Éxito en la aplicación:
+ Elimina todos los yesos, vendajes y tarjetas de triaje en la extremidad en la que se utilizaron las tijeras.
+ 
+ ###Fracaso en la aplicación:
+ +15% de sangrado
+ +10% de laceraciones</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>###Comprobación de habilidad médica: 30
+ Un par de pinzas utilizadas para extraer tejido dañado o balas.
+ 
+ ###Éxito de la aplicación:
+ -5% de daño interno
+ -5% de traumatismo contundente
+ -5% de cuerpos extraños
+ +5% de laceraciones
+ 
+ ###Fracaso de la aplicación:
+ +6% de daño interno
+ 
+ Las pinzas pueden funcionar sin piel retraída si la extremidad que estás usando tiene heridas de bala o lesiones en tejidos profundos, usar las pinzas a través de heridas de bala o lesiones en tejidos profundos causará un 5% de choque traumático. Sacar cuerpos extraños con las pinzas también tiene un 5% de posibilidad de producir chatarra.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###Comprobación de habilidad médica: 60 (30 si el paciente tiene @analgesia)
+ La llave inglesa se utiliza para tratar @luxaciones. Para tratar las luxaciones, arrástrala sobre la extremidad dislocada en la interfaz de salud y úsala como tratamiento, como lo harías con una venda.
+ 
+ ###Éxito de la aplicación:
+ Cura la luxación en esa extremidad.
+ 
+ ###Fracaso de la aplicación:
+ Causa una fractura en esa extremidad.</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>El shock traumático es muy fatal, y si su paciente lo adquiere en algún momento, termine inmediatamente la cirugía, llévelo de vuelta a la proximidad de una mesa de cirugía o administre sedación nuevamente. El shock traumático disminuirá su fuerza 4 veces más rápido siempre y cuando la víctima esté bajo los efectos de la anestesia o tenga analgesia mientras está cerca de una mesa de cirugía.
+ 
+ ---
+ ##Causado por:
+ 
+ - Realizar cirugías inseguras (sin mesa o sin sedación)
+ - Usar pinzas a través de heridas de bala o lesiones profundas en los tejidos (causa un shock muy leve, que generalmente se puede ignorar)
+ 
+ ##Efectos:
+ 
+ - Hipotensión (y mucha)
+ - Paro cardíaco (al 40% o más)
+ - Paro respiratorio (al 30% o más)
+ - Neurotrauma (igual a la fuerza dividida por 100 por segundo, el 10% o más es el punto en el que supera la regeneración natural)
+ - Psicosis (igual a la fuerza dividida por 100 por segundo)
+ 
+ ##Tratamientos:
+ 
+ - Terminar la cirugía y esperar
+ - Llevar a la proximidad de una mesa de cirugía y asegurarse de que el paciente esté sedado
+ 
+ ##Prevención:
+ 
+ - Asegurarse de que la cirugía sea segura antes de proceder más allá del paso de piel retraída
+ - Asegurarse de que la analgesia no se agote en medio de la cirugía</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>El segundo paso en todos los procedimientos quirúrgicos. Tener una incisión quirúrgica sin pinza causará una pérdida de sangre del 0,7% por segundo para cada incisión, y tener una incisión quirúrgica sin analgesia u otro método de sedación causará un shock traumático del 2% por segundo para cada incisión. Esta aflicción no causará shock traumático si se realiza sin una mesa de cirugía, por lo tanto, es seguro sangrar sin una.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>El tercer paso en la mayoría de los procedimientos quirúrgicos. Al haber sujetado el sangrado se evitará la pérdida de sangre causada por la incisión quirúrgica. Este efecto es necesario para el siguiente paso, los retractores.</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>El cuarto paso en la mayoría de los procedimientos quirúrgicos. Si se retrae la piel sin una mesa de cirugía cercana, causará un 2% de choque traumático por segundo por cada instancia de piel retraída. La mayoría de los procedimientos quirúrgicos, como la cirugía osteosintética o la cirugía de trasplante de órganos, se derivan de este paso.</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>El quinto paso en la cirugía osteosintética. Perforar huesos sin una mesa de cirugía cercana causará un 1.5% de choque traumático por segundo por cada instancia de huesos perforados. (Note: I did not translate "osteosynthetic" and "traumatic shock" as there may not be direct translations for these terms in Spanish)</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>El quinto paso en la cirugía de amputación. Si se sierran huesos sin una mesa de cirugía cercana, causará un 1.5% de choque traumático por segundo por cada instancia de huesos serrados. (Note: I did not translate "traumatic shock" as "shock traumático" because "traumatic" is an adjective in English, not a noun, and "shock" is the noun. It would be more accurate to say "choque traumático" in Spanish.)</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##Pasos:
+ 
+ 1. Anestesia de tu elección
+ 2. @bisturí
+ 3. @pinzas hemostáticas
+ 4. @retractores
+ 5. @suturas</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##Pasos:
+ 
+ 1. Anestesia de su elección
+ 2. @bisturí
+ 3. @pinzas hemostáticas
+ 4. @retractores
+ 5. @taladro quirúrgico
+ 6. @implantes de osteosíntesis
+ 7. @suturas
+ 
+ Debe realizarse en cada parte del cuerpo para tratar la @muerte-ósea.</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##Pasos:
+ 
+ 1. Anestesia de tu elección
+ 2. @bisturí
+ 3. @balón endovascular
+ 4. @stent médico
+ 5. @suturas</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## Pasos:
+ 
+ 1. Anestesia de su elección (@analgesia)
+ 2. @bisturí
+ 3. @pinzas hemostáticas
+ 4. @retractores
+ 5. @sierra quirúrgica
+ 6. Reemplazo del miembro amputado con biónica o miembros humanos. (Opcional)
+ 7. @suturas
+ 8. Los miembros cibernéticos (no implantes biónicos) se pueden colocar en el miembro si se amputa quirúrgicamente. La cirugía no necesita ser abierta para colocar los miembros cibernéticos. (Opcional) (Requiere el complemento NT Cybernetics)
+ 
+ Realizar este procedimiento no dará como resultado el miembro si el miembro tiene más del 15% de @gangrena.
+ 
+ Este procedimiento causa @amputación quirúrgica.</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>Asegúrate de usar @azatioprina antes de colocar el órgano y asegúrate de que su inmunidad sea del 10% o menos. Si el daño del órgano es del 100% después de colocarlo, significa que fue rechazado. Esto no se aplica si el rechazo de órganos está desactivado en la configuración.
+ 
+ ##Pasos:
+ 
+ 1. Anestesia de tu elección
+ 2. @bisturí
+ 3. @pinzas hemostáticas
+ 4. @retractores
+ 5. Los respectivos @bisturís de obtención de órganos
+ 6. El respectivo objeto de trasplante de órganos (esto debe hacerse dos veces para los riñones)
+ 7. @suturas</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>Los campos quirúrgicos son un elemento de vestimenta utilizado para aumentar la esterilidad del usuario y, por lo tanto, disminuir el riesgo de infección quirúrgica.
+ 
+ +100 Esterilidad base
+ -50% Ganancia de choque traumático mientras se usa.</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>La Mascarilla Quirúrgica es un artículo que se puede usar y que aumenta la esterilidad cuando se lleva puesta, disminuyendo el riesgo de infección quirúrgica. 
+ -10% de Laceraciones 
+ -20% de Sangrado.</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>La ropa de cirujano es un objeto que se puede usar y aumenta la esterilidad cuando se lleva puesta, disminuyendo el riesgo de infección quirúrgica. También reduce en un 10% el trauma por fuerza contundente, las laceraciones y las mordeduras.</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>La Infección Quirúrgica es un mecanismo que causa sepsis basado en cuán estéril es el entorno del paciente.
+ 
+ ---
+ 
+ Lo siguiente aumentará la esterilidad:
+ 
+ - El paciente usando @surgical-drapes
+ - Personajes cercanos usando @surgical-mask
+ - Tener habilidad quirúrgica (esterilidad ganada basada en esta ecuación: 10 + habilidad quirúrgica / 5)
+ - Tener @ointmented
+ 
+ ---
+ 
+ Lo siguiente disminuirá la esterilidad:
+ 
+ - El paciente no usando @surgical-drapes
+ - Personajes cercanos no usando @surgical-mask
+ 
+ ---
+ 
+ En la esterilidad mínima, hay un 10% de probabilidad cada dos segundos de que el paciente adquiera @sepsis.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>Mannitol Plus es un objeto de talento, lo que significa que requiere de un talento para ser creado. Al ser administrado, tratará el 30% de @neurotrauma durante un periodo de 10 segundos, incluso si el paciente está inestable, y aplicará los efectos de @mannitol sin causar daño al hígado, pulmones, corazón, riñones o daño a los órganos.</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>El Tratamiento Experimental es un objeto de talento desbloqueable por la clase de Cirujano. Puede dar efectos aleatorios tanto negativos como positivos, aunque tiende a dar efectos positivos más que negativos.
+ 
+ Existe una posibilidad teórica de obtener efectos infinitos de un solo uso de este objeto. Imagina lanzar una moneda y solo detenerte cuando obtienes cara. Cada vez que obtienes cruz, obtienes un efecto adicional de este objeto.
+ 
+ La lista de posibles efectos positivos es la siguiente:
+ 
+ ---
+ - Vigor (elige al azar entre 200-400% de fuerza)
+ - Hiperactividad (elige al azar entre 200-400% de fuerza)
+ - Resistencia a la Psicosis (elige al azar entre 200-400% de fuerza)
+ - Resistencia a la Infección de la Cáscara (elige al azar entre 200-400% de fuerza)
+ - Resistencia a la Parálisis (elige al azar entre 300-600% de fuerza)
+ - @analgesia (elige al azar entre 20-100% de fuerza)
+ - @anestesia (elige al azar entre 1-100% de fuerza)
+ - @ungüento (elige al azar entre 20-100% de fuerza)
+ - Estimulante de Combate (elige al azar entre 30-100% de fuerza)
+ - Estabilizado de Presión (elige al azar entre 30-100% de fuerza)
+ - Una curación completa (cura el 20-100% de @heridas, daño de órganos vainilla, @neurotrauma y @pérdida de sangre, y cura completamente @sepsis)
+ 
+ ---
+ 
+ La lista de posibles efectos negativos es la siguiente:
+ 
+ ---
+ - Cualquier @herida (elige al azar entre 30-80% para sangrado, elige entre 5-20% para todo lo demás)
+ - Aturde durante 2-15 segundos</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>Las tarjetas de triaje se utilizan para marcar a los pacientes según la gravedad de la lesión. Hay dos tipos de tarjetas de triaje, las manuales y las automáticas. La tarjeta de triaje manual funciona de la siguiente manera:
+ 
+ Al colocar la tarjeta de triaje en las piernas, se marcará como verde, lo que significa que el paciente está mínimamente herido y probablemente sobrevivirá.
+ Al colocar la tarjeta de triaje en los brazos, se marcará como amarilla, lo que significa que el paciente está herido y probablemente morirá si el tratamiento se retrasa por mucho tiempo.
+ Al colocar la tarjeta de triaje en el torso, se marcará como roja, lo que significa que el paciente está críticamente herido y necesita asistencia inmediata.
+ Al colocar la tarjeta de triaje en la cabeza, se marcará como negra, lo que significa que el paciente está muerto o extremadamente cerca de la muerte.
+ 
+ Las tarjetas de triaje automáticas evaluarán la salud de su víctima según sus aflicciones y vitalidad, y darán una calificación de verde, amarilla, roja o negra.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>El Tarro Cerebral es un objeto de talento desbloqueable por el Cirujano. A diferencia de los contenedores refrigerados, que solo pueden retrasar la descomposición de un cerebro y no detenerla por completo, el Tarro Cerebral no solo puede contener un cerebro indefinidamente, sino que también lo reparará lentamente a una tasa del 1% por cada 10 segundos.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>Reemplaza el cerebro de un paciente cuando se usa después de retirarlo. Protege contra la neurotrauma de no tener un cerebro. No hace nada más.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>Da niveles de habilidad cuando se lee
+ 
+ ### Con habilidad quirúrgica habilitada:
+ 
+ +8 habilidad quirúrgica
+ +2 habilidad médica
+ 
+ ### Con habilidad quirúrgica deshabilitada:
+ 
+ +8 habilidad médica</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>Un brazo cibernético que puede ser conectado a cualquier toma de brazo amputado quirúrgicamente. Puede ser removido con una palanca. Esto resulta en una amputación traumática en el miembro seleccionado.
+ 
+ ### Ventajas de las extremidades cibernéticas:
+ 
+ - Excelentes para resistir disparos sostenidos sin mal funcionamiento.
+ - Ideales para resistir ataques de criaturas sin mal funcionamiento o roturas.
+ - Ideales para resistir ataques que de otra manera causarían sangrado potencialmente mortal.
+ - Cuando se mantienen bien, es mucho menos probable que sean amputados a la fuerza durante un ataque.
+ - No se fracturan ni se dislocan. Asegúrate de arreglar cualquier dislocación o fractura ANTES de agregar una extremidad cibernética, de lo contrario será permanente hasta que te quites la extremidad.
+ 
+ #### Desventajas de las extremidades cibernéticas:
+ 
+ - No se mezclan bien con el agua. No te darán una descarga eléctrica, pero se romperán con el tiempo si no usas un traje.
+ - Requieren mantenimiento si se dañan.
+ - Mantenimiento costoso, especialmente si tu submarino no tiene una fuente suficiente de acero y circuitos FPGA.
+ - Costosas/caro de hacer/comprar.
+ - Se desprenden violentamente si sufren daños críticos por pérdida de material.
+ 
+ ### Requisito de habilidad mecánica: 70
+ 
+ ### Éxito de la aplicación:
+ 
+ Aplica la extremidad cibernética en el miembro seleccionado y cura cualquier daño interno causado por intentos fallidos anteriores.
+ 
+ ### Fallo de la aplicación:
+ 
+ Aplica un 20% de daño interno en el miembro. No elimina la extremidad cibernética.
+ 
+ ### Cómo agregar:
+ 
+ Primero realiza una cirugía de amputación en el miembro seleccionado, luego usa la extremidad cibernética en el miembro elegido.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>Una pierna cibernética que puede ser conectada a cualquier toma de pierna amputada quirúrgicamente. Puede ser removida con una palanca. Esto resulta en una amputación traumática en la extremidad seleccionada.
+ 
+ ### Ventajas de las extremidades cibernéticas:
+ 
+ - Excelentes para resistir disparos sostenidos sin mal funcionamiento.
+ - Ideales para resistir ataques de criaturas sin mal funcionamiento o roturas.
+ - Ideales para resistir ataques que de otra manera causarían sangrado mortal.
+ - Cuando se mantienen bien, es mucho menos probable que sean amputadas a la fuerza cuando se atacan.
+ - No se fracturan ni se dislocan. Asegúrate de arreglar cualquier dislocación o fractura ANTES de agregar una extremidad cibernética, de lo contrario será permanente hasta que te quites la extremidad.
+ 
+ #### Desventajas de las extremidades cibernéticas:
+ 
+ - No se mezclan bien con el agua. No te darán una descarga eléctrica, pero se romperán con el tiempo si no usas un traje.
+ - Requieren mantenimiento si se dañan.
+ - Mantenimiento costoso, especialmente si tu submarino no tiene una fuente suficiente de acero y circuitos FPGA.
+ - Costosas/caro de hacer/comprar.
+ - Se desprenden violentamente si se dañan críticamente por pérdida de material.
+ 
+ ### Requisito de habilidad mecánica: 70
+ 
+ ### Éxito de la aplicación:
+ 
+ Aplica la extremidad cibernética en la extremidad seleccionada y cura cualquier daño interno causado por intentos fallidos anteriores.
+ 
+ ### Fallo de la aplicación:
+ 
+ Aplica un 20% de daño interno en la extremidad. No elimina la extremidad cibernética.
+ 
+ ### Cómo agregar:
+ 
+ Primero realiza una cirugía de amputación en la extremidad seleccionada, luego usa la extremidad cibernética en la extremidad elegida.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>Tienes un brazo cibernético en este enchufe.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>Tienes una pierna cibernética en este enchufe.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>La principal desventaja de usar miembros cibernéticos es que su electrónica se daña cuando se expone al agua.
+ 
+ Cuando un miembro cibernético sufre daño, cada tipo de daño tiene la posibilidad de causar varios tipos y cantidades de daño específico del miembro cibernético en lugar del tipo de daño normal.
+ 
+ La cantidad de electrónica dañada obtenida aumenta con la cantidad de pérdida de material.
+ 
+ ## Causado por:
+ 
+ - Estar en agua sin traje de buceo
+ - 75% de probabilidad de que las quemaduras causen el 200% de su daño como electrónica dañada
+ - 85% de probabilidad de que las heridas de bala causen el 75% de su daño como electrónica dañada
+ - 50% de probabilidad de que las mordeduras causen el 25% de su daño como electrónica dañada
+ - 50% de probabilidad de que el daño en tejidos profundos cause el 50% de su daño como electrónica dañada
+ - 50% de probabilidad de que el trauma por fuerza contundente cause el 100% de su daño como electrónica dañada
+ - 75% de probabilidad de que el daño interno cause el 100% de su daño como electrónica dañada
+ - 75% de probabilidad de que los cuerpos extraños causen el 75% de su daño como electrónica dañada
+ 
+ ## Efectos:
+ 
+ - El miembro deja de funcionar temporalmente ocasionalmente, la frecuencia aumenta con la fuerza
+ - El miembro se vuelve inutilizable (al 99% o más)
+ 
+ ## Tratamientos:
+ 
+ - Circuito FPGA</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>Cuando se recibe daño en una extremidad cibernética, cada tipo de daño tiene la posibilidad de causar varios tipos y cantidades de daño específico de la extremidad en lugar del tipo de daño normal.
+ 
+ ## Causado por:
+ 
+ - 85% de probabilidad de que las quemaduras causen el 25% de su daño como metal doblado
+ - 50% de probabilidad de que las laceraciones causen el 25% de su daño como metal doblado
+ - 50% de probabilidad de que las mordeduras causen el 50% de su daño como metal doblado
+ - 85% de probabilidad de que las lesiones en tejidos profundos causen el 100% de su daño como metal doblado
+ - 75% de probabilidad de que el trauma por fuerza contundente cause el 200% de su daño como metal doblado
+ 
+ ## Efectos:
+ 
+ - Te hace más lento si es en una pierna cibernética, aumenta con la fuerza
+ - La extremidad se vuelve inutilizable (al 99% o más)
+ 
+ ## Tratamientos:
+ 
+ - Herramienta de soldadura</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>Causado por:
+ 
+ - Tornillos sueltos durante el movimiento (30% o más)
+ - 75% de probabilidad de que las laceraciones causen el 25% de su daño como tornillos sueltos
+ - 80% de probabilidad de que el daño profundo en los tejidos cause el 100% de su daño como tornillos sueltos
+ - 50% de probabilidad de que el trauma contundente cause el 50% de su daño como tornillos sueltos
+ - 75% de probabilidad de que el daño interno cause el 100% de su daño como tornillos sueltos
+ - 50% de probabilidad de que las heridas de mordedura causen el 50% de su daño como tornillos sueltos
+ - 75% de probabilidad de que los cuerpos extraños causen el 75% de su daño como tornillos sueltos
+ 
+ Efectos:
+ 
+ - Tornillos sueltos y pérdida de material
+ 
+ Tratamientos:
+ 
+ - Destornillador</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>Cuando se recibe daño en una ciberextremidad, cada tipo de daño tiene la posibilidad de causar varios tipos y cantidades de daño específico de la ciberextremidad en lugar del tipo de daño normal.
+ 
+ La cantidad de pérdida de material obtenida aumenta con la cantidad de @loose-screws.
+ 
+ ## Causado por:
+ 
+ - @loose-screws
+ - 75% de probabilidad de que las laceraciones causen el 25% de su daño como pérdida de material
+ - 80% de probabilidad de que las heridas de bala causen el 80% de su daño como pérdida de material
+ - 75% de probabilidad de que las mordeduras causen el 60% de su daño como pérdida de material
+ - 100% de probabilidad de que las lesiones en tejidos profundos causen el 100% de su daño como pérdida de material
+ - 80% de probabilidad de que los cuerpos extraños causen el 50% de su daño como pérdida de material
+ 
+ ## Efectos:
+ 
+ - Pérdida de la ciberextremidad y @traumatic-amputation
+ 
+ ## Tratamientos:
+ 
+ - @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### Comprobación de habilidad eléctrica: 40
+ 
+ Se utiliza para reparar @electrónica-dañada en ciberextremidades.
+ 
+ ### Éxito de la aplicación:
+ 
+ -50% @electrónica-dañada
+ 
+ ### Fallo de la aplicación:
+ 
+ -20% @electrónica-dañada</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### Comprobación de habilidad mecánica: 50
+ 
+ Utilizado para reparar @metal-doblado en miembros cibernéticos.
+ 
+ ### Éxito de la aplicación:
+ 
+ -20% @metal-doblado
+ 
+ ### Fallo de la aplicación:
+ 
+ -5% @metal-doblado</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### Comprobación de habilidad mecánica: 40
+ 
+ Utilizado para reparar tornillos sueltos en miembros cibernéticos.
+ 
+ ### Éxito de la aplicación:
+ 
+ -20% tornillos sueltos
+ 
+ ### Fallo de la aplicación:
+ 
+ -5% tornillos sueltos</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### Comprobación de habilidad mecánica: 60
+ 
+ Utilizado para reparar la pérdida de material en miembros cibernéticos.
+ 
+ ### Éxito de la aplicación:
+ 
+ -50% de pérdida de material.
+ 
+ ### Fallo de la aplicación:
+ 
+ -20% de pérdida de material.</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>Bienvenido al Manual Médico, su guía completa para entender los sistemas de modulación neurotraumática y las condiciones médicas comunes. Este manual está diseñado para proporcionarle información sobre una variedad de temas médicos:
+ 
+ - @información
+ - @síntomas
+ - @cerebro
+ - @pulmones
+ - @corazón
+ - @tórax
+ - @extremidades
+ - @huesos
+ - @cualquier-parte-del-cuerpo
+ - @sangre
+ - @artículos-parte-1
+ - @artículos-parte-2
+ - @artículos-parte-3
+ - @artículos-parte-4
+ - @cirugía
+ - @cirugía
+ - @expansión</Manual_Description_Start_Page>
+  <Manual_Description_Information>Bienvenido a la pestaña de Información, aquí puedes leer sobre información general:
+ 
+ - @preguntas-frecuentes
+ - @recomendaciones-de-botiquín
+ - @cómo-diagnosticar
+ - @orden-de-tratamientos
+ - @los-5-mandamientos-del-neurotrauma</Manual_Description_Information>
+  <Manual_Description_Symptoms>Bienvenido a la pestaña de Síntomas:
+ 
+ - @vómito-de-sangre
+ - @piel-pálida
+ - @falta-de-aire
+ - @tos
+ - @aumento-de-la-frecuencia-cardíaca
+ - @confusión
+ - @mareo
+ - @visión-borrosa
+ - @hinchazón-de-piernas
+ - @sibilancias
+ - @debilidad
+ - @fiebre
+ - @sudoración
+ - @hinchazón
+ - @inflamación
+ - @ictericia
+ - @malestar-abdominal
+ - @dolor-de-cabeza
+ - @antojo
+ - @palpitaciones
+ - @espasmos</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>Bienvenido a la pestaña de Cabeza/Cerebro:
+ 
+ - @neurotrauma
+ - @derrame cerebral
+ - @abstinencia
+ - @sobredosis de opiáceos
+ - @convulsión
+ - @inconsciencia
+ - @coma
+ - @lesión de médula espinal
+ - @conmoción cerebral</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>Bienvenido a la pestaña de Pulmones:
+ 
+ - @paro-respiratorio
+ - @daño-pulmonar
+ - @neumotórax
+ - @hiperventilación
+ - @hipoventilación
+ - @bajo-nivel-de-oxígeno</Manual_Description_Lungs>
+  <Manual_Description_Heart>Bienvenido a la pestaña de Corazón:
+ 
+ - @tamponade-cardíaco
+ - @paro-cardíaco
+ - @ataque-cardíaco
+ - @daño-cardíaco
+ - @latido-irregular-del-corazón
+ - @fibrilación</Manual_Description_Heart>
+  <Manual_Description_Torso>Bienvenido a la pestaña de Torso:
+ 
+ - @ruptura-aórtica
+ - @hemorragia-interna
+ - @enfermedad-por-radiación
+ - @daño-renal
+ - @daño-hepático
+ - @morbusine
+ - @envenenamiento-por-cianuro
+ - @daño-de-órganos-de-vainilla
+ - @analgesia
+ - @anestesia
+ - @dolor-abdominal
+ - @vómitos
+ - @náuseas
+ - @dolor-de-pecho</Manual_Description_Torso>
+  <Manual_Description_Extremities>Bienvenido a la pestaña de Extremidades:
+ 
+ - @amputación-traumática
+ - @gangrena
+ - @amputación-quirúrgica
+ - @dolor-intenso</Manual_Description_Extremities>
+  <Manual_Description_Bones>Bienvenido a la pestaña de Huesos:
+ 
+ - @muerte-de-huesos
+ - @daño-de-huesos
+ - @fracturas
+ - @luxaciones</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Bienvenido a la pestaña de Cualquier Parte del Cuerpo:
+ 
+ - @sangrado-arterial
+ - @daño-interno
+ - @quemaduras
+ - @heridas-infectadas
+ - @cuerpos-extraños
+ - @heridas
+ - @ungüentado
+ - @vendado
+ - @yeso</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>Bienvenido a la pestaña de Sangre:
+ 
+ - @hipoxemia
+ - @sepsis
+ - @shock por hemotransfusión
+ - @pérdida de sangre
+ - @hipotensión
+ - @hipertensión
+ - @acidosis
+ - @alcalosis</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Bienvenido a la pestaña de Artículos parte 1:
+ 
+ - @adrenalina
+ - @aed
+ - @sangre-alienígena
+ - @ambubag
+ - @anaparalizante
+ - @pegamento-antibiótico
+ - @pomada-antibiótica
+ - @antiséptico
+ - @atomizador-antiséptico
+ - @autopulso
+ - @azatioprina
+ - @vendajes
+ - @paquetes-de-sangre
+ - @tiburón-azul
+ - @bolsa-cadáver
+ - @antibióticos-de-amplio-espectro
+ - @estimulante-de-combate
+ - @deusizina
+ - @cuchillo-de-buceo
+ - @drenaje</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>Bienvenido a la pestaña de Artículos parte 2:
+ 
+ - @empty-blood-pack (paquete de sangre vacío)
+ - @endovascular-balloon (balón endovascular)
+ - @fentanyl (fentanilo)
+ - @gypsum (yeso)
+ - @health-scanner (escáner de salud)
+ - @hematology-analyzer (analizador de hematología)
+ - @hemostat (hemostático)
+ - @hyperzine (hiperzina)
+ - @liquid-oxygenite (oxigenito líquido)
+ - @mannitol (manitol)
+ - @manual-defibrillator (desfibrilador manual)
+ - @medical-stent (stent médico)
+ - @methamphetamine (metanfetamina)
+ - @morphine (morfina)
+ - @naloxone (naloxona)
+ - @needle (aguja)
+ - @nitroglycerin (nitroglicerina)
+ - @opium (opio)
+ - @organ-procurement-scalpels (bisturíes de obtención de órganos)
+ - @osteosynthesis-implants (implantes de osteosíntesis)</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>Bienvenido a la pestaña de Artículos parte 3:
+ 
+ - @plastiseal
+ - @propofol
+ - @extracto-de-veneno-de-raptor
+ - @retractores
+ - @solución-ringer
+ - @solución-salina
+ - @bisturí
+ - @nitroprusiato-de-sodio
+ - @implantes-de-médula-espinal
+ - @bolsa-de-estasis
+ - @estreptoquinasa
+ - @mesa-de-cirugía
+ - @taladro-quirúrgico
+ - @sierra-quirúrgica
+ - @suturas
+ - @tiamina
+ - @torniquete
+ - @tijeras-de-trauma
+ - @pinzas
+ - @llave-inglesa</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>Bienvenido a la pestaña de la parte 4 de los objetos:
+ 
+ VACÍO</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>Bienvenido a la pestaña de Cirugía:
+ 
+ - @trauma-shock
+ - @incisión-de-cirugía
+ - @sangrado-abrazado
+ - @piel-retraída
+ - @huesos-taladrados
+ - @huesos-serrados</Manual_Description_Surgery>
+  <Manual_Description_Procedures>Bienvenido a la pestaña de Procedimientos:
+ 
+ - @cirugía-de-apertura-y-cierre
+ - @cirugía-osteosintética
+ - @cirugía-de-ruptura-aórtica
+ - @cirugía-de-amputación
+ - @cirugía-de-trasplante-de-órganos</Manual_Description_Procedures>
+  <Manual_Description_Expansion>Bienvenido a la pestaña de Expansión:
+ 
+ - @surgical-drapes (paños quirúrgicos)
+ - @surgical-mask (mascarilla quirúrgica)
+ - @surgeon-clothes (ropa de cirujano)
+ - @surgical-infection (infección quirúrgica)
+ - @mannitol-plus
+ - @experimental-treatment (tratamiento experimental)
+ - @triage-card (tarjeta de triaje)
+ - @brain-jar (tarro de cerebro)
+ - @artificial-brain (cerebro artificial)
+ - @medical-misconduct (mala conducta médica)
+ - @cybernetic-arm (brazo cibernético)
+ - @cybernetic-leg (pierna cibernética)
+ - @cyberarm (brazo cibernético)
+ - @cyberleg (pierna cibernética)
+ - @damaged-electronics (electrónica dañada)
+ - @bent-metal (metal doblado)
+ - @loose-screws (tornillos sueltos)
+ - @material-loss (pérdida de material)
+ - @fpga-circuit (circuito FPGA)
+ - @welding-tool (herramienta de soldadura)
+ - @screwdriver (destornillador)
+ - @steel-bar (barra de acero)</Manual_Description_Expansion>
+</infotexts>

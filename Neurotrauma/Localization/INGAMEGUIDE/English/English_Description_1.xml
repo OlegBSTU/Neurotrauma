@@ -1,0 +1,979 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <Manual_Description_FAQ>## Q: Why can't I find a specific affliction/item?
+A: This guide is incomplete at the current moment. This guide is a copy of Trello guide, by 28.03.2023
+
+## Q: What is the difference between Symptoms and other afflictions?
+A: Symptoms are afflictions that don't do anything on their own, and merely exist to make diagnosis easier, while other afflictions have effects that actually impact gameplay.
+
+## Q: Button not work/Link to item missing
+A: If something not working, or have unexpected behaviour, send bug report into steam mod page, with steps to reproduce.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###First aid kit
+Distribute these to crew or around the sub
+
+@bandages
+@sutures
+@tourniquet
+@autopulse - only used to keep yourself conscious till reaching a doctor
+@blood-packs - Preferably O- or O+
+@gypsum
+@trauma-shears
+@opium to use with a @wrench on dislocations (or dislocation pills)
+(minor husk sepsis pills)
+
+It can't be placed in a med kit, but a @wrench is used for dislocations, which are common
+
+###Doctor's med kit 1
+@opium, @morphine, or your choice of @analgesia pills for surgery
+@bandages
+@sutures - fits in surgery toolbox instead if you carry one
+@tourniquet
+@health-scanner
+@hematology-analyzer
+@blood-packs - Preferably O- or O+
+@gypsum
+@trauma-shears - fits in surgery toolbox instead if you carry one
+
+This first med kit will cover the most basic diagnosis and treatments, but a second med kit and/or surgery kit provides most of the tools for more serious treatments.
+
+Also recommended to keep a stasis bag in your hotbar
+
+###Doctor's med kit 2
+@surgical-drill
+@surgical-saw
+@ambubag
+@antiseptic-sprayer with @antiseptic loaded or @antibiotic-ointment
+@manual-defibrillator or @aed
+@mannitol (or neurotrauma pills)
+@broad-spectrum-antibiotics (or minor husk sepsis pills)
+calyxanide (or major husk pills)
+@plastiseal or @antibiotic-glue
+
+###Surgery kit
+@scalpel
+@hemostat
+@retractors
+@sutures
+@tweezers
+@needle
+@drainage
+The 4 most used @organ-procurement-scalpels or extra @needle and @drainage
+
+Consider adding a @needle to your med kit if you don't carry around a surgery kit regularly</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>Diagnosing is used to describe the process of using the \"Three H's\":
+- Health Interface - Provides things that are mostly surface level
+- Health Scanner - Provides information about the internals
+- Hematology Analyzer - Provides information about the blood
+
+Using this method gives you the most information and makes it much easier to properly treat your patient and increase their chances of survival.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#If the patient is in immediate danger of dying put them in a @stasis-bag
+A stasis bag will give you 6 minutes of paused afflictions to diagnose, figure out your treatment plan, and administer any treatments short of surgery.
+
+###Suggested treatments in order of importance
+1. Put them in stasis bag if they're in rapidly deteriorating condition
+2. Diagnose problems and figure out which steps from below are relevant
+3. @tourniquet any @arterial-bleeding
+4. If there's major regular bleeding, @sutures them, give @blood-packs if necessary and continue doing so in further steps if necessary. If they have internal or aortic bleeding, that will need to be fixed before transfusing blood or you will waste blood bags. Consider using liquid oxygenite further down to stabilize the patient for those surgeries.
+5. Use a @needle if @pneumothorax is high
+6. If in @stasis-bag, prep patient for removal from bag, give any drugs if they need it
+\\- @azathioprine: if they need later organ transplants
+\\- Antirad or stabilozine: radiation sickness IMPORTANT
+\\- @broad-spectrum-antibiotics: sepsis
+\\- @mannitol: neurotrama reduction or healing if their blood is stable
+\\- @morphine: painkiller for surgery
+\\- @thiamine: organ damage healing
+Then take them out of the stasis bag to start surgery (here's where you apply @liquid-oxygenite if you're going to after using a stasis bag)
+7. First aid for heartbeat/breathing if they're arrested or about to arrest (or if just taken out of stasis bag, as that arrests heartbeat and breathing). Skip this step if they have massive internal or aortic bleeding to fix first.
+8. Fix @aortic-rupture, @internal-bleeding, and @arterial-bleeding properly. Give more blood if needed.
+9. Properly fix any heart/breathing problems, including using @drainage to fix @pneumothorax
+10. Fix bad @burns (high second degree or any third degree)
+\\- Second degree: @antibiotic-ointment or @bandages if that limb doesn't need surgery 
+\\- Third degree: @antibiotic-glue, or if that limb needs surgery, wait till the end of surgery and use @plastiseal before the closing @sutures.
+11. Do @osteosynthesis-implants surgeries on head/neck/chest @fractures and then @spinal-cord-implants surgery on @spinal-cord-injury
+12. @health-scanner body parts and perform @tweezers surgery to remove @foreign-bodies as well as heal @internal-damage and blunt force trauma
+13. @organ-transplant-surgery surgery if needed.
+14. Apply @sutures to close surgeries to fix @wounds
+15. @bandages then @gypsum any @fractures on arms or legs to cast them
+16. Use @hematology-analyzer to check if they have any lingering blood problems and administer @broad-spectrum-antibiotics if they have @sepsis if you didn't give it to them earlier
+
+An additional option is @liquid-oxygenite if they're having @neurotrauma and/or having massive bleeding problems. It negates all need for breathing, heartbeat, and having any blood for 30 seconds. LO2 gives you some time to fix @arterial-bleeding or @aortic-rupture properly while not accruing damage for 30 seconds. It will cause some organ damage though.
+
+You can also choose to use @liquid-oxygenite to outright ignore bleeding, breathing, and heartbeat problems for 30 seconds while you do surgery, then apply @blood-packs and restart heartbeat/breathing after fixing problems with surgery. If they have an @aortic-rupture it might be a good idea to use LO2 and ignore the massive blood loss and replace the blood after fixing the aortic rupture and any other serious bleeding.</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Thou shalt use the three Hs of diagnosis. (in @how-to-diagnose)
+2. Thou shalt make the blood go circly circly and the air go innie outtie.
+3. Thou shalt treat underlying causes over treating symptoms (ask yourself, \"Why is my patient in @cardiac-arrest?\")
+4. Thou shalt not do surgery without a @surgery-table or @propofol, lest thine patient suffer.
+5. Sedation -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (optional steps) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Vomiting blood is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+
+##Caused by:
+
+- @internal-bleeding (50% or more)
+- @liver-damage (at 100%)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>Pale skin is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @hypotension (50% or less)
+- @blood-loss (40% or more)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>Shortness of breath is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @heart-attack
+- @lung-damage (45% or more)
+- @pneumothorax (40% or more)
+- @cardiac-tamponade (10% or more)
+- @hemotransfusion-shock (between 0-70%)
+- @hypoxemia (20% or more)
+- @heart-damage (80% or more)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>Cough is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @lung-damage (50% or more)
+- @heart-damage (50% or more)
+- @cardiac-tamponade (20% or more)
+
+</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Increased heartrate is a symptom, which means that it isn't fatal and doesn't cause any other afflictions, unless it is slowly increasing, which means that you are undergoing fibrillation.
+
+---
+##Caused by:
+
+- @acidosis (20% or more)
+- @sepsis (20% or more)
+- @blood-loss (40% or more)
+- @pneumothorax (30% or more)
+- @withdrawal (alcohol withdrawal, 75% or more)
+- @fibrillation
+- @adrenaline</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>Confusion is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+
+## Caused by:
+
+- @acidosis
+- @sepsis
+- @hypotension
+- @hypoxemia
+- @withdrawal
+- @concussion</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>Lightheadedness is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @hypotension (60% or less)
+</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>Blurred vision is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. As the name suggests, this affliction will make your vision blurrier.
+
+---
+##Caused by:
+
+- @hypotension (55% or less)
+- @concussion</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>Leg swelling is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Cyberlegs will not swell.
+
+---
+##Caused by:
+
+- @liver-damage (40% or more)
+- @kidney-damage (60% or more)
+- @heart-damage (80% or more)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>Wheezing is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @hemotransfusion-shock (between 0-90%)</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>Weakness is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Weakness will decrease melee damage you deal by 80%.
+
+---
+##Caused by:
+
+- @cardiac-tamponade (30% or more)
+- @blood-loss (60% or more)
+- @acidosis (35% or more)
+</Manual_Description_Weakness>
+  <Manual_Description_Fever>Fever is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @sepsis (5% or more)
+- @withdrawal (alcohol withdrawal, 90% or more)</Manual_Description_Fever>
+  <Manual_Description_Sweating>Sweating is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @heart-attack
+- @withdrawal (30% or more)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Bloating is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @liver-damage (50% or more)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>Inflammation is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @infected-wounds (10% or more)
+- @foreign-bodies (15% or more)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>Jaundice is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @liver-damage (80% or more)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>Abdominal discomfort is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @liver-damage (65% or more)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>Headache is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Headache will create a fuzzy overlay on the borders of your screen.
+
+---
+##Caused by:
+
+- @blood-loss (50% or more)
+- @acidosis (20% or more)
+- @hypoxemia (40% or more)
+- @hypotension (60% or less)
+- @stroke
+- @withdrawal (alcohol withdrawal, 50% or more)
+- @fractures (skull fractures)
+- @concussion
+
+##Treatments:
+
+- Treating the causes
+- Painkillers </Manual_Description_Headache>
+  <Manual_Description_Craving>Craving is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @withdrawal (20% or more)</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Palpitations is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+---
+##Caused by:
+
+- @alkalosis (20% or more)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Spasms are a symptom, which means that they aren't fatal and don't cause any other afflictions.
+
+---
+##Caused by:
+
+- @seizure</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Neurotrauma is one of the only things that can deal direct damage to your health. Neurotrauma is extremely dangerous and can build up very quickly, and upon reaching 200%, will instantly kill the player. The brain will heal at a rate of 0.1% per second, assuming that the config is unchanged and nothing is damaging it.
+
+---
+##Caused by:
+
+- @stroke
+- @liver-damage (80% or more, point at which it outpaces natural regeneration)
+- @kidney-damage (cancels out natural regeneration at 100%)
+- @sepsis (25% or more, point at which it outpaces natural regeneration)
+- @fractures (skull fractures, if they aren't bandaged and patient doesn't have neurotrauma already)
+- @hypoxemia (10% or more, point at which it outpaces natural regeneration)
+- Using a @tourniquet on the head
+- @methamphetamine
+- @hyperzine
+- @traumatic-shock (equal to strength divided by 100 per second, 10% or more is the point at which it outpaces natural regeneration)
+- @cyanide-poisoning (70% or more)
+
+
+##Effects:
+
+- Direct damage to vitality
+- Instant death (at 200%)
+- @respiratory-arrest (at 100% or more)
+- @unconsciousness (at 100% or more)
+
+##Treatments:
+
+- Treating the causes
+- @mannitol if blood is stable. (Blood pressure is above 70% and @hypoxemia is below 30%)
+- @mannitol-plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>Stroke must be treated as quickly as possible to reduce the damage done to the brain. @streptokinase must NOT be used on patients suffering from this, as it will damage the brain further.
+
+---
+##Caused by:
+
+- @hypertension (150% or more)
+
+##Effects:
+
+- @neurotrauma
+- @seizure
+- @coma
+- @headache
+
+
+##Treatments:
+
+- @open-close-surgery</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>##Caused by:
+
+- Chemical/alcohol/opiate addiction
+
+##Effects:
+
+###In alcohol, chemical and opiate withdrawal:
+- @craving (at 20% or more)
+- @sweating (at 30% or more)
+- 50% slower movement speed (at 80% or more)
+- 30% slower movement speed (at 40% or more)
+- 10% slower movement speed (at 20% or more)
+- @nausea (at 40% or more)
+
+
+###In alcohol withdrawal: 
+- @fever (at 90% or more)
+- @vomiting (at 60% or more)
+- @headache (at 50% or more)
+- @confusion (at 80% or more)
+- @increased-heartrate (at 75% or more)
+- @seizure (at 50% or more)
+- @hypertension
+
+##Treatments:
+
+- Haloperidol (ONLY FOR ALCOHOL WITHDRAWAL)
+- @naloxone (ONLY FOR OPIATE WITHDRAWAL)
+- Using an @ambubag containing paint (ONLY FOR CHEMICAL WITHDRAWAL)
+- Administering more of the substance the individual is in withdrawal from (e.g., giving someone with opiate withdrawal more opiates)
+- Time</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>Opiate overdose is rare, and only occurs from abusing opiates. However, if above the 50% threshold, it is very deadly, and requires emergency care.
+
+---
+
+## Caused by:
+
+- Taking too many opiates (@opium
+
+## Effects:
+
+- @respiratory-arrest
+- @hypoventilation
+- @seizure
+- @unconsciousness
+- 50% slower movement speed (at 50% or more)
+
+## Treatments:
+
+- @naloxone
+
+‌</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Seizures will cause you to ragdoll whenever they trigger.
+
+---
+##Caused by:
+
+- @stroke
+- @acidosis (60% or more)
+- @alkalosis (60% or more)
+- @withdrawal (alcohol withdrawal, 50% or more)
+- @radiation-sickness (50% or more)
+- @opiate-overdose (50% or more)
+
+##Effects:
+
+- @unconsciousness
+- @spasms
+
+##Treatments:
+
+- Treating the causes</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>Unconsciousness usually means that something very wrong has happened, and a medic will need to treat you as soon as possible. Unconsciousness will hide mental symptoms (cards hidden by this affliction are tagged with the \"Mental Symptom\" label), and will also function as a @surgery-table as long as your patient is unconscious.
+
+---
+
+## Caused by:
+
+- Having less than 0 vitality
+- @hypoxemia
+- @neurotrauma
+- @coma
+- @aortic-rupture
+- @seizure
+- @anesthesia
+- @opiate-overdose
+- @stasis-bag
+
+## Effects:
+
+- Inability to move or speak
+- @oxygen-low
+
+## Treatments:
+
+- Treating the causes</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Coma often happens after suffocating, and usually isn't fatal with proper medical attention. The recommended course of action is to strap an autopulse onto the patient if it is severe enough.
+
+---
+
+## Caused by:
+
+- @stroke
+- @cardiac-arrest
+- High levels of @acidosis
+- @morbusine
+- Failing @naloxone skill check
+
+## Effects:
+
+- @cardiac-arrest
+- @unconsciousness
+
+## Treatments:
+
+- Treating the causes and waiting
+
+‌</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Spinal cord injuries will remove your ability to move or speak, which could get you killed indirectly. Spinal cord injuries must be treated after treating the neck fracture, otherwise it will simply come back.
+
+---
+##Caused by:
+
+- @fractures (neck fractures)
+
+
+##Effects:
+
+- Inability to move or speak 
+- @analgesia
+
+##Treatments:
+
+- @open-close-surgery (apply @spinal-cord-implants before applying @sutures )</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>A concussion is caused by a severe attack to the head. It periodically brings nausea, blurred vision, headaches, and confusion. While a nuisance, concussions aren't lethal.
+
+##Effects:
+- @nausea
+- @blurred-vision
+- @headache
+- @confusion
+
+##Caused by:
+- Trauma (explosions, bite wounds, blunt force, @internal-damage)
+
+
+##Prevention:
+- Wearing a helmet
+
+##Treatment:
+- There is none. You gotta wait it out. Should've worn that helmet.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>Respiratory arrest will quickly build up oxygen low and suffocate the victim, and must be dealt with swiftly. Being near a @surgery-table will prevent the negative effects of respiratory arrest from taking place.
+
+---
+
+## Caused by:
+
+- @lung-damage
+- @traumatic-shock
+- @neurotrauma
+- @hypoxemia
+- @opiate-overdose
+- @stasis-bag
+
+## Effects:
+
+- @oxygen-low
+- @acidosis
+
+## Treatments:
+
+- Treating the causes
+- @ambubag with an oxygenite tank in it
+- Being conscious
+
+## First Aid:
+
+- Being near a @surgery-table
+- @autopulse
+
+‌</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>Lung damage is not lethal, as long as it is below 100%. The lungs will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging them and they're below 100% damage.
+
+---
+##Caused by:
+
+- @broad-spectrum-antibiotics
+- @liquid-oxygenite
+- Using an @ambubag containing welding/incendium fuel or paint
+- Smoking
+- @hemotransfusion-shock (between 0-70%)
+- @radiation-sickness (28% or more, point at which it outpaces natural regeneration)
+- @sepsis (3% or more, point at which it outpaces natural regeneration)
+- @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+##Effects:
+
+- @cough (at 50% or more)
+- @shortness-of-breath (at 45% or more)
+- @respiratory-arrest (at 100%)
+
+##Treatments:
+
+- Time
+- @thiamine
+- @organ-transplant-surgery</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>Pneumothorax will prevent @hypoxemia from decreasing in strength. While not lethal on its own, Pneumothorax can easily kill if paired with afflictions that cause Hypoxemia. Pneumothorax's negative effects can be temporarily negated by using a @needle.
+
+---
+##Caused by:
+
+- @fractures (rib fractures, if they arent bandaged)
+- Trauma (gunshots, explosions, lacerations, bite wounds, blunt force, @internal-damage)
+
+##Effects:
+
+- @shortness-of-breath (at 40% or more)
+- @hyperventilation (at 15% or more)
+- @increased-heartrate (at 30% or more)
+
+##Treatments:
+
+- Using a @drainage during surgery (After @retracted-skin)
+
+##First Aid:
+
+- @needle</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>Hyperventilation is normally harmless, and can usually be ignored. Hyperventilation and hypoventilation will cancel each other out.
+
+---
+##Caused by:
+
+- @hypotension (80% or less)
+- @hypoxemia (10% or more)
+- @pneumothorax (15% or more)
+- @sepsis (15% or more)
+- @adrenaline
+
+##Effects:
+
+- @alkalosis
+
+##Treatments:
+
+- Treating the causes
+- Inducing @hypoventilation</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>Hypoventilation is normally harmless, and can usually be ignored. Hypoventilation and hyperventilation will cancel each other out.
+
+---
+
+## Caused by:
+
+- @analgesia
+- @anesthesia
+- @opiate-overdose
+
+## Effects:
+
+- @acidosis
+
+## Treatments:
+
+- Treating the causes
+- Inducing @hyperventilation
+
+‌</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>Oxygen low is where there is a lack of oxygen in the LUNGS. @hypoxemia.
+
+---
+
+## Caused by:
+
+- @respiratory-arrest
+- @unconsciousness (if caused by having less than 0 vitality)
+- Being in water or a room without a source of oxygen.
+- Pomegrenade Extract
+
+## Effects:
+
+- @hypoxemia
+
+## Treatments:
+
+- @surgery-table
+- CPR
+- @autopulse
+- Breathing oxygenated air
+- @ambubag with Oxygen or Oxygenite tanks</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>Cardiac tamponade is common during missions involving combat outside the submarine, such as abandoned outposts or wrecks. Anyone showing symptoms should immediately head back to the submarine to get treated.
+
+---
+##Caused by:
+
+- Trauma (lacerations and gunshots)
+
+##Effects:
+
+- @hypotension (halves blood pressure)
+- @weakness (at 30% or more)
+- @cough (at 20% or more)
+- @shortness-of-breath (at 10% or more)
+
+
+##Treatments:
+
+- @open-close-surgery</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>Cardiac arrest will cause blood pressure to plummet significantly, and must be dealt with swiftly.
+
+---
+##Caused by:
+
+- @heart-damage (at 100%)
+- @traumatic-shock (40% or more)
+- @coma (40% or more)
+- @hypoxemia (80% or more)
+- @irregular-heartbeat (20% or more)
+- @fibrillation
+- @manual-defibrillator
+- @stasis-bag
+
+##Effects:
+
+- @coma
+- @acidosis
+- @hypotension (sets blood pressure to the minimum)
+- @hypoxemia
+
+##Treatments:
+
+- CPR
+- @autopulse
+- Treating the causes
+- @adrenaline
+- @manual-defibrillator or @aed
+- @nitroglycerin pill (from NT pharmacy)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>A heart attack must be treated as soon as possible to reduce the risk of heart failure.
+
+---
+##Caused by:
+
+- @hypertension (150% or more)
+- Failing @antibiotic-glue skill check
+
+##Effects:
+
+- @sweating
+- @heart-damage
+- @shortness-of-breath
+
+##Treatments:
+
+- @streptokinase
+- @nitroglycerin pill (from NT pharmacy)
+- Treating the causes</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>Heart damage is not lethal, as long as it is below 100%. The heart will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging it and it's below 100% damage.
+
+---
+##Caused by:
+
+- @heart-attack
+- @broad-spectrum-antibiotics
+- @liquid-oxygenite
+- @hemotransfusion-shock (between 0-70%)
+- @mannitol
+- @radiation-sickness (29% or more, point at which it outpaces natural regeneration)
+- @sepsis (3% or more, point at which it outpaces natural regeneration)
+- @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+##Effects:
+
+- @cough (at 80% or more)
+- @shortness-of-breath (at 80% or more)
+- @cardiac-arrest (at 100%)
+- @leg-swelling (at 80% or more)
+
+##Treatments:
+
+- Time
+- @thiamine
+- @organ-transplant-surgery</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Irregular heartbeat is when the heart is not beating at its normal rate and can lead to @cardiac-arrest.
+
+---
+##Caused By:
+- @fibrillation
+
+##Effects:
+- @cardiac-arrest (at 20% or more)
+- @hypotension
+
+##Treatment:
+- @manual-defibrillator or @aed
+- CPR
+- @autopulse
+- Treating underlying causes</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>Fibrillation is a 3-step process. At first, it will begin as increased heartrate, which will increase slowly. Upon reaching 100% increased heartrate, it will become irregular heartbeat, which will also increase, and will become cardiac arrest upon hitting 100%. Additionally, there is a chance for irregular heartbeat to immediately skip to cardiac arrest, which scales depending on how much irregular heartrate you have. Fibrillation gain is halved when under the effects of @adrenaline.
+
+---
+
+## Caused by:
+
+- @aortic-rupture
+- @acidosis
+- @hypotension
+- @hypoxemia
+
+## Effects:
+
+- @increased-heartrate.
+
+## Treatments:
+
+- @manual-defibrillator
+- @autopulse
+- Treating the causes
+- CPR</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>Aortic ruptures are one of the most serious injuries one can experience. The victim of this requires immediate medical care, and will most likely lose a significant portion of their blood.
+
+---
+##Caused by:
+
+- @wounds (bleeding, 80% or more, if in the torso)
+- @foreign-bodies (20% or more, if in the torso)
+
+##Effects:
+
+- 4% @blood-loss per second
+- @unconsciousness
+- 8% @internal-bleeding per second
+- @fibrillation
+
+
+##Treatments:
+
+- @aortic-rupture-surgery
+- @open-close-surgery
+
+##First Aid:
+
+- @stasis-bag</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>Internal bleeding will quickly drain the blood out of the patient, and must be dealt with quickly.
+
+---
+
+## Caused by:
+
+- Trauma (gunshots, explosions, bite wounds, lacerations)
+- @liver-damage
+- @aortic-rupture
+
+## Effects:
+
+- @blood-loss
+- @vomiting-blood
+
+## Treatments:
+
+- @open-close-surgery
+- @combat-stimulant</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Low levels of radiation sickness are easily treatable, but if radiation sickness gets high enough, it will quickly begin killing the organs. Lungs will take more damage from radiation than other organs.
+
+---
+##Caused by:
+
+- @health-scanner (0.5% per second to person getting scanned, 0.3% per second to person scanning, 1% if used as a treatment, as you would a bandage)
+- Radiotoxin
+- Nuclear explosions
+- Being near a Volatile Fulgurium Fuel Rod
+
+##Effects:
+
+- @liver-damage (at 29% or more, point at which it outpaces natural regeneration)
+- @heart-damage (at 29% or more, point at which it outpaces natural regeneration)
+- @kidney-damage (at 33% or more, point at which it outpaces natural regeneration, 29% if one kidney is dead)
+- @lung-damage (at 28% or more, point at which it outpaces natural regeneration)
+- @bone-damage (at 31% or more, point at which it outpaces natural regeneration)
+- @nausea (at 80% or more)
+- @seizure (at 50% or more)
+
+##Treatments:
+
+- Antirad
+- Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>Kidney damage is usually survivable, as even if it has progressed to kidney failure, it will still kill extremely slowly. Kidney damage will not heal below 50% damage if it passes the 50% threshold, as one of the kidneys has died. The kidneys will heal at a rate of 0.01% per second if one kidney is alive, and will heal at a rate of 0.02% per second if both kidneys are alive, assuming that the config is unchanged and nothing is damaging them.
+
+---
+##Caused by:
+
+- @broad-spectrum-antibiotics
+- @liquid-oxygenite
+- @hemotransfusion-shock (between 0-70%)
+- @mannitol
+- @radiation-sickness (33% or more, point at which it outpaces natural regeneration, 29% if one kidney is dead)
+- @hypertension (184% or more, point at which it outpaces natural regeneration, 152% if one kidney is dead)
+- @sepsis (6% or more, point at which it outpaces natural regeneration, 3% if one kidney is dead)
+- @hypoxemia (8% or more, point at which it outpaces natural regeneration, 4% if one kidney is dead)
+
+##Effects:
+
+- @leg-swelling (at 60% or more)
+- @acidosis (at 80% or more)
+- @hypertension
+- @bone-damage (at 72% or more, point at which it outpaces natural regeneration)
+- @vomiting (at 60% or more)
+- @neurotrauma (will neutralize natural regeneration completely at 100%)
+- @nausea (at 60% or more)
+
+##Treatments:
+
+- Time
+- @thiamine
+- @organ-transplant-surgery</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Liver damage, if progressed to liver failure, is fatal and can cause massive blood loss in the form of @internal-bleeding. The liver will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging it and it's below 100% damage.
+
+---
+##Caused by:
+
+- @broad-spectrum-antibiotics
+- @liquid-oxygenite
+- @hemotransfusion-shock (between 0-70%)
+- @radiation-sickness (29% or more, point at which it outpaces natural regeneration)
+- @sepsis (3% or more, point at which it outpaces natural regeneration)
+- @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+##Effects:
+
+- @leg-swelling (at 40% or more)
+- @internal-bleeding (at 100%)
+- @vomiting-blood (at 100%)
+- @hypertension
+- @neurotrauma (at 80% or more, point at which it outpaces natural regeneration)
+- @abdominal-discomfort (at 65% or more)
+- @jaundice (at 80% or more)
+- @bloating (at 50% or more)
+- Reduced ability to heal bleeding, bleeding will not heal at all at 100% damage
+
+##Treatments:
+
+- Time
+- @thiamine
+- @organ-transplant-surgery</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>##Caused by:
+- Morbusine
+
+
+##Effects:
+- Screen distortion
+- 20% slower movement speed (at 20% or more) 
+- @coma (at 20% or more)
+
+##Treatments:
+
+- Morbusine Antidote
+- Stabilozine</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Caused by:
+- Cyanide
+
+
+##Effects:
+- Oxygen low
+- @hypoxemia
+- @neurotrauma (at 70% or more)
+
+##Treatments:
+
+- Cyanide Antidote
+- Stabilozine</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>A side effect of some medicines. Additional organ damage is caused by failing the medical skill check of those medicines.
+
+---
+##Caused by:
+- @alien-blood +3.75 or 7.5%
+- @broad-spectrum-antibiotics +12 or 20% over antibiotics duration
+- Chloral Hydrate +2.5%
+- @liquid-oxygenite +6 or 10%
+- @mannitol +5 or 10%
+- @methamphetamine +15 or 30%
+
+##Treatments:
+- Time
+- @deusizine
+- @organ-transplant-surgery will heal some vanilla organ damage with fresh organs</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>The first step in all surgical procedures. Analgesia is an affliction that prevents traumatic shock during surgery and relieves pain. Traumatic shock will still occur if surgery is performed without a table. Analgesia will also give you damage resistance, scaling up to a maximum of 50% resistance at 200%.
+
+---
+##Caused by:
+
+- Opiates 
+- @adrenaline (doesn't give more than 4.5% analgesia)
+- @spinal-cord-injury
+- Being drunk (doesn't give more than 5% analgesia)
+- @anesthesia (doesn't give more than 5% analgesia)
+
+##Effects:
+
+- @hypoventilation (at 20% or more)
+
+##Treatments:
+
+- @naloxone</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>Anesthesia is an affliction that prevents traumatic shock during surgery, and unlike @analgesia, doesn't require a @surgery-table to perform safe surgery. Anesthesia will immediately wear off upon reaching 100% strength. Anesthesia will also slow your character down by 50%.
+
+---
+##Caused by:
+
+- @propofol
+
+##Effects:
+
+- @hypoventilation (at 40% or more)
+- @unconsciousness (at 15% or more)
+- @analgesia (doesn't give more than 5% analgesia)
+- 50% slower movement speed
+
+##Treatments:
+
+- @anaparalyzant
+- Time</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>Abdominal pain is not lethal, and will only halve speed for 1 second every 3-6 seconds.
+
+---
+##Caused by:
+
+- @hemotransfusion-shock (between 0-80%)
+
+##Effects:
+
+- Half speed for 1 second every 3-6 seconds
+
+##Treatments:
+
+- Treating the causes
+- Painkillers </Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>Vomiting usually isn't harmful, and can sometimes be beneficial due to it causing alkalosis. Vomiting will also slow your character down by 20%.
+
+---
+##Caused by:
+
+- @hemotransfusion-shock (between 0-40%)
+- @withdrawal (alcohol withdrawal, 60% or more)
+- Drunk (at 100%)
+- @kidney-damage (60% or more)
+- @raptor-bane-extract
+
+##Effects:
+
+- @alkalosis
+
+##Treatments:
+
+- Treating the causes</Manual_Description_Vomiting>
+</infotexts>

@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <Manual_Description_Nausea>Nausea can be ignored, as it doesn't do anything fatal on it's own.
+
+---
+##Caused by:
+
+- @hemotransfusion-shock (between 0-90%)
+- @withdrawal (40% or more)
+- @radiation-sickness (80% or more)
+- @kidney-damage (60% or more)
+- @concussion
+- Being near uncontained organs
+
+##Effects:
+
+- Slows down character by 10%
+
+##Treatments:
+
+- Treating the causes</Manual_Description_Nausea>
+  <Manual_Description_Chest_Pain>Chest pain is not lethal, and will only halve speed for 1 second every 3-6 seconds.
+
+---
+##Caused by:
+
+- @hemotransfusion-shock (between 0-60%)
+- @fractures (rib fractures)
+
+##Effects:
+
+- Half speed for 1 second every 3-6 seconds
+
+##Treatments:
+
+- Treating the causes
+- Painkillers </Manual_Description_Chest_Pain>
+  <Manual_Description_Traumatic_Amputation>Traumatic amputation is the non-surgical amputation of an extremity. A traumatic amputation will act the exact same as a @surgical-amputation, besides from the fact that you will acquire @arterial-bleeding upon first getting amputated. A limb must be fractured in order to become traumatically amputated.
+
+---
+
+##Caused by:
+- Trauma (gunshots, internal damage, blunt force, lacerations, bite wounds and explosions)
+- @material-loss (99% or more)
+
+
+##Effects:
+
+###In all traumatic amputations:
+- @arterial-bleeding
+- @intense-pain
+
+###In leg amputations: 
+- 1 leg amputation will halve speed
+- 2 leg amputations will ragdoll you and remove your ability to speak.
+
+###In arm amputations:
+- 1 arm amputation will prevent you from using that arm (you cant hold 2-handed items anymore
+- 2 arm amputations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+
+###In head amputations:
+- Instant death
+
+##Treatments:
+
+- @amputation-surgery
+- Performing @amputation-surgery (use severed limb before applying @sutures)</Manual_Description_Traumatic_Amputation>
+  <Manual_Description_Gangrene>Gangrene is a rare occurrence, and only occurs due to neglecting an applied @tourniquet. Once gangrene hits 15%, it is irreversible and the limb must be amputated.
+
+---
+
+## Caused by:
+
+- Leaving a @tourniquet on for too long
+- Leaving a @endovascular-balloon in for too long
+- @sepsis
+
+## Effects:
+
+- @sepsis
+
+## Treatments:
+
+- @amputation-surgery
+- Time (below 15%)</Manual_Description_Gangrene>
+  <Manual_Description_Surgical_Amputation>Surgical amputation is the amputation of an extremity. Possible amputations include arms, legs, and the head. The head cannot be reattached after amputation. Unlike traumatic amputations, surgical amputations will not cause @arterial-bleeding upon first acquiring them.
+
+##Caused by:
+- @amputation-surgery
+
+##Effects:
+
+###In leg amputations: 
+- 1 leg amputation will halve speed
+- 2 leg amputation will ragdoll you and remove your ability to speak.
+
+###In arm amputations:
+- 1 arm amputation will prevent you from using that arm (you cant hold 2-handed items anymore
+- 2 arm amputations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+
+###In head amputations:
+- Instant death
+
+##Treatment:
+- Performing @amputation-surgery (use severed limb before applying @sutures)</Manual_Description_Surgical_Amputation>
+  <Manual_Description_Intense_Pain>Intense pain is not lethal, and only occurs when something has been dislocated, fractured or amputated. Intense pain will halve speed for 1 second every 3-6 seconds.
+
+---
+##Caused by:
+
+- @dislocations
+- @fractures
+- @traumatic-amputation
+
+##Effects:
+
+- Half speed for 1 second every 3-6 seconds
+
+##Treatments:
+
+- Treating the causes
+- Stabillizing the dislocation with a bandage or the fracture with a plaster cast
+- Painkillers </Manual_Description_Intense_Pain>
+  <Manual_Description_Bone_Death>Bone death, while usually not lethal, can kill if you lack @osteosynthesis-implants. Due to the large amount of implants this affliction takes to cure, it can be rather expensive.
+
+---
+##Caused by:
+
+- @bone-damage (90% or more)
+
+
+##Effects:
+
+- @fractures
+
+##Treatments:
+
+- @osteosynthetic-surgery on every bodypart</Manual_Description_Bone_Death>
+  <Manual_Description_Bone_Damage>Bone damage is not lethal, and can usually be ignored as long as it has not progressed to @bone-death.
+
+---
+##Caused by:
+
+- @kidney-damage (72% or more, point at which it outpaces natural regeneration)
+- @radiation-sickness (31% or more, point at which it outpaces natural regeneration)
+- @sepsis (50% or more, point at which it outpaces natural regeneration)
+- @hypoxemia (will neutralize natural regeneration completely at 100%)
+
+
+##Effects:
+
+- @bone-death (at 90% or more)
+
+##Treatments:
+
+- Time
+- @osteosynthetic-surgery</Manual_Description_Bone_Damage>
+  <Manual_Description_Fractures>Fractures are common injuries, which most crewmembers will get often. Fractures will not kill, and should be treated last in an emergency. Having a fractured limb is required for it to become a @traumatic-amputation. Cyberlimbs cannot be fractured.
+
+\\---
+
+## Caused by:
+
+- Trauma (gunshots, explosions, lacerations, bite wounds, etc)
+- @bone-death
+- Failing the @wrench
+
+## Effects:
+
+### In leg fractures:
+
+- 1 leg fracture will halve speed
+- 2 leg fractures will ragdoll you and remove your ability to speak.
+- @intense-pain
+- @internal-damage
+
+### In arm fractures:
+
+- 1 arm fracture will prevent you from using that arm (you can't hold 2-handed items anymore)
+- 2 arm fractures will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+- @intense-pain
+- @internal-damage
+
+### In skull fractures:
+
+- 20% or 30% @neurotrauma
+- @headache
+- @internal-damage
+
+### In neck fractures:
+
+- @spinal-cord-injury
+- @internal-damage
+
+### In rib fractures:
+
+- @pneumothorax
+- @chest-pain
+- @internal-damage
+
+## Treatments:
+
+- @bandages
+- @osteosynthetic-surgery
+
+## First Aid:
+
+- @bandages</Manual_Description_Fractures>
+  <Manual_Description_Dislocations>Dislocations are common injuries, which most crewmembers will get often. Dislocations will not kill, and should be treated last in an emergency. A limb can be both dislocated and fractured. Cyberlimbs cannot be dislocated.
+
+---
+##Caused by:
+
+- Trauma (explosions, blunt force, internal damage)
+
+##Effects:
+
+###In leg dislocations: 
+- 1 leg dislocation will halve speed
+- 2 leg dislocations will ragdoll you and remove your ability to speak.
+- @intense-pain
+- @internal-damage
+
+###In arm dislocations:
+- 1 arm dislocation will prevent you from using that arm (you cant hold 2-handed items anymore
+- 2 arm dislocations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+- @intense-pain
+- @internal-damage
+
+##Treatments:
+
+- @wrench (use it in the health interface, like you would a bandage)
+The skill check is 60 medical without and 30 medical with @analgesia
+
+##First Aid:
+- @bandages or @plastiseal</Manual_Description_Dislocations>
+  <Manual_Description_Arterial_Bleeding>Arterial ruptures are extremely dangerous and require emergency care as soon as possible. Applying a @tourniquet to the afflicted limb can buy you time to treat it, but this should not be done on the head.
+
+---
+##Caused by:
+
+- @wounds (bleeding, 80% or more)
+- @traumatic-amputation
+- @foreign-bodies (20% or more)
+
+##Effects:
+
+- 1.5% @blood-loss per second
+
+
+##Treatments:
+
+- @open-close-surgery
+
+##First Aid:
+- @tourniquet</Manual_Description_Arterial_Bleeding>
+  <Manual_Description_Internal_Damage>Internal Damage is the result of various wounds. It decreases vitality and is caused alongside many other issues when enough internal damage is received in a single blow.
+
+---
+
+## Caused by:
+
+- @dislocations
+- @fractures
+- Failing the skill check when using:
+- @tweezers
+- @sutures
+- @retractors
+- @surgical-drill
+- @surgical-saw
+- @spinal-cord-implants
+- @osteosynthesis-implants
+
+## Effects:
+
+- @concussion
+- @pneumothorax
+- @heart-damage
+- @liver-damage
+- @lung-damage
+- @kidney-damage
+- @fractures
+- @vanilla-organ-damage
+- Vitality damage
+
+## Treatments:
+
+- @open-close-surgery
+- Time</Manual_Description_Internal_Damage>
+  <Manual_Description_Burns>First degree burns are minor and can usually be ignored, but second degree burns and higher require medical intervention, lest the patient risk contracting an infection. Burns between 1-20% strength are first degree, 21-50% are second degree, and 51% and onwards are third degree.
+
+---
+
+##Effects:
+- Direct damage to vitality
+- Turns @bandages dirty (speed depends on how severe the burns are)
+- @infected-wounds (scales depending on how severe the burns are)
+
+##Treatments:
+
+- @bandages or @plastiseal (ONLY FOR FIRST AND SECOND DEGREE BURNS)
+- @open-close-surgery (apply @plastiseal before  applying @sutures, works on any degree burns)
+- @antibiotic-ointment (ONLY FOR FIRST AND SECOND DEGREE BURNS)
+- @antibiotic-glue (works on any degree burns)
+@combat-stimulant (works on any degree burns)</Manual_Description_Burns>
+  <Manual_Description_Infected_Wounds>Infected wounds are caused by letting wounds fester, and should be cleaned in order to prevent @sepsis.
+
+---
+##Caused by:
+
+- Letting @wounds (lacerations, @burns, gunshot wounds, bite wounds, deep tissue injuries, bleeding) fester. This will be sped up dramatically if there is a dirty bandage on a wound.
+
+##Effects:
+
+- @sepsis (at 50% or more)
+- @inflammation (at 10% or more)
+- Decreased immunity
+
+##Treatments:
+
+- @antibiotic-ointment
+- @antiseptic-sprayer
+
+##First Aid:
+
+- @bandages or @plastiseal</Manual_Description_Infected_Wounds>
+  <Manual_Description_Foreign_Bodies>Foreign bodies are often acquired after firefights or being caught in an explosion. Foreign bodies should be removed as quickly as possible in order to avoid @arterial-bleeding or the patient contracting @sepsis. Each use of Tweezers will remove 5% Foreign Bodies.
+
+---
+##Caused by:
+
+- Explosions
+- Gunshots (gunshots that break a bone will always cause foreign bodies)
+
+##Effects:
+
+- @arterial-bleeding (at 20% or more)
+- @aortic-rupture (at 20% or more, if in the torso)
+- @sepsis (at 20% or more)
+- @inflammation (at 15% or more)
+
+##Treatments:
+
+- @open-close-surgery (use @tweezers before applying @sutures)
+- Using @tweezers on open gunshot wound or deep tissue injury</Manual_Description_Foreign_Bodies>
+  <Manual_Description_Wounds>##Effects:
+
+###In blunt force trauma, lacerations, gunshot wounds and deep tissue injuries:
+- Direct damage to vitality 
+
+###In bleeding:
+- @arterial-bleeding (at 80% or more)
+- @aortic-rupture (at 80% or more, if in the torso)
+- @blood-loss
+
+###In deep tissue injuries, lacerations and gunshot wounds, bleeding and bite wounds:
+- @infected-wounds
+- Turns bandages dirty (bleeding will turn bandages dirty much quicker than other wounds)
+
+##Treatments:
+
+- @sutures (DOESN'T WORK FOR BLUNT FORCE TRAUMA)
+- @open-close-surgery (use @tweezers before applying @sutures, (ONLY FOR BLUNT FORCE TRAUMA)
+- @tourniquet or @endovascular-balloon (ONLY FOR BLEEDING)
+- @antibiotic-glue (ONLY FOR BLEEDING)
+- Time
+
+##First Aid:
+- @bandages or @plastiseal</Manual_Description_Wounds>
+  <Manual_Description_Ointmented>Ointmented will help protect @wounds from infection and is very useful for patients suffering from @burns. Ointmented will also help prevent @surgical-infection if it is applied to the body part that surgery is being done on.
+
+---
+##Caused by:
+
+- @antiseptic-sprayer
+- @antibiotic-ointment
+
+##Effects:
+- Passively fights and prevents @infected-wounds</Manual_Description_Ointmented>
+  <Manual_Description_Bandaged>Bandages are an extremely versatile first aid item. It is advised that every crewmember keeps atleast some bandages on them at all times. Bandages will be turned dirty if they are applied on @wounds.
+
+\\---
+
+## Caused by:
+
+- @bandages
+
+## Effects:
+
+- Stabillizes  @dislocations  from rib fractures.
+- Removes slow down penalty from  @dislocations
+- Slows you down by 10% for each bandage
+- Accelerates natural healing of @wounds
+- Protects against @infected-wounds</Manual_Description_Bandaged>
+  <Manual_Description_Plaster_Cast>Plaster casts are extremely important for treating limb @fractures.
+
+\\---
+
+## Caused by:
+
+- Applying @gypsum
+
+## Effects:
+
+- Slowly treats limb @fractures  by 0.33% per second
+- Slows you down by 20% for each cast</Manual_Description_Plaster_Cast>
+  <Manual_Description_Hypoxemia>Hypoxemia is the absence of adequate oxygen in the bloodstream. Hypoxemia can quickly build up and cause the patient to spiral out of control. A patient suffering from this needs immediate medical care. @pneumothorax will prevent Hypoxemia from going down.
+
+---
+##Caused by:
+
+- @cyanide-poisoning
+- @hypotension (70% or less)
+- @blood-loss (40% or more)
+- @cardiac-arrest
+- @oxygen-low
+
+##Effects:
+
+- @cardiac-arrest (at 80% or more)
+- @respiratory-arrest (at 70% or more)
+- @headache (at 40% or more)
+- @confusion (at 50% or more)
+- @shortness-of-breath (at 20% or more)
+- @hyperventilation (at 10% or more)
+- @fibrillation
+- @unconsciousness (at 80% or more)
+- @neurotrauma (at 10% or more, point at which it outpaces natural regeneration)
+- @liver-damage (at 4% or more, point at which it outpaces natural regeneration)
+- @heart-damage (at 4% or more, point at which it outpaces natural regeneration)
+- @kidney-damage (at 8% or more, point at which it outpaces natural regeneration, 4% if one kidney is dead)
+- @lung-damage (at 4% or more, point at which it outpaces natural regeneration)
+- @bone-damage (will neutralize natural regeneration completely at 100%)
+
+##Treatments:
+
+- Treating the causes
+- @liquid-oxygenite</Manual_Description_Hypoxemia>
+  <Manual_Description_Sepsis>Sepsis is a dangerous affliction caused by letting @infected-wounds.
+
+---
+
+## Caused by:
+
+- @infected-wounds
+- @foreign-bodies
+- @gangrene
+- @surgical-infection
+- @blood-packs who's donor had sepsis
+- Failing @azathioprine skill check
+
+## Effects:
+
+- @liver-damage
+- @heart-damage
+- @kidney-damage
+- @lung-damage
+- @bone-damage
+- @neurotrauma
+- @increased-heartrate
+- @hyperventilation
+- @confusion
+- @fever
+- @gangrene
+
+## Treatments:
+
+- @broad-spectrum-antibiotics</Manual_Description_Sepsis>
+  <Manual_Description_Hemotransfusion_Shock>Hemotransfusion shock is a condition that only occurs when administering an incompatible blood type to someone (example: giving a O+ person A+ blood)
+
+---
+##Caused by:
+
+- Administering incompatible @blood-packs (gives 100% strength)
+
+##Effects:
+
+- @vomiting (between 0-40%)
+- @chest-pain (between 0-60%)
+- @blood-loss (between 0-70%)
+- @liver-damage (between 0-70%)
+- @heart-damage (between 0-70%)
+- @kidney-damage (between 0-70%)
+- @lung-damage (between 0-70%)
+- @shortness-of-breath (between 0-70%)
+- @abdominal-discomfort (between 0-80%)
+- @wheezing (between 0-90%)
+
+##Treatments:
+
+- @streptokinase
+- Time</Manual_Description_Hemotransfusion_Shock>
+  <Manual_Description_Blood_Loss>While blood loss can be extremely resource-intensive to cure if it's severe enough, when it's at or below 30%, it can usually be ignored.
+
+---
+##Caused by:
+
+- @wounds (bleeding)
+- @hemotransfusion-shock (between 0-70%)
+- @internal-bleeding
+- Using an @empty-blood-pack
+- @arterial-bleeding
+- @aortic-rupture
+- @surgery-incision (unless they have @clamped-bleeding)
+- @hematology-analyzer
+
+##Effects:
+
+- @hypotension (scales depending on how much blood loss)
+- @hypoxemia (at 40% or more)
+- @increased-heartrate (at 40% or more)
+- @pale-skin (at 40% or more)
+- @headache (at 50% or more)
+- @weakness (at 60% or more)
+
+##Treatments:
+
+- Giving @blood-packs
+- @deusizine
+- Time
+@combat-stimulant</Manual_Description_Blood_Loss>
+  <Manual_Description_Hypotension>Hypotension is blood pressure that has dropped below normal levels. Hypotension is lethal if it is severe enough. Lower percentages correspond to lower blood pressure.
+
+---
+##Caused by:
+
+- @blood-loss (scales depending on how much blood loss)
+- @traumatic-shock
+- @cardiac-arrest (sets blood pressure to the minimum)
+- @cardiac-tamponade (halves blood pressure)
+- @sodium-nitroprusside (reduces blood pressure by 45%)
+- @nitroglycerin (reduces blood pressure by 45%)
+- @irregular-heartbeat
+
+##Effects:
+
+- @hypoxemia (at 70% or less)
+- @fibrillation
+- @hyperventilation (at 80% or less)
+- @confusion (at 30% or less)
+- @lightheadedness (at 60% or less)
+- @blurred-vision (at 55% or less)
+- @pale-skin (at 50% or less)
+- @headache (at 60% or less)
+
+##Treatments:
+
+- Giving @blood-packs, @saline or @ringer-solution
+- @autopulse
+- @adrenaline
+- CPR
+- Treating the causes</Manual_Description_Hypotension>
+  <Manual_Description_Hypertension>Hypertension is blood pressure that has risen above normal levels. Hypertension is lethal if it is severe enough. Higher percentages correspond to higher blood pressure.
+
+---
+##Caused by:
+
+- @kidney-damage
+- @liver-damage
+- Excessive blood volume caused by injecting @saline/@ringer-solution or @blood-packs
+- @autopulse
+- @withdrawal (alcohol withdrawal)
+- @adrenaline
+- CPR
+
+##Effects:
+
+- @stroke (at 150% or more)
+- @kidney-damage (184% or more, point at which it outpaces natural regeneration, 152% if one kidney is dead)
+- @heart-attack (at 150% or more)
+
+##Treatments:
+
+- Inducing @blood-loss (preferably with @surgery-incision or an @empty-blood-pack)
+- @sodium-nitroprusside or @nitroglycerin
+- Treating the causes</Manual_Description_Hypertension>
+  <Manual_Description_Acidosis>Acidosis is usually ignorable, and minimal action is required at low to medium severity. Acidosis and @alkalosis will cancel each other out.
+
+---
+##Caused by:
+
+- @hypoventilation
+- @respiratory-arrest
+- @cardiac-arrest
+- @kidney-damage (80% or more)
+- @blood-packs who's donor had acidosis (acidosis gained will be the donor's acidosis level at time of extraction divided by 5)
+- @saline
+
+##Effects:
+
+- @seizure (at 60% or more)
+- @coma (at 60% or more)
+- @increased-heartrate (at 20% or more)
+- @fibrillation
+- @headache (at 20% or more)
+- @confusion (at 15% or more)
+- @weakness (at 35% or more)
+
+##Treatments:
+
+- Treating the causes
+- Inducing @alkalosis (preferably with @vomiting)
+- Transfusing neutral @blood-packs (unless the patient has 0% blood loss)</Manual_Description_Acidosis>
+  <Manual_Description_Alkalosis>Alkalosis is usually ignorable, and minimal action is required at low to medium severity. Alkalosis and @acidosis will cancel each other out.
+
+---
+##Caused by:
+
+- @hyperventilation
+- @vomiting
+- @blood-packs who's donor had alkalosis (alkalosis gained will be the donor's alkalosis level at time of extraction divided by 5)
+
+##Effects:
+
+- @seizure (at 60% or more)
+- @palpitations (at 20% or more)
+
+##Treatments:
+
+- Treating the causes
+- Inducing @acidosis (preferably with @saline)
+- Transfusing neutral @blood-packs (unless the patient has 0% blood loss)</Manual_Description_Alkalosis>
+  <Manual_Description_Adrenaline>Adrenaline is used in the treatment of @cardiac-arrest. In return for curing the affliction, it raises the patient's blood pressure by 30%. Alongside these effects, it gives the patient @analgesia (but wont give more than 4.5%), @increased-heartrate, @hyperventilation, increases their melee damage by 20%. halves the gain of @fibrillation and decreases the potency of slowing effects.</Manual_Description_Adrenaline>
+  <Manual_Description_AED>An item used to correct the heartbeat of a patient. 
+When used on a patient and charged with batteries, the aed has a chance to either reset @fibrillation, or cure @cardiac-arrest. 
+At medical skill below 80, the AED is superior to the @manual-defibrillator in every way, except for taking one second longer than the manual defibrillator to use. 
+Between 80 and 100 medical skill, the manual defibrillator eclipses AED's chance to cure cardiac arrest, but still has a (vanishing) danger of causing cardiac arrest or failing to correct fibrillation, while the AED does not. 
+At 100 medical skill, the manual defibrillator is superior. Manual defibrillator becomes perfectly safe, and is guaranteed to cure cardiac arrest.</Manual_Description_AED>
+  <Manual_Description_Alien_Blood>###Medical skill check: 40
+Using Alien Blood in place of regular blood is extremely dangerous and should only be used in dire situations.
+
+###Application success:
+-7.5% @blood-loss
++3.75% vanilla organ damage
++99% @hemotransfusion-shock
+
+###Application failure:
+-7.5% @blood-loss
++7.5% vanilla organ damage
++99% @hemotransfusion-shock
+</Manual_Description_Alien_Blood>
+  <Manual_Description_Ambubag>An item used to provide supplementary oxygen if a patient isn't breathing enough or isn't breathing at all. 
+
+Using the ambubag with a regular oxygen tank in it will treat 90% oxygen low, and use 2% of the oxygen in the tank. 
+
+Using the ambubag with an oxygenite tank in it will treat 90% oxygen low, cure @respiratory-arrest, and use 2% of the oxygen in the tank. 
+
+Using the ambubag with a welding fuel tank in it will cause 110% oxygen low, cause 10% @lung-damage, and use 5% of the welding fuel in the tank. 
+
+Using the ambubag with a incendium fuel tank in it will cause 110% oxygen low, cause 20% lung damage, cause 10% @burns, and use 5% of the incendium in the tank. 
+
+Using the ambubag with paint in it will cause 50% oxygen low, cause 3% lung damage, cause 5% chemical addiction, treat 20% chemical withdrawal, and use 5% of the paint in the can.</Manual_Description_Ambubag>
+  <Manual_Description_Anaparalyzant>###Medical skill check: 64
+
+Alongside it's original use of providing paralysis resistance and treating paralysis, Anaparalyzant can be used to quickly decrease @anesthesia and wake a patient up much faster.
+
+###Application success:
+Instantly cures @anesthesia
++5% Psychosis
++800% Paralysis Resistance.
+
+###Application failure:
+-3% @anesthesia per second for 60 seconds
++6.5% paralysis resistance per second for 60 seconds
++0.75% psychosis per second for 60 seconds</Manual_Description_Anaparalyzant>
+  <Manual_Description_Antibiotic_Glue>### Medical skill check: 55
+A glue used to quickly seal bleeding wounds and treat @burns on a single limb.
+
+###Application success:
+-100% bleeding
+-30% burns
+
+###Application failure:
+-75% bleeding
+-15% burns
+50% chance to cause @heart-attack</Manual_Description_Antibiotic_Glue>
+  <Manual_Description_Antibiotic_Ointment>###Medical skill check: 10
+Antibiotic ointment is an item used to heal @burns and treat @infected-wounds.
+
+###Application successful:
+-12% @burns
+-72% @infected-wounds
++100% @ointmented
+
+###Application failure:
+-7% @burns
+-24% @infected-wounds
++60% @ointmented</Manual_Description_Antibiotic_Ointment>
+  <Manual_Description_Antiseptic>Antiseptic is an item whose only use is to be loaded into the @antiseptic-sprayer. For each spray of the antiseptic sprayer, 10% condition will be used from the antiseptic.</Manual_Description_Antiseptic>
+  <Manual_Description_Antiseptic_Sprayer>A sprayer which sprays @antiseptic onto @infected-wounds. Using the antiseptic sprayer with antiseptic in it will treat 100% infected wounds, give 5% @ointmented and use up 10% of the antiseptic.</Manual_Description_Antiseptic_Sprayer>
+  <Manual_Description_Autopulse>A medic's best friend. To use the autopulse, simply wear it in your diving suit slot. While worn and equipped with batteries, the autopulse will cure @cardiac-arrest.</Manual_Description_Autopulse>
+  <Manual_Description_Azathioprine>### Medical skill check: 10
+Azathioprine is an immunosuppressant medication used during @organ-transplant-surgery if organ rejection is enabled in Neurotrauma's config. It will lower Immunity over time, making it safe to place an organ into the body when Immunity is below 10%.
+
+###Application success:
+Lowers immunity over time
+
+###Application failure:
+Lowers immunity over time
+Causes @sepsis</Manual_Description_Azathioprine>
+  <Manual_Description_Bandages>### Medical skill check: 10
+
+Bandages used for covering wounds to prevent infection.
+
+### Application success:
+
+\\+50% @bandaged
+\\-24% bleeding
+
+### Application failure:
+
+\\+36% @bandaged
+\\-18% bleeding</Manual_Description_Bandages>
+  <Manual_Description_Blood_Packs>Blood packs are acquired from using an @empty-blood-pack on a human with less than 31% @blood-loss. Blood packs must be administered to the correct bloodtype, which is stated in the description of the item.
+
+###Compatible blood type application
+-30% blood loss
++30% blood pressure
+
+###Incompatible blood type application
+-20% blood loss
++30% blood pressure
++100% @hemotransfusion-shock
+
+If the human that the blood pack came from was suffering from either @acidosis, @alkalosis or @sepsis, then those afflictions will also be given to whoever the blood is given to (affliction gained will be the donor's affliction level at time of extraction divided by 5). Additionally, if the recipient of the blood has either acidosis and alkalosis, the transfusion of neutral blood will move the blood pH closer to neutral, partially treating both alkalosis and acidosis, unless the patient has 0% blood loss.</Manual_Description_Blood_Packs>
+  <Manual_Description_Blue_Shark>### Medical skill check: None
+A funny little blue shark that might just cure your mental instability.
+
+###On application:
+Treats 2% Psychosis and makes a squeaking noise</Manual_Description_Blue_Shark>
+  <Manual_Description_Body_Bag>The Body Bag is an item used to transport bodies much more quickly than simply dragging them. It is placed into the Diving Suit slot and will suffocate a living human if they are placed into it.</Manual_Description_Body_Bag>
+  <Manual_Description_Broad-spectrum_Antibiotics>### Medical skill check: 25
+
+Broad-spectrum Antibiotics are the main treatment of @sepsis. Still applies the husk infection resistance buff and reduces existing husk infection over time as per vanilla.
+
+The patient's Blood Pressure must be above 70% and their @hypoxemia must be below 30% to effectively treat Sepsis.
+
+### Application success:
+
+A successful use of the antibiotics will provide an affliction strength of 50%, which will decrease at 0.5% a second, totaling for 100 seconds with one dose. 50% Broad-spectrum Antibiotics will treat 0.95% Sepsis per second for 100 seconds.
+
+However, it will cause:
+
+- 0.2% vanilla Organ Damage a second for 100 seconds
+- 0.175% @kidney-damage a second for 100 seconds
+- 0.175%@liver-damage a second for 100 seconds
+- 0.1% @heart-damage a second for 100 seconds
+- 0.1% @lung-damage a second for 100 seconds
+- In total, the organs will end up with 20% Organ Damage, 17.5% Kidney and Liver Damage, and 10% Heart and Lung Damage.
+
+### Application failure:
+
+A failed use will provide an affliction strength of 30%. It will decrease and treat Sepsis at the same rate as a successful use. 30% Broad-spectrum Antibiotics will treat 0.95% Sepsis per second for 60 seconds.
+
+However, it will cause:
+
+- 0.2% vanilla Organ Damage a second for 60 seconds
+- 0.175% Kidney Damage a second for 60 seconds
+- 0.175% Liver Damage Damage a second for 60 seconds
+- 0.1% Heart Damage a second for 60 seconds
+- 0.1% Lung Damage a second for 60 seconds
+- In total, the organs will end up with 12% Organ Damage, 10.5% Kidney and Liver Damage, and 6% Heart and Lung Damage.</Manual_Description_Broad-spectrum_Antibiotics>
+  <Manual_Description_Combat_Stimulant>Combat Stimulant is a stimulant that also doubles as a first aid item.
+From 1% to 10% strength, the chemical treats @burns, @blood-loss, @wounds, @internal-bleeding and Chem @withdrawal by 1% a second until the affliction's strength decreases to 0% or progresses beyond 10% when another injection is received. The player is also given 45% Stun resistance at 10%. This bonus decreases with the affliction strength.
+
+From 11% to 100% strength, the chemical treats the previous damage types at 2% a second and provides the player with 45% to 50% Stun resistance.</Manual_Description_Combat_Stimulant>
+  <Manual_Description_Deusizine>### Medical skill check: 72
+A special treatment used for treating @blood-loss, vanilla organ damage, @internal-damage and @hypoxemia over a 20 second time period. 
+
+###Application success:
+-40% @internal-damage
+-40% @blood-loss
+-100% @hypoxemia
+-40% @vanilla-organ-damage
++4% @burns
++40% blood pressure
+
+###Application failure:
+-20% @internal-damage
+-20% @blood-loss
+-40% @hypoxemia
+-20% @vanilla-organ-damage
++12% @burns
++20% blood pressure</Manual_Description_Deusizine>
+  <Manual_Description_Diving_Knife>###Medical skill check: 30
+In addition to the normal uses of a knife, they can be used to remove @bandages.
+
+###Application success:
+Removes @bandages on the limb the knife was used on.
+
+###Application failure:
++15% bleeding
++10% lacerations</Manual_Description_Diving_Knife>
+  <Manual_Description_Drainage>Drainage is a one time use item that is used to treat @pneumothorax. It is used after @retracted-skin.</Manual_Description_Drainage>
+  <Manual_Description_Empty_Blood_Pack>###Medical skill check: 30
+Empty blood packs are used for acquiring @blood-packs. Empty blood packs can only be used on humans with less than 31% @blood-loss, otherwise it does nothing. 
+
+###Application success:
++30% blood loss
+
+###Application failure:
++40% blood loss
+
+If the human that the empty blood pack is used on is suffering from either @acidosis, @alkalosis or @sepsis, then those afflictions will also be given to whoever the blood is given to (affliction gained will be the donor's affliction level at time of extraction divided by 5).</Manual_Description_Empty_Blood_Pack>
+  <Manual_Description_Endovascular_Balloon>The third step in @aortic-rupture-surgery.</Manual_Description_Endovascular_Balloon>
+  <Manual_Description_Fentanyl>###Medical skill check: 72
+
+A powerful analgesic used to induce @analgesia.
+
+###Application success:
++75% @analgesia
++15% Opiate Addiction
++22.5% @opiate-overdose
+-100% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++150% @analgesia
++15% Opiate Addiction
++37.5% @opiate-overdose
+-100% Opiate @withdrawal.
+
+###Application failure:
++50% @analgesia
++40% Opiate Addiction
++30% @opiate-overdose
+-100% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++100% @analgesia
++40% Opiate Addiction
++60% @opiate-overdose
+-100% Opiate @withdrawal.</Manual_Description_Fentanyl>
+  <Manual_Description_Gypsum>###Medical skill check: 40
+A fine powder that when used in conjunction with @bandages, will encase a limb in a cast, in order to heal @fractures. Gypsum will not work if you have not used bandages or @plastiseal beforehand, and will do nothing for skull, rib and neck fractures.
+
+For each plaster cast applied to the player, they will get a 20% movement speed debuff. Plaster casts can be removed with @trauma-shears.
+
+###Application success:
+Turns the applied bandage into a plaster cast, which will slowly heal arm and leg fractures encased in it.
+
+###Application failure:
+Deletes the gypsum and does nothing.</Manual_Description_Gypsum>
+  <Manual_Description_Health_Scanner>An item which is extremely important for diagnosis. Upon use and charged with batteries, you will get the readout of all afflictions visible to the health scanner, and the patient you're scanning will gain 0.5% @radiation-sickness per second, and you (the person scanning) will gain 0.3% per second. Additionally, one can scan themselves and others by using the health scanner in the interface like a treatment, as you would a bandage. This gives 1% radiation sickness, and also allows you to scan individual limbs to find things such as @foreign-bodies.</Manual_Description_Health_Scanner>
+  <Manual_Description_Hematology_Analyzer>###Medical skill check: 30
+
+###Application success:
++1% @blood-loss
+
+###Application failure:
++3% @blood-loss
+
+Either failing or passing the skill check will also give you a readout of all the blood-related ailments your patient has, such as @sepsis, @acidosis or @alkalosis. The hematology analyzer can also be used to check the blood type of your patient, to avoid @hemotransfusion-shock. Putting a donor card in the analyzer and then using it will print their blood type onto the donor card, and put it in their id card slot, allowing you to check their blood type later without the analyzer.</Manual_Description_Hematology_Analyzer>
+  <Manual_Description_Hemostat>The third step in most surgical procedures. The hemostat will not work without 100% @surgery-incision. Using it requires no medical skill. Successfully using the hemostat will give the patient @clamped-bleeding on the limb the tool was used on.</Manual_Description_Hemostat>
+  <Manual_Description_Hyperzine>###Medical skill check:50
+A powerful stimulant
+
+###Application success:
+-6% internal damage
++9% chem addition
++9% @neurotrauma
++15% psychosis
+
+###Application failure:
+-3% internal  damage
++18% chem addiction
++30% psychosis
+
+In both cases, the chemical provides 400% Haste and 400% Vigor and reduces Chem @withdrawal by 45%. The player also recovers from stuns 90% faster for 60 seconds.</Manual_Description_Hyperzine>
+  <Manual_Description_Liquid_Oxygenite>###Medical skill check: 72
+A liquified alien material used to inject oxygen directly into the bloodstream, treating @hypoxemia.
+
+###Application success:
+Cures all @hypoxemia for 30 seconds, all other effects occur over 30 seconds:
++6% vanilla organ damage
++6% @lung-damage
++6% @liver-damage
++6% @heart-damage
++6% @kidney-damage. 
+
+###Application failure:
+All effects occur over 20 seconds:
+-200% @hypoxemia
++10% vanilla organ damage
++10% @lung-damage
++10% @liver-damage
++10% @heart-damage
++10% @kidney-damage.</Manual_Description_Liquid_Oxygenite>
+  <Manual_Description_Mannitol>###Medical skill check: 60
+Mannitol is a medication used to treat @neurotrauma as long as blood pressure is above 70% and @hypoxemia is below 30%. In return for healing @neurotrauma, it causes vanilla organ damage, @heart-damage, and @kidney-damage. Mannitol will halve the gain of @neurotrauma regardless of whether the blood is stable or not.
+
+Mannitol affliction  organ damage onset both occur over 10 seconds
+
+###Application success:
++50% mannitol affliction, which will cure 100% @neurotrauma over time
++5% vanilla organ damage
++10% @heart-damage
++10% @kidney-damage
+
+###Application failure:
++30% mannitol affliction, which will cure 60% @neurotrauma over time
++10% vanilla organ damage
++20% @heart-damage
++20% @kidney-damage</Manual_Description_Mannitol>
+  <Manual_Description_Manual_Defibrillator>An item used to correct the heartbeat of a patient. When used on a patient and charged with batteries, the defibrillator has a chance to either reset @fibrillation, or cure cardiac arrest.
+
+The chance for these is depicted in the graph below, with cyan being the chance to reset fibrillation, pink being the chance to cause cardiac arrest and orange being the chance to cure it. The X axis is medical skill and the Y axis is the chance to do something (with 1 being 100%).
+
+At medical skill below 80, the @aed danger of causing cardiac arrest or failing to correct fibrillation, while the AED does not. At 100 medical skill, the manual defibrillator is superior. Manual defibrillator becomes perfectly safe, and is guaranteed to cure cardiac arrest.</Manual_Description_Manual_Defibrillator>
+  <Manual_Description_Medical_Stent>The fourth step in @aortic-rupture-surgery. The stent will not work if you have not used the @endovascular-balloon beforehand. Using the medical stent will cure @aortic-rupture, and also remove the endovascular balloon from the patient.</Manual_Description_Medical_Stent>
+  <Manual_Description_Methamphetamine>###Medical skill check: 35
+A stimulant that takes effect over 30 seconds
+
+###Application success:
++15% vanilla organ damage
++15% @neurotrauma
++15% chem addiction
++30% psychosis
+
+###Application failure:
++30% vanilla organ damage
++30% @neurotrauma
++30% chem addiction
++45% psychosis
+
+In both cases, the user recovers from stuns 75% faster for 30 seconds and the chemical will treat 90% Chem @withdrawal.</Manual_Description_Methamphetamine>
+</infotexts>

@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <Manual_Description_Morphine>###Medical skill check: 30
+
+A moderately powerful analgesic used to induce @analgesia.
+
+###Application success:
++50% @analgesia
++10% Opiate Addiction
++10% @opiate-overdose
+-30% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++100% @analgesia
++10% Opiate Addiction
++20% @opiate-overdose
+-30% Opiate @withdrawal.
+
+###Application failure:
++30% @analgesia
++25% Opiate Addiction
++20% @opiate-overdose
+-30% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++60% @analgesia
++25% Opiate Addiction
++40% @opiate-overdose
+-30% Opiate @withdrawal.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Medical skill check: 39
+Naloxone is used to treat Opiate @withdrawal, @opiate-overdose, and @analgesia. Effects occur over 30 seconds.
+
+###Application success:
+-60% opiate @withdrawal
+-60% @opiate-overdose
+-60% @analgesia
+
+###Application failure:
+-30% opiate @withdrawal
+-30% @opiate-overdose
+-60% @analgesia
+50% chance to put a patient in a @coma</Manual_Description_Naloxone>
+  <Manual_Description_Needle>The needle is a one-time use item for reducing @pneumothorax to 5% strength, and prevents it from worsening. However, it does not fully treat pneumothorax. Using the needle on a patient without pneumothorax will give them pneumothorax instead.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###Medical skill check: 35
+A jar containing a very volatile substance, liable to explode on impact or exposure to heat. Functions the exact same as @sodium-nitroprusside, besides the medical skill check of 35.
+
+###Application success:
+400 seconds of reduced blood pressure
+
+###Application failure:
+200 seconds of reduced blood pressure</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###Medical skill check: 15
+
+A weak analgesic used to induce @analgesia
+
+###Application success:
++20% @analgesia
++5% Opiate Addiction
++8.75% @opiate-overdose
+-15% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++40% @analgesia
++5% Opiate Addiction
++18.75% @opiate-overdose
+-15% Opiate @withdrawal.
+
+###Application failure:
++10% @analgesia
++20% Opiate Addiction
++15% @opiate-overdose
+-15% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++20% @analgesia
++20% Opiate Addiction
++30% @opiate-overdose
+-15% Opiate @withdrawal.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>An Organ Procurement Scalpel is used to extract the organ it is named after in organ transplant surgery. There is one type for each organ as follows: brain, heart, lungs, liver, and kidneys.
+
+- The scalpel for the brain has a Medical skill check of 100 to reliably remove the brain.
+
+- The scalpel for the heart has a Medical skill check of 60 to reliably remove the heart.
+
+- The scalpel for the lungs has a Medical skill check of 50 to reliably remove the lungs.
+
+- The scalpel for the liver has a Medical skill check of 40 to reliably remove the liver.
+
+- The scalpel for the kidneys has a Medical skill check of 30 to reliably remove the kidneys.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>### Medical skill check: 45
+
+The sixth step in @osteosynthetic-surgery.
+
+### Application success:
+
+Cures all fractures on the limb the implants were used on, and uses up 25% of the implants.
+
+### Application failure:
+
++5% bleeding
++5% @internal-damage</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### Medical skill check: 22
+
+An improved version of @bandages, which can more effectively treat wounds.
+
+### Application success:
+
+\\+100% @bandaged
+\\-48% bleeding
+\\-24% @burns
+
+### Application failure:
+
+\\+50% @bandaged
+\\-24% bleeding
+\\-12% @burns
+
+Applying plastiseal will also replace any dirty bandages on the limb the bandage is applied to. Plastiseal can also be used after @retracted-skin in order to treat third degree burns.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>Propofol is no longer craftable
+
+Propofol is a chemical used to knock a human unconscious. It's best used in surgery that has to be performed outside of the ship as it prevents the patient from getting @traumatic-shock. It has no Medical skill check.
+
+Upon injection, the person on the receiving end will slowly gain @anesthesia at a rate of 0.3% per second. From 1% to 15% strength, the player will have 5% @analgesia. 
+
+Once the affliction progresses past 16%, the player will fall into @unconsciousness and will stay unconscious until the affliction progresses to 100% by waiting or is decreased to 0% by @anaparalyzant. During this time, the player will not feel @intense-pain / @abdominal-pain / @chest-pain and surgery can be performed on them.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>Raptor Bane Extract is used in the treatment of @acidosis by inducing @vomiting in the patient to give them @alkalosis.</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### Medical skill check: 30
+
+The fourth step in most surgical procedures. The retractors will not work without 100% @clamped-bleeding.
+
+### Application success:
+
+Gives the patient @retracted-skin on the limb the tool was used on.
+
+### Application failure:
+
++10% @internal-damage</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>Ringer's solution is used to increase blood pressure. Unlike @saline, ringer's solution will not cause @acidosis, and will only increase blood pressure. Do be warned, as it may increase your blood pressure into unwanted levels.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###Medical skill check: 10
+Saline is a liquid used to treat @alkalosis by inducing @acidosis
+
+###Application success:
+Increases blood pressure
++20% @acidosis
+
+###Application failure:
+Increases blood pressure
++12% @acidosis</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###Medical skill check: 30
+The second step in all surgical procedures. The scalpel will not work without @analgesia.
+
+###Application success:
+Gives @surgery-incision on the limb the tool was used on, and will remove any casts or @bandages.
+
+###Application failure:
++15% bleeding
++10%  lacerations</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###Medical skill check: 10
+A medication to reduce blood pressure. Taking sodium nitroprusside will bring your blood pressure down by 45%. While this drug is active, @fibrillation caused by @hypotension will be reduced.
+
+###Application success:
+Gives 200 seconds of reduced blood pressure
+
+###Application failure:
+Gives 120 seconds of reduced blood pressure</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>### Medical skill check: 45
+
+Implants used for treating @spinal-cord-injury.
+
+### Application success:
+
+Successfully using the implants will cure the patient's spine. Do note that if the patient has a neck fracture, it will simply come back.
+
+### Application failure:
+
++5% bleeding
++5% @internal-damage</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>A special bag that keeps the body in stasis for transportation to proper treatment if injuries are severe. A stasis bag is worn in the diving suit slot, and wearing it will drain the condition of it by 0.25% per second, meaning a stasis bag will last for 400 seconds or roughly 6 and a half minutes. Wearing a stasis bag will protect the wearer from pressure down to 10,000 meters, will allow the wearer to be dragged at full speed, and will stop the negative effects of the following afflictions:
+
+- @cardiac-arrest
+- @respiratory-arrest
+- @heart-attack
+- @neurotrauma
+- @kidney-damage
+- @liver-damage
+- @heart-damage
+- @lung-damage
+- @bone-damage
+- @sepsis
+- @hypoxemia
+- @hypotension
+- @hypertension
+- @acidosis
+- @alkalosis
+- @internal-bleeding
+- @stroke
+- @seizure
+- @coma
+- @infected-wounds
+- Bleeding
+
+It should be noted that you cannot perform surgery on people while they are inside of a Stasis Bag. They will need to be removed from the bag prior to surgery. Patients removed from the Stasis Bag will have @cardiac-arrest and will need those afflictions treated.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###Medical skill check: None
+A blood thinner. Using streptokinase will prevent natural bleeding regeneration and will make @stroke worse while it is active.
+
+###On application:
+- Fully treats @heart-attack and @hemotransfusion-shock</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>The Surgery Table is an item that can be bought from a station or crafted and then placed down. The patient is not required to be on the table, they only need to be near it. The Surgery Table provides artificial ventilation to everyone near the table and prevents @traumatic-shock provided the patient is under @analgesia. Additionally, the table will decrease Oxygen Low and prevent @respiratory-arrest from increasing @acidosis.
+
+The table also has wiring pins that can be used to output important information, such as blood pressure, @neurotrauma, heart rate, and breathing rate.
+
+It should be noted that the Surgery Table is functionally identical to a Hospital Bed. The other beds prevent Traumatic Shock if you're laying on them, but they do not provide artificial ventilation.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### Medical skill check: 45
+
+The fifth step in @osteosynthetic-surgery.
+
+### Application success:
+
+Successfully using the surgical drill will give the patient @drilled-bones on the limb the tool was used on.
+
+### Application failure:
+
++15% bleeding
++10% @internal-damage</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### Medical skill check: 45
+
+The fifth step in @amputation-surgery.
+
+### Application success:
+
+Successfully using the surgical saw will give the patient @sawed-bones on the limb the tool was used on.
+
+### Application failure:
+
++15% bleeding
++6% @internal-damage
++4% lacerations</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### Medical skill check: 30
+
+The final step in all surgical procedures. Also very useful for curing most @wounds  bleeding.
+
+### Application success:
+
+Removes all surgery related afflictions (such as @surgery-incision
+-20% gunshot wounds
+-20% lacerations
+-20% bite wounds
+-20% deep tissue injuries
+-40% bleeding
+
+### Application failure:
+
++6% @internal-damage</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### Medical skill check: 10
+
+A container of vitamin B1 pills used to assist in organ healing.
+
+### Application success:
+
+200 seconds of organ healing time
+
+### Application failure:
+
+120 seconds of organ healing time
+
+‌
+
+200 seconds of organ healing time will heal around 8% organ damage (excluding @neurotrauma, and 120 seconds will heal 4.8%. This is in addition to natural organ healing at the same time. Thiamine cannot revive dead organs.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>###Medical skill check: 30
+An item used to restrict the blood flow to a specific limb to lessen regular and arterial bleeding. 
+The tourniquet will not work without @arterial-bleeding. Can be cut off using @trauma-shears.
+
+###Application success:
+Temporarily stops the negative effects of arterial bleeding, and slowly treats regular bleeding, but will cause @gangrene if kept on for an extended period of time. Using a tourniquet on the head will give the victim 15% @neurotrauma and 200% oxygen low.
+
+
+###Application failure:
++6% blunt force trauma</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###Medical skill check: 10
+A pair of scissors used to remove plaster casts and @bandages.
+
+###Application success:
+Removes all plaster casts, bandages, and triage cards on the limb the shears were used on.
+
+###Application failure:
++15% bleeding
++10% lacerations</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>###Medical skill check: 30
+A pair of tweezers used to remove damaged tissue or bullets.
+
+###Application success:
+-5% @internal-damage
+-5% blunt force trauma
+-5% @foreign-bodies
++5% lacerations
+
+###Application failure:
++6% @internal-damage
+
+The tweezers can work without @retracted-skin if the limb you are tweezing has gunshot wounds or deep tissue injuries, using the tweezer through gunshot wounds or deep tissue injuries will cause 5% @traumatic-shock. Tweezing out foreign bodies also has a 5% chance to yield scrap.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###Medical skill check: 60 (30 if the patient has @analgesia)
+The wrench is used to treat @dislocations. To treat dislocations, drag it onto the dislocated limb in the health interface and use it as a treatment, like you would a bandage.
+
+###Application success:
+Cures dislocation on that limb
+
+###Application failure:
+Causes a fracture on that limb</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>Traumatic shock is very fatal, and should your patient acquire this at any point, immediately terminate the surgery, bring them back into the proximity of a @surgery-table or administer sedation again. Traumatic shock will decrease in strength 4x as fast provided the victim is under the effects of @anesthesia or has @analgesia while being near a @surgery-table.
+
+---
+##Caused by:
+
+- Performing unsafe surgery (without a table or without sedation)
+- Using @tweezers through gunshot wounds or deep tissue injuries (causes very minor shock, can usually be ignored)
+
+##Effects:
+
+- @hypotension (and lots of it)
+- @cardiac-arrest (at 40% or more)
+- @respiratory-arrest (at 30% or more)
+- @neurotrauma (equal to strength divided by 100 per second, 10% or more is the point at which it outpaces natural regeneration)
+- Psychosis (equal to strength divided by 100 per second)
+
+##Treatments:
+
+- Terminating the surgery and waiting
+- Bringing into proximity of a @surgery-table and making sure the patient is sedated
+
+##Prevention:
+
+- Making sure that the surgery is safe before proceeding beyond the @retracted-skin step
+- Making sure @analgesia doesnt run out in the middle of surgery</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>The second step in all surgical procedures. Having an unclamped surgical incision will cause 0.7% @blood-loss per second for each incision, and having a surgical incision without @analgesia or another sedation method  will cause 2% @traumatic-shock per second for each incision. This affliction will not cause traumatic shock if done without a @surgery-table, therefore making it save to bloodlet without one.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>The third step in most surgical procedures. Having clamped bleeding will prevent @blood-loss caused by @surgery-incision. This affliction is required for the next step, the @retractors</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>The fourth step in most surgical procedures. Having retracted skin without a @surgery-table nearby will cause 2% @traumatic-shock per second for each instance of retracted skin. Most surgical procedures, such as @osteosynthetic-surgery or @organ-transplant-surgery stem off from this step.</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>The fifth step in @osteosynthetic-surgery. Having drilled bones without a @surgery-table nearby will cause 1.5% @traumatic-shock per second for each instance of drilled bones.</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>The fifth step in @amputation-surgery. Having sawed bones without a @surgery-table nearby will cause 1.5% @traumatic-shock per second for each instance of sawed bones.</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##Steps:
+
+1. Anesthetic of your choice 
+2. @scalpel
+3. @hemostat
+4. @retractors
+5. @sutures</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##Steps:
+
+1. Anesthetic of your choice 
+2. @scalpel
+3. @hemostat
+4. @retractors
+5. @surgical-drill
+6. @osteosynthesis-implants
+7. @sutures
+
+Must be performed on every body part in order to treat @bone-death.</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##Steps:
+
+1. Anesthetic of your choice 
+2. @scalpel
+3. @endovascular-balloon
+4. @medical-stent
+5. @sutures</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## Steps:
+
+1. Anesthetic of your choice (@analgesia)
+2. @scalpel
+3. @hemostat
+4. @retractors
+5. @surgical-saw
+6. Replacing the amputated limb with bionics or human limbs. (Optional)
+7. @sutures
+8. Cybernetic limbs, (not bionic implants), can be placed on the limb if surgically amputated. Surgery does not need to be open to attach cyberlimbs. (Optional) (Requires NT Cybernetics addon)
+
+Doing this procedure will not yield the limb if the limb has more than 15% @gangrene
+
+This procedure causes @surgical-amputation)</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>Make sure to use @azathioprine before placing the organ in, and make sure their immunity is 10% or lower. If organ damage is 100% after placing it in, that means it got rejected. This does not apply if organ rejection is turned off in the config.
+
+##Steps:
+
+1. Anesthetic of your choice 
+2. @scalpel
+3. @hemostat
+4. @retractors
+5. The respective @organ-procurement-scalpels
+6. The respective organ transplant item (This must be done twice for the kidneys)
+7. @sutures</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>Surgical Drapes are a clothing item used to increase the wearer's sterility and thus decreasing the risk of @surgical-infection.
+
++100 Base sterility
+-50% @traumatic-shock gain while worn</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>The Surgical Mask is a wearable item that increases sterility when worn, decreasing risk of @surgical-infection.
+
+-10% Lacerations
+-20% Bleeding</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>The surgeon clothes is a wearable item that increases sterility when worn, decreasing risk of @surgical-infection.
+
+-10% Blunt force trauma
+-10% Lacerations
+-10% Bite wounds</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>Surgical Infection is a mechanic that causes @sepsis based on how sterile the patient's environment is.
+
+---
+
+The following will _increase_ sterility:
+
+- Patient wearing @surgical-drapes
+- Nearby characters wearing @surgical-mask
+- Having surgery skill (sterility gained based off this equation: 10 + surgery skill / 5)
+- Having @ointmented
+
+---
+
+The following will _decrease_ sterility:
+
+- Patient having no @surgical-drapes
+- Nearby characters not wearing @surgical-mask
+
+---
+
+At the minimum sterility, there is a 10% chance every two seconds for the patient to acquire @sepsis.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>Mannitol Plus is a talent item, meaning it requires a talent to craft. Upon being administered, it will treat 30% @neurotrauma over the course of 10 seconds even if the patient is unstable and apply @mannitol's effects without causing @liver-damage / @lung-damage / @heart-damage / @kidney-damage / Organ Damage</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>Experimental Treatment is a talent item unlockable by the Surgeon class. It can randomly give effects both negative and positive, though it tends to give positive effects more than negative ones.
+Theres a theoretical chance to get infinite effects from one use of this item. Imagine flipping a coin, and only stopping when you get tails. Every time you get heads, you get an additional effect from this item.
+
+The list of possible positive effects are as follows:
+
+---
+- Vigor (randomly picks from 200-400% strength)
+- Hyperactivity (randomly picks from 200-400% strength)
+- Psychosis Resistance (randomly picks from 200-400% strength)
+- Husk Infection Resistance(randomly picks from 200-400% strength)
+- Paralysis Resistance (randomly picks from 300-600% strength)
+- @analgesia (randomly picks from 20-100% strength)
+- @anesthesia (randomly picks from 1-100% strength)
+- @ointmented (randomly picks from 20-100% strength)
+- Combat Stimulant (randomly picks from 30-100% strength)
+- Pressure Stabilized (randomly picks from 30-100% strength)
+- A full heal (treats 20-100% of @wounds, vanilla organ damage, @neurotrauma and @blood-loss, and fully cures @sepsis)
+
+---
+
+The list of possible negative effects are as follows:
+
+---
+- Any @wounds (randomly picks from 30-80% for bleeding, picks from 5-20% for everything else)
+- Stuns for 2-15 seconds</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>Triage Cards are used to mark patients based on severity of injury. There are two types of triage cards, those being manual and automatic. The manual triage card works as follows:
+
+Attaching the triage card to the legs will mark it as green, meaning that the patient is minimally injured and will most likely survive.
+Attaching the triage card to the arms will mark it as yellow, meaning that the patient is injured, and will most likely die if treatment is delayed for a long period of time.
+Attaching the triage card to the torso will mark it as red, meaning that the patient is critically injured and needs immediate assistance.
+Attaching the triage card to the head will mark it as black, meaning that the patient is either dead or extremely close to death.
+
+The automatic triage cards will rate your victim's health based off of their afflictions and vitality, and will give a rating of green, yellow, red or black.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>The Brain Jar is a talent item unlockable by the Surgeon. Unlike refrigerated containers, which can only delay the decay of a brain and not entirely stop it, the Brain Jar can not only hold a brain indefinitely, but will slowly repair the brain at a rate of 1% per 10 seconds.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>Replaces a patients brain when used after removing it. Protects against gaining neurotrauma from not having a brain. Does nothing else.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>Gives skill levels when read
+
+### With surgical skill enabled:
+
++8 surgical skill
++2 medical skill
+
+### With surgical skill disabled:
+
++8 medical skill</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>A cybernetic arm that can be attached to any surgically amputated arm socket. Can be removed with a crowbar. This results in traumatic amputation on the selected limb.
+
+### Advantages of cyberlimbs:
+
+- Great at taking sustained gunfire without malfunctioning.
+- Excellent at tanking attacks from creatures without malfunctioning or breaking.
+- Ideal at sustaining attacks that would otherwise cause life-threatening bleeding.
+- When well maintained, is much less likely to be forcefully amputated when attacked.
+- Does not fracture or dislocate. Make sure you fix any dislocations or fractures BEFORE you add a cyber limb or else it will be permanent until you take off the limb.
+
+#### Disadvantages of cyberlimbs:
+
+- They do not mix well with water. Won’t shock you, but will break  overtime if you don’t wear a suit.
+- Requires maintenance if damaged.
+- Costly maintenance, especially if your sub doesn’t have an ample source of steel and FPGA circuits.
+- Costly/expensive to make/buy.
+- Violently detach if critically damaged through material loss.
+
+### Mechanical skill requirement: 70
+
+### Application Success:
+
+Applies the cyberlimb on the selected limb and heals any internal damage caused by any previous failed attempts.
+
+### Application Failure:
+
+Applies 20% @internal-damage on the limb. Does not delete the cyberlimb.
+
+### How to add:
+First do amputation surgery on the selected limb, then use the cyberlimb on the chosen limb.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>A cybernetic leg that can be attached to any surgically amputated leg socket. Can be removed with a crowbar. This results in traumatic amputation on the selected limb.
+
+### Advantages of cyberlimbs:
+
+- Great at taking sustained gunfire without malfunctioning.
+- Excellent at tanking attacks from creatures without malfunctioning or breaking.
+- Ideal at sustaining attacks that would otherwise cause life-threatening bleeding.
+- When well maintained, is much less likely to be forcefully amputated when attacked.
+- Does not fracture or dislocate. Make sure you fix any dislocations or fractures BEFORE you add a cyber limb or else it will be permanent until you take off the limb.
+
+#### Disadvantages of cyberlimbs:
+
+- They do not mix well with water. Won’t shock you, but will break  overtime if you don’t wear a suit.
+- Requires maintenance if damaged.
+- Costly maintenance, especially if your sub doesn’t have an ample source of steel and FPGA circuits.
+- Costly/expensive to make/buy.
+- Violently detach if critically damaged through material loss.
+
+### Mechanical skill requirement: 70
+
+### Application Success:
+
+Applies the cyberlimb on the selected limb and heals any internal damage caused by any previous failed attempts.
+
+### Application Failure:
+
+Applies 20% @internal-damage on the limb. Does not delete the cyberlimb.
+
+### How to add:
+First do amputation surgery on the selected limb, then use the cyberlimb on the chosen limb.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>You have a @cybernetic-arm  in this socket.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>You have a @cybernetic-leg in this socket.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>The primary detriment of using cyberlimbs, as their electronics are damaged when exposed to water.
+
+When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+The amount of damaged electronics gained scales with the amount of @material-loss
+
+## Caused by:
+
+- Being in water without a diving suit on
+- 75% chance for @burns to cause 200% of their damage as damaged electronics
+- 85% chance for gunshot wounds to cause 75% of their damage as damaged electronics
+- 50% chance for bite wounds to cause 25% of their damage as damaged electronics
+- 50% chance for deep tissue damage to cause 50% of its damage as damaged electronics
+- 50% chance for blunt force trauma to cause 100% of its damage as damaged electronics
+- 75% chance for @internal-damage to cause 100% of its damage as damaged electronics
+- 75% chance for @foreign-bodies to cause 75% of its damage as damaged electronics
+
+## Effects:
+
+- Limb occassionally stops working temporarily, frequency scales with strength
+- Limb becomes unusable (at 99% or more)
+
+## Treatments:
+
+- @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+## Caused by:
+
+- 85% chance for @burns to cause 25% of their damage as bent metal
+- 50% chance for lacerations to cause 25% of their damage as bent metal
+- 50% chance for bite wounds to cause 50% of their damage as bent metal
+- 85% chance for deep tissue injury to cause 100% of its damage as bent metal
+- 75% chance for blunt force trauma to cause 200% of its damage as bent metal
+
+## Effects:
+
+- Makes you slower if on a cyberleg, scales with strength
+- Limb becomes unusable (at 99% or more)
+
+## Treatments:
+
+- @welding-tool</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>## Caused by:
+
+- Loose screws while moving (30% or more)
+- 75% chance for lacerations to cause 25% of their damage as loose screws
+- 80% chance for deep tissue damage to cause 100% of its damage as loose screws
+- 50% chance for blunt force trauma to cause 50% of its damage as loose screws
+- 75% chance for @internal-damage to cause 100% of its damage as loose screws
+- 50% chance for bite wounds to cause 50% of their damage as loose screws
+- 75% chance for @foreign-bodies to cause 75% of its damage as loose screws
+
+## Effects:
+
+- Loose screws and @material-loss
+
+## Treatments:
+
+- @screwdriver</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+The amount of material loss gained scales with the amount of @loose-screws
+
+## Caused by:
+
+- @loose-screws
+- 75% chance for lacerations to cause 25% of their damage as material loss
+- 80% chance for gunshot wounds to cause 80% of their damage as material loss
+- 75% chance for bite wounds to cause 60% of their damage as material loss
+- 100% chance for deep tissue injury to cause 100% of its damage as material loss
+- 80% chance for foreign bodies to cause 50% of their damage as material loss
+
+## Effects:
+
+- Loss of cyberlimb and @traumatic-amputation
+
+## Treatments:
+
+- @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### Electrical skill check: 40
+
+Used to repair @damaged-electronics on cyberlimbs.
+
+### Application success:
+
+-50% @damaged-electronics
+
+### Application failure:
+
+-20% @damaged-electronics</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### Mechanical skill check: 50
+
+Used to repair @bent-metal on cyberlimbs.
+
+### Application success:
+
+-20% @bent-metal
+
+### Application failure:
+
+-5% @bent-metal</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### Mechanical skill check: 40
+
+Used to repair @loose-screws on cyberlimbs.
+
+### Application success:
+
+-20% @loose-screws
+
+### Application failure:
+
+-5% @loose-screws</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### Mechanical skill check: 60
+
+Used to repair @material-loss on cyberlimbs.
+
+### Application success:
+
+-50% @material-loss
+
+### Application failure:
+
+-20% @material-loss</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>Welcome to the Medical Manual, your comprehensive guide to understanding the neurotrauma mod systems and common medical conditions. This manual is designed to provide you with information on a range of medical topics: 
+
+- @information
+- @symptoms
+- @headbrain
+- @lungs
+- @heart
+- @torso
+- @extremities
+- @bones
+- @any-bodypart
+- @blood
+- @items-part-1
+- @items-part-2
+- @items-part-3
+- @items-part-4
+- @surgery
+- @surgery
+- @expansion</Manual_Description_Start_Page>
+  <Manual_Description_Information>Welcome to Information tab, here you can read about general information:
+
+- @faq
+- @med-kit-recommendations
+- @how-to-diagnose
+- @order-of-treatments
+- @the-5-commandments-of-neurotrauma</Manual_Description_Information>
+  <Manual_Description_Symptoms>Welcome to Symptoms tab:
+
+- @vomiting-blood
+- @pale-skin
+- @shortness-of-breath
+- @cough
+- @increased-heartrate
+- @confusion
+- @lightheadedness
+- @blurred-vision
+- @leg-swelling
+- @wheezing
+- @weakness
+- @fever
+- @sweating
+- @bloating
+- @inflammation
+- @jaundice
+- @abdominal-discomfort
+- @headache
+- @craving
+- @palpitations
+- @spasms</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>Welcome to Head/Brain tab:
+
+- @neurotrauma
+- @stroke
+- @withdrawal
+- @opiate-overdose
+- @seizure
+- @unconsciousness
+- @coma
+- @spinal-cord-injury
+- @concussion</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>Welcome to Lungs tab:
+
+- @respiratory-arrest
+- @lung-damage
+- @pneumothorax
+- @hyperventilation
+- @hypoventilation
+- @oxygen-low</Manual_Description_Lungs>
+  <Manual_Description_Heart>Welcome to Heart tab:
+
+- @cardiac-tamponade
+- @cardiac-arrest
+- @heart-attack
+- @heart-damage
+- @irregular-heartbeat
+- @fibrillation</Manual_Description_Heart>
+  <Manual_Description_Torso>Welcome to Torso tab:
+
+- @aortic-rupture
+- @internal-bleeding
+- @radiation-sickness
+- @kidney-damage
+- @liver-damage
+- @morbusine
+- @cyanide-poisoning
+- @vanilla-organ-damage
+- @analgesia
+- @anesthesia
+- @abdominal-pain
+- @vomiting
+- @nausea
+- @chest-pain</Manual_Description_Torso>
+  <Manual_Description_Extremities>Welcome to Extremities tab:
+
+- @traumatic-amputation
+- @gangrene
+- @surgical-amputation
+- @intense-pain</Manual_Description_Extremities>
+  <Manual_Description_Bones>Welcome to Bones tab:
+
+- @bone-death
+- @bone-damage
+- @fractures
+- @dislocations</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Welcome to Any Bodypart tab:
+
+- @arterial-bleeding
+- @internal-damage
+- @burns
+- @infected-wounds
+- @foreign-bodies
+- @wounds
+- @ointmented
+- @bandaged
+- @plaster-cast</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>Welcome to Blood tab:
+
+- @hypoxemia
+- @sepsis
+- @hemotransfusion-shock
+- @blood-loss
+- @hypotension
+- @hypertension
+- @acidosis
+- @alkalosis</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Welcome to Items part 1 tab:
+
+- @adrenaline
+- @aed
+- @alien-blood
+- @ambubag
+- @anaparalyzant
+- @antibiotic-glue
+- @antibiotic-ointment
+- @antiseptic
+- @antiseptic-sprayer
+- @autopulse
+- @azathioprine
+- @bandages
+- @blood-packs
+- @blue-shark
+- @body-bag
+- @broad-spectrum-antibiotics
+- @combat-stimulant
+- @deusizine
+- @diving-knife
+- @drainage</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>Welcome to Items part 2 tab:
+
+- @empty-blood-pack
+- @endovascular-balloon
+- @fentanyl
+- @gypsum
+- @health-scanner
+- @hematology-analyzer
+- @hemostat
+- @hyperzine
+- @liquid-oxygenite
+- @mannitol
+- @manual-defibrillator
+- @medical-stent
+- @methamphetamine
+- @morphine
+- @naloxone
+- @needle
+- @nitroglycerin
+- @opium
+- @organ-procurement-scalpels
+- @osteosynthesis-implants</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>Welcome to Items part 3 tab:
+
+- @plastiseal
+- @propofol
+- @raptor-bane-extract
+- @retractors
+- @ringer-solution
+- @saline
+- @scalpel
+- @sodium-nitroprusside
+- @spinal-cord-implants
+- @stasis-bag
+- @streptokinase
+- @surgery-table
+- @surgical-drill
+- @surgical-saw
+- @sutures
+- @thiamine
+- @tourniquet
+- @trauma-shears
+- @tweezers
+- @wrench</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>Welcome to Items part 4 tab:
+
+EMPTY</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>Welcome to Surgery tab:
+
+- @traumatic-shock
+- @surgery-incision
+- @clamped-bleeding
+- @retracted-skin
+- @drilled-bones
+- @sawed-bones</Manual_Description_Surgery>
+  <Manual_Description_Procedures>Welcome to Procedures tab:
+
+- @open-close-surgery
+- @osteosynthetic-surgery
+- @aortic-rupture-surgery
+- @amputation-surgery
+- @organ-transplant-surgery</Manual_Description_Procedures>
+  <Manual_Description_Expansion>Welcome to Expansion tab:
+
+- @surgical-drapes
+- @surgical-mask
+- @surgeon-clothes
+- @surgical-infection
+- @mannitol-plus
+- @experimental-treatment
+- @triage-card
+- @brain-jar
+- @artificial-brain
+- @medical-misconduct
+- @cybernetic-arm
+- @cybernetic-leg
+- @cyberarm
+- @cyberleg
+- @damaged-electronics
+- @bent-metal
+- @loose-screws
+- @material-loss
+- @fpga-circuit
+- @welding-tool
+- @screwdriver
+- @steel-bar</Manual_Description_Expansion>
+</infotexts>

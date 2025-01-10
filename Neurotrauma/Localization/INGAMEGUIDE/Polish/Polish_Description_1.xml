@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+  <Manual_Description_FAQ>## Pytanie: Dlaczego nie mogę znaleźć konkretnej dolegliwości/przedmiotu?
+ Odpowiedź: Ten przewodnik jest niekompletny w chwili obecnej. Jest to kopia przewodnika Trello, z dnia 28.03.2023.
+ 
+ ## Pytanie: Jaka jest różnica między Symptomami a innymi dolegliwościami?
+ Odpowiedź: Symptomy to dolegliwości, które same w sobie nic nie robią i istnieją tylko po to, aby ułatwić diagnozę, podczas gdy inne dolegliwości mają efekty, które rzeczywiście wpływają na rozgrywkę.
+ 
+ ## Pytanie: Przycisk nie działa/Brak linku do przedmiotu
+ Odpowiedź: Jeśli coś nie działa lub ma nieoczekiwane zachowanie, wyślij raport o błędzie na stronie modu Steam, wraz z krokami do powtórzenia.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###Apteczka pierwszej pomocy
+ Rozdaj to załodze lub rozmieść na łodzi podwodnej
+ 
+ @bandaże
+ @szwy
+ @staza
+ @autopulse - używaj tylko do utrzymania przytomności do momentu dotarcia do lekarza
+ @pakiety krwi - najlepiej grupa O- lub O+
+ @gips
+ @nożyczki traumatyczne
+ @opium do stosowania z @kluczem do przestawień (lub tabletki przestawień)
+ (tabletki na leczenie sepsy z łusek)
+ 
+ Nie można umieścić tego w apteczce medycznej, ale @klucz do przestawień jest używany do przestawień, które są częste.
+ 
+ ###Apteczka medyczna lekarza 1
+ @opium, @morfina lub wybrane przez Ciebie tabletki @analgetyczne do operacji
+ @bandaże
+ @szwy - pasują do skrzynki narzędzi chirurgicznych, jeśli masz jedną
+ @staza
+ @skaner zdrowia
+ @analizator hematologiczny
+ @pakiety krwi - najlepiej grupa O- lub O+
+ @gips
+ @nożyczki traumatyczne - pasują do skrzynki narzędzi chirurgicznych, jeśli masz jedną
+ 
+ Ta pierwsza apteczka medyczna obejmuje najbardziej podstawowe diagnozy i leczenie, ale druga apteczka medyczna i/lub zestaw chirurgiczny zapewnia większość narzędzi do bardziej poważnych zabiegów.
+ 
+ Zaleca się również trzymanie torby stazy na pasku narzędziowym.
+ 
+ ###Apteczka medyczna lekarza 2
+ @wiertło chirurgiczne
+ @piła chirurgiczna
+ @worka Ambu
+ @sprej antyseptyczny z załadowanym @antyseptykiem lub maść @antybiotykowa
+ @ręczny defibrylator lub @aed
+ @mannitol (lub tabletki na urazy neurologiczne)
+ @antybiotyki o szerokim spektrum działania (lub tabletki na leczenie sepsy z łusek)
+ kaliksanid (lub tabletki na leczenie ciężkiej sepsy z łusek)
+ @plastiseal lub @klej antybiotykowy
+ 
+ ###Zestaw chirurgiczny
+ @skalpel
+ @hemostat
+ @odciągacze
+ @szwy
+ @pęsety
+ @igła
+ @drenaż
+ 4 najczęściej używane @skalpele do pobierania narządów lub dodatkowe @igły i @drenaż
+ 
+ Rozważ dodanie @igły do swojej apteczki medycznej, jeśli nie nosisz zestawu chirurgicznego regularnie.</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>Diagnozowanie jest używane do opisania procesu korzystania z "Trzech H":
+ - Interfejs zdrowia - dostarcza informacji głównie na poziomie powierzchniowym
+ - Skaner zdrowia - dostarcza informacji na temat wnętrzności
+ - Analizator hematologiczny - dostarcza informacji na temat krwi
+ 
+ Korzystanie z tej metody daje najwięcej informacji i ułatwia właściwe leczenie pacjenta oraz zwiększa jego szanse na przeżycie.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#Jeśli pacjent jest w natychmiastowym niebezpieczeństwie śmierci, umieść go w worku stazyjnym.
+ Worek stazyjny da ci 6 minut zatrzymanych objawów, aby zdiagnozować, opracować plan leczenia i podać jakiekolwiek leczenie krótsze niż operacja.
+ 
+ ###Zalecane leczenie w kolejności ważności
+ 1. Umieść ich w worku stazyjnym, jeśli ich stan szybko się pogarsza.
+ 2. Zdiagnozuj problemy i określ, które kroki poniżej są istotne.
+ 3. Nałożenie opaski uciskowej na krwawienie tętnicze.
+ 4. Jeśli występuje duże regularne krwawienie, zszyj je, podaj paczki krwi, jeśli to konieczne, i kontynuuj to w kolejnych krokach, jeśli to konieczne. Jeśli mają krwawienie wewnętrzne lub aortalne, trzeba je naprawić przed transfuzją krwi, w przeciwnym razie marnujesz worki krwi. Rozważ użycie ciekłego tlenitu dalej, aby ustabilizować pacjenta przed tymi operacjami.
+ 5. Użyj igły, jeśli występuje wysokie zapadnięcie płucne.
+ 6. Jeśli jest w worku stazyjnym, przygotuj pacjenta do usunięcia z worka, podaj jakiekolwiek leki, jeśli tego potrzebują
+ \\- Azatiopryna: jeśli potrzebują późniejszych przeszczepów narządów
+ \\- Antyrad lub stabilozyna: choroba popromienna WAŻNE
+ \\- Antybiotyki o szerokim spektrum: sepsa
+ \\- Mannitol: redukcja lub leczenie neurotramu, jeśli ich krew jest stabilna
+ \\- Morfina: środek przeciwbólowy do operacji
+ \\- Tiamina: leczenie uszkodzeń narządów
+ Następnie wyjmij ich z worka stazyjnego, aby rozpocząć operację (tutaj stosuj ciekły tlenit, jeśli zamierzasz go użyć po użyciu worka stazyjnego)
+ 7. Pierwsza pomoc dla rytmu serca/oddychania, jeśli są aresztowani lub mają areszt, (lub jeśli właśnie zostali wyjęci z worka stazyjnego, ponieważ to zatrzymuje bicie serca i oddychanie). Pomiń ten krok, jeśli mają duże krwawienie wewnętrzne lub aortalne do naprawienia.
+ 8. Naprawa pęknięcia aorty, krwawienia wewnętrznego i tętniczego w odpowiedni sposób. Podaj więcej krwi, jeśli jest to konieczne.
+ 9. Naprawa problemów z sercem/oddychaniem, w tym użycie drenażu do naprawy zapadnięcia płucnego.
+ 10. Naprawa poważnych oparzeń (wysoki drugi stopień lub jakikolwiek trzeci stopień)
+ \\- Drugi stopień: maść antybiotykowa lub opatrunki, jeśli kończyna nie wymaga operacji
+ \\- Trzeci stopień: klej antybiotykowy, lub jeśli kończyna wymaga operacji, poczekaj do końca operacji i użyj plastiseal przed zszyciem.
+ 11. Wykonaj operacje implantów osteosyntezy na głowie/szyi/klatce piersiowej na złamaniach i następnie operację implantów rdzenia kręgowego na urazie rdzenia kręgowego.
+ 12. Skaner zdrowia części ciała i wykonaj operację pęsetą, aby usunąć ciała obce oraz leczyć uszkodzenia wewnętrzne i urazy zamkni</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Będziesz używać trzech H w diagnostyce. (w @how-to-diagnose)
+ 2. Będziesz sprawić, że krew krąży kręgiem, a powietrze wchodzi i wychodzi.
+ 3. Będziesz leczyć przyczyny choroby, a nie tylko objawy (zadaj sobie pytanie: "Dlaczego mój pacjent jest w @cardiac-arrest?")
+ 4. Nie będziesz przeprowadzać operacji bez stołu operacyjnego lub propofolu, aby twój pacjent nie cierpiał.
+ 5. Sedacja -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (opcjonalne kroki) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Wymiotowanie krwią jest objawem, co oznacza, że nie jest śmiertelne i nie powoduje żadnych innych skutków. 
+ 
+ ---
+ 
+ ##Spowodowane przez:
+ 
+ - @wewnętrzne-krwawienie (50% lub więcej)
+ - @uszkodzenie-wątroby (100%)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>Blada skóra to objaw, co oznacza, że nie jest śmiertelny i nie powoduje żadnych innych skutków. 
+ 
+ ---
+ ##Spowodowany przez:
+ 
+ - @hipotensja (50% lub mniej)
+ - @utrata krwi (40% lub więcej)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>Duszność jest objawem, co oznacza, że nie jest śmiertelna i nie powoduje innych dolegliwości.
+ 
+ ---
+ ##Wywołana przez:
+ 
+ - @zawał-serca
+ - @uszkodzenie-płuc (45% lub więcej)
+ - @pneumotoraks (40% lub więcej)
+ - @tamponada-serca (10% lub więcej)
+ - @wstrząs-po-przetoczeniu-krwi (między 0 a 70%)
+ - @hipoksemia (20% lub więcej)
+ - @uszkodzenie-serca (80% lub więcej)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>Kaszel jest objawem, co oznacza, że nie jest śmiertelny i nie powoduje żadnych innych skutków. 
+ 
+ ---
+ ##Spowodowany przez:
+ 
+ - @uszkodzenie płuc (50% lub więcej)
+ - @uszkodzenie serca (50% lub więcej)
+ - @tamponada serca (20% lub więcej)</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Zwiększona częstotliwość akcji serca jest objawem, co oznacza, że nie jest ona śmiertelna i nie powoduje innych dolegliwości, chyba że wzrasta powoli, co oznacza, że przechodzisz przez migotanie przedsionków.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @kwasica (20% lub więcej)
+ - @sepsa (20% lub więcej)
+ - @utrata krwi (40% lub więcej)
+ - @pneumotoraks (30% lub więcej)
+ - @odstawienie (odstawienie alkoholu, 75% lub więcej)
+ - @migotanie przedsionków
+ - @adrenalina</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>Pomyłka to objaw, co oznacza, że nie jest śmiertelna i nie powoduje innych dolegliwości. 
+ 
+ ---
+ 
+ ## Wywołana przez:
+ 
+ - @kwasica
+ - @sepsa
+ - @hipotensja
+ - @hipoksemia
+ - @odstawienie
+ - @wstrząs mózgu</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>Zawroty głowy to objaw, co oznacza, że nie jest śmiertelny i nie powoduje innych dolegliwości.
+ 
+ ---
+ ##Spowodowany przez:
+ 
+ - @hipotonia (60% lub mniej)</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>Zamazane widzenie to objaw, co oznacza, że nie jest on śmiertelny i nie powoduje innych dolegliwości. Jak wskazuje nazwa, ta dolegliwość sprawi, że twoje widzenie będzie bardziej zamazane.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hipotensję (55% lub mniej)
+ - @wstrząs mózgu</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>Puchnięcie nóg to objaw, co oznacza, że nie jest śmiertelny i nie powoduje innych skutków. Cybernogi nie będą puchły.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Uszkodzenie wątroby (40% lub więcej)
+ - Uszkodzenie nerek (60% lub więcej)
+ - Uszkodzenie serca (80% lub więcej)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>Chrapanie jest objawem, co oznacza, że nie jest śmiertelne i nie powoduje żadnych innych skutków.</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>Słabość jest objawem, co oznacza, że nie jest śmiertelna i nie powoduje innych dolegliwości. Słabość zmniejszy obrażenia zadawane w walce wręcz o 80%.
+ 
+ ---
+ ##Spowodowana przez:
+ 
+ - Tamponadę serca (30% lub więcej)
+ - Utratę krwi (60% lub więcej)
+ - Kwasice (35% lub więcej)</Manual_Description_Weakness>
+  <Manual_Description_Fever>Gorączka jest objawem, co oznacza, że nie jest śmiertelna i nie powoduje innych dolegliwości. 
+ 
+ ---
+ ##Wywołana przez:
+ 
+ - @sepsa (5% lub więcej)
+ - @odstawienie (odstawienie alkoholu, 90% lub więcej)</Manual_Description_Fever>
+  <Manual_Description_Sweating>Pocenie się jest objawem, co oznacza, że nie jest śmiertelne i nie powoduje żadnych innych skutków. 
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - @zawał-serca
+ - @odstawienie (30% lub więcej)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Wzdęcie jest objawem, co oznacza, że nie jest śmiertelne i nie powoduje żadnych innych skutków. 
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Uszkodzenie wątroby (50% lub więcej)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>Zapalenie to objaw, co oznacza, że nie jest śmiertelne i nie powoduje innych skutków. 
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - @zakażone-rany (10% lub więcej)
+ - @ciała-obce (15% lub więcej)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>Żółtaczka to objaw, co oznacza, że nie jest śmiertelna i nie powoduje innych dolegliwości.
+ 
+ ---
+ ##Spowodowana przez:
+ 
+ - Uszkodzenie wątroby (80% lub więcej)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>Nieprzyjemne dolegliwości brzuszne to objaw, co oznacza, że nie jest śmiertelny i nie powoduje innych skutków. 
+ 
+ ---
+ ##Spowodowany przez:
+ 
+ - Uszkodzenie wątroby (65% lub więcej)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>Ból głowy to objaw, co oznacza, że nie jest on śmiertelny i nie powoduje innych dolegliwości. Ból głowy spowoduje zamazanie krawędzi Twojego ekranu.
+ 
+ ---
+ ##Spowodowany przez:
+ 
+ - @utratę krwi (50% lub więcej)
+ - @kwasice (20% lub więcej)
+ - @hipoksję (40% lub więcej)
+ - @hipotensję (60% lub mniej)
+ - @udar
+ - @odstawienie (odstawienie alkoholu, 50% lub więcej)
+ - @złamania (złamania czaszki)
+ - @wstrząs mózgu
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Leki przeciwbólowe</Manual_Description_Headache>
+  <Manual_Description_Craving>Pragnienie jest objawem, co oznacza, że nie jest śmiertelne i nie powoduje żadnych innych dolegliwości.</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Pulsowanie serca to objaw, co oznacza, że nie jest śmiertelny i nie powoduje innych dolegliwości.
+ 
+ ---
+ ##Wywołany przez:
+ 
+ - alkaloza (20% lub więcej)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Drgawki są objawem, co oznacza, że nie są śmiertelne i nie powodują żadnych innych skutków.</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Neurotrauma jest jednym z niewielu czynników, które mogą bezpośrednio zaszkodzić Twojemu zdrowiu. Neurotrauma jest niezwykle niebezpieczna i może szybko się gromadzić, a po osiągnięciu 200%, natychmiast zabije gracza. Mózg będzie się leczył w tempie 0,1% na sekundę, zakładając, że konfiguracja pozostaje niezmieniona i nic go nie uszkadza.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @udar
+ - @uszkodzenie-wątroby (80% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-nerek (anuluje naturalną regenerację przy 100%)
+ - @posocznica (25% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @złamania (złamania czaszki, jeśli nie są opatrzone, a pacjent nie ma już neurotraumy)
+ - @hipoksemia (10% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - Użycie @opaski uciskowej na głowie
+ - @metamfetamina
+ - @hyperzine
+ - @traumatyczny szok (równy sile podzielonej przez 100 na sekundę, 10% lub więcej to punkt, w którym przewyższa naturalną regenerację)
+ - @zatrucie cyjankiem (70% lub więcej)
+ 
+ 
+ ##Efekty:
+ 
+ - Bezpośrednie uszkodzenie witalności
+ - Natychmiastowa śmierć (przy 200%)
+ - @zatrzymanie oddechu (przy 100% lub więcej)
+ - @nieprzytomność (przy 100% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - @mannitol, jeśli ciśnienie krwi jest stabilne. (Ciśnienie krwi jest powyżej 70%, a @hipoksemia jest poniżej 30%)
+ - @mannitol-plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>Udar mózgu musi być leczony jak najszybciej, aby zminimalizować szkody wyrządzone w mózgu. @streptokinaza NIE powinna być stosowana u pacjentów cierpiących na to schorzenie, ponieważ pogorszy to stan mózgu.
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - @nadciśnienie (150% lub więcej)
+ 
+ ##Efekty:
+ 
+ - @uraz-neurologiczny
+ - @drgawki
+ - @śpiączka
+ - @ból-głowy
+ 
+ ##Leczenie:
+ 
+ - @otwarte-zamknięcie-operacyjne</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>Spowodowane przez:
+ 
+ - Uzależnienie chemiczne/alkoholowe/opiatowe
+ 
+ Efekty:
+ 
+ W przypadku odstawienia alkoholu, substancji chemicznych i opiatów:
+ - @pragnienie (powyżej 20%)
+ - @pocenie się (powyżej 30%)
+ - 50% wolniejsza prędkość ruchu (powyżej 80%)
+ - 30% wolniejsza prędkość ruchu (powyżej 40%)
+ - 10% wolniejsza prędkość ruchu (powyżej 20%)
+ - @nudności (powyżej 40%)
+ 
+ W przypadku odstawienia alkoholu:
+ - @gorączka (powyżej 90%)
+ - @wymioty (powyżej 60%)
+ - @ból głowy (powyżej 50%)
+ - @zamieszanie (powyżej 80%)
+ - @przyspieszone bicie serca (powyżej 75%)
+ - @drgawki (powyżej 50%)
+ - @nadciśnienie
+ 
+ Metody leczenia:
+ - Haloperidol (TYLKO W PRZYPADKU ODSTAWIENIA ALKOHOLU)
+ - @nalokson (TYLKO W PRZYPADKU ODSTAWIENIA OPIATÓW)
+ - Użycie woreczka Ambu z farbą (TYLKO W PRZYPADKU ODSTAWIENIA SUBSTANCJI CHEMICZNYCH)
+ - Podawanie większej ilości substancji, od której osoba jest uzależniona (np. podanie większej ilości opiatów w przypadku odstawienia opiatów)
+ - Czas</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>Przedawkowanie opioidów jest rzadkie i występuje tylko w przypadku nadużywania opioidów. Jednakże, jeśli przekroczy się próg 50%, jest bardzo śmiertelne i wymaga natychmiastowej opieki medycznej.
+ 
+ ---
+ 
+ ## Przyczyny:
+ 
+ - Przyjmowanie zbyt dużej ilości opioidów (@opium)
+ 
+ ## Efekty:
+ 
+ - @zatrzymanie-oddechu
+ - @hipowentylacja
+ - @drgawki
+ - @nieprzytomność
+ - 50% wolniejsza prędkość ruchu (przy 50% lub więcej)
+ 
+ ## Leczenie:
+ 
+ - @nalokson</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Napady padaczkowe spowodują, że będziesz poruszać się jak kukiełka za każdym razem, gdy się pojawią.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @udar
+ - @kwasica (60% lub więcej)
+ - @alkaloza (60% lub więcej)
+ - @odstawienie (odstawienie alkoholu, 50% lub więcej)
+ - @choroba popromienna (50% lub więcej)
+ - @przedawkowanie opioidów (50% lub więcej)
+ 
+ ##Efekty:
+ 
+ - @nieprzytomność
+ - @skurcze
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn.</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>Bezprzytomność zazwyczaj oznacza, że coś bardzo złego się stało, a lekarz będzie musiał cię jak najszybciej leczyć. Bezprzytomność ukryje objawy psychiczne (karty ukryte przez tę dolegliwość są oznaczone etykietą "Objaw psychiczny"), a także będzie działać jako stół operacyjny, dopóki pacjent jest nieprzytomny.
+ 
+ ## Spowodowane przez:
+ 
+ - Posiadanie mniej niż 0 witalności
+ - @hipoksemia
+ - @uraz-neurologiczny
+ - @śpiączka
+ - @pęknięcie-aorty
+ - @napad
+ - @narkoza
+ - @przedawkowanie-opiatów
+ - @worek-stazyjny
+ 
+ ## Efekty:
+ 
+ - Niemożność poruszania się lub mówienia
+ - @niski-poziom-tlenu
+ 
+ ## Leczenie:
+ 
+ - Leczenie przyczyn</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Pamiętaj, że Udręka to Efekt, więc przetłumacz słowo "affliction" jako "efekt".
+ Przetłumacz ten tekst na język polski:
+ Śpiączka często występuje po uduszeniu i zwykle nie jest śmiertelna przy odpowiedniej opiece medycznej. Zalecanym postępowaniem jest przypięcie autopulsu do pacjenta, jeśli jest to wystarczająco poważne.
+ 
+ ---
+ 
+ ## Spowodowane przez:
+ 
+ - @udar
+ - @zatrzymanie-serca
+ - Wysokie poziomy @kwasicy
+ - @choroba-ne
+ - Niezdany test umiejętności @naloksonu
+ 
+ ## Efekty:
+ 
+ - @zatrzymanie-serca
+ - @nieprzytomność
+ 
+ ## Leczenie:
+ 
+ - Leczenie przyczyn i oczekiwanie.</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Uszkodzenia rdzenia kręgowego pozbawią cię zdolności do poruszania się lub mówienia, co pośrednio może cię zabić. Uszkodzenia rdzenia kręgowego muszą być leczone po leczeniu złamania szyi, w przeciwnym razie po prostu wrócą.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @złamania (złamania szyi)
+ 
+ 
+ ##Efekty:
+ 
+ - Niemożność poruszania się lub mówienia 
+ - @analgezja
+ 
+ ##Leczenie:
+ 
+ - @otwarte-zamknięte-operacje (zastosuj @implanty rdzenia kręgowego przed zastosowaniem @szwów)</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>Wstrząs mózgu jest spowodowany ciężkim uderzeniem w głowę. Okresowo powoduje nudności, zamazane widzenie, bóle głowy i dezorientację. Chociaż uciążliwe, wstrząsy mózgu nie są śmiertelne.
+ 
+ ##Efekty:
+ - @nudności
+ - @zamazane-widzenie
+ - @ból-głowy
+ - @dezorientacja
+ 
+ ##Spowodowane przez:
+ - Trauma (wybuchy, rany od ugryzień, siła uderzenia, @uszkodzenia-wewnętrzne)
+ 
+ ##Zapobieganie:
+ - Noszenie kasku
+ 
+ ##Leczenie:
+ - Nie ma. Musisz poczekać. Powinieneś nosić ten kask.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>Zatrzymanie oddechu szybko prowadzi do niedotlenienia i uduszenia ofiary, dlatego należy działać szybko. Bycie w pobliżu stołu operacyjnego zapobiegnie negatywnym skutkom zatrzymania oddechu.
+ 
+ ## Przyczyny:
+ 
+ - Uszkodzenie płuc
+ - Wstrząs pourazowy
+ - Neurotrauma
+ - Hipoksemia
+ - Przedawkowanie opioidów
+ - Worek stazyjny
+ 
+ ## Skutki:
+ 
+ - Niedotlenienie
+ - Kwasica
+ 
+ ## Leczenie:
+ 
+ - Leczenie przyczyn
+ - Ambu z butlą tlenową
+ - Świadomość
+ 
+ ## Pierwsza pomoc:
+ 
+ - Bycie w pobliżu stołu operacyjnego
+ - Autopulsator</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>Uszkodzenie płuc nie jest śmiertelne, o ile pozostaje poniżej 100%. Płuca będą się regenerować w tempie 0,01% na sekundę, zakładając, że konfiguracja pozostaje niezmieniona, nic ich nie uszkadza i pozostają poniżej 100% uszkodzenia.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @antybiotyki-o-szerokim-spektrum
+ - @płynny-tlenek
+ - Użycie @ambubag zawierającego paliwo spawalnicze/incendium lub farbę
+ - Palenie papierosów
+ - @wstrząs-hemotransfuzji (między 0 a 70%)
+ - @choroba-promieniowa (28% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @posocznica (3% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @hipoksemia (4% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ 
+ ##Efekty:
+ 
+ - @kaszel (powyżej 50%)
+ - @duszność (powyżej 45%)
+ - @zatrzymanie-oddechu (przy 100%)
+ 
+ ##Leczenie:
+ 
+ - Czas
+ - @tiamina
+ - @operacja-przeszczepu-organów</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>Pneumotoraks uniemożliwi zmniejszenie siły @hipoksemii. Chociaż nie jest to samo w sobie śmiertelne, Pneumotoraks może łatwo zabić, jeśli połączy się z dolegliwościami powodującymi Hipoksję. Negatywne skutki Pneumotoraksu można tymczasowo zniwelować za pomocą @igły.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @złamania (złamania żeber, jeśli nie są opatrzone)
+ - Trauma (strzały, wybuchy, skaleczenia, ugryzienia, siła uderzenia, @uszkodzenia-wewnętrzne)
+ 
+ ##Skutki:
+ 
+ - @duszność (powyżej 40%)
+ - @hiperwentylacja (powyżej 15%)
+ - @zwiększone-tętno (powyżej 30%)
+ 
+ ##Leczenie:
+ 
+ - Używanie @drenażu podczas operacji (po @odciągnięciu-skóry)
+ 
+ ##Pierwsza pomoc:
+ 
+ - @igła</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>Hipowentylacja jest zazwyczaj nieszkodliwa i zwykle można ją zignorować. Hipowentylacja i hipowentylacja wzajemnie się znoszą.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hipotensja (80% lub mniej)
+ - @hipoksemia (10% lub więcej)
+ - @pneumotoraks (15% lub więcej)
+ - @sepsa (15% lub więcej)
+ - @adrenalina
+ 
+ ##Efekty:
+ 
+ - @alkaloza
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Wywołanie @hipowentylacji</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>Hipowentylacja jest zazwyczaj nieszkodliwa i zwykle można ją zignorować. Hipowentylacja i hipowentylacja wzajemnie się znoszą.
+ 
+ ---
+ 
+ ## Spowodowane przez:
+ 
+ - @analgezja
+ - @anestezja
+ - @przedawkowanie-opiatów
+ 
+ ## Efekty:
+ 
+ - @kwasica
+ 
+ ## Leczenie:
+ 
+ - Leczenie przyczyn
+ - Wywołanie @hiperwentylacji</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>Niski poziom tlenu występuje, gdy brakuje tlenu w PŁUCACH. @hipoksemia.
+ 
+ ---
+ 
+ ## Spowodowane przez:
+ 
+ - @zatrzymanie-oddechu
+ - @nieprzytomność (jeśli spowodowana jest przez mniej niż 0 witalności)
+ - Bycie w wodzie lub pomieszczeniu bez źródła tlenu.
+ - Ekstrakt granatu
+ 
+ ## Efekty:
+ 
+ - @hipoksemia
+ 
+ ## Leczenie:
+ 
+ - @stół-operacyjny
+ - RKO
+ - @autopuls
+ - Oddychanie powietrzem natlenionym
+ - @ambubag z tlenem lub zbiornikami tlenowymi Oxygenite</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>Tamponada serca jest częsta podczas misji związanych z walką poza łodzią podwodną, takich jak opuszczone placówki lub wraki. Każdy, kto wykazuje objawy, powinien natychmiast udać się z powrotem do łodzi podwodnej, aby otrzymać leczenie.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Traumę (skaleczenia i postrzały)
+ 
+ ##Efekty:
+ 
+ - @hipotensja (zmniejszenie ciśnienia krwi o połowę)
+ - @osłabienie (powyżej 30%)
+ - @kaszel (powyżej 20%)
+ - @duszność (powyżej 10%)
+ 
+ ##Leczenie:
+ 
+ - @operacja-otwarcia-zamknięcia</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>Zatrzymanie akcji serca spowoduje znaczny spadek ciśnienia krwi i musi być szybko leczone.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @uszkodzenie-serca (100%)
+ - @traumatyczny-wstrząs (40% lub więcej)
+ - @śpiączka (40% lub więcej)
+ - @hipoksemia (80% lub więcej)
+ - @nieregularne-uderzenia-serca (20% lub więcej)
+ - @migotanie-przedsionków
+ - @ręczny-defibrylator
+ - @worek-stazy
+ 
+ ##Efekty:
+ 
+ - @śpiączka
+ - @kwasica
+ - @hipotonia (ustawia ciśnienie krwi na minimum)
+ - @hipoksemia
+ 
+ ##Leczenie:
+ 
+ - RKO
+ - @autopulse
+ - Leczenie przyczyn
+ - @adrenalina
+ - @ręczny-defibrylator lub @aed
+ - @pigułka-nitrogliceryny (z apteki NT)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>of hypertension (if applicable)
+ - Lifestyle changes (such as quitting smoking and improving diet)
+ 
+ ---
+ 
+ Zawał serca musi być leczony jak najszybciej, aby zmniejszyć ryzyko niewydolności serca.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Nadciśnienie (150% lub więcej)
+ - Nieudany test umiejętności klejenia antybiotyku
+ 
+ ##Efekty:
+ 
+ - Pocenie się
+ - Uszkodzenie serca
+ - Duszność
+ 
+ ##Leczenie:
+ 
+ - Streptokinaza
+ - Tabletki z nitrogliceryną (z apteki NT)
+ - Leczenie przyczyn nadciśnienia (jeśli dotyczy)
+ - Zmiany stylu życia (takie jak rzucenie palenia i poprawa diety)</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>Uszkodzenie serca nie jest śmiertelne, o ile pozostaje poniżej 100%. Serce będzie się goić z szybkością 0,01% na sekundę, zakładając, że konfiguracja pozostaje niezmieniona, nic go nie uszkadza i uszkodzenie pozostaje poniżej 100%.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @zawał-serca
+ - @antybiotyki-o-szerokim-spektrum
+ - @tlenek-płynny
+ - @wstrząs-hemotransfuzji (między 0 a 70%)
+ - @mannitol
+ - @choroba-promieniowa (29% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @posocznica (3% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @hipoksemia (4% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ 
+ ##Efekty:
+ 
+ - @kaszel (przy 80% lub więcej)
+ - @duszność (przy 80% lub więcej)
+ - @zatrzymanie-krążenia (przy 100%)
+ - @obrzęk-nóg (przy 80% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Czas
+ - @tiamina
+ - @operacja-przeszczepu-organów</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Nieregularne bicie serca to sytuacja, gdy serce nie bije z normalną częstotliwością i może prowadzić do zatrzymania akcji serca.
+ 
+ ---
+ ##Wywołane przez:
+ - @fibrylacja
+ 
+ ##Efekty:
+ - @zatrzymanie-akcji-serca (w 20% lub więcej przypadków)
+ - @hipotonia
+ 
+ ##Leczenie:
+ - @ręczny-defibrylator lub @aed
+ - RKO
+ - @autopuls
+ - Leczenie przyczyn podstawowych</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>Fibrylacja to proces 3-stopniowy. Na początku zaczyna się jako zwiększone tętno, które powoli wzrasta. Po osiągnięciu 100% zwiększonego tętna, staje się nieregularnym rytmem serca, który również wzrasta, a po osiągnięciu 100% staje się zatrzymaniem akcji serca. Dodatkowo, istnieje szansa, że nieregularny rytm serca natychmiast przejdzie do zatrzymania akcji serca, co zależy od tego, jak dużo nieregularnego tętna masz. Zysk fibrylacji jest zmniejszony o połowę pod wpływem @adrenaliny.
+ 
+ ## Spowodowane przez:
+ 
+ - @pęknięcie-aorty
+ - @kwasica
+ - @hipotensja
+ - @hipoksemia
+ 
+ ## Efekty:
+ 
+ - @zwiększone-tętno.
+ 
+ ## Leczenie:
+ 
+ - @defibrylator-manualny
+ - @autopuls
+ - Leczenie przyczyn
+ - RKO</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>Pęknięcia aorty są jednym z najpoważniejszych urazów, jakie można doznać. Ofiara tego wymaga natychmiastowej opieki medycznej i najprawdopodobniej straci znaczną część swojej krwi.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @rany (krwawienie, 80% lub więcej, jeśli w klatce piersiowej)
+ - @ciała-obce (20% lub więcej, jeśli w klatce piersiowej)
+ 
+ ##Efekty:
+ 
+ - 4% @utraty-krwi na sekundę
+ - @nieprzytomność
+ - 8% @wewnętrzne-krwawienie na sekundę
+ - @migotanie-przedsionków
+ 
+ ##Leczenie:
+ 
+ - @operacja-pęknięcia-aorty
+ - @otwarta-zamknięta-operacja
+ 
+ ##Pierwsza pomoc:
+ 
+ - @worek-stazyjny</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>Wewnętrzne krwawienie szybko wypłynie z pacjenta krew i musi być szybko leczone.
+ 
+ ---
+ 
+ ## Spowodowane przez:
+ 
+ - Trauma (strzały, eksplozje, rany po ugryzieniach, skaleczenia)
+ - Uszkodzenie wątroby
+ - Pęknięcie aorty
+ 
+ ## Efekty:
+ 
+ - Utrata krwi
+ - Wymiotowanie krwią
+ 
+ ## Leczenie:
+ 
+ - Operacja otwarta-zamknięta
+ - Stymulant bojowy</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Niskie poziomy choroby popromiennej są łatwe do leczenia, ale jeśli choroba popromienna osiągnie wystarczająco wysoki poziom, szybko zacznie zabijać narządy. Płuca będą bardziej uszkodzone przez promieniowanie niż inne narządy.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @health-scanner (0,5% na sekundę dla osoby skanowanej, 0,3% na sekundę dla osoby skanującej, 1% jeśli używane jako leczenie, jak opatrunek)
+ - Radiotoksyna
+ - Wybuchy nuklearne
+ - Bycie w pobliżu wrażliwej pręta paliwowego z fulgurium
+ 
+ ##Efekty:
+ 
+ - @uszkodzenie-wątroby (powyżej 29%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-serca (powyżej 29%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-nerek (powyżej 33%, punkt, w którym przewyższa naturalną regenerację, 29% jeśli jedna nerka jest martwa)
+ - @uszkodzenie-płuc (powyżej 28%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-kości (powyżej 31%, punkt, w którym przewyższa naturalną regenerację)
+ - @nudności (powyżej 80%)
+ - @drgawki (powyżej 50%)
+ 
+ ##Leczenie:
+ 
+ - Antirad
+ - Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>Uszkodzenie nerek zwykle jest przeżywalne, ponieważ nawet jeśli doszło do niewydolności nerek, to zabija ono bardzo powoli. Uszkodzenie nerek nie zagoi się poniżej 50% uszkodzenia, jeśli przekroczy próg 50%, ponieważ jedna z nerek umrzeła. Nerki będą się goić w tempie 0,01% na sekundę, jeśli jedna nerka jest żywa, a będą się goić w tempie 0,02% na sekundę, jeśli obie nerki są żywe, zakładając, że konfiguracja pozostaje niezmieniona i nic ich nie uszkadza.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @antybiotyki-o-szerokim-spektrum
+ - @tlenek-płynny
+ - @wstrząs-hemotransfuzji (między 0-70%)
+ - @mannitol
+ - @choroba-promieniowa (33% lub więcej, punkt, w którym przewyższa naturalną regenerację, 29% jeśli jedna nerka jest martwa)
+ - @nadciśnienie (184% lub więcej, punkt, w którym przewyższa naturalną regenerację, 152% jeśli jedna nerka jest martwa)
+ - @posocznica (6% lub więcej, punkt, w którym przewyższa naturalną regenerację, 3% jeśli jedna nerka jest martwa)
+ - @hipoksemia (8% lub więcej, punkt, w którym przewyższa naturalną regenerację, 4% jeśli jedna nerka jest martwa)
+ 
+ ##Efekty:
+ 
+ - @obrzęk-nóg (przy 60% lub więcej)
+ - @kwasica (przy 80% lub więcej)
+ - @nadciśnienie
+ - @uszkodzenie-kości (przy 72% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @wymioty (przy 60% lub więcej)
+ - @uraz-neurologiczny (całkowicie neutralizuje naturalną regenerację przy 100%)
+ - @nudności (przy 60% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Czas
+ - @tiamina
+ - @operacja-przeszczepu-nerki</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Uszkodzenie wątroby, jeśli prowadzi do niewydolności wątroby, jest śmiertelne i może powodować masowe utraty krwi w postaci krwawień wewnętrznych. Wątroba będzie się goić w tempie 0,01% na sekundę, zakładając, że konfiguracja pozostaje niezmieniona, nic jej nie uszkadza i jest poniżej 100% uszkodzenia.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @antybiotyki-o-szerokim-spektrum
+ - @tlenek-płynny
+ - @wstrząs-hemotransfuzji (między 0 a 70%)
+ - @choroba-promieniowa (29% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @posocznica (3% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @hipoksemia (4% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ 
+ ##Efekty:
+ 
+ - @obrzęk-nóg (przy 40% lub więcej)
+ - @krwawienie-wewnętrzne (przy 100%)
+ - @wymioty-krwi (przy 100%)
+ - @nadciśnienie
+ - @uraz-neurologiczny (przy 80% lub więcej, moment, w którym przewyższa naturalną regenerację)
+ - @dyskomfort-brzuszny (przy 65% lub więcej)
+ - @żółtaczka (przy 80% lub więcej)
+ - @wzdęcia (przy 50% lub więcej)
+ - Zmniejszona zdolność do leczenia krwawień, krwawienie nie będzie się goić przy 100% uszkodzenia
+ 
+ ##Leczenie:
+ 
+ - Czas
+ - @tiamina
+ - @operacja-przeszczepu-organów</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>##Spowodowane przez:
+ - Morbusine
+ 
+ ##Efekty:
+ - Zniekształcenie ekranu
+ - 20% wolniejsza prędkość poruszania się (przy 20% lub więcej)
+ - @śpiączka (przy 20% lub więcej)
+ 
+ ##Leczenie:
+ - Antidotum na Morbusine
+ - Stabilozyna</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Spowodowane przez:
+ - Cyjanek
+ 
+ ##Efekty:
+ - Niski poziom tlenu
+ - @hipoksemia
+ - @neurotrauma (powyżej 70%)
+ 
+ ##Leczenie:
+ - Antidotum na cyjanki
+ - Stabilozyna</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>Skutek uboczny niektórych leków. Dodatkowe uszkodzenia organów są spowodowane niepowodzeniem sprawdzenia umiejętności medycznych tych leków.
+ 
+ ---
+ ##Spowodowane przez:
+ - @alien-blood +3,75 lub 7,5%
+ - @broad-spectrum-antibiotics +12 lub 20% w ciągu antybiotyków
+ - Chloral Hydrate +2,5%
+ - @liquid-oxygenite +6 lub 10%
+ - @mannitol +5 lub 10%
+ - @methamphetamine +15 lub 30%
+ 
+ ##Leczenie:
+ - Czas
+ - @deusizine
+ - @organ-transplant-surgery wyleczy niektóre podstawowe uszkodzenia organów za pomocą świeżych organów.</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>Pierwszym krokiem we wszystkich procedurach chirurgicznych jest zastosowanie znieczulenia. Analgezja to efekt, który zapobiega wstrząsom pourazowym podczas operacji i łagodzi ból. Wstrząs pourazowy nadal wystąpi, jeśli operacja zostanie przeprowadzona bez zastosowania analgezji. Analgezja zapewni również odporność na uszkodzenia, skalując się do maksymalnej wartości 50% odporności przy 200%.
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - Opioidy
+ - @adrenalina (nie daje więcej niż 4,5% analgezji)
+ - @uraz rdzenia kręgowego
+ - Stan upojenia alkoholowego (nie daje więcej niż 5% analgezji)
+ - @narkoza (nie daje więcej niż 5% analgezji)
+ 
+ ##Efekty:
+ 
+ - @hipowentylacja (przy 20% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - @nalokson</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>Znieczulenie to efekt, który zapobiega wstrząsom pourazowym podczas operacji i w przeciwieństwie do @analgezji, nie wymaga stołu operacyjnego do bezpiecznego przeprowadzenia operacji. Znieczulenie natychmiast zanika przy osiągnięciu 100% siły. Znieczulenie również spowalnia ruch postaci o 50%.
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - @propofol
+ 
+ ##Efekty:
+ 
+ - @hipowentylacja (powyżej 40%)
+ - @nieprzytomność (powyżej 15%)
+ - @analgezja (nie daje więcej niż 5% analgezji)
+ - Spowolnienie ruchu o 50%
+ 
+ ##Leczenie:
+ 
+ - @anaparalityk
+ - Czas</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>Ból brzucha nie jest śmiertelny i tylko przez 1 sekundę co 3-6 sekund zmniejsza prędkość o połowę.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hemotransfusion-shock (od 0 do 80%)
+ 
+ ##Efekty:
+ 
+ - Zmniejszenie prędkości o połowę przez 1 sekundę co 3-6 sekund
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Leki przeciwbólowe</Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>Wymiotowanie zazwyczaj nie jest szkodliwe, a czasami może być korzystne ze względu na powodowanie alkalozy. Wymiotowanie spowolni również twoją postać o 20%.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hemotransfusion-shock (od 0 do 40%)
+ - @withdrawal (odstawienie alkoholu, 60% lub więcej)
+ - Trzeźwy (na 100%)
+ - @kidney-damage (60% lub więcej)
+ - @raptor-bane-extract
+ 
+ ##Efekty:
+ 
+ - @alkaloza
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn</Manual_Description_Vomiting>
+</infotexts>

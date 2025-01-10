@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="French" nowhitespace="false" translatedname="Français">
+  <Manual_Description_FAQ>## Q: Pourquoi ne puis-je pas trouver une affliction/objet spécifique ?
+ R: Ce guide est incomplet pour le moment. Ce guide est une copie du guide Trello, datant du 28.03.2023.
+ 
+ ## Q: Quelle est la différence entre les Symptômes et les autres afflictions ?
+ R: Les Symptômes sont des afflictions qui ne font rien par elles-mêmes et existent simplement pour faciliter le diagnostic, tandis que les autres afflictions ont des effets qui ont réellement un impact sur le gameplay.
+ 
+ ## Q: Le bouton ne fonctionne pas/Le lien vers l'objet est manquant
+ R: Si quelque chose ne fonctionne pas ou a un comportement inattendu, envoyez un rapport de bug sur la page de mod Steam, avec les étapes à reproduire.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###Trousse de premiers soins
+ Distribuez-les à l'équipage ou autour du sous-marin
+ 
+ @pansements
+ @sutures
+ @tourniquet
+ @autopulse - utilisé uniquement pour rester conscient jusqu'à ce que vous atteigniez un médecin
+ @paquets de sang - de préférence O- ou O+
+ @gypse
+ @ciseaux de traumatologie
+ @opium à utiliser avec une clé à molette sur les luxations (ou des pilules de luxation)
+ (pilules mineures de septicémie de coque)
+ 
+ Il ne peut pas être placé dans une trousse médicale, mais une clé à molette est utilisée pour les luxations, qui sont courantes.
+ 
+ ###Trousse médicale du médecin 1
+ @opium, @morphine, ou votre choix de pilules d'@analgésie pour la chirurgie
+ @pansements
+ @sutures - s'adapte dans la boîte à outils de chirurgie si vous en transportez une
+ @tourniquet
+ @scanner de santé
+ @analyseur d'hématologie
+ @paquets de sang - de préférence O- ou O+
+ @gypse
+ @ciseaux de traumatologie - s'adapte dans la boîte à outils de chirurgie si vous en transportez une
+ 
+ Cette première trousse médicale couvrira les diagnostics et traitements les plus basiques, mais une deuxième trousse médicale et/ou une trousse de chirurgie fournissent la plupart des outils pour des traitements plus sérieux.
+ 
+ Il est également recommandé de garder un sac de stase dans votre barre d'outils.
+ 
+ ###Trousse médicale du médecin 2
+ @foreuse chirurgicale
+ @scie chirurgicale
+ @sac ambu
+ @pulvérisateur antiseptique avec antiseptique chargé ou pommade antibiotique
+ @défibrillateur manuel ou DEA
+ @mannitol (ou pilules de neurotrauma)
+ @antibiotiques à large spectre (ou pilules mineures de septicémie de coque)
+ calyxanide (ou pilules majeures de coque)
+ @plastiseal ou @colle antibiotique
+ 
+ ###Trousse de chirurgie
+ @scalpel
+ @hémostatique
+ @rétracteurs
+ @sutures
+ @pincettes
+ @aiguille
+ @drainage
+ Les 4 scalpel d'@extraction d'organe les plus utilisés ou des aiguilles et des drains supplémentaires
+ 
+ Considérez l'ajout d'une aiguille à votre trousse médicale si vous ne transportez pas régulièrement une trousse de chirurgie.</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>Le diagnostic est utilisé pour décrire le processus d'utilisation des "Trois H" :
+ - Interface de santé - Fournit des informations principalement de surface
+ - Scanner de santé - Fournit des informations sur les organes internes
+ - Analyseur d'hématologie - Fournit des informations sur le sang
+ 
+ L'utilisation de cette méthode vous donne le plus d'informations et facilite grandement le traitement approprié de votre patient et augmente ses chances de survie.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#Si le patient est en danger immédiat de mort, mettez-le dans un sac de stase
+ Un sac de stase vous donnera 6 minutes d'afflictions en pause pour diagnostiquer, élaborer votre plan de traitement et administrer tout traitement court de la chirurgie.
+ 
+ ###Traitements suggérés par ordre d'importance
+ 1. Mettez-les dans un sac de stase s'ils sont dans un état de détérioration rapide
+ 2. Diagnostiquez les problèmes et déterminez quelles étapes ci-dessous sont pertinentes
+ 3. @tourniquet tout @saignement-artériel
+ 4. S'il y a une hémorragie régulière majeure, @suturer, donner des @paquets-de-sang si nécessaire et continuer à le faire dans les étapes suivantes si nécessaire. S'ils ont une hémorragie interne ou aortique, cela devra être corrigé avant la transfusion de sang ou vous gaspillerez des poches de sang. Envisagez d'utiliser de l'oxygénite liquide plus loin pour stabiliser le patient pour ces chirurgies.
+ 5. Utilisez une @aiguille si le @pneumothorax est élevé
+ 6. Si dans un @sac-de-stase, préparez le patient pour le retrait du sac, donnez des médicaments s'ils en ont besoin
+ \\- @azathioprine: s'ils ont besoin de greffes d'organes ultérieures
+ \\- Antirad ou stabilozine: maladie de radiation IMPORTANT
+ \\- @antibiotiques à large spectre: sepsis
+ \\- @mannitol: réduction ou guérison de la neurotraumatologie si leur sang est stable
+ \\- @morphine: analgésique pour la chirurgie
+ \\- @thiamine: guérison des dommages aux organes
+ Ensuite, sortez-les du sac de stase pour commencer la chirurgie (c'est là que vous appliquez de l'oxygénite liquide si vous allez après avoir utilisé un sac de stase)
+ 7. Premiers soins pour le rythme cardiaque / la respiration s'ils sont arrêtés ou sur le point de l'être (ou s'ils viennent d'être sortis du sac de stase, car cela arrête le rythme cardiaque et la respiration). Passez cette étape s'ils ont une hémorragie interne ou aortique massive à corriger en premier.
+ 8. Corrigez correctement la @rupture-aortique, l'@hémorragie-interne et l'@hémorragie-artérielle. Donnez plus de sang si nécessaire.
+ 9. Corrigez correctement tous les problèmes cardiaques / respiratoires, y compris en utilisant un @drainage pour corriger le @pneumothorax
+ 10. Corrigez les mauvaises @brûlures (deuxième degré élevé ou troisième degré)
+ \\- Deuxième degré: @pommade-antibiotique ou @bandages si ce membre n'a pas besoin de chirurgie
+ \\- Troisième degré: @colle-antibiotique, ou si ce membre a besoin de chirurgie, attendez la fin de la chirurgie et utilisez @plastiseal avant les @sutures de fermeture.
+ 11. Effectuez des chirurgies d'implants d'@ostéosynthèse sur les fractures de la tête / du cou / de la poitrine, puis une chirurgie d'implants de @moelle-épinière sur les @lésions-de-la-moelle-épinière
+ 12. @scanner-de-santé les parties du corps et effectuez une chirurgie de @pincettes pour enlever les @corps-étrangers ainsi que guérir les @dommages-internes et les traumatismes contondants
+ 13. Chirurgie de @greffe-d'organe si nécessaire.
+ 14. Appliquez des @sutures pour fermer les chirurgies pour corriger les @plaies
+ 15. @bandages puis @plâtre tout @fractures sur les bras ou les jambes pour les plâtrer
+ 16. Utilisez un @analy</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Tu utiliseras les trois H de diagnostic. (dans @how-to-diagnose)
+ 2. Tu feras circuler le sang circulairement et l'air entrera et sortira.
+ 3. Tu traiteras les causes sous-jacentes plutôt que les symptômes (demande-toi, "Pourquoi mon patient est-il en @cardiac-arrest?")
+ 4. Tu ne feras pas de chirurgie sans une @surgery-table ou du @propofol, de peur que ton patient ne souffre.
+ 5. Sédation -&gt; @scalpel -&gt; @hemostat -&gt; @retracteurs -&gt; (étapes optionnelles) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Vomir du sang est un symptôme, ce qui signifie qu'il n'est pas fatal et ne cause aucune autre affection.
+ 
+ ---
+ 
+ ##Causes:
+ 
+ - @saignement-interne (50% ou plus)
+ - @dommages-au-foie (à 100%)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>La peau pâle est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Causes:
+ 
+ - @hypotension (50% ou moins)
+ - @perte de sang (40% ou plus)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>L'essoufflement est un symptôme, ce qui signifie qu'il n'est pas fatal et ne cause aucune autre affection.
+ 
+ ---
+ ##Causes:
+ 
+ - @crise-cardiaque
+ - @dommages-pulmonaires (45% ou plus)
+ - @pneumothorax (40% ou plus)
+ - @tamponnade-cardiaque (10% ou plus)
+ - @choc-hémotransfusionnel (entre 0 et 70%)
+ - @hypoxémie (20% ou plus)
+ - @dommages-cardiaques (80% ou plus)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>La toux est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Causes:
+ 
+ - @dommages-aux-poumons (50% ou plus)
+ - @dommages-au-cœur (50% ou plus)
+ - @tamponnade-cardiaque (20% ou plus)</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Le rythme cardiaque accru est un symptôme, ce qui signifie qu'il n'est pas fatal et ne cause aucune autre affection, sauf s'il augmente lentement, ce qui signifie que vous subissez une fibrillation.
+ 
+ ---
+ ##Causes:
+ 
+ - @acidose (20% ou plus)
+ - @septicémie (20% ou plus)
+ - @perte de sang (40% ou plus)
+ - @pneumothorax (30% ou plus)
+ - @sevrage (sevrage d'alcool, 75% ou plus)
+ - @fibrillation
+ - @adrénaline</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>La confusion est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause aucune autre effet.
+ 
+ ---
+ 
+ ## Causée par:
+ 
+ - L'acidose
+ - La septicémie
+ - L'hypotension
+ - L'hypoxémie
+ - Le sevrage
+ - La commotion cérébrale</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>La sensation de vertige est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Caused by:
+ 
+ - @hypotension (60% ou moins)</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>La vision floue est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause aucune autre effet. Comme son nom l'indique, cette effet rendra votre vision plus floue.
+ 
+ ---
+ ##Causes:
+ 
+ - @hypotension (55% ou moins)
+ - @commotion cérébrale</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>Le gonflement des jambes est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. Les cyberjambes ne gonfleront pas.
+ 
+ ---
+ ##Causes:
+ 
+ - Dommages au foie (40% ou plus)
+ - Dommages aux reins (60% ou plus)
+ - Dommages au cœur (80% ou plus)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>La respiration sifflante est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause aucune autre affection.</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>La faiblesse est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. La faiblesse réduira les dégâts de mêlée que vous infligez de 80%.
+ 
+ ---
+ ##Causes:
+ 
+ - @tamponnade-cardiaque (30% ou plus)
+ - @perte-de-sang (60% ou plus)
+ - @acidose (35% ou plus)</Manual_Description_Weakness>
+  <Manual_Description_Fever>La fièvre est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause aucune autre effet. 
+ 
+ ---
+ ##Causes:
+ 
+ - @sepsis (5% ou plus)
+ - @sevrage (sevrage d'alcool, 90% ou plus)</Manual_Description_Fever>
+  <Manual_Description_Sweating>La transpiration est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Caused by:
+ 
+ - @crise-cardiaque
+ - @sevrage (30% ou plus)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Le ballonnement est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Caused by:
+ 
+ - Dommages au foie (50% ou plus)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>L'inflammation est un symptôme, ce qui signifie qu'il n'est pas fatal et ne cause aucune autre effet.
+ 
+ ---
+ ##Causes:
+ 
+ - @plaies-infectées (10% ou plus)
+ - @corps-étrangers (15% ou plus)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>La jaunisse est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Causes:
+ 
+ - Dommages au foie (80% ou plus)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>Inconfort abdominal est un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Caused by:
+ 
+ - Dommages au foie (65% ou plus)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>La migraine est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. La migraine créera une superposition floue sur les bords de votre écran.
+ 
+ ---
+ ##Causes:
+ 
+ - @perte de sang (50% ou plus)
+ - @acidose (20% ou plus)
+ - @hypoxémie (40% ou plus)
+ - @hypotension (60% ou moins)
+ - @AVC
+ - @sevrage (sevrage d'alcool, 50% ou plus)
+ - @fractures (fractures du crâne)
+ - @commotion cérébrale
+ 
+ ##Traitements:
+ 
+ - Traitement des causes
+ - Analgésiques</Manual_Description_Headache>
+  <Manual_Description_Craving>La fringale est un symptôme, ce qui signifie qu'elle n'est pas mortelle et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Caused by:
+ 
+ - @sevrage (20% ou plus)</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Les palpitations sont un symptôme, ce qui signifie qu'il n'est pas mortel et ne cause pas d'autres effets. 
+ 
+ ---
+ ##Causes possibles:
+ 
+ - Alcalose (20% ou plus)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Les spasmes sont un symptôme, ce qui signifie qu'ils ne sont pas mortels et ne causent aucune autre affection.
+ 
+ ---
+ ##Caused by:
+ 
+ - @crise convulsive</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Le neurotraumatisme est l'une des seules choses qui peut causer des dommages directs à votre santé. Le neurotraumatisme est extrêmement dangereux et peut s'accumuler très rapidement, et une fois atteint 200%, il tuera instantanément le joueur. Le cerveau guérira à un taux de 0,1% par seconde, en supposant que la configuration n'ait pas changé et qu'il n'y ait rien qui le endommage.
+ 
+ ---
+ ##Causes:
+ 
+ - @accident-vasculaire-cérébral
+ - @lésion-hépatique (80% ou plus, point où elle dépasse la régénération naturelle)
+ - @lésion-rénale (annule la régénération naturelle à 100%)
+ - @septicémie (25% ou plus, point où elle dépasse la régénération naturelle)
+ - @fractures (fractures du crâne, si elles ne sont pas bandées et que le patient n'a pas déjà de neurotraumatisme)
+ - @hypoxémie (10% ou plus, point où elle dépasse la régénération naturelle)
+ - Utilisation d'un @tourniquet sur la tête
+ - @méthamphétamine
+ - @hyperzine
+ - @choc-traumatique (égal à la force divisée par 100 par seconde, 10% ou plus est le point où il dépasse la régénération naturelle)
+ - @empoisonnement-au-cyanure (70% ou plus)
+ 
+ 
+ ##Effets:
+ 
+ - Dommages directs à la vitalité
+ - Mort instantanée (à 200%)
+ - @arrêt-respiratoire (à 100% ou plus)
+ - @inconscience (à 100% ou plus)
+ 
+ ##Traitements:
+ 
+ - Traitement des causes
+ - @mannitol si le sang est stable. (La pression artérielle est supérieure à 70% et l'@hypoxémie est inférieure à 30%)
+ - @mannitol-plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>L'AVC doit être traité le plus rapidement possible pour réduire les dommages causés au cerveau. La streptokinase ne doit PAS être utilisée sur les patients souffrant de cela, car elle endommagera encore plus le cerveau.
+ 
+ ---
+ ##Causes:
+ 
+ - @hypertension (150% ou plus)
+ 
+ ##Effets:
+ 
+ - @neurotrauma
+ - @crise
+ - @coma
+ - @mal de tête
+ 
+ ##Traitements:
+ 
+ - @chirurgie-ouverte-fermée</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>Caused by:
+ 
+ - Dépendance chimique/alcool/opiacé
+ 
+ Effets:
+ 
+ ###Lors du sevrage d'alcool, de produits chimiques et d'opiacés:
+ - @envie (à 20% ou plus)
+ - @transpiration (à 30% ou plus)
+ - Vitesse de déplacement 50% plus lente (à 80% ou plus)
+ - Vitesse de déplacement 30% plus lente (à 40% ou plus)
+ - Vitesse de déplacement 10% plus lente (à 20% ou plus)
+ - @nausée (à 40% ou plus)
+ 
+ ###Lors du sevrage d'alcool:
+ - @fièvre (à 90% ou plus)
+ - @vomissements (à 60% ou plus)
+ - @maux de tête (à 50% ou plus)
+ - @confusion (à 80% ou plus)
+ - @augmentation du rythme cardiaque (à 75% ou plus)
+ - @crise (à 50% ou plus)
+ - @hypertension
+ 
+ Traitements:
+ 
+ - Halopéridol (UNIQUEMENT POUR LE SEVRAGE D'ALCOOL)
+ - @naloxone (UNIQUEMENT POUR LE SEVRAGE D'OPIACÉS)
+ - Utilisation d'un sac ambu contenant de la peinture (UNIQUEMENT POUR LE SEVRAGE CHIMIQUE)
+ - Administration de plus de la substance dont l'individu est en sevrage (par exemple, donner à quelqu'un en sevrage d'opiacés plus d'opiacés)
+ - Temps</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>La surdose d'opiacés est rare et ne se produit que par abus d'opiacés. Cependant, si elle dépasse le seuil de 50%, elle est très mortelle et nécessite des soins d'urgence.
+ 
+ ---
+ 
+ ## Caused by:
+ 
+ - Prendre trop d'opiacés (@opium)
+ 
+ ## Effets:
+ 
+ - @arrêt-respiratoire
+ - @hypoventilation
+ - @crise
+ - @inconscience
+ - Vitesse de déplacement réduite de 50% (à 50% ou plus)
+ 
+ ## Traitements:
+ 
+ - @naloxone</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Les crises vont vous faire tomber comme une poupée de chiffon chaque fois qu'elles se déclenchent.
+ 
+ ---
+ ##Causes:
+ 
+ - @AVC
+ - @acidose (60% ou plus)
+ - @alcalose (60% ou plus)
+ - @sevrage (sevrage d'alcool, 50% ou plus)
+ - @maladie-de-rayonnement (50% ou plus)
+ - @surdose-d'opiacés (50% ou plus)
+ 
+ ##Effets:
+ 
+ - @perte-de-connaissance
+ - @spasmes
+ 
+ ##Traitements:
+ 
+ - Traitement des causes</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>L'inconscience signifie généralement qu'il s'est produit quelque chose de très grave, et un médecin devra vous traiter dès que possible. L'inconscience cachera les symptômes mentaux (les cartes cachées par cette affliction sont étiquetées avec l'étiquette "Symptôme mental"), et fonctionnera également comme une @table-d'opération tant que votre patient est inconscient.
+ 
+ ---
+ 
+ ## Caused by:
+ 
+ - Avoir moins de 0 vitalité
+ - @hypoxémie
+ - @neurotraumatisme
+ - @coma
+ - @rupture-aortique
+ - @crise
+ - @anesthésie
+ - @surdose-d'opiacés
+ - @sac-de-stase
+ 
+ ## Effets:
+ 
+ - Incapacité de bouger ou de parler
+ - @faible-teneur-en-oxygène
+ 
+ ## Traitements:
+ 
+ - Traiter les causes</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Le coma survient souvent après une suffocation et n'est généralement pas fatal avec une attention médicale appropriée. Le cours d'action recommandé est de fixer un autopulse sur le patient si cela est suffisamment grave.
+ 
+ ---
+ 
+ ## Caused by:
+ 
+ - @accident vasculaire cérébral
+ - @arrêt cardiaque
+ - Des niveaux élevés d'acidose
+ - @morbusine
+ - Échec de la vérification de compétence de @naloxone
+ 
+ ## Effects:
+ 
+ - @arrêt cardiaque
+ - @inconscience
+ 
+ ## Traitements:
+ 
+ - Traitement des causes et attente</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Les blessures de la moelle épinière vont enlever votre capacité de bouger ou de parler, ce qui pourrait vous tuer indirectement. Les blessures de la moelle épinière doivent être traitées après avoir traité la fracture du cou, sinon elles reviendront simplement.
+ 
+ ---
+ ##Causes:
+ 
+ - Fractures (fractures du cou)
+ 
+ ##Effets:
+ 
+ - Incapacité de bouger ou de parler
+ - Analgésie
+ 
+ ##Traitements:
+ 
+ - Chirurgie ouverte-fermée (appliquer des implants de moelle épinière avant de suturer)</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>Une commotion cérébrale est causée par une attaque sévère à la tête. Elle provoque périodiquement des nausées, une vision floue, des maux de tête et de la confusion. Bien que gênantes, les commotions cérébrales ne sont pas mortelles.
+ 
+ ##Effets:
+ - @nausée
+ - @vision-floue
+ - @mal-de-tête
+ - @confusion
+ 
+ ##Causes:
+ - Traumatisme (explosions, morsures, force contondante, @dommages internes)
+ 
+ ##Prévention:
+ - Porter un casque
+ 
+ ##Traitement:
+ - Il n'y en a pas. Vous devez attendre que ça passe. Vous auriez dû porter ce casque.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>L'arrêt respiratoire entraînera rapidement une baisse d'oxygène et étouffera la victime, et doit être traité rapidement. Être près d'une table d'opération empêchera les effets négatifs de l'arrêt respiratoire de se produire.
+ 
+ ---
+ 
+ ## Caused by:
+ 
+ - @dommages-aux-poumons
+ - @choc-traumatique
+ - @neurotraumatisme
+ - @hypoxémie
+ - @surdose-d'opiacés
+ - @sac-de-stase
+ 
+ ## Effects:
+ 
+ - @baisse-d'oxygène
+ - @acidose
+ 
+ ## Treatments:
+ 
+ - Traitement des causes
+ - @ambubag avec un réservoir d'oxygène
+ - Être conscient
+ 
+ ## First Aid:
+ 
+ - Être près d'une @table-d'opération
+ - @autopulse</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>Les dommages pulmonaires ne sont pas mortels tant qu'ils sont inférieurs à 100%. Les poumons guériront à un taux de 0,01% par seconde, en supposant que la configuration reste inchangée, qu'ils ne subissent aucun dommage et qu'ils soient en dessous de 100% de dommages.
+ 
+ ---
+ ##Causes:
+ 
+ - @antibiotiques à large spectre
+ - @oxygénite-liquide
+ - Utilisation d'un @ambubag contenant du carburant de soudage/incendie ou de la peinture
+ - Fumer
+ - @choc-hémotransfusionnel (entre 0 et 70%)
+ - @maladie-de-radiation (28% ou plus, point où elle dépasse la régénération naturelle)
+ - @septicémie (3% ou plus, point où elle dépasse la régénération naturelle)
+ - @hypoxémie (4% ou plus, point où elle dépasse la régénération naturelle)
+ 
+ ##Effets:
+ 
+ - @toux (à partir de 50%)
+ - @essoufflement (à partir de 45%)
+ - @arrêt-respiratoire (à 100%)
+ 
+ ##Traitements:
+ 
+ - Temps
+ - @thiamine
+ - @chirurgie-de-transplantation-d'organe</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>Le pneumothorax empêchera l'hypoxémie de diminuer en intensité. Bien qu'il ne soit pas mortel en soi, le pneumothorax peut facilement tuer s'il est associé à des affections qui causent l'hypoxémie. Les effets négatifs du pneumothorax peuvent être temporairement annulés en utilisant une aiguille.
+ 
+ ---
+ ##Causes:
+ 
+ - Les fractures (fractures des côtes, si elles ne sont pas bandées)
+ - Les traumatismes (coups de feu, explosions, lacérations, morsures, traumatismes contondants, dommages internes)
+ 
+ ##Effets:
+ 
+ - L'essoufflement (à 40% ou plus)
+ - L'hyperventilation (à 15% ou plus)
+ - L'augmentation du rythme cardiaque (à 30% ou plus)
+ 
+ ##Traitements:
+ 
+ - Utilisation d'un drainage pendant la chirurgie (après la peau rétractée)
+ 
+ ##Premiers soins:
+ 
+ - Aiguille</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>L'hyperventilation est normalement sans danger et peut généralement être ignorée. L'hyperventilation et l'hypoventilation s'annuleront mutuellement.
+ 
+ ---
+ ##Causes:
+ 
+ - @hypotension (80% ou moins)
+ - @hypoxémie (10% ou plus)
+ - @pneumothorax (15% ou plus)
+ - @sepsis (15% ou plus)
+ - @adrénaline
+ 
+ ##Effets:
+ 
+ - @alcalose
+ 
+ ##Traitements:
+ 
+ - Traitement des causes
+ - Induction de l'hypoventilation</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>L'hypoventilation est normalement sans danger et peut généralement être ignorée. L'hypoventilation et l'hyperventilation s'annuleront mutuellement.
+ 
+ ---
+ 
+ ## Caused by:
+ 
+ - @analgesie
+ - @anesthesie
+ - @surdose d'opiacés
+ 
+ ## Effets:
+ 
+ - @acidose
+ 
+ ## Traitements:
+ 
+ - Traitement des causes
+ - Induction de l'@hyperventilation</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>La faible teneur en oxygène se produit lorsqu'il y a un manque d'oxygène dans les POUMONS. @hypoxémie.
+ 
+ ---
+ 
+ ## Causes:
+ 
+ - @arrêt-respiratoire
+ - @inconscience (si causée par une vitalité inférieure à 0)
+ - Être dans l'eau ou dans une pièce sans source d'oxygène.
+ - Extrait de grenade
+ 
+ ## Effets:
+ 
+ - @hypoxémie
+ 
+ ## Traitements:
+ 
+ - @table-d'opération
+ - RCR
+ - @autopulse
+ - Respirer de l'air oxygéné
+ - @ambubag avec des réservoirs d'oxygène ou d'oxygénite</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>La tamponnade cardiaque est courante lors de missions impliquant des combats à l'extérieur du sous-marin, tels que des avant-postes abandonnés ou des épaves. Toute personne présentant des symptômes devrait immédiatement retourner au sous-marin pour être traitée.
+ 
+ ---
+ ##Causes:
+ 
+ - Traumatisme (lacérations et coups de feu)
+ 
+ ##Effets:
+ 
+ - @hypotension (réduit de moitié la pression artérielle)
+ - @faiblesse (à 30% ou plus)
+ - @toux (à 20% ou plus)
+ - @essoufflement (à 10% ou plus)
+ 
+ ##Traitements:
+ 
+ - @chirurgie-à-ciel-ouvert</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>L'arrêt cardiaque fera chuter significativement la pression artérielle et doit être traité rapidement.
+ 
+ ---
+ ##Causes:
+ 
+ - @dommages-cardiaques (à 100%)
+ - @choc-traumatique (40% ou plus)
+ - @coma (40% ou plus)
+ - @hypoxémie (80% ou plus)
+ - @rythme-cardiaque-irrégulier (20% ou plus)
+ - @fibrillation
+ - @défibrillateur-manuel
+ - @sac-de-stase
+ 
+ ##Effets:
+ 
+ - @coma
+ - @acidose
+ - @hypotension (réduit la pression artérielle au minimum)
+ - @hypoxémie
+ 
+ ##Traitements:
+ 
+ - RCR
+ - @autopulse
+ - Traitement des causes
+ - @adrénaline
+ - @défibrillateur-manuel ou @aed
+ - @pilule-de-nitroglycérine (de la pharmacie NT)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>Une crise cardiaque doit être traitée dès que possible pour réduire le risque d'insuffisance cardiaque.
+ 
+ ---
+ ##Causes:
+ 
+ - @hypertension (150% ou plus)
+ - Échec de la vérification de compétence @antibiotique-colle
+ 
+ ##Effets:
+ 
+ - @transpiration
+ - @dommages-cardiaques
+ - @essoufflement
+ 
+ ##Traitements:
+ 
+ - @streptokinase
+ - Pilule de @nitroglycérine (de la pharmacie NT)
+ - Traitement des causes</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>Les dommages au cœur ne sont pas mortels tant qu'ils sont en dessous de 100%. Le cœur guérira à un taux de 0,01% par seconde, en supposant que la configuration reste inchangée, qu'il n'y ait aucun dommage et que les dommages soient en dessous de 100%.
+ 
+ ---
+ ##Causes:
+ 
+ - @crise-cardiaque
+ - @antibiotiques-à-large-spectre
+ - @oxygénite-liquide
+ - @choc-hémotransfusionnel (entre 0 et 70%)
+ - @mannitol
+ - @maladie-de-radiation (29% ou plus, point où elle dépasse la régénération naturelle)
+ - @septicémie (3% ou plus, point où elle dépasse la régénération naturelle)
+ - @hypoxémie (4% ou plus, point où elle dépasse la régénération naturelle)
+ 
+ ##Effets:
+ 
+ - @toux (à 80% ou plus)
+ - @essoufflement (à 80% ou plus)
+ - @arrêt-cardiaque (à 100%)
+ - @gonflement-des-jambes (à 80% ou plus)
+ 
+ ##Traitements:
+ 
+ - Temps
+ - @thiamine
+ - @chirurgie-de-transplantation-d'organe</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Le battement de cœur irrégulier est lorsque le cœur ne bat pas à son rythme normal et peut entraîner un arrêt cardiaque.
+ 
+ ---
+ ##Causes:
+ - La fibrillation
+ 
+ ##Effets:
+ - L'arrêt cardiaque (à 20% ou plus)
+ - L'hypotension
+ 
+ ##Traitement:
+ - Le défibrillateur manuel ou l'AEV
+ - La RCP
+ - L'autopulse
+ - Le traitement des causes sous-jacentes</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>La fibrillation est un processus en 3 étapes. Tout d'abord, elle commencera par une augmentation du rythme cardiaque, qui augmentera lentement. Lorsqu'elle atteindra une augmentation de 100% du rythme cardiaque, elle deviendra un battement de cœur irrégulier, qui augmentera également, et deviendra un arrêt cardiaque lorsqu'elle atteindra 100%. De plus, il y a une chance que le battement de cœur irrégulier passe immédiatement à un arrêt cardiaque, ce qui dépend de la quantité de battements de cœur irréguliers que vous avez. Le gain de fibrillation est réduit de moitié sous l'effet de l'adrénaline.
+ 
+ ## Caused by:
+ 
+ - @rupture-aortique
+ - @acidose
+ - @hypotension
+ - @hypoxémie
+ 
+ ## Effets:
+ 
+ - @augmentation-du-rythme-cardiaque.
+ 
+ ## Traitements:
+ 
+ - @défibrillateur-manuel
+ - @autopulse
+ - Traitement des causes
+ - RCR</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>Les ruptures aortiques sont l'une des blessures les plus graves qu'une personne puisse subir. La victime de cela nécessite des soins médicaux immédiats et perdra très probablement une partie importante de son sang.
+ 
+ ---
+ ##Causes:
+ 
+ - @blessures (saignements, 80% ou plus, si dans le torse)
+ - @corps-étrangers (20% ou plus, si dans le torse)
+ 
+ ##Effets:
+ 
+ - 4% de perte de sang par seconde
+ - @inconscience
+ - 8% de saignement interne par seconde
+ - @fibrillation
+ 
+ ##Traitements:
+ 
+ - @chirurgie-de-rupture-aortique
+ - @chirurgie-ouverte-fermée
+ 
+ ##Premiers soins:
+ 
+ - @sac-de-stase</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>Les saignements internes vont rapidement drainer le sang du patient et doivent être traités rapidement.
+ 
+ ---
+ 
+ ## Causes:
+ 
+ - Traumatisme (coups de feu, explosions, morsures, lacérations)
+ - Dommages au foie
+ - Rupture de l'aorte
+ 
+ ## Effets:
+ 
+ - Perte de sang
+ - Vomissements de sang
+ 
+ ## Traitements:
+ 
+ - Chirurgie ouverte-fermée
+ - Stimulant de combat</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Les niveaux faibles de maladie de radiation sont facilement traitables, mais si la maladie de radiation devient suffisamment élevée, elle commencera rapidement à tuer les organes. Les poumons subiront plus de dommages dus aux radiations que les autres organes.
+ 
+ ---
+ ##Causes:
+ 
+ - @health-scanner (0,5% par seconde pour la personne scannée, 0,3% par seconde pour la personne qui scanne, 1% s'il est utilisé comme traitement, comme un bandage)
+ - Radiotoxine
+ - Explosions nucléaires
+ - Être près d'une tige de combustible de fulgurium volatile
+ 
+ ##Effets:
+ 
+ - @liver-damage (à 29% ou plus, point où il dépasse la régénération naturelle)
+ - @heart-damage (à 29% ou plus, point où il dépasse la régénération naturelle)
+ - @kidney-damage (à 33% ou plus, point où il dépasse la régénération naturelle, 29% si un rein est mort)
+ - @lung-damage (à 28% ou plus, point où il dépasse la régénération naturelle)
+ - @bone-damage (à 31% ou plus, point où il dépasse la régénération naturelle)
+ - @nausea (à 80% ou plus)
+ - @seizure (à 50% ou plus)
+ 
+ ##Traitements:
+ 
+ - Antirad
+ - Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>Les dommages aux reins sont généralement survivables, car même s'ils ont progressé jusqu'à une insuffisance rénale, cela tuera extrêmement lentement. Les dommages aux reins ne guériront pas en dessous de 50% de dommages s'ils dépassent le seuil de 50%, car l'un des reins est mort. Les reins guériront à un taux de 0,01% par seconde si un rein est vivant, et guériront à un taux de 0,02% par seconde si les deux reins sont vivants, en supposant que la configuration est inchangée et que rien ne les endommage.
+ 
+ ---
+ ##Causes:
+ 
+ - @antibiotiques à large spectre
+ - @oxygénite liquide
+ - @choc d'hémotransfusion (entre 0 et 70%)
+ - @mannitol
+ - @maladie de radiation (33% ou plus, point où elle dépasse la régénération naturelle, 29% si un rein est mort)
+ - @hypertension (184% ou plus, point où elle dépasse la régénération naturelle, 152% si un rein est mort)
+ - @septicémie (6% ou plus, point où elle dépasse la régénération naturelle, 3% si un rein est mort)
+ - @hypoxémie (8% ou plus, point où elle dépasse la régénération naturelle, 4% si un rein est mort)
+ 
+ ##Effets:
+ 
+ - @gonflement des jambes (à 60% ou plus)
+ - @acidose (à 80% ou plus)
+ - @hypertension
+ - @dommages osseux (à 72% ou plus, point où cela dépasse la régénération naturelle)
+ - @vomissements (à 60% ou plus)
+ - @neurotraumatisme (neutralisera complètement la régénération naturelle à 100%)
+ - @nausées (à 60% ou plus)
+ 
+ ##Traitements:
+ 
+ - Temps
+ - @thiamine
+ - @chirurgie de transplantation d'organe</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Les dommages au foie, s'ils progressent vers une insuffisance hépatique, sont mortels et peuvent causer une perte de sang massive sous forme de saignements internes. Le foie guérira à un taux de 0,01% par seconde, en supposant que la configuration n'a pas changé, qu'il n'est pas endommagé et qu'il est en dessous de 100% de dommages.
+ 
+ ---
+ ##Causes:
+ 
+ - @antibiotiques à large spectre
+ - @oxygénite-liquide
+ - @choc-hémotransfusionnel (entre 0 et 70%)
+ - @maladie-de-radiation (29% ou plus, point où elle dépasse la régénération naturelle)
+ - @septicémie (3% ou plus, point où elle dépasse la régénération naturelle)
+ - @hypoxémie (4% ou plus, point où elle dépasse la régénération naturelle)
+ 
+ ##Effets:
+ 
+ - @gonflement-des-jambes (à 40% ou plus)
+ - @saignements-internes (à 100%)
+ - @vomissements-de-sang (à 100%)
+ - @hypertension
+ - @neurotraumatisme (à 80% ou plus, point où il dépasse la régénération naturelle)
+ - @inconfort-abdominal (à 65% ou plus)
+ - @jaunisse (à 80% ou plus)
+ - @ballonnements (à 50% ou plus)
+ - Capacité réduite à guérir les saignements, les saignements ne guériront pas du tout à 100% de dommages
+ 
+ ##Traitements:
+ 
+ - Temps
+ - @thiamine
+ - @chirurgie-de-transplantation-d'organe</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>Caused by:
+ - Morbusine
+ 
+ Effects:
+ - Distorsion de l'écran
+ - Vitesse de déplacement réduite de 20% (à 20% ou plus)
+ - @coma (à 20% ou plus)
+ 
+ Traitements:
+ - Antidote de Morbusine
+ - Stabilozine</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Caused by:
+ - Cyanure
+ 
+ ##Effets:
+ - Faible taux d'oxygène
+ - Hypoxémie
+ - Neurotraumatisme (à 70% ou plus)
+ 
+ ##Traitements:
+ - Antidote au cyanure
+ - Stabilozine</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>Un effet secondaire de certains médicaments. Des dommages supplémentaires aux organes sont causés par l'échec du contrôle de compétence médicale de ces médicaments.
+ 
+ ---
+ ##Causé par:
+ - @alien-blood +3,75 ou 7,5%
+ - @antibiotiques-à-large-spectre +12 ou 20% sur la durée des antibiotiques
+ - Chloral Hydrate +2,5%
+ - @oxygénite-liquide +6 ou 10%
+ - @mannitol +5 ou 10%
+ - @méthamphétamine +15 ou 30%
+ 
+ ##Traitements:
+ - Temps
+ - @deusizine
+ - @chirurgie-de-greffe-d'organe guérira certains dommages d'organe vanille avec des organes frais.</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>La première étape de toutes les procédures chirurgicales. L'analgésie est un effet qui prévient le choc traumatique pendant la chirurgie et soulage la douleur. Le choc traumatique se produira toujours si la chirurgie est effectuée sans analgésie. L'analgésie vous donnera également une résistance aux dommages, allant jusqu'à un maximum de 50% de résistance à 200%.
+ 
+ ---
+ ##Causes:
+ 
+ - Opiacés
+ - @adrénaline (ne donne pas plus de 4,5% d'analgésie)
+ - @lésion de la moelle épinière
+ - Être ivre (ne donne pas plus de 5% d'analgésie)
+ - @anesthésie (ne donne pas plus de 5% d'analgésie)
+ 
+ ##Effets:
+ 
+ - @hypoventilation (à 20% ou plus)
+ 
+ ##Traitements:
+ 
+ - @naloxone</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>L'anesthésie est un effet qui prévient le choc traumatique pendant la chirurgie, et contrairement à l'analgésie, elle ne nécessite pas de table d'opération pour effectuer une chirurgie sûre. L'anesthésie disparaîtra immédiatement lorsqu'elle atteindra une force de 100%. L'anesthésie ralentira également votre personnage de 50%.
+ 
+ ---
+ ##Causes:
+ 
+ - Propofol
+ 
+ ##Effets:
+ 
+ - Hypoventilation (à 40% ou plus)
+ - Inconscience (à 15% ou plus)
+ - Analgésie (ne donne pas plus de 5% d'analgésie)
+ - Vitesse de déplacement réduite de 50%
+ 
+ ##Traitements:
+ 
+ - Anaparalyzant
+ - Temps</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>La douleur abdominale n'est pas mortelle et ne réduira la vitesse que de moitié pendant 1 seconde toutes les 3 à 6 secondes.
+ 
+ ---
+ ##Causes:
+ 
+ - @hemotransfusion-shock (entre 0-80%)
+ 
+ ##Effets:
+ 
+ - Réduction de la vitesse de moitié pendant 1 seconde toutes les 3 à 6 secondes
+ 
+ ##Traitements:
+ 
+ - Traitement des causes
+ - Analgésiques</Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>La vomissure n'est généralement pas dangereuse et peut parfois être bénéfique car elle provoque une alcalose. La vomissure ralentira également votre personnage de 20%.
+ 
+ ---
+ ##Causes:
+ 
+ - @choc-hémotransfusion (entre 0 et 40%)
+ - @sevrage (sevrage d'alcool, 60% ou plus)
+ - Ivre (à 100%)
+ - @lésion-rénale (60% ou plus)
+ - @extrait-de-venin-de-raptor
+ 
+ ##Effets:
+ 
+ - @alcalose
+ 
+ ##Traitements:
+ 
+ - Traitement des causes</Manual_Description_Vomiting>
+</infotexts>

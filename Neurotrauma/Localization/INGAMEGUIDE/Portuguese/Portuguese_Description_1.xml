@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
+  <Manual_Description_FAQ>## Q: Por que não consigo encontrar uma aflição/item específico?
+ R: Este guia está incompleto no momento atual. Este guia é uma cópia do guia do Trello, de 28.03.2023.
+ 
+ ## Q: Qual é a diferença entre Sintomas e outras aflições?
+ R: Sintomas são aflições que não fazem nada por si só e existem apenas para facilitar o diagnóstico, enquanto outras aflições têm efeitos que realmente afetam o jogo.
+ 
+ ## Q: Botão não funciona/Link para item ausente
+ R: Se algo não estiver funcionando ou tiver um comportamento inesperado, envie um relatório de bug na página do mod do Steam, com etapas para reproduzir.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###Kit de primeiros socorros
+ Distribua esses itens para a tripulação ou ao redor do submarino
+ 
+ @curativos
+ @suturas
+ @torniquete
+ @autopulse - usado apenas para manter-se consciente até chegar a um médico
+ @bolsas de sangue - Preferencialmente O- ou O+
+ @gesso
+ @tesoura de trauma
+ @ópio para usar com uma chave inglesa em deslocamentos (ou pílulas para deslocamento)
+ (pílulas para septicemia leve)
+ 
+ Não pode ser colocado em um kit médico, mas uma chave inglesa é usada para deslocamentos, que são comuns
+ 
+ ###Kit médico do médico 1
+ @ópio, @morfina ou sua escolha de pílulas de @analgésico para cirurgia
+ @curativos
+ @suturas - encaixa na caixa de ferramentas de cirurgia se você carregar uma
+ @torniquete
+ @scanner de saúde
+ @analisador de hematologia
+ @bolsas de sangue - Preferencialmente O- ou O+
+ @gesso
+ @tesoura de trauma - encaixa na caixa de ferramentas de cirurgia se você carregar uma
+ 
+ Este primeiro kit médico cobrirá o diagnóstico e tratamentos mais básicos, mas um segundo kit médico e/ou kit de cirurgia fornece a maioria das ferramentas para tratamentos mais graves.
+ 
+ Também é recomendado manter uma bolsa de estase em sua barra de atalhos
+ 
+ ###Kit médico do médico 2
+ @broca cirúrgica
+ @serra cirúrgica
+ @ambubag
+ @spray antisséptico com antisséptico carregado ou pomada antibiótica
+ @desfibrilador manual ou @aed
+ @mannitol (ou pílulas para neurotrauma)
+ @antibióticos de amplo espectro (ou pílulas para septicemia leve)
+ calyxanide (ou pílulas para septicemia grave)
+ @plastiseal ou @cola antibiótica
+ 
+ ###Kit de cirurgia
+ @bisturi
+ @hemostático
+ @afastadores
+ @suturas
+ @pinças
+ @agulha
+ @drenagem
+ Os 4 bisturis de @procura de órgãos mais usados ou agulha e drenagem extras
+ 
+ Considere adicionar uma agulha ao seu kit médico se você não carrega um kit de cirurgia regularmente.</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>O diagnóstico é usado para descrever o processo de usar os "Três H":
+ - Interface de Saúde - Fornece coisas que são principalmente superficiais
+ - Scanner de Saúde - Fornece informações sobre os internos
+ - Analisador de Hematologia - Fornece informações sobre o sangue
+ 
+ Usar este método lhe dá a maior quantidade de informações e torna muito mais fácil tratar adequadamente o seu paciente e aumentar suas chances de sobrevivência.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#Se o paciente estiver em perigo imediato de morte, coloque-o em uma @bolsa-de-estase
+ Uma bolsa de estase dará a você 6 minutos de efeito pausado para diagnosticar, descobrir seu plano de tratamento e administrar quaisquer tratamentos que não envolvam cirurgia.
+ 
+ ###Tratamentos sugeridos em ordem de importância
+ 1. Coloque-os na bolsa de estase se estiverem em condição rapidamente deteriorante
+ 2. Diagnostique os problemas e descubra quais etapas abaixo são relevantes
+ 3. @torniquete qualquer @sangramento-arterial
+ 4. Se houver sangramento regular importante, @suturar, dar @bolsas-de-sangue se necessário e continuar fazendo isso em etapas posteriores, se necessário. Se eles tiverem sangramento interno ou aórtico, isso precisará ser corrigido antes de transfundir sangue ou você desperdiçará bolsas de sangue. Considere usar oxigenite líquida mais adiante para estabilizar o paciente para essas cirurgias.
+ 5. Use uma @agulha se o @pneumotórax estiver alto
+ 6. Se na @bolsa-de-estase, prepare o paciente para a remoção da bolsa, dê quaisquer medicamentos se necessário
+ \\- @azatioprina: se precisarem de transplantes de órgãos posteriores
+ \\- Antirad ou stabilozine: doença por radiação IMPORTANTE
+ \\- @antibióticos-de-espectro-amplo: sepse
+ \\- @manitol: redução ou cura de neurotrauma se o sangue deles estiver estável
+ \\- @morfina: analgésico para cirurgia
+ \\- @tiamina: cura de danos aos órgãos
+ Então tire-os da bolsa de estase para começar a cirurgia (aqui é onde você aplica oxigenite líquida se for usá-la depois de usar uma bolsa de estase)
+ 7. Primeiros socorros para batimento cardíaco/respiração se eles estiverem em parada cardíaca ou prestes a parar (ou se acabaram de sair da bolsa de estase, já que isso para o batimento cardíaco e a respiração). Pule esta etapa se eles tiverem sangramento interno ou aórtico maciço para corrigir primeiro.
+ 8. Corrija a @ruptura-aórtica, o @sangramento-interno e o @sangramento-arterial adequadamente. Dê mais sangue se necessário.
+ 9. Corrija adequadamente quaisquer problemas cardíacos/respiratórios, incluindo o uso de @drenagem para corrigir o @pneumotórax
+ 10. Corrija as queimaduras graves (segundo grau alto ou terceiro grau)
+ \\- Segundo grau: @pomada-antibiótica ou @curativos se o membro não precisar de cirurgia
+ \\- Terceiro grau: @cola-antibiótica, ou se o membro precisar de cirurgia, espere até o final da cirurgia e use @plastiseal antes do fechamento das @suturas.
+ 11. Faça cirurgias de @implantes-de-osteossíntese na cabeça/pescoço/tórax para @fraturas e depois cirurgia de @implantes-de-medula-espinhal em @lesão-da-medula-espinhal
+ 12. @scanner-de-saúde partes do corpo e realize cirurgia de @pinças para remover @corpos-estranhos, bem como curar @danos-internos e trauma contuso
+ 13. Cirurgia de @transplante-de-órgãos se necessário.
+ 14. Aplique @suturas para fechar cirurgias para corrigir @feridas
+ 15. @curativos e depois @gesso em quaisquer @fraturas em braços ou pernas para imobilizá-los
+ 16. Use @analisador-de-hematologia para verificar se eles têm quaisquer problemas sanguíneos persistentes e administre @antibióticos-de-espectro-amplo se tiverem @sepse se você não os deu antes.
+ 
+ U</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Deves usar as três Hs do diagnóstico. (em @how-to-diagnose)
+ 2. Deves fazer o sangue circular circularmente e o ar entrar e sair.
+ 3. Deves tratar as causas subjacentes em vez de tratar os sintomas (pergunta-te, "Por que está o meu paciente em @cardiac-arrest?")
+ 4. Não deves fazer cirurgia sem uma @surgery-table ou @propofol, para que o teu paciente não sofra.
+ 5. Sedação -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (passos opcionais) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Vomitar sangue é um sintoma, o que significa que não é fatal e não causa outras consequências. 
+ 
+ ---
+ 
+ ##Causado por:
+ 
+ - @sangramento-interno (50% ou mais)
+ - @danos-no-fígado (em 100%)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>A pele pálida é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hipotensão (50% ou menos)
+ - @perda-de-sangue (40% ou mais)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>A falta de ar é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causado por:
+ 
+ - @ataque-cardíaco
+ - @danos-pulmonares (45% ou mais)
+ - @pneumotórax (40% ou mais)
+ - @tamponamento-cardíaco (10% ou mais)
+ - @choque-hemotransfusional (entre 0-70%)
+ - @hipoxemia (20% ou mais)
+ - @danos-cardíacos (80% ou mais)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>Tosse é um sintoma, o que significa que não é fatal e não causa nenhum outro efeito.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @danos-pulmonares (50% ou mais)
+ - @danos-cardíacos (50% ou mais)
+ - @tamponamento-cardíaco (20% ou mais)</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Aumento da frequência cardíaca é um sintoma, o que significa que não é fatal e não causa outras aflições, a menos que esteja aumentando lentamente, o que significa que você está sofrendo de fibrilação.
+ 
+ ---
+ ##Causado por:
+ 
+ - @acidose (20% ou mais)
+ - @sepse (20% ou mais)
+ - @perda de sangue (40% ou mais)
+ - @pneumotórax (30% ou mais)
+ - @abstinência (abstinência de álcool, 75% ou mais)
+ - @fibrilação
+ - @adrenalina</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>Lembre-se que Aflição é Efeito, ao traduzir palavras, nomeie aflição como efeito.
+ 
+ Tradução:
+ 
+ Confusão é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - Acidose
+ - Sepse
+ - Hipotensão
+ - Hipoxemia
+ - Abstinência
+ - Concussão</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>Tontura é um sintoma, o que significa que não é fatal e não causa outras consequências. 
+ 
+ ---
+ ##Causado por:
+ 
+ - @hipotensão (60% ou menos)</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>Visão turva é um sintoma, o que significa que não é fatal e não causa outras consequências. Como o nome sugere, essa aflição deixará sua visão mais embaçada.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hipotensão (55% ou menos)
+ - @concussão</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>O inchaço nas pernas é um sintoma, o que significa que não é fatal e não causa outras aflições. As ciberpernas não vão inchar.
+ 
+ ---
+ ##Causado por:
+ 
+ - Danos no fígado (40% ou mais)
+ - Danos nos rins (60% ou mais)
+ - Danos no coração (80% ou mais)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>Chiado é um sintoma, o que significa que não é fatal e não causa outras aflições. 
+ 
+ ---
+ ##Causado por:
+ 
+ - Choque hemotransfusional (entre 0-90%)</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>Fraqueza é um sintoma, o que significa que não é fatal e não causa outras aflições. A fraqueza diminuirá o dano corpo a corpo que você causa em 80%.
+ 
+ ---
+ ##Causado por:
+ 
+ - Tamponamento cardíaco (30% ou mais)
+ - Perda de sangue (60% ou mais)
+ - Acidose (35% ou mais)</Manual_Description_Weakness>
+  <Manual_Description_Fever>Febre é um sintoma, o que significa que não é fatal e não causa outras consequências. 
+ 
+ ---
+ ##Causado por:
+ 
+ - @sepse (5% ou mais)
+ - @abstinência (abstinência de álcool, 90% ou mais)</Manual_Description_Fever>
+  <Manual_Description_Sweating>Suor é um sintoma, o que significa que não é fatal e não causa outras aflições. 
+ 
+ ---
+ ##Causado por:
+ 
+ - @ataque-cardíaco
+ - @abstinência (30% ou mais)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Inchaço é um sintoma, o que significa que não é fatal e não causa outras aflições. 
+ 
+ ---
+ ##Causado por:
+ 
+ - Danos no fígado (50% ou mais)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>A inflamação é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causada por:
+ 
+ - @feridas-infectadas (10% ou mais)
+ - @corpos-estranhos (15% ou mais)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>Icterícia é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causada por:
+ 
+ - Danos no fígado (80% ou mais)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>O desconforto abdominal é um sintoma, o que significa que não é fatal e não causa outras consequências. 
+ 
+ ---
+ ##Causado por:
+ 
+ - Danos no fígado (65% ou mais)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>Dor de cabeça é um sintoma, o que significa que não é fatal e não causa outras aflições. A dor de cabeça criará uma sobreposição embaçada nas bordas da sua tela.
+ 
+ ---
+ ##Causado por:
+ 
+ - @perda-de-sangue (50% ou mais)
+ - @acidose (20% ou mais)
+ - @hipoxemia (40% ou mais)
+ - @hipotensão (60% ou menos)
+ - @derrame
+ - @abstinência (abstinência de álcool, 50% ou mais)
+ - @fraturas (fraturas cranianas)
+ - @concussão
+ 
+ ##Tratamentos:
+ 
+ - Tratando as causas
+ - Analgésicos</Manual_Description_Headache>
+  <Manual_Description_Craving>Desejo é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causado por:
+ 
+ - @abstinência (20% ou mais)</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Palpitações é um sintoma, o que significa que não é fatal e não causa outras aflições.
+ 
+ ---
+ ##Causado por:
+ 
+ - Alcalose (20% ou mais)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Espasmos são um sintoma, o que significa que eles não são fatais e não causam outras aflições.
+ 
+ ---
+ ##Causados por:
+ 
+ - @convulsão</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Neurotrauma é uma das únicas coisas que pode causar dano direto à sua saúde. Neurotrauma é extremamente perigoso e pode se acumular muito rapidamente, e ao atingir 200%, matará instantaneamente o jogador. O cérebro se curará a uma taxa de 0,1% por segundo, assumindo que a configuração não foi alterada e nada está danificando-o.
+ 
+ ---
+ ##Causado por:
+ 
+ - @derrame
+ - @danos-no-fígado (80% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @danos-no-rim (cancela a regeneração natural em 100%)
+ - @sepse (25% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @fraturas (fraturas no crânio, se não forem bandageadas e o paciente não tiver neurotrauma)
+ - @hipoxemia (10% ou mais, ponto em que ultrapassa a regeneração natural)
+ - Usando um @torniquete na cabeça
+ - @metanfetamina
+ - @hiperzina
+ - @choque-traumático (igual à força dividida por 100 por segundo, 10% ou mais é o ponto em que ultrapassa a regeneração natural)
+ - @envenenamento-por-cianeto (70% ou mais)
+ 
+ 
+ ##Efeitos:
+ 
+ - Dano direto à vitalidade
+ - Morte instantânea (em 200%)
+ - @parada-respiratória (em 100% ou mais)
+ - @inconsciência (em 100% ou mais)
+ 
+ ##Tratamentos:
+ 
+ - Tratando as causas
+ - @manitol se o sangue estiver estável. (Pressão arterial acima de 70% e @hipoxemia abaixo de 30%)
+ - @manitol-plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>O derrame deve ser tratado o mais rápido possível para reduzir o dano causado ao cérebro. A @estreptoquinase NÃO deve ser usada em pacientes que sofrem disso, pois isso danificará ainda mais o cérebro.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hipertensão (150% ou mais)
+ 
+ ##Efeitos:
+ 
+ - @neurotrauma
+ - @convulsão
+ - @coma
+ - @dor de cabeça
+ 
+ ##Tratamentos:
+ 
+ - @cirurgia-aberta-e-fechada</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>Causado por:
+ 
+ - Dependência química/alcoólica/opiácea
+ 
+ Efeitos:
+ 
+ Em abstinência de álcool, químicos e opiáceos:
+ - @desejo (em 20% ou mais)
+ - @suor (em 30% ou mais)
+ - Velocidade de movimento 50% mais lenta (em 80% ou mais)
+ - Velocidade de movimento 30% mais lenta (em 40% ou mais)
+ - Velocidade de movimento 10% mais lenta (em 20% ou mais)
+ - @náusea (em 40% ou mais)
+ 
+ Em abstinência de álcool:
+ - @febre (em 90% ou mais)
+ - @vômito (em 60% ou mais)
+ - @dor de cabeça (em 50% ou mais)
+ - @confusão (em 80% ou mais)
+ - @aumento da frequência cardíaca (em 75% ou mais)
+ - @convulsão (em 50% ou mais)
+ - @hipertensão
+ 
+ Tratamentos:
+ 
+ - Haloperidol (APENAS PARA ABSTINÊNCIA DE ÁLCOOL)
+ - @naloxona (APENAS PARA ABSTINÊNCIA DE OPIÁCEOS)
+ - Usando um @ambubag contendo tinta (APENAS PARA ABSTINÊNCIA QUÍMICA)
+ - Administrando mais da substância da qual o indivíduo está em abstinência (por exemplo, dando mais opiáceos a alguém em abstinência de opiáceos)
+ - Tempo</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>A overdose de opiáceos é rara e ocorre apenas por abuso de opiáceos. No entanto, se acima do limite de 50%, é muito mortal e requer cuidados de emergência.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - Tomar muitos opiáceos (@ópio)
+ 
+ ## Efeitos:
+ 
+ - @parada-respiratória
+ - @hipoventilação
+ - @convulsão
+ - @inconsciência
+ - Velocidade de movimento 50% mais lenta (a partir de 50%)
+ 
+ ## Tratamentos:
+ 
+ - @naloxona</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Lembre-se que a Aflição é um Efeito, ao traduzir palavras, nomeie aflição como efeito.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @derrame
+ - @acidose (60% ou mais)
+ - @alcalose (60% ou mais)
+ - @abstinência (abstinência de álcool, 50% ou mais)
+ - @doença-da-radiação (50% ou mais)
+ - @overdose-de-opiáceos (50% ou mais)
+ 
+ ## Efeitos:
+ 
+ - @inconsciência
+ - @espasmos
+ 
+ ## Tratamentos:
+ 
+ - Tratando as causas</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>of unconsciousness
+ - Administering oxygen
+ - Providing medical attention and care as needed</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Coma frequentemente ocorre após sufocamento e geralmente não é fatal com atenção médica adequada. O curso de ação recomendado é colocar um autopulso no paciente se for grave o suficiente.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @derrame
+ - @parada-cardíaca
+ - Altos níveis de @acidose
+ - @morbusine
+ - Falha na verificação de habilidade de @naloxona
+ 
+ ## Efeitos:
+ 
+ - @parada-cardíaca
+ - @inconsciência
+ 
+ ## Tratamentos:
+ 
+ - Tratar as causas e esperar.</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Lesões na medula espinhal removerão sua capacidade de se mover ou falar, o que pode levar à morte indiretamente. Lesões na medula espinhal devem ser tratadas após o tratamento da fratura do pescoço, caso contrário, ela simplesmente voltará.
+ 
+ ---
+ ##Causado por:
+ 
+ - Fraturas (fraturas no pescoço)
+ 
+ 
+ ##Efeitos:
+ 
+ - Incapacidade de se mover ou falar
+ - Analgesia
+ 
+ ##Tratamentos:
+ 
+ - Cirurgia aberta-fechada (aplicar implantes na medula espinhal antes de aplicar suturas)</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>Uma concussão é causada por um forte impacto na cabeça. Ela periodicamente causa náusea, visão turva, dor de cabeça e confusão. Embora seja um incômodo, as concussões não são letais.
+ 
+ ##Efeitos:
+ - @náusea
+ - @visão-turva
+ - @dor-de-cabeça
+ - @confusão
+ 
+ ##Causada por:
+ - Trauma (explosões, mordidas, força contundente, @danos-internos)
+ 
+ ##Prevenção:
+ - Usar um capacete
+ 
+ ##Tratamento:
+ - Não há. Você tem que esperar passar. Deveria ter usado aquele capacete.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>A parada respiratória rapidamente causa baixa de oxigênio e sufoca a vítima, e deve ser tratada rapidamente. Estar perto de uma mesa de cirurgia impedirá que os efeitos negativos da parada respiratória ocorram.
+ 
+ ## Causas:
+ 
+ - Danos pulmonares
+ - Choque traumático
+ - Neurotrauma
+ - Hipoxemia
+ - Overdose de opiáceos
+ - Bolsa de estase
+ 
+ ## Efeitos:
+ 
+ - Baixa de oxigênio
+ - Acidose
+ 
+ ## Tratamentos:
+ 
+ - Tratamento das causas
+ - Ambu com um tanque de oxigênio
+ - Estar consciente
+ 
+ ## Primeiros socorros:
+ 
+ - Estar perto de uma mesa de cirurgia
+ - Autopulso</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>O dano pulmonar não é letal, desde que esteja abaixo de 100%. Os pulmões se curarão a uma taxa de 0,01% por segundo, assumindo que a configuração não seja alterada, nada os esteja danificando e eles estejam abaixo de 100% de dano.
+ 
+ ---
+ ##Causado por:
+ 
+ - @antibióticos de amplo espectro
+ - @oxigenite-líquida
+ - Usando um @ambubag contendo combustível de soldagem/incêndio ou tinta
+ - Fumar
+ - @choque-hemotransfusional (entre 0-70%)
+ - @doença-da-radiação (28% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @sepse (3% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @hipoxemia (4% ou mais, ponto em que ultrapassa a regeneração natural)
+ 
+ ##Efeitos:
+ 
+ - @tosse (a partir de 50%)
+ - @falta-de-ar (a partir de 45%)
+ - @parada-respiratória (a 100%)
+ 
+ ##Tratamentos:
+ 
+ - Tempo
+ - @tiamina
+ - @cirurgia-de-transplante-de-órgãos</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>O pneumotórax impedirá que a hipoxemia diminua em intensidade. Embora não seja letal por si só, o pneumotórax pode facilmente matar se combinado com aflições que causam hipoxemia. Os efeitos negativos do pneumotórax podem ser temporariamente anulados pelo uso de uma agulha.
+ 
+ ---
+ ##Causado por:
+ 
+ - Fraturas (fraturas de costelas, se não forem enfaixadas)
+ - Trauma (tiros, explosões, lacerações, mordidas, força contundente, danos internos)
+ 
+ ##Efeitos:
+ 
+ - Falta de ar (a 40% ou mais)
+ - Hiperventilação (a 15% ou mais)
+ - Aumento da frequência cardíaca (a 30% ou mais)
+ 
+ ##Tratamentos:
+ 
+ - Usando um dreno durante a cirurgia (após a pele ser retraída)
+ 
+ ##Primeiros socorros:
+ 
+ - Agulha.</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>Hiperventilação é normalmente inofensiva e geralmente pode ser ignorada. Hiperventilação e hipoventilação irão se cancelar mutuamente.
+ 
+ ---
+ ##Causada por:
+ 
+ - @hipotensão (80% ou menos)
+ - @hipoxemia (10% ou mais)
+ - @pneumotórax (15% ou mais)
+ - @sepse (15% ou mais)
+ - @adrenalina
+ 
+ ##Efeitos:
+ 
+ - @alcalose
+ 
+ ##Tratamentos:
+ 
+ - Tratamento das causas
+ - Indução de @hipoventilação</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>A hiperventilação é normalmente inofensiva e geralmente pode ser ignorada. A hiperventilação e a hiperventilação se cancelarão mutuamente.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @analgesia
+ - @anestesia
+ - @overdose de opiáceos
+ 
+ ## Efeitos:
+ 
+ - @acidose
+ 
+ ## Tratamentos:
+ 
+ - Tratamento das causas
+ - Indução de @hiperventilação</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>Baixo nível de oxigênio é quando há falta de oxigênio nos PULMÕES. @hipoxemia.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @parada-respiratória
+ - @inconsciência (se causada por ter menos de 0 de vitalidade)
+ - Estar na água ou em um ambiente sem fonte de oxigênio.
+ - Extrato de romã
+ 
+ ## Efeitos:
+ 
+ - @hipoxemia
+ 
+ ## Tratamentos:
+ 
+ - @mesa-de-cirurgia
+ - RCP
+ - @autopulse
+ - Respirar ar oxigenado
+ - @ambubag com tanques de oxigênio ou oxigenite.</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>Tamponamento cardíaco é comum durante missões envolvendo combate fora do submarino, como postos abandonados ou destroços. Qualquer pessoa que apresente sintomas deve imediatamente voltar ao submarino para receber tratamento.
+ 
+ ---
+ ##Causado por:
+ 
+ - Trauma (lacerações e tiros)
+ 
+ ##Efeitos:
+ 
+ - @hipotensão (pressão arterial reduzida pela metade)
+ - @fraqueza (a partir de 30%)
+ - @tosse (a partir de 20%)
+ - @falta-de-ar (a partir de 10%)
+ 
+ ##Tratamentos:
+ 
+ - @cirurgia-aberta-e-fechada</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>A parada cardíaca fará com que a pressão arterial caia significativamente e deve ser tratada rapidamente.
+ 
+ ---
+ ##Causada por:
+ 
+ - @dano-cardíaco (em 100%)
+ - @choque-traumático (40% ou mais)
+ - @coma (40% ou mais)
+ - @hipoxemia (80% ou mais)
+ - @batimento-cardíaco-irregular (20% ou mais)
+ - @fibrilação
+ - @desfibrilador-manual
+ - @bolsa-de-estase
+ 
+ ##Efeitos:
+ 
+ - @coma
+ - @acidose
+ - @hipotensão (define a pressão arterial para o mínimo)
+ - @hipoxemia
+ 
+ ##Tratamentos:
+ 
+ - RCP
+ - @autopulse
+ - Tratamento das causas
+ - @adrenalina
+ - @desfibrilador-manual ou @aed
+ - Pílula de @nitroglicerina (da farmácia NT)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>Lembre-se que a Aflição é um Efeito, ao traduzir palavras, nomeie aflição como efeito.
+ 
+ Um ataque cardíaco deve ser tratado o mais rápido possível para reduzir o risco de insuficiência cardíaca.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hipertensão (150% ou mais)
+ - Falha na verificação de habilidade de @cola-antibiótica
+ 
+ ##Efeitos:
+ 
+ - @suor
+ - @dano-cardíaco
+ - @falta-de-ar
+ 
+ ##Tratamentos:
+ 
+ - @estreptoquinase
+ - @pílula-de-nitroglicerina (da farmácia NT)
+ - Tratando as causas</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>O dano ao coração não é letal, desde que esteja abaixo de 100%. O coração se curará a uma taxa de 0,01% por segundo, assumindo que a configuração não seja alterada, nada o esteja danificando e esteja abaixo de 100% de dano.
+ 
+ ---
+ ##Causado por:
+ 
+ - @ataque-cardíaco
+ - @antibióticos-de-amplo-espectro
+ - @oxigenoterapia-líquida
+ - @choque-hemotransfusional (entre 0-70%)
+ - @manitol
+ - @doença-da-radiação (29% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @sepse (3% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @hipoxemia (4% ou mais, ponto em que ultrapassa a regeneração natural)
+ 
+ ##Efeitos:
+ 
+ - @tosse (a partir de 80%)
+ - @falta-de-ar (a partir de 80%)
+ - @parada-cardíaca (a 100%)
+ - @inchaço-nas-pernas (a partir de 80%)
+ 
+ ##Tratamentos:
+ 
+ - Tempo
+ - @tiamina
+ - @cirurgia-de-transplante-de-órgão</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Batimento cardíaco irregular é quando o coração não está batendo em sua taxa normal e pode levar a uma parada cardíaca.
+ 
+ ---
+ ##Causado por:
+ - Fibrilação
+ 
+ ##Efeitos:
+ - Parada cardíaca (em 20% ou mais)
+ - Hipotensão
+ 
+ ##Tratamento:
+ - Desfibrilador manual ou DEA
+ - RCP
+ - Autopulso
+ - Tratamento das causas subjacentes</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>A fibrilação é um processo de 3 etapas. No início, começará como aumento da frequência cardíaca, que aumentará lentamente. Ao atingir 100% de aumento da frequência cardíaca, ela se tornará batimento cardíaco irregular, que também aumentará e se tornará parada cardíaca ao atingir 100%. Além disso, há uma chance de que o batimento cardíaco irregular pule imediatamente para a parada cardíaca, o que varia dependendo de quanto batimento cardíaco irregular você tem. O ganho de fibrilação é reduzido pela metade quando sob os efeitos de @adrenalina.
+ 
+ ## Causado por:
+ 
+ - @ruptura-aórtica
+ - @acidose
+ - @hipotensão
+ - @hipoxemia
+ 
+ ## Efeitos:
+ 
+ - @aumento-da-frequência-cardíaca.
+ 
+ ## Tratamentos:
+ 
+ - @desfibrilador-manual
+ - @autopulse
+ - Tratamento das causas
+ - RCP</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>As rupturas aórticas são uma das lesões mais graves que alguém pode sofrer. A vítima disso requer cuidados médicos imediatos e provavelmente perderá uma parte significativa do seu sangue.
+ 
+ ---
+ ##Causado por:
+ 
+ - @ferimentos (sangramento, 80% ou mais, se no tronco)
+ - @corpos-estranhos (20% ou mais, se no tronco)
+ 
+ ##Efeitos:
+ 
+ - 4% de perda de sangue por segundo
+ - @inconsciência
+ - 8% de sangramento interno por segundo
+ - @fibrilação
+ 
+ ##Tratamentos:
+ 
+ - @cirurgia-de-ruptura-aórtica
+ - @cirurgia-aberta-e-fechada
+ 
+ ##Primeiros socorros:
+ 
+ - @bolsa-de-estase</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>Sangramento interno drenará rapidamente o sangue do paciente e deve ser tratado com rapidez.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - Trauma (tiros, explosões, mordidas, lacerações)
+ - Danos no fígado
+ - Ruptura aórtica
+ 
+ ## Efeitos:
+ 
+ - Perda de sangue
+ - Vômito de sangue
+ 
+ ## Tratamentos:
+ 
+ - Cirurgia aberta e fechada
+ - Estimulante de combate</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Níveis baixos de doença por radiação são facilmente tratáveis, mas se a doença por radiação se tornar alta o suficiente, ela começará rapidamente a matar os órgãos. Os pulmões sofrerão mais danos da radiação do que outros órgãos.
+ 
+ ---
+ ##Causado por:
+ 
+ - @health-scanner (0,5% por segundo para a pessoa sendo escaneada, 0,3% por segundo para a pessoa que está escaneando, 1% se usado como tratamento, como um curativo)
+ - Radiotoxina
+ - Explosões nucleares
+ - Estar perto de uma haste de combustível de fulgúrio volátil
+ 
+ ##Efeitos:
+ 
+ - @liver-damage (a partir de 29% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @heart-damage (a partir de 29% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @kidney-damage (a partir de 33% ou mais, ponto em que ultrapassa a regeneração natural, 29% se um rim estiver morto)
+ - @lung-damage (a partir de 28% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @bone-damage (a partir de 31% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @nausea (a partir de 80% ou mais)
+ - @seizure (a partir de 50% ou mais)
+ 
+ ##Tratamentos:
+ 
+ - Antirad
+ - Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>O dano renal geralmente é sobrevivível, pois mesmo que tenha progredido para insuficiência renal, ainda matará extremamente lentamente. O dano renal não se curará abaixo de 50% de dano se ultrapassar o limite de 50%, pois um dos rins morreu. Os rins se curarão a uma taxa de 0,01% por segundo se um rim estiver vivo e a uma taxa de 0,02% por segundo se ambos os rins estiverem vivos, assumindo que a configuração não foi alterada e nada está danificando-os.
+ 
+ ---
+ ##Causado por:
+ 
+ - @antibióticos de amplo espectro
+ - @oxigenite líquida
+ - @choque de hemotransfusão (entre 0-70%)
+ - @manitol
+ - @doença por radiação (33% ou mais, ponto em que ultrapassa a regeneração natural, 29% se um rim estiver morto)
+ - @hipertensão (184% ou mais, ponto em que ultrapassa a regeneração natural, 152% se um rim estiver morto)
+ - @sepse (6% ou mais, ponto em que ultrapassa a regeneração natural, 3% se um rim estiver morto)
+ - @hipoxemia (8% ou mais, ponto em que ultrapassa a regeneração natural, 4% se um rim estiver morto)
+ 
+ ##Efeitos:
+ 
+ - @inchaço nas pernas (a partir de 60% ou mais)
+ - @acidose (a partir de 80% ou mais)
+ - @hipertensão
+ - @dano ósseo (a partir de 72% ou mais, ponto em que ultrapassa a regeneração natural)
+ - @vômito (a partir de 60% ou mais)
+ - @neurotrauma (neutralizará completamente a regeneração natural em 100%)
+ - @náusea (a partir de 60% ou mais)
+ 
+ ##Tratamentos:
+ 
+ - Tempo
+ - @tiamina
+ - @cirurgia de transplante de órgão</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Danos no fígado, se progredirem para falência hepática, são fatais e podem causar perda de sangue maciça na forma de sangramento interno. O fígado se curará a uma taxa de 0,01% por segundo, assumindo que a configuração não seja alterada, nada o esteja danificando e esteja abaixo de 100% de dano.
+ 
+ ---
+ ##Causado por:
+ 
+ - Antibióticos de amplo espectro
+ - Oxigenoterapia líquida
+ - Choque hemotransfusional (entre 0-70%)
+ - Doença por radiação (29% ou mais, ponto em que supera a regeneração natural)
+ - Sepse (3% ou mais, ponto em que supera a regeneração natural)
+ - Hipoxemia (4% ou mais, ponto em que supera a regeneração natural)
+ 
+ ##Efeitos:
+ 
+ - Inchaço nas pernas (a partir de 40%)
+ - Sangramento interno (a 100%)
+ - Vômito de sangue (a 100%)
+ - Hipertensão
+ - Neurotrauma (a 80% ou mais, ponto em que supera a regeneração natural)
+ - Desconforto abdominal (a 65% ou mais)
+ - Icterícia (a 80% ou mais)
+ - Inchaço (a 50% ou mais)
+ - Redução da capacidade de curar sangramentos, o sangramento não cicatrizará completamente a 100% de dano
+ 
+ ##Tratamentos:
+ 
+ - Tempo
+ - Tiamina
+ - Cirurgia de transplante de órgão</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>##Causado por:
+ - Morbusine
+ 
+ ##Efeitos:
+ - Distorção de tela
+ - Velocidade de movimento 20% mais lenta (a 20% ou mais)
+ - @coma (a 20% ou mais)
+ 
+ ##Tratamentos:
+ - Antídoto de Morbusine
+ - Stabilozine</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Causado por:
+ - Cianeto
+ 
+ ##Efeitos:
+ - Baixa de oxigênio
+ - Hipoxemia
+ - Neurotrauma (em 70% ou mais)
+ 
+ ##Tratamentos:
+ - Antídoto de cianeto
+ - Estabilozina</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>Um efeito colateral de alguns medicamentos. Danos adicionais aos órgãos são causados pela falha na verificação de habilidade médica desses medicamentos.
+ 
+ ---
+ ##Causado por:
+ - @alien-blood +3,75 ou 7,5%
+ - @antibióticos-de-espectro-amplo +12 ou 20% durante a duração dos antibióticos
+ - Hidrato de cloral +2,5%
+ - @oxigenite-líquida +6 ou 10%
+ - @manitol +5 ou 10%
+ - @metanfetamina +15 ou 30%
+ 
+ ##Tratamentos:
+ - Tempo
+ - @deusizina
+ - @cirurgia-de-transplante-de-órgãos curará alguns danos aos órgãos com órgãos frescos.</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>O primeiro passo em todos os procedimentos cirúrgicos. Analgesia é um efeito que previne choque traumático durante a cirurgia e alivia a dor. Choque traumático ainda ocorrerá se a cirurgia for realizada sem uma mesa. A analgesia também lhe dará resistência a danos, escalando até um máximo de 50% de resistência em 200%.
+ 
+ ---
+ ##Causado por:
+ 
+ - Opioides
+ - @adrenalina (não dá mais do que 4,5% de analgesia)
+ - @lesão-da-medula-espinhal
+ - Estar bêbado (não dá mais do que 5% de analgesia)
+ - @anestesia (não dá mais do que 5% de analgesia)
+ 
+ ##Efeitos:
+ 
+ - @hipoventilação (em 20% ou mais)
+ 
+ ##Tratamentos:
+ 
+ - @naloxona</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>A anestesia é um efeito que previne o choque traumático durante a cirurgia e, ao contrário da analgesia, não requer uma mesa cirúrgica para realizar uma cirurgia segura. A anestesia desaparecerá imediatamente ao atingir 100% de força. A anestesia também diminuirá a velocidade do seu personagem em 50%.
+ 
+ ---
+ ##Causada por:
+ 
+ - Propofol
+ 
+ ##Efeitos:
+ 
+ - Hiperventilação (a partir de 40%)
+ - Inconsciência (a partir de 15%)
+ - Analgesia (não fornece mais do que 5% de analgesia)
+ - 50% de redução na velocidade de movimento
+ 
+ ##Tratamentos:
+ 
+ - Anaparalisante
+ - Tempo</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>A dor abdominal não é letal e apenas reduzirá a velocidade pela metade por 1 segundo a cada 3-6 segundos.
+ 
+ ---
+ ##Causada por:
+ 
+ - Choque hemotransfusional (entre 0-80%)
+ 
+ ##Efeitos:
+ 
+ - Redução da velocidade pela metade por 1 segundo a cada 3-6 segundos
+ 
+ ##Tratamentos:
+ 
+ - Tratamento das causas
+ - Analgésicos</Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>Geralmente, o vômito não é prejudicial e às vezes pode ser benéfico devido à sua capacidade de causar alcalose. O vômito também diminuirá a velocidade do seu personagem em 20%.
+ 
+ ---
+ ##Causado por:
+ 
+ - @choque-hemotransfusional (entre 0-40%)
+ - @abstinência (abstinência de álcool, 60% ou mais)
+ - Embriaguez (em 100%)
+ - @danos-renais (60% ou mais)
+ - @extrato-veneno-de-raptor
+ 
+ ##Efeitos:
+ 
+ - @alcalose
+ 
+ ##Tratamentos:
+ 
+ - Tratando as causas</Manual_Description_Vomiting>
+</infotexts>

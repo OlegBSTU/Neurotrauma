@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="French" nowhitespace="false" translatedname="Français">
+  <Manual_Description_Morphine>###Vérification de compétence médicale : 30
+ 
+ Un analgésique modérément puissant utilisé pour induire l'@analgesie.
+ 
+ ###Succès de l'application :
+ +50% @analgesie
+ +10% Dépendance aux opiacés
+ +10% @surdose-d'opiacés
+ -30% @sevrage-opiacé.
+ 
+ ####En état d'ébriété (&gt;30% d'alcoolémie) changements à :
+ +100% @analgesie
+ +10% Dépendance aux opiacés
+ +20% @surdose-d'opiacés
+ -30% @sevrage-opiacé.
+ 
+ ###Échec de l'application :
+ +30% @analgesie
+ +25% Dépendance aux opiacés
+ +20% @surdose-d'opiacés
+ -30% @sevrage-opiacé.
+ 
+ ####En état d'ébriété (&gt;30% d'alcoolémie) changements à :
+ +60% @analgesie
+ +25% Dépendance aux opiacés
+ +40% @surdose-d'opiacés
+ -30% @sevrage-opiacé.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Vérification de compétence médicale : 39
+ La naloxone est utilisée pour traiter le @sevrage des opiacés, la @surdose d'opiacés et l'@analgésie. Les effets se produisent en 30 secondes.
+ 
+ ###Succès de l'application :
+ -60% de @sevrage des opiacés
+ -60% de @surdose d'opiacés
+ -60% d'@analgésie
+ 
+ ###Échec de l'application :
+ -30% de @sevrage des opiacés
+ -30% de @surdose d'opiacés
+ -60% d'@analgésie
+ 50% de chances de plonger un patient dans le @coma</Manual_Description_Naloxone>
+  <Manual_Description_Needle>L'aiguille est un objet à usage unique pour réduire l'effet de @pneumothorax à une force de 5 % et l'empêcher de s'aggraver. Cependant, elle ne traite pas complètement le pneumothorax. Utiliser l'aiguille sur un patient sans pneumothorax leur donnera plutôt un pneumothorax.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###Vérification de compétence médicale : 35
+ Un pot contenant une substance très volatile, susceptible d'exploser au contact ou à l'exposition à la chaleur. Fonctionne exactement de la même manière que le nitroprussiate de sodium, à l'exception de la vérification de compétence médicale de 35.
+ 
+ ###Succès de l'application :
+ 400 secondes de réduction de la pression artérielle
+ 
+ ###Échec de l'application :
+ 200 secondes de réduction de la pression artérielle</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###Vérification de compétence médicale : 15
+ 
+ Un analgésique faible utilisé pour induire l'@analgesie
+ 
+ ###Succès de l'application :
+ +20% @analgesie
+ +5% Dépendance aux opiacés
+ +8,75% @surdose-d'opiacés
+ -15% @sevrage-opiacé.
+ 
+ ####En état d'ébriété (&gt;30% d'alcoolémie) changements à :
+ +40% @analgesie
+ +5% Dépendance aux opiacés
+ +18,75% @surdose-d'opiacés
+ -15% @sevrage-opiacé.
+ 
+ ###Échec de l'application :
+ +10% @analgesie
+ +20% Dépendance aux opiacés
+ +15% @surdose-d'opiacés
+ -15% @sevrage-opiacé.
+ 
+ ####En état d'ébriété (&gt;30% d'alcoolémie) changements à :
+ +20% @analgesie
+ +20% Dépendance aux opiacés
+ +30% @surdose-d'opiacés
+ -15% @sevrage-opiacé.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>Un scalpel de prélèvement d'organe est utilisé pour extraire l'organe qui lui donne son nom lors d'une transplantation d'organe. Il existe un type pour chaque organe comme suit: cerveau, cœur, poumons, foie et reins.
+ 
+ - Le scalpel pour le cerveau nécessite une vérification de compétence médicale de 100 pour retirer le cerveau de manière fiable.
+ 
+ - Le scalpel pour le cœur nécessite une vérification de compétence médicale de 60 pour retirer le cœur de manière fiable.
+ 
+ - Le scalpel pour les poumons nécessite une vérification de compétence médicale de 50 pour retirer les poumons de manière fiable.
+ 
+ - Le scalpel pour le foie nécessite une vérification de compétence médicale de 40 pour retirer le foie de manière fiable.
+ 
+ - Le scalpel pour les reins nécessite une vérification de compétence médicale de 30 pour retirer les reins de manière fiable.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>Vérification de compétence médicale : 45
+ 
+ La sixième étape de la chirurgie ostéosynthétique.
+ 
+ Réussite de l'application :
+ 
+ Guérit toutes les fractures sur le membre sur lequel les implants ont été utilisés et utilise 25 % des implants.
+ 
+ Échec de l'application :
+ 
+ +5 % de saignement
+ +5 % de dommages internes.</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### Vérification de compétence médicale : 22
+ 
+ Une version améliorée des @pansements, qui peut traiter plus efficacement les blessures.
+ 
+ ### Réussite de l'application :
+ 
+ \\+100% @pansement
+ \\-48% saignement
+ \\-24% @brûlures
+ 
+ ### Échec de l'application :
+ 
+ \\+50% @pansement
+ \\-24% saignement
+ \\-12% @brûlures
+ 
+ L'application de plastiseal remplacera également tous les pansements sales sur le membre auquel le pansement est appliqué. Plastiseal peut également être utilisé après @peau-rétractée pour traiter les brûlures du troisième degré.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>Propofol n'est plus fabriquable.
+ 
+ Propofol est une substance chimique utilisée pour endormir un être humain. Elle est particulièrement utile lors d'une intervention chirurgicale qui doit être effectuée à l'extérieur du vaisseau, car elle empêche le patient de subir un choc traumatique. Elle ne nécessite pas de compétence médicale.
+ 
+ Lorsqu'elle est injectée, la personne qui la reçoit commence à ressentir une anesthésie à un taux de 0,3 % par seconde. De 1 % à 15 % de force, le joueur ressentira une analgésie de 5 %.
+ 
+ Une fois que l'affliction dépasse les 16 %, le joueur tombera dans l'inconscience et restera inconscient jusqu'à ce que l'affliction atteigne 100 % en attendant ou soit réduite à 0 % par un anaparalyzant. Pendant ce temps, le joueur ne ressentira pas de douleur intense, de douleur abdominale ou de douleur thoracique, et une intervention chirurgicale pourra être effectuée sur lui.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>L'extrait de Raptor Bane est utilisé dans le traitement de l'acidose en induisant des vomissements chez le patient pour leur donner une alcalose.</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### Vérification de compétence médicale : 30
+ 
+ La quatrième étape de la plupart des procédures chirurgicales. Les rétracteurs ne fonctionneront pas sans un @saignement-pincé à 100%.
+ 
+ ### Succès de l'application :
+ 
+ Donne au patient une peau @rétractée sur le membre où l'outil a été utilisé.
+ 
+ ### Échec de l'application :
+ 
+ +10% de @dommages-internes.</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>La solution de Ringer est utilisée pour augmenter la pression sanguine. Contrairement à la solution saline, la solution de Ringer ne causera pas d'acidose et n'augmentera que la pression sanguine. Soyez averti, car cela peut augmenter votre pression sanguine à des niveaux indésirables.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>### Vérification de compétence médicale : 10
+ La solution saline est un liquide utilisé pour traiter l'effet d'alcalose en induisant l'effet d'acidose.
+ 
+ ### Réussite de l'application :
+ Augmente la pression sanguine
+ +20% d'effet d'acidose
+ 
+ ### Échec de l'application :
+ Augmente la pression sanguine
+ +12% d'effet d'acidose</Manual_Description_Saline>
+  <Manual_Description_Scalpel>### Vérification de compétence médicale : 30
+ La deuxième étape de toutes les procédures chirurgicales. Le scalpel ne fonctionnera pas sans @analgésie.
+ 
+ ### Succès de l'application :
+ Donne une @incision-de-chirurgie sur le membre où l'outil a été utilisé et enlèvera tous les plâtres ou @bandages.
+ 
+ ### Échec de l'application :
+ +15% de saignement
+ +10% de lacérations</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>### Vérification de compétence médicale : 10
+ Un médicament pour réduire la pression artérielle. La prise de nitroprussiate de sodium fera baisser votre pression artérielle de 45 %. Pendant que ce médicament est actif, la fibrillation causée par l'hypotension sera réduite.
+ 
+ ### Réussite de l'application :
+ Donne 200 secondes de pression artérielle réduite.
+ 
+ ### Échec de l'application :
+ Donne 120 secondes de pression artérielle réduite.</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>Vérification de compétence médicale : 45
+ 
+ Implants utilisés pour traiter les lésions de la moelle épinière.
+ 
+ Réussite de l'application :
+ 
+ L'utilisation réussie des implants guérira la colonne vertébrale du patient. Notez que si le patient a une fracture du cou, elle reviendra simplement.
+ 
+ Échec de l'application :
+ 
+ +5% de saignement
+ +5% de dommages internes.</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>Un sac spécial qui maintient le corps en stase pour le transporter vers un traitement approprié si les blessures sont graves. Un sac de stase est porté dans la fente de la combinaison de plongée, et le fait de le porter épuisera son état de 0,25% par seconde, ce qui signifie qu'un sac de stase durera 400 secondes ou environ 6 minutes et demie. Le port d'un sac de stase protégera le porteur de la pression jusqu'à 10 000 mètres, lui permettra d'être traîné à pleine vitesse et arrêtera les effets négatifs des affections suivantes :
+ 
+ - @cardiac-arrest
+ - @respiratory-arrest
+ - @heart-attack
+ - @neurotrauma
+ - @kidney-damage
+ - @liver-damage
+ - @heart-damage
+ - @lung-damage
+ - @bone-damage
+ - @sepsis
+ - @hypoxemia
+ - @hypotension
+ - @hypertension
+ - @acidosis
+ - @alkalosis
+ - @internal-bleeding
+ - @stroke
+ - @seizure
+ - @coma
+ - @infected-wounds
+ - Saignement
+ 
+ Il convient de noter que vous ne pouvez pas pratiquer de chirurgie sur des personnes alors qu'elles sont à l'intérieur d'un sac de stase. Elles devront être retirées du sac avant la chirurgie. Les patients retirés du sac de stase auront une @cardiac-arrest et auront besoin que ces affections soient traitées.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>### Vérification de compétence médicale : Aucune
+ Un anticoagulant. L'utilisation de la streptokinase empêchera la régénération naturelle du saignement et aggravera l'effet de l'@accident-vasculaire-cérébral tant qu'il est actif.
+ 
+ ### À l'application :
+ - Traite complètement l'@attaque-cardiaque et le choc post-transfusionnel.</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>La Table d'Opération est un objet qui peut être acheté dans une station ou fabriqué puis placé. Le patient n'a pas besoin d'être sur la table, il doit seulement être à proximité. La Table d'Opération fournit une ventilation artificielle à tous ceux qui sont près de la table et prévient le choc traumatique à condition que le patient soit sous analgésie. De plus, la table réduit la faible teneur en oxygène et empêche l'arrêt respiratoire d'augmenter l'acidose.
+ 
+ La table dispose également de broches de câblage qui peuvent être utilisées pour afficher des informations importantes, telles que la pression artérielle, le neurotraumatisme, la fréquence cardiaque et la fréquence respiratoire.
+ 
+ Il convient de noter que la Table d'Opération est fonctionnellement identique à un lit d'hôpital. Les autres lits empêchent le choc traumatique si vous êtes allongé sur eux, mais ils ne fournissent pas de ventilation artificielle.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### Vérification de compétence médicale : 45
+ 
+ La cinquième étape de la chirurgie ostéosynthétique.
+ 
+ ### Réussite de l'application :
+ 
+ L'utilisation réussie de la perceuse chirurgicale donnera au patient des os percés sur le membre où l'outil a été utilisé.
+ 
+ ### Échec de l'application :
+ 
+ +15% de saignement
+ +10% de dommages internes.</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### Vérification de compétence médicale : 45
+ 
+ La cinquième étape de la chirurgie d'amputation.
+ 
+ ### Succès de l'application :
+ 
+ L'utilisation réussie de la scie chirurgicale donnera au patient des os sciés sur le membre où l'outil a été utilisé.
+ 
+ ### Échec de l'application :
+ 
+ +15% de saignement
+ +6% de dommages internes
+ +4% de lacérations</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### Vérification de compétence médicale : 30
+ 
+ La dernière étape de toutes les procédures chirurgicales. Très utile également pour guérir la plupart des blessures saignantes.
+ 
+ ### Succès de l'application :
+ 
+ Supprime toutes les afflictions liées à la chirurgie (comme l'incision de chirurgie)
+ -20% des blessures par balle
+ -20% des lacérations
+ -20% des morsures
+ -20% des blessures des tissus profonds
+ -40% des saignements
+ 
+ ### Échec de l'application :
+ 
+ +6% de dommages internes</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### Vérification de compétence médicale : 10
+ 
+ Un contenant de pilules de vitamine B1 utilisées pour aider à la guérison des organes.
+ 
+ ### Réussite de l'application :
+ 
+ 200 secondes de temps de guérison des organes
+ 
+ ### Échec de l'application :
+ 
+ 120 secondes de temps de guérison des organes
+ 
+ 200 secondes de temps de guérison des organes guériront environ 8% des dommages aux organes (à l'exclusion des @neurotrauma), et 120 secondes guériront 4,8%. Cela s'ajoute à la guérison naturelle des organes en même temps. La thiamine ne peut pas ressusciter les organes morts.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>Vérification de compétence médicale : 30
+ Un objet utilisé pour restreindre le flux sanguin vers un membre spécifique afin de réduire les saignements réguliers et artériels. Le garrot ne fonctionnera pas sans saignement artériel. Peut être coupé à l'aide de ciseaux de traumatologie.
+ 
+ Réussite de l'application :
+ Arrête temporairement les effets négatifs des saignements artériels et traite lentement les saignements réguliers, mais provoquera la gangrène s'il est maintenu pendant une période prolongée. L'utilisation d'un garrot sur la tête donnera à la victime 15% de neurotraumatisme et une faible teneur en oxygène de 200%.
+ 
+ Échec de l'application :
+ +6% de traumatisme contondant.</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###Vérification de compétence médicale : 10
+ Une paire de ciseaux utilisée pour enlever les plâtres et les bandages.
+ 
+ ###Succès de l'application :
+ Enlève tous les plâtres, bandages et cartes de triage sur le membre où les ciseaux ont été utilisés.
+ 
+ ###Échec de l'application :
+ +15% de saignement
+ +10% de lacérations</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>### Vérification de compétence médicale : 30
+ Une paire de pincettes utilisée pour enlever les tissus endommagés ou les balles.
+ 
+ ### Succès de l'application :
+ -5% de dommages internes
+ -5% de traumatismes contondants
+ -5% de corps étrangers
+ +5% de lacérations
+ 
+ ### Échec de l'application :
+ +6% de dommages internes
+ 
+ Les pincettes peuvent fonctionner sans @peau-rétractée si le membre que vous pincez a des blessures par balle ou des lésions tissulaires profondes, l'utilisation des pincettes à travers des blessures par balle ou des lésions tissulaires profondes causera un choc traumatique de 5% @traumatique. Enlever les corps étrangers avec les pincettes a également une chance de 5% de produire des débris.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###Vérification de compétence médicale : 60 (30 si le patient a une @analgésie)
+ La clé anglaise est utilisée pour traiter les @luxations. Pour traiter les luxations, faites-la glisser sur le membre luxé dans l'interface de santé et utilisez-la comme traitement, comme vous le feriez avec un bandage.
+ 
+ ###Succès de l'application :
+ Guérit la luxation sur ce membre
+ 
+ ###Échec de l'application :
+ Cause une fracture sur ce membre</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>Le choc traumatique est très fatal, et si votre patient l'acquiert à un moment donné, arrêtez immédiatement la chirurgie, ramenez-le à proximité d'une table d'opération ou administrez à nouveau une sédation. Le choc traumatique diminuera en intensité 4 fois plus rapidement si la victime est sous l'effet d'une anesthésie ou d'une analgésie tout en étant près d'une table d'opération.
+ 
+ ---
+ ##Causes:
+ 
+ - Réalisation d'une chirurgie non sécurisée (sans table ou sans sédation)
+ - Utilisation de pinces à travers des blessures par balle ou des lésions tissulaires profondes (causes de très légers chocs, peuvent généralement être ignorées)
+ 
+ ##Effets:
+ 
+ - Hypotension (et beaucoup)
+ - Arrêt cardiaque (à 40% ou plus)
+ - Arrêt respiratoire (à 30% ou plus)
+ - Neurotraumatisme (égal à la force divisée par 100 par seconde, 10% ou plus est le point où il dépasse la régénération naturelle)
+ - Psychoses (égal à la force divisée par 100 par seconde)
+ 
+ ##Traitements:
+ 
+ - Arrêter la chirurgie et attendre
+ - Ramener à proximité d'une table d'opération et s'assurer que le patient est sous sédation
+ 
+ ##Prévention:
+ 
+ - S'assurer que la chirurgie est sûre avant de procéder au-delà de l'étape de la peau rétractée
+ - S'assurer que l'analgésie ne s'épuise pas au milieu de la chirurgie</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>La deuxième étape de toutes les procédures chirurgicales. Avoir une incision chirurgicale non pincée causera une perte de sang de 0,7 % par seconde pour chaque incision, et avoir une incision chirurgicale sans analgésie ou autre méthode de sédation causera un choc traumatique de 2 % par seconde pour chaque incision. Cette affliction ne causera pas de choc traumatique si elle est effectuée sans une table de chirurgie, ce qui la rend sûre pour la saignée sans celle-ci.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>La troisième étape dans la plupart des procédures chirurgicales. En ayant pincé le saignement, cela empêchera la perte de sang causée par l'incision chirurgicale. Cet effet est nécessaire pour l'étape suivante, les rétracteurs.</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>La quatrième étape dans la plupart des procédures chirurgicales. Le fait de rétracter la peau sans table d'opération à proximité causera un choc traumatique de 2% par seconde pour chaque instance de peau rétractée. La plupart des procédures chirurgicales, telles que la chirurgie ostéosynthétique ou la transplantation d'organes, découlent de cette étape.</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>La cinquième étape de la chirurgie ostéosynthétique. Le fait de percer des os sans table d'opération à proximité causera un choc traumatique de 1,5 % par seconde pour chaque instance d'os percé. 
+ 
+ (Note: I did not translate "affliction" as "effect" as it did not seem to fit in the context of the sentence. Instead, I translated it as "traumatic shock".)</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>La cinquième étape de la chirurgie d'amputation. Le fait de scier des os sans table d'opération à proximité causera un choc traumatique de 1,5 % par seconde pour chaque instance d'os sciés. 
+ 
+ (Note: I did not translate "affliction" as "effect" as it did not seem to fit in this context. Instead, I used "choc traumatique" to convey the idea of a negative physical reaction to the surgery.)</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##Étapes:
+ 
+ 1. Anesthésie de votre choix
+ 2. @scalpel
+ 3. @pince hémostatique
+ 4. @rétracteurs
+ 5. @sutures</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##Étapes:
+ 
+ 1. Anesthésie de votre choix
+ 2. @scalpel
+ 3. @pince hémostatique
+ 4. @rétracteurs
+ 5. @foret chirurgical
+ 6. @implants d'ostéosynthèse
+ 7. @sutures
+ 
+ Doit être effectué sur chaque partie du corps afin de traiter l'@effet de la mort osseuse.</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##Étapes:
+ 
+ 1. Anesthésie de votre choix
+ 2. @scalpel
+ 3. @ballonnet endovasculaire
+ 4. @stent médical
+ 5. @sutures</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## Étapes:
+ 
+ 1. Anesthésie de votre choix (@analgésie)
+ 2. @scalpel
+ 3. @pince hémostatique
+ 4. @rétracteurs
+ 5. @scie chirurgicale
+ 6. Remplacement du membre amputé par des membres bioniques ou humains. (Optionnel)
+ 7. @sutures
+ 8. Des membres cybernétiques (pas des implants bioniques) peuvent être placés sur le membre si celui-ci est amputé chirurgicalement. La chirurgie n'a pas besoin d'être ouverte pour attacher des membres cybernétiques. (Optionnel) (Nécessite l'addon NT Cybernetics)
+ 
+ Cette procédure ne permettra pas de sauver le membre s'il présente plus de 15% de @gangrène.
+ 
+ Cette procédure provoque une @amputation chirurgicale.</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>Assurez-vous d'utiliser @azathioprine avant de placer l'organe et vérifiez que leur immunité est de 10% ou moins. Si les dommages à l'organe sont de 100% après l'avoir placé, cela signifie qu'il a été rejeté. Cela ne s'applique pas si le rejet d'organe est désactivé dans la configuration.
+ 
+ ##Étapes:
+ 
+ 1. Anesthésie de votre choix
+ 2. @scalpel
+ 3. @hémostatique
+ 4. @rétracteurs
+ 5. Les @scalpels de prélèvement d'organe respectifs
+ 6. L'élément de transplantation d'organe respectif (cela doit être fait deux fois pour les reins)
+ 7. @sutures</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>Les champs opératoires sont un vêtement utilisé pour augmenter la stérilité du porteur et ainsi réduire le risque d'infection chirurgicale.
+ 
+ +100 Stérilité de base
+ -50% Gain de choc traumatique lorsqu'il est porté</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>Le masque chirurgical est un objet portable qui augmente la stérilité lorsqu'il est porté, réduisant ainsi le risque d'infection chirurgicale.
+ 
+ -10% de lacérations
+ -20% de saignements</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>Les vêtements de chirurgien sont un objet portable qui augmente la stérilité lorsqu'il est porté, réduisant ainsi le risque d'infection chirurgicale.
+ 
+ -10% de traumatisme contondant
+ -10% de lacérations
+ -10% de morsures</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>L'infection chirurgicale est un mécanisme qui provoque une septicémie en fonction de la stérilité de l'environnement du patient.
+ 
+ ---
+ 
+ Les éléments suivants augmenteront la stérilité :
+ 
+ - Le patient portant des @surgical-drapes
+ - Les personnages à proximité portant un @surgical-mask
+ - Avoir des compétences en chirurgie (la stérilité est acquise en fonction de cette équation : 10 + compétences en chirurgie / 5)
+ - Avoir de l'@ointmented
+ 
+ ---
+ 
+ Les éléments suivants diminueront la stérilité :
+ 
+ - Le patient n'ayant pas de @surgical-drapes
+ - Les personnages à proximité ne portant pas de @surgical-mask
+ 
+ ---
+ 
+ Au minimum de stérilité, il y a une chance de 10% toutes les deux secondes pour que le patient contracte une @sepsis.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>Mannitol Plus est un objet de talent, ce qui signifie qu'il nécessite un talent pour être fabriqué. Une fois administré, il traitera 30% de @neurotrauma sur une période de 10 secondes, même si le patient est instable, et appliquera les effets de @mannitol sans causer de @liver-damage / @lung-damage / @heart-damage / @kidney-damage / dommages aux organes.</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>Le Traitement Expérimental est un objet de talent débloquable par la classe de Chirurgien. Il peut donner des effets aléatoires à la fois négatifs et positifs, bien qu'il ait tendance à donner plus d'effets positifs que négatifs.
+ 
+ Il y a une chance théorique d'obtenir des effets infinis à partir d'une seule utilisation de cet objet. Imaginez lancer une pièce de monnaie et ne vous arrêter que lorsque vous obtenez pile. Chaque fois que vous obtenez face, vous obtenez un effet supplémentaire de cet objet.
+ 
+ La liste des effets positifs possibles est la suivante :
+ 
+ ---
+ - Vigueur (choix aléatoire de 200 à 400 % de force)
+ - Hyperactivité (choix aléatoire de 200 à 400 % de force)
+ - Résistance à la psychose (choix aléatoire de 200 à 400 % de force)
+ - Résistance à l'infection de la coque (choix aléatoire de 200 à 400 % de force)
+ - Résistance à la paralysie (choix aléatoire de 300 à 600 % de force)
+ - @analgésie (choix aléatoire de 20 à 100 % de force)
+ - @anesthésie (choix aléatoire de 1 à 100 % de force)
+ - @onguenté (choix aléatoire de 20 à 100 % de force)
+ - Stimulant de combat (choix aléatoire de 30 à 100 % de force)
+ - Stabilisé sous pression (choix aléatoire de 30 à 100 % de force)
+ - Une guérison complète (traite de 20 à 100 % des @blessures, des dommages d'organe vanille, des @neurotraumatismes et de la @perte de sang, et guérit complètement la @septicémie)
+ 
+ ---
+ 
+ La liste des effets négatifs possibles est la suivante :
+ 
+ ---
+ - Toute @blessure (choix aléatoire de 30 à 80 % pour les saignements, choix de 5 à 20 % pour tout le reste)
+ - Étourdit pendant 2 à 15 secondes</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>Les cartes de triage sont utilisées pour marquer les patients en fonction de la gravité de leur blessure. Il existe deux types de cartes de triage, manuelles et automatiques. La carte de triage manuelle fonctionne comme suit :
+ 
+ Attacher la carte de triage aux jambes la marquera en vert, ce qui signifie que le patient est légèrement blessé et qu'il a de fortes chances de survivre.
+ Attacher la carte de triage aux bras la marquera en jaune, ce qui signifie que le patient est blessé et qu'il est probable qu'il meure si le traitement est retardé pendant une longue période de temps.
+ Attacher la carte de triage au torse la marquera en rouge, ce qui signifie que le patient est gravement blessé et a besoin d'une assistance immédiate.
+ Attacher la carte de triage à la tête la marquera en noir, ce qui signifie que le patient est soit mort, soit très proche de la mort.
+ 
+ Les cartes de triage automatiques évalueront la santé de votre victime en fonction de ses afflictions et de sa vitalité, et donneront une note de vert, jaune, rouge ou noir.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>Le Bocal Cérébral est un objet de talent débloquable par le Chirurgien. Contrairement aux conteneurs réfrigérés, qui ne peuvent que retarder la décomposition d'un cerveau sans l'arrêter complètement, le Bocal Cérébral peut non seulement contenir un cerveau indéfiniment, mais il réparera lentement le cerveau à un taux de 1% toutes les 10 secondes.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>Remplace le cerveau d'un patient lorsqu'il est utilisé après l'avoir retiré. Protège contre l'acquisition de neurotraumatismes dus à l'absence de cerveau. Ne fait rien d'autre.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>Donne des niveaux de compétence lorsqu'il est lu
+ 
+ ### Avec la compétence chirurgicale activée:
+ 
+ +8 compétence chirurgicale
+ +2 compétence médicale
+ 
+ ### Avec la compétence chirurgicale désactivée:
+ 
+ +8 compétence médicale</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>Un bras cybernétique qui peut être attaché à n'importe quelle prise de bras amputée chirurgicalement. Peut être enlevé avec un pied-de-biche. Cela entraîne une amputation traumatique sur le membre sélectionné.
+ 
+ ### Avantages des membres cybernétiques :
+ 
+ - Excellents pour résister aux tirs soutenus sans dysfonctionnement.
+ - Idéaux pour encaisser les attaques des créatures sans dysfonctionnement ni rupture.
+ - Idéaux pour résister aux attaques qui causeraient autrement des saignements mettant la vie en danger.
+ - Lorsqu'ils sont bien entretenus, ils sont beaucoup moins susceptibles d'être amputés de force lors d'une attaque.
+ - Ne se fracturent ni ne se disloquent. Assurez-vous de réparer toute dislocation ou fracture AVANT d'ajouter un membre cybernétique, sinon il sera permanent jusqu'à ce que vous enleviez le membre.
+ 
+ #### Inconvénients des membres cybernétiques :
+ 
+ - Ils ne se mélangent pas bien avec l'eau. Ne vous choqueront pas, mais se briseront avec le temps si vous ne portez pas de combinaison.
+ - Nécessitent une maintenance en cas de dommage.
+ - Maintenance coûteuse, surtout si votre sous-marin n'a pas une source suffisante d'acier et de circuits FPGA.
+ - Coûteux/cher à fabriquer/acheter.
+ - Se détachent violemment en cas de dommage critique par perte de matériau.
+ 
+ ### Exigence de compétence mécanique : 70
+ 
+ ### Succès de l'application :
+ 
+ Applique le membre cybernétique sur le membre sélectionné et guérit tout dommage interne causé par des tentatives précédentes infructueuses.
+ 
+ ### Échec de l'application :
+ 
+ Applique 20% de dommages internes sur le membre. Ne supprime pas le membre cybernétique.
+ 
+ ### Comment ajouter :
+ 
+ Faites d'abord une chirurgie d'amputation sur le membre sélectionné, puis utilisez le membre cybernétique sur le membre choisi.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>Une jambe cybernétique qui peut être attachée à n'importe quelle prise de jambe amputée chirurgicalement. Peut être retirée avec un pied de biche. Cela entraîne une amputation traumatique sur le membre sélectionné.
+ 
+ ### Avantages des membres cybernétiques :
+ 
+ - Excellents pour résister aux tirs soutenus sans dysfonctionnement.
+ - Excellents pour encaisser les attaques des créatures sans dysfonctionnement ni rupture.
+ - Idéaux pour résister aux attaques qui causeraient autrement des saignements mettant la vie en danger.
+ - Lorsqu'ils sont bien entretenus, ils sont beaucoup moins susceptibles d'être amputés de force lors d'une attaque.
+ - Ne se fracturent ni ne se disloquent. Assurez-vous de réparer toute dislocation ou fracture AVANT d'ajouter un membre cybernétique, sinon il sera permanent jusqu'à ce que vous enleviez le membre.
+ 
+ #### Inconvénients des membres cybernétiques :
+ 
+ - Ils ne se mélangent pas bien avec l'eau. Ne vous électrocuteront pas, mais se briseront avec le temps si vous ne portez pas de combinaison.
+ - Nécessitent une maintenance en cas de dommage.
+ - Maintenance coûteuse, surtout si votre sous-marin n'a pas une source suffisante d'acier et de circuits FPGA.
+ - Coûteux/cher à fabriquer/acheter.
+ - Se détachent violemment en cas de dommage critique par perte de matériau.
+ 
+ ### Exigence de compétence mécanique : 70
+ 
+ ### Succès de l'application :
+ 
+ Applique le membre cybernétique sur le membre sélectionné et guérit tout dommage interne causé par des tentatives précédentes infructueuses.
+ 
+ ### Échec de l'application :
+ 
+ Applique 20% de dommages internes sur le membre. Ne supprime pas le membre cybernétique.
+ 
+ ### Comment ajouter :
+ 
+ Effectuez d'abord une chirurgie d'amputation sur le membre sélectionné, puis utilisez le membre cybernétique sur le membre choisi.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>Vous avez un bras cybernétique dans cette prise.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>Vous avez une jambe @cybernétique dans cette douille.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>Le principal effet néfaste de l'utilisation de membres cybernétiques est que leur électronique est endommagée lorsqu'elle est exposée à l'eau.
+ 
+ Lorsqu'un membre cybernétique est endommagé, chaque type de dommage a une chance de causer différents types et quantités de dommages spécifiques au membre cybernétique au lieu du type de dommage normal.
+ 
+ La quantité d'électronique endommagée obtenue est proportionnelle à la quantité de perte de matériau.
+ 
+ ## Causes :
+ 
+ - Être dans l'eau sans combinaison de plongée
+ - 75 % de chances que les brûlures causent 200 % de leur dommage sous forme d'électronique endommagée
+ - 85 % de chances que les blessures par balle causent 75 % de leur dommage sous forme d'électronique endommagée
+ - 50 % de chances que les morsures causent 25 % de leur dommage sous forme d'électronique endommagée
+ - 50 % de chances que les dommages tissulaires profonds causent 50 % de leur dommage sous forme d'électronique endommagée
+ - 50 % de chances que les traumatismes contondants causent 100 % de leur dommage sous forme d'électronique endommagée
+ - 75 % de chances que les dommages internes causent 100 % de leur dommage sous forme d'électronique endommagée
+ - 75 % de chances que les corps étrangers causent 75 % de leur dommage sous forme d'électronique endommagée
+ 
+ ## Effets :
+ 
+ - Le membre cesse occasionnellement de fonctionner temporairement, la fréquence augmente avec la force
+ - Le membre devient inutilisable (à 99 % ou plus)
+ 
+ ## Traitements :
+ 
+ - Circuit FPGA</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>Lorsque vous subissez des dégâts à un membre cybernétique, chaque type de dégât a une chance de causer différents types et quantités de dégâts spécifiques au membre cybernétique au lieu du type de dégât normal.
+ 
+ ## Causé par :
+ 
+ - 85% de chances pour les brûlures de causer 25% de leurs dégâts sous forme de métal plié
+ - 50% de chances pour les lacérations de causer 25% de leurs dégâts sous forme de métal plié
+ - 50% de chances pour les morsures de causer 50% de leurs dégâts sous forme de métal plié
+ - 85% de chances pour les lésions des tissus profonds de causer 100% de leurs dégâts sous forme de métal plié
+ - 75% de chances pour les traumatismes contondants de causer 200% de leurs dégâts sous forme de métal plié
+ 
+ ## Effets :
+ 
+ - Vous rend plus lent si le membre touché est une jambe cybernétique, l'effet varie en fonction de la force
+ - Le membre devient inutilisable (à 99% ou plus)
+ 
+ ## Traitements :
+ 
+ - Outil de soudage</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>Causes:
+ 
+ - Vis de desserrage lors du déplacement (30% ou plus)
+ - 75% de chances que les lacérations causent 25% de leurs dommages sous forme de vis desserrées
+ - 80% de chances que les dommages tissulaires profonds causent 100% de leurs dommages sous forme de vis desserrées
+ - 50% de chances que les traumatismes contondants causent 50% de leurs dommages sous forme de vis desserrées
+ - 75% de chances que les dommages internes causent 100% de leurs dommages sous forme de vis desserrées
+ - 50% de chances que les morsures causent 50% de leurs dommages sous forme de vis desserrées
+ - 75% de chances que les corps étrangers causent 75% de leurs dommages sous forme de vis desserrées
+ 
+ Effets:
+ 
+ - Vis desserrées et perte de matériau
+ 
+ Traitements:
+ 
+ - Tournevis</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>Lorsque vous subissez des dégâts à un membre cybernétique, chaque type de dégât a une chance de causer différents types et quantités de dégâts spécifiques au membre cybernétique au lieu du type de dégât normal.
+ 
+ La quantité de perte de matériau obtenue est proportionnelle à la quantité de @loose-screws.
+ 
+ ## Causé par :
+ 
+ - @loose-screws
+ - 75% de chances pour que les lacérations causent 25% de leur dégât sous forme de perte de matériau
+ - 80% de chances pour que les blessures par balle causent 80% de leur dégât sous forme de perte de matériau
+ - 75% de chances pour que les morsures causent 60% de leur dégât sous forme de perte de matériau
+ - 100% de chances pour que les lésions des tissus profonds causent 100% de leur dégât sous forme de perte de matériau
+ - 80% de chances pour que les corps étrangers causent 50% de leur dégât sous forme de perte de matériau
+ 
+ ## Effets :
+ 
+ - Perte du membre cybernétique et @traumatic-amputation
+ 
+ ## Traitements :
+ 
+ - @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### Vérification de compétence électrique : 40
+ 
+ Utilisé pour réparer les @électroniques-endommagées sur les cybermembres.
+ 
+ ### Succès de l'application :
+ 
+ -50% @électroniques-endommagées
+ 
+ ### Échec de l'application :
+ 
+ -20% @électroniques-endommagées</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### Vérification de compétence mécanique : 50
+ 
+ Utilisé pour réparer le @métal-tordu sur les membres cybernétiques.
+ 
+ ### Succès de l'application :
+ 
+ -20% @métal-tordu
+ 
+ ### Échec de l'application :
+ 
+ -5% @métal-tordu</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### Vérification de compétence mécanique : 40
+ 
+ Utilisé pour réparer les vis desserrées sur les membres cybernétiques.
+ 
+ ### Succès de l'application :
+ 
+ -20% de vis desserrées
+ 
+ ### Échec de l'application :
+ 
+ -5% de vis desserrées</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### Vérification de compétence mécanique : 60
+ 
+ Utilisé pour réparer la perte de matériau sur les membres cybernétiques.
+ 
+ ### Succès de l'application :
+ 
+ -50% de perte de matériau
+ 
+ ### Échec de l'application :
+ 
+ -20% de perte de matériau</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>Bienvenue dans le Manuel Médical, votre guide complet pour comprendre les systèmes de mod neurotraumatiques et les conditions médicales courantes. Ce manuel est conçu pour vous fournir des informations sur une gamme de sujets médicaux :
+ 
+ - @informations
+ - @symptômes
+ - @cerveau
+ - @poumons
+ - @cœur
+ - @torse
+ - @extrémités
+ - @os
+ - @n'importe quelle-partie-du-corps
+ - @sang
+ - @articles-partie-1
+ - @articles-partie-2
+ - @articles-partie-3
+ - @articles-partie-4
+ - @chirurgie
+ - @chirurgie
+ - @expansion</Manual_Description_Start_Page>
+  <Manual_Description_Information>Bienvenue dans l'onglet Information, ici vous pouvez lire des informations générales :
+ 
+ - @faq
+ - @recommandations-de-trousse-de-premiers-soins
+ - @comment-diagnostiquer
+ - @ordre-de-traitement
+ - @les-5-commandements-du-neurotraumatisme</Manual_Description_Information>
+  <Manual_Description_Symptoms>Bienvenue dans l'onglet Symptômes :
+ 
+ - @vomissement-de-sang
+ - @peau-pâle
+ - @essoufflement
+ - @toux
+ - @augmentation-du-rythme-cardiaque
+ - @confusion
+ - @étourdissement
+ - @vision-floue
+ - @gonflement-des-jambes
+ - @sifflement
+ - @faiblesse
+ - @fièvre
+ - @transpiration
+ - @ballonnements
+ - @inflammation
+ - @jaunisse
+ - @inconfort-abdominal
+ - @mal-de-tête
+ - @envie
+ - @palpitations
+ - @spasmes</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>Bienvenue dans l'onglet Tête/Cerveau :
+ 
+ - @neurotrauma
+ - @AVC
+ - @sevrage
+ - @surdose d'opiacés
+ - @crise convulsive
+ - @inconscience
+ - @coma
+ - @lésion de la moelle épinière
+ - @commotion cérébrale</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>Bienvenue dans l'onglet des poumons :
+ 
+ - @arrêt-respiratoire
+ - @dommages-aux-poumons
+ - @pneumothorax
+ - @hyperventilation
+ - @hypoventilation
+ - @faible-taux-d'oxygène</Manual_Description_Lungs>
+  <Manual_Description_Heart>Bienvenue sur l'onglet Cœur :
+ 
+ - Tamponnade cardiaque
+ - Arrêt cardiaque
+ - Crise cardiaque
+ - Dommages au cœur
+ - Battements de cœur irréguliers
+ - Fibrillation</Manual_Description_Heart>
+  <Manual_Description_Torso>Bienvenue sur l'onglet Torse :
+ 
+ - Rupture aortique
+ - Hémorragie interne
+ - Maladie de radiation
+ - Lésion rénale
+ - Lésion hépatique
+ - Morbusine
+ - Empoisonnement au cyanure
+ - Lésion d'organe vanille
+ - Analgésie
+ - Anesthésie
+ - Douleur abdominale
+ - Vomissements
+ - Nausées
+ - Douleur thoracique</Manual_Description_Torso>
+  <Manual_Description_Extremities>Bienvenue dans l'onglet Extrémités :
+ 
+ - @amputation-traumatique
+ - @gangrène
+ - @amputation-chirurgicale
+ - @douleur-intense</Manual_Description_Extremities>
+  <Manual_Description_Bones>Bienvenue dans l'onglet des os :
+ 
+ - @mort-d'os
+ - @dommages-aux-os
+ - @fractures
+ - @luxations</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Bienvenue dans l'onglet de n'importe quelle partie du corps :
+ 
+ - @saignement-artériel
+ - @dommages-internes
+ - @brûlures
+ - @plaies-infectées
+ - @corps-étrangers
+ - @plaies
+ - @onguenté
+ - @bandé
+ - @plâtre</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>Bienvenue sur l'onglet Sang :
+ 
+ - @hypoxémie
+ - @sepsis
+ - @choc post-transfusionnel
+ - @perte de sang
+ - @hypotension
+ - @hypertension
+ - @acidose
+ - @alcalose</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Bienvenue dans l'onglet des articles partie 1 :
+ 
+ - @adrenaline
+ - @aed
+ - @sang-alien
+ - @ambubag
+ - @anaparalyzant
+ - @colle-antibiotique
+ - @pommade-antibiotique
+ - @antiseptique
+ - @pulvérisateur-antiseptique
+ - @autopulse
+ - @azathioprine
+ - @pansements
+ - @paquets-de-sang
+ - @requin-bleu
+ - @sac-cadavre
+ - @antibiotiques-à-large-spectre
+ - @stimulant-de-combat
+ - @deusizine
+ - @couteau-de-plongée
+ - @drainage</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>Bienvenue dans l'onglet des articles partie 2 :
+ 
+ - @empty-blood-pack
+ - @ballon-endovasculaire
+ - @fentanyl
+ - @plâtre
+ - @scanner-de-santé
+ - @analyseur-d'hématologie
+ - @hémostatique
+ - @hyperzine
+ - @oxygénite-liquide
+ - @mannitol
+ - @défibrillateur-manuel
+ - @stent-médical
+ - @méthamphétamine
+ - @morphine
+ - @naloxone
+ - @aiguille
+ - @nitroglycérine
+ - @opium
+ - @scalpels-de-prélèvement-d'organes
+ - @implants-d'ostéosynthèse</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>Bienvenue dans l'onglet des articles partie 3 :
+ 
+ - @plastiseal
+ - @propofol
+ - @extrait-de-raptor-bane
+ - @rétracteurs
+ - @solution-de-ringer
+ - @sérum-salé
+ - @scalpel
+ - @nitroprussiate-de-sodium
+ - @implants-de-moelle-épinière
+ - @sac-de-stase
+ - @streptokinase
+ - @table-d'opération
+ - @foret-chirurgicale
+ - @scie-chirurgicale
+ - @sutures
+ - @thiamine
+ - @tourniquet
+ - @ciseaux-de-traumatologie
+ - @pincettes
+ - @clé</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>Bienvenue dans l'onglet des articles partie 4 :
+ 
+ VIDE</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>Bienvenue dans l'onglet Chirurgie :
+ 
+ - @choc-traumatique
+ - @incision-chirurgicale
+ - @saignement-pincé
+ - @peau-rétractée
+ - @os-percé
+ - @os-scié</Manual_Description_Surgery>
+  <Manual_Description_Procedures>Bienvenue dans l'onglet Procédures :
+ 
+ - @chirurgie-ouverture-fermeture
+ - @chirurgie-ostéosynthétique
+ - @chirurgie-rupture-aortique
+ - @chirurgie-amputation
+ - @chirurgie-transplantation-d'organe</Manual_Description_Procedures>
+  <Manual_Description_Expansion>Bienvenue dans l'onglet Expansion :
+ 
+ - @draps-chirurgicaux
+ - @masque-chirurgical
+ - @vêtements-de-chirurgien
+ - @infection-chirurgicale
+ - @mannitol-plus
+ - @traitement-expérimental
+ - @carte-de-triage
+ - @bocal-cérébral
+ - @cerveau-artificiel
+ - @faute-médicale
+ - @bras-cybernétique
+ - @jambe-cybernétique
+ - @cyberbras
+ - @cyberjambe
+ - @électronique-endommagée
+ - @métal-tordu
+ - @vis-lâches
+ - @perte-de-matériel
+ - @circuit-fpga
+ - @outil-de-soudage
+ - @tournevis
+ - @barre-d'acier</Manual_Description_Expansion>
+</infotexts>

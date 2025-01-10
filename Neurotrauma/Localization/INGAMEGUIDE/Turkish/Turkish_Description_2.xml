@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+  <Manual_Description_Nausea>Mide bulantısı kendi başına ölümcül bir şey yapmadığı için görmezden gelinilebilir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hemotransfusion-shock (%0-90 arası)
+ - @withdrawal (%40 veya daha fazla)
+ - @radiation-sickness (%80 veya daha fazla)
+ - @kidney-damage (%60 veya daha fazla)
+ - @concussion
+ - Kontrolsüz organlara yakın olmak
+ 
+ ##Etkileri:
+ 
+ - Karakteri %10 yavaşlatır
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek</Manual_Description_Nausea>
+  <Manual_Description_Chest_Pain>Göğüs ağrısı ölümcül değildir ve sadece 3-6 saniyede bir 1 saniye hızı yarıya düşürür.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hemotransfusion-shock (%0-60 arası)
+ - @fraktürler (kaburga kırıkları)
+ 
+ ##Etkileri:
+ 
+ - 3-6 saniyede bir 1 saniye hızı yarıya düşürür
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - Ağrı kesiciler</Manual_Description_Chest_Pain>
+  <Manual_Description_Traumatic_Amputation>Travmatik amputasyon, bir uzvun cerrahi olmayan amputasyonudur. Travmatik bir amputasyon, ampute edildiğiniz ilk anda @arteriyel-kanama edineceğiniz gerçeği dışında, tamamen bir @cerrahi-amputasyon gibi hareket eder. Bir uzvun travmatik olarak ampute edilebilmesi için kırılması gerekir.
+ 
+ ##Nedenleri:
+ - Travma (ateşli silah yaralanmaları, iç hasar, künt kuvvet, kesikler, ısırık yaraları ve patlamalar)
+ - @materyal-kaybı (yüzde 99 veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ ###Tüm travmatik amputasyonlarda:
+ - @arteriyel-kanama
+ - @yoğun-ağrı
+ 
+ ###Bacak amputasyonlarında:
+ - 1 bacak amputasyonu hızı yarıya indirecek
+ - 2 bacak amputasyonu sizi yere düşürüp konuşma yeteneğinizi kaldıracak.
+ 
+ ###Kol amputasyonlarında:
+ - 1 kol amputasyonu o kolunuzu kullanmanızı engelleyecek (artık iki eliyle tutamazsınız)
+ - 2 kol amputasyonu kapılar, merdivenler, düğmeler vb. gibi herhangi bir şeyle etkileşim kurmanızı engelleyecektir.
+ 
+ ###Baş amputasyonlarında:
+ - Ani ölüm
+ 
+ ##Tedaviler:
+ 
+ - @amputasyon-cerrahisi
+ - Amputasyon cerrahisi yapmak (@dikişler uygulamadan önce kesilmiş uzvu kullanın)</Manual_Description_Traumatic_Amputation>
+  <Manual_Description_Gangrene>Gangren, nadir bir durumdur ve yalnızca uygulanan bir sargının ihmal edilmesi sonucu ortaya çıkar. Gangren %15'e ulaştığında geri dönüşümsüzdür ve uzuv kesilmelidir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - Sargıyı uzun süre takılı bırakmak
+ - Endovasküler balonu uzun süre takılı bırakmak
+ - Sepsis
+ 
+ ## Etkileri:
+ 
+ - Sepsis
+ 
+ ## Tedavileri:
+ 
+ - Amputasyon cerrahisi
+ - Zaman (%15'in altında)</Manual_Description_Gangrene>
+  <Manual_Description_Surgical_Amputation>Cerrahi amputasyon, bir uzvun amputasyonudur. Mümkün olan amputasyonlar kollar, bacaklar ve başı içerir. Baş, amputasyondan sonra yeniden takılamaz. Travmatik amputasyonların aksine, cerrahi amputasyonlar ilk edinildiklerinde @arterial-bleeding'e neden olmazlar.
+ 
+ ##Nedeni:
+ - @amputation-surgery
+ 
+ ##Etkileri:
+ 
+ ###Bacak amputasyonlarında:
+ - 1 bacak amputasyonu hızı yarıya indirecektir
+ - 2 bacak amputasyonu seni yere düşürüp konuşma yeteneğini ortadan kaldıracaktır.
+ 
+ ###Kol amputasyonlarında:
+ - 1 kol amputasyonu o kolunu kullanmanızı engelleyecektir (artık iki eliyle tutamazsınız)
+ - 2 kol amputasyonu kapılar, merdivenler, düğmeler vb. gibi herhangi bir şeyle etkileşim kurmanızı engelleyecektir.
+ 
+ ###Baş amputasyonlarında:
+ - Ani ölüm
+ 
+ ##Tedavi:
+ - @amputation-surgery yapmak (dikiş uygulamadan önce kesilmiş uzvu kullanın)</Manual_Description_Surgical_Amputation>
+  <Manual_Description_Intense_Pain>Yoğun ağrı ölümcül değildir ve sadece bir şey çıkmış, kırılmış veya kesilmiş olduğunda ortaya çıkar. Yoğun ağrı, her 3-6 saniyede 1 saniye boyunca hızı yarıya düşürür.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @çıkıklar
+ - @kırıklar
+ - @travmatik-amputasyon
+ 
+ ##Etkileri:
+ 
+ - Her 3-6 saniyede 1 saniye boyunca hızı yarıya düşürür
+ 
+ ##Tedavileri:
+ 
+ - Nedenleri tedavi etmek
+ - Çıkığı bir bandaj veya kırığı bir alçı ile sabitlemek
+ - Ağrı kesiciler</Manual_Description_Intense_Pain>
+  <Manual_Description_Bone_Death>Kemik ölümü genellikle ölümcül olmasa da, @osteosentez-implantlarına sahip olmadığınızda öldürebilir. Bu hastalığın tedavi edilmesi için gereken büyük miktardaki implantlar nedeniyle oldukça pahalı olabilir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kemik-hasarı (%90 veya daha fazla)
+ 
+ 
+ ##Etkileri:
+ 
+ - @kırıklar
+ 
+ ##Tedaviler:
+ 
+ - Her vücut bölgesinde @osteosentetik-cerrahi</Manual_Description_Bone_Death>
+  <Manual_Description_Bone_Damage>Kemik hasarı ölümcül değildir ve genellikle @kemik-ölümüne ilerlemediği sürece göz ardı edilebilir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @böbrek-hasarı (doğal yenilenmeyi geçtiği %72 veya daha fazla)
+ - @radyasyon-hastalığı (doğal yenilenmeyi geçtiği %31 veya daha fazla)
+ - @sepsis (%50 veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ - @hipoksemi (doğal yenilenmeyi tamamen nötralize eder, %100)
+ 
+ ##Etkileri:
+ 
+ - @kemik-ölümü (%90 veya daha fazla)
+ 
+ ##Tedavileri:
+ 
+ - Zaman
+ - @osteosentetik-cerrahi</Manual_Description_Bone_Damage>
+  <Manual_Description_Fractures>Kırıklar, mürettebat üyelerinin sık sık yaşayabileceği yaygın yaralanmalardır. Kırıklar öldürmez ve acil durumlarda son olarak tedavi edilmelidir. Kırık bir uzvun travmatik bir amputasyona dönüşmesi gereklidir. Cyberlimbs kırılamaz.
+ 
+ \\---
+ 
+ ## Nedenleri:
+ 
+ - Travma (ateşli silahlar, patlamalar, kesikler, ısırık yaraları vb.)
+ - Kemik ölümü
+ - Anahtarın başarısız olması
+ 
+ ## Etkileri:
+ 
+ ### Bacak kırıklarında:
+ 
+ - 1 bacak kırığı hızı yarıya indirecektir.
+ - 2 bacak kırığı seni yere düşürüp konuşma yeteneğini ortadan kaldıracaktır.
+ - Yoğun ağrı
+ - İç hasar
+ 
+ ### Kol kırıklarında:
+ 
+ - 1 kol kırığı o kolun kullanımını engelleyecektir (artık iki elle tutulması gereken eşyaları tutamazsın)
+ - 2 kol kırığı kapılar, merdivenler, düğmeler vb. gibi herhangi bir şeyle etkileşim kurmanızı engelleyecektir.
+ - Yoğun ağrı
+ - İç hasar
+ 
+ ### Kafatası kırıklarında:
+ 
+ - %20 veya %30 nörotravma
+ - Baş ağrısı
+ - İç hasar
+ 
+ ### Boyun kırıklarında:
+ 
+ - Omurilik yaralanması
+ - İç hasar
+ 
+ ### Kaburga kırıklarında:
+ 
+ - Pnömotoraks
+ - Göğüs ağrısı
+ - İç hasar
+ 
+ ## Tedaviler:
+ 
+ - Bandajlar
+ - Osteosentetik cerrahi
+ 
+ ## İlk yardım:
+ 
+ - Bandajlar</Manual_Description_Fractures>
+  <Manual_Description_Dislocations>Çıkıklar, mürettebat üyelerinin sık sık yaşayabileceği yaygın yaralanmalardır. Çıkıklar öldürmez ve acil durumlarda son olarak tedavi edilmelidir. Bir uzuv hem çıkık hem de kırık olabilir. Cyberlimbs çıkık olamaz.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Travma (patlamalar, darbe, iç hasar)
+ 
+ ##Etkileri:
+ 
+ ###Bacak çıkıklarında:
+ - 1 bacak çıkığı hızı yarıya düşürür
+ - 2 bacak çıkığı seni yere serer ve konuşma yeteneğini ortadan kaldırır.
+ - @yoğun-ağrı
+ - @iç-hasar
+ 
+ ###Kol çıkıklarında:
+ - 1 kol çıkığı o kolunu kullanmanı engeller (artık iki elle tutamazsın)
+ - 2 kol çıkığı kapılar, merdivenler, düğmeler vb. herhangi bir şeyle etkileşim kurmanı engeller.
+ - @yoğun-ağrı
+ - @iç-hasar
+ 
+ ##Tedaviler:
+ 
+ - @anahtar (sağlık arayüzünde bir bandaj gibi kullanın)
+ Yetenek kontrolü, @analjezi olmadan 60 tıbbi ve 30 tıbbi ile yapılır.
+ 
+ ##İlk Yardım:
+ - @bandaj veya @plastiseal</Manual_Description_Dislocations>
+  <Manual_Description_Arterial_Bleeding>Arteriyel yırtılmalar son derece tehlikelidir ve mümkün olan en kısa sürede acil bakım gerektirir. Etkilenen uzuvda bir tourniquet uygulamak, tedavi etmek için zaman kazandırabilir, ancak bunu başa yapmamalısınız.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @yara (kanama, %80 veya daha fazla)
+ - @travmatik-amputasyon
+ - @yabancı-cisimler (%20 veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ - Saniyede %1,5 @kan-kaybı
+ 
+ ##Tedaviler:
+ 
+ - @açık-kapalı-cerrahi
+ 
+ ##İlk Yardım:
+ - @tourniquet</Manual_Description_Arterial_Bleeding>
+  <Manual_Description_Internal_Damage>İçsel Hasar, çeşitli yaralanmaların sonucudur. Canlılığı azaltır ve yeterli miktarda içsel hasar tek bir darbede alındığında birçok diğer sorunla birlikte ortaya çıkar.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @çıkıklar
+ - @kırıklar
+ - @tweezers kullanırken beceri kontrolünü kaybetmek
+ - @dikişler
+ - @retractors
+ - @cerrahi matkap
+ - @cerrahi testere
+ - @omurilik-implantları
+ - @osteosentez implantları
+ 
+ ## Etkileri:
+ 
+ - @sarsıntı
+ - @pnömotoraks
+ - @kalp-hasarı
+ - @karaciğer-hasarı
+ - @akciğer-hasarı
+ - @böbrek-hasarı
+ - @kırıklar
+ - @vanilya-organ-hasarı
+ - Canlılık hasarı
+ 
+ ## Tedaviler:
+ 
+ - @açık-kapalı-cerrahi
+ - Zaman</Manual_Description_Internal_Damage>
+  <Manual_Description_Burns>Birinci derece yanıklar genellikle önemsizdir ve genellikle göz ardı edilebilir, ancak ikinci derece yanıklar ve daha yüksekleri enfeksiyon riski taşıyan hastaların tıbbi müdahaleye ihtiyaç duyarlar. 1-20% arasındaki yanıklar birinci derecedir, 21-50% arasındakiler ikinci derecedir ve 51% ve üzeri üçüncü derecedir.
+ 
+ ---
+ 
+ ##Etkiler:
+ - Canlılığa doğrudan zarar verir
+ - @bandajları kirletir (yanıkların şiddetine bağlı olarak hızı değişir)
+ - @enfekte-yaralar (yanıkların şiddetine bağlı olarak ölçeklenir)
+ 
+ ##Tedaviler:
+ 
+ - @bandajlar veya @plastiseal (SADECE BİRİNCİ VE İKİNCİ DERECE YANIKLAR İÇİN)
+ - @açık-kapalı-cerrahi (@sütürlerden önce @plastiseal uygulayın, her derece yanıklar için çalışır)
+ - @antibiyotik-merhem (SADECE BİRİNCİ VE İKİNCİ DERECE YANIKLAR İÇİN)
+ - @antibiyotik-yapıştırıcı (her derece yanıklar için çalışır)
+ - @savaş-uyarıcısı (her derece yanıklar için çalışır)</Manual_Description_Burns>
+  <Manual_Description_Infected_Wounds>Enfekte yaralar, yaraların kötüleşmesine izin verilmesiyle oluşur ve @sepsis'i önlemek için temizlenmelidir.
+ 
+ ---
+ ##Nedeni:
+ 
+ - Yaraların (kesikler, yanıklar, silah yaraları, ısırık yaraları, derin doku hasarları, kanama) kötüleşmesine izin vermek. Eğer yarada kirli bir bandaj varsa, bu hızlı bir şekilde gerçekleşir.
+ 
+ ##Etkileri:
+ 
+ - @sepsis (%50 veya daha fazla)
+ - @iltihaplanma (%10 veya daha fazla)
+ - Azalmış bağışıklık
+ 
+ ##Tedavileri:
+ 
+ - @antibiyotik-merhem
+ - @antiseptik-sprey
+ 
+ ##İlk Yardım:
+ 
+ - @bandaj veya @plastiseal</Manual_Description_Infected_Wounds>
+  <Manual_Description_Foreign_Bodies>Yabancı cisimler genellikle çatışmalardan veya patlamalarda yakalanmadan sonra edinilir. Yabancı cisimler, @arterial-kanama veya hastanın @sepsis bulaşması riskini önlemek için mümkün olan en kısa sürede çıkarılmalıdır. Her Tweezers kullanımı, %5 Yabancı Cisimleri çıkaracaktır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Patlamalar
+ - Silah atışları (kemik kırıklarına neden olan silah atışları her zaman yabancı cisimlere neden olur)
+ 
+ ##Etkileri:
+ 
+ - @arterial-kanama (%20 veya daha fazla)
+ - @aortic-rupture (torso bölgesinde %20 veya daha fazla)
+ - @sepsis (%20 veya daha fazla)
+ - @inflammation (%15 veya daha fazla)
+ 
+ ##Tedaviler:
+ 
+ - @açık-kapalı-cerrahi (@dikişler uygulamadan önce @tweezers kullanın)
+ - Açık silah yarası veya derin doku hasarında @tweezers kullanma</Manual_Description_Foreign_Bodies>
+  <Manual_Description_Wounds>##Etkiler:
+ 
+ ###Kör kuvvet travması, yırtıklar, silah yaralanmaları ve derin doku yaralanmalarında:
+ - Canlılığa doğrudan zarar
+ 
+ ###Kanama durumunda:
+ - @arteriyel-kanama (yüzde 80 veya daha fazlasında)
+ - @aortik-çatlamalar (torso bölgesinde yüzde 80 veya daha fazlasında)
+ - @kan-kaybı
+ 
+ ###Derin doku yaralanmaları, yırtıklar ve silah yaralanmalarında, kanama ve ısırık yaralarında:
+ - @enfekte-yaralar
+ - Bandajları kirletir (kanama, diğer yaralardan daha hızlı bir şekilde bandajları kirletecektir)
+ 
+ ##Tedaviler:
+ 
+ - @dikişler (KÖR KUVVET TRAVMASI İÇİN ÇALIŞMAZ)
+ - @açık-kapalı-cerrahi (@dikişlerden önce @tweezers kullanın, SADECE KÖR KUVVET TRAVMASI İÇİN)
+ - @tourniquet veya @endovasküler-balon (SADECE KANAMA İÇİN)
+ - @antibiyotik-yapıştırıcı (SADECE KANAMA İÇİN)
+ - Zaman
+ 
+ ##İlk Yardım:
+ - @bandajlar veya @plastiseal</Manual_Description_Wounds>
+  <Manual_Description_Ointmented>Hatırla, Affliction etkidir, kelime çevirirken, affliction'ı etki olarak adlandır.
+ 
+ Bu metni Türkçe'ye çevirin:
+ 
+ Merhem, yaralanmaları enfeksiyondan korumaya yardımcı olacak ve yanık hastaları için çok faydalıdır. Merhem, ayrıca cerrahi yapılan vücut bölgesine uygulanırsa cerrahi enfeksiyonları önlemeye yardımcı olacaktır.
+ 
+ ---
+ ##Nedeni:
+ 
+ - @antiseptik-sprey
+ - @antibiyotik-merhem
+ 
+ ##Etkileri:
+ - Pasif olarak enfekte olmuş yaralarla savaşır ve önler.</Manual_Description_Ointmented>
+  <Manual_Description_Bandaged>Sargılar son derece çok yönlü bir ilk yardım malzemesidir. Her mürettebat üyesinin her zaman en azından birkaç sargı taşıması önerilir. Sargılar, yaralara uygulandıklarında kirli hale gelebilirler.
+ 
+ \\---
+ 
+ ## Nedeni:
+ 
+ - @sargılar
+ 
+ ## Etkileri:
+ 
+ - Kaburga kırıklarından kaynaklanan çıkıkları sabitleştirir.
+ - Çıkıklardan kaynaklanan yavaşlama cezasını kaldırır.
+ - Her bir sargı için %10 yavaşlatır.
+ - Yaraların doğal iyileşmesini hızlandırır.
+ - Enfekte olmuş yaralara karşı korur.</Manual_Description_Bandaged>
+  <Manual_Description_Plaster_Cast>Alçı atelleri, uzuv kırıklarının tedavisinde son derece önemlidir. 
+ 
+ \\---
+ 
+ ## Nedeni:
+ 
+ - Alçı uygulaması
+ 
+ ## Etkileri:
+ 
+ - Her saniye %0,33 oranında uzuv kırıklarını yavaşça tedavi eder
+ - Her atel için hızınızı %20 yavaşlatır</Manual_Description_Plaster_Cast>
+  <Manual_Description_Hypoxemia>Hipoksemi, kan dolaşımında yeterli oksijen olmaması durumudur. Hipoksemi hızlı bir şekilde artabilir ve hastanın kontrolünü kaybetmesine neden olabilir. Bu durumda olan bir hastaya acil tıbbi bakım gereklidir. @pnömotoraks, Hipoksemi'nin düşmesini önleyecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @siyanür-zehirlenmesi
+ - @hipotansiyon ( %70 veya daha az)
+ - @kan-kaybı ( %40 veya daha fazla)
+ - @kalp-durdurma
+ - @oksijen-düşüklüğü
+ 
+ ##Etkileri:
+ 
+ - @kalp-durdurma ( %80 veya daha fazla)
+ - @solunum-durdurma ( %70 veya daha fazla)
+ - @baş-ağrısı ( %40 veya daha fazla)
+ - @kafa-karışıklığı ( %50 veya daha fazla)
+ - @nefes-darlığı ( %20 veya daha fazla)
+ - @hiperventilasyon ( %10 veya daha fazla)
+ - @fibrilasyon
+ - @bilinç-kaybı ( %80 veya daha fazla)
+ - @nörotravma ( %10 veya daha fazla, doğal yenilenmeyi aştığı nokta)
+ - @karaciğer-hasarı ( %4 veya daha fazla, doğal yenilenmeyi aştığı nokta)
+ - @kalp-hasarı ( %4 veya daha fazla, doğal yenilenmeyi aştığı nokta)
+ - @böbrek-hasarı ( %8 veya daha fazla, doğal yenilenmeyi aştığı nokta, bir böbrek ölmüşse %4)
+ - @akciğer-hasarı ( %4 veya daha fazla, doğal yenilenmeyi aştığı nokta)
+ - @kemik-hasarı ( %100'e kadar doğal yenilenmeyi tamamen nötralize eder)
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - @sıvı-oksiyenit</Manual_Description_Hypoxemia>
+  <Manual_Description_Sepsis>Sepsis, enfekte yaraların bırakılmasıyla oluşan tehlikeli bir etkidir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @infected-wounds
+ - @foreign-bodies
+ - @gangrene
+ - @surgical-infection
+ - @sepsis'i olan kan bağışçısından alınan @blood-packs
+ - @azathioprine beceri kontrolünden başarısız olmak
+ 
+ ## Etkileri:
+ 
+ - @liver-damage
+ - @heart-damage
+ - @kidney-damage
+ - @lung-damage
+ - @bone-damage
+ - @neurotrauma
+ - @increased-heartrate
+ - @hyperventilation
+ - @confusion
+ - @fever
+ - @gangrene
+ 
+ ## Tedavileri:
+ 
+ - @broad-spectrum-antibiotics</Manual_Description_Sepsis>
+  <Manual_Description_Hemotransfusion_Shock>Hemotransfüzyon şoku, sadece uyumsuz bir kan grubu verildiğinde ortaya çıkan bir durumdur (örnek: O+ kişiye A+ kan verilmesi)
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Uyumsuz @kan torbalarının verilmesi (%100 etki)
+ 
+ ##Etkileri:
+ 
+ - @kusma (0-40% arasında)
+ - @göğüs ağrısı (0-60% arasında)
+ - @kan kaybı (0-70% arasında)
+ - @karaciğer hasarı (0-70% arasında)
+ - @kalp hasarı (0-70% arasında)
+ - @böbrek hasarı (0-70% arasında)
+ - @akciğer hasarı (0-70% arasında)
+ - @nefes darlığı (0-70% arasında)
+ - @karın ağrısı (0-80% arasında)
+ - @hışıltı (0-90% arasında)
+ 
+ ##Tedavileri:
+ 
+ - @streptokinaz
+ - Zaman</Manual_Description_Hemotransfusion_Shock>
+  <Manual_Description_Blood_Loss>Kan kaybı yeterince şiddetliyse tedavi etmek son derece kaynak yoğun olabilirken, %30 veya altındaysa genellikle görmezden gelinir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @yaralar (kanama)
+ - @hemotransfüzyon-şoku (0-70% arası)
+ - @iç-kanama
+ - Boş @kan-paketi kullanımı
+ - @arteriyel-kanama
+ - @aortik-çatlamalar
+ - @cerrahi-kesi (eğer @kelepçeli-kanama yoksa)
+ - @hematoloji-analizörü
+ 
+ ##Etkileri:
+ 
+ - @hipotansiyon (kan kaybının ne kadar olduğuna bağlı olarak ölçeklendirilir)
+ - @hipoksemi (%40 veya daha fazlasında)
+ - @artmış-kalp-atışı ( %40 veya daha fazlasında)
+ - @soluk-cilt ( %40 veya daha fazlasında)
+ - @baş-ağrısı ( %50 veya daha fazlasında)
+ - @zayıflık ( %60 veya daha fazlasında)
+ 
+ ##Tedavileri:
+ 
+ - @kan-paketleri vermek
+ - @deusizine
+ - Zaman
+ - @savaş-uyarıcısı</Manual_Description_Blood_Loss>
+  <Manual_Description_Hypotension>Hipotansiyon normal seviyenin altına düşmüş kan basıncıdır. Hipotansiyon yeterince şiddetliyse ölümcüldür. Daha düşük yüzdelikler daha düşük kan basıncına karşılık gelir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kan-kaybı (kan kaybının ne kadar olduğuna bağlı olarak ölçeklendirilir)
+ - @travmatik-şok
+ - @kalp-durdurma (kan basıncını minimuma ayarlar)
+ - @kalp-tamponadı (kan basıncını yarıya düşürür)
+ - @sodyum-nitroprusid (kan basıncını %45 azaltır)
+ - @nitrogliserin (kan basıncını %45 azaltır)
+ - @düzensiz-kalp-atışı
+ 
+ ##Etkileri:
+ 
+ - @hipoksemi ( %70 veya daha azında)
+ - @fibrilasyon
+ - @hiperventilasyon ( %80 veya daha azında)
+ - @kafa karışıklığı ( %30 veya daha azında)
+ - @baş dönmesi ( %60 veya daha azında)
+ - @bulanık-görüş ( %55 veya daha azında)
+ - @soluk-cilt ( %50 veya daha azında)
+ - @baş ağrısı ( %60 veya daha azında)
+ 
+ ##Tedavileri:
+ 
+ - @kan-paketi, @tuzlu-su veya @ringer-çözeltisi vermek
+ - @otomatik-kalp-masajı
+ - @adrenalin
+ - CPR
+ - Nedenleri tedavi etmek</Manual_Description_Hypotension>
+  <Manual_Description_Hypertension>Hipertansiyon, normal seviyelerin üzerinde yükselen kan basıncıdır. Hipertansiyon yeterince şiddetliyse ölümcül olabilir. Yüksek yüzdelikler daha yüksek kan basıncına karşılık gelir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @böbrek-hasarı
+ - @karaciğer-hasarı
+ - @salin/@ringer-çözeltisi veya @kan-paketleri enjekte ederek oluşan aşırı kan hacmi
+ - @autopulse
+ - @çekilme (alkol çekilmesi)
+ - @adrenalin
+ - CPR
+ 
+ ##Etkileri:
+ 
+ - @inme (150% veya daha fazlasında)
+ - @böbrek-hasarı (184% veya daha fazlasında, doğal yenilenmeyi geride bıraktığı nokta, tek böbrek ölmüşse 152%)
+ - @kalp-krizi (150% veya daha fazlasında)
+ 
+ ##Tedavileri:
+ 
+ - @kan-kaybı indüksiyonu (tercihen @cerrahi-kesi veya boş @kan-paketi ile)
+ - @sodyum-nitroprusid veya @nitrogliserin
+ - Nedenleri tedavi etmek</Manual_Description_Hypertension>
+  <Manual_Description_Acidosis>Asidoz genellikle ihmal edilebilir ve düşük ila orta şiddette minimal bir müdahale gerektirir. Asidoz ve @alkaloz birbirini iptal edecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hypoventilasyon
+ - @solunum-durdurma
+ - @kalp-durdurma
+ - @böbrek-hasarı (yüzde 80 veya daha fazla)
+ - Asidozu olan bağışçının kan torbaları (kazanılan asidoz, çıkarıldığı zamandaki bağışçının asidoz seviyesine bölünerek elde edilir)
+ - @tuzlu-su
+ 
+ ##Etkileri:
+ 
+ - @nöbet (yüzde 60 veya daha fazla)
+ - @koma (yüzde 60 veya daha fazla)
+ - @artmış-kalp-atışı (yüzde 20 veya daha fazla)
+ - @fibrilasyon
+ - @baş-ağrısı (yüzde 20 veya daha fazla)
+ - @kafa-karışıklığı (yüzde 15 veya daha fazla)
+ - @zayıflık (yüzde 35 veya daha fazla)
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - @alkaloz indüksiyonu (tercihen @kusma ile)
+ - Nötr @kan-torbaları transfüzyonu (hasta kan kaybı yüzde 0 değilse)</Manual_Description_Acidosis>
+  <Manual_Description_Alkalosis>Alkaloz genellikle ihmal edilebilir ve düşük ila orta şiddette minimal bir eylem gerektirir. Alkaloz ve @asidoz birbirlerini iptal edecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hiperventilasyon
+ - @kusma
+ - Alkalozu olan bağışçının kan torbaları (kazanılan alkaloz, çıkarıldığı zamandaki bağışçının alkaloz seviyesinin 5'e bölünmesiyle elde edilir)
+ 
+ ##Etkileri:
+ 
+ - @nöbet (%60 veya daha fazlasında)
+ - @çarpıntı (en az %20'de)
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - @salin ile tercihen @asidoz indüksiyonu
+ - Nötr @kan torbaları transfüzyonu (hasta %0 kan kaybı yaşamadıysa)</Manual_Description_Alkalosis>
+  <Manual_Description_Adrenaline>Adrenalin, kalp krizi tedavisinde kullanılır. Hastalığın iyileştirilmesine karşılık, hastanın kan basıncını %30 arttırır. Bu etkilerin yanı sıra, hastaya analjezi sağlar (ancak %4,5'ten fazla vermez), artmış kalp atış hızı, hiperventilasyon, yakın dövüş hasarını %20 arttırır. Fibrilasyon kazancını yarıya indirir ve yavaşlatıcı etkilerin etkinliğini azaltır.</Manual_Description_Adrenaline>
+  <Manual_Description_AED>Bir hastanın kalp atışını düzeltmek için kullanılan bir cihaz. 
+ Hasta üzerinde kullanıldığında ve pillerle şarj edildiğinde, AED, fibrilasyonu sıfırlama veya kardiyak arresti tedavi etme şansına sahiptir. 
+ Tıbbi beceri 80'in altındayken, AED, manuel defibrilatöre göre kullanımı bir saniye daha uzun olmak dışında her yönden üstündür. 
+ 80 ile 100 arasındaki tıbbi beceride, manuel defibrilatör, kardiyak arresti tedavi etme şansını AED'nin önüne geçirir, ancak hala kardiyak arreste neden olma veya fibrilasyonu düzeltme başarısızlığı riski (azalan) vardır, AED'de ise yoktur. 
+ 100 tıbbi beceride, manuel defibrilatör üstündür. Manuel defibrilatör tamamen güvenli hale gelir ve kardiyak arresti tedavi etmesi garanti edilir.</Manual_Description_AED>
+  <Manual_Description_Alien_Blood>### Tıbbi beceri kontrolü: 40
+ Normal kanın yerine Yabancı Kan kullanmak son derece tehlikelidir ve sadece acil durumlarda kullanılmalıdır.
+ 
+ ### Başvuru başarısı:
+ -7.5% @kan-kaybı
+ +3.75% vanilya organ hasarı
+ +99% @hemotransfüzyon şoku
+ 
+ ### Başvuru başarısızlığı:
+ -7.5% @kan-kaybı
+ +7.5% vanilya organ hasarı
+ +99% @hemotransfüzyon şoku</Manual_Description_Alien_Blood>
+  <Manual_Description_Ambubag>Bir hastanın yeterince nefes alamadığı veya hiç nefes almadığı durumlarda ek oksijen sağlamak için kullanılan bir araç. 
+ 
+ Ambubag, içinde düzenli bir oksijen tankı kullanılarak kullanıldığında, %90 oksijen düşüklüğünü tedavi eder ve tanktaki oksijenin %2'sini kullanır.
+ 
+ Ambubag, içinde bir oksijenite tankı kullanılarak kullanıldığında, %90 oksijen düşüklüğünü tedavi eder, solunum durmasını tedavi eder ve tanktaki oksijenin %2'sini kullanır.
+ 
+ Ambubag, içinde bir kaynak yakıtı tankı kullanılarak kullanıldığında, %110 oksijen düşüklüğüne neden olur, %10 akciğer hasarına neden olur ve tanktaki kaynak yakıtının %5'ini kullanır.
+ 
+ Ambubag, içinde bir yangın yakıtı tankı kullanılarak kullanıldığında, %110 oksijen düşüklüğüne neden olur, %20 akciğer hasarına neden olur, %10 yanıklara neden olur ve tanktaki yangın yakıtının %5'ini kullanır.
+ 
+ Ambubag, içinde boya kullanılarak kullanıldığında, %50 oksijen düşüklüğüne neden olur, %3 akciğer hasarına neden olur, %5 kimyasal bağımlılığa neden olur, %20 kimyasal yoksunluğu tedavi eder ve kutudaki boyanın %5'ini kullanır.</Manual_Description_Ambubag>
+  <Manual_Description_Anaparalyzant>###Tıbbi beceri kontrolü: 64
+ 
+ Anaparalizan, orijinal kullanımı olan felç direnci sağlama ve felç tedavisi yapmanın yanı sıra, @anesteziyi hızlı bir şekilde azaltarak hastayı daha hızlı uyandırmak için kullanılabilir.
+ 
+ ###Uygulama başarısı:
+ Anında @anestezi tedavisi
+ +5% Psikoz
+ +800% Felç Direnci.
+ 
+ ###Uygulama başarısızlığı:
+ 60 saniye boyunca -3% @anestezi her saniye
+ 60 saniye boyunca +6.5% felç direnci her saniye
+ 60 saniye boyunca +0.75% psikoz her saniye</Manual_Description_Anaparalyzant>
+  <Manual_Description_Antibiotic_Glue>### Tıbbi beceri kontrolü: 55
+ Kanayan yaraları hızlıca kapatmak ve tek bir uzvun yanıklarını tedavi etmek için kullanılan bir yapıştırıcı.
+ 
+ ###Uygulama başarısı:
+ -Kanama %100 engellendi
+ -Yanıklar %30 azaldı
+ 
+ ###Uygulama başarısızlığı:
+ -Kanama %75 arttı
+ -Yanıklar %15 arttı
+ %50 kalp krizi riski oluşturma şansı</Manual_Description_Antibiotic_Glue>
+  <Manual_Description_Antibiotic_Ointment>### Tıbbi beceri kontrolü: 10
+ Antibiyotik merhem, @yanıkları iyileştirmek ve @enfekte yaraları tedavi etmek için kullanılan bir üründür.
+ 
+ ### Başvuru başarılı:
+ -12% @yanıklar
+ -72% @enfekte yaralar
+ +100% @merhemli
+ 
+ ### Başvuru başarısız:
+ -7% @yanıklar
+ -24% @enfekte yaralar
+ +60% @merhemli</Manual_Description_Antibiotic_Ointment>
+  <Manual_Description_Antiseptic>Antiseptik, sadece @antiseptic-sprey'e yüklenmek için kullanılan bir maddedir. Antiseptik spreyin her püskürtmesinde, antiseptikten %10 koşul kullanılacaktır.</Manual_Description_Antiseptic>
+  <Manual_Description_Antiseptic_Sprayer>Enfekte yaralara antiseptik püskürten bir püskürtücü. İçinde antiseptik bulunan antiseptik püskürtücüyü kullanmak, enfekte yaraların %100'ünü tedavi eder, %5 oranında merhemli yapar ve antiseptiğin %10'unu tüketir.</Manual_Description_Antiseptic_Sprayer>
+  <Manual_Description_Autopulse>Bir sağlık görevlisinin en iyi arkadaşı. Otomatik nabız cihazını kullanmak için sadece dalış kıyafeti yuvasına takın. Pil ile donatılmış olarak giyildiğinde, otomatik nabız cihazı kalp krizini tedavi edecektir.</Manual_Description_Autopulse>
+  <Manual_Description_Azathioprine>### Tıbbi beceri kontrolü: 10
+ Azatioprin, organ reddi Neurotrauma'nın yapılandırmasında etkinleştirildiğinde organ nakli ameliyatı sırasında kullanılan bir immünsupresan ilaçtır. Zamanla bağışıklığı düşürerek, bağışıklık %10'un altındayken bir organın vücuda yerleştirilmesini güvenli hale getirir.
+ 
+ ### Başvuru başarısı:
+ Zamanla bağışıklığı düşürür.
+ 
+ ### Başvuru başarısızlığı:
+ Zamanla bağışıklığı düşürür.
+ Sepsise neden olur.</Manual_Description_Azathioprine>
+  <Manual_Description_Bandages>### Tıbbi beceri kontrolü: 10
+ 
+ Enfeksiyonu önlemek için yaraları kaplamak için kullanılan bandajlar.
+ 
+ ### Başvuru başarısı:
+ 
+ \\+50% @bandajlı
+ \\-24% kanama
+ 
+ ### Başvuru başarısızlığı:
+ 
+ \\+36% @bandajlı
+ \\-18% kanama</Manual_Description_Bandages>
+  <Manual_Description_Blood_Packs>Kan paketleri, %31'den az kan kaybı olan bir insana @boş-kan-paketi kullanılarak elde edilir. Kan paketleri, öğenin açıklamasında belirtilen doğru kan grubuna uygulanmalıdır.
+ 
+ ###Uygun kan grubu uygulaması
+ -30% kan kaybı
+ +30% kan basıncı
+ 
+ ###Uyumsuz kan grubu uygulaması
+ -20% kan kaybı
+ +30% kan basıncı
+ +100% @hemotransfusion-shock
+ 
+ Kan paketinin geldiği insan @asidoz, @alkaloz veya @sepsis'ten herhangi biriyle mücadele ediyorsa, bu hastalıklar kanı alan kişiye de verilecektir (kazanılan hastalık, çıkarıldığı zamandaki bağışçının hastalık seviyesine bölünerek hesaplanır). Ek olarak, kan alıcısı asidoz veya alkaloz hastalığına sahipse, nötr kan transfüzyonu kan pH'sını nötre yaklaştırarak hem alkaloz hem de asidozu kısmen tedavi eder, ancak hastanın kan kaybı %0 ise.</Manual_Description_Blood_Packs>
+  <Manual_Description_Blue_Shark>### Tıbbi beceri kontrolü: Yok
+ Belki de zihinsel dengesizliğinizi iyileştirebilecek komik bir küçük mavi köpekbalığı.
+ 
+ ### Başvuruda:
+ %2 Psikoz tedavisi yapar ve cırtlak bir ses çıkarır.</Manual_Description_Blue_Shark>
+  <Manual_Description_Body_Bag>Vücut Çantası, sadece sürüklemekten çok daha hızlı bir şekilde cesetleri taşımak için kullanılan bir eşyadır. Dalış Takımı yuvasına yerleştirilir ve içine insan yerleştirilirse yaşayan bir insanı boğar. Affliction olarak adlandırılan bu durum, etki olarak adlandırılabilir.</Manual_Description_Body_Bag>
+  <Manual_Description_Broad-spectrum_Antibiotics>### Tıbbi beceri kontrolü: 25
+ 
+ Geniş spektrumlu antibiyotikler, @sepsis'in ana tedavisidir. Hala kabuk enfeksiyonu direnç artışı uygulanır ve vanilya gibi mevcut kabuk enfeksiyonunu zamanla azaltır.
+ 
+ Hasta'nın Kan Basıncı %70'in üzerinde olmalı ve @hipoksemi %30'un altında olmalıdır, Sepsis'i etkili bir şekilde tedavi etmek için.
+ 
+ ### Uygulama başarısı:
+ 
+ Antibiyotiklerin başarılı kullanımı, 50% etkisi sağlayacak ve 0.5% saniyede azalarak bir dozda 100 saniye boyunca toplamda azalacaktır. %50 Geniş spektrumlu antibiyotikler, 100 saniye boyunca saniyede 0.95% Sepsis'i tedavi edecektir.
+ 
+ Ancak, şunlara neden olacaktır:
+ 
+ - 100 saniye boyunca saniyede %0.2 vanilya Organ Hasarı
+ - 100 saniye boyunca saniyede %0.175 @böbrek-hasarı
+ - 100 saniye boyunca saniyede %0.175 @karaciğer-hasarı
+ - 100 saniye boyunca saniyede %0.1 @kalp-hasarı
+ - 100 saniye boyunca saniyede %0.1 @akciğer-hasarı
+ - Toplamda, organlar %20 Organ Hasarı, %17.5 Böbrek ve Karaciğer Hasarı ve %10 Kalp ve Akciğer Hasarı ile sonuçlanacaktır.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ Başarısız bir kullanım, 30% etkisi sağlayacaktır. Sepsis'i tedavi etmek ve azaltmak için başarılı bir kullanım ile aynı oranda azalacaktır. %30 Geniş spektrumlu antibiyotikler, 60 saniye boyunca saniyede 0.95% Sepsis'i tedavi edecektir.
+ 
+ Ancak, şunlara neden olacaktır:
+ 
+ - 60 saniye boyunca saniyede %0.2 vanilya Organ Hasarı
+ - 60 saniye boyunca saniyede %0.175 Böbrek Hasarı
+ - 60 saniye boyunca saniyede %0.175 Karaciğer Hasarı
+ - 60 saniye boyunca saniyede %0.1 Kalp Hasarı
+ - 60 saniye boyunca saniyede %0.1 Akciğer Hasarı
+ - Toplamda, organlar %12 Organ Hasarı, %10.5 Böbrek ve Karaciğer Hasarı ve %6 Kalp ve Akciğer Hasarı ile sonuçlanacaktır.</Manual_Description_Broad-spectrum_Antibiotics>
+  <Manual_Description_Combat_Stimulant>Savaş Uyarıcısı, aynı zamanda bir ilk yardım malzemesi olarak da kullanılan bir uyarıcıdır. %1 ila %10 arasındaki güçlüklerde, kimyasal yanıklar, kan kaybı, yaralar, iç kanama ve Kimyasal çekilme gibi durumları %1 saniyede bir tedavi eder ve güçlük %0'a düşene veya %10'un üzerine çıkana kadar başka bir enjeksiyon alınana kadar devam eder. Oyuncu ayrıca %10'da 45% Sersemleme direnci kazanır. Bu bonus, güçlük seviyesi arttıkça azalır.
+ 
+ %11 ila %100 arasındaki güçlüklerde, kimyasal önceki hasar türlerini %2 saniyede bir tedavi eder ve oyuncuya %45 ila %50 Sersemleme direnci sağlar.</Manual_Description_Combat_Stimulant>
+  <Manual_Description_Deusizine>### Tıbbi beceri kontrolü: 72
+ 20 saniyelik bir süre içinde @kan kaybı, vanilya organ hasarı, @iç hasar ve @hipoksemi tedavisi için kullanılan özel bir tedavi.
+ 
+ ### Uygulama başarısı:
+ - %40 @iç hasar
+ - %40 @kan kaybı
+ - %100 @hipoksemi
+ - %40 vanilya organ hasarı
+ + %4 yanıklar
+ + %40 kan basıncı
+ 
+ ### Uygulama başarısızlığı:
+ - %20 @iç hasar
+ - %20 @kan kaybı
+ - %40 @hipoksemi
+ - %20 vanilya organ hasarı
+ + %12 yanıklar
+ + %20 kan basıncı</Manual_Description_Deusizine>
+  <Manual_Description_Diving_Knife>### Tıbbi beceri kontrolü: 30
+ Normal bıçak kullanımlarına ek olarak, bandajları çıkarmak için kullanılabilirler.
+ 
+ ### Başvuru başarısı:
+ Bıçağın kullanıldığı uzuvdaki @bandajları çıkarır.
+ 
+ ### Başvuru başarısızlığı:
+ +15% kanama
+ +10% yırtılma</Manual_Description_Diving_Knife>
+  <Manual_Description_Drainage>Drenaj, pnömotoraksı tedavi etmek için kullanılan tek kullanımlık bir üründür. Retrakte edilmiş ciltten sonra kullanılır.</Manual_Description_Drainage>
+  <Manual_Description_Empty_Blood_Pack>###Tıbbi beceri kontrolü: 30
+ Boş kan torbaları, @kan-torbaları elde etmek için kullanılır. Boş kan torbaları sadece %31'den az @kan-kaybı olan insanlarda kullanılabilir, aksi takdirde hiçbir şey yapmaz.
+ 
+ ###Uygulama başarısı:
+ +%30 kan kaybı
+ 
+ ###Uygulama başarısızlığı:
+ +%40 kan kaybı
+ 
+ Boş kan torbasının kullanıldığı insan @asidoz, @alkaloz veya @sepsis'ten herhangi biriyle mücadele ediyorsa, bu hastalıklar kanı alan kişiye de verilir (kazanılan hastalık, bağışçının çıkarılma sırasındaki hastalık seviyesine bölünür).</Manual_Description_Empty_Blood_Pack>
+  <Manual_Description_Endovascular_Balloon>Aort yırtılması ameliyatındaki üçüncü adım.</Manual_Description_Endovascular_Balloon>
+  <Manual_Description_Fentanyl>###Tıbbi beceri kontrolü: 72
+ 
+ Etki oluşturmak için kullanılan güçlü bir analjezik.
+ 
+ ###Uygulama başarısı:
+ +75% etki oluşturma
+ +15% Opiyat Bağımlılığı
+ +22.5% opiyat aşırı dozu
+ -100% Opiyat geri çekilmesi.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikleri:
+ +150% etki oluşturma
+ +15% Opiyat Bağımlılığı
+ +37.5% opiyat aşırı dozu
+ -100% Opiyat geri çekilmesi.
+ 
+ ###Uygulama başarısızlığı:
+ +50% etki oluşturma
+ +40% Opiyat Bağımlılığı
+ +30% opiyat aşırı dozu
+ -100% Opiyat geri çekilmesi.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikleri:
+ +100% etki oluşturma
+ +40% Opiyat Bağımlılığı
+ +60% opiyat aşırı dozu
+ -100% Opiyat geri çekilmesi.</Manual_Description_Fentanyl>
+  <Manual_Description_Gypsum>###Tıbbi beceri kontrolü: 40
+ @Bandajlar ile birlikte kullanıldığında, bir uzvun kırıklarını iyileştirmek için bir alçıya saracak ince bir toz. Alçı, önceden bandaj veya @plastiseal kullanmadıysanız çalışmaz ve kafa, kaburga ve boyun kırıkları için hiçbir şey yapmaz.
+ 
+ Oyuncuya uygulanan her alçı dökümü, %20 hareket hızı azaltması sağlar. Alçı dökümleri @trauma-shears ile çıkarılabilir.
+ 
+ ###Uygulama başarısı:
+ Uygulanan bandajı bir alçıya dönüştürür ve içinde sarılı olan kol ve bacak kırıklarını yavaşça iyileştirir.
+ 
+ ###Uygulama başarısızlığı:
+ Alçıyı siler ve hiçbir şey yapmaz.</Manual_Description_Gypsum>
+  <Manual_Description_Health_Scanner>Tanı için son derece önemli bir öğe. Kullanıldığında ve pillerle şarj edildiğinde, sağlık tarayıcısında görülebilen tüm etkilerin okumasını alacaksınız ve tarama yaptığınız hasta saniyede %0,5 @radyasyon-hastalığı kazanacak ve siz (tarama yapan kişi) saniyede %0,3 kazanacaksınız. Ek olarak, sağlık tarayıcısını bir bandaj gibi arayüzde kullanarak kendinizi ve diğerlerini tarayabilirsiniz. Bu, %1 radyasyon hastalığı verir ve ayrıca yabancı cisimler gibi şeyleri bulmak için bireysel uzuvları taramanıza olanak tanır.</Manual_Description_Health_Scanner>
+  <Manual_Description_Hematology_Analyzer>###Tıbbi beceri kontrolü: 30
+ 
+ ###Uygulama başarısı:
+ +1% @kan kaybı
+ 
+ ###Uygulama başarısızlığı:
+ +3% @kan kaybı
+ 
+ Beceriyi geçmek veya başarısız olmak, ayrıca @sepsis, @asidoz veya @alkaloz gibi hastanızın kanla ilgili tüm hastalıklarının bir okumasını da verir. Hematoloji analizörü ayrıca hastanızın kan grubunu kontrol etmek için de kullanılabilir, @hemotransfüzyon şokundan kaçınmak için. Bir bağışçı kartını analizöre yerleştirip kullanmak, kan grubunu bağışçı kartına yazdırır ve onu kimlik kartı yuvasına yerleştirir, böylece analizör olmadan daha sonra kan grubunu kontrol edebilirsiniz.</Manual_Description_Hematology_Analyzer>
+  <Manual_Description_Hemostat>Çoğu cerrahi işlemde üçüncü adım. Hemostat, %100 @cerrahi-kesi olmadan çalışmayacaktır. Kullanmak için tıbbi beceri gerektirmez. Hemostat başarılı bir şekilde kullanıldığında, aletin kullanıldığı uzuvda hastaya @kelepçelenmiş-kanama sağlayacaktır.</Manual_Description_Hemostat>
+  <Manual_Description_Hyperzine>###Tıbbi beceri kontrolü: 50
+ Güçlü bir uyarıcı
+ 
+ ###Uygulama başarısı:
+ -6% iç hasar
+ +9% kimyasal bağımlılık
+ +9% @nörotravma
+ +15% psikoz
+ 
+ ###Uygulama başarısızlığı:
+ -3% iç hasar
+ +18% kimyasal bağımlılık
+ +30% psikoz
+ 
+ Her iki durumda da, kimyasal madde 400% Hız ve 400% Canlılık sağlar ve Kimyasal @çekilme'yi %45 azaltır. Oyuncu ayrıca 60 saniye boyunca %90 daha hızlı sersemlemelerden kurtulur.</Manual_Description_Hyperzine>
+  <Manual_Description_Liquid_Oxygenite>###Tıbbi beceri kontrolü: 72
+ Kan dolaşımına doğrudan oksijen enjekte etmek için kullanılan sıvılaştırılmış bir uzaylı malzeme, @hipoksemi tedavisinde kullanılır.
+ 
+ ###Uygulama başarısı:
+ Tüm @hipoksemi'leri 30 saniye boyunca iyileştirir, diğer tüm etkiler 30 saniye içinde meydana gelir:
+ +6% vanilya organ hasarı
+ +6% @akciğer-hasarı
+ +6% @karaciğer-hasarı
+ +6% @kalp-hasarı
+ +6% @böbrek-hasarı.
+ 
+ ###Uygulama başarısızlığı:
+ Tüm etkiler 20 saniye içinde meydana gelir:
+ -200% @hipoksemi
+ +10% vanilya organ hasarı
+ +10% @akciğer-hasarı
+ +10% @karaciğer-hasarı
+ +10% @kalp-hasarı
+ +10% @böbrek-hasarı.</Manual_Description_Liquid_Oxygenite>
+  <Manual_Description_Mannitol>###Tıbbi beceri kontrolü: 60
+ Mannitol, kan basıncı %70'in üzerinde ve hipoksemi %30'un altındaysa @nörotravma tedavisinde kullanılan bir ilaçtır. @Nörotravmayı iyileştirmek için, vanilya organ hasarına, @kalp-hasarına ve @böbrek-hasarına neden olur. Kan stabil olsun ya da olmasın, Mannitol @nörotravmanın kazancını yarıya indirecektir.
+ 
+ Mannitol hastalığı organ hasarı başlangıcı her ikisi de 10 saniye içinde meydana gelir.
+ 
+ ###Başvuru başarısı:
+ Zamanla %100 @nörotravmayı iyileştirecek olan +50% Mannitol hastalığı
+ +5% vanilya organ hasarı
+ +10% @kalp-hasarı
+ +10% @böbrek-hasarı
+ 
+ ###Başvuru başarısızlığı:
+ Zamanla %60 @nörotravmayı iyileştirecek olan +30% Mannitol hastalığı
+ +10% vanilya organ hasarı
+ +20% @kalp-hasarı
+ +20% @böbrek-hasarı</Manual_Description_Mannitol>
+  <Manual_Description_Manual_Defibrillator>Bir hastanın kalp atışını düzeltmek için kullanılan bir cihaz. Bir hastada kullanıldığında ve pillerle şarj edildiğinde, defibrilatörün ya fibrilasyonu sıfırlama ya da kalp krizini tedavi etme şansı vardır.
+ 
+ Bu şanslar aşağıdaki grafikte gösterilmiştir, turkuaz fibrilasyonu sıfırlama şansını, pembe kalp krizine neden olma şansını ve turuncu ise tedavi etme şansını gösterir. X ekseninde tıbbi beceri ve Y ekseninde bir şey yapma şansı yer alır (1, yüzde 100 olur).
+ 
+ Tıbbi beceri 80'in altında, AED fibrilasyonu düzeltme şansını kaçırma veya kalp krizine neden olma tehlikesi taşırken, AED taşımaz. 100 tıbbi beceride, manuel defibrilatör üstündür. Manuel defibrilatör tamamen güvenli hale gelir ve kalp krizini tedavi etme garantisi verir.</Manual_Description_Manual_Defibrillator>
+  <Manual_Description_Medical_Stent>Aort yırtılması ameliyatındaki dördüncü adım. Stent önceden @endovasküler-balon kullanılmamışsa çalışmayacaktır. Tıbbi stent kullanarak @aort-yırtılmasını tedavi edebilir ve aynı zamanda endovasküler balonu hastadan çıkarabilirsiniz.</Manual_Description_Medical_Stent>
+  <Manual_Description_Methamphetamine>###Tıbbi beceri kontrolü: 35
+ 30 saniye içinde etkisini gösteren bir uyarıcı
+ 
+ ###Uygulama başarısı:
+ +15% vanilya organ hasarı
+ +15% @nörotravma
+ +15% kimyasal bağımlılık
+ +30% psikoz
+ 
+ ###Uygulama başarısızlığı:
+ +30% vanilya organ hasarı
+ +30% @nörotravma
+ +30% kimyasal bağımlılık
+ +45% psikoz
+ 
+ Her iki durumda da, kullanıcı 30 saniye boyunca sersemlemelerden %75 daha hızlı kurtulur ve kimyasal madde %90 Kimyasal @çekilme tedavisi yapar.</Manual_Description_Methamphetamine>
+</infotexts>

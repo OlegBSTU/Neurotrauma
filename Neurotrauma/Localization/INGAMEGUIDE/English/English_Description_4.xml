@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <Manual_Description_Morphine>###Medical skill check: 30
+
+A moderately powerful analgesic used to induce @analgesia.
+
+###Application success:
++50% @analgesia
++10% Opiate Addiction
++10% @opiate-overdose
+-30% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++100% @analgesia
++10% Opiate Addiction
++20% @opiate-overdose
+-30% Opiate @withdrawal.
+
+###Application failure:
++30% @analgesia
++25% Opiate Addiction
++20% @opiate-overdose
+-30% Opiate @withdrawal.
+
+####While drunk (&gt;30% drunk) changes to:
++60% @analgesia
++25% Opiate Addiction
++40% @opiate-overdose
+-30% Opiate @withdrawal.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Medical skill check: 39
+Naloxone is used to treat Opiate @withdrawal, @opiate-overdose, and @analgesia. Effects occur over 30 seconds.
+
+###Application success:
+-60% opiate @withdrawal
+-60% @opiate-overdose
+-60% @analgesia
+
+###Application failure:
+-30% opiate @withdrawal
+-30% @opiate-overdose
+-60% @analgesia
+50% chance to put a patient in a @coma</Manual_Description_Naloxone>
+</infotexts>

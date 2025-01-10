@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+  <Manual_Description_Nausea>Übelkeit kann ignoriert werden, da sie von alleine nichts Tödliches bewirkt.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hämotransfusions-Schock (zwischen 0-90%)
+ - @Entzug (40% oder mehr)
+ - @Strahlenkrankheit (80% oder mehr)
+ - @Nierenschaden (60% oder mehr)
+ - @Gehirnerschütterung
+ - In der Nähe von unkontrollierten Organen sein
+ 
+ ##Effekte:
+ 
+ - Verlangsamt den Charakter um 10%
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen</Manual_Description_Nausea>
+  <Manual_Description_Chest_Pain>Brustschmerzen sind nicht tödlich und reduzieren die Geschwindigkeit nur für 1 Sekunde alle 3-6 Sekunden um die Hälfte.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @hemotransfusion-shock (zwischen 0-60%)
+ - @Frakturen (Rippenbrüche)
+ 
+ ##Effekte:
+ 
+ - Halbierte Geschwindigkeit für 1 Sekunde alle 3-6 Sekunden
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Schmerzmittel</Manual_Description_Chest_Pain>
+  <Manual_Description_Traumatic_Amputation>Traumatische Amputation ist die nicht-chirurgische Amputation einer Extremität. Eine traumatische Amputation verhält sich genauso wie eine @chirurgische Amputation, abgesehen davon, dass man beim ersten Abschneiden @arterielle-Blutungen erleidet. Eine Gliedmaße muss gebrochen sein, um traumatisch amputiert zu werden.
+ 
+ ---
+ 
+ ##Verursacht durch:
+ - Trauma (Schüsse, innere Verletzungen, stumpfe Gewalt, Schnittwunden, Bisswunden und Explosionen)
+ - @Materialverlust (99% oder mehr)
+ 
+ 
+ ##Effekte:
+ 
+ ###Bei allen traumatischen Amputationen:
+ - @arterielle-Blutungen
+ - @intensiver Schmerz
+ 
+ ###Bei Beinamputationen:
+ - 1 Beinamputation halbiert die Geschwindigkeit
+ - 2 Beinamputationen werfen dich um und nehmen dir die Fähigkeit zu sprechen.
+ 
+ ###Bei Armamputationen:
+ - 1 Armamputation verhindert die Nutzung dieses Arms (du kannst keine Gegenstände mehr mit beiden Händen halten)
+ - 2 Armamputationen verhindern die Interaktion mit allem, wie Türen, Leitern, Knöpfen usw.
+ 
+ ###Bei Kopfamputationen:
+ - Sofortiger Tod
+ 
+ ##Behandlungen:
+ 
+ - @Amputationschirurgie
+ - Durchführung einer @Amputationschirurgie (verwende das abgetrennte Glied vor dem Anbringen von @Nähten)</Manual_Description_Traumatic_Amputation>
+  <Manual_Description_Gangrene>Gangrän ist ein seltenes Ereignis und tritt nur auf, wenn ein angelegtes @Tourniquet vernachlässigt wird. Sobald die Gangrän 15% erreicht hat, ist sie irreversibel und das Glied muss amputiert werden.
+ 
+ ## Verursacht durch:
+ 
+ - Zu langes Tragen eines @Tourniquets
+ - Zu langes Verbleiben eines @endovaskulären Ballons
+ - @Sepsis
+ 
+ ## Auswirkungen:
+ 
+ - @Sepsis
+ 
+ ## Behandlungen:
+ 
+ - @Amputationschirurgie
+ - Zeit (unter 15%)</Manual_Description_Gangrene>
+  <Manual_Description_Surgical_Amputation>Die chirurgische Amputation ist die Amputation einer Extremität. Mögliche Amputationen umfassen Arme, Beine und den Kopf. Der Kopf kann nach der Amputation nicht wieder angesetzt werden. Im Gegensatz zu traumatischen Amputationen verursachen chirurgische Amputationen beim ersten Erwerb keine arterielle Blutung.
+ 
+ ##Verursacht durch:
+ - @amputation-surgery
+ 
+ ##Effekte:
+ 
+ ###Bei Beinamputationen:
+ - Eine Beinamputation halbiert die Geschwindigkeit
+ - Zwei Beinamputationen werfen dich um und nehmen dir die Fähigkeit zu sprechen.
+ 
+ ###Bei Armamputationen:
+ - Eine Armamputation verhindert die Nutzung des betroffenen Arms (du kannst keine Gegenstände mehr mit beiden Händen halten)
+ - Zwei Armamputationen verhindern jegliche Interaktion mit Gegenständen wie Türen, Leitern, Knöpfen usw.
+ 
+ ###Bei Kopfamputationen:
+ - Sofortiger Tod
+ 
+ ##Behandlung:
+ - Durchführung einer @amputation-surgery (verwende das abgetrennte Glied vor dem Anbringen von @sutures)</Manual_Description_Surgical_Amputation>
+  <Manual_Description_Intense_Pain>Intensiver Schmerz ist nicht tödlich und tritt nur auf, wenn etwas ausgerenkt, gebrochen oder amputiert wurde. Intensiver Schmerz halbiert die Geschwindigkeit für 1 Sekunde alle 3-6 Sekunden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Ausrenkungen
+ - @Brüche
+ - @Traumatische-Amputationen
+ 
+ ##Effekte:
+ 
+ - Halbierte Geschwindigkeit für 1 Sekunde alle 3-6 Sekunden
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Stabilisierung der Ausrenkung mit einem Verband oder des Bruchs mit einem Gipsverband
+ - Schmerzmittel</Manual_Description_Intense_Pain>
+  <Manual_Description_Bone_Death>Knochensterben, obwohl normalerweise nicht tödlich, kann tödlich sein, wenn es an @Osteosynthese-Implantaten mangelt. Aufgrund der großen Anzahl an Implantaten, die zur Heilung dieser Affektion benötigt werden, kann dies ziemlich teuer sein.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Knochenschäden (90% oder mehr)
+ 
+ 
+ ##Effekte:
+ 
+ - @Frakturen
+ 
+ ##Behandlungen:
+ 
+ - @Osteosynthetische Chirurgie an jedem Körperteil</Manual_Description_Bone_Death>
+  <Manual_Description_Bone_Damage>Knochenschäden sind nicht tödlich und können in der Regel ignoriert werden, solange sie nicht zu @Knochen-Tod fortgeschritten sind.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Nierenschäden (72% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Strahlungskrankheit (31% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Sepsis (50% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Hypoxämie (neutralisiert die natürliche Regeneration vollständig bei 100%)
+ 
+ ##Effekte:
+ 
+ - @Knochen-Tod (bei 90% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Zeit
+ - @Osteosynthetische-Chirurgie</Manual_Description_Bone_Damage>
+  <Manual_Description_Fractures>Sind häufige Verletzungen, die die meisten Crewmitglieder oft bekommen werden. Frakturen werden nicht töten und sollten in einem Notfall zuletzt behandelt werden. Eine gebrochene Gliedmaße ist erforderlich, damit es zu einer traumatischen Amputation kommt. Cyberlimbs können nicht gebrochen werden.
+ 
+ \\---
+ 
+ ## Verursacht durch:
+ 
+ - Trauma (Schüsse, Explosionen, Schnittwunden, Bisswunden, etc.)
+ - Knochensterben
+ - Versagen des Schraubenschlüssels
+ 
+ ## Effekte:
+ 
+ ### Bei Beinfrakturen:
+ 
+ - 1 Beinfraktur halbiert die Geschwindigkeit
+ - 2 Beinfrakturen lassen dich umhergeworfen werden und nehmen dir die Fähigkeit zu sprechen.
+ - Intensiver Schmerz
+ - Innere Schäden
+ 
+ ### Bei Armfrakturen:
+ 
+ - 1 Armfraktur verhindert die Nutzung dieses Arms (du kannst keine zweihändigen Gegenstände mehr halten)
+ - 2 Armfrakturen verhindern die Interaktion mit allem, wie Türen, Leitern, Knöpfen, etc.
+ - Intensiver Schmerz
+ - Innere Schäden
+ 
+ ### Bei Schädelbrüchen:
+ 
+ - 20% oder 30% Neurotrauma
+ - Kopfschmerzen
+ - Innere Schäden
+ 
+ ### Bei Halswirbelbrüchen:
+ 
+ - Verletzung des Rückenmarks
+ - Innere Schäden
+ 
+ ### Bei Rippenbrüchen:
+ 
+ - Pneumothorax
+ - Brustschmerzen
+ - Innere Schäden
+ 
+ ## Behandlungen:
+ 
+ - Bandagen
+ - Osteosynthetische Chirurgie
+ 
+ ## Erste Hilfe:
+ 
+ - Bandagen</Manual_Description_Fractures>
+  <Manual_Description_Dislocations>Verrenkungen sind häufige Verletzungen, die die meisten Besatzungsmitglieder oft bekommen werden. Verrenkungen werden nicht töten und sollten in einem Notfall zuletzt behandelt werden. Ein Glied kann sowohl verrenkt als auch gebrochen sein. Cyberlimbs können nicht verrenkt werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Trauma (Explosionen, stumpfe Gewalt, innere Schäden)
+ 
+ ##Effekte:
+ 
+ ###Bei Beinverrenkungen:
+ - 1 Beinverrenkung halbiert die Geschwindigkeit
+ - 2 Beinverrenkungen lassen Sie herumgeworfen werden und entfernen Ihre Fähigkeit zu sprechen.
+ - @intensiver Schmerz
+ - @innere Schäden
+ 
+ ###Bei Armverrenkungen:
+ - 1 Armverrenkung verhindert, dass Sie diesen Arm benutzen können (Sie können keine zweihändigen Gegenstände mehr halten)
+ - 2 Armverrenkungen verhindern, dass Sie mit irgendetwas interagieren können, wie Türen, Leitern, Knöpfe usw.
+ - @intensiver Schmerz
+ - @innere Schäden
+ 
+ ##Behandlungen:
+ 
+ - @Schraubenschlüssel (verwenden Sie ihn in der Gesundheitsschnittstelle, wie Sie es mit einem Verband tun würden)
+ Der Fertigkeitscheck beträgt 60 medizinisch ohne und 30 medizinisch mit @Analgesie
+ 
+ ##Erste Hilfe:
+ - @Verband oder @Plastiseal</Manual_Description_Dislocations>
+  <Manual_Description_Arterial_Bleeding>Arterielle Rupturen sind extrem gefährlich und erfordern so schnell wie möglich eine Notfallversorgung. Das Anlegen eines @Tourniquets am betroffenen Glied kann Ihnen Zeit geben, es zu behandeln, aber dies sollte nicht am Kopf durchgeführt werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Wunden (Blutung, 80% oder mehr)
+ - @Traumatische-Amputation
+ - @Fremdkörper (20% oder mehr)
+ 
+ ##Effekte:
+ 
+ - 1,5% @Blutverlust pro Sekunde
+ 
+ 
+ ##Behandlungen:
+ 
+ - @Offen-Geschlossen-Chirurgie
+ 
+ ##Erste Hilfe:
+ - @Tourniquet</Manual_Description_Arterial_Bleeding>
+  <Manual_Description_Internal_Damage>Interne Schäden sind das Ergebnis verschiedener Verletzungen. Es verringert die Vitalität und tritt zusammen mit vielen anderen Problemen auf, wenn genug interner Schaden durch einen einzigen Schlag verursacht wird.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - @Verrenkungen
+ - @Brüche
+ - Fehlschlagen des Fertigkeitschecks bei Verwendung von:
+ - @Pinzetten
+ - @Nähten
+ - @Retraktoren
+ - @Chirurgie-Bohrer
+ - @Chirurgie-Säge
+ - @Rückenmark-Implantaten
+ - @Osteosynthese-Implantaten
+ 
+ ## Auswirkungen:
+ 
+ - @Gehirnerschütterung
+ - @Pneumothorax
+ - @Herzschaden
+ - @Leberschaden
+ - @Lungenschaden
+ - @Nierenschaden
+ - @Brüche
+ - @Vanilla-Organ-Schaden
+ - Vitalitätsschaden
+ 
+ ## Behandlungen:
+ 
+ - @Offen-Geschlossen-Chirurgie
+ - Zeit</Manual_Description_Internal_Damage>
+  <Manual_Description_Burns>Erstgradige Verbrennungen sind geringfügig und können in der Regel ignoriert werden, aber Verbrennungen zweiten Grades und höher erfordern medizinische Intervention, damit der Patient nicht das Risiko einer Infektion eingeht. Verbrennungen zwischen 1-20% Stärke sind erstgradig, 21-50% sind zweitgradig und ab 51% sind sie drittgradig.
+ 
+ ---
+ 
+ ##Effekte:
+ - Direkte Schädigung der Vitalität
+ - Verschmutzung von @Verbandszeug (Geschwindigkeit hängt davon ab, wie schwer die Verbrennungen sind)
+ - @infizierte-Wunden (Skala hängt davon ab, wie schwer die Verbrennungen sind)
+ 
+ ##Behandlungen:
+ 
+ - @Verbandszeug oder @Plastiseal (NUR FÜR ERST- UND ZWEITGRADIGE VERBRENNUNGEN)
+ - @offen-geschlossene-Chirurgie (vor dem Auftragen von @Nähten @Plastiseal auftragen, funktioniert bei Verbrennungen jeglichen Grades)
+ - @Antibiotika-Salbe (NUR FÜR ERST- UND ZWEITGRADIGE VERBRENNUNGEN)
+ - @Antibiotika-Kleber (funktioniert bei Verbrennungen jeglichen Grades)
+ - @Kampf-Stimulans (funktioniert bei Verbrennungen jeglichen Grades)</Manual_Description_Burns>
+  <Manual_Description_Infected_Wounds>Infizierte Wunden entstehen durch Vernachlässigung von Wunden und sollten gereinigt werden, um eine Sepsis zu verhindern.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Vernachlässigung von @Wunden (Schnittwunden, @Verbrennungen, Schusswunden, Bisswunden, tiefe Gewebeverletzungen, Blutungen). Dies wird dramatisch beschleunigt, wenn eine schmutzige Bandage auf der Wunde ist.
+ 
+ ##Effekte:
+ 
+ - @Sepsis (bei 50% oder mehr)
+ - @Entzündung (bei 10% oder mehr)
+ - Verminderte Immunität
+ 
+ ##Behandlungen:
+ 
+ - @Antibiotika-Salbe
+ - @Antiseptikum-Spray
+ 
+ ##Erste Hilfe:
+ 
+ - @Verband oder @Plastiseal</Manual_Description_Infected_Wounds>
+  <Manual_Description_Foreign_Bodies>Fremdkörper werden oft nach Feuergefechten oder bei Explosionen erworben. Fremdkörper sollten so schnell wie möglich entfernt werden, um @arterielle Blutungen oder eine Infektion des Patienten mit @Sepsis zu vermeiden. Jede Verwendung von Pinzetten entfernt 5% Fremdkörper.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Explosionen
+ - Schüsse (Schüsse, die einen Knochen brechen, verursachen immer Fremdkörper)
+ 
+ ##Effekte:
+ 
+ - @arterielle Blutungen (bei 20% oder mehr)
+ - @Aortenruptur (bei 20% oder mehr, wenn im Torso)
+ - @Sepsis (bei 20% oder mehr)
+ - @Entzündung (bei 15% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - @offen-geschlossene Operation (verwenden Sie @Pinzetten, bevor Sie @Nähte anwenden)
+ - Verwendung von @Pinzetten bei offenen Schusswunden oder tiefen Gewebeverletzungen</Manual_Description_Foreign_Bodies>
+  <Manual_Description_Wounds>##Effekte:
+ 
+ ###Bei stumpfen Gewalteinwirkungen, Schnittwunden, Schussverletzungen und Verletzungen des tiefen Gewebes:
+ - Direkte Schädigung der Vitalität
+ 
+ ###Bei Blutungen:
+ - @arterielle-Blutung (bei 80% oder mehr)
+ - @Aortenruptur (bei 80% oder mehr, wenn im Rumpf)
+ - @Blutverlust
+ 
+ ###Bei Verletzungen des tiefen Gewebes, Schnittwunden und Schussverletzungen, Blutungen und Bisswunden:
+ - @infizierte-Wunden
+ - Verschmutzt Verbände (Blutungen verschmutzen Verbände viel schneller als andere Wunden)
+ 
+ ##Behandlungen:
+ 
+ - @Nähte (FUNKTIONIERT NICHT BEI STUMPFER GEWALTEINWIRKUNG)
+ - @offen-geschlossene-Operation (verwenden Sie @Pinzetten, bevor Sie @Nähte anwenden, (NUR FÜR STUMPFE GEWALTEINWIRKUNG)
+ - @Tourniquet oder @endovaskulärer-Ballon (NUR BEI BLUTUNG)
+ - @Antibiotikakleber (NUR BEI BLUTUNG)
+ - Zeit
+ 
+ ##Erste Hilfe:
+ - @Verbände oder @Plastiseal</Manual_Description_Wounds>
+  <Manual_Description_Ointmented>Salbe wird helfen, @Wunden vor Infektionen zu schützen und ist sehr nützlich für Patienten, die an @Verbrennungen leiden. Salbe wird auch helfen, @Operationsinfektionen zu verhindern, wenn sie auf den Körperteil aufgetragen wird, an dem die Operation durchgeführt wird.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Antiseptikumspray
+ - @Antibiotische Salbe
+ 
+ ##Effekte:
+ - Bekämpft und verhindert passiv @infizierte Wunden</Manual_Description_Ointmented>
+  <Manual_Description_Bandaged>Verbände sind ein äußerst vielseitiger Erste-Hilfe-Artikel. Es wird empfohlen, dass jeder Crewmitglied jederzeit mindestens einige Verbände bei sich trägt. Verbände werden schmutzig, wenn sie auf @Wunden aufgetragen werden.
+ 
+ \\---
+ 
+ ## Verursacht durch:
+ 
+ - @Verbände
+ 
+ ## Effekte:
+ 
+ - Stabilisiert @Verrenkungen von Rippenbrüchen.
+ - Entfernt die Verlangsamungsstrafe von @Verrenkungen
+ - Verlangsamt dich um 10% für jeden Verband
+ - Beschleunigt die natürliche Heilung von @Wunden
+ - Schützt vor @infizierten Wunden</Manual_Description_Bandaged>
+  <Manual_Description_Plaster_Cast>Gipsverbände sind äußerst wichtig für die Behandlung von Gliedmaßenbrüchen.
+ 
+ \\---
+ 
+ ## Verursacht durch:
+ 
+ - Anwendung von Gips
+ 
+ ## Effekte:
+ 
+ - Behandelt Gliedmaßenbrüche langsam um 0,33% pro Sekunde
+ - Verlangsamt dich um 20% für jeden Gipsverband</Manual_Description_Plaster_Cast>
+  <Manual_Description_Hypoxemia>Hypoxämie ist das Fehlen ausreichender Sauerstoffversorgung im Blutkreislauf. Hypoxämie kann sich schnell aufbauen und den Patienten außer Kontrolle geraten lassen. Ein Patient, der darunter leidet, benötigt sofortige medizinische Versorgung. Ein Pneumothorax verhindert, dass die Hypoxämie abnimmt.
+ 
+ ##Verursacht durch:
+ 
+ - @cyanide-vergiftung
+ - @hypotonie (70% oder weniger)
+ - @blutverlust (40% oder mehr)
+ - @herzstillstand
+ - @sauerstoffmangel
+ 
+ ##Effekte:
+ 
+ - @herzstillstand (bei 80% oder mehr)
+ - @atmungsstillstand (bei 70% oder mehr)
+ - @kopfschmerzen (bei 40% oder mehr)
+ - @verwirrung (bei 50% oder mehr)
+ - @atemnot (bei 20% oder mehr)
+ - @hyperventilation (bei 10% oder mehr)
+ - @Fibrillation
+ - @bewusstlosigkeit (bei 80% oder mehr)
+ - @neurotrauma (bei 10% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @leberschäden (bei 4% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @herzschäden (bei 4% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @nierenversagen (bei 8% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft, 4% wenn eine Niere tot ist)
+ - @lungenverletzungen (bei 4% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @knochenschäden (neutralisiert die natürliche Regeneration vollständig bei 100%)
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - @flüssigsauerstoffit</Manual_Description_Hypoxemia>
+  <Manual_Description_Sepsis>Sepsis ist eine gefährliche Affektion, die durch infizierte Wunden verursacht wird.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - Infizierte Wunden
+ - Fremdkörper
+ - Gangrän
+ - Chirurgische Infektionen
+ - Blutkonserven, deren Spender Sepsis hatte
+ - Fehlgeschlagener Azathioprin-Fähigkeitscheck
+ 
+ ## Effekte:
+ 
+ - Leberschäden
+ - Herzmuskelschäden
+ - Nierenschäden
+ - Lungenschäden
+ - Knochenschäden
+ - Neurotrauma
+ - Erhöhte Herzfrequenz
+ - Hyperventilation
+ - Verwirrung
+ - Fieber
+ - Gangrän
+ 
+ ## Behandlungen:
+ 
+ - Breitband-Antibiotika</Manual_Description_Sepsis>
+  <Manual_Description_Hemotransfusion_Shock>Hämtransfusionsschock ist ein Zustand, der nur auftritt, wenn man einer Person eine inkompatible Blutgruppe verabreicht (Beispiel: einem O+ Mensch A+ Blut geben).
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Verabreichung von inkompatiblen @Blutkonserven (gibt 100% Stärke)
+ 
+ ##Effekte:
+ 
+ - @Erbrechen (zwischen 0-40%)
+ - @Brustschmerzen (zwischen 0-60%)
+ - @Blutverlust (zwischen 0-70%)
+ - @Leberschäden (zwischen 0-70%)
+ - @Herzschäden (zwischen 0-70%)
+ - @Nierenschäden (zwischen 0-70%)
+ - @Lungenschäden (zwischen 0-70%)
+ - @Atemnot (zwischen 0-70%)
+ - @Bauchbeschwerden (zwischen 0-80%)
+ - @Keuchen (zwischen 0-90%)
+ 
+ ##Behandlungen:
+ 
+ - @Streptokinase
+ - Zeit</Manual_Description_Hemotransfusion_Shock>
+  <Manual_Description_Blood_Loss>Während Blutverlust extrem ressourcenintensiv sein kann, um ihn zu heilen, wenn er schwerwiegend genug ist, kann er in der Regel ignoriert werden, wenn er bei oder unter 30% liegt.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Wunden (Blutungen)
+ - @Hemotransfusion-Schock (zwischen 0-70%)
+ - @innere-Blutungen
+ - Verwendung eines @leeren-Blutbeutels
+ - @arterielle-Blutungen
+ - @Aortenruptur
+ - @Operations-Schnitt (sofern sie nicht @geklemmte-Blutungen haben)
+ - @Hämatologie-Analysator
+ 
+ ##Effekte:
+ 
+ - @Hypotonie (skaliert je nach Blutverlust)
+ - @Hypoxämie (bei 40% oder mehr)
+ - @erhöhter-Herzschlag (bei 40% oder mehr)
+ - @blasse-Haut (bei 40% oder mehr)
+ - @Kopfschmerzen (bei 50% oder mehr)
+ - @Schwäche (bei 60% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Geben von @Blutbeuteln
+ - @Deusizine
+ - Zeit
+ @Kampf-Stimulans</Manual_Description_Blood_Loss>
+  <Manual_Description_Hypotension>Hypotonie ist ein Blutdruck, der unter den normalen Werten liegt. Hypotonie ist tödlich, wenn sie schwerwiegend genug ist. Niedrigere Prozentsätze entsprechen einem niedrigeren Blutdruck.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Blutverlust (skaliert je nach Blutverlustmenge)
+ - @traumatischer Schock
+ - @Herzstillstand (setzt den Blutdruck auf das Minimum)
+ - @Herzbeuteltamponade (halbiert den Blutdruck)
+ - @Natriumnitroprussid (reduziert den Blutdruck um 45%)
+ - @Nitroglycerin (reduziert den Blutdruck um 45%)
+ - @unregelmäßiger Herzschlag
+ 
+ ##Effekte:
+ 
+ - @Hypoxämie (bei 70% oder weniger)
+ - @Fibrillation
+ - @Hyperventilation (bei 80% oder weniger)
+ - @Verwirrung (bei 30% oder weniger)
+ - @Schwindel (bei 60% oder weniger)
+ - @Verschwommenes Sehen (bei 55% oder weniger)
+ - @Blasses Aussehen (bei 50% oder weniger)
+ - @Kopfschmerzen (bei 60% oder weniger)
+ 
+ ##Behandlungen:
+ 
+ - Gabe von @Blutpackungen, @Salzlösung oder @Ringer-Lösung
+ - @Autopulse
+ - @Adrenalin
+ - Wiederbelebung
+ - Behandlung der Ursachen</Manual_Description_Hypotension>
+  <Manual_Description_Hypertension>Hypertonie ist ein Blutdruck, der über den normalen Werten liegt. Hypertonie ist tödlich, wenn sie schwerwiegend genug ist. Höhere Prozentsätze entsprechen einem höheren Blutdruck.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Nierenschaden
+ - @Leberschaden
+ - Übermäßiges Blutvolumen durch Injektion von @Salzlösung/@Ringer-Lösung oder @Blutkonserven
+ - @Autopulse
+ - @Entzug (Alkoholentzug)
+ - @Adrenalin
+ - Wiederbelebung (CPR)
+ 
+ ##Effekte:
+ 
+ - @Schlaganfall (bei 150% oder mehr)
+ - @Nierenschaden (bei 184% oder mehr, Punkt, an dem die natürliche Regeneration übertroffen wird, 152% wenn eine Niere tot ist)
+ - @Herzinfarkt (bei 150% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Induzierung von @Blutverlust (vorzugsweise mit @Chirurgie-Schnitt oder einem @leeren-Blutbeutel)
+ - @Natriumnitroprussid oder @Nitroglycerin
+ - Behandlung der Ursachen</Manual_Description_Hypertension>
+  <Manual_Description_Acidosis>Azidose ist normalerweise vernachlässigbar und erfordert bei geringer bis mittlerer Schwere nur minimale Maßnahmen. Azidose und @Alkalose heben sich gegenseitig auf.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypoventilation
+ - @Atemstillstand
+ - @Herzstillstand
+ - @Nierenschäden (80% oder mehr)
+ - @Blutpackungen, deren Spender Azidose hatte (die gewonnene Azidose entspricht dem Azidose-Level des Spenders zum Zeitpunkt der Entnahme geteilt durch 5)
+ - @Kochsalzlösung
+ 
+ ##Effekte:
+ 
+ - @Krampfanfälle (bei 60% oder mehr)
+ - @Koma (bei 60% oder mehr)
+ - @erhöhter Herzschlag (bei 20% oder mehr)
+ - @Fibrillation
+ - @Kopfschmerzen (bei 20% oder mehr)
+ - @Verwirrung (bei 15% oder mehr)
+ - @Schwäche (bei 35% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Induktion von @Alkalose (vorzugsweise durch @Erbrechen)
+ - Transfusion neutraler @Blutpackungen (sofern der Patient keinen Blutverlust von 0% hat)</Manual_Description_Acidosis>
+  <Manual_Description_Alkalosis>Alkalose ist normalerweise vernachlässigbar und es ist nur minimale Maßnahme bei geringer bis mittlerer Schwere erforderlich. Alkalose und @Azidose heben sich gegenseitig auf.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hyperventilation
+ - @Erbrechen
+ - @Blutpackungen, deren Spender Alkalose hatte (die gewonnene Alkalose entspricht dem Alkalose-Level des Spenders zum Zeitpunkt der Entnahme geteilt durch 5)
+ 
+ ##Effekte:
+ 
+ - @Krampfanfälle (bei 60% oder mehr)
+ - @Herzklopfen (bei 20% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Induktion von @Azidose (vorzugsweise mit @Salzlösung)
+ - Transfusion neutraler @Blutpackungen (sofern der Patient keinen Blutverlust von 0% hat)</Manual_Description_Alkalosis>
+  <Manual_Description_Adrenaline>Adrenalin wird zur Behandlung von @Herzstillstand eingesetzt. Als Gegenleistung für die Heilung der Wirkung erhöht es den Blutdruck des Patienten um 30%. Neben diesen Wirkungen gibt es dem Patienten @Analgesie (aber nicht mehr als 4,5%), @erhöhte-Herzfrequenz, @Hyperventilation, erhöht den Nahkampfschaden um 20%. Halbiert den Gewinn von @Fibrillation und verringert die Potenz von Verlangsamungseffekten.</Manual_Description_Adrenaline>
+  <Manual_Description_AED>Ein Gegenstand, der verwendet wird, um den Herzschlag eines Patienten zu korrigieren. Wenn er bei einem Patienten angewendet und mit Batterien aufgeladen wird, hat der AED die Chance, entweder eine @Fibrillation zurückzusetzen oder einen @Herzstillstand zu heilen. Bei medizinischen Fähigkeiten unter 80 ist der AED in jeder Hinsicht dem @manuellen-Defibrillator überlegen, außer dass er eine Sekunde länger braucht als der manuelle Defibrillator. Zwischen 80 und 100 medizinischen Fähigkeiten übertrifft der manuelle Defibrillator die Chance des AED, einen Herzstillstand zu heilen, hat aber immer noch eine (verschwindend geringe) Gefahr, einen Herzstillstand zu verursachen oder eine Fibrillation nicht zu korrigieren, während der AED dies nicht tut. Bei 100 medizinischen Fähigkeiten ist der manuelle Defibrillator überlegen. Der manuelle Defibrillator wird vollkommen sicher und garantiert, einen Herzstillstand zu heilen.</Manual_Description_AED>
+  <Manual_Description_Alien_Blood>###Medizinischer Fertigkeitscheck: 40
+ Die Verwendung von Alien-Blut anstelle von normalem Blut ist äußerst gefährlich und sollte nur in Notfällen verwendet werden.
+ 
+ ###Erfolgreiche Anwendung:
+ -7,5% @Blutverlust
+ +3,75% Schaden an normalen Organen
+ +99% @Hämotransfusions-Schock
+ 
+ ###Fehlgeschlagene Anwendung:
+ -7,5% @Blutverlust
+ +7,5% Schaden an normalen Organen
+ +99% @Hämotransfusions-Schock</Manual_Description_Alien_Blood>
+  <Manual_Description_Ambubag>Ein Gegenstand, der verwendet wird, um zusätzlichen Sauerstoff bereitzustellen, wenn ein Patient nicht genug atmet oder gar nicht atmet.
+ 
+ Die Verwendung des Ambubags mit einem regulären Sauerstofftank darin behandelt einen Sauerstoffmangel von 90% und verwendet 2% des Sauerstoffs im Tank.
+ 
+ Die Verwendung des Ambubags mit einem Oxygenite-Tank darin behandelt einen Sauerstoffmangel von 90%, heilt einen Atemstillstand und verwendet 2% des Sauerstoffs im Tank.
+ 
+ Die Verwendung des Ambubags mit einem Schweißbrenner-Tank darin verursacht einen Sauerstoffmangel von 110%, verursacht 10% Lungenschäden und verwendet 5% des Schweißbrenner-Kraftstoffs im Tank.
+ 
+ Die Verwendung des Ambubags mit einem Incendium-Kraftstofftank darin verursacht einen Sauerstoffmangel von 110%, verursacht 20% Lungenschäden, verursacht 10% Verbrennungen und verwendet 5% des Incendiums im Tank.
+ 
+ Die Verwendung des Ambubags mit Farbe darin verursacht einen Sauerstoffmangel von 50%, verursacht 3% Lungenschäden, verursacht 5% chemische Abhängigkeit, behandelt 20% chemischen Entzug und verwendet 5% der Farbe in der Dose.</Manual_Description_Ambubag>
+  <Manual_Description_Anaparalyzant>###Medizinischer Fertigkeitswurf: 64
+ 
+ Neben seiner ursprünglichen Verwendung zur Bereitstellung von Paralyse-Resistenz und zur Behandlung von Paralyse kann Anaparalyzant verwendet werden, um @Anästhesie schnell zu verringern und einen Patienten viel schneller aufzuwecken.
+ 
+ ###Anwendungs-Erfolg:
+ Heilt sofort @Anästhesie
+ +5% Psychose
+ +800% Paralyse-Resistenz.
+ 
+ ###Anwendungsfehler:
+ -3% @Anästhesie pro Sekunde für 60 Sekunden
+ +6,5% Paralyse-Resistenz pro Sekunde für 60 Sekunden
+ +0,75% Psychose pro Sekunde für 60 Sekunden</Manual_Description_Anaparalyzant>
+  <Manual_Description_Antibiotic_Glue>### Medizinischer Fertigkeitswurf: 55
+ Ein Klebstoff, der schnell blutende Wunden versiegelt und Verbrennungen an einem einzigen Glied behandelt.
+ 
+ ### Erfolg bei der Anwendung:
+ -100% Blutung gestoppt
+ -30% Verbrennungen behandelt
+ 
+ ### Misserfolg bei der Anwendung:
+ -75% Blutung gestoppt
+ -15% Verbrennungen behandelt
+ 50% Chance auf einen Herzinfarkt.</Manual_Description_Antibiotic_Glue>
+  <Manual_Description_Antibiotic_Ointment>###Medizinischer Fertigkeitswurf: 10
+ Antibiotische Salbe ist ein Gegenstand, der zur Heilung von @Verbrennungen und zur Behandlung von @infizierten Wunden verwendet wird.
+ 
+ ###Erfolgreiche Anwendung:
+ -12% @Verbrennungen
+ -72% @infizierte Wunden
+ +100% @salbenbehandelt
+ 
+ ###Fehlgeschlagene Anwendung:
+ -7% @Verbrennungen
+ -24% @infizierte Wunden
+ +60% @salbenbehandelt</Manual_Description_Antibiotic_Ointment>
+  <Manual_Description_Antiseptic>Antiseptikum ist ein Gegenstand, dessen einziger Zweck darin besteht, in den @antiseptic-sprayer geladen zu werden. Für jeden Sprühstoß des Antiseptikum-Sprayers wird 10% des Zustands des Antiseptikums verwendet.</Manual_Description_Antiseptic>
+  <Manual_Description_Antiseptic_Sprayer>Ein Sprüher, der @Antiseptikum auf @infizierte Wunden sprüht. Die Verwendung des Antiseptikum-Sprühers mit Antiseptikum darin behandelt 100% infizierte Wunden, gibt 5% @eingecremt und verbraucht 10% des Antiseptikums.</Manual_Description_Antiseptic_Sprayer>
+  <Manual_Description_Autopulse>Der beste Freund eines Sanitäters. Um den Autopulse zu verwenden, trage ihn einfach in deinem Taucheranzug-Slot. Während er getragen wird und mit Batterien ausgestattet ist, wird der Autopulse einen Herzstillstand heilen. (Note: "cure" can also be translated as "heilen" in this context)</Manual_Description_Autopulse>
+  <Manual_Description_Azathioprine>### Medizinischer Fertigkeitswurf: 10
+ Azathioprin ist ein Immunsuppressivum, das während einer Organtransplantation eingesetzt wird, wenn die Organabstoßung in der Konfiguration von Neurotrauma aktiviert ist. Es senkt im Laufe der Zeit die Immunität und macht es sicher, ein Organ in den Körper zu setzen, wenn die Immunität unter 10% liegt.
+ 
+ ### Erfolgreiche Anwendung:
+ Senkt die Immunität im Laufe der Zeit.
+ 
+ ### Fehlgeschlagene Anwendung:
+ Senkt die Immunität im Laufe der Zeit.
+ Verursacht Sepsis.</Manual_Description_Azathioprine>
+  <Manual_Description_Bandages>### Medizinischer Fertigkeitswurf: 10
+ 
+ Verbandmittel werden verwendet, um Wunden abzudecken und Infektionen zu verhindern.
+ 
+ ### Erfolgreiche Anwendung:
+ 
+ \\+50% @verbunden
+ \\-24% Blutung
+ 
+ ### Fehlgeschlagene Anwendung:
+ 
+ \\+36% @verbunden
+ \\-18% Blutung</Manual_Description_Bandages>
+  <Manual_Description_Blood_Packs>Blutpackungen werden durch die Verwendung eines @empty-blood-pack an einem Menschen mit weniger als 31% @blood-loss erworben. Blutpackungen müssen dem richtigen Bluttyp verabreicht werden, der in der Beschreibung des Gegenstands angegeben ist.
+ 
+ ###Anwendung bei kompatiblem Bluttyp
+ -30% Blutverlust
+ +30% Blutdruck
+ 
+ ###Anwendung bei inkompatiblem Bluttyp
+ -20% Blutverlust
+ +30% Blutdruck
+ +100% @hemotransfusion-shock
+ 
+ Wenn der Mensch, von dem die Blutpackung stammt, entweder an @acidosis, @alkalosis oder @sepsis leidet, werden diese Affektionen auch an den Empfänger des Blutes weitergegeben (die erhaltene Affektion entspricht dem Affektionslevel des Spenders zum Zeitpunkt der Entnahme geteilt durch 5). Zusätzlich wird bei Empfängern von Blut, die an Acidose und Alkalose leiden, die Transfusion von neutralem Blut den Blut-pH-Wert näher an den Neutralpunkt bringen und beide Affektionen teilweise behandeln, es sei denn, der Patient hat einen Blutverlust von 0%.</Manual_Description_Blood_Packs>
+  <Manual_Description_Blue_Shark>### Medizinische Fähigkeitsprüfung: Keine
+ Ein lustiger kleiner blauer Hai, der möglicherweise Ihre mentale Instabilität heilen könnte.
+ 
+ ### Bei Anwendung:
+ Behandelt 2% Psychose und macht quietschende Geräusche.</Manual_Description_Blue_Shark>
+  <Manual_Description_Body_Bag>Die Leichentasche ist ein Gegenstand, der verwendet wird, um Körper viel schneller zu transportieren als sie einfach zu ziehen. Sie wird in den Taucheranzug-Slot gelegt und wird einen lebenden Menschen ersticken, wenn er hineingelegt wird. (Note: "Affliction" was not used in the original text, so no need to translate it as "Effekt")</Manual_Description_Body_Bag>
+  <Manual_Description_Broad-spectrum_Antibiotics>### Medizinischer Fertigkeitswurf: 25
+ 
+ Breitband-Antibiotika sind die Hauptbehandlung bei @Sepsis. Es gilt immer noch der Husk-Infektionsresistenz-Buff und reduziert vorhandene Husk-Infektionen im Laufe der Zeit gemäß Vanilla.
+ 
+ Der Blutdruck des Patienten muss über 70% liegen und ihr @Hypoxämie muss unter 30% liegen, um Sepsis effektiv zu behandeln.
+ 
+ ### Erfolgreiche Anwendung:
+ 
+ Eine erfolgreiche Anwendung der Antibiotika wird eine Affektionsstärke von 50% bereitstellen, die sich um 0,5% pro Sekunde verringert und insgesamt 100 Sekunden mit einer Dosis ergibt. 50% Breitband-Antibiotika behandeln 0,95% Sepsis pro Sekunde für 100 Sekunden.
+ 
+ Es wird jedoch verursachen:
+ 
+ - 0,2% Vanilla-Organ-Schaden pro Sekunde für 100 Sekunden
+ - 0,175% @Nierenschaden pro Sekunde für 100 Sekunden
+ - 0,175% @Leberschaden pro Sekunde für 100 Sekunden
+ - 0,1% @Herzschaden pro Sekunde für 100 Sekunden
+ - 0,1% @Lungenschaden pro Sekunde für 100 Sekunden
+ - Insgesamt werden die Organe mit 20% Organ-Schaden, 17,5% Nieren- und Leberschaden sowie 10% Herz- und Lungenschaden enden.
+ 
+ ### Anwendungsfehler:
+ 
+ Eine fehlgeschlagene Anwendung wird eine Affektionsstärke von 30% bereitstellen. Es wird sich mit der gleichen Rate wie eine erfolgreiche Anwendung verringern und Sepsis behandeln. 30% Breitband-Antibiotika behandeln 0,95% Sepsis pro Sekunde für 60 Sekunden.
+ 
+ Es wird jedoch verursachen:
+ 
+ - 0,2% Vanilla-Organ-Schaden pro Sekunde für 60 Sekunden
+ - 0,175% Nierenschaden pro Sekunde für 60 Sekunden
+ - 0,175% Leberschaden pro Sekunde für 60 Sekunden
+ - 0,1% Herzschaden pro Sekunde für 60 Sekunden
+ - 0,1% Lungenschaden pro Sekunde für 60 Sekunden
+ - Insgesamt werden die Organe mit 12% Organ-Schaden, 10,5% Nieren- und Leberschaden sowie 6% Herz- und Lungenschaden enden.</Manual_Description_Broad-spectrum_Antibiotics>
+  <Manual_Description_Combat_Stimulant>Kampfstimulans ist ein Stimulans, das auch als Erste-Hilfe-Artikel dient. Von 1% bis 10% Stärke behandelt die Chemikalie Verbrennungen, Blutverlust, Wunden, innere Blutungen und Chemikalienentzug um 1% pro Sekunde, bis die Stärke der Affektion auf 0% abnimmt oder über 10% hinausgeht, wenn eine weitere Injektion verabreicht wird. Der Spieler erhält auch bei 10% eine 45%ige Betäubungsresistenz. Dieser Bonus nimmt mit der Stärke der Affektion ab.
+ 
+ Von 11% bis 100% Stärke behandelt die Chemikalie die vorherigen Schadensarten mit 2% pro Sekunde und bietet dem Spieler eine Betäubungsresistenz von 45% bis 50%.</Manual_Description_Combat_Stimulant>
+  <Manual_Description_Deusizine>### Medizinischer Fertigkeitswurf: 72
+ Eine spezielle Behandlung, die über einen Zeitraum von 20 Sekunden zur Behandlung von @Blutverlust, Schäden an Organen, @inneren Verletzungen und @Hypoxämie eingesetzt wird.
+ 
+ ### Erfolgreiche Anwendung:
+ -40% @innere Verletzungen
+ -40% @Blutverlust
+ -100% @Hypoxämie
+ -40% Schäden an Organen
+ +4% @Verbrennungen
+ +40% Blutdruck
+ 
+ ### Fehlgeschlagene Anwendung:
+ -20% @innere Verletzungen
+ -20% @Blutverlust
+ -40% @Hypoxämie
+ -20% Schäden an Organen
+ +12% @Verbrennungen
+ +20% Blutdruck</Manual_Description_Deusizine>
+  <Manual_Description_Diving_Knife>###Medizinischer Fertigkeitswurf: 30
+ Neben den normalen Verwendungen eines Messers können sie verwendet werden, um @Verbände zu entfernen.
+ 
+ ###Erfolgreiche Anwendung:
+ Entfernt @Verbände am Gliedmaßen, auf dem das Messer verwendet wurde.
+ 
+ ###Fehlgeschlagene Anwendung:
+ +15% Blutung
+ +10% Schnittwunden</Manual_Description_Diving_Knife>
+  <Manual_Description_Drainage>Die Drainage ist ein Einwegartikel, der zur Behandlung von Pneumothorax verwendet wird. Sie wird nach zurückgezogener Haut verwendet.</Manual_Description_Drainage>
+  <Manual_Description_Empty_Blood_Pack>###Medizinische Fertigkeitsprüfung: 30
+ Leere Blutbeutel werden verwendet, um @blood-packs zu erhalten. Leere Blutbeutel können nur bei Menschen mit weniger als 31% @blood-loss verwendet werden, sonst hat es keine Wirkung.
+ 
+ ###Anwendungserfolg:
+ +30% Blutverlust
+ 
+ ###Anwendungsfehler:
+ +40% Blutverlust
+ 
+ Wenn der Mensch, auf den der leere Blutbeutel angewendet wird, entweder an @acidosis, @alkalosis oder @sepsis leidet, werden diese Affektionen auch an den Empfänger des Blutes weitergegeben (die erhaltene Affektionsstufe des Spenders wird durch 5 geteilt).</Manual_Description_Empty_Blood_Pack>
+  <Manual_Description_Endovascular_Balloon>Der dritte Schritt bei der Operation eines Aortenrisses.</Manual_Description_Endovascular_Balloon>
+  <Manual_Description_Fentanyl>###Medizinischer Fertigkeitscheck: 72
+ 
+ Ein starkes Analgetikum, das zur Induktion von @Analgesie verwendet wird.
+ 
+ ###Anwendungserfolg:
+ +75% @Analgesie
+ +15% Opiatabhängigkeit
+ +22,5% @Opiat-Überdosis
+ -100% Opiatentzug.
+ 
+ ####Bei Betrunkenheit (&gt;30% betrunken) ändert sich zu:
+ +150% @Analgesie
+ +15% Opiatabhängigkeit
+ +37,5% @Opiat-Überdosis
+ -100% Opiatentzug.
+ 
+ ###Anwendungsfehler:
+ +50% @Analgesie
+ +40% Opiatabhängigkeit
+ +30% @Opiat-Überdosis
+ -100% Opiatentzug.
+ 
+ ####Bei Betrunkenheit (&gt;30% betrunken) ändert sich zu:
+ +100% @Analgesie
+ +40% Opiatabhängigkeit
+ +60% @Opiat-Überdosis
+ -100% Opiatentzug.</Manual_Description_Fentanyl>
+  <Manual_Description_Gypsum>###Medizinischer Fertigkeitswurf: 40
+ Ein feines Pulver, das in Verbindung mit @Verband verwendet wird, um eine Gliedmaße in einem Gipsverband zu umhüllen, um @Knochenbrüche zu heilen. Gips funktioniert nicht, wenn Sie zuvor keine Bandagen oder @Plastiseal verwendet haben, und es wird bei Schädel-, Rippen- und Nackenbrüchen nichts bewirken.
+ 
+ Für jeden auf den Spieler aufgetragenen Gipsverband wird die Bewegungsgeschwindigkeit um 20% verringert. Gipsverbände können mit @Trauma-Scheren entfernt werden.
+ 
+ ###Anwendungserfolg:
+ Verwandelt den aufgetragenen Verband in einen Gipsverband, der langsam Arm- und Beinbrüche heilt, die darin eingeschlossen sind.
+ 
+ ###Anwendungsfehler:
+ Löscht den Gips und bewirkt nichts.</Manual_Description_Gypsum>
+  <Manual_Description_Health_Scanner>Ein Gegenstand, der für die Diagnose äußerst wichtig ist. Bei Verwendung und Aufladung mit Batterien erhalten Sie die Anzeige aller Effekte, die für den Gesundheitsscanner sichtbar sind, und der Patient, den Sie scannen, erhält 0,5% @Strahlenkrankheit pro Sekunde, während Sie (die Person, die scannt) 0,3% pro Sekunde erhalten. Darüber hinaus kann man sich selbst und andere scannen, indem man den Gesundheitsscanner in der Schnittstelle wie eine Behandlung verwendet, wie man es mit einem Verband tun würde. Dies führt zu 1% Strahlenkrankheit und ermöglicht es Ihnen auch, einzelne Gliedmaßen zu scannen, um Dinge wie @Fremdkörper zu finden.</Manual_Description_Health_Scanner>
+  <Manual_Description_Hematology_Analyzer>###Medizinische Fertigkeitsprüfung: 30
+ 
+ ###Erfolgreiche Anwendung:
+ +1% @Blutverlust
+ 
+ ###Fehlgeschlagene Anwendung:
+ +3% @Blutverlust
+ 
+ Das Bestehen oder Scheitern der Fertigkeitsprüfung gibt Ihnen auch eine Übersicht über alle blutbezogenen Krankheiten Ihres Patienten, wie z.B. @Sepsis, @Azidose oder @Alkalose. Der Hämatologie-Analysator kann auch verwendet werden, um die Blutgruppe Ihres Patienten zu überprüfen, um einen @Hämotransfusions-Schock zu vermeiden. Wenn Sie eine Spenderkarte in den Analysator legen und ihn dann verwenden, wird die Blutgruppe auf die Spenderkarte gedruckt und in den Ausweissteckplatz des Patienten gesteckt, so dass Sie später ohne den Analysator die Blutgruppe überprüfen können.</Manual_Description_Hematology_Analyzer>
+  <Manual_Description_Hemostat>Der dritte Schritt bei den meisten chirurgischen Eingriffen. Die Pinzette funktioniert nicht ohne eine 100%ige @surgery-incision. Die Verwendung erfordert keine medizinischen Fähigkeiten. Wenn die Pinzette erfolgreich verwendet wird, wird der Patient @clamped-bleeding an der Gliedmaße haben, auf der das Werkzeug verwendet wurde.</Manual_Description_Hemostat>
+  <Manual_Description_Hyperzine>###Medizinischer Fertigkeitscheck: 50
+ Ein starkes Stimulans
+ 
+ ###Erfolgreiche Anwendung:
+ -6% interner Schaden
+ +9% Chemieabhängigkeit
+ +9% @Neurotrauma
+ +15% Psychose
+ 
+ ###Fehlgeschlagene Anwendung:
+ -3% interner Schaden
+ +18% Chemieabhängigkeit
+ +30% Psychose
+ 
+ In beiden Fällen bietet die Chemikalie 400% Haste und 400% Vigor und reduziert den Chemieentzug um 45%. Der Spieler erholt sich auch 90% schneller von Betäubungen für 60 Sekunden.</Manual_Description_Hyperzine>
+  <Manual_Description_Liquid_Oxygenite>###Medizinischer Fertigkeitscheck: 72
+ Ein verflüssigtes außerirdisches Material, das verwendet wird, um Sauerstoff direkt in den Blutkreislauf zu injizieren und @Hypoxämie zu behandeln.
+ 
+ ###Anwendungserfolg:
+ Heilt alle @Hypoxämie für 30 Sekunden, alle anderen Effekte treten über 30 Sekunden auf:
+ +6% Schaden an den Vanilla-Organen
+ +6% @Lungen-Schaden
+ +6% @Leber-Schaden
+ +6% @Herz-Schaden
+ +6% @Nieren-Schaden.
+ 
+ ###Anwendungsfehler:
+ Alle Effekte treten über 20 Sekunden auf:
+ -200% @Hypoxämie
+ +10% Schaden an den Vanilla-Organen
+ +10% @Lungen-Schaden
+ +10% @Leber-Schaden
+ +10% @Herz-Schaden
+ +10% @Nieren-Schaden.</Manual_Description_Liquid_Oxygenite>
+  <Manual_Description_Mannitol>###Medizinischer Fertigkeitscheck: 60
+ Mannitol ist ein Medikament, das zur Behandlung von @neurotrauma eingesetzt wird, solange der Blutdruck über 70% und die @hypoxämie unter 30% liegt. Als Gegenleistung für die Heilung von @neurotrauma verursacht es Schäden an den Organen, @Herzschäden und @Nierenschäden. Mannitol halbiert den Gewinn von @neurotrauma, unabhängig davon, ob das Blut stabil ist oder nicht.
+ 
+ Mannitol-Affektion und Organschäden treten beide innerhalb von 10 Sekunden auf.
+ 
+ ###Anwendungserfolg:
+ +50% Mannitol-Affektion, die im Laufe der Zeit 100% @neurotrauma heilen wird
+ +5% Schäden an den Organen
+ +10% @Herzschäden
+ +10% @Nierenschäden
+ 
+ ###Anwendungsfehler:
+ +30% Mannitol-Affektion, die im Laufe der Zeit 60% @neurotrauma heilen wird
+ +10% Schäden an den Organen
+ +20% @Herzschäden
+ +20% @Nierenschäden</Manual_Description_Mannitol>
+  <Manual_Description_Manual_Defibrillator>Ein Gegenstand, der verwendet wird, um den Herzschlag eines Patienten zu korrigieren. Wenn er bei einem Patienten angewendet und mit Batterien aufgeladen wird, hat der Defibrillator die Chance, entweder eine @Fibrillation zurückzusetzen oder einen Herzstillstand zu heilen.
+ 
+ Die Chance dafür ist in der untenstehenden Grafik dargestellt, wobei Cyan die Chance darstellt, eine Fibrillation zurückzusetzen, Pink die Chance, einen Herzstillstand zu verursachen, und Orange die Chance, ihn zu heilen. Die X-Achse ist die medizinische Fähigkeit und die Y-Achse ist die Chance, etwas zu tun (mit 1 als 100%).
+ 
+ Bei medizinischen Fähigkeiten unter 80 besteht die Gefahr, mit dem @AED einen Herzstillstand zu verursachen oder eine Fibrillation nicht korrigieren zu können, während der manuelle Defibrillator dies nicht tut. Bei 100 medizinischen Fähigkeiten ist der manuelle Defibrillator überlegen. Der manuelle Defibrillator wird vollkommen sicher und garantiert, einen Herzstillstand zu heilen.</Manual_Description_Manual_Defibrillator>
+  <Manual_Description_Medical_Stent>Der vierte Schritt bei der Operation eines Aortenrisses. Der Stent wird nicht funktionieren, wenn Sie zuvor nicht den endovaskulären Ballon verwendet haben. Die Verwendung des medizinischen Stents heilt den Aortenriss und entfernt auch den endovaskulären Ballon vom Patienten.</Manual_Description_Medical_Stent>
+  <Manual_Description_Methamphetamine>###Medizinischer Fertigkeitswurf: 35
+ Ein Stimulans, das innerhalb von 30 Sekunden wirkt.
+ 
+ ###Anwendungserfolg:
+ +15% Schaden an Vanille-Organen
+ +15% @Neurotrauma
+ +15% Chemieabhängigkeit
+ +30% Psychose
+ 
+ ###Anwendungsfehler:
+ +30% Schaden an Vanille-Organen
+ +30% @Neurotrauma
+ +30% Chemieabhängigkeit
+ +45% Psychose
+ 
+ In beiden Fällen erholt sich der Benutzer 30 Sekunden lang um 75% schneller von Betäubungen und das chemische Mittel behandelt 90% der Chemieentzugssymptome.</Manual_Description_Methamphetamine>
+</infotexts>

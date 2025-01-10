@@ -148,6 +148,61 @@
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Other     file="%ModDir%/Characters/Human/Ragdolls/HumanDefaultRagdoll.xml" />
 
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/English/English_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/English/English_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/English/English_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/English/English_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/CastilianSpanish/CastilianSpanish_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/CastilianSpanish/CastilianSpanish_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/CastilianSpanish/CastilianSpanish_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/CastilianSpanish/CastilianSpanish_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/French/French_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/French/French_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/French/French_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/French/French_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/German/German_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/German/German_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/German/German_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/German/German_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Japanese/Japanese_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Japanese/Japanese_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Japanese/Japanese_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Japanese/Japanese_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/LatinamericanSpanish/LatinamericanSpanish_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/LatinamericanSpanish/LatinamericanSpanish_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/LatinamericanSpanish/LatinamericanSpanish_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/LatinamericanSpanish/LatinamericanSpanish_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Polish/Polish_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Polish/Polish_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Polish/Polish_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Polish/Polish_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Portuguese/Portuguese_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Portuguese/Portuguese_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Portuguese/Portuguese_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Portuguese/Portuguese_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Russian/Russian_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Russian/Russian_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Russian/Russian_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Russian/Russian_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/SimpleChinese/SimpleChinese_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/SimpleChinese/SimpleChinese_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/SimpleChinese/SimpleChinese_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/SimpleChinese/SimpleChinese_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/TraditionalChinese/TraditionalChinese_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/TraditionalChinese/TraditionalChinese_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/TraditionalChinese/TraditionalChinese_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/TraditionalChinese/TraditionalChinese_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Turkish/Turkish_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Turkish/Turkish_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Turkish/Turkish_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Turkish/Turkish_Description_3.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Korean/Korean_Header.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Korean/Korean_Description_1.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Korean/Korean_Description_2.xml" />
+  <Text file="%ModDir%/Localization/INGAMEGUIDE/Korean/Korean_Description_3.xml" />
+  <Item file="%ModDir%/Xml/Items/Guide/GeneratedItems.xml" />
+  <Item file="%ModDir%/Xml/Items/Guide/Generic.xml" />
+
   <Other file="%ModDir%/Credits.txt" />
-  
+
 </contentpackage>

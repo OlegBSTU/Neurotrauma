@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <Manual_Description_Morphine>###医疗技能检查：30
+ 
+ 一种中等功效的止痛药，用于诱导@效应。
+ 
+ ###应用成功：
+ +50% @效应
+ +10% 鸦片成瘾
+ +10% @鸦片过量
+ -30% 鸦片@戒断。
+ 
+ ####醉酒时（&gt;30% 醉酒）变化为：
+ +100% @效应
+ +10% 鸦片成瘾
+ +20% @鸦片过量
+ -30% 鸦片@戒断。
+ 
+ ###应用失败：
+ +30% @效应
+ +25% 鸦片成瘾
+ +20% @鸦片过量
+ -30% 鸦片@戒断。
+ 
+ ####醉酒时（&gt;30% 醉酒）变化为：
+ +60% @效应
+ +25% 鸦片成瘾
+ +40% @鸦片过量
+ -30% 鸦片@戒断。</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###医疗技能检定：39
+ 纳洛酮用于治疗阿片类药物戒断、阿片类药物过量和镇痛。效果在30秒内发生。
+ 
+ ###应用成功：
+ -60% 阿片类药物戒断
+ -60% 阿片类药物过量
+ -60% 镇痛
+ 
+ ###应用失败：
+ -30% 阿片类药物戒断
+ -30% 阿片类药物过量
+ -60% 镇痛
+ 50% 的几率使患者陷入昏迷。</Manual_Description_Naloxone>
+  <Manual_Description_Needle>这个针头是一次性使用的物品，用于将气胸减弱到5％的强度，并防止其恶化。但是，它并不能完全治疗气胸。在没有气胸的患者身上使用这个针头会导致他们患上气胸。请注意使用。</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###医疗技能检查：35
+ 一个装有非常不稳定的物质的罐子，易于在撞击或暴露于热源时爆炸。除了医疗技能检查为35外，其功能与@亚硝酸普鲁西德相同。
+ 
+ ###应用成功：
+ 降低血压400秒
+ 
+ ###应用失败：
+ 降低血压200秒</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###医疗技能检查：15
+ 
+ 使用弱镇痛剂诱导@镇痛
+ 
+ ###应用成功：
+ +20% @镇痛
+ +5% 鸦片成瘾
+ +8.75% @鸦片过量
+ -15% 鸦片@戒断症状。
+ 
+ ####醉酒时（&gt;30% 醉酒）变化为：
+ +40% @镇痛
+ +5% 鸦片成瘾
+ +18.75% @鸦片过量
+ -15% 鸦片@戒断症状。
+ 
+ ###应用失败：
+ +10% @镇痛
+ +20% 鸦片成瘾
+ +15% @鸦片过量
+ -15% 鸦片@戒断症状。
+ 
+ ####醉酒时（&gt;30% 醉酒）变化为：
+ +20% @镇痛
+ +20% 鸦片成瘾
+ +30% @鸦片过量
+ -15% 鸦片@戒断症状。</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>器官捐献手术中使用器官获取手术刀来提取相应的器官。每个器官都有一种相应的手术刀，包括：脑、心脏、肺、肝脏和肾脏。
+ 
+ - 用于脑的手术刀需要医疗技能检查100才能可靠地取出脑。
+ 
+ - 用于心脏的手术刀需要医疗技能检查60才能可靠地取出心脏。
+ 
+ - 用于肺的手术刀需要医疗技能检查50才能可靠地取出肺。
+ 
+ - 用于肝脏的手术刀需要医疗技能检查40才能可靠地取出肝脏。
+ 
+ - 用于肾脏的手术刀需要医疗技能检查30才能可靠地取出肾脏。</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>医疗技能检定：45
+ 
+ @骨折手术的第六步。
+ 
+ ### 应用成功：
+ 
+ 治愈使用植入物的肢体上的所有骨折，并使用植入物的25％。
+ 
+ ### 应用失败：
+ 
+ +5％出血
+ +5％ @内部损伤</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### 医疗技能检查：22
+ 
+ 一种改进版的@绷带，可以更有效地治疗伤口。
+ 
+ ### 应用成功：
+ 
+ \\+100% @绷带
+ \\-48% 出血
+ \\-24% @烧伤
+ 
+ ### 应用失败：
+ 
+ \\+50% @绷带
+ \\-24% 出血
+ \\-12% @烧伤
+ 
+ 应用塑封胶也会替换掉绷带上的任何污垢，该绷带应用于的肢体。塑封胶也可以在@收缩皮肤后使用，以治疗三度烧伤。</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>丙泊酚不再可制作
+ 
+ 丙泊酚是一种用于使人失去知觉的化学物质。它最适用于需要在船外进行的手术，因为它可以防止患者受到创伤性休克。它没有医疗技能检查。
+ 
+ 注射后，接受者会以每秒0.3％的速度缓慢获得麻醉效果。从1％到15％的强度，玩家将获得5％的镇痛效果。
+ 
+ 一旦病情进展到16％以上，玩家将陷入昏迷状态，并将保持昏迷状态，直到病情等待进展到100％或通过使用麻痹剂将其降低到0％。在此期间，玩家将不会感到剧烈疼痛/腹痛/胸痛，可以对他们进行手术。</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>猛禽毒药提取物用于治疗酸中毒，通过诱导患者呕吐来使其获得碱中毒。</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>医疗技能检查：30
+ 
+ 大多数外科手术的第四步。如果没有100%的夹紧止血，手术器械无法使用。
+ 
+ 应用成功：
+ 
+ 在使用工具的肢体上给予患者皮肤的牵拉。
+ 
+ 应用失败：
+ 
+ +10%的内部损伤。</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>林格液用于增加血压。与生理盐水不同，林格液不会引起酸中毒，只会增加血压。但请注意，它可能会将您的血压增加到不想要的水平。</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###医疗技能检查：10
+ 盐水是一种液体，用于治疗碱中毒，通过诱导酸中毒来达到治疗效果。
+ 
+ ###应用成功：
+ 增加血压
+ +20% 酸中毒
+ 
+ ###应用失败：
+ 增加血压
+ +12% 酸中毒</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###医疗技能检查：30
+ 所有外科手术程序的第二步。如果没有@镇痛剂，手术刀将无法使用。
+ 
+ ###应用成功：
+ 对使用工具的肢体进行@surgery-incision，并将移除任何石膏或@绷带。
+ 
+ ###应用失败：
+ +15％出血
+ +10％撕裂伤</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###医疗技能检查：10
+ 一种降低血压的药物。服用硝普钠会使您的血压降低45％。在该药物有效期间，由低血压引起的心房颤动将减少。
+ 
+ ###应用成功：
+ 降低血压200秒
+ 
+ ###应用失败：
+ 降低血压120秒</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>医疗技能检查：45
+ 
+ 用于治疗脊髓损伤的植入物。
+ 
+ ### 应用成功：
+ 
+ 成功使用植入物将治愈患者的脊柱。请注意，如果患者有颈椎骨折，它将会再次出现。
+ 
+ ### 应用失败：
+ 
+ +5％出血
+ +5％内部损伤</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>一种特殊的袋子，可将身体保持静止状态，以便在受伤严重时进行适当治疗。静止袋放置在潜水服槽中，佩戴它会以每秒0.25％的速度消耗其状态，这意味着静止袋将持续400秒或大约6分半钟。佩戴静止袋将保护佩戴者免受10,000米以下的压力，允许佩戴者以全速被拖曳，并停止以下痛苦的负面影响：
+ 
+ - @心脏骤停
+ - @呼吸骤停
+ - @心脏病发作
+ - @神经创伤
+ - @肾脏损伤
+ - @肝脏损伤
+ - @心脏损伤
+ - @肺损伤
+ - @骨损伤
+ - @败血症
+ - @低氧血症
+ - @低血压
+ - @高血压
+ - @酸中毒
+ - @碱中毒
+ - @内出血
+ - @中风
+ - @癫痫
+ - @昏迷
+ - @感染性伤口
+ - 出血
+ 
+ 需要注意的是，不能在人们身处静止袋内进行手术。他们需要在手术前从袋子中取出。从静止袋中取出的患者将出现@心脏骤停，需要治疗这些痛苦。</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###医疗技能检查：无
+ 一种抗凝剂。使用链激酶会防止自然出血再生，并在其活跃时使中风恶化。
+ 
+ ###应用：
+ - 完全治疗心脏病发作和输血休克。</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>手术台是一种可以从站点购买或制作后放置的物品。病人不需要在手术台上，只需要靠近它即可。手术台为靠近它的所有人提供人工通气，并在病人处于镇痛状态下防止创伤性休克。此外，手术台将减少低氧和防止呼吸停止增加酸中毒。
+ 
+ 该桌还有可用于输出重要信息的接线针，例如血压、神经创伤、心率和呼吸率。
+ 
+ 值得注意的是，手术台在功能上与医院床完全相同。其他床铺如果你躺在上面可以防止创伤性休克，但它们不提供人工通气。</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>医疗技能检查：45
+ 
+ @骨折手术的第五步。
+ 
+ ### 应用成功：
+ 
+ 成功使用手术钻将工具用于肢体上的@钻孔骨会给患者带来好处。
+ 
+ ### 应用失败：
+ 
+ +15％出血
+ +10％@内部损伤</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>医疗技能检查：45
+ 
+ 截肢手术中的第五步。
+ 
+ ### 应用成功：
+ 
+ 成功使用手术锯将使患者在使用该工具的肢体上出现“锯齿状骨折”。
+ 
+ ### 应用失败：
+ 
+ +15％出血
+ +6％内部损伤
+ +4％撕裂伤</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>医疗技能检定：30
+ 
+ 所有外科手术程序的最后一步。对于治疗大多数伤口出血也非常有用。
+ 
+ 应用成功：
+ 
+ 消除所有与手术相关的痛苦（如手术切口）
+ -20％枪伤
+ -20％撕裂伤口
+ -20％咬伤
+ -20％深层组织损伤
+ -40％出血
+ 
+ 应用失败：
+ 
+ +6％内部损伤</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### 医疗技能检查：10
+ 
+ 一瓶维生素B1药片，用于辅助器官愈合。
+ 
+ ### 应用成功：
+ 
+ 200秒的器官愈合时间
+ 
+ ### 应用失败：
+ 
+ 120秒的器官愈合时间
+ 
+ 200秒的器官愈合时间将愈合大约8%的器官损伤（不包括@神经创伤），而120秒将愈合4.8%。这是在自然器官愈合的同时进行的。硫胺酸不能使死亡的器官复活。</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>###医疗技能检查：30
+ 一种用于限制血液流向特定肢体以减轻常规和动脉出血的物品。
+ 止血带在没有动脉出血的情况下无法使用。可以使用外伤剪剪断。
+ 
+ ###应用成功：
+ 暂时停止动脉出血的负面影响，并缓慢治疗常规出血，但如果长时间使用会导致坏疽。在头部使用止血带会使受害者受到15%的神经创伤和200%的低氧。
+ 
+ ###应用失败：
+ +6%钝击创伤</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###医疗技能检查：10
+ 一把剪刀用于拆除石膏绷带和绷带。
+ 
+ ###应用成功：
+ 拆除了使用剪刀的肢体上的所有石膏绷带、绷带和分诊卡。
+ 
+ ###应用失败：
+ +15% 出血
+ +10% 擦伤</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>### 医疗技能检查：30
+ 一对镊子用于取出受损组织或子弹。
+ 
+ ### 应用成功：
+ -5% @内部损伤
+ -5% 钝力创伤
+ -5% @异物
+ +5% 擦伤
+ 
+ ### 应用失败：
+ +6% @内部损伤
+ 
+ 如果你要使用镊子取出枪伤或深层组织损伤的肢体，即使没有@缩回皮肤，镊子也可以使用，但会导致5%的@创伤性休克。取出异物也有5%的机会产生刮擦。</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###医疗技能检查：60（如果患者有@镇痛剂，则为30）
+ 扳手用于治疗@脱臼。要治疗脱臼，将其拖到健康界面上的脱臼肢体上，并将其用作治疗，就像使用绷带一样。
+ 
+ ###应用成功：
+ 治愈该肢体的脱臼
+ 
+ ###应用失败：
+ 导致该肢体骨折</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>创伤性休克非常致命，如果您的患者在任何时候出现这种情况，立即终止手术，将他们带回手术台附近或再次进行镇静。如果受害者在接受麻醉或镇痛剂的作用下靠近手术台，创伤性休克的强度将以4倍的速度下降。
+ 
+ ---
+ 
+ ##引起原因：
+ 
+ - 进行不安全的手术（没有手术台或没有镇静剂）
+ - 通过枪伤或深层组织损伤使用镊子（会引起非常轻微的休克，通常可以忽略不计）
+ 
+ ##影响：
+ 
+ - 低血压（严重）
+ - 心脏骤停（40％或更多）
+ - 呼吸骤停（30％或更多）
+ - 神经创伤（每秒强度除以100，10％或更多是超过自然再生的点）
+ - 精神病（每秒强度除以100）
+ 
+ ##治疗：
+ 
+ - 终止手术并等待
+ - 将患者带到手术台附近并确保患者被镇静
+ 
+ ##预防：
+ 
+ - 在进行“缩回皮肤”步骤之前确保手术安全
+ - 确保镇痛剂在手术中不会用完</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>所有外科手术的第二步骤是切口。每个切口未夹紧会导致每秒0.7％的失血量，每个切口没有镇痛或其他镇静方法会导致每秒2％的创伤性休克。如果没有手术台进行手术，则此痛苦不会导致创伤性休克，因此可以在没有手术台的情况下进行放血。</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>大多数外科手术的第三步是夹住出血，以防止手术切口引起的失血。这种效应是进行下一步——牵开器的必要条件。</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>大多数外科手术的第四步是收缩皮肤。如果没有手术台，每次收缩皮肤会导致2%的创伤性休克。大多数外科手术，如骨折固定手术或器官移植手术都源于这一步骤。 (Note: The @ symbols are not translatable and should be removed in the Chinese translation)</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>骨科手术中的第五步骤。在没有手术台的情况下钻骨会导致每次钻骨1.5%的创伤性休克。将痛苦称为效果。</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>截肢手术的第五步骤。在没有手术台的情况下锯骨会导致每次锯骨1.5%的创伤性休克。将切除部位与手术台对齐可避免此效应。</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##步骤：
+ 
+ 1. 选择麻醉药 
+ 2. 手术刀
+ 3. 止血钳
+ 4. 拉开器
+ 5. 缝合线</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##步骤：
+ 
+ 1. 选择麻醉药 
+ 2. @手术刀
+ 3. @止血钳
+ 4. @牵开器
+ 5. @手术钻
+ 6. @骨折固定植入物
+ 7. @缝合线
+ 
+ 必须对每个身体部位进行以上步骤，以治疗@骨死亡。</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##步骤：
+ 
+ 1. 选择麻醉药 
+ 2. @手术刀
+ 3. @血管内球囊
+ 4. @医用支架
+ 5. @缝合线</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## 步骤：
+ 
+ 1. 选择麻醉方式（@镇痛）
+ 2. @手术刀
+ 3. @止血钳
+ 4. @牵开器
+ 5. @手术电锯
+ 6. 使用仿生学或人类肢体替换截肢的肢体（可选）
+ 7. @缝合
+ 8. 如果进行了手术截肢，可以在肢体上安装机械肢体（不是仿生植入物）。手术不需要开放式手术以安装机械肢体（可选）（需要NT Cybernetics插件）。
+ 
+ 如果肢体患有超过15％的@坏疽，则此程序无法恢复肢体。
+ 
+ 此程序会导致@手术截肢。</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>请确保在放置器官之前使用@硫唑嘌呤，并确保他们的免疫力为10％或更低。如果放置后器官损伤达到100％，则表示被拒绝了。如果在配置中关闭器官拒绝，则不适用。
+ 
+ ##步骤：
+ 
+ 1. 选择你喜欢的麻醉剂
+ 2. @手术刀
+ 3. @止血钳
+ 4. @扩张器
+ 5. 相应的@器官获取手术刀
+ 6. 相应的器官移植物品（肾脏必须做两次）
+ 7. @缝合线</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>手术隔离衣是一种服装，用于提高穿戴者的无菌性，从而降低手术感染的风险。
+ 
+ +100基础无菌性
+ 穿戴时获得的创伤性休克减少50%。</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>手术口罩是一种可穿戴物品，佩戴时可以增加无菌性，降低手术感染的风险。
+ 
+ -10% 切口
+ -20% 出血</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>手术衣是一种可穿戴物品，穿上后可以增加无菌性，降低手术感染的风险。
+ 
+ -10% 钝力创伤
+ -10% 撕裂伤
+ -10% 咬伤</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>手术感染是一种机制，根据患者环境的无菌程度引起脓毒症。
+ 
+ 以下将_增加_无菌度：
+ 
+ - 患者穿戴手术巾
+ - 附近的角色戴着手术口罩
+ - 具有手术技能（根据以下公式获得无菌度：10 + 手术技能/5）
+ - 使用药膏
+ 
+ 以下将_降低_无菌度：
+ 
+ - 患者没有穿手术巾
+ - 附近的角色没有戴手术口罩
+ 
+ 在最低无菌度下，每两秒钟有10%的机会患者会感染脓毒症。</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>甘露醇加是一种天赋物品，意味着需要天赋才能制作。一旦被施用，即使患者不稳定，它也会在10秒内治疗30%的神经创伤，并施加甘露醇的效果，而不会造成肝损伤/肺损伤/心脏损伤/肾损伤/器官损伤。</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>实验性治疗是外科医生职业可解锁的天赋物品。它可以随机给予正面和负面效果，尽管它倾向于给予正面效果多于负面效果。
+ 
+ 有理论上的机会从一次使用这个物品中获得无限的效果。想象一下抛硬币，只有在得到反面时才停止。每次你得到正面，你就会从这个物品中获得一个额外的效果。
+ 
+ 可能的正面效果列表如下：
+ 
+ ---
+ - 活力（随机选择200-400%的力量）
+ - 过度活跃（随机选择200-400%的力量）
+ - 精神病抵抗力（随机选择200-400%的力量）
+ - 枯萎感染抵抗力（随机选择200-400%的力量）
+ - 瘫痪抵抗力（随机选择300-600%的力量）
+ - @镇痛（随机选择20-100%的力量）
+ - @麻醉（随机选择1-100%的力量）
+ - @涂药（随机选择20-100%的力量）
+ - 战斗兴奋剂（随机选择30-100%的力量）
+ - 压力稳定（随机选择30-100%的力量）
+ - 完全治愈（治疗20-100%的@伤口，普通器官损伤，@神经创伤和@失血，并完全治愈@败血症）
+ 
+ ---
+ 
+ 可能的负面效果列表如下：
+ 
+ ---
+ - 任何@伤口（随机选择30-80%的出血，选择5-20%的其他伤口）
+ - 眩晕2-15秒</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>分类卡用于根据伤势的严重程度标记患者。分类卡有两种类型，分别是手动和自动。手动分类卡的工作原理如下：
+ 
+ 将分类卡固定在腿上，将其标记为绿色，表示患者受伤轻微，很可能会存活下来。
+ 将分类卡固定在手臂上，将其标记为黄色，表示患者受伤，如果治疗时间延迟很长，很可能会死亡。
+ 将分类卡固定在躯干上，将其标记为红色，表示患者受伤严重，需要立即援助。
+ 将分类卡固定在头部，将其标记为黑色，表示患者已经死亡或非常接近死亡。
+ 
+ 自动分类卡将根据患者的病症和生命力评估其健康状况，并给出绿色、黄色、红色或黑色的评级。</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>脑罐是外科医生可解锁的天赋物品。与只能延迟大脑腐烂而不能完全停止的冷藏容器不同，脑罐不仅可以无限期地保存大脑，而且每10秒钟会以1％的速度缓慢修复大脑。</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>在移除患者的大脑后使用，替换大脑。防止因没有大脑而获得神经创伤。没有其他作用。</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>阅读时提高技能水平
+ 
+ ### 开启外科技能：
+ 
+ +8 外科技能
+ +2 医疗技能
+ 
+ ### 关闭外科技能：
+ 
+ +8 医疗技能</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>一个可以连接到任何手术截肢的手臂的电子机械臂。可以用撬棍拆卸。这会导致选择的肢体发生创伤性截肢。
+ 
+ ### 电子机械臂的优点：
+ 
+ - 能够承受持续的枪击而不会失灵。
+ - 能够承受来自生物的攻击而不会失灵或破裂。
+ - 能够承受本应导致危及生命的出血攻击。
+ - 维护良好时，在遭受攻击时不太可能被强制截肢。
+ - 不会骨折或脱臼。在添加电子机械臂之前，请确保修复任何脱臼或骨折，否则它将成为永久性的，直到您取下机械臂。
+ 
+ #### 电子机械臂的缺点：
+ 
+ - 它们与水不相容。不会电击您，但如果您不穿套装，它会随着时间的推移而损坏。
+ - 如果损坏，需要维护。
+ - 维护成本高，特别是如果您的子系统没有足够的钢和FPGA电路。
+ - 制造/购买成本高昂。
+ - 如果通过材料损失严重损坏，会猛烈脱落。
+ 
+ ### 机械技能要求：70
+ 
+ ### 应用成功：
+ 
+ 在选择的肢体上应用电子机械臂，并治愈任何先前失败尝试造成的内部损伤。
+ 
+ ### 应用失败：
+ 
+ 在肢体上应用20％的@internal-damage。不会删除电子机械臂。
+ 
+ ### 如何添加：
+ 
+ 首先对选择的肢体进行截肢手术，然后在选择的肢体上使用电子机械臂。</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>一个可以连接到任何手术截肢的腿部插座的电子腿。可以用撬棍拆卸。这会导致选择的肢体发生创伤性截肢。
+ 
+ ### 电子肢体的优点：
+ 
+ - 能够承受持续的枪击而不会出现故障。
+ - 能够承受来自生物的攻击而不会出现故障或损坏。
+ - 能够承受本应导致危及生命的出血攻击。
+ - 维护良好时，在遭受攻击时不太可能被强行截肢。
+ - 不会骨折或脱臼。在添加电子肢体之前，请确保修复任何脱臼或骨折，否则它将成为永久性的，直到您取下肢体。
+ 
+ #### 电子肢体的缺点：
+ 
+ - 它们与水不相容。不会电击您，但如果您不穿戴防护服，它会随着时间的推移而损坏。
+ - 如果受损，需要维护。
+ - 维护成本高，特别是如果您的子系统没有足够的钢和FPGA电路。
+ - 制造/购买成本高昂。
+ - 如果通过材料损失严重受损，会猛烈脱落。
+ 
+ ### 机械技能要求：70
+ 
+ ### 应用成功：
+ 
+ 将电子肢体应用于选择的肢体，并治愈由任何以前失败的尝试造成的任何内部损伤。
+ 
+ ### 应用失败：
+ 
+ 在肢体上应用20％的@internal-damage。不会删除电子肢体。
+ 
+ ### 如何添加：
+ 
+ 首先对选择的肢体进行截肢手术，然后在选择的肢体上使用电子肢体。</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>你在这个插座里有一个@机械臂。</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>你在这个插座里有一个@机械腿。</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>使用电子肢体的主要弊端是当暴露在水中时，它们的电子设备会受损。
+ 
+ 当电子肢体受损时，每种类型的伤害都有可能导致各种类型和数量的电子肢体特定损伤，而不是正常的伤害类型。
+ 
+ 受损电子设备的数量随着@material-loss的增加而增加。
+ 
+ ## 导致原因：
+ 
+ - 没有穿潜水服在水中
+ - 75％的几率使@burns造成200％的损伤，作为受损电子设备
+ - 85％的几率使枪伤造成75％的损伤，作为受损电子设备
+ - 50％的几率使咬伤造成25％的损伤，作为受损电子设备
+ - 50％的几率使深层组织损伤造成50％的损伤，作为受损电子设备
+ - 50％的几率使钝力创伤造成100％的损伤，作为受损电子设备
+ - 75％的几率使@internal-damage造成100％的损伤，作为受损电子设备
+ - 75％的几率使@foreign-bodies造成75％的损伤，作为受损电子设备
+ 
+ ## 影响：
+ 
+ - 肢体偶尔会暂时停止工作，频率随着强度的增加而增加
+ - 肢体变得无法使用（在99％或更高时）
+ 
+ ## 治疗：
+ 
+ - @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>当机械肢体受到伤害时，每种类型的伤害都有可能导致各种类型和数量的机械肢体特定损伤，而不是正常的伤害类型。
+ 
+ ## 导致原因：
+ 
+ - 烧伤有85％的几率导致25％的损伤变成弯曲的金属
+ - 擦伤有50％的几率导致25％的损伤变成弯曲的金属
+ - 咬伤有50％的几率导致50％的损伤变成弯曲的金属
+ - 深层组织损伤有85％的几率导致100％的损伤变成弯曲的金属
+ - 钝力创伤有75％的几率导致200％的损伤变成弯曲的金属
+ 
+ ## 影响：
+ 
+ - 如果在机械腿上，会使你变慢，与力量成比例
+ - 肢体变得无法使用（在99％或更高时）
+ 
+ ## 治疗方法：
+ 
+ - 焊接工具</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>引起原因：
+ 
+ - 在移动时松动的螺丝（30%或更多）
+ - 切割伤有75%的机会导致25%的伤害成为松动的螺丝
+ - 深层组织损伤有80%的机会导致100%的伤害成为松动的螺丝
+ - 钝力创伤有50%的机会导致50%的伤害成为松动的螺丝
+ - 内部损伤有75%的机会导致100%的伤害成为松动的螺丝
+ - 咬伤有50%的机会导致50%的伤害成为松动的螺丝
+ - 异物有75%的机会导致75%的伤害成为松动的螺丝
+ 
+ 影响：
+ 
+ - 松动的螺丝和材料损失
+ 
+ 治疗：
+ 
+ - 螺丝刀</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>当机械肢体受到伤害时，每种类型的伤害都有可能导致各种类型和数量的机械肢体特定损伤，而不是正常的伤害类型。
+ 
+ 获得的材料损失量随着松动螺丝的数量而增加。
+ 
+ ## 引起原因：
+ 
+ - 松动螺丝
+ - 切割伤有75%的几率导致25%的伤害作为材料损失
+ - 枪伤有80%的几率导致80%的伤害作为材料损失
+ - 咬伤有75%的几率导致60%的伤害作为材料损失
+ - 深层组织损伤有100%的几率导致100%的伤害作为材料损失
+ - 异物有80%的几率导致50%的伤害作为材料损失
+ 
+ ## 影响：
+ 
+ - 机械肢体和 @创伤性截肢
+ 
+ ## 治疗：
+ 
+ - @钢筋杆</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### 电气技能检查：40
+ 
+ 用于修复机械臂上的@损坏电子设备。
+ 
+ ### 应用成功：
+ 
+ -50% @损坏电子设备
+ 
+ ### 应用失败：
+ 
+ -20% @损坏电子设备</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### 机械技能检查：50
+ 
+ 用于修复赛博肢体上的@弯曲金属。
+ 
+ ### 应用成功：
+ 
+ -20% @弯曲金属
+ 
+ ### 应用失败：
+ 
+ -5% @弯曲金属</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>机械技能检查：40
+ 
+ 用于修复机械肢体上的松动螺丝。
+ 
+ ### 应用成功：
+ 
+ -20% 松动螺丝
+ 
+ ### 应用失败：
+ 
+ -5% 松动螺丝</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>机械技能检定：60
+ 
+ 用于修复赛博肢体上的@材料损失。
+ 
+ ### 应用成功：
+ 
+ -50% @材料损失
+ 
+ ### 应用失败：
+ 
+ -20% @材料损失</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>欢迎来到医学手册，这是您全面了解神经创伤调节系统和常见医疗状况的指南。本手册旨在为您提供有关各种医疗主题的信息：
+ 
+ - @信息
+ - @症状
+ - @头脑
+ - @肺部
+ - @心脏
+ - @躯干
+ - @四肢
+ - @骨骼
+ - @任何身体部位
+ - @血液
+ - @物品-部分1
+ - @物品-部分2
+ - @物品-部分3
+ - @物品-部分4
+ - @手术
+ - @手术
+ - @扩展</Manual_Description_Start_Page>
+  <Manual_Description_Information>欢迎来到信息标签页，在这里您可以阅读一般信息：
+ 
+ - @常见问题
+ - @医疗包推荐
+ - @如何诊断
+ - @治疗顺序
+ - @神经创伤的五个戒律</Manual_Description_Information>
+  <Manual_Description_Symptoms>欢迎来到症状选项卡：
+ 
+ - @呕血
+ - @苍白的皮肤
+ - @呼吸急促
+ - @咳嗽
+ - @心率增加
+ - @困惑
+ - @头晕
+ - @视力模糊
+ - @腿部肿胀
+ - @喘息
+ - @虚弱
+ - @发烧
+ - @出汗
+ - @腹胀
+ - @炎症
+ - @黄疸
+ - @腹部不适
+ - @头痛
+ - @渴望
+ - @心悸
+ - @痉挛</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>欢迎来到头部/脑部标签：
+ 
+ - @神经创伤
+ - @中风
+ - @戒断症状
+ - @鸦片过量
+ - @癫痫发作
+ - @失去知觉
+ - @昏迷
+ - @脊髓损伤
+ - @脑震荡</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>欢迎来到肺部标签：
+ 
+ - @呼吸停止
+ - @肺损伤
+ - @气胸
+ - @过度通气
+ - @通气不足
+ - @低氧血症</Manual_Description_Lungs>
+  <Manual_Description_Heart>欢迎来到心脏标签页：
+ 
+ - @心包填塞
+ - @心脏停跳
+ - @心脏病发作
+ - @心脏损伤
+ - @心跳不规律
+ - @心房颤动</Manual_Description_Heart>
+  <Manual_Description_Torso>欢迎来到躯干标签页：
+ 
+ - @主动脉破裂
+ - @内出血
+ - @辐射病
+ - @肾损伤
+ - @肝损伤
+ - @疟疾
+ - @氰化物中毒
+ - @香草器官损伤
+ - @止痛
+ - @麻醉
+ - @腹痛
+ - @呕吐
+ - @恶心
+ - @胸痛</Manual_Description_Torso>
+  <Manual_Description_Extremities>欢迎来到极端情况标签：
+ 
+ - @创伤性截肢
+ - @坏疽
+ - @手术截肢
+ - @剧烈疼痛</Manual_Description_Extremities>
+  <Manual_Description_Bones>欢迎来到骨骼标签页：
+ 
+ - @骨死
+ - @骨损伤
+ - @骨折
+ - @脱位</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>欢迎来到任何身体部位标签：
+ 
+ - @动脉出血
+ - @内部损伤
+ - @烧伤
+ - @感染伤口
+ - @异物
+ - @创伤
+ - @涂药
+ - @绷带包扎
+ - @石膏固定</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>欢迎来到血液标签：
+ 
+ - @低氧血症
+ - @败血症
+ - @输血休克
+ - @失血
+ - @低血压
+ - @高血压
+ - @酸中毒
+ - @碱中毒</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>欢迎来到物品第一部分标签：
+ 
+ - @肾上腺素
+ - @aed
+ - @外星人血液
+ - @呼吸袋
+ - @麻痹剂
+ - @抗生素胶
+ - @抗生素软膏
+ - @消毒剂
+ - @消毒喷雾器
+ - @自动心肺复苏仪
+ - @硫唑嘌呤
+ - @绷带
+ - @血袋
+ - @蓝鲨鱼
+ - @尸袋
+ - @广谱抗生素
+ - @战斗兴奋剂
+ - @德西嗪
+ - @潜水刀
+ - @引流</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>欢迎来到物品第二部分标签：
+ 
+ - @空血袋
+ - @血管内球囊
+ - @芬太尼
+ - @石膏
+ - @健康扫描仪
+ - @血液分析仪
+ - @止血钳
+ - @超酮
+ - @液态氧化物
+ - @甘露醇
+ - @手动除颤器
+ - @医用支架
+ - @甲基苯丙胺
+ - @吗啡
+ - @纳洛酮
+ - @针头
+ - @硝酸甘油
+ - @鸦片
+ - @器官采购手术刀片
+ - @骨折固定植入物</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>欢迎来到物品第三部分标签：
+ 
+ - @plastiseal
+ - @propofol
+ - @raptor-bane-extract
+ - @retractors
+ - @ringer-solution
+ - @saline
+ - @scalpel
+ - @sodium-nitroprusside
+ - @spinal-cord-implants
+ - @stasis-bag
+ - @streptokinase
+ - @surgery-table
+ - @surgical-drill
+ - @surgical-saw
+ - @sutures
+ - @thiamine
+ - @tourniquet
+ - @trauma-shears
+ - @tweezers
+ - @wrench</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>欢迎来到物品第四部分标签页：
+ 
+ 空的</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>欢迎来到手术标签：
+ 
+ - @创伤性休克
+ - @手术切口
+ - @夹紧出血
+ - @皮肤牵拉
+ - @钻孔骨头
+ - @锯骨头</Manual_Description_Surgery>
+  <Manual_Description_Procedures>欢迎来到手术选项卡：
+ 
+ - @开放-关闭手术
+ - @骨折固定手术
+ - @主动脉破裂手术
+ - @截肢手术
+ - @器官移植手术</Manual_Description_Procedures>
+  <Manual_Description_Expansion>欢迎来到扩展选项卡：
+ 
+ - @手术无菌布
+ - @手术口罩
+ - @外科医生服装
+ - @手术感染
+ - @甘露醇增强剂
+ - @实验性治疗
+ - @分类卡
+ - @脑罐
+ - @人工大脑
+ - @医疗不当行为
+ - @电子义肢
+ - @电子腿
+ - @电子手臂
+ - @电子腿部
+ - @损坏的电子设备
+ - @弯曲的金属
+ - @松动的螺丝
+ - @材料损失
+ - @FPGA电路
+ - @焊接工具
+ - @螺丝刀
+ - @钢条</Manual_Description_Expansion>
+</infotexts>

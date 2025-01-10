@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <Manual_Button_Back>Назад</Manual_Button_Back>
+  <entityname.Manual_FAQ>МедПомощник: ЧАВО (Часто задаваемые вопросы)</entityname.Manual_FAQ>
+  <entityname.Manual_Med_Kit_Recommendations>МедПомощник: Рекомендации по аптечке первой помощи</entityname.Manual_Med_Kit_Recommendations>
+  <entityname.Manual_How_To_Diagnose>МедПомощник: Как диагностировать</entityname.Manual_How_To_Diagnose>
+  <entityname.Manual_Order_of_Treatments>МедПомощник: Порядок лечения</entityname.Manual_Order_of_Treatments>
+  <entityname.Manual_The_5_Commandments_of_Neurotrauma>МедПомощник: Пять заповедей нейротравмы</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+  <entityname.Manual_Vomiting_Blood>МедПомощник: Рвота кровью</entityname.Manual_Vomiting_Blood>
+  <entityname.Manual_Pale_Skin>МедПомощник: Бледная кожа</entityname.Manual_Pale_Skin>
+  <entityname.Manual_Shortness_of_Breath>МедПомощник: Одышка</entityname.Manual_Shortness_of_Breath>
+  <entityname.Manual_Cough>МедПомощник: Кашель</entityname.Manual_Cough>
+  <entityname.Manual_Increased_Heartrate>МедПомощник: Увеличенная частота сердечных сокращений</entityname.Manual_Increased_Heartrate>
+  <entityname.Manual_Confusion>МедПомощник: Путаница</entityname.Manual_Confusion>
+  <entityname.Manual_Lightheadedness>МедПомощник: Головокружение</entityname.Manual_Lightheadedness>
+  <entityname.Manual_Blurred_Vision>МедПомощник: Размытое зрение</entityname.Manual_Blurred_Vision>
+  <entityname.Manual_Leg_Swelling>МедПомощник: Отек ног</entityname.Manual_Leg_Swelling>
+  <entityname.Manual_Wheezing>МедПомощник: Свистящие хрипы</entityname.Manual_Wheezing>
+  <entityname.Manual_Weakness>МедПомощник: Слабость</entityname.Manual_Weakness>
+  <entityname.Manual_Fever>МедПомощник: Лихорадка</entityname.Manual_Fever>
+  <entityname.Manual_Sweating>МедПомощник: Потение</entityname.Manual_Sweating>
+  <entityname.Manual_Bloating>МедПомощник: Вздутие</entityname.Manual_Bloating>
+  <entityname.Manual_Inflammation>МедПомощник: Воспаление</entityname.Manual_Inflammation>
+  <entityname.Manual_Jaundice>МедПомощник: Желтуха</entityname.Manual_Jaundice>
+  <entityname.Manual_Abdominal_Discomfort>МедПомощник: Боль в животе</entityname.Manual_Abdominal_Discomfort>
+  <entityname.Manual_Headache>МедПомощник: Головная боль</entityname.Manual_Headache>
+  <entityname.Manual_Craving>МедПомощник: Ломка</entityname.Manual_Craving>
+  <entityname.Manual_Palpitations>МедПомощник: Фибрилляция</entityname.Manual_Palpitations>
+  <entityname.Manual_Spasms>МедПомощник: Спазмы</entityname.Manual_Spasms>
+  <entityname.Manual_Neurotrauma>МедПомощник: Нейротравма</entityname.Manual_Neurotrauma>
+  <entityname.Manual_Stroke>МедПомощник: Инсульт</entityname.Manual_Stroke>
+  <entityname.Manual_Withdrawal>МедПомощник: Воздержание</entityname.Manual_Withdrawal>
+  <entityname.Manual_Opiate_Overdose>МедПомощник: Передозировка опиатами</entityname.Manual_Opiate_Overdose>
+  <entityname.Manual_Seizure>МедПомощник: Припадок</entityname.Manual_Seizure>
+  <entityname.Manual_Unconsciousness>МедПомощник: Без сознания</entityname.Manual_Unconsciousness>
+  <entityname.Manual_Coma>МедПомощник: Кома</entityname.Manual_Coma>
+  <entityname.Manual_Spinal_Cord_Injury>МедПомощник: Повреждение спинного мозга</entityname.Manual_Spinal_Cord_Injury>
+  <entityname.Manual_Concussion>МедПомощник: Сотрясение</entityname.Manual_Concussion>
+  <entityname.Manual_Respiratory_Arrest>МедПомощник: Остановка дыхания</entityname.Manual_Respiratory_Arrest>
+  <entityname.Manual_Lung_Damage>МедПомощник: Повреждение легких</entityname.Manual_Lung_Damage>
+  <entityname.Manual_Pneumothorax>МедПомощник: Пневмоторакс</entityname.Manual_Pneumothorax>
+  <entityname.Manual_Hyperventilation>МедПомощник: Гипервентиляция</entityname.Manual_Hyperventilation>
+  <entityname.Manual_Hypoventilation>МедПомощник: Гиповентиляция</entityname.Manual_Hypoventilation>
+  <entityname.Manual_Oxygen_Low>МедПомощник: Недостаток кислорода</entityname.Manual_Oxygen_Low>
+  <entityname.Manual_Cardiac_Tamponade>МедПомощник: Сердечная тампонада</entityname.Manual_Cardiac_Tamponade>
+  <entityname.Manual_Cardiac_Arrest>МедПомощник: Остановка сердца</entityname.Manual_Cardiac_Arrest>
+  <entityname.Manual_Heart_Attack>МедПомощник: Инфаркт</entityname.Manual_Heart_Attack>
+  <entityname.Manual_Heart_Damage>МедПомощник: Повреждение сердца</entityname.Manual_Heart_Damage>
+  <entityname.Manual_Irregular_Heartbeat>МедПомощник: Нерегулярное сердцебиение</entityname.Manual_Irregular_Heartbeat>
+  <entityname.Manual_Fibrillation>МедПомощник: Фибрилляция</entityname.Manual_Fibrillation>
+  <entityname.Manual_Aortic_Rupture>МедПомощник: Разрыв аорты</entityname.Manual_Aortic_Rupture>
+  <entityname.Manual_Internal_Bleeding>МедПомощник: Внутреннее кровотечение</entityname.Manual_Internal_Bleeding>
+  <entityname.Manual_Radiation_Sickness>МедПомощник: Лучевая болезнь</entityname.Manual_Radiation_Sickness>
+  <entityname.Manual_Kidney_Damage>МедПомощник: Повреждение почек</entityname.Manual_Kidney_Damage>
+  <entityname.Manual_Liver_Damage>МедПомощник: Повреждение печени</entityname.Manual_Liver_Damage>
+  <entityname.Manual_Morbusine>МедПомощник: Морбузин</entityname.Manual_Morbusine>
+  <entityname.Manual_Cyanide_Poisoning>МедПомощник: Отравление цианидом</entityname.Manual_Cyanide_Poisoning>
+  <entityname.Manual_Vanilla_Organ_Damage>МедПомощник: Ванильный урон по органам</entityname.Manual_Vanilla_Organ_Damage>
+  <entityname.Manual_Analgesia>МедПомощник: Анальгезия</entityname.Manual_Analgesia>
+  <entityname.Manual_Anesthesia>МедПомощник: Анестезия</entityname.Manual_Anesthesia>
+  <entityname.Manual_Abdominal_Pain>МедПомощник: Боль в животе</entityname.Manual_Abdominal_Pain>
+  <entityname.Manual_Vomiting>МедПомощник: Рвота</entityname.Manual_Vomiting>
+  <entityname.Manual_Nausea>МедПомощник: Тошнота</entityname.Manual_Nausea>
+  <entityname.Manual_Chest_Pain>МедПомощник: Боль в груди</entityname.Manual_Chest_Pain>
+  <entityname.Manual_Traumatic_Amputation>МедПомощник: Травматическая ампутация</entityname.Manual_Traumatic_Amputation>
+  <entityname.Manual_Gangrene>МедПомощник: Гангрена</entityname.Manual_Gangrene>
+  <entityname.Manual_Surgical_Amputation>МедПомощник: Хирургическая ампутация</entityname.Manual_Surgical_Amputation>
+  <entityname.Manual_Intense_Pain>МедПомощник: Сильная боль</entityname.Manual_Intense_Pain>
+  <entityname.Manual_Bone_Death>МедПомощник: Смерть кости</entityname.Manual_Bone_Death>
+  <entityname.Manual_Bone_Damage>МедПомощник: Повреждение кости</entityname.Manual_Bone_Damage>
+  <entityname.Manual_Fractures>МедПомощник: Переломы</entityname.Manual_Fractures>
+  <entityname.Manual_Dislocations>МедПомощник: Вывихи</entityname.Manual_Dislocations>
+  <entityname.Manual_Arterial_Bleeding>МедПомощник: Артериальное кровотечение</entityname.Manual_Arterial_Bleeding>
+  <entityname.Manual_Internal_Damage>МедПомощник: Внутренний урон</entityname.Manual_Internal_Damage>
+  <entityname.Manual_Burns>МедПомощник: Ожоги</entityname.Manual_Burns>
+  <entityname.Manual_Infected_Wounds>МедПомощник: Зараженные раны</entityname.Manual_Infected_Wounds>
+  <entityname.Manual_Foreign_Bodies>МедПомощник: Инородные тела</entityname.Manual_Foreign_Bodies>
+  <entityname.Manual_Wounds>МедПомощник: Раны</entityname.Manual_Wounds>
+  <entityname.Manual_Ointmented>МедПомощник: Мазь</entityname.Manual_Ointmented>
+  <entityname.Manual_Bandaged>МедПомощник: Перевязанный</entityname.Manual_Bandaged>
+  <entityname.Manual_Plaster_Cast>МедПомощник: Наложенный гипс</entityname.Manual_Plaster_Cast>
+  <entityname.Manual_Hypoxemia>МедПомощник: Гипоксемия</entityname.Manual_Hypoxemia>
+  <entityname.Manual_Sepsis>МедПомощник: Сепсис</entityname.Manual_Sepsis>
+  <entityname.Manual_Hemotransfusion_Shock>МедПомощник: Гемотрансфузионный шок</entityname.Manual_Hemotransfusion_Shock>
+  <entityname.Manual_Blood_Loss>МедПомощник: Кровопотеря</entityname.Manual_Blood_Loss>
+  <entityname.Manual_Hypotension>МедПомощник: Гипотония</entityname.Manual_Hypotension>
+  <entityname.Manual_Hypertension>МедПомощник: Гипертония</entityname.Manual_Hypertension>
+  <entityname.Manual_Acidosis>МедПомощник: Ацидоз</entityname.Manual_Acidosis>
+  <entityname.Manual_Alkalosis>МедПомощник: Алкалоз</entityname.Manual_Alkalosis>
+  <entityname.Manual_Adrenaline>МедПомощник: Адреналин</entityname.Manual_Adrenaline>
+  <entityname.Manual_AED>МедПомощник: Автоматизированый внешний дефибрилятор</entityname.Manual_AED>
+  <entityname.Manual_Alien_Blood>МедПомощник: Инопланетная кровь</entityname.Manual_Alien_Blood>
+  <entityname.Manual_Ambubag>МедПомощник: Мешок амбу</entityname.Manual_Ambubag>
+  <entityname.Manual_Anaparalyzant>МедПомощник: Анапарализант</entityname.Manual_Anaparalyzant>
+  <entityname.Manual_Antibiotic_Glue>МедПомощник: Антибиотический клей</entityname.Manual_Antibiotic_Glue>
+  <entityname.Manual_Antibiotic_Ointment>МедПомощник: Антибиотическая мазь</entityname.Manual_Antibiotic_Ointment>
+  <entityname.Manual_Antiseptic>МедПомощник: Антисептик</entityname.Manual_Antiseptic>
+  <entityname.Manual_Antiseptic_Sprayer>МедПомощник: Антисептический спрей</entityname.Manual_Antiseptic_Sprayer>
+  <entityname.Manual_Autopulse>МедПомощник: Автопульс</entityname.Manual_Autopulse>
+  <entityname.Manual_Azathioprine>МедПомощник: Азатиоприн</entityname.Manual_Azathioprine>
+  <entityname.Manual_Bandages>МедПомощник: Бинты</entityname.Manual_Bandages>
+  <entityname.Manual_Blood_Packs>МедПомощник: Пакеты с кровью</entityname.Manual_Blood_Packs>
+  <entityname.Manual_Blue_Shark>МедПомощник: Синяя акула</entityname.Manual_Blue_Shark>
+  <entityname.Manual_Body_Bag>МедПомощник: Мешок для трупа</entityname.Manual_Body_Bag>
+  <entityname.Manual_Broad-spectrum_Antibiotics>МедПомощник: Антибиотики широкого спектра</entityname.Manual_Broad-spectrum_Antibiotics>
+  <entityname.Manual_Combat_Stimulant>МедПомощник: Боевой стимулятор</entityname.Manual_Combat_Stimulant>
+  <entityname.Manual_Deusizine>МедПомощник: Деусицин</entityname.Manual_Deusizine>
+  <entityname.Manual_Diving_Knife>МедПомощник: Нож ныряльщика</entityname.Manual_Diving_Knife>
+  <entityname.Manual_Drainage>МедПомощник: Дренаж</entityname.Manual_Drainage>
+  <entityname.Manual_Empty_Blood_Pack>МедПомощник: Пустой пакет для крови</entityname.Manual_Empty_Blood_Pack>
+  <entityname.Manual_Endovascular_Balloon>МедПомощник: Эндоваскулярный баллон</entityname.Manual_Endovascular_Balloon>
+  <entityname.Manual_Fentanyl>МедПомощник: Фентанил</entityname.Manual_Fentanyl>
+  <entityname.Manual_Gypsum>МедПомощник: Гипс</entityname.Manual_Gypsum>
+  <entityname.Manual_Health_Scanner>МедПомощник: Сканер здоровья</entityname.Manual_Health_Scanner>
+  <entityname.Manual_Hematology_Analyzer>МедПомощник: Гематологический анализатор</entityname.Manual_Hematology_Analyzer>
+  <entityname.Manual_Hemostat>МедПомощник: Зажим</entityname.Manual_Hemostat>
+  <entityname.Manual_Hyperzine>МедПомощник: Гиперцин</entityname.Manual_Hyperzine>
+  <entityname.Manual_Liquid_Oxygenite>МедПомощник: Жидкий кислородит</entityname.Manual_Liquid_Oxygenite>
+  <entityname.Manual_Mannitol>МедПомощник: Маннитол</entityname.Manual_Mannitol>
+  <entityname.Manual_Manual_Defibrillator>МедПомощник: Ручной дефибриллятор</entityname.Manual_Manual_Defibrillator>
+  <entityname.Manual_Medical_Stent>МедПомощник: Медицинский стент</entityname.Manual_Medical_Stent>
+  <entityname.Manual_Methamphetamine>МедПомощник: Метамфетамин</entityname.Manual_Methamphetamine>
+  <entityname.Manual_Morphine>МедПомощник: Морфин</entityname.Manual_Morphine>
+  <entityname.Manual_Naloxone>МедПомощник: Налоксон</entityname.Manual_Naloxone>
+  <entityname.Manual_Needle>МедПомощник: Игла</entityname.Manual_Needle>
+  <entityname.Manual_Nitroglycerin>МедПомощник: Нитроглицерин</entityname.Manual_Nitroglycerin>
+  <entityname.Manual_Opium>МедПомощник: Опиум</entityname.Manual_Opium>
+  <entityname.Manual_Organ_Procurement_Scalpels>МедПомощник: Скальпели для удаления органов</entityname.Manual_Organ_Procurement_Scalpels>
+  <entityname.Manual_Osteosynthesis_Implants>МедПомощник: Остеосинтетические импланты</entityname.Manual_Osteosynthesis_Implants>
+  <entityname.Manual_Plastiseal>МедПомощник: Эластичный бинт</entityname.Manual_Plastiseal>
+  <entityname.Manual_Propofol>МедПомощник: Пропофол</entityname.Manual_Propofol>
+  <entityname.Manual_Raptor_Bane_Extract>МедПомощник: Экстракт Бича Раптора</entityname.Manual_Raptor_Bane_Extract>
+  <entityname.Manual_Retractors>МедПомощник: Расширитель</entityname.Manual_Retractors>
+  <entityname.Manual_Ringer_Solution>МедПомощник: Раствор Рингера</entityname.Manual_Ringer_Solution>
+  <entityname.Manual_Saline>МедПомощник: Физраствор</entityname.Manual_Saline>
+  <entityname.Manual_Scalpel>МедПомощник: Скальпель</entityname.Manual_Scalpel>
+  <entityname.Manual_Sodium_Nitroprusside>МедПомощник: Нитропруссид натрия</entityname.Manual_Sodium_Nitroprusside>
+  <entityname.Manual_Spinal_Cord_Implants>МедПомощник: Импланты позвоночного столба</entityname.Manual_Spinal_Cord_Implants>
+  <entityname.Manual_Stasis_Bag>МедПомощник: Стазис-мешок</entityname.Manual_Stasis_Bag>
+  <entityname.Manual_Streptokinase>МедПомощник: Стрептокиназа</entityname.Manual_Streptokinase>
+  <entityname.Manual_Surgery_Table>МедПомощник: Хирургический стол</entityname.Manual_Surgery_Table>
+  <entityname.Manual_Surgical_Drill>МедПомощник: Хирургическая дрель</entityname.Manual_Surgical_Drill>
+  <entityname.Manual_Surgical_Saw>МедПомощник: Хирургическая пила</entityname.Manual_Surgical_Saw>
+  <entityname.Manual_Sutures>МедПомощник: Швы</entityname.Manual_Sutures>
+  <entityname.Manual_Thiamine>МедПомощник: Тиамин</entityname.Manual_Thiamine>
+  <entityname.Manual_Tourniquet>МедПомощник: Жгут</entityname.Manual_Tourniquet>
+  <entityname.Manual_Trauma_Shears>МедПомощник: Медицинские ножницы</entityname.Manual_Trauma_Shears>
+  <entityname.Manual_Tweezers>МедПомощник: Пинцет</entityname.Manual_Tweezers>
+  <entityname.Manual_Wrench>МедПомощник: Гаечный ключ</entityname.Manual_Wrench>
+  <entityname.Manual_Traumatic_Shock>МедПомощник: Травматический шок</entityname.Manual_Traumatic_Shock>
+  <entityname.Manual_Surgery_Incision>МедПомощник: Хирургический надрез</entityname.Manual_Surgery_Incision>
+  <entityname.Manual_Clamped_Bleeding>МедПомощник: Зажатое кровотечение</entityname.Manual_Clamped_Bleeding>
+  <entityname.Manual_Retracted_Skin>МедПомощник: Оттянутая кожа</entityname.Manual_Retracted_Skin>
+  <entityname.Manual_Drilled_Bones>МедПомощник: Просверленная кость</entityname.Manual_Drilled_Bones>
+  <entityname.Manual_Sawed_Bones>МедПомощник: Кость распилена</entityname.Manual_Sawed_Bones>
+  <entityname.Manual_Open_Close_Surgery>МедПомощник: Операция 'открыть и закрыть'</entityname.Manual_Open_Close_Surgery>
+  <entityname.Manual_Osteosynthetic_Surgery>МедПомощник: Остеосинтезирующая хирургия</entityname.Manual_Osteosynthetic_Surgery>
+  <entityname.Manual_Aortic_Rupture_Surgery>МедПомощник: Хирургия разрыва аорты</entityname.Manual_Aortic_Rupture_Surgery>
+  <entityname.Manual_Amputation_Surgery>МедПомощник: Операция по ампутации</entityname.Manual_Amputation_Surgery>
+  <entityname.Manual_Organ_Transplant_Surgery>МедПомощник: Операция по пересадке органов</entityname.Manual_Organ_Transplant_Surgery>
+  <entityname.Manual_Surgical_Drapes>МедПомощник: Хирургическиая простыня</entityname.Manual_Surgical_Drapes>
+  <entityname.Manual_Surgical_Mask>МедПомощник: Хирургическая маска</entityname.Manual_Surgical_Mask>
+  <entityname.Manual_Surgeon_Clothes>МедПомощник: Хирургическая одежда</entityname.Manual_Surgeon_Clothes>
+  <entityname.Manual_Surgical_Infection>МедПомощник: Хирургическая инфекция</entityname.Manual_Surgical_Infection>
+  <entityname.Manual_Mannitol_Plus>МедПомощник: Маннитол плюс</entityname.Manual_Mannitol_Plus>
+  <entityname.Manual_Experimental_Treatment>МедПомощник: Экспериментальный препарат</entityname.Manual_Experimental_Treatment>
+  <entityname.Manual_Triage_Card>МедПомощник: Первичная медицинская карточка</entityname.Manual_Triage_Card>
+  <entityname.Manual_Brain_Jar>МедПомощник: Сосуд для мозга</entityname.Manual_Brain_Jar>
+  <entityname.Manual_Artificial_Brain>МедПомощник: Искусственный мозг</entityname.Manual_Artificial_Brain>
+  <entityname.Manual_Medical_Misconduct>МедПомощник: Книга 'Медицинский этикет'</entityname.Manual_Medical_Misconduct>
+  <entityname.Manual_Cybernetic_Arm>МедПомощник: Кибернетическая рука</entityname.Manual_Cybernetic_Arm>
+  <entityname.Manual_Cybernetic_Leg>МедПомощник: Кибернетическая нога</entityname.Manual_Cybernetic_Leg>
+  <entityname.Manual_Cyberarm>МедПомощник: Кибер-рука</entityname.Manual_Cyberarm>
+  <entityname.Manual_Cyberleg>МедПомощник: Кибер-нога</entityname.Manual_Cyberleg>
+  <entityname.Manual_Damaged_Electronics>МедПомощник: Поврежденная электроника</entityname.Manual_Damaged_Electronics>
+  <entityname.Manual_Bent_Metal>МедПомощник: Погнутый металл</entityname.Manual_Bent_Metal>
+  <entityname.Manual_Loose_Screws>МедПомощник: Незатянутый винт</entityname.Manual_Loose_Screws>
+  <entityname.Manual_Material_Loss>МедПомощник: Потеря материала</entityname.Manual_Material_Loss>
+  <entityname.Manual_FPGA_Circuit>МедПомощник: Схема на базе ППВМ</entityname.Manual_FPGA_Circuit>
+  <entityname.Manual_Welding_Tool>МедПомощник: Сварочный инструмент</entityname.Manual_Welding_Tool>
+  <entityname.Manual_Screwdriver>МедПомощник: Отвертка</entityname.Manual_Screwdriver>
+  <entityname.Manual_Steel_Bar>МедПомощник: Стальной слиток</entityname.Manual_Steel_Bar>
+  <entityname.Manual_Start_Page>МедПомощник: Стартовая страница</entityname.Manual_Start_Page>
+  <entityname.Manual_Information>МедПомощник: Информация</entityname.Manual_Information>
+  <entityname.Manual_Symptoms>МедПомощник: Симптомы</entityname.Manual_Symptoms>
+  <entityname.Manual_HeadBrain>МедПомощник: Головной мозг</entityname.Manual_HeadBrain>
+  <entityname.Manual_Lungs>МедПомощник: Легкие</entityname.Manual_Lungs>
+  <entityname.Manual_Heart>МедПомощник: Сердце</entityname.Manual_Heart>
+  <entityname.Manual_Torso>МедПомощник: Туловище</entityname.Manual_Torso>
+  <entityname.Manual_Extremities>МедПомощник: Конечности</entityname.Manual_Extremities>
+  <entityname.Manual_Bones>МедПомощник: Кости</entityname.Manual_Bones>
+  <entityname.Manual_Any_Bodypart>МедПомощник: Любая часть тела</entityname.Manual_Any_Bodypart>
+  <entityname.Manual_Blood>МедПомощник: Кровь</entityname.Manual_Blood>
+  <entityname.Manual_Items_Part_1>МедПомощник: Предметы, часть 1</entityname.Manual_Items_Part_1>
+  <entityname.Manual_Items_Part_2>МедПомощник: Предметы, часть 2</entityname.Manual_Items_Part_2>
+  <entityname.Manual_Items_Part_3>МедПомощник: Предметы, часть 3</entityname.Manual_Items_Part_3>
+  <entityname.Manual_Items_Part_4>МедПомощник: Предметы, часть 4</entityname.Manual_Items_Part_4>
+  <entityname.Manual_Surgery>МедПомощник: Операции</entityname.Manual_Surgery>
+  <entityname.Manual_Procedures>МедПомощник: Процедуры</entityname.Manual_Procedures>
+  <entityname.Manual_Expansion>МедПомощник: Расширение</entityname.Manual_Expansion>
+  <Manual_Button_FAQ>ЧАВО (Часто задаваемые вопросы)</Manual_Button_FAQ>
+  <Manual_Button_Med_Kit_Recommendations>Рекомендации по аптечке первой помощи</Manual_Button_Med_Kit_Recommendations>
+  <Manual_Button_How_To_Diagnose>Как диагностировать</Manual_Button_How_To_Diagnose>
+  <Manual_Button_Order_of_Treatments>Порядок лечения</Manual_Button_Order_of_Treatments>
+  <Manual_Button_The_5_Commandments_of_Neurotrauma>Пять заповедей нейротравмы</Manual_Button_The_5_Commandments_of_Neurotrauma>
+  <Manual_Button_Vomiting_Blood>Рвота кровью</Manual_Button_Vomiting_Blood>
+  <Manual_Button_Pale_Skin>Бледная кожа</Manual_Button_Pale_Skin>
+  <Manual_Button_Shortness_of_Breath>Одышка</Manual_Button_Shortness_of_Breath>
+  <Manual_Button_Cough>Кашель</Manual_Button_Cough>
+  <Manual_Button_Increased_Heartrate>Увеличенная частота сердечных сокращений</Manual_Button_Increased_Heartrate>
+  <Manual_Button_Confusion>Путаница</Manual_Button_Confusion>
+  <Manual_Button_Lightheadedness>Головокружение</Manual_Button_Lightheadedness>
+  <Manual_Button_Blurred_Vision>Размытое зрение</Manual_Button_Blurred_Vision>
+  <Manual_Button_Leg_Swelling>Отек ног</Manual_Button_Leg_Swelling>
+  <Manual_Button_Wheezing>Свистящие хрипы</Manual_Button_Wheezing>
+  <Manual_Button_Weakness>Слабость</Manual_Button_Weakness>
+  <Manual_Button_Fever>Лихорадка</Manual_Button_Fever>
+  <Manual_Button_Sweating>Потение</Manual_Button_Sweating>
+  <Manual_Button_Bloating>Вздутие</Manual_Button_Bloating>
+  <Manual_Button_Inflammation>Воспаление</Manual_Button_Inflammation>
+  <Manual_Button_Jaundice>Желтуха</Manual_Button_Jaundice>
+  <Manual_Button_Abdominal_Discomfort>Боль в животе</Manual_Button_Abdominal_Discomfort>
+  <Manual_Button_Headache>Головная боль</Manual_Button_Headache>
+  <Manual_Button_Craving>Ломка</Manual_Button_Craving>
+  <Manual_Button_Palpitations>Фибрилляция</Manual_Button_Palpitations>
+  <Manual_Button_Spasms>Спазмы</Manual_Button_Spasms>
+  <Manual_Button_Neurotrauma>Нейротравма</Manual_Button_Neurotrauma>
+  <Manual_Button_Stroke>Инсульт</Manual_Button_Stroke>
+  <Manual_Button_Withdrawal>Воздержание</Manual_Button_Withdrawal>
+  <Manual_Button_Opiate_Overdose>Передозировка опиатами</Manual_Button_Opiate_Overdose>
+  <Manual_Button_Seizure>Припадок</Manual_Button_Seizure>
+  <Manual_Button_Unconsciousness>Без сознания</Manual_Button_Unconsciousness>
+  <Manual_Button_Coma>Кома</Manual_Button_Coma>
+  <Manual_Button_Spinal_Cord_Injury>Повреждение спинного мозга</Manual_Button_Spinal_Cord_Injury>
+  <Manual_Button_Concussion>Сотрясение</Manual_Button_Concussion>
+  <Manual_Button_Respiratory_Arrest>Остановка дыхания</Manual_Button_Respiratory_Arrest>
+  <Manual_Button_Lung_Damage>Повреждение легких</Manual_Button_Lung_Damage>
+  <Manual_Button_Pneumothorax>Пневмоторакс</Manual_Button_Pneumothorax>
+  <Manual_Button_Hyperventilation>Гипервентиляция</Manual_Button_Hyperventilation>
+  <Manual_Button_Hypoventilation>Гиповентиляция</Manual_Button_Hypoventilation>
+  <Manual_Button_Oxygen_Low>Недостаток кислорода</Manual_Button_Oxygen_Low>
+  <Manual_Button_Cardiac_Tamponade>Сердечная тампонада</Manual_Button_Cardiac_Tamponade>
+  <Manual_Button_Cardiac_Arrest>Остановка сердца</Manual_Button_Cardiac_Arrest>
+  <Manual_Button_Heart_Attack>Инфаркт</Manual_Button_Heart_Attack>
+  <Manual_Button_Heart_Damage>Повреждение сердца</Manual_Button_Heart_Damage>
+  <Manual_Button_Irregular_Heartbeat>Нерегулярное сердцебиение</Manual_Button_Irregular_Heartbeat>
+  <Manual_Button_Fibrillation>Фибрилляция</Manual_Button_Fibrillation>
+  <Manual_Button_Aortic_Rupture>Разрыв аорты</Manual_Button_Aortic_Rupture>
+  <Manual_Button_Internal_Bleeding>Внутреннее кровотечение</Manual_Button_Internal_Bleeding>
+  <Manual_Button_Radiation_Sickness>Лучевая болезнь</Manual_Button_Radiation_Sickness>
+  <Manual_Button_Kidney_Damage>Повреждение почек</Manual_Button_Kidney_Damage>
+  <Manual_Button_Liver_Damage>Повреждение печени</Manual_Button_Liver_Damage>
+  <Manual_Button_Morbusine>Морбузин</Manual_Button_Morbusine>
+  <Manual_Button_Cyanide_Poisoning>Отравление цианидом</Manual_Button_Cyanide_Poisoning>
+  <Manual_Button_Vanilla_Organ_Damage>Ванильный урон по органам</Manual_Button_Vanilla_Organ_Damage>
+  <Manual_Button_Analgesia>Анальгезия</Manual_Button_Analgesia>
+  <Manual_Button_Anesthesia>Анестезия</Manual_Button_Anesthesia>
+  <Manual_Button_Abdominal_Pain>Боль в животе</Manual_Button_Abdominal_Pain>
+  <Manual_Button_Vomiting>Рвота</Manual_Button_Vomiting>
+  <Manual_Button_Nausea>Тошнота</Manual_Button_Nausea>
+  <Manual_Button_Chest_Pain>Боль в груди</Manual_Button_Chest_Pain>
+  <Manual_Button_Traumatic_Amputation>Травматическая ампутация</Manual_Button_Traumatic_Amputation>
+  <Manual_Button_Gangrene>Гангрена</Manual_Button_Gangrene>
+  <Manual_Button_Surgical_Amputation>Хирургическая ампутация</Manual_Button_Surgical_Amputation>
+  <Manual_Button_Intense_Pain>Сильная боль</Manual_Button_Intense_Pain>
+  <Manual_Button_Bone_Death>Смерть кости</Manual_Button_Bone_Death>
+  <Manual_Button_Bone_Damage>Повреждение кости</Manual_Button_Bone_Damage>
+  <Manual_Button_Fractures>Переломы</Manual_Button_Fractures>
+  <Manual_Button_Dislocations>Вывихи</Manual_Button_Dislocations>
+  <Manual_Button_Arterial_Bleeding>Артериальное кровотечение</Manual_Button_Arterial_Bleeding>
+  <Manual_Button_Internal_Damage>Внутренний урон</Manual_Button_Internal_Damage>
+  <Manual_Button_Burns>Ожоги</Manual_Button_Burns>
+  <Manual_Button_Infected_Wounds>Зараженные раны</Manual_Button_Infected_Wounds>
+  <Manual_Button_Foreign_Bodies>Инородные тела</Manual_Button_Foreign_Bodies>
+  <Manual_Button_Wounds>Раны</Manual_Button_Wounds>
+  <Manual_Button_Ointmented>Мазь</Manual_Button_Ointmented>
+  <Manual_Button_Bandaged>Перевязанный</Manual_Button_Bandaged>
+  <Manual_Button_Plaster_Cast>Наложенный гипс</Manual_Button_Plaster_Cast>
+  <Manual_Button_Hypoxemia>Гипоксемия</Manual_Button_Hypoxemia>
+  <Manual_Button_Sepsis>Сепсис</Manual_Button_Sepsis>
+  <Manual_Button_Hemotransfusion_Shock>Гемотрансфузионный шок</Manual_Button_Hemotransfusion_Shock>
+  <Manual_Button_Blood_Loss>Кровопотеря</Manual_Button_Blood_Loss>
+  <Manual_Button_Hypotension>Гипотония</Manual_Button_Hypotension>
+  <Manual_Button_Hypertension>Гипертония</Manual_Button_Hypertension>
+  <Manual_Button_Acidosis>Ацидоз</Manual_Button_Acidosis>
+  <Manual_Button_Alkalosis>Алкалоз</Manual_Button_Alkalosis>
+  <Manual_Button_Adrenaline>Адреналин</Manual_Button_Adrenaline>
+  <Manual_Button_AED>Автоматизированый внешний дефибрилятор</Manual_Button_AED>
+  <Manual_Button_Alien_Blood>Инопланетная кровь</Manual_Button_Alien_Blood>
+  <Manual_Button_Ambubag>Мешок амбу</Manual_Button_Ambubag>
+  <Manual_Button_Anaparalyzant>Анапарализант</Manual_Button_Anaparalyzant>
+  <Manual_Button_Antibiotic_Glue>Антибиотический клей</Manual_Button_Antibiotic_Glue>
+  <Manual_Button_Antibiotic_Ointment>Антибиотическая мазь</Manual_Button_Antibiotic_Ointment>
+  <Manual_Button_Antiseptic>Антисептик</Manual_Button_Antiseptic>
+  <Manual_Button_Antiseptic_Sprayer>Антисептический спрей</Manual_Button_Antiseptic_Sprayer>
+  <Manual_Button_Autopulse>Автопульс</Manual_Button_Autopulse>
+  <Manual_Button_Azathioprine>Азатиоприн</Manual_Button_Azathioprine>
+  <Manual_Button_Bandages>Бинты</Manual_Button_Bandages>
+  <Manual_Button_Blood_Packs>Пакеты с кровью</Manual_Button_Blood_Packs>
+  <Manual_Button_Blue_Shark>Синяя акула</Manual_Button_Blue_Shark>
+  <Manual_Button_Body_Bag>Мешок для трупа</Manual_Button_Body_Bag>
+  <Manual_Button_Broad-spectrum_Antibiotics>Антибиотики широкого спектра</Manual_Button_Broad-spectrum_Antibiotics>
+  <Manual_Button_Combat_Stimulant>Боевой стимулятор</Manual_Button_Combat_Stimulant>
+  <Manual_Button_Deusizine>Деусицин</Manual_Button_Deusizine>
+  <Manual_Button_Diving_Knife>Нож ныряльщика</Manual_Button_Diving_Knife>
+  <Manual_Button_Drainage>Дренаж</Manual_Button_Drainage>
+  <Manual_Button_Empty_Blood_Pack>Пустой пакет для крови</Manual_Button_Empty_Blood_Pack>
+  <Manual_Button_Endovascular_Balloon>Эндоваскулярный баллон</Manual_Button_Endovascular_Balloon>
+  <Manual_Button_Fentanyl>Фентанил</Manual_Button_Fentanyl>
+  <Manual_Button_Gypsum>Гипс</Manual_Button_Gypsum>
+  <Manual_Button_Health_Scanner>Сканер здоровья</Manual_Button_Health_Scanner>
+  <Manual_Button_Hematology_Analyzer>Гематологический анализатор</Manual_Button_Hematology_Analyzer>
+  <Manual_Button_Hemostat>Зажим</Manual_Button_Hemostat>
+  <Manual_Button_Hyperzine>Гиперцин</Manual_Button_Hyperzine>
+  <Manual_Button_Liquid_Oxygenite>Жидкий кислородит</Manual_Button_Liquid_Oxygenite>
+  <Manual_Button_Mannitol>Маннитол</Manual_Button_Mannitol>
+  <Manual_Button_Manual_Defibrillator>Ручной дефибриллятор</Manual_Button_Manual_Defibrillator>
+  <Manual_Button_Medical_Stent>Медицинский стент</Manual_Button_Medical_Stent>
+  <Manual_Button_Methamphetamine>Метамфетамин</Manual_Button_Methamphetamine>
+  <Manual_Button_Morphine>Морфин</Manual_Button_Morphine>
+  <Manual_Button_Naloxone>Налоксон</Manual_Button_Naloxone>
+  <Manual_Button_Needle>Игла</Manual_Button_Needle>
+  <Manual_Button_Nitroglycerin>Нитроглицерин</Manual_Button_Nitroglycerin>
+  <Manual_Button_Opium>Опиум</Manual_Button_Opium>
+  <Manual_Button_Organ_Procurement_Scalpels>Скальпели для удаления органов</Manual_Button_Organ_Procurement_Scalpels>
+  <Manual_Button_Osteosynthesis_Implants>Остеосинтетические импланты</Manual_Button_Osteosynthesis_Implants>
+  <Manual_Button_Plastiseal>Эластичный бинт</Manual_Button_Plastiseal>
+  <Manual_Button_Propofol>Пропофол</Manual_Button_Propofol>
+  <Manual_Button_Raptor_Bane_Extract>Экстракт Бича Раптора</Manual_Button_Raptor_Bane_Extract>
+  <Manual_Button_Retractors>Расширитель</Manual_Button_Retractors>
+  <Manual_Button_Ringer_Solution>Раствор Рингера</Manual_Button_Ringer_Solution>
+  <Manual_Button_Saline>Физраствор</Manual_Button_Saline>
+  <Manual_Button_Scalpel>Скальпель</Manual_Button_Scalpel>
+  <Manual_Button_Sodium_Nitroprusside>Нитропруссид натрия</Manual_Button_Sodium_Nitroprusside>
+  <Manual_Button_Spinal_Cord_Implants>Импланты позвоночного столба</Manual_Button_Spinal_Cord_Implants>
+  <Manual_Button_Stasis_Bag>Стазис-мешок</Manual_Button_Stasis_Bag>
+  <Manual_Button_Streptokinase>Стрептокиназа</Manual_Button_Streptokinase>
+  <Manual_Button_Surgery_Table>Хирургический стол</Manual_Button_Surgery_Table>
+  <Manual_Button_Surgical_Drill>Хирургическая дрель</Manual_Button_Surgical_Drill>
+  <Manual_Button_Surgical_Saw>Хирургическая пила</Manual_Button_Surgical_Saw>
+  <Manual_Button_Sutures>Швы</Manual_Button_Sutures>
+  <Manual_Button_Thiamine>Тиамин</Manual_Button_Thiamine>
+  <Manual_Button_Tourniquet>Жгут</Manual_Button_Tourniquet>
+  <Manual_Button_Trauma_Shears>Медицинские ножницы</Manual_Button_Trauma_Shears>
+  <Manual_Button_Tweezers>Пинцет</Manual_Button_Tweezers>
+  <Manual_Button_Wrench>Гаечный ключ</Manual_Button_Wrench>
+  <Manual_Button_Traumatic_Shock>Травматический шок</Manual_Button_Traumatic_Shock>
+  <Manual_Button_Surgery_Incision>Хирургический надрез</Manual_Button_Surgery_Incision>
+  <Manual_Button_Clamped_Bleeding>Зажатое кровотечение</Manual_Button_Clamped_Bleeding>
+  <Manual_Button_Retracted_Skin>Оттянутая кожа</Manual_Button_Retracted_Skin>
+  <Manual_Button_Drilled_Bones>Просверленная кость</Manual_Button_Drilled_Bones>
+  <Manual_Button_Sawed_Bones>Кость распилена</Manual_Button_Sawed_Bones>
+  <Manual_Button_Open_Close_Surgery>Операция 'открыть и закрыть'</Manual_Button_Open_Close_Surgery>
+  <Manual_Button_Osteosynthetic_Surgery>Остеосинтезирующая хирургия</Manual_Button_Osteosynthetic_Surgery>
+  <Manual_Button_Aortic_Rupture_Surgery>Хирургия разрыва аорты</Manual_Button_Aortic_Rupture_Surgery>
+  <Manual_Button_Amputation_Surgery>Операция по ампутации</Manual_Button_Amputation_Surgery>
+  <Manual_Button_Organ_Transplant_Surgery>Операция по пересадке органов</Manual_Button_Organ_Transplant_Surgery>
+  <Manual_Button_Surgical_Drapes>Хирургическиая простыня</Manual_Button_Surgical_Drapes>
+  <Manual_Button_Surgical_Mask>Хирургическая маска</Manual_Button_Surgical_Mask>
+  <Manual_Button_Surgeon_Clothes>Хирургическая одежда</Manual_Button_Surgeon_Clothes>
+  <Manual_Button_Surgical_Infection>Хирургическая инфекция</Manual_Button_Surgical_Infection>
+  <Manual_Button_Mannitol_Plus>Маннитол плюс</Manual_Button_Mannitol_Plus>
+  <Manual_Button_Experimental_Treatment>Экспериментальный препарат</Manual_Button_Experimental_Treatment>
+  <Manual_Button_Triage_Card>Первичная медицинская карточка</Manual_Button_Triage_Card>
+  <Manual_Button_Brain_Jar>Сосуд для мозга</Manual_Button_Brain_Jar>
+  <Manual_Button_Artificial_Brain>Искусственный мозг</Manual_Button_Artificial_Brain>
+  <Manual_Button_Medical_Misconduct>Книга 'Медицинский этикет'</Manual_Button_Medical_Misconduct>
+  <Manual_Button_Cybernetic_Arm>Кибернетическая рука</Manual_Button_Cybernetic_Arm>
+  <Manual_Button_Cybernetic_Leg>Кибернетическая нога</Manual_Button_Cybernetic_Leg>
+  <Manual_Button_Cyberarm>Кибер-рука</Manual_Button_Cyberarm>
+  <Manual_Button_Cyberleg>Кибер-нога</Manual_Button_Cyberleg>
+  <Manual_Button_Damaged_Electronics>Поврежденная электроника</Manual_Button_Damaged_Electronics>
+  <Manual_Button_Bent_Metal>Погнутый металл</Manual_Button_Bent_Metal>
+  <Manual_Button_Loose_Screws>Незатянутый винт</Manual_Button_Loose_Screws>
+  <Manual_Button_Material_Loss>Потеря материала</Manual_Button_Material_Loss>
+  <Manual_Button_FPGA_Circuit>Схема на базе ППВМ</Manual_Button_FPGA_Circuit>
+  <Manual_Button_Welding_Tool>Сварочный инструмент</Manual_Button_Welding_Tool>
+  <Manual_Button_Screwdriver>Отвертка</Manual_Button_Screwdriver>
+  <Manual_Button_Steel_Bar>Стальной слиток</Manual_Button_Steel_Bar>
+  <Manual_Button_Start_Page>Стартовая страница</Manual_Button_Start_Page>
+  <Manual_Button_Information>Информация</Manual_Button_Information>
+  <Manual_Button_Symptoms>Симптомы</Manual_Button_Symptoms>
+  <Manual_Button_HeadBrain>Головной мозг</Manual_Button_HeadBrain>
+  <Manual_Button_Lungs>Легкие</Manual_Button_Lungs>
+  <Manual_Button_Heart>Сердце</Manual_Button_Heart>
+  <Manual_Button_Torso>Туловище</Manual_Button_Torso>
+  <Manual_Button_Extremities>Конечности</Manual_Button_Extremities>
+  <Manual_Button_Bones>Кости</Manual_Button_Bones>
+  <Manual_Button_Any_Bodypart>Любая часть тела</Manual_Button_Any_Bodypart>
+  <Manual_Button_Blood>Кровь</Manual_Button_Blood>
+  <Manual_Button_Items_Part_1>Предметы, часть 1</Manual_Button_Items_Part_1>
+  <Manual_Button_Items_Part_2>Предметы, часть 2</Manual_Button_Items_Part_2>
+  <Manual_Button_Items_Part_3>Предметы, часть 3</Manual_Button_Items_Part_3>
+  <Manual_Button_Items_Part_4>Предметы, часть 4</Manual_Button_Items_Part_4>
+  <Manual_Button_Surgery>Операции</Manual_Button_Surgery>
+  <Manual_Button_Procedures>Процедуры</Manual_Button_Procedures>
+  <Manual_Button_Expansion>Расширение</Manual_Button_Expansion>
+</infotexts>

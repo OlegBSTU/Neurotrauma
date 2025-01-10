@@ -1,0 +1,895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+  <Manual_Description_Morphine>###Tıbbi beceri kontrolü: 30
+ 
+ Etki oluşturmak için kullanılan orta derecede güçlü bir ağrı kesici.
+ 
+ ###Uygulama başarısı:
+ +50% etki oluşturma
+ +10% Opiyat Bağımlılığı
+ +10% opiyat doz aşımı
+ -30% Opiyat geri çekilmesi.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikler:
+ +100% etki oluşturma
+ +10% Opiyat Bağımlılığı
+ +20% opiyat doz aşımı
+ -30% Opiyat geri çekilmesi.
+ 
+ ###Uygulama başarısızlığı:
+ +30% etki oluşturma
+ +25% Opiyat Bağımlılığı
+ +20% opiyat doz aşımı
+ -30% Opiyat geri çekilmesi.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikler:
+ +60% etki oluşturma
+ +25% Opiyat Bağımlılığı
+ +40% opiyat doz aşımı
+ -30% Opiyat geri çekilmesi.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###Tıbbi beceri kontrolü: 39
+ Nalokson, Opiyat geri çekilmesi, opiyat aşırı dozu ve analjezi tedavisinde kullanılır. Etkiler 30 saniye içinde ortaya çıkar.
+ 
+ ###Uygulama başarısı:
+ - %60 opiyat geri çekilmesi
+ - %60 opiyat aşırı dozu
+ - %60 analjezi
+ 
+ ###Uygulama başarısızlığı:
+ - %30 opiyat geri çekilmesi
+ - %30 opiyat aşırı dozu
+ - %60 analjezi
+ Hastayı koma durumuna sokma olasılığı %50</Manual_Description_Naloxone>
+  <Manual_Description_Needle>İğne, @pnömotoraksı %5 güce azaltmak ve kötüleşmesini önlemek için tek kullanımlık bir araçtır. Ancak, pnömotoraksı tamamen tedavi etmez. Pnömotoraksı olmayan bir hastaya iğne kullanmak, onlara pnömotoraks verecektir.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###Tıbbi beceri kontrolü: 35
+ Darbelere veya ısıya maruz kalmaya karşı patlama eğilimli son derece uçucu bir madde içeren bir kavanoz. Tıbbi beceri kontrolü 35 olan @sodyum-nitroprusid ile tamamen aynı işlevi görür.
+ 
+ ###Uygulama başarısı:
+ Kan basıncında azalma için 400 saniye
+ 
+ ###Uygulama başarısızlığı:
+ Kan basıncında azalma için 200 saniye</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###Tıbbi beceri kontrolü: 15
+ 
+ Etki yapmak için kullanılan zayıf bir ağrı kesici @etki
+ 
+ ###Uygulama başarısı:
+ +20% @etki
+ +5% Opiyat Bağımlılığı
+ +8.75% @opiyat-aşırı-doza-neden-olma
+ -15% Opiyat @çekilme.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikleri:
+ +40% @etki
+ +5% Opiyat Bağımlılığı
+ +18.75% @opiyat-aşırı-doza-neden-olma
+ -15% Opiyat @çekilme.
+ 
+ ###Uygulama başarısızlığı:
+ +10% @etki
+ +20% Opiyat Bağımlılığı
+ +15% @opiyat-aşırı-doza-neden-olma
+ -15% Opiyat @çekilme.
+ 
+ ####Sarhoşken (&gt; %30 sarhoş) değişiklikleri:
+ +20% @etki
+ +20% Opiyat Bağımlılığı
+ +30% @opiyat-aşırı-doza-neden-olma
+ -15% Opiyat @çekilme.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>Bir Organ Temini Bıçağı, organ nakli ameliyatında adı verilen organı çıkarmak için kullanılır. Her organ için aşağıdaki gibi bir türü vardır: beyin, kalp, akciğerler, karaciğer ve böbrekler.
+ 
+ - Beyin için kullanılan bıçağın, beyini güvenilir bir şekilde çıkarmak için Tıbbi beceri kontrolü 100'dür.
+ 
+ - Kalp için kullanılan bıçağın, kalbi güvenilir bir şekilde çıkarmak için Tıbbi beceri kontrolü 60'tır.
+ 
+ - Akciğerler için kullanılan bıçağın, akciğerleri güvenilir bir şekilde çıkarmak için Tıbbi beceri kontrolü 50'dir.
+ 
+ - Karaciğer için kullanılan bıçağın, karaciğeri güvenilir bir şekilde çıkarmak için Tıbbi beceri kontrolü 40'tır.
+ 
+ - Böbrekler için kullanılan bıçağın, böbrekleri güvenilir bir şekilde çıkarmak için Tıbbi beceri kontrolü 30'dur.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>### Tıbbi beceri kontrolü: 45
+ 
+ @Osteosentetik cerrahide altıncı adım.
+ 
+ ### Uygulama başarısı:
+ 
+ Kullanılan implantların %25'ini tüketerek, kullanılan uzuvdaki tüm kırıkları iyileştirir.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +5% kanama
+ +5% @iç-hasar</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### Tıbbi beceri kontrolü: 22
+ 
+ Yaraları daha etkili bir şekilde tedavi edebilen @bandajların geliştirilmiş bir versiyonu.
+ 
+ ### Uygulama başarısı:
+ 
+ \\+100% @bandajlı
+ \\-48% kanama
+ \\-24% @yanıklar
+ 
+ ### Uygulama başarısızlığı:
+ 
+ \\+50% @bandajlı
+ \\-24% kanama
+ \\-12% @yanıklar
+ 
+ Plastiseal uygulamak, bandajın uygulandığı uzuvdaki kirli bandajları da değiştirecektir. Plastiseal ayrıca üçüncü derece yanıkları tedavi etmek için @geri çekilmiş ciltten sonra da kullanılabilir.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>Propofol artık üretilemez.
+ 
+ Propofol, bir insanı bayıltmak için kullanılan bir kimyasaldır. Hastanın @travmatik-şok yaşamasını önlediği için gemi dışında gerçekleştirilmesi gereken ameliyatlarda en iyi şekilde kullanılır. Tıbbi beceri kontrolü yoktur.
+ 
+ Enjekte edildiğinde, alıcı tarafındaki kişi saniyede %0,3 oranında yavaşça @anestezi kazanacaktır. %1 ila %15 arasındaki güçlükte, oyuncu %5 @analjeziye sahip olacaktır.
+ 
+ Afflction 16%'dan ilerlediğinde, oyuncu @bilinçsizliğe düşecek ve bekleyerek veya @anaparalizan ile %100'e kadar ilerleyene kadar bilinçsiz kalacaktır. Bu süre boyunca, oyuncu @yoğun-ağrı / @karın-ağrısı / @göğüs-ağrısı hissetmeyecek ve ameliyat onlara uygulanabilir.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>Raptor Bane Özütü, hastada kusma yoluyla alkaloz sağlayarak asidozun tedavisinde kullanılır.</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### Tıbbi beceri kontrolü: 30
+ 
+ Çoğu cerrahi işlemin dördüncü adımı. Kelepçelenmiş kanama olmadan retractorlar çalışmayacaktır.
+ 
+ ### Uygulama başarısı:
+ 
+ Aletin kullanıldığı uzuvdaki hastaya geri çekilmiş cilt verir.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +10% iç hasar.</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>Ringer çözeltisi, kan basıncını artırmak için kullanılır. Tuzlu suyun aksine, Ringer çözeltisi asidoza neden olmayacak ve sadece kan basıncını artıracaktır. Ancak dikkatli olun, istenmeyen seviyelere kan basıncınızı yükseltebilir.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>### Tıbbi beceri kontrolü: 10
+ Salin, @alkalozu tedavi etmek için kullanılan bir sıvıdır ve @asidoz indükleyerek etki gösterir.
+ 
+ ### Uygulama başarılı:
+ Kan basıncını artırır
+ +20% @asidoz
+ 
+ ### Uygulama başarısız:
+ Kan basıncını artırır
+ +12% @asidoz</Manual_Description_Saline>
+  <Manual_Description_Scalpel>### Tıbbi beceri kontrolü: 30
+ Tüm cerrahi işlemlerde ikinci adım. Skalpel, @analjezi olmadan çalışmayacaktır.
+ 
+ ### Başvuru başarısı:
+ Kullanılan uzvun üzerinde @cerrahi-kesi sağlar ve herhangi bir alçı veya @bandajı çıkarır.
+ 
+ ### Başvuru başarısızlığı:
+ +15% kanama
+ +10% yırtılma</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###Tıbbi beceri kontrolü: 10
+ Kan basıncını düşürmek için bir ilaç. Sodyum nitroprusid almak kan basıncınızı %45 oranında düşürecektir. Bu ilaç etkili olduğu sürece, hipotansiyona bağlı fibrilasyon azalacaktır.
+ 
+ ###Uygulama başarılı:
+ Kan basıncını 200 saniye boyunca düşürür.
+ 
+ ###Uygulama başarısız:
+ Kan basıncını 120 saniye boyunca düşürür.</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>### Tıbbi beceri kontrolü: 45
+ 
+ @Omurilik-yaralanması tedavisi için kullanılan implantlar.
+ 
+ ### Uygulama başarısı:
+ 
+ Implantların başarılı bir şekilde kullanılması hastanın omurgasını iyileştirecektir. Ancak hastanın boyun kırığı varsa, sadece geri gelecektir.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +5% kanama
+ +5% @iç-hasar</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>Ciddi yaralanmalar durumunda vücudu stabil tutmak için özel bir çanta. Stasis çantası dalış kıyafeti yuvasında giyilir ve giyildiğinde, saniyede %0,25 oranında durumunu tüketir, bu da stasis çantasının yaklaşık 400 saniye veya yaklaşık 6 buçuk dakika dayanacağı anlamına gelir. Stasis çantası giymek, kullanıcının 10.000 metreye kadar basınca karşı korunmasını sağlar, tam hızda çekilmesine izin verir ve aşağıdaki hastalıkların olumsuz etkilerini durdurur:
+ 
+ - @kalp-durdurma
+ - @solunum-durdurma
+ - @kalp-krizi
+ - @nörotravma
+ - @böbrek-hasarı
+ - @karaciğer-hasarı
+ - @kalp-hasarı
+ - @akciğer-hasarı
+ - @kemik-hasarı
+ - @sepsis
+ - @hipoksemi
+ - @hipotansiyon
+ - @hipertansiyon
+ - @asidoz
+ - @alkaloz
+ - @iç-kanama
+ - @inme
+ - @nöbet
+ - @koma
+ - @enfekte-yaralar
+ - Kanama
+ 
+ Stasis Çantası içindeki insanlara ameliyat yapılamayacağına dikkat edilmelidir. Ameliyattan önce çantadan çıkarılmaları gerekecektir. Stasis Çantasından çıkarılan hastalar @kalp-durdurma yaşayacak ve bu hastalıkların tedavi edilmesi gerekecektir.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###Tıbbi beceri kontrolü: Yok
+ Kan sulandırıcı bir ilaç. Streptokinaz kullanmak doğal kanama yenilenmesini önleyecek ve aktifken @inme durumunu kötüleştirecektir.
+ 
+ ###Uygulama sırasında:
+ - @Kalp-krizi ve @kan-transfüzyon-şoku tamamen tedavi edilir.</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>Cerrahi Masası, bir istasyondan satın alınabilecek veya üretilebilecek ve ardından yerleştirilebilecek bir öğedir. Hasta masanın üzerinde olmak zorunda değildir, sadece yakınında olması yeterlidir. Cerrahi Masası, hasta @analjezi altındaysa herkesin yakınında yapay solunum sağlar ve @travmatik-şok'u önler. Ek olarak, masanın oksijen düşüklüğünü azaltacağı ve @asidoz'un artmasını önleyeceği unutulmamalıdır.
+ 
+ Masanın ayrıca kan basıncı, @nörotravma, kalp atış hızı ve solunum hızı gibi önemli bilgileri çıkarmak için kullanılabilecek kablo pimleri vardır.
+ 
+ Cerrahi Masası, işlevsel olarak bir Hastane Yatağı ile aynıdır. Diğer yataklar üzerinde yatarken Travmatik Şok'u önler, ancak yapay solunum sağlamazlar.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### Tıbbi beceri kontrolü: 45
+ 
+ @Osteosentetik cerrahide beşinci adım.
+ 
+ ### Uygulama başarısı:
+ 
+ Cerrahi matkabın başarılı bir şekilde kullanılması, aletin kullanıldığı uzuvdaki kemiklere matkap izi verecektir.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +%15 kanama
+ +%10 @iç-hasar</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### Tıbbi beceri kontrolü: 45
+ 
+ @Amputasyon-cerrahisindeki beşinci adım.
+ 
+ ### Uygulama başarısı:
+ 
+ Cerrahi testere başarıyla kullanıldığında, aletin kullanıldığı uzuvdaki kemiklerin kesilmesi sağlanacaktır.
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +15% kanama
+ +6% @iç-hasar
+ +4% yırtılma</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### Tıbbi beceri kontrolü: 30
+ 
+ Tüm cerrahi işlemlerin son adımı. Ayrıca çoğu yaralanmanın kanamasını iyileştirmek için de çok faydalıdır.
+ 
+ ### Uygulama başarısı:
+ 
+ Tüm cerrahi ile ilgili etkileri (örneğin @cerrahi-kesik)
+ -20% ateşli silah yaralanmaları
+ -20% yırtılma yaralanmaları
+ -20% ısırık yaralanmaları
+ -20% derin doku yaralanmaları
+ -40% kanama
+ 
+ ### Uygulama başarısızlığı:
+ 
+ +6% @iç-hasar</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### Tıbbi beceri kontrolü: 10
+ 
+ Organ iyileştirmeye yardımcı olan B1 vitamin haplarının bulunduğu bir kap.
+ 
+ ### Başvuru başarısı:
+ 
+ 200 saniye organ iyileştirme süresi
+ 
+ ### Başvuru başarısızlığı:
+ 
+ 120 saniye organ iyileştirme süresi
+ 
+ ‌
+ 
+ 200 saniye organ iyileştirme süresi, yaklaşık %8 organ hasarını iyileştirecektir (@neurotrauma hariç), ve 120 saniye %4.8 iyileştirme sağlayacaktır. Bu, aynı zamanda doğal organ iyileşmesine ek olarak gerçekleşir. Tiamin ölü organları canlandıramaz.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>###Tıbbi beceri kontrolü: 30
+ Belirli bir uzvun kan akışını kısıtlamak için kullanılan bir nesne, düzenli ve arteriyel kanamayı azaltmak için. Tornike, @arteriyel-kanama olmadan çalışmayacaktır. @Travma-makasları kullanılarak kesilebilir.
+ 
+ ###Uygulama başarısı:
+ Arteriyel kanamanın olumsuz etkilerini geçici olarak durdurur ve düzenli kanamayı yavaşça tedavi eder, ancak uzun süreli kullanım @gangrene neden olabilir. Kafaya tornike uygulamak, kurbanın %15 @nörotravma ve %200 oksijen düşüklüğü yaşamasına neden olur.
+ 
+ ###Uygulama başarısızlığı:
+ +6% künt kuvvet travması</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###Tıbbi beceri kontrolü: 10
+ Alçı atelleri ve bandajları çıkarmak için kullanılan bir çift makas.
+ 
+ ###Uygulama başarısı:
+ Kullanılan makaslarla, tüm alçı atelleri, bandajlar ve triyaj kartları çıkarılır.
+ 
+ ###Uygulama başarısızlığı:
+ +%15 kanama
+ +%10 yırtılma</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>###Tıbbi beceri kontrolü: 30
+ Hasarlı doku veya mermileri çıkarmak için kullanılan bir çift cımbız.
+ 
+ ###Uygulama başarısı:
+ -5% @iç-hasar
+ -5% künt kuvvet travması
+ -5% @yabancı-cisimler
+ +5% yırtıklar
+ 
+ ###Uygulama başarısızlığı:
+ +6% @iç-hasar
+ 
+ Cımbızlar, çekilmiş cilt olmadan da çalışabilir. Ancak, cımbızı silah yaraları veya derin doku yaralanmaları olan bir uzvun üzerinden kullanmak, %5 @travmatik-şok'a neden olacaktır. Yabancı cisimleri çıkarmak da %5 şansla çiziklere neden olabilir.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###Tıbbi beceri kontrolü: 60 (Hasta @analjeziye sahipse 30)
+ Anahtar, çıkıkları tedavi etmek için kullanılır. Çıkıkları tedavi etmek için, sağlık arayüzünde çıkmış olan uzvun üzerine sürükleyin ve bir bandaj gibi tedavi olarak kullanın.
+ 
+ ###Uygulama başarılı:
+ O uzvun çıkığını iyileştirir.
+ 
+ ###Uygulama başarısız:
+ O uzvda kırık oluşmasına neden olur.</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>Travmatik şok çok ölümcül bir durumdur ve hastanızın herhangi bir noktada bunu edinmesi durumunda, hemen ameliyatı sonlandırın, yakındaki bir ameliyat masasına geri getirin veya yeniden sedasyon uygulayın. Travmatik şok, kurbanın anestezi etkisi altında olması veya yakınında bir ameliyat masası bulunurken 4 kat daha hızlı güç kaybedecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Güvensiz ameliyat yapmak (masa veya sedasyon olmadan)
+ - Silah yaraları veya derin doku yaralanmaları üzerinden @tweezers kullanmak (çok hafif şoklara neden olur, genellikle görmezden gelinir)
+ 
+ ##Etkileri:
+ 
+ - @hipotansiyon (ve çok fazlası)
+ - @kalp-durdurma (yüzde 40 veya daha fazlasında)
+ - @solunum-durdurma (yüzde 30 veya daha fazlasında)
+ - @nörotravma (gücün saniyede 100'e bölünmüş eşitliği, doğal yenilenmeyi geride bırakan yüzde 10 veya daha fazlası)
+ - Psikoz (gücün saniyede 100'e bölünmüş eşitliği)
+ 
+ ##Tedaviler:
+ 
+ - Ameliyatı sonlandırmak ve beklemek
+ - Yakındaki bir ameliyat masasına getirip hastanın sedasyon altında olduğundan emin olmak
+ 
+ ##Önleme:
+ 
+ - @retracted-skin adımından öteye gitmeden önce ameliyatın güvenli olduğundan emin olmak
+ - Ameliyatın ortasında @analjezi'nin bitmediğinden emin olmak</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>Tüm cerrahi işlemlerdeki ikinci adım. Klempli olmayan cerrahi kesik, her kesik için saniyede %0,7 kan kaybına neden olur ve analjezi veya başka bir sedasyon yöntemi olmadan yapılan cerrahi kesik, her kesik için saniyede %2 travmatik şoka neden olur. Bu hastalık, cerrahi masası olmadan yapıldığında travmatik şoka neden olmaz, bu nedenle kan alma işlemi yapmak için güvenlidir.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>Çoğu cerrahi işlemde üçüncü adım. Kanama klemplendiğinde, cerrahi kesimden kaynaklanan kan kaybını önleyecektir. Bu etki, bir sonraki adım olan retractors için gereklidir.</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>Çoğu cerrahi işlemde dördüncü adım. Cerrahi masası olmadan cildi geri çekmek, her geri çekme işlemi için saniyede %2 travmatik şok oluşturur. Osteosentetik cerrahi veya organ nakli cerrahisi gibi çoğu cerrahi işlem, bu adımdan kaynaklanır.</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>@Osteosentetik cerrahide beşinci adım. Cerrahi masası olmadan kemik delinmesi, her delinme için saniyede %1,5 travmatik şok oluşturur. Affliction olarak adlandırılan bu durum, etki olarak çevrilmelidir.</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>@Amputasyon-cerrahisinde beşinci adım. Cerrahi masası olmadan kemikleri kesmek, her kesilen kemik için saniyede %1,5 @travmatik-şok neden olacaktır. Affliction olarak adlandırılan travmatik şok etkisidir.</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##Adımlar:
+ 
+ 1. Seçtiğiniz anestezi
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. @sutures
+ 
+ (Note: The text is already in English, so there is no need to translate it. The instructions are simply listed in Turkish.)</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##Adımlar:
+ 
+ 1. Seçtiğiniz anestezi
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. @surgical-drill
+ 6. @osteosentez-implantları
+ 7. @dikişler
+ 
+ @Kemik-ölümünü tedavi etmek için her vücut bölgesinde yapılması gerekmektedir.</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##Adımlar:
+ 
+ 1. Seçtiğiniz anestezi
+ 2. @scalpel
+ 3. @endovasküler balon
+ 4. @tıbbi stent
+ 5. @dikişler</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## Adımlar:
+ 
+ 1. Seçtiğiniz anestezi (@analjezi)
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. @cerrahi-testere
+ 6. Biyonik veya insan uzuvları ile ampute edilmiş uzvun değiştirilmesi. (İsteğe bağlı)
+ 7. @dikişler
+ 8. Eğer cerrahi olarak ampute edilmişse, sibernetik uzuvlar (bionik implantlar değil) uzva yerleştirilebilir. Cerrahi işlem sibernetik uzuvların takılması için açık olmak zorunda değildir. (İsteğe bağlı) (NT Cybernetics eklentisi gerektirir)
+ 
+ Bu işlem, uzuvda %15'ten fazla @gangrene varsa uzvu geri kazandırmaz.
+ 
+ Bu işlem @cerrahi-amputasyon'a neden olur.</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>Organu yerleştirmeden önce @azatioprin kullanmayı ve bağışıklığın %10 veya daha düşük olduğundan emin olmayı unutmayın. Organ yerleştirildikten sonra hasar %100 ise, reddedildiği anlamına gelir. Bu, organ reddinin yapılandırmada kapatılmadığı durumlarda geçerli değildir.
+ 
+ ##Adımlar:
+ 
+ 1. Seçtiğiniz anestezik
+ 2. @bıçak
+ 3. @kanama durdurucu
+ 4. @çekiciler
+ 5. İlgili @organ-nakli-bıçakları
+ 6. İlgili organ nakli öğesi (Böbrekler için bunu iki kez yapmak gerekiyor)
+ 7. @dikişler</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>Cerrahi Örtüler, giyicinin sterilitesini artırmak ve böylece cerrahi enfeksiyon riskini azaltmak için kullanılan bir giysi öğesidir.
+ 
+ +100 Temel sterilite
+ Giyildiği sürece -%50 travmatik şok kazancı</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>Cerrahi Maske, giyildiğinde sterilizasyonu arttıran ve cerrahi enfeksiyon riskini azaltan bir giyilebilir öğedir.
+ 
+ - %10 Kesikler
+ - %20 Kanama</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>Cerrah kıyafeti giyildiğinde sterilizasyonu arttıran, cerrahi enfeksiyon riskini azaltan giyilebilir bir eşyadır.
+ 
+ -%10 Künt kuvvet travması
+ -%10 Yırtılma
+ -%10 Isırık yaraları</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>Cerrahi Enfeksiyon, hastanın çevresinin ne kadar steril olduğuna bağlı olarak @sepsis'e neden olan bir mekanizmadır.
+ 
+ ---
+ 
+ Aşağıdakiler sterilliği _artıracaktır_:
+ 
+ - Hastanın @cerrahi-örtü takması
+ - Yakındaki karakterlerin @cerrahi-maske takması
+ - Cerrahi becerisi olması (sterillik bu denklem temelinde kazanılır: 10 + cerrahi becerisi / 5)
+ - @Merhemli olması
+ 
+ ---
+ 
+ Aşağıdakiler sterilliği _azaltacaktır_:
+ 
+ - Hastanın @cerrahi-örtü takmaması
+ - Yakındaki karakterlerin @cerrahi-maske takmaması
+ 
+ ---
+ 
+ En düşük sterillikte, hastanın her iki saniyede bir @sepsis kazanma olasılığı %10'dur.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>Mannitol Plus, bir yetenek öğesi olup, üretmek için bir yeteneğe ihtiyaç duyduğu anlamına gelir. Uygulandığında, hasta dengesiz olsa bile 10 saniye boyunca %30 @nörotravma tedavi eder ve @karaciğer-hasarı / @akciğer-hasarı / @kalp-hasarı / @böbrek-hasarı / Organ Hasarı oluşturmadan @mannitol'ün etkilerini uygular.</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>Deneyimsel Tedavi, Cerrah sınıfı tarafından açılabilen bir yetenek öğesi. Rastgele olarak hem olumsuz hem de olumlu etkiler verebilir, ancak genellikle olumlu etkileri daha fazla verir.
+ 
+ Bu öğeden bir kullanımda sonsuz etki elde etme teorik bir şanstır. Bir madeni para atıyormuş gibi düşünün ve sadece yazı gelene kadar durmayın. Her baş geldiğinde, bu öğeden ek bir etki alırsınız.
+ 
+ Mümkün olan olumlu etkilerin listesi şöyledir:
+ 
+ ---
+ - Canlılık (rastgele olarak 200-400% güçten seçer)
+ - Hiperaktivite (rastgele olarak 200-400% güçten seçer)
+ - Psikoz Direnci (rastgele olarak 200-400% güçten seçer)
+ - Kabuk Enfeksiyonu Direnci (rastgele olarak 200-400% güçten seçer)
+ - Felç Direnci (rastgele olarak 300-600% güçten seçer)
+ - @analjezi (rastgele olarak 20-100% güçten seçer)
+ - @anestezi (rastgele olarak 1-100% güçten seçer)
+ - @merhemli (rastgele olarak 20-100% güçten seçer)
+ - Savaş Uyarıcısı (rastgele olarak 30-100% güçten seçer)
+ - Basınç Dengeleyici (rastgele olarak 30-100% güçten seçer)
+ - Tam bir iyileşme (20-100% @yaraları, vanilya organ hasarı, @nörotravma ve @kan kaybını tedavi eder ve @sepsisi tamamen iyileştirir)
+ 
+ ---
+ 
+ Mümkün olan olumsuz etkilerin listesi şöyledir:
+ 
+ ---
+ - Herhangi bir @yaralar (kanama için rastgele olarak 30-80%, diğer her şey için 5-20% seçer)
+ - 2-15 saniye boyunca sersemletir</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>Triage Kartları, yaralanmanın ciddiyetine göre hastaları işaretlemek için kullanılır. İki tür triaj kartı vardır, bunlar manuel ve otomatiktir. Manuel triaj kartı şu şekilde çalışır:
+ 
+ Triage kartını bacaklara takmak, hastayı en az yaralı olarak işaretleyecektir ve muhtemelen hayatta kalacaktır.
+ Triage kartını kollara takmak, hastayı yaralı olarak işaretleyecektir ve tedavi uzun bir süre geciktirilirse muhtemelen ölecektir.
+ Triage kartını gövdeye takmak, hastayı kritik olarak yaralı olarak işaretleyecektir ve acil yardıma ihtiyacı vardır.
+ Triage kartını başa takmak, hastayı ölmüş veya ölüme çok yakın olarak işaretleyecektir.
+ 
+ Otomatik triaj kartları, hastalığın etkisi ve canlılığına göre kurbanınızın sağlık durumunu değerlendirecek ve yeşil, sarı, kırmızı veya siyah bir derecelendirme verecektir.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>Beyin Kavanozu, Cerrah tarafından açılabilen bir yetenek öğesi. Sadece bir beyin çürümesini geciktirebilen soğutucu kapların aksine, Beyin Kavanozu sadece bir beyini süresiz olarak tutmakla kalmaz, aynı zamanda beyini 10 saniyede %1 oranında yavaşça onarır.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>Beyin çıkarıldıktan sonra kullanıldığında hastanın beyin yerine geçer. Beyni olmayanlarda nörotravma kazanmaktan korur. Başka bir şey yapmaz.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>Okunduğunda beceri seviyeleri verir.
+ 
+ ### Cerrahi beceri etkinleştirildiğinde:
+ 
+ +8 cerrahi beceri
+ +2 tıbbi beceri
+ 
+ ### Cerrahi beceri devre dışı bırakıldığında:
+ 
+ +8 tıbbi beceri</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>Herhangi bir cerrahi olarak kesilmiş kol soketine takılabilen bir sibernetik kol. Kaldırılabilir bir kaldıraçla çıkarılabilir. Bu seçilen uzuvda travmatik amputasyona neden olur.
+ 
+ ### Sibernetik kolun avantajları:
+ 
+ - Aralıksız ateşe dayanıklıdır ve arızalanmaz.
+ - Arızalanmadan veya kırılmadan yaratıkların saldırılarına dayanıklıdır.
+ - Hayatı tehdit eden kanamaya neden olacak saldırılara dayanıklıdır.
+ - İyi bakıldığında, saldırıya uğradığında zorla ampute edilme olasılığı çok daha azdır.
+ - Kırılmaz veya çıkılmaz. Sibernetik bir uzuv ekmeden önce herhangi bir çıkık veya kırığı düzelttiğinizden emin olun, aksi takdirde uzuv çıkarılana kadar kalıcı olacaktır.
+ 
+ #### Sibernetik kolun dezavantajları:
+ 
+ - Su ile iyi karışmaz. Sizi şok etmeyecek, ancak bir takım giymezseniz zamanla kırılacaktır.
+ - Hasar gördüğünde bakım gerektirir.
+ - Maliyetli bakım, özellikle altınızda yeterli miktarda çelik ve FPGA devreleri kaynağı yoksa.
+ - Yapımı / satın alımı maliyetlidir / pahalıdır.
+ - Malzeme kaybı yoluyla kritik hasar gördüğünde şiddetle ayrılır.
+ 
+ ### Mekanik beceri gereksinimi: 70
+ 
+ ### Uygulama Başarısı:
+ 
+ Seçilen uzuvda sibernetik kol uygulanır ve önceki başarısız denemelerden kaynaklanan herhangi bir iç hasar iyileştirilir.
+ 
+ ### Uygulama Başarısızlığı:
+ 
+ Uzuvda %20 @içsel-hasar uygulanır. Sibernetik kol silinmez.
+ 
+ ### Nasıl eklenir:
+ 
+ Önce seçilen uzuvda amputasyon ameliyatı yapın, ardından seçilen uzuvda sibernetik kol kullanın.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>Herhangi bir cerrahi olarak ampute edilmiş bacak soketine takılabilen bir sibernetik bacak. Kırbaçla çıkarılabilir. Bu seçilen uzuvda travmatik amputasyona neden olur.
+ 
+ ### Sibernetik uzuvların avantajları:
+ 
+ - Sürekli ateşe dayanıklıdır ve arızalanmaz.
+ - Arızalanmadan veya kırılmadan yaratıkların saldırılarına dayanıklıdır.
+ - Hayatı tehdit eden kanamalara neden olacak saldırılara dayanıklıdır.
+ - İyi bakıldığında, saldırıya uğradığında zorla ampute edilme olasılığı çok daha azdır.
+ - Kırılmaz veya çıkılmaz. Bir sibernetik uzuv eklemekten önce herhangi bir çıkık veya kırık düzeltildiğinden emin olun, aksi takdirde uzuv çıkarılana kadar kalıcı olacaktır.
+ 
+ #### Sibernetik uzuvların dezavantajları:
+ 
+ - Su ile iyi karışmaz. Sizi şok etmez, ancak bir takım giymezseniz zamanla kırılır.
+ - Hasar gördüğünde bakım gerektirir.
+ - Maliyetli bakım, özellikle altınızda yeterli miktarda çelik ve FPGA devreleri kaynağı yoksa.
+ - Yapımı / satın alımı maliyetlidir / pahalıdır.
+ - Malzeme kaybı yoluyla kritik hasar gördüğünde şiddetle ayrılır.
+ 
+ ### Mekanik beceri gereksinimi: 70
+ 
+ ### Uygulama Başarısı:
+ 
+ Seçilen uzuvda sibernetik uzvu uygular ve önceki başarısız denemelerden kaynaklanan herhangi bir iç hasarı iyileştirir.
+ 
+ ### Uygulama Başarısızlığı:
+ 
+ Uzuvda %20 @içsel-hasar uygular. Sibernetik uzuv silinmez.
+ 
+ ### Nasıl eklenir:
+ 
+ Önce seçilen uzuvda amputasyon ameliyatı yapın, ardından seçilen uzuvda sibernetik uzvu kullanın.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>Bu sokette bir @cybernetic-kolunuz var.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>Bu sokette @cybernetic-leg'iniz var.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>Kullanılan siber uzuvların temel zararı, suya maruz kaldıklarında elektroniklerinin zarar görmesi olarak ortaya çıkar.
+ 
+ Bir siber uzuv hasar gördüğünde, her tür hasar normal hasar türü yerine çeşitli türlerde ve miktarlarda siber uzuv özgü hasara neden olma şansına sahiptir.
+ 
+ Hasarlı elektroniklerin miktarı, @malzeme-kaybı miktarıyla ölçeklenir.
+ 
+ ## Nedenleri:
+ 
+ - Dalış kıyafeti olmadan suya girme
+ - %75 yanıkların hasarlı elektronikler olarak hasarının %200'si kadar hasar verme şansı
+ - %85 silah yaralanmalarının hasarının %75'i kadar hasarlı elektronikler olarak hasar verme şansı
+ - %50 ısırık yaralanmalarının hasarının %25'i kadar hasarlı elektronikler olarak hasar verme şansı
+ - %50 derin doku hasarının hasarının %50'si kadar hasarlı elektronikler olarak hasar verme şansı
+ - %50 künt kuvvet travmasının hasarının %100'ü kadar hasarlı elektronikler olarak hasar verme şansı
+ - %75 iç hasarın hasarının %100'ü kadar hasarlı elektronikler olarak hasar verme şansı
+ - %75 yabancı cisimlerin hasarının %75'i kadar hasarlı elektronikler olarak hasar verme şansı
+ 
+ ## Etkiler:
+ 
+ - Uzuv zaman zaman geçici olarak çalışmayı durdurur, sıklık güce göre ölçeklenir
+ - Uzuv kullanılamaz hale gelir (%99 veya daha fazla)
+ 
+ ## Tedaviler:
+ 
+ - @fpga-devresi</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>, @cyberlimb-repair-kit, or @cyberlimb-replacement surgery may be necessary to repair or replace the damaged cyberlimb. 
+ 
+ ## Turkish Translation:
+ 
+ Bir cyberlimba zarar verildiğinde, her tür hasar normal hasar türü yerine çeşitli türlerde ve miktarlarda cyberlimb özgü hasara neden olma şansına sahiptir.
+ 
+ ## Nedenleri:
+ 
+ - Yanıkların %85'i, hasarının %25'ini bükülmüş metal olarak neden olma şansına sahiptir.
+ - Kesiklerin %50'si, hasarının %25'ini bükülmüş metal olarak neden olma şansına sahiptir.
+ - Isırık yaralarının %50'si, hasarının %50'sini bükülmüş metal olarak neden olma şansına sahiptir.
+ - Derin doku hasarının %85'i, hasarının %100'ünü bükülmüş metal olarak neden olma şansına sahiptir.
+ - Künt kuvvet travmasının %75'i, hasarının %200'sini bükülmüş metal olarak neden olma şansına sahiptir.
+ 
+ ## Etkileri:
+ 
+ - Bir cyberleg üzerindeyseniz, sizi daha yavaş yapar, güçle ölçeklenir.
+ - Eklem %99 veya daha fazla hasar aldığında kullanılamaz hale gelir.
+ 
+ ## Tedavileri:
+ 
+ - Hasarlı cyberlimb'i tamir etmek veya değiştirmek için kaynakçı aleti, cyberlimb tamir kiti veya cyberlimb değiştirme ameliyatı gerekebilir.</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>Nedeni:
+ 
+ - Taşınırken gevşek vidalar ( %30 veya daha fazla)
+ - Kesiklerin %75'i gevşek vidalar olarak hasarın %25'ini oluşturur
+ - Derin doku hasarının %80'i hasarın %100'ü olarak gevşek vidaları oluşturur
+ - Künt kuvvet travmasının %50'si hasarın %50'sini gevşek vidalar olarak oluşturur
+ - @internal-damage'in %75'i hasarın %100'ü olarak gevşek vidaları oluşturur
+ - Isırık yaralarının %50'si hasarın %50'sini gevşek vidalar olarak oluşturur
+ - @foreign-bodies'in %75'i hasarın %75'ini gevşek vidalar olarak oluşturur
+ 
+ Etkileri:
+ 
+ - Gevşek vidalar ve @material-loss
+ 
+ Tedavileri:
+ 
+ - @screwdriver</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>Cyberlimb hasarına uğradığında, her tür hasar normal hasar türü yerine çeşitli türlerde ve miktarlarda cyberlimb özgü hasara neden olma şansına sahiptir.
+ 
+ Kazanılan malzeme kaybı miktarı, @loose-screws miktarıyla ölçeklenir.
+ 
+ ## Nedenleri:
+ 
+ - @loose-screws
+ - Kesiklerin %75'i, hasarlarının %25'ini malzeme kaybı olarak neden oluşturur.
+ - Silah yaralanmalarının %80'i, hasarlarının %80'ini malzeme kaybı olarak neden oluşturur.
+ - Isırık yaralanmalarının %75'i, hasarlarının %60'ını malzeme kaybı olarak neden oluşturur.
+ - Derin doku hasarının %100'ü, hasarının %100'ünü malzeme kaybı olarak neden oluşturur.
+ - Yabancı cisimlerin %80'i, hasarlarının %50'sini malzeme kaybı olarak neden oluşturur.
+ 
+ ## Etkileri:
+ 
+ - Cyberlimb kaybı ve @traumatic-amputation
+ 
+ ## Tedavileri:
+ 
+ - @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>Elektrik beceri kontrolü: 40
+ 
+ Cyberlimbs üzerindeki @hasarlı-elektronikleri tamir etmek için kullanılır.
+ 
+ ### Uygulama başarısı:
+ 
+ -50% @hasarlı-elektronikler
+ 
+ ### Uygulama başarısızlığı:
+ 
+ -20% @hasarlı-elektronikler</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### Mekanik beceri kontrolü: 50
+ 
+ Cyberlimbs üzerindeki @bükülmüş-metal parçalarını tamir etmek için kullanılır.
+ 
+ ### Uygulama başarısı:
+ 
+ -20% @bükülmüş-metal
+ 
+ ### Uygulama başarısızlığı:
+ 
+ -5% @bükülmüş-metal</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### Mekanik beceri kontrolü: 40
+ 
+ Cyberlimb'lerdeki @gevşek-vidaları tamir etmek için kullanılır.
+ 
+ ### Uygulama başarısı:
+ 
+ -20% @gevşek-vidalar
+ 
+ ### Uygulama başarısızlığı:
+ 
+ -5% @gevşek-vidalar</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### Mekanik beceri kontrolü: 60
+ 
+ Cyberlimbs üzerindeki @malzeme kaybını onarmak için kullanılır.
+ 
+ ### Uygulama başarısı:
+ 
+ -50% @malzeme kaybı
+ 
+ ### Uygulama başarısızlığı:
+ 
+ -20% @malzeme kaybı</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>Tıbbi Kılavuz'a hoş geldiniz, nörotravma mod sistemlerini ve yaygın tıbbi durumları anlama konusunda kapsamlı bir rehberiniz. Bu kılavuz, çeşitli tıbbi konular hakkında bilgi sağlamak için tasarlanmıştır:
+ 
+ - @bilgi
+ - @belirtiler
+ - @başbeyin
+ - @akciğerler
+ - @kalp
+ - @gövde
+ - @uzuvlar
+ - @kemikler
+ - @herhangi-bir-vücut-bölgesi
+ - @kan
+ - @madde-bölüm-1
+ - @madde-bölüm-2
+ - @madde-bölüm-3
+ - @madde-bölüm-4
+ - @cerrahi
+ - @cerrahi
+ - @genişleme</Manual_Description_Start_Page>
+  <Manual_Description_Information>Bilgi sekmesine hoş geldiniz, burada genel bilgiler hakkında okuyabilirsiniz:
+ 
+ - @ssss
+ - @med-kit-tavsiyeleri
+ - @nasıl-teşhis-edilir
+ - @tedavi-sırası
+ - @nörotravmanın-5-emri</Manual_Description_Information>
+  <Manual_Description_Symptoms>Belirtiler sekmesine hoş geldiniz:
+ 
+ - @kanlı-kusma
+ - @soluk-cilt
+ - @nefes-darlığı
+ - @öksürük
+ - @artmış-kalp-atışı
+ - @kafa-karışıklığı
+ - @baş dönmesi
+ - @bulanık-görüş
+ - @bacak-şişmesi
+ - @hırıltı
+ - @zayıflık
+ - @ateş
+ - @terleme
+ - @şişkinlik
+ - @iltihaplanma
+ - @sarılık
+ - @karın ağrısı
+ - @baş ağrısı
+ - @arzu
+ - @kalp çarpıntısı
+ - @spazmlar</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>Baş/Beyin sekmesine hoş geldiniz:
+ 
+ - @nörotravma
+ - @inme
+ - @çekilme
+ - @opioid-aşırı-doza
+ - @nöbet
+ - @bilinçsizlik
+ - @koma
+ - @omurilik-yaralanması
+ - @sarsıntı</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>Akciğer sekmesine hoş geldiniz:
+ 
+ - @solunum-durdurması
+ - @akciğer-hasarı
+ - @pnömotoraks
+ - @hiperventilasyon
+ - @hipoventilasyon
+ - @oksijen-düşüklüğü</Manual_Description_Lungs>
+  <Manual_Description_Heart>Kalp sekmesine hoş geldiniz:
+ 
+ - @kalp-tamponadı
+ - @kalp-durdurma
+ - @kalp krizi
+ - @kalp hasarı
+ - @düzensiz kalp atışı
+ - @fibrilasyon</Manual_Description_Heart>
+  <Manual_Description_Torso>Torso sekmesine hoş geldiniz:
+ 
+ - @aortik-yırtılma
+ - @iç-kanama
+ - @radyasyon-hastalığı
+ - @böbrek-hasarı
+ - @karaciğer-hasarı
+ - @morbusine
+ - @siyanür-zehirlenmesi
+ - @vanilya-organ-hasarı
+ - @analjezi
+ - @anestezi
+ - @karın-ağrısı
+ - @kusma
+ - @bulantı
+ - @göğüs-ağrısı</Manual_Description_Torso>
+  <Manual_Description_Extremities>Uç noktalar sekmesine hoş geldiniz:
+ 
+ - @travmatik-amputasyon
+ - @gangren
+ - @cerrahi-amputasyon
+ - @yoğun-ağrı</Manual_Description_Extremities>
+  <Manual_Description_Bones>Kemikler sekmesine hoş geldiniz:
+ 
+ - @kemik-ölümü
+ - @kemik-hasarı
+ - @kırıklar
+ - @çıkıklar</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Herhangi bir Vücut Bölümü sekmesine hoş geldiniz:
+ 
+ - @arteriyel-kanama
+ - @iç-hasar
+ - @yanıklar
+ - @enfekte-yaralar
+ - @yabancı-cisimler
+ - @yaralar
+ - @merhemli
+ - @bandajlı
+ - @alçılı</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>Kan sekmesine hoş geldiniz:
+ 
+ - @hipoksemi
+ - @sepsis
+ - @kan transfüzyon şoku
+ - @kan kaybı
+ - @hipotansiyon
+ - @hipertansiyon
+ - @asidoz
+ - @alkaloz</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Hoş geldiniz, Öğeler bölümü 1 sekmesine:
+ 
+ - @adrenalin
+ - @aed
+ - @yabancı-kan
+ - @ambubag
+ - @anaparalizan
+ - @antibiyotik-yapıştırıcı
+ - @antibiyotik-merhem
+ - @antiseptik
+ - @antiseptik-sprey
+ - @autopulse
+ - @azatioprin
+ - @bandajlar
+ - @kan-paketleri
+ - @mavi-köpekbalığı
+ - @cenaze-taşıma-torbası
+ - @geniş-spektrumlu-antibiyotikler
+ - @savaş-uyarıcısı
+ - @deusizin
+ - @dalış-bıçağı
+ - @drenaj</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>2. Bölüm Öğeleri sekmesine hoş geldiniz:
+ 
+ - @boş-kan-paketi
+ - @endovasküler-balon
+ - @fentanil
+ - @alçı
+ - @sağlık-tarama-cihazı
+ - @hematoloji-analizörü
+ - @hemostat
+ - @hiperzin
+ - @sıvı-oksiyenit
+ - @mannitol
+ - @manuel-defibrilatör
+ - @tıbbi-stent
+ - @metamfetamin
+ - @morfin
+ - @nalokson
+ - @iğne
+ - @nitrogliserin
+ - @afyon
+ - @organ-tedarik-scalpelleri
+ - @osteosentez-implantları</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>Ürünler Bölümü 3 sekmesine hoş geldiniz:
+ 
+ - @plastiseal
+ - @propofol
+ - @raptor-bane-ekstraktı
+ - @retraktörler
+ - @ringer-çözeltisi
+ - @tuzlu su
+ - @scalpel
+ - @sodyum-nitroprusid
+ - @omurilik-implantları
+ - @stasis-torbası
+ - @streptokinaz
+ - @cerrahi-masa
+ - @cerrahi-delme
+ - @cerrahi-testere
+ - @dikişler
+ - @tiamin
+ - @tornike
+ - @travma-makasları
+ - @pense
+ - @anahtar</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>Hoş geldiniz, Eşyalar bölümü 4 sekmesine:
+ 
+ BOŞ</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>Cerrahi sekmesine hoş geldiniz:
+ 
+ - @travmatik-şok
+ - @cerrahi-kesi
+ - @kelepçelenmiş-kanama
+ - @geri çekilmiş-deri
+ - @delinmiş-kemikler
+ - @testereyle-kesilmiş-kemikler</Manual_Description_Surgery>
+  <Manual_Description_Procedures>Prosedürler sekmesine hoş geldiniz:
+ 
+ - @açık-kapalı-cerrahi
+ - @osteosentetik-cerrahi
+ - @aort-çatlaması-cerrahisi
+ - @amputasyon-cerrahisi
+ - @organ-nakli-cerrahisi</Manual_Description_Procedures>
+  <Manual_Description_Expansion>Genişletme sekmesine hoş geldiniz:
+ 
+ - @cerrahi-örtüleri
+ - @cerrahi-maske
+ - @cerrah-kıyafetleri
+ - @cerrahi-enfeksiyon
+ - @mannitol-artı
+ - @deneysel-tedavi
+ - @triage-kartı
+ - @beyin-kavanozu
+ - @yapay-beyin
+ - @tıbbi-suistimal
+ - @sibernetik-kol
+ - @sibernetik-bacak
+ - @sibernetik-kol
+ - @sibernetik-bacak
+ - @hasarlı-elektronikler
+ - @bükülmüş-metal
+ - @gevşek-vida
+ - @malzeme-kaybı
+ - @fpga-devresi
+ - @kaynak-aleti
+ - @tornavida
+ - @çelik-çubuk</Manual_Description_Expansion>
+</infotexts>

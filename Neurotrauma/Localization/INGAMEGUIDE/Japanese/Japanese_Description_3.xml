@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Japanese" nowhitespace="true" translatedname="日本語">
+  <Manual_Description_Morphine>###医療技能チェック：30
+ 
+ @analgesiaを誘発するために使用される中程度の強力な鎮痛剤。
+ 
+ ###アプリケーション成功：
+ +50％@analgesia
+ +10％オピオイド中毒
+ +10％@opiate-overdose
+ -30％オピオイド@withdrawal。
+ 
+ ####酔っている場合（&gt; 30％酔っている場合）は、次のように変更されます：
+ +100％@analgesia
+ +10％オピオイド中毒
+ +20％@opiate-overdose
+ -30％オピオイド@withdrawal。
+ 
+ ###アプリケーション失敗：
+ +30％@analgesia
+ +25％オピオイド中毒
+ +20％@opiate-overdose
+ -30％オピオイド@withdrawal。
+ 
+ ####酔っている場合（&gt; 30％酔っている場合）は、次のように変更されます：
+ +60％@analgesia
+ +25％オピオイド中毒
+ +40％@opiate-overdose
+ -30％オピオイド@withdrawal。</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###医療技能チェック：39
+ ナロキソンは、オピオイドの離脱、オピオイド過剰摂取、および鎮痛剤の治療に使用されます。効果は30秒以内に現れます。
+ 
+ ###応用成功：
+ -60％のオピオイド離脱
+ -60％のオピオイド過剰摂取
+ -60％の鎮痛剤
+ 
+ ###応用失敗：
+ -30％のオピオイド離脱
+ -30％のオピオイド過剰摂取
+ -60％の鎮痛剤
+ 患者を昏睡状態にする50％の確率</Manual_Description_Naloxone>
+  <Manual_Description_Needle>針は、気胸を5％に減らし、悪化を防止するための一度限りの使用アイテムです。ただし、気胸を完全に治療するわけではありません。気胸のない患者に針を使用すると、代わりに気胸を引き起こすことになります。</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###医療技能チェック：35
+ 非常に揮発性の物質が入った瓶で、衝撃や熱にさらされると爆発する可能性があります。医療技能チェックが35であること以外は、@sodium-nitroprussideとまったく同じ機能を持ちます。
+ 
+ ###応用成功：
+ 血圧低下を400秒間維持します。
+ 
+ ###応用失敗：
+ 血圧低下を200秒間維持します。</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###医療技能チェック：15
+ 
+ 鎮痛剤を使用して@analgesiaを誘発するために使用される弱い鎮痛剤
+ 
+ ###アプリケーション成功：
+ +20％@analgesia
+ +5％オピオイド中毒
+ +8.75％@opiate-overdose
+ -15％オピオイド@withdrawal。
+ 
+ ####酔っている場合（&gt; 30％酔っている場合）、次のように変更されます：
+ +40％@analgesia
+ +5％オピオイド中毒
+ +18.75％@opiate-overdose
+ -15％オピオイド@withdrawal。
+ 
+ ###アプリケーション失敗：
+ +10％@analgesia
+ +20％オピオイド中毒
+ +15％@opiate-overdose
+ -15％オピオイド@withdrawal。
+ 
+ ####酔っている場合（&gt; 30％酔っている場合）、次のように変更されます：
+ +20％@analgesia
+ +20％オピオイド中毒
+ +30％@opiate-overdose
+ -15％オピオイド@withdrawal。</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>臓器移植手術で、臓器摘出用の器具が使われます。それぞれの臓器に対応する器具があります。脳、心臓、肺、肝臓、腎臓です。
+ 
+ - 脳用の器具は、脳を確実に取り除くために医療技能チェックが100必要です。
+ 
+ - 心臓用の器具は、心臓を確実に取り除くために医療技能チェックが60必要です。
+ 
+ - 肺用の器具は、肺を確実に取り除くために医療技能チェックが50必要です。
+ 
+ - 肝臓用の器具は、肝臓を確実に取り除くために医療技能チェックが40必要です。
+ 
+ - 腎臓用の器具は、腎臓を確実に取り除くために医療技能チェックが30必要です。</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>### 医療技能チェック：45
+ 
+ @骨接合手術の6番目のステップ。
+ 
+ ### アプリケーション成功：
+ 
+ 使用したインプラントが25％消費され、使用した肢にあるすべての骨折が治療されます。
+ 
+ ### アプリケーション失敗：
+ 
+ +5％の出血
+ +5％の内部損傷</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### 医療技能チェック：22
+ 
+ 傷をより効果的に治療できる、@bandagesの改良版。
+ 
+ ### アプリケーション成功：
+ 
+ \\+100％ @bandaged
+ \\-48％ 出血
+ \\-24％ @burns
+ 
+ ### アプリケーション失敗：
+ 
+ \\+50％ @bandaged
+ \\-24％ 出血
+ \\-12％ @burns
+ 
+ プラスティシールを適用すると、バンテージが汚れている場合は、バンテージが適用された肢に置き換えられます。プラスティシールは、@retracted-skinの後に使用して、三度のやけどを治療することもできます。</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>プロポフォールはもはやクラフトできません。
+ 
+ プロポフォールは、人間を意識不明にするために使用される化学物質です。患者が外部で行われる手術で最もよく使用され、@traumatic-shockを防止します。医療スキルチェックはありません。
+ 
+ 注射後、受け取る側の人は、秒速0.3％の速度で徐々に@anesthesiaを獲得します。1％から15％の強度では、プレイヤーは5％の@analgesiaを持ちます。
+ 
+ アフリクションが16％を超えると、プレイヤーは@unconsciousnessに陥り、アフリクションが待機によって100％に進行するか、@anaparalyzantによって0％に減少するまで意識不明のままになります。この間、プレイヤーは@intense-pain / @abdominal-pain / @chest-painを感じず、手術が行われることができます。</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>ラプターベインエキスは、患者に嘔吐を誘発させて彼らにアルカローシスを与えることにより、酸中毒の治療に使用されます。この効果をもたらすために使用されます。</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### 医療技能チェック：30
+ 
+ ほとんどの手術プロセスにおける第4ステップ。100％の@clamped-bleedingがなければ、リトラクターは機能しません。
+ 
+ ### アプリケーション成功：
+ 
+ 使用された肢体の皮膚を@retracted-skinにします。
+ 
+ ### アプリケーション失敗：
+ 
+ +10％の@internal-damage</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>リンガー液は血圧を上昇させるために使用されます。塩水とは異なり、リンガー液は酸中毒を引き起こさず、血圧のみを上昇させます。ただし、望ましくないレベルまで血圧を上昇させる可能性があるため、注意が必要です。</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>### 医療技能チェック：10
+ 塩化ナトリウムは、酸中毒を誘発することによってアルカローシスを治療するために使用される液体です。
+ 
+ ### アプリケーション成功：
+ 血圧を上昇させます
+ +20％の酸中毒
+ 
+ ### アプリケーション失敗：
+ 血圧を上昇させます
+ +12％の酸中毒</Manual_Description_Saline>
+  <Manual_Description_Scalpel>### 医療技能チェック：30
+ すべての手術プロセスの第2ステップ。鎮痛剤がなければメスは機能しません。
+ 
+ ### アプリケーション成功：
+ 使用した肢体に@surgery-incisionを与え、キャストや@bandagesを取り除きます。
+ 
+ ### アプリケーション失敗：
+ +15％の出血
+ +10％の裂傷</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###医療技能チェック：10
+ 血圧を下げる薬剤。亜硝酸プルシドを服用すると、血圧が45％下がります。この薬が効いている間、低血圧による心房細動が軽減されます。
+ 
+ ###アプリケーション成功：
+ 血圧を200秒間下げます。
+ 
+ ###アプリケーション失敗：
+ 血圧を120秒間下げます。</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>### 医療技能チェック：45
+ 
+ 脊髄損傷の治療に使用されるインプラント。
+ 
+ ### アプリケーション成功：
+ 
+ インプラントを成功裏に使用することで、患者の脊椎を治療することができます。ただし、患者が頸椎骨折をしている場合は、単に戻ってくることに注意してください。
+ 
+ ### アプリケーション失敗：
+ 
+ +5％の出血
+ +5％の内部損傷</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>重傷の場合、適切な治療のために体を静止させる特別なバッグ。ステーシスバッグはダイビングスーツスロットに装着され、装着すると0.25％/秒で状態が低下し、ステーシスバッグは約400秒または約6分半持続します。ステーシスバッグを着用すると、10,000メートルまでの圧力から身を守り、最高速度で引きずられることができ、以下の病気の負の影響を止めることができます：
+ 
+ - @心停止
+ - @呼吸停止
+ - @心臓発作
+ - @神経外傷
+ - @腎臓損傷
+ - @肝臓損傷
+ - @心臓損傷
+ - @肺損傷
+ - @骨損傷
+ - @敗血症
+ - @低酸素血症
+ - @低血圧
+ - @高血圧
+ - @アシドーシス
+ - @アルカローシス
+ - @内出血
+ - @脳卒中
+ - @発作
+ - @昏睡
+ - @感染した傷
+ - 出血
+ 
+ ステーシスバッグの中にいる人に手術を行うことはできないことに注意してください。手術前にバッグから取り出す必要があります。ステーシスバッグから取り出された患者は@心停止を起こし、これらの病気を治療する必要があります。</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###医療技能チェック：なし
+ 血液をサラサラにする薬です。ストレプトキナーゼを使用すると、自然な出血再生を防止し、アクティブな間は@strokeを悪化させます。
+ 
+ ###応用時：
+ - @heart-attackと@hemotransfusion-shockを完全に治療します。</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>手術台は、駅から購入するか、製作して設置することができるアイテムです。患者は台の上にいる必要はありませんが、近くにいる必要があります。手術台は、患者が鎮痛剤の下にある場合、台の近くにいるすべての人に人工換気を提供し、外傷性ショックを防止します。さらに、台は酸性中毒の増加を防止し、低酸素症を減少させ、呼吸停止を防止します。
+ 
+ また、手術台には、血圧、神経外傷、心拍数、呼吸数などの重要な情報を出力するために使用できる配線ピンがあります。
+ 
+ 手術台は、病院のベッドと機能的に同じです。他のベッドは、横になっている場合に外傷性ショックを防止しますが、人工換気を提供しません。</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### 医療技能チェック：45
+ 
+ @骨接合手術の第5ステップ。
+ 
+ ### アプリケーション成功：
+ 
+ 手術用ドリルを成功裏に使用すると、使用された肢に@ドリルされた骨が患者に与えられます。
+ 
+ ### アプリケーション失敗：
+ 
+ +15％の出血
+ +10％の@内部損傷</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>### 医療技能チェック：45
+ 
+ @切断手術の5番目のステップ。
+ 
+ ### アプリケーション成功：
+ 
+ 手術用のノコギリを成功裏に使用すると、使用された肢に@sawed-bonesが生じます。
+ 
+ ### アプリケーション失敗：
+ 
+ +15％の出血
+ +6％の@内部損傷
+ +4％の裂傷</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>### 医療技能チェック：30
+ 
+ すべての手術プロセスの最終段階。また、ほとんどの傷や出血を治療するのに非常に役立ちます。
+ 
+ ### アプリケーション成功：
+ 
+ 手術関連のすべての苦痛（手術切開など）
+ -20％の銃創
+ -20％の裂傷
+ -20％の噛み傷
+ -20％の深部組織損傷
+ -40％の出血を除去します。
+ 
+ ### アプリケーション失敗：
+ 
+ +6％の内部損傷</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### 医療技能チェック：10
+ 
+ 臓器治癒を助けるために使用されるビタミンB1の錠剤が入った容器。
+ 
+ ### アプリケーション成功：
+ 
+ 臓器治癒時間200秒
+ 
+ ### アプリケーション失敗：
+ 
+ 臓器治癒時間120秒
+ 
+ 200秒の臓器治癒時間は、神経外傷を除いた臓器損傷の約8％を治癒します。120秒の臓器治癒時間は4.8％を治癒します。これは同時に自然な臓器治癒に加えられます。チアミンは死んだ臓器を蘇らせることはできません。</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>###医療技能チェック：30
+ 特定の肢体の血流を制限して通常の出血と動脈性出血を軽減するために使用されるアイテム。
+ 動脈性出血がなければ、ターニケットは機能しません。@trauma-shearsを使用して切断できます。
+ 
+ ###アプリケーション成功：
+ 動脈性出血の負の影響を一時的に停止し、通常の出血をゆっくりと治療しますが、長時間使用すると@gangreneを引き起こします。頭部にターニケットを使用すると、被害者に15％の@neurotraumaと200％の低酸素状態が発生します。
+ 
+ ###アプリケーション失敗：
+ +6％の鈍器打撃傷害</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>### 医療技能チェック：10
+ 石膏や包帯を取り除くために使用されるはさみ。
+ 
+ ### アプリケーション成功：
+ 使用されたはさみで、手足にあるすべての石膏、包帯、およびトリアージカードを取り除きます。
+ 
+ ### アプリケーション失敗：
+ +15％の出血
+ +10％の裂傷</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>### 医療技能チェック：30
+ 損傷した組織や弾丸を取り除くために使用されるピンセットのペア。
+ 
+ ### アプリケーション成功：
+ -5％ @内部損傷
+ -5％ 鈍器打撃
+ -5％ @異物体
+ +5％ 切り傷
+ 
+ ### アプリケーション失敗：
+ +6％ @内部損傷
+ 
+ ピンセットは、摘んでいる肢体に銃創や深部組織損傷がある場合、@皮膚を引っ込めることなく作業することができます。銃創や深部組織損傷を通してピンセットを使用すると、5％の@外傷性ショックが発生します。異物体を摘出する場合も、5％のスクラップが発生する可能性があります。</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###医療技能チェック：60（患者が@鎮痛剤を持っている場合は30）
+ レンチは@脱臼を治療するために使用されます。脱臼を治療するには、ヘルスインターフェイスの脱臼した肢にそれをドラッグし、包帯のように治療として使用します。
+ 
+ ###アプリケーション成功：
+ その肢の脱臼を治療します。
+ 
+ ###アプリケーション失敗：
+ その肢に骨折を引き起こします。</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>外傷性ショックは非常に致命的であり、患者がこれを発症した場合はすぐに手術を中止し、手術台の近くに戻すか、再び鎮静剤を投与してください。外傷性ショックは、麻酔の影響下にある場合または手術台の近くにいる場合、4倍速く弱まります。
+ 
+ ---
+ ##原因：
+ 
+ - 安全でない手術を行う（手術台がない、鎮静剤がない）
+ - 銃創や深部組織の傷口にピンセットを使用する（非常に軽度のショックを引き起こすが、通常は無視できる）
+ 
+ ##効果：
+ 
+ - 低血圧（多量）
+ - 心停止（40％以上）
+ - 呼吸停止（30％以上）
+ - 神経外傷（強度を秒単位で100で割ったものに等しい。10％以上で自然再生を上回る）
+ - 精神病（強度を秒単位で100で割ったものに等しい）
+ 
+ ##治療：
+ 
+ - 手術を中止して待つ
+ - 手術台の近くに戻し、患者が鎮静していることを確認する
+ 
+ ##予防：
+ 
+ - @retracted-skinステップを超える前に手術が安全であることを確認する
+ - 手術中に@analgesiaが切れないようにする</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>すべての手術プロセスにおける第2ステップ。クランプをかけていない手術切開は、各切開あたり秒間0.7％の出血を引き起こし、鎮痛剤や他の鎮静方法なしで手術切開を行うと、各切開あたり秒間2％の外傷性ショックを引き起こします。手術台なしで行う場合、この病状は外傷性ショックを引き起こさないため、血を抜くことができます。</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>多くの手術プロセスにおける第3ステップは、出血を止めることです。手術切開による出血を防止するためにクランプを使用します。この効果は次のステップ、リトラクターに必要です。</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>ほとんどの手術プロセスにおける第4ステップ。手術台が近くにない場合、皮膚を引っ張ることは、引っ張った回数ごとに秒あたり2％の外傷性ショックを引き起こします。骨折手術や臓器移植手術など、ほとんどの手術プロセスは、このステップから派生しています。 (Note: The @ symbols are not necessary in Japanese as they are specific to English social media platforms.)</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>骨接合手術における第5ステップ。手術台の近くがない場所で骨をドリルすると、ドリルされた骨1つにつき秒間1.5％の外傷性ショックが発生します。 (Note: I kept the English terms for osteosynthetic surgery, surgery table, and traumatic shock as they are technical terms and commonly used in Japan.)</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>「切断手術」の第5ステップ。手術台のない場所で骨を鋸で切断すると、骨を1回切断するごとに秒間1.5％の「外傷性ショック」が発生します。 (Note: The term "amputation surgery" does not have a direct translation in Japanese, so I used the term "切断手術" which means "cutting surgery". Also, I used the term "外傷性ショック" which means "traumatic shock" instead of "trauma shock" as the latter does not have a direct translation in Japanese.)</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##手順：
+ 
+ 1. 好きな麻酔を選ぶ
+ 2. @メス
+ 3. @止血鉗子
+ 4. @再器具
+ 5. @縫合糸</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##手順：
+ 
+ 1. 好きな麻酔を使用する
+ 2. @メス
+ 3. @止血鉗子
+ 4. @再開器
+ 5. @手術用ドリル
+ 6. @骨折固定用インプラント
+ 7. @縫合糸
+ 
+ @骨死を治療するために、すべての体の部位で実施する必要があります。</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##手順：
+ 
+ 1. 好きな麻酔を選ぶ
+ 2. @メス
+ 3. @内視鏡バルーン
+ 4. @医療用ステント
+ 5. @縫合糸</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## 手順：
+ 
+ 1. 好みの麻酔薬（@鎮痛剤）
+ 2. @メス
+ 3. @止血器
+ 4. @リトラクター
+ 5. @手術用の鋸
+ 6. バイオニックまたは人間の手足で切断された手足を置き換えます。（オプション）
+ 7. @縫合
+ 8. サイバネティックな手足（バイオニックのインプラントではない）は、手術的に切断された手足に取り付けることができます。サイバーリンブを取り付けるために手術を開く必要はありません。（オプション）（NTサイバネティックスアドオンが必要です）
+ 
+ この手順は、手足が15％以上の@壊疽を持っている場合、手足を生じません。
+ 
+ この手順により、@手術的切断が引き起こされます。</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>器官を入れる前に@アザチオプリンを使用し、彼らの免疫力が10％以下であることを確認してください。器官の損傷が100％になった場合、拒絶されたことを意味します。これは、構成で器官拒絶がオフになっている場合には適用されません。
+ 
+ ##手順：
+ 
+ 1. 希望の麻酔
+ 2. @メス
+ 3. @止血器
+ 4. @リトラクター
+ 5. 各々の@器官摘出メス
+ 6. 各々の器官移植アイテム（腎臓については2回行う必要があります）
+ 7. @縫合糸</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>手術用ドレープは、着用者の無菌性を高め、手術感染のリスクを減らすために使用される衣類です。
+ 
+ +100基本無菌性
+ 着用時の外傷性ショック獲得量-50％</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>手術用マスクは着用することで、滅菌効果が増し、手術感染のリスクが低下します。
+ - 切り傷を10％減少
+ - 出血を20％減少</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>手術着は着用することで不妊性を高め、手術感染のリスクを減らすことができる装備品です。
+ 
+ -10％の鈍器による外傷
+ -10％の切り傷
+ -10％の噛み傷</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>手術感染は、患者の環境の清潔度に基づいて敗血症を引き起こすメカニズムです。この環境の清潔度を増やすためには、以下のことが必要です：
+ 
+ - 患者が手術用ドレープを着用すること
+ - 近くのキャラクターが手術用マスクを着用すること
+ - 手術スキルを持っていること（この式に基づいて環境の清潔度が増加します：10 + 手術スキル / 5）
+ - 軟膏を塗ること
+ 
+ 逆に、以下のことがあると環境の清潔度が低下します：
+ 
+ - 患者が手術用ドレープを着用していないこと
+ - 近くのキャラクターが手術用マスクを着用していないこと
+ 
+ 環境の清潔度が最低になると、2秒ごとに患者が敗血症を発症する確率が10％あります。</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>マンニトールプラスは、才能が必要なアイテムであり、クラフトするためには才能が必要です。投与されると、患者が不安定であっても、10秒間で30％の神経外傷を治療し、マンニトールの効果を引き起こすことなく、肝臓の損傷/肺の損傷/心臓の損傷/腎臓の損傷/臓器の損傷を引き起こします。</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>実験的治療は、外科医クラスでアンロック可能なタレントアイテムです。ランダムに負の影響と正の影響の両方を与えることができますが、通常は負の影響よりも正の影響を与える傾向があります。
+ 
+ このアイテムを1回使用すると、理論上は無限の影響を得る可能性があります。コインを投げると想像してください。裏が出るまで止まらないのです。表が出るたびに、このアイテムから追加の影響を得ることができます。
+ 
+ 可能な正の影響のリストは以下の通りです：
+ 
+ ---
+ - 活力（ランダムに200〜400％の強度を選択）
+ - 過活動（ランダムに200〜400％の強度を選択）
+ - 精神病耐性（ランダムに200〜400％の強度を選択）
+ - 皮膚感染耐性（ランダムに200〜400％の強度を選択）
+ - 麻痺耐性（ランダムに300〜600％の強度を選択）
+ - @鎮痛剤（ランダムに20〜100％の強度を選択）
+ - @麻酔（ランダムに1〜100％の強度を選択）
+ - @軟膏（ランダムに20〜100％の強度を選択）
+ - 戦闘刺激剤（ランダムに30〜100％の強度を選択）
+ - 圧力安定化（ランダムに30〜100％の強度を選択）
+ - 完全な回復（@傷、バニラの臓器損傷、@神経外傷、@失血の20〜100％を治療し、@敗血症を完全に治療します）
+ 
+ ---
+ 
+ 可能な負の影響のリストは以下の通りです：
+ 
+ ---
+ - 任意の@傷（出血の場合はランダムに30〜80％を選択し、その他の場合はランダムに5〜20％を選択）
+ - 2〜15秒のスタン</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>トリアージカードは、患者の負傷の重症度に基づいてマークするために使用されます。トリアージカードには、手動と自動の2種類があります。手動トリアージカードは以下のように機能します。
+ 
+ 脚にトリアージカードを取り付けると、患者が軽傷であり、ほとんどの場合生き残ることができることを示す緑でマークされます。
+ 腕にトリアージカードを取り付けると、患者が負傷しており、治療が長期間遅れると死亡する可能性が高いことを示す黄色でマークされます。
+ 胴体にトリアージカードを取り付けると、患者が重傷であり、直ちに援助が必要であることを示す赤でマークされます。
+ 頭にトリアージカードを取り付けると、患者が死亡しているか、非常に死に近いことを示す黒でマークされます。
+ 
+ 自動トリアージカードは、患者の病状と生命力に基づいて健康状態を評価し、緑、黄色、赤、黒の評価を与えます。</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>脳ジャーは、外科医によってアンロック可能な才能アイテムです。冷蔵容器とは異なり、脳の腐敗を遅らせることしかできない冷蔵容器とは異なり、脳ジャーは脳を無期限に保持するだけでなく、10秒あたり1％の速度で脳を修復します。</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>取り外した後に使用すると、患者の脳を置き換えます。脳がないことによる神経外傷を防ぐ効果があります。それ以外の効果はありません。 (Note: "affliction" was translated as "effect" as instructed, but it may not be the most accurate translation in this context.)</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>このテキストを日本語に翻訳してください：
+ 読むとスキルレベルが上がります
+ 
+ ### 手術スキルが有効な場合：
+ 
+ +8 手術スキル
+ +2 医療スキル
+ 
+ ### 手術スキルが無効な場合：
+ 
+ +8 医療スキル</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>任意の手術的に切断された腕のソケットに取り付けることができるサイバネティックアーム。クロウバーで取り外すことができます。これにより、選択された肢体に外傷性切断が生じます。
+ 
+ ### サイバーリンブの利点：
+ 
+ - 持続的な銃火を受けても故障しません。
+ - 故障や破損なしに生物からの攻撃を受け止めるのに優れています。
+ - 生命を脅かす出血を引き起こす攻撃を持続するのに理想的です。
+ - メンテナンスが良好な場合、攻撃されても強制的に切断される可能性が低くなります。
+ - 骨折や脱臼しないでください。サイバーリンブを追加する前に、脱臼や骨折を修正してください。そうしないと、リンブを外すまで永久になります。
+ 
+ #### サイバーリンブの欠点：
+ 
+ - 水とは相性が悪いです。感電することはありませんが、スーツを着用しない場合、時間が経つと壊れます。
+ - 損傷した場合はメンテナンスが必要です。
+ - コストのかかるメンテナンス、特にサブが十分な鋼材とFPGA回路の供給源を持っていない場合。
+ - 製造/購入にコストがかかります。
+ - 物質損失による致命的な損傷がある場合、激しく切り離されます。
+ 
+ ### 機械技術要件：70
+ 
+ ### アプリケーション成功：
+ 
+ 選択された肢体にサイバーリンブを適用し、以前の失敗した試みによる内部損傷を癒します。
+ 
+ ### アプリケーション失敗：
+ 
+ 肢体に20％の@internal-damageを適用します。サイバーリンブは削除されません。
+ 
+ ### 追加方法：
+ 
+ まず、選択された肢体に切断手術を行い、次に選択された肢体にサイバーリンブを使用します。</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>任意の手術的に切断された足のソケットに取り付けることができるサイバネティックな脚。クロウバーで取り外すことができます。これにより、選択された肢に外傷性切断が生じます。
+ 
+ ### サイバーリンブの利点：
+ 
+ - 持続的な銃火を受けても故障しません。
+ - 故障や破損なしに生物からの攻撃を受け止めるのに優れています。
+ - 生命を脅かす出血を引き起こす攻撃を持続するのに理想的です。
+ - メンテナンスが良好な場合、攻撃されても強制的に切断される可能性が少なくなります。
+ - 骨折や脱臼しないでください。サイバーリンブを追加する前に、脱臼や骨折を修正してください。そうしないと、リンブを外すまで永久になります。
+ 
+ #### サイバーリンブの欠点：
+ 
+ - 水とは相性が悪いです。感電することはありませんが、スーツを着用しない場合、時間が経つと壊れます。
+ - 損傷した場合はメンテナンスが必要です。
+ - サブに十分な鋼材とFPGA回路の供給源がない場合、メンテナンスが高価になります。
+ - 製造/購入に高価です。
+ - 物質損失による致命的な損傷がある場合、激しく分離します。
+ 
+ ### 機械技能要件：70
+ 
+ ### アプリケーション成功：
+ 
+ 選択された肢にサイバーリンブを適用し、以前の失敗した試みによる内部損傷を治療します。
+ 
+ ### アプリケーション失敗：
+ 
+ 肢に20％の@internal-damageを適用します。サイバーリンブは削除されません。
+ 
+ ### 追加方法：
+ 
+ まず、選択された肢に切断手術を行い、選択された肢にサイバーリンブを使用します。</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>このソケットには@サイバネティックアームがあります。</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>このソケットには@サイバネティックレッグがあります。</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>サイバーリンブを使用する際の主な損害は、水にさらされると電子部品が損傷することです。
+ 
+ サイバーリンブにダメージを受けると、通常のダメージタイプではなく、各種類のダメージがサイバーリンブ固有のダメージタイプとして発生する可能性があります。
+ 
+ 損傷した電子部品の量は、@material-lossの量に比例して増加します。
+ 
+ ## 原因：
+ 
+ - ダイビングスーツを着用せずに水中にいること
+ - @burnsが200％のダメージを損傷した電子部品として引き起こす75％の確率
+ - 銃創が75％のダメージを損傷した電子部品として引き起こす85％の確率
+ - 噛み傷が25％のダメージを損傷した電子部品として引き起こす50％の確率
+ - 深部組織損傷が50％のダメージを損傷した電子部品として引き起こす50％の確率
+ - 鈍的外傷が100％のダメージを損傷した電子部品として引き起こす50％の確率
+ - @internal-damageが100％のダメージを損傷した電子部品として引き起こす75％の確率
+ - @foreign-bodiesが75％のダメージを損傷した電子部品として引き起こす75％の確率
+ 
+ ## 影響：
+ 
+ - リンブが一時的に動作停止することがあり、頻度は強度に比例します。
+ - リンブが使用不能になる（99％以上の場合）
+ 
+ ## 治療：
+ 
+ - @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>を使用して、曲がった金属を修正する
+ - サイバーリンブの交換</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>によって引き起こされたもの：
+ 
+ - 移動中の緩んだネジ（30％以上）
+ - 切り傷が25％のダメージを緩んだネジとして引き起こす確率は75％
+ - 深部組織損傷が100％のダメージを緩んだネジとして引き起こす確率は80％
+ - 鈍的外傷が50％のダメージを緩んだネジとして引き起こす確率は50％
+ - @internal-damageが100％のダメージを緩んだネジとして引き起こす確率は75％
+ - 噛み傷が50％のダメージを緩んだネジとして引き起こす確率は50％
+ - @foreign-bodiesが75％のダメージを緩んだネジとして引き起こす確率は75％
+ 
+ ## 効果：
+ 
+ - 緩んだネジと@material-loss
+ 
+ ## 治療：
+ 
+ - @screwdriver</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>サイバーリンブにダメージを受けた場合、通常のダメージタイプではなく、各種のサイバーリンブ特有のダメージタイプと量を引き起こす可能性があります。
+ 
+ 緩んだネジの量に応じて、材料損失の量がスケールします。
+ 
+ ## 原因：
+ 
+ - 緩んだネジ
+ - 切り傷が25％のダメージを材料損失として引き起こす75％の確率
+ - 銃創が80％のダメージを材料損失として引き起こす80％の確率
+ - 噛み傷が60％のダメージを材料損失として引き起こす75％の確率
+ - 深部組織損傷が100％のダメージを材料損失として引き起こす100％の確率
+ - 異物が50％のダメージを材料損失として引き起こす80％の確率
+ 
+ ## 影響：
+ 
+ - サイバーリンブの喪失と外傷的切断
+ 
+ ## 治療：
+ 
+ - 鋼棒</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### 電気技能チェック：40
+ 
+ サイバーリンブの@damaged-electronicsを修理するために使用されます。
+ 
+ ### アプリケーション成功：
+ 
+ -50％@damaged-electronics
+ 
+ ### アプリケーション失敗：
+ 
+ -20％@damaged-electronics</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### 機械技能チェック：50
+ 
+ サイバーリンブの@曲がった金属を修理するために使用されます。
+ 
+ ### アプリケーション成功：
+ 
+ -20％@曲がった金属
+ 
+ ### アプリケーション失敗：
+ 
+ -5％@曲がった金属</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### 機械技能チェック：40
+ 
+ サイバーリンブの@緩いネジを修理するために使用されます。
+ 
+ ### アプリケーション成功：
+ 
+ -20％@緩いネジ
+ 
+ ### アプリケーション失敗：
+ 
+ -5％@緩いネジ</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### 機械技能チェック：60
+ 
+ サイバーリンブの@material-lossを修理するために使用されます。
+ 
+ ### アプリケーション成功：
+ 
+ -50％の@material-loss
+ 
+ ### アプリケーション失敗：
+ 
+ -20％の@material-loss</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>メディカルマニュアルへようこそ。神経外傷モッドシステムと一般的な医療状態を理解するための包括的なガイドです。このマニュアルは、以下の医療トピックに関する情報を提供するように設計されています：
+ 
+ - @情報
+ - @症状
+ - @頭脳
+ - @肺
+ - @心臓
+ - @胴体
+ - @四肢
+ - @骨
+ - @どんな身体部位でも
+ - @血液
+ - @アイテム-パート-1
+ - @アイテム-パート-2
+ - @アイテム-パート-3
+ - @アイテム-パート-4
+ - @手術
+ - @手術
+ - @拡張</Manual_Description_Start_Page>
+  <Manual_Description_Information>情報タブへようこそ。ここでは一般的な情報について読むことができます：
+ 
+ - @faq
+ - @med-kit-recommendations
+ - @how-to-diagnose
+ - @order-of-treatments
+ - @the-5-commandments-of-neurotrauma
+ 
+ （注意：「Affliction is Effect」という指示に従い、"affliction"を"effect"として翻訳していません。もし必要であれば、翻訳を修正してください。）</Manual_Description_Information>
+  <Manual_Description_Symptoms>症状タブへようこそ：
+ 
+ - @吐血
+ - @蒼白い肌
+ - @息切れ
+ - @咳
+ - @心拍数の増加
+ - @混乱
+ - @めまい
+ - @視界がぼやける
+ - @足の腫れ
+ - @喘鳴
+ - @弱さ
+ - @発熱
+ - @発汗
+ - @膨満感
+ - @炎症
+ - @黄疸
+ - @腹部不快感
+ - @頭痛
+ - @食欲
+ - @動悸
+ - @痙攣</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>頭部/脳タブへようこそ：
+ 
+ - @神経外傷
+ - @脳卒中
+ - @離脱症状
+ - @オピオイド過剰摂取
+ - @発作
+ - @意識不明
+ - @昏睡状態
+ - @脊髄損傷
+ - @脳震盪</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>肺タブへようこそ：
+ 
+ - @呼吸停止
+ - @肺損傷
+ - @気胸
+ - @過呼吸
+ - @低呼吸
+ - @酸素不足</Manual_Description_Lungs>
+  <Manual_Description_Heart>心臓タブへようこそ：
+ 
+ - 心膜タンポナーデ
+ - 心停止
+ - 心筋梗塞
+ - 心臓損傷
+ - 不整脈
+ - 無秩序性心房細動</Manual_Description_Heart>
+  <Manual_Description_Torso>Torsoタブへようこそ：
+ 
+ - @大動脈破裂
+ - @内出血
+ - @放射線病
+ - @腎臓損傷
+ - @肝臓損傷
+ - @morbusine
+ - @シアン化物中毒
+ - @バニラ臓器損傷
+ - @鎮痛剤
+ - @麻酔
+ - @腹痛
+ - @嘔吐
+ - @吐き気
+ - @胸痛</Manual_Description_Torso>
+  <Manual_Description_Extremities>極端なタブへようこそ：
+ 
+ - @外傷性切断
+ - @壊疽
+ - @手術的切断
+ - @激しい痛み</Manual_Description_Extremities>
+  <Manual_Description_Bones>骨タブへようこそ：
+ 
+ - @骨死
+ - @骨損傷
+ - @骨折
+ - @脱臼</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>Any Bodypartタブへようこそ：
+ 
+ - @動脈出血
+ - @内部損傷
+ - @やけど
+ - @感染した傷
+ - @異物体
+ - @傷
+ - @軟膏を塗った
+ - @包帯を巻いた
+ - @ギプスをかけた</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>血液タブへようこそ：
+ 
+ - @低酸素血症
+ - @敗血症
+ - @輸血ショック
+ - @失血
+ - @低血圧
+ - @高血圧
+ - @アシドーシス
+ - @アルカローシス</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>Welcome to Items part 1 tab:
+ 
+ - @アドレナリン
+ - @AED
+ - @エイリアンブラッド
+ - @アンブバッグ
+ - @麻痺剤
+ - @抗生物質グルー
+ - @抗生物質軟膏
+ - @消毒剤
+ - @消毒スプレー
+ - @オートパルス
+ - @アザチオプリン
+ - @包帯
+ - @血液パック
+ - @ブルーシャーク
+ - @ボディバッグ
+ - @広域スペクトル抗生物質
+ - @戦闘刺激剤
+ - @デウシジン
+ - @ダイビングナイフ
+ - @ドレナージュ</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>アイテムパート2タブへようこそ：
+ 
+ - @empty-blood-pack
+ - @endovascular-balloon
+ - @fentanyl
+ - @gypsum
+ - @health-scanner
+ - @hematology-analyzer
+ - @hemostat
+ - @hyperzine
+ - @liquid-oxygenite
+ - @mannitol
+ - @manual-defibrillator
+ - @medical-stent
+ - @methamphetamine
+ - @morphine
+ - @naloxone
+ - @needle
+ - @nitroglycerin
+ - @opium
+ - @organ-procurement-scalpels
+ - @osteosynthesis-implants</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>アイテムパート3タブへようこそ：
+ 
+ - @プラスティシール
+ - @プロポフォール
+ - @ラプターベインエキス
+ - @リトラクター
+ - @リンガーソリューション
+ - @生理食塩水
+ - @メス
+ - @亜硝酸ナトリウムプルシド
+ - @脊髄インプラント
+ - @停滞バッグ
+ - @ストレプトキナーゼ
+ - @手術テーブル
+ - @手術ドリル
+ - @手術用のノコギリ
+ - @縫合糸
+ - @チアミン
+ - @鎖骨帯
+ - @外傷用ハサミ
+ - @ピンセット
+ - @レンチ</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>アイテムパート4タブへようこそ：
+ 
+ 空です。</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>手術タブへようこそ：
+ 
+ - @外傷性ショック
+ - @手術切開
+ - @クランプ止血
+ - @皮膚引き戻し
+ - @骨をドリルで穿孔
+ - @骨をノコギリで切断</Manual_Description_Surgery>
+  <Manual_Description_Procedures>手順タブへようこそ：
+ 
+ - @開閉手術
+ - @骨折手術
+ - @大動脈破裂手術
+ - @切断手術
+ - @臓器移植手術</Manual_Description_Procedures>
+  <Manual_Description_Expansion>拡張タブへようこそ：
+ 
+ - @手術用ドレープ
+ - @手術用マスク
+ - @外科医用衣服
+ - @手術感染
+ - @マニトールプラス
+ - @実験的治療
+ - @トリアージカード
+ - @脳ジャー
+ - @人工脳
+ - @医療不正行為
+ - @サイバネティックアーム
+ - @サイバネティックレッグ
+ - @サイバーアーム
+ - @サイバーレッグ
+ - @損傷した電子機器
+ - @曲がった金属
+ - @緩んだネジ
+ - @材料損失
+ - @FPGA回路
+ - @溶接工具
+ - @ドライバー
+ - @鋼鉄バー</Manual_Description_Expansion>
+</infotexts>

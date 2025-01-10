@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Korean" nowhitespace="true" translatedname="한국어">
+  <Manual_Description_Morphine>###의료 기술 체크: 30
+ 
+ 통증 완화를 유도하는 중간 정도의 강도의 진통제입니다.
+ 
+ ###적용 성공:
+ +50% 통증 완화
+ +10% 아편 중독
+ +10% 아편 과다 복용
+ -30% 아편 금단증상.
+ 
+ ####술에 취한 상태 (&gt;30% 숙취)에서는 다음과 같이 변경됩니다:
+ +100% 통증 완화
+ +10% 아편 중독
+ +20% 아편 과다 복용
+ -30% 아편 금단증상.
+ 
+ ###적용 실패:
+ +30% 통증 완화
+ +25% 아편 중독
+ +20% 아편 과다 복용
+ -30% 아편 금단증상.
+ 
+ ####술에 취한 상태 (&gt;30% 숙취)에서는 다음과 같이 변경됩니다:
+ +60% 통증 완화
+ +25% 아편 중독
+ +40% 아편 과다 복용
+ -30% 아편 금단증상.</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>의료 기술 체크: 39
+ 나록손은 아편 중독, 아편 과다 복용 및 진통을 치료하는 데 사용됩니다. 효과는 30초 이내에 발생합니다.
+ 
+ ###응용 성공:
+ -60% 아편 중독
+ -60% 아편 과다 복용
+ -60% 진통
+ 
+ ###응용 실패:
+ -30% 아편 중독
+ -30% 아편 과다 복용
+ -60% 진통
+ 환자를 @코마 상태로 만들 확률은 50%입니다.</Manual_Description_Naloxone>
+  <Manual_Description_Needle>바늘은 기흉을 5% 강도로 감소시키고 악화되는 것을 방지하기 위한 일회용품입니다. 그러나, 기흉을 완전히 치료하지는 않습니다. 기흉이 없는 환자에게 바늘을 사용하면 그들에게 기흉을 유발시킵니다.</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>의료 기술 체크: 35
+ 충격이나 열에 노출될 경우 폭발할 가능성이 매우 높은 매우 불안정한 물질이 들어있는 병. 의료 기술 체크 35를 제외하고는 @sodium-nitroprusside와 정확히 같은 기능을 합니다.
+ 
+ ###적용 성공:
+ 혈압 감소 400초
+ 
+ ###적용 실패:
+ 혈압 감소 200초</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###의료 기술 체크: 15
+ 
+ 진통 효과를 유도하는 약물
+ 
+ ###적용 성공:
+ +20% 진통 효과
+ +5% 아편 중독
+ +8.75% 아편 과다 복용
+ -15% 아편 금단증상
+ 
+ ####술에 취했을 때 (&gt;30% 숙취) 변경:
+ +40% 진통 효과
+ +5% 아편 중독
+ +18.75% 아편 과다 복용
+ -15% 아편 금단증상
+ 
+ ###적용 실패:
+ +10% 진통 효과
+ +20% 아편 중독
+ +15% 아편 과다 복용
+ -15% 아편 금단증상
+ 
+ ####술에 취했을 때 (&gt;30% 숙취) 변경:
+ +20% 진통 효과
+ +20% 아편 중독
+ +30% 아편 과다 복용
+ -15% 아편 금단증상.</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>장기 이식 수술에서 해당 장기를 추출하기 위해 장기 조달 메스가 사용됩니다. 각 장기에 대해 다음과 같은 유형이 있습니다 : 뇌, 심장, 폐, 간 및 신장.
+ 
+ - 뇌를 신뢰성 있게 제거하기 위해 의료 기술 검사는 100입니다.
+ 
+ - 심장을 신뢰성 있게 제거하기 위해 의료 기술 검사는 60입니다.
+ 
+ - 폐를 신뢰성 있게 제거하기 위해 의료 기술 검사는 50입니다.
+ 
+ - 간을 신뢰성 있게 제거하기 위해 의료 기술 검사는 40입니다.
+ 
+ - 신장을 신뢰성 있게 제거하기 위해 의료 기술 검사는 30입니다.</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>의료 기술 체크: 45
+ 
+ @골절 수술의 여섯 번째 단계.
+ 
+ ### 적용 성공:
+ 
+ 이식물이 사용된 팔다리의 모든 골절을 치료하며, 이식물의 25%를 사용합니다.
+ 
+ ### 적용 실패:
+ 
+ +5% 출혈
+ +5% 내부 손상</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>의료 기술 체크: 22
+ 
+ 상처를 더 효과적으로 치료할 수 있는 개선된 버전의 @붕대.
+ 
+ ### 응용 프로그램 성공:
+ 
+ \\+100% @붕대
+ \\-48% 출혈
+ \\-24% @화상
+ 
+ ### 응용 프로그램 실패:
+ 
+ \\+50% @붕대
+ \\-24% 출혈
+ \\-12% @화상
+ 
+ 플라스티씰을 적용하면 적용된 팔다리에 더러운 붕대를 대체할 수 있습니다. 플라스티씰은 3도 화상을 치료하기 위해 @축소된-피부 후에도 사용할 수 있습니다.</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>프로포폴은 더 이상 제작할 수 없습니다.
+ 
+ 프로포폴은 인간을 의식을 잃게하는 화학물질입니다. 환자가 외부에서 수술을 받아야 할 경우에 가장 적합하며, 외상성 쇼크를 방지합니다. 의료 기술 검사가 필요하지 않습니다.
+ 
+ 주사를 받은 사람은 초당 0.3%의 속도로 천천히 마취 상태가 됩니다. 1%에서 15% 강도까지, 플레이어는 5%의 진통 효과를 느낄 수 있습니다.
+ 
+ 질병이 16% 이상 진행되면, 플레이어는 의식을 잃고, 질병이 100%로 진행되거나, 마취제로 0%로 감소할 때까지 의식을 회복하지 못합니다. 이 동안, 플레이어는 강한 통증, 복통, 가슴통증을 느끼지 않으며, 수술이 가능합니다.</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>랩터 베인 추출물은 환자에게 구토를 유발하여 알칼로시스를 제공함으로써 산성증 치료에 사용됩니다.</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>의료 기술 체크: 30
+ 
+ 대부분의 수술 절차에서 네 번째 단계입니다. 100% @clamped-bleeding이 없으면 리트랙터가 작동하지 않습니다.
+ 
+ ### 적용 성공:
+ 
+ 도구가 사용된 지점의 팔다리에 @retracted-skin을 제공합니다.
+ 
+ ### 적용 실패:
+ 
+ +10% @internal-damage</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>링거 용액은 혈압을 높이는 데 사용됩니다. 소금물과 달리, 링거 용액은 산성증을 유발하지 않으며, 혈압만 높일 뿐입니다. 그러나 혈압을 원치 않는 수준까지 높일 수 있으므로 주의하십시오.</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###의료 기술 체크: 10
+ 염소화물은 @알칼로시스를 유발하여 @산성증을 치료하는 데 사용되는 액체입니다.
+ 
+ ###적용 성공:
+ 혈압 상승
+ +20% @산성증
+ 
+ ###적용 실패:
+ 혈압 상승
+ +12% @산성증</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###의료 기술 체크: 30
+ 모든 수술 절차의 두 번째 단계입니다. 마취 없이는 메스가 작동하지 않습니다.
+ 
+ ###응용 프로그램 성공:
+ 사용된 팔다리에 @수술 절개를 제공하며, 캐스트나 @붕대를 제거합니다.
+ 
+ ###응용 프로그램 실패:
+ +15% 출혈
+ +10% 찢어짐</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>의료 기술 체크: 10
+ 혈압을 낮추는 약물입니다. 소듐 니트로프루시드를 복용하면 혈압이 45% 내려갑니다. 이 약물이 작용하는 동안 저혈압으로 인한 무규칙성 맥박이 감소됩니다.
+ 
+ ###성공적인 적용:
+ 혈압을 200초 동안 낮춥니다.
+ 
+ ###적용 실패:
+ 혈압을 120초 동안 낮춥니다.</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>의료 기술 체크: 45
+ 
+ 척수 손상 치료에 사용되는 임플란트.
+ 
+ ### 응용 성공:
+ 
+ 임플란트를 성공적으로 사용하면 환자의 척추가 치유됩니다. 환자가 목 골절을 가지고 있다면 다시 돌아올 수 있음을 유의하십시오.
+ 
+ ### 응용 실패:
+ 
+ +5% 출혈
+ +5% 내부 손상</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>중상을 입었을 경우 적절한 치료를 위해 몸을 안정 상태로 유지하는 특별한 가방입니다. 스테이시스 가방은 다이빙 슈트 슬롯에 착용되며 착용 시 0.25%씩 상태가 감소되어 400초 또는 대략 6분 30초 동안 지속됩니다. 스테이시스 가방을 착용하면 압력이 10,000m까지 내려가도 보호받을 수 있으며, 최대 속도로 끌려갈 수 있으며, 다음과 같은 질환의 부정적인 영향을 막을 수 있습니다:
+ 
+ - 심장마비
+ - 호흡마비
+ - 심근경색
+ - 신경 손상
+ - 신장 손상
+ - 간 손상
+ - 심장 손상
+ - 폐 손상
+ - 뼈 손상
+ - 패혈증
+ - 저산소혈증
+ - 저혈압
+ - 고혈압
+ - 산성증
+ - 알칼리증
+ - 내부 출혈
+ - 뇌졸중
+ - 발작
+ - 혼수
+ - 감염된 상처
+ - 출혈
+ 
+ 스테이시스 가방 안에 있는 사람에게 수술을 할 수 없다는 것에 유의해야 합니다. 수술 전에 가방에서 빼야 합니다. 스테이시스 가방에서 빼낸 환자는 심장마비가 발생할 수 있으며 해당 질환을 치료해야 합니다.</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>###의료 기술 검사: 없음
+ 혈액을 얇게 만드는 약. 스트렙토키나제를 사용하면 자연적인 출혈 재생을 방지하고 활성화되는 동안 뇌졸중을 악화시킵니다.
+ 
+ ###적용시:
+ - 심장 마비와 혈액 수혈 충격을 완전히 치료합니다.</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>수술대는 역할을 구입하거나 제작한 후 놓을 수 있는 아이템입니다. 환자는 수술대 위에 있을 필요가 없으며 근처에만 있으면 됩니다. 수술대는 환자가 마취 상태에 있을 경우 인공 환기를 제공하고 외상성 충격을 예방합니다. 또한, 산소 부족을 감소시키고 호흡 중지를 증가시키는 산성증 상태를 예방합니다.
+ 
+ 또한, 수술대에는 혈압, 신경 외상, 심박수 및 호흡 속도와 같은 중요한 정보를 출력하는 배선 핀이 있습니다.
+ 
+ 수술대는 기능적으로 병원 침대와 동일합니다. 다른 침대는 누워있을 경우 외상성 충격을 예방하지만 인공 환기를 제공하지는 않습니다.</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>의료 기술 체크: 45
+ 
+ @골절 수술의 다섯 번째 단계.
+ 
+ ### 적용 성공:
+ 
+ 수술용 드릴을 성공적으로 사용하면, 해당 지점에 사용된 도구로 인해 환자의 사지에 @드릴링 된 뼈가 생성됩니다.
+ 
+ ### 적용 실패:
+ 
+ +15% 출혈
+ +10% @내부 손상</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>의료 기술 체크: 45
+ 
+ 절단 수술의 다섯 번째 단계.
+ 
+ ### 적용 성공:
+ 
+ 수술용 톱을 성공적으로 사용하면, 해당 도구가 사용된 지점의 사지 뼈가 절단됩니다.
+ 
+ ### 적용 실패:
+ 
+ +15% 출혈
+ +6% 내부 손상
+ +4% 찢어짐</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>의료 기술 체크: 30
+ 
+ 수술 절차의 최종 단계입니다. 또한 대부분의 상처 출혈 치료에 매우 유용합니다.
+ 
+ ### 적용 성공:
+ 
+ 수술 관련 질환 (예 : 수술 절개) 제거
+ -20% 총상
+ -20% 찰과상
+ -20% 물린 상처
+ -20% 깊은 조직 손상
+ -40% 출혈
+ 
+ ### 적용 실패:
+ 
+ +6% 내부 손상</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>의료 기술 체크: 10
+ 
+ 장기 치유를 돕는 비타민 B1 알약이 든 용기.
+ 
+ ### 적용 성공:
+ 
+ 장기 치유 시간 200초
+ 
+ ### 적용 실패:
+ 
+ 장기 치유 시간 120초
+ 
+ 200초의 장기 치유 시간은 장기 손상의 약 8%를 치유합니다(@neurotrauma 제외). 120초는 약 4.8%를 치유합니다. 이는 동시에 자연적인 장기 치유와 함께 이루어집니다. 티아민은 죽은 장기를 부활시킬 수 없습니다.</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>의료 기술 체크: 30
+ 특정 팔다리의 혈액 흐름을 제한하여 일반적인 동맥성 출혈을 줄이기 위해 사용되는 아이템입니다.
+ 동맥성 출혈이 없으면 턴키트는 작동하지 않습니다. 외상 가위를 사용하여 잘라낼 수 있습니다.
+ 
+ ###적용 성공:
+ 동맥성 출혈의 부정적인 영향을 일시적으로 멈추고 일반적인 출혈을 천천히 치료하지만, 장기간 사용하면 괴저를 유발할 수 있습니다. 머리에 턴키트를 사용하면 피해자에게 15%의 신경 외상과 200%의 산소 부족이 발생합니다.
+ 
+ ###적용 실패:
+ +6% 둔상 트라우마</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>의료 기술 체크: 10
+ 반창고와 붕대를 제거하는 데 사용되는 가위 한 쌍.
+ 
+ ###적용 성공:
+ 가위를 사용한 지점의 모든 반창고, 붕대 및 응급 처치 카드를 제거합니다.
+ 
+ ###적용 실패:
+ +15% 출혈
+ +10% 찢어짐</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>의료 기술 체크: 30
+ 손상된 조직이나 총알을 제거하는 데 사용되는 집게 한 쌍.
+ 
+ ###응용 성공:
+ -5% 내부 손상
+ -5% 둔력 외상
+ -5% 이물질
+ +5% 찢어진 상처
+ 
+ ###응용 실패:
+ +6% 내부 손상
+ 
+ 집게는 @축소된 피부 없이도 작동할 수 있으며, 집게로 총상이나 깊은 조직 손상이 있는 팔다리를 집게로 처리하면 5%의 @외상적 충격을 유발합니다. 이물질을 집게로 제거하는 것도 5%의 스크랩을 얻을 가능성이 있습니다.</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>의료 기술 체크: 60 (만약 환자가 @진통제를 가지고 있다면 30)
+ 렌치는 @탈구를 치료하는 데 사용됩니다. 탈구를 치료하려면 건강 인터페이스에서 탈구된 팔다리에 끌어다 놓고 반창고를 사용하는 것처럼 사용하십시오.
+ 
+ ###적용 성공:
+ 그 팔다리의 탈구를 치료합니다.
+ 
+ ###적용 실패:
+ 그 팔다리에 골절을 유발합니다.</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>외상성 쇼크는 매우 치명적이며, 환자가 이를 얻으면 즉시 수술을 중단하고 @수술대 근처로 이동하거나 다시 마취를 투여해야 합니다. 외상성 쇼크는 희생자가 마취 효과를 받거나 @진통제를 복용하면서 @수술대 근처에 있을 때 4배 빠르게 감소합니다.
+ 
+ ---
+ ##원인:
+ 
+ - 안전하지 않은 수술 수행(테이블이나 마취 없이)
+ - 총상이나 깊은 조직 손상을 통해 @집게를 사용하는 경우(매우 미세한 충격을 일으키며, 일반적으로 무시할 수 있음)
+ 
+ ##효과:
+ 
+ - @저혈압(매우 많음)
+ - @심장마비(40% 이상)
+ - @호흡마비(30% 이상)
+ - @신경 외상(초당 강도를 100으로 나눈 값, 10% 이상이면 자연적 재생보다 빠르게 진행됨)
+ - 정신병(초당 강도를 100으로 나눈 값)
+ 
+ ##치료:
+ 
+ - 수술 중단 후 기다리기
+ - @수술대 근처로 이동시켜 환자가 마취 상태인지 확인하기
+ 
+ ##예방:
+ 
+ - @피부 절개 단계 이상으로 수술을 진행하기 전에 안전 여부 확인하기
+ - 수술 중간에 @진통제가 떨어지지 않도록 주의하기</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>모든 수술 절차에서 두 번째 단계입니다. 클램프가 없는 수술 절개는 각 절개당 초당 0.7%의 출혈을 유발하며, 마취나 다른 진정 방법 없이 수술 절개를 하는 경우 각 절개당 초당 2%의 외상성 쇼크를 유발합니다. 이 병은 수술대 없이 수행하면 외상성 쇼크를 유발하지 않으므로 수혈 없이 수행할 수 있습니다.</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>대부분의 수술 절차에서 세 번째 단계입니다. 출혈을 집게로 집어들이면 수술 절개로 인한 출혈을 방지할 수 있습니다. 이 효과는 다음 단계, @retractors에 필요합니다.</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>대부분의 수술 절차에서 네 번째 단계입니다. 수술대가 없는 상황에서 피부를 철회하면 매 초마다 철회된 피부의 인스턴스당 2%의 외상성 쇼크가 발생합니다. 골절 수술이나 장기 이식 수술과 같은 대부분의 수술 절차는 이 단계에서 비롯됩니다. (Note: Some of the technical terms may have different translations depending on the context, so please double-check with a medical professional if needed.)</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>@골절 수술에서 다섯 번째 단계입니다. 수술대가 없는 상황에서 뼈를 드릴 경우, 드릴링 한 번당 1.5%의 외상성 충격이 초당 발생합니다. (Note: @osteosynthetic-surgery, @surgery-table, and @traumatic-shock are not commonly used terms in Korean medical language, so they are left as they are in English.)</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>@절단 수술의 다섯 번째 단계입니다. 수술대 없이 뼈를 톱으로 자르면, 각각의 뼈 절단마다 초당 1.5%의 외상성 충격을 유발합니다. (Note: @amputation-surgery, @surgery-table, and @traumatic-shock are not commonly used terms in Korean medical language, so they are left as is in English.)</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##단계:
+ 
+ 1. 선택한 마취제
+ 2. @scalpel (메스)
+ 3. @hemostat (출혈정지기)
+ 4. @retractors (분리기)
+ 5. @sutures (봉합사)</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##단계:
+ 
+ 1. 선택한 마취제 
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. @surgical-drill
+ 6. @osteosynthesis-implants
+ 7. @sutures
+ 
+ 모든 신체 부위에서 @bone-death를 치료하기 위해 수행해야합니다. 
+ 
+ (Note: @ symbols indicate medical equipment or conditions that may not have direct translations in Korean, so they are left in English.)</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##단계:
+ 
+ 1. 선택한 마취제
+ 2. @scalpel
+ 3. @endovascular-balloon
+ 4. @의료용 스텐트
+ 5. @봉합재료</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## 단계:
+ 
+ 1. 선택한 마취제 (@진통제)
+ 2. @메스
+ 3. @지혈기
+ 4. @견인기
+ 5. @수술용 톱
+ 6. 바이오닉이나 인간의 팔다리로 절단된 팔다리를 대체합니다. (선택 사항)
+ 7. @봉합
+ 8. 사이버네틱 팔다리(바이오닉 임플란트가 아님)은 수술적으로 절단된 팔다리에 부착될 수 있습니다. 수술은 사이버림을 부착하기 위해 개방될 필요가 없습니다. (선택 사항) (NT 사이버네틱 애드온 필요)
+ 
+ 이 절차는 팔다리에 15% 이상의 @강직성 괴사가 있는 경우 팔다리를 얻을 수 없습니다.
+ 
+ 이 절차는 @수술적 절단을 유발합니다.</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>기관을 넣기 전에 @아자티오프린을 사용하고 면역력이 10% 이하인지 확인하세요. 기관 손상이 100%인 경우 거부되었다는 것을 의미합니다. 이는 구성에서 기관 거부가 꺼져 있으면 적용되지 않습니다.
+ 
+ ##단계:
+ 
+ 1. 선택한 마취제
+ 2. @메스
+ 3. @지혈제
+ 4. @확장기
+ 5. 해당 @기관 수급 메스
+ 6. 해당 기관 이식 아이템 (이것은 신장에 대해 두 번 수행해야 함)
+ 7. @봉합재료</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>수술용 드레이프는 착용자의 살균성을 높여 수술 감염 위험을 줄이기 위해 사용되는 의복입니다.
+ 
+ +100 기본 살균성
+ 착용 시 외상성 충격 획득량 50% 감소</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>수술용 마스크는 착용 시 살균력을 높여 수술 감염 위험을 줄이는 착용 가능한 아이템입니다.
+ 
+ - 상처 확률 10% 감소
+ - 출혈 확률 20% 감소</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>외과 의사 옷은 착용 시 살균력을 높여 수술 감염 위험을 줄이는 착용 가능한 아이템입니다.
+ 
+ -10% 둔상 외상
+ -10% 찢어짐
+ -10% 물린 상처</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>수술 감염은 환자의 환경에 따라 @패혈증을 유발하는 메커니즘입니다.
+ 
+ ---
+ 
+ 다음은 살균력을 _증가_시킵니다:
+ 
+ - 환자가 @수술용 드레이프를 입고 있는 경우
+ - 인근 인물이 @수술용 마스크를 착용하는 경우
+ - 수술 기술 보유 (이 식에 따라 살균력 획득: 10 + 수술 기술 / 5)
+ - @연고제 사용
+ 
+ ---
+ 
+ 다음은 살균력을 _감소_시킵니다:
+ 
+ - 환자가 @수술용 드레이프를 입고 있지 않은 경우
+ - 인근 인물이 @수술용 마스크를 착용하지 않은 경우
+ 
+ ---
+ 
+ 최소 살균력에서는 2초마다 환자가 @패혈증을 발병할 확률이 10%입니다.</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>마니톨 플러스는 재능 아이템으로, 제작에 재능이 필요합니다. 투여하면 환자가 불안정한 경우에도 10초 동안 30%의 신경 손상을 치료하고, 간 손상 / 폐 손상 / 심장 손상 / 신장 손상 / 기관 손상을 일으키지 않고 마니톨의 효과를 적용합니다.</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>실험적 치료는 수술의사 클래스에서 잠금 해제 가능한 재능 아이템입니다. 이것은 무작위로 양수와 음수의 효과를 줄 수 있지만, 양수의 효과를 더 많이 줍니다.
+ 
+ 이 아이템을 한 번 사용하면 무한한 효과를 얻을 수 있는 이론적 가능성이 있습니다. 동전을 던지는 것을 상상해보세요. 꼬리가 나올 때까지 멈추지 않습니다. 머리가 나올 때마다 이 아이템에서 추가적인 효과를 얻습니다.
+ 
+ 가능한 양수 효과 목록은 다음과 같습니다:
+ 
+ ---
+ - 활력 (200-400% 강도에서 무작위로 선택)
+ - 과도한 활동성 (200-400% 강도에서 무작위로 선택)
+ - 정신병 저항력 (200-400% 강도에서 무작위로 선택)
+ - 껍질 감염 저항력 (200-400% 강도에서 무작위로 선택)
+ - 마비 저항력 (300-600% 강도에서 무작위로 선택)
+ - @진통제 (20-100% 강도에서 무작위로 선택)
+ - @마취제 (1-100% 강도에서 무작위로 선택)
+ - @연고 (20-100% 강도에서 무작위로 선택)
+ - 전투 자극제 (30-100% 강도에서 무작위로 선택)
+ - 압력 안정제 (30-100% 강도에서 무작위로 선택)
+ - 완전한 치유 (상처, 기본 장기 손상, 신경 외상 및 혈액 손실의 20-100%를 치료하고, @패혈증을 완전히 치료합니다.)
+ 
+ ---
+ 
+ 가능한 음수 효과 목록은 다음과 같습니다:
+ 
+ ---
+ - 모든 상처 (@출혈에 대해 30-80%를 무작위로 선택하고, 다른 모든 것에 대해 5-20%를 무작위로 선택합니다.)
+ - 2-15초 동안 기절합니다.</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>트리아지 카드는 부상의 심각도에 따라 환자를 표시하는 데 사용됩니다. 수동 및 자동 두 가지 유형의 트리아지 카드가 있습니다. 수동 트리아지 카드는 다음과 같이 작동합니다:
+ 
+ 다리에 트리아지 카드를 부착하면 환자가 최소한의 부상을 입었으며 대부분 생존할 것이므로 녹색으로 표시됩니다.
+ 팔에 트리아지 카드를 부착하면 환자가 부상을 입었으며 오랜 시간 치료가 지연되면 대부분 사망할 가능성이 있으므로 노란색으로 표시됩니다.
+ 상체에 트리아지 카드를 부착하면 환자가 위급한 부상을 입었으며 즉각적인 지원이 필요하므로 빨간색으로 표시됩니다.
+ 머리에 트리아지 카드를 부착하면 환자가 사망하거나 죽음에 가까운 상태임을 의미하는 검은색으로 표시됩니다.
+ 
+ 자동 트리아지 카드는 환자의 질병과 활력을 기반으로 건강 상태를 평가하며, 녹색, 노란색, 빨간색 또는 검은색 등급을 부여합니다.</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>뇌 용기는 외과의사에 의해 잠금 해제 될 수 있는 재능 아이템입니다. 냉장 보관함과 달리 뇌의 부패를 지연시킬 뿐 아니라 완전히 멈출 수 없지만, 뇌 용기는 뇌를 영구히 보관할 뿐만 아니라 10초당 1%의 속도로 뇌를 천천히 수리할 수 있습니다.</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>제거한 후 사용하면 환자의 뇌를 대체합니다. 뇌가 없어서 신경 손상을 입는 것을 방지합니다. 그 외에는 아무것도 하지 않습니다.</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>읽을 때 기술 레벨을 제공합니다.
+ 
+ ### 수술 기술이 활성화된 경우:
+ 
+ +8 수술 기술
+ +2 의학 기술
+ 
+ ### 수술 기술이 비활성화된 경우:
+ 
+ +8 의학 기술</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>어떤 수술적으로 절단된 팔 소켓에 부착할 수 있는 사이버네틱 팔. 크로바로 제거할 수 있습니다. 이로 인해 선택한 팔의 외상적 절단이 발생합니다.
+ 
+ ### 사이버림의 장점:
+ 
+ - 지속적인 총격을 받아도 고장없이 잘 작동합니다.
+ - 고장없이 생명체의 공격을 견딜 수 있습니다.
+ - 생명을 위협하는 출혈을 유발할 수 있는 공격을 견딜 수 있습니다.
+ - 유지보수가 잘 이루어지면, 공격을 받았을 때 강제로 절단되는 가능성이 적어집니다.
+ - 골절이나 탈구하지 않습니다. 사이버림을 추가하기 전에 골절이나 탈구를 치료해야 합니다. 그렇지 않으면 사이버림이 제거될 때까지 영구적인 상태가 됩니다.
+ 
+ #### 사이버림의 단점:
+ 
+ - 물과 잘 어울리지 않습니다. 감전은 일어나지 않지만 수트를 입지 않으면 시간이 지남에 따라 파손될 수 있습니다.
+ - 손상이 발생하면 유지보수가 필요합니다.
+ - 충분한 강철과 FPGA 회로원이 없는 경우 유지보수 비용이 많이 듭니다.
+ - 제작/구매 비용이 많이 듭니다.
+ - 재료 손실로 인해 치명적으로 손상되면 강제로 분리됩니다.
+ 
+ ### 기계 기술 요구 사항: 70
+ 
+ ### 적용 성공:
+ 
+ 선택한 팔에 사이버림을 적용하고 이전 실패한 시도로 인한 내부 손상을 치료합니다.
+ 
+ ### 적용 실패:
+ 
+ 선택한 팔에 20%의 내부 손상이 발생합니다. 사이버림은 삭제되지 않습니다.
+ 
+ ### 추가 방법:
+ 
+ 먼저 선택한 팔에 절단 수술을 수행한 후, 선택한 팔에 사이버림을 사용합니다.</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>사실적으로 절단된 다리 소켓에 부착할 수 있는 사이버네틱 다리. 크로바로 제거할 수 있습니다. 이로 인해 선택한 팔다리에 외상적인 절단이 발생합니다.
+ 
+ ### 사이버림의 장점:
+ 
+ - 지속적인 총격을 받아도 고장없이 잘 작동합니다.
+ - 고장없이 생명체의 공격을 견딜 수 있습니다.
+ - 생명을 위협하는 출혈을 유발할 수 있는 공격을 견딜 수 있습니다.
+ - 유지보수가 잘 이루어지면, 공격을 받았을 때 강제로 절단되는 가능성이 적어집니다.
+ - 골절이나 탈구가 없습니다. 사이버림을 추가하기 전에 골절이나 탈구를 고치세요. 그렇지 않으면 사이버림을 제거하기 전까지 계속 유지됩니다.
+ 
+ #### 사이버림의 단점:
+ 
+ - 물과 잘 어울리지 않습니다. 감전은 일어나지 않지만, 수영복을 입지 않으면 시간이 지남에 따라 부서집니다.
+ - 손상 시 유지보수가 필요합니다.
+ - 비용이 많이 듭니다. 특히 강철과 FPGA 회로의 충분한 공급원이 없는 경우에는 더욱 그렇습니다.
+ - 제작/구매 비용이 많이 듭니다.
+ - 재료 손실로 인해 치명적으로 손상되면 강제로 분리됩니다.
+ 
+ ### 기계 기술 요구 사항: 70
+ 
+ ### 적용 성공:
+ 
+ 선택한 팔다리에 사이버림을 적용하고 이전 실패한 시도로 인한 내부 손상을 치유합니다.
+ 
+ ### 적용 실패:
+ 
+ 팔다리에 20%의 내부 손상이 발생합니다. 사이버림은 삭제되지 않습니다.
+ 
+ ### 추가 방법:
+ 
+ 먼저 선택한 팔다리에 절단 수술을 수행한 후, 선택한 팔다리에 사이버림을 사용하세요.</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>이 소켓에는 @사이버네틱 팔이 있습니다.</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>이 소켓에는 @사이버네틱 다리가 있습니다.</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>사용자가 사이버림을 사용하는 주요 단점은 물에 노출될 때 전자 부품이 손상된다는 것입니다.
+ 
+ 사이버림이 손상을 입을 때마다, 각 유형의 손상은 일반적인 손상 유형 대신 다양한 유형과 양의 사이버림 특정 손상을 일으키는 기회가 있습니다.
+ 
+ 손실 된 재료 양에 따라 손상된 전자 부품의 양이 증가합니다.
+ 
+ ## 원인:
+ 
+ - 다이빙 슈트 없이 물에 노출되는 경우
+ - 화상의 75%는 손상된 전자 부품으로 200%의 피해를 입힐 가능성이 있습니다.
+ - 총상의 85%는 손상된 전자 부품으로 75%의 피해를 입힐 가능성이 있습니다.
+ - 물린 상처의 50%는 손상된 전자 부품으로 25%의 피해를 입힐 가능성이 있습니다.
+ - 깊은 조직 손상의 50%는 손상된 전자 부품으로 50%의 피해를 입힐 가능성이 있습니다.
+ - 둔력적 외상의 50%는 손상된 전자 부품으로 100%의 피해를 입힐 가능성이 있습니다.
+ - 내부 손상의 75%는 손상된 전자 부품으로 100%의 피해를 입힐 가능성이 있습니다.
+ - 이물질의 75%는 손상된 전자 부품으로 75%의 피해를 입힐 가능성이 있습니다.
+ 
+ ## 효과:
+ 
+ - 사이버림이 일시적으로 작동을 멈출 수 있으며, 강도에 따라 빈도가 증가합니다.
+ - 사이버림이 사용 불가능해집니다 (99% 이상).
+ 
+ ## 치료:
+ 
+ - @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>사이버림이 피해를 입을 때, 각 유형의 피해는 일반적인 피해 유형 대신 다양한 유형과 양의 사이버림 특정 피해를 일으킬 확률이 있습니다.
+ 
+ ## 원인:
+ 
+ - 화상의 경우 85%의 확률로 그들의 25%를 구부러진 금속으로 일으킵니다.
+ - 찢어진 상처의 경우 50%의 확률로 그들의 25%를 구부러진 금속으로 일으킵니다.
+ - 물린 상처의 경우 50%의 확률로 그들의 50%를 구부러진 금속으로 일으킵니다.
+ - 깊은 조직 손상의 경우 85%의 확률로 그것의 100%를 구부러진 금속으로 일으킵니다.
+ - 둔력적 외상의 경우 75%의 확률로 그것의 200%를 구부러진 금속으로 일으킵니다.
+ 
+ ## 효과:
+ 
+ - 사이버다리에 있을 경우 느려집니다. 힘에 따라 스케일링됩니다.
+ - 사이버림이 사용 불가능해집니다 (99% 이상).
+ 
+ ## 치료:
+ 
+ - 용접 도구</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>## 원인:
+ 
+ - 이동 중 느슨한 나사 (30% 이상)
+ - 찢어진 상처가 25%의 피해를 느슨한 나사로 일으키는 확률 75%
+ - 깊은 조직 손상이 100%의 피해를 느슨한 나사로 일으키는 확률 80%
+ - 둔력성 외상이 50%의 피해를 느슨한 나사로 일으키는 확률 50%
+ - 내부 손상이 100%의 피해를 느슨한 나사로 일으키는 확률 75%
+ - 물린 상처가 50%의 피해를 느슨한 나사로 일으키는 확률 50%
+ - 이물질이 75%의 피해를 느슨한 나사로 일으키는 확률 75%
+ 
+ ## 효과:
+ 
+ - 느슨한 나사와 @물질 손실
+ 
+ ## 치료:
+ 
+ - @나사 드라이버</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>사이버림을 손상 받을 때, 각 유형의 피해는 일반적인 피해 유형 대신 다양한 유형과 양의 사이버림 특정 피해를 일으킬 가능성이 있습니다.
+ 
+ 잃어버린 나사의 양은 @loose-screws의 양에 따라 조절됩니다.
+ 
+ ## 원인:
+ 
+ - @loose-screws
+ - 찢어진 상처가 25%의 피해를 재료 손실로 일으키는 75%의 확률
+ - 총상이 80%의 피해를 재료 손실로 일으키는 80%의 확률
+ - 물린 상처가 60%의 피해를 재료 손실로 일으키는 75%의 확률
+ - 깊은 조직 손상이 100%의 피해를 재료 손실로 일으키는 100%의 확률
+ - 이물질이 50%의 피해를 재료 손실로 일으키는 80%의 확률
+ 
+ ## 효과:
+ 
+ - 사이버림과 @traumatic-amputation의 손실
+ 
+ ## 치료:
+ 
+ - @steel-bar</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>전기 기술 체크: 40
+ 
+ 사이버림의 손상된 전자 제품을 수리하는 데 사용됩니다.
+ 
+ ### 어플리케이션 성공:
+ 
+ -50% 손상된 전자 제품
+ 
+ ### 어플리케이션 실패:
+ 
+ -20% 손상된 전자 제품</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>기계 기술 검사: 50
+ 
+ 사이버림의 @구부러진 금속을 수리하는 데 사용됩니다.
+ 
+ ### 응용 프로그램 성공:
+ 
+ -20% @구부러진 금속
+ 
+ ### 응용 프로그램 실패:
+ 
+ -5% @구부러진 금속</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### 기계 기술 체크: 40
+ 
+ 사이버림의 @loose-screws를 수리하는 데 사용됩니다.
+ 
+ ### 응용 성공:
+ 
+ -20% @loose-screws
+ 
+ ### 응용 실패:
+ 
+ -5% @loose-screws</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>기계 기술 체크: 60
+ 
+ 사이버림의 @재료 손실을 수리하는 데 사용됩니다.
+ 
+ ### 응용 성공:
+ 
+ -50% @재료 손실
+ 
+ ### 응용 실패:
+ 
+ -20% @재료 손실</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>의료 매뉴얼에 오신 것을 환영합니다. 이곳은 신경 외상 모드 시스템과 일반적인 의료 상황을 이해하는 데 필요한 종합적인 안내서입니다. 이 매뉴얼은 다음과 같은 의료 주제에 대한 정보를 제공하기 위해 설계되었습니다:
+ 
+ - @정보
+ - @증상
+ - @두뇌
+ - @폐
+ - @심장
+ - @상체
+ - @극단
+ - @뼈
+ - @모든-신체부위
+ - @혈액
+ - @아이템-파트-1
+ - @아이템-파트-2
+ - @아이템-파트-3
+ - @아이템-파트-4
+ - @수술
+ - @수술
+ - @확장</Manual_Description_Start_Page>
+  <Manual_Description_Information>정보 탭에 오신 것을 환영합니다. 여기에서 일반 정보를 읽을 수 있습니다:
+ 
+ - @faq
+ - @med-kit-recommendations
+ - @how-to-diagnose
+ - @order-of-treatments
+ - @the-5-commandments-of-neurotrauma</Manual_Description_Information>
+  <Manual_Description_Symptoms>증상 탭에 오신 것을 환영합니다:
+ 
+ - @토혈
+ - @창백한 피부
+ - @호흡 곤란
+ - @기침
+ - @심박수 증가
+ - @혼란
+ - @어지러움
+ - @시야 흐림
+ - @다리 부기
+ - @천식
+ - @약함
+ - @열
+ - @땀
+ - @팽만감
+ - @염증
+ - @황달
+ - @복부 불편감
+ - @두통
+ - @갈망
+ - @근육 수축
+ - @근육 경련</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>머리/뇌 탭에 오신 것을 환영합니다:
+ 
+ - @신경 외상
+ - @뇌졸중
+ - @금단증
+ - @오피오이드 과다 복용
+ - @경련
+ - @의식 상실
+ - @코마
+ - @척수 손상
+ - @뇌진탕</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>폐 탭에 오신 것을 환영합니다:
+ 
+ - @호흡기-사지정지
+ - @폐손상
+ - @기흉
+ - @과호흡
+ - @저호흡
+ - @산소부족</Manual_Description_Lungs>
+  <Manual_Description_Heart>하트 탭에 오신 것을 환영합니다:
+ 
+ - @심장 탐판증
+ - @심장 정지
+ - @심장 발작
+ - @심장 손상
+ - @불규칙한 심장 박동
+ - @세동</Manual_Description_Heart>
+  <Manual_Description_Torso>토르소 탭에 오신 것을 환영합니다:
+ 
+ - 대동맥 파열
+ - 내부 출혈
+ - 방사능 병
+ - 신장 손상
+ - 간 손상
+ - 모르부신
+ - 시안화물 중독
+ - 바닐라 장기 손상
+ - 진통
+ - 마취
+ - 복통
+ - 구토
+ - 메스꺼움
+ - 흉통</Manual_Description_Torso>
+  <Manual_Description_Extremities>극단적인 상황 탭에 오신 것을 환영합니다:
+ 
+ - @외상적 절단
+ - @강직증
+ - @수술적 절단
+ - @극심한 통증</Manual_Description_Extremities>
+  <Manual_Description_Bones>뼈 탭에 오신 것을 환영합니다:
+ 
+ - @뼈-사망
+ - @뼈-손상
+ - @골절
+ - @탈구</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>어떤 신체 부위 탭에 오신 것을 환영합니다:
+ 
+ - @동맥출혈
+ - @내부손상
+ - @화상
+ - @감염된 상처
+ - @이물질
+ - @상처
+ - @연고를 바른
+ - @붕대로 감싼
+ - @반죽 걸린</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>혈액 탭에 오신 것을 환영합니다:
+ 
+ - @저산소혈증
+ - @패혈증
+ - @혈액 수혈 충격
+ - @출혈
+ - @저혈압
+ - @고혈압
+ - @산성증
+ - @알칼리증</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>환영합니다. 아이템 파트 1 탭에 오신 것을 환영합니다:
+ 
+ - @아드레날린
+ - @aed
+ - @외계인-혈액
+ - @앰뷸백
+ - @마취제
+ - @항생제-접착제
+ - @항생제-연고
+ - @살균제
+ - @살균제-스프레이
+ - @자동심장압박기
+ - @아자티프린
+ - @붕대
+ - @혈액-팩
+ - @블루-샤크
+ - @시체-백
+ - @광범위한-항생제
+ - @전투-자극제
+ - @드류지신
+ - @다이빙-나이프
+ - @배수</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>제품 파트 2 탭에 오신 것을 환영합니다:
+ 
+ - @empty-blood-pack
+ - @endovascular-balloon
+ - @fentanyl
+ - @gypsum
+ - @health-scanner
+ - @hematology-analyzer
+ - @hemostat
+ - @hyperzine
+ - @liquid-oxygenite
+ - @mannitol
+ - @manual-defibrillator
+ - @medical-stent
+ - @methamphetamine
+ - @morphine
+ - @naloxone
+ - @needle
+ - @nitroglycerin
+ - @opium
+ - @organ-procurement-scalpels
+ - @osteosynthesis-implants</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>아이템 파트 3 탭에 오신 것을 환영합니다:
+ - @플라스티씰
+ - @프로포폴
+ - @랩터 베인 추출물
+ - @리트랙터
+ - @링거 솔루션
+ - @생리소금수
+ - @메스
+ - @질산나트륨
+ - @척수 임플란트
+ - @정지 가방
+ - @스트렙토키나제
+ - @수술 테이블
+ - @수술 드릴
+ - @수술 톱
+ - @봉합사
+ - @티아민
+ - @투르니켓
+ - @외상 가위
+ - @진피집게
+ - @렌치</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>아이템 파트 4 탭에 오신 것을 환영합니다:
+ 
+ 비어 있음</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>수술 탭에 오신 것을 환영합니다:
+ 
+ - @외상성 쇼크
+ - @수술 절개
+ - @집게로 혈액 출혈을 막음
+ - @피부를 당겨서 절개 위치를 노출시킴
+ - @드릴로 뼈를 깎음
+ - @톱으로 뼈를 자름</Manual_Description_Surgery>
+  <Manual_Description_Procedures>프로시저 탭에 오신 것을 환영합니다:
+ 
+ - @개방-폐쇄-수술
+ - @골절-고정-수술
+ - @대동맥-파열-수술
+ - @절단-수술
+ - @장기-이식-수술</Manual_Description_Procedures>
+  <Manual_Description_Expansion>확장 탭에 오신 것을 환영합니다:
+ 
+ - @수술용드레이프
+ - @수술용마스크
+ - @외과의사옷
+ - @수술감염
+ - @만니톨플러스
+ - @실험적치료
+ - @트리아지카드
+ - @뇌병원
+ - @인공뇌
+ - @의료윤리위반
+ - @사이버네틱암
+ - @사이버네틱다리
+ - @사이버암
+ - @사이버다리
+ - @손상된전자제품
+ - @구부러진금속
+ - @완충나사
+ - @재료손실
+ - @FPGA회로
+ - @용접도구
+ - @드라이버
+ - @강철바</Manual_Description_Expansion>
+</infotexts>
