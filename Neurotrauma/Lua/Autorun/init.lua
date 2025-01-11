@@ -48,6 +48,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 		end, 1)
 	end, 1)
 
+	dofile(NT.Path .. "/Lua/Scripts/Server/applyskillgainhook.lua")
+
 	dofile(NT.Path .. "/Lua/Scripts/Server/ntcompat.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/blood.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/humanupdate.lua")
