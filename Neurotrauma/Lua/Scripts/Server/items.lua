@@ -937,7 +937,38 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 	end
 	local hasVoltage = containedItem.Condition > 0
 	-- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
-	if hasVoltage then
+	if not hasVoltage then
+		return
+	elseif targetCharacter.InWater then
+		-- shock therapy the surrounding characters
+		HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
+		containedItem.Condition = containedItem.Condition - 10
+		if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
+			containedItem.Condition = containedItem.Condition - 10
+		end
+		Timer.Wait(function()
+			for _, character in pairs(Character.CharacterList) do
+				local distance = HF.DistanceBetween(item.worldPosition, character.worldPosition)
+				if distance <= 300 and character.CanSeeTarget(usingCharacter) then
+					local limbtypes = {
+						LimbType.Torso,
+						LimbType.Head,
+						LimbType.LeftArm,
+						LimbType.RightArm,
+						LimbType.LeftLeg,
+						LimbType.RightLeg,
+					}
+					for type in limbtypes do
+						if math.random() < 0.5 then
+							HF.AddAfflictionLimb(character, "burn", type, math.random(5, 25), usingCharacter)
+							HF.AddAfflictionLimb(character, "spasm", type, 10)
+						end
+					end
+					HF.SetAffliction(character, "electricshock", 93, usingCharacter)
+				end
+			end
+		end, 2000)
+	else
 		HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
 		containedItem.Condition = containedItem.Condition - 10
 		if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
@@ -974,9 +1005,11 @@ NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
 	local hasVoltage = containedItem.Condition > 0
 
 	if hasVoltage then
-		local actionRequired = HF.HasAffliction(targetCharacter, "tachycardia", 5)
+		local actionRequired = (
+			HF.HasAffliction(targetCharacter, "tachycardia", 5)
 			or HF.HasAffliction(targetCharacter, "fibrillation", 1)
 			or HF.HasAffliction(targetCharacter, "cardiacarrest")
+		) and not targetCharacter.InWater
 
 		if not actionRequired then
 			HF.GiveItem(targetCharacter, "ntsfx_defib2")
