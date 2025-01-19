@@ -8,7 +8,7 @@
         <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
 
-        <Fabricate suitablefabricators="fabricator">
+        <Fabricate suitablefabricators="medicalfabricator">
             <RequiredSkill identifier="medical" level="35"/>
             <RequiredSkill identifier="mechanical" level="20"/>
             <RequiredItem identifier="titaniumaluminiumalloy"/>
@@ -45,7 +45,7 @@
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
 
-        <Fabricate suitablefabricators="fabricator">
+        <Fabricate suitablefabricators="medicalfabricator">
             <RequiredSkill identifier="medical" level="70"/>
             <RequiredSkill identifier="mechanical" level="20"/>
             <RequiredItem identifier="titaniumaluminiumalloy"/>
