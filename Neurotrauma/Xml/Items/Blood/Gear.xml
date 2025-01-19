@@ -14,7 +14,7 @@
             <Item identifier="silicon"/>
         </Deconstruct>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
             <RequiredSkill identifier="medical" level="50"/>
             <RequiredItem identifier="plastic"/>
             <RequiredItem identifier="silicon"/>
