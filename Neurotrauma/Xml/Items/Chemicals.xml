@@ -334,7 +334,7 @@
         <Deconstruct time="5">
         </Deconstruct>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
             <RequiredItem identifier="plastic"/>
         </Fabricate>
 
