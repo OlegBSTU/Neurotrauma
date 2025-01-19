@@ -55,14 +55,14 @@ function NTConfig.LoadConfig()
 end
 
 function NTConfig.Get(key, default)
-	if NTConfig.Entries[key] then
+	if NTConfig.Entries[key] ~= nil then
 		return NTConfig.Entries[key].value
 	end
 	return default
 end
 
 function NTConfig.Set(key, value)
-	if NTConfig.Entries[key] then
+	if NTConfig.Entries[key] ~= nil then
 		NTConfig.Entries[key].value = value
 	end
 end
