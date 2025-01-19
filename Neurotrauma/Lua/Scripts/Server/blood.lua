@@ -81,10 +81,12 @@ end
 
 Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, deltaTime, item, targets, position)
 	-- Hematology Analyzer (bloodanalyzer) can scan inserted blood bags
-	if item.ParentInventory == nil or item.ParentInventory.Owner == nil or not item.ParentInventory.Owner.IsPlayer then
-		return
-	end
-	local character = item.ParentInventory.Owner
+	local owner = item.GetRootInventoryOwner()
+	if owner == nil then return end
+	if not LuaUserData.IsTargetType(owner, "Barotrauma.Character") then return end
+	if not owner.IsPlayer then return end
+
+	local character = owner
 	local contained = item.OwnInventory.GetItemAt(0)
 
 	local BaseColor = "127,255,255"
