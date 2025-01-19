@@ -13,7 +13,7 @@
             <Item identifier="aluminium"/>
         </Deconstruct>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
             <RequiredSkill identifier="medical" level="50"/>
             <RequiredItem identifier="fpgacircuit"/>
             <RequiredItem identifier="plastic"/>
@@ -81,7 +81,7 @@
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
         </Price>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
             <RequiredSkill identifier="medical" level="20" />
             <RequiredSkill identifier="mechanical" level="30" />
             <RequiredItem identifier="steel" />
