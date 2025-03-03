@@ -16,3 +16,4 @@ MEI - Portuguese localization
 Oskar - Spanish localization
 mefy - Turkish localization
 profole - German localization
+zorenzal - in-game guide
