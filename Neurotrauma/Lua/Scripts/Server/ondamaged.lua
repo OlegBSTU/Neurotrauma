@@ -140,14 +140,12 @@ NT.OnDamagedMethods.gunshotwound = function(character, strength, limbtype)
 	if strength >= 1 and limbtype == LimbType.Head then
 		if
 			HF.Chance(
-				strength / 90 * NTC.GetMultiplier(character, "anyfracturechance") * NTConfig.Get("NT_fractureChance", 1)
+				strength / 60 * NTC.GetMultiplier(character, "anyfracturechance") * NTConfig.Get("NT_fractureChance", 1)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
 			causeFullForeignBody = true
-		end
-		if strength >= 5 and HF.Chance(0.7) then
-			HF.AddAffliction(character, "cerebralhypoxia", strength * HF.RandomRange(0.1, 0.4))
+			HF.AddAffliction(character, "cerebralhypoxia", strength)
 		end
 	end
 
@@ -252,6 +250,7 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
+			HF.AddAffliction(character, "cerebralhypoxia", strength)
 		end
 		if
 			strength >= 15
@@ -355,6 +354,7 @@ NT.OnDamagedMethods.bitewounds = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 5)
 		end
 	end
 
@@ -437,6 +437,7 @@ NT.OnDamagedMethods.lacerations = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
+			HF.AddAffliction(character, "cerebralhypoxia", strength)
 		end
 	end
 
@@ -520,6 +521,7 @@ NT.OnDamagedMethods.blunttrauma = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
+			HF.AddAffliction(character, "cerebralhypoxia", strength)
 		end
 		if
 			strength >= 15
@@ -627,6 +629,7 @@ NT.OnDamagedMethods.internaldamage = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 5)
 		end
 		if
 			strength >= 15
