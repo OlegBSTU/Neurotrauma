@@ -1256,14 +1256,6 @@
       </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100"/>
-
-    <PeriodicEffect mininterval="30" maxinterval="60">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
-        <Conditional bandaged="lte 1" cerebralhypoxia="lte 1"/>
-        <Affliction identifier="cerebralhypoxia" amount="20" probability="0.5" />
-        <Affliction identifier="cerebralhypoxia" amount="30" probability="0.15" />
-      </StatusEffect>
-    </PeriodicEffect>
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,3" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
   
