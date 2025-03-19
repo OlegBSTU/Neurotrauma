@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Latinamerican Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
+  <Manual_Description_Nausea>La náusea puede ser ignorada, ya que por sí sola no causa nada fatal.
+ 
+ ---
+ ##Causada por:
+ 
+ - @hemotransfusion-shock (entre 0-90%)
+ - @withdrawal (40% o más)
+ - @radiation-sickness (80% o más)
+ - @kidney-damage (60% o más)
+ - @concussion
+ - Estar cerca de órganos no contenidos
+ 
+ ##Efectos:
+ 
+ - Ralentiza al personaje en un 10%
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas</Manual_Description_Nausea>
+  <Manual_Description_Chest_Pain>El dolor en el pecho no es letal y solo reducirá la velocidad a la mitad durante 1 segundo cada 3-6 segundos.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hemotransfusion-shock (entre 0-60%)
+ - @fracturas (fracturas de costillas)
+ 
+ ##Efectos:
+ 
+ - Reducción de la velocidad a la mitad durante 1 segundo cada 3-6 segundos
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas
+ - Analgésicos</Manual_Description_Chest_Pain>
+  <Manual_Description_Traumatic_Amputation>La amputación traumática es la amputación no quirúrgica de una extremidad. Una amputación traumática actuará exactamente igual que una amputación quirúrgica, excepto por el hecho de que se adquirirá una hemorragia arterial al ser amputado por primera vez. Una extremidad debe estar fracturada para ser amputada traumáticamente.
+ 
+ ---
+ 
+ ##Causado por:
+ - Trauma (disparos, daño interno, fuerza contundente, laceraciones, mordeduras y explosiones)
+ - Pérdida de material (99% o más)
+ 
+ 
+ ##Efectos:
+ 
+ ###En todas las amputaciones traumáticas:
+ - Hemorragia arterial
+ - Dolor intenso
+ 
+ ###En amputaciones de piernas:
+ - Una amputación de pierna reducirá a la mitad la velocidad
+ - Dos amputaciones de pierna te harán caer y te quitarán la capacidad de hablar.
+ 
+ ###En amputaciones de brazos:
+ - Una amputación de brazo te impedirá usar ese brazo (ya no podrás sostener objetos de dos manos)
+ - Dos amputaciones de brazo te impedirán interactuar con cualquier cosa, como puertas, escaleras, botones, etc.
+ 
+ ###En amputaciones de cabeza:
+ - Muerte instantánea
+ 
+ ##Tratamientos:
+ 
+ - Cirugía de amputación
+ - Realizar una cirugía de amputación (usar la extremidad amputada antes de aplicar suturas)</Manual_Description_Traumatic_Amputation>
+  <Manual_Description_Gangrene>La gangrena es una ocurrencia rara y solo ocurre debido a la negligencia de un @torniquete aplicado. Una vez que la gangrena alcanza el 15%, es irreversible y se debe amputar la extremidad.
+ 
+ ## Causado por:
+ 
+ - Dejar un @torniquete por demasiado tiempo
+ - Dejar un @balón endovascular por demasiado tiempo
+ - @sepsis
+ 
+ ## Efectos:
+ 
+ - @sepsis
+ 
+ ## Tratamientos:
+ 
+ - Cirugía de @amputación
+ - Tiempo (por debajo del 15%)</Manual_Description_Gangrene>
+  <Manual_Description_Surgical_Amputation>La amputación quirúrgica es la amputación de una extremidad. Las posibles amputaciones incluyen brazos, piernas y la cabeza. La cabeza no puede ser reimplantada después de la amputación. A diferencia de las amputaciones traumáticas, las amputaciones quirúrgicas no causarán sangrado arterial al adquirirlas por primera vez.
+ 
+ ##Causado por:
+ - @amputation-surgery
+ 
+ ##Efectos:
+ 
+ ###En amputaciones de pierna:
+ - La amputación de 1 pierna reducirá a la mitad la velocidad.
+ - La amputación de 2 piernas te hará caer y te quitará la capacidad de hablar.
+ 
+ ###En amputaciones de brazo:
+ - La amputación de 1 brazo te impedirá usar ese brazo (ya no podrás sostener objetos de dos manos).
+ - La amputación de 2 brazos te impedirá interactuar con cualquier cosa, como puertas, escaleras, botones, etc.
+ 
+ ###En amputaciones de cabeza:
+ - Muerte instantánea
+ 
+ ##Tratamiento:
+ - Realizar una @amputation-surgery (usar la extremidad amputada antes de aplicar @sutures)</Manual_Description_Surgical_Amputation>
+  <Manual_Description_Intense_Pain>El dolor intenso no es letal y solo ocurre cuando algo ha sido dislocado, fracturado o amputado. El dolor intenso reducirá la velocidad a la mitad durante 1 segundo cada 3-6 segundos.
+ 
+ ---
+ ##Causado por:
+ 
+ - @dislocaciones
+ - @fracturas
+ - @amputación-traumática
+ 
+ ##Efectos:
+ 
+ - Reducción de la velocidad a la mitad durante 1 segundo cada 3-6 segundos
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas
+ - Estabilizar la dislocación con una venda o la fractura con un yeso
+ - Analgésicos</Manual_Description_Intense_Pain>
+  <Manual_Description_Bone_Death>Muerte ósea, aunque generalmente no letal, puede matar si careces de implantes de osteosíntesis. Debido a la gran cantidad de implantes que se necesitan para curar esta afección, puede resultar bastante costoso.
+ 
+ ---
+ ##Causado por:
+ 
+ - @daño-óseo (90% o más)
+ 
+ 
+ ##Efectos:
+ 
+ - @fracturas
+ 
+ ##Tratamientos:
+ 
+ - @cirugía-osteosintética en cada parte del cuerpo</Manual_Description_Bone_Death>
+  <Manual_Description_Bone_Damage>El daño óseo no es letal y generalmente puede ser ignorado siempre y cuando no haya progresado a la muerte del hueso.
+ 
+ ---
+ ##Causado por:
+ 
+ - @daño-renal (72% o más, punto en el que supera la regeneración natural)
+ - @enfermedad-de-radiación (31% o más, punto en el que supera la regeneración natural)
+ - @sepsis (50% o más, punto en el que supera la regeneración natural)
+ - @hipoxemia (neutralizará completamente la regeneración natural al 100%)
+ 
+ ##Efectos:
+ 
+ - @muerte-del-hueso (al 90% o más)
+ 
+ ##Tratamientos:
+ 
+ - Tiempo
+ - @cirugía-osteosintética</Manual_Description_Bone_Damage>
+  <Manual_Description_Fractures>Las fracturas son lesiones comunes, que la mayoría de los miembros de la tripulación suelen sufrir con frecuencia. Las fracturas no matan y deben ser tratadas en último lugar en caso de emergencia. Es necesario tener una extremidad fracturada para que se convierta en una amputación traumática. Los ciber miembros no pueden fracturarse.
+ 
+ \\---
+ 
+ ## Causado por:
+ 
+ - Trauma (disparos, explosiones, laceraciones, mordeduras, etc.)
+ - Muerte ósea
+ - Falla en la llave inglesa
+ 
+ ## Efectos:
+ 
+ ### En fracturas de pierna:
+ 
+ - 1 fractura de pierna reducirá a la mitad la velocidad
+ - 2 fracturas de pierna te harán caer y te quitarán la capacidad de hablar.
+ - Dolor intenso
+ - Daño interno
+ 
+ ### En fracturas de brazo:
+ 
+ - 1 fractura de brazo te impedirá usar ese brazo (ya no podrás sostener objetos de dos manos)
+ - 2 fracturas de brazo te impedirán interactuar con cualquier cosa, como puertas, escaleras, botones, etc.
+ - Dolor intenso
+ - Daño interno
+ 
+ ### En fracturas de cráneo:
+ 
+ - 20% o 30% de neurotrauma
+ - Dolor de cabeza
+ - Daño interno
+ 
+ ### En fracturas de cuello:
+ 
+ - Lesión de la médula espinal
+ - Daño interno
+ 
+ ### En fracturas de costilla:
+ 
+ - Neumotórax
+ - Dolor en el pecho
+ - Daño interno
+ 
+ ## Tratamientos:
+ 
+ - Vendajes
+ - Cirugía osteosintética
+ 
+ ## Primeros auxilios:
+ 
+ - Vendajes</Manual_Description_Fractures>
+  <Manual_Description_Dislocations>Las dislocaciones son lesiones comunes, que la mayoría de los miembros de la tripulación sufrirán con frecuencia. Las dislocaciones no matarán y deben tratarse en último lugar en caso de emergencia. Una extremidad puede estar tanto dislocada como fracturada. Los cibermiembros no pueden dislocarse.
+ 
+ ---
+ ##Causado por:
+ 
+ - Trauma (explosiones, fuerza contundente, daño interno)
+ 
+ ##Efectos:
+ 
+ ###En las dislocaciones de pierna:
+ - 1 dislocación de pierna reducirá a la mitad la velocidad
+ - 2 dislocaciones de pierna te harán caer y te quitarán la capacidad de hablar.
+ - @dolor-intenso
+ - @daño-interno
+ 
+ ###En las dislocaciones de brazo:
+ - 1 dislocación de brazo te impedirá usar ese brazo (ya no podrás sostener objetos de dos manos)
+ - 2 dislocaciones de brazo te impedirán interactuar con cualquier cosa, como puertas, escaleras, botones, etc.
+ - @dolor-intenso
+ - @daño-interno
+ 
+ ##Tratamientos:
+ 
+ - @llave-inglesa (úsala en la interfaz de salud, como lo harías con una venda)
+ La comprobación de habilidad es de 60 médica sin y 30 médica con @analgésicos
+ 
+ ##Primeros auxilios:
+ - @vendajes o @plastiseal</Manual_Description_Dislocations>
+  <Manual_Description_Arterial_Bleeding>Las rupturas arteriales son extremadamente peligrosas y requieren atención de emergencia lo antes posible. Aplicar un torniquete en la extremidad afectada puede darte tiempo para tratarla, pero esto no debe hacerse en la cabeza.
+ 
+ ---
+ ##Causado por:
+ 
+ - @heridas (sangrado, 80% o más)
+ - @amputación-traumática
+ - @cuerpos-extraños (20% o más)
+ 
+ ##Efectos:
+ 
+ - Pérdida de sangre del 1,5% por segundo
+ 
+ ##Tratamientos:
+ 
+ - Cirugía abierta y cerrada
+ 
+ ##Primeros auxilios:
+ 
+ - Torniquete</Manual_Description_Arterial_Bleeding>
+  <Manual_Description_Internal_Damage>El Daño Interno es el resultado de varias heridas. Disminuye la vitalidad y se produce junto con muchos otros problemas cuando se recibe suficiente daño interno en un solo golpe.
+ 
+ ---
+ 
+ ## Causado por:
+ 
+ - @dislocaciones
+ - @fracturas
+ - Fallar la comprobación de habilidad al usar:
+ - @pinzas
+ - @suturas
+ - @retractores
+ - @taladro quirúrgico
+ - @sierra quirúrgica
+ - @implantes de médula espinal
+ - @implantes de osteosíntesis
+ 
+ ## Efectos:
+ 
+ - @conmoción cerebral
+ - @neumotórax
+ - @daño al corazón
+ - @daño al hígado
+ - @daño pulmonar
+ - @daño renal
+ - @fracturas
+ - @daño a órganos normales
+ - Daño a la vitalidad
+ 
+ ## Tratamientos:
+ 
+ - @cirugía abierta-cerrada
+ - Tiempo</Manual_Description_Internal_Damage>
+  <Manual_Description_Burns>Las quemaduras de primer grado son menores y generalmente se pueden ignorar, pero las quemaduras de segundo grado y superiores requieren intervención médica, para evitar que el paciente corra el riesgo de contraer una infección. Las quemaduras entre el 1% y el 20% de fuerza son de primer grado, entre el 21% y el 50% son de segundo grado, y a partir del 51% son de tercer grado.
+ 
+ ---
+ 
+ ##Efectos:
+ - Daño directo a la vitalidad
+ - Ensucia las @vendajes (la velocidad depende de la gravedad de las quemaduras)
+ - @heridas-infectadas (escala dependiendo de la gravedad de las quemaduras)
+ 
+ ##Tratamientos:
+ 
+ - @vendajes o @plastiseal (SOLO PARA QUEMADURAS DE PRIMER Y SEGUNDO GRADO)
+ - @cirugía-abierta-cerrada (aplicar @plastiseal antes de aplicar @suturas, funciona en cualquier grado de quemaduras)
+ - @pomada-antibiótica (SOLO PARA QUEMADURAS DE PRIMER Y SEGUNDO GRADO)
+ - @pegamento-antibiótico (funciona en cualquier grado de quemaduras)
+ - @estimulante-de-combate (funciona en cualquier grado de quemaduras)</Manual_Description_Burns>
+  <Manual_Description_Infected_Wounds>Las heridas infectadas son causadas por dejar que las heridas se pudran, y deben ser limpiadas para prevenir la sepsis.
+ 
+ ##Causadas por:
+ 
+ - Dejar que las heridas (laceraciones, quemaduras, heridas de bala, mordeduras, lesiones de tejidos profundos, sangrado) se pudran. Esto se acelerará dramáticamente si hay un vendaje sucio en una herida.
+ 
+ ##Efectos:
+ 
+ - Sepsis (al 50% o más)
+ - Inflamación (al 10% o más)
+ - Inmunidad disminuida
+ 
+ ##Tratamientos:
+ 
+ - Pomada antibiótica
+ - Spray antiséptico
+ 
+ ##Primeros auxilios:
+ 
+ - Vendajes o Plastiseal</Manual_Description_Infected_Wounds>
+  <Manual_Description_Foreign_Bodies>Los cuerpos extraños a menudo se adquieren después de enfrentamientos armados o de quedar atrapado en una explosión. Los cuerpos extraños deben ser removidos lo más rápido posible para evitar la @hemorragia-arterial o que el paciente contraiga @sepsis. Cada uso de pinzas removerá el 5% de cuerpos extraños.
+ 
+ ---
+ ##Causado por:
+ 
+ - Explosiones
+ - Disparos (los disparos que rompen un hueso siempre causarán cuerpos extraños)
+ 
+ ##Efectos:
+ 
+ - @hemorragia-arterial (al 20% o más)
+ - @ruptura-aórtica (al 20% o más, si es en el torso)
+ - @sepsis (al 20% o más)
+ - @inflamación (al 15% o más)
+ 
+ ##Tratamientos:
+ 
+ - @cirugía-abierta-cerrada (usar @pinzas antes de aplicar @suturas)
+ - Usar @pinzas en una herida de bala abierta o lesión profunda en el tejido.</Manual_Description_Foreign_Bodies>
+  <Manual_Description_Wounds>##Efectos:
+ 
+ ###En traumatismos contundentes, laceraciones, heridas de bala y lesiones en tejidos profundos:
+ - Daño directo a la vitalidad
+ 
+ ###En sangrado:
+ - @sangrado-arterial (al 80% o más)
+ - @ruptura-aórtica (al 80% o más, si es en el torso)
+ - @pérdida-de-sangre
+ 
+ ###En lesiones en tejidos profundos, laceraciones y heridas de bala, sangrado y mordeduras:
+ - @heridas-infectadas
+ - Ensucia las vendas (el sangrado ensuciará las vendas mucho más rápido que otras heridas)
+ 
+ ##Tratamientos:
+ 
+ - @suturas (NO FUNCIONA PARA TRAUMATISMOS CONTUNDENTES)
+ - @cirugía-abierta-cerrada (usar @pinzas antes de aplicar @suturas, SOLO PARA TRAUMATISMOS CONTUNDENTES)
+ - @torniquete o @balón-endovascular (SOLO PARA SANGRADO)
+ - @pegamento-antibiótico (SOLO PARA SANGRADO)
+ - Tiempo
+ 
+ ##Primeros auxilios:
+ - @vendas o @plastiseal</Manual_Description_Wounds>
+  <Manual_Description_Ointmented>La pomada ayudará a proteger las heridas de la infección y es muy útil para pacientes que sufren quemaduras. La pomada también ayudará a prevenir infecciones quirúrgicas si se aplica en la parte del cuerpo donde se está realizando la cirugía.
+ 
+ ---
+ ##Causado por:
+ 
+ - Spray antiséptico
+ - Pomada antibiótica
+ 
+ ##Efectos:
+ - Combate y previene pasivamente las heridas infectadas.</Manual_Description_Ointmented>
+  <Manual_Description_Bandaged>Las vendas son un elemento de primeros auxilios extremadamente versátil. Se recomienda que cada miembro de la tripulación tenga al menos algunas vendas en todo momento. Las vendas se ensuciarán si se aplican en heridas.
+ 
+ \\---
+ 
+ ## Causado por:
+ 
+ - @vendas
+ 
+ ## Efectos:
+ 
+ - Estabiliza las @luxaciones de las fracturas de costillas.
+ - Elimina la penalización de ralentización de las @luxaciones.
+ - Te ralentiza un 10% por cada venda.
+ - Acelera la curación natural de las @heridas.
+ - Protege contra las @heridas-infectadas.</Manual_Description_Bandaged>
+  <Manual_Description_Plaster_Cast>Los yesos son extremadamente importantes para tratar las @fracturas de las extremidades.
+ 
+ \\---
+ 
+ ## Causado por:
+ 
+ - Aplicación de @yeso
+ 
+ ## Efectos:
+ 
+ - Trata lentamente las @fracturas de las extremidades en un 0,33% por segundo
+ - Te ralentiza un 20% por cada yeso aplicado</Manual_Description_Plaster_Cast>
+  <Manual_Description_Hypoxemia>La hipoxemia es la ausencia de oxígeno adecuado en el torrente sanguíneo. La hipoxemia puede acumularse rápidamente y hacer que el paciente pierda el control. Un paciente que sufre de esto necesita atención médica inmediata. El neumotórax evitará que la hipoxemia disminuya.
+ 
+ ##Causado por:
+ 
+ - Envenenamiento por cianuro
+ - Hipotensión (70% o menos)
+ - Pérdida de sangre (40% o más)
+ - Paro cardíaco
+ - Bajo nivel de oxígeno
+ 
+ ##Efectos:
+ 
+ - Paro cardíaco (al 80% o más)
+ - Paro respiratorio (al 70% o más)
+ - Dolor de cabeza (al 40% o más)
+ - Confusión (al 50% o más)
+ - Falta de aire (al 20% o más)
+ - Hiperventilación (al 10% o más)
+ - Fibrilación
+ - Inconsciencia (al 80% o más)
+ - Trauma neurológico (al 10% o más, punto en el que supera la regeneración natural)
+ - Daño hepático (al 4% o más, punto en el que supera la regeneración natural)
+ - Daño cardíaco (al 4% o más, punto en el que supera la regeneración natural)
+ - Daño renal (al 8% o más, punto en el que supera la regeneración natural, 4% si un riñón está muerto)
+ - Daño pulmonar (al 4% o más, punto en el que supera la regeneración natural)
+ - Daño óseo (neutralizará completamente la regeneración natural al 100%)
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas
+ - Oxígeno líquido</Manual_Description_Hypoxemia>
+  <Manual_Description_Sepsis>La sepsis es una peligrosa afectación causada por permitir heridas infectadas. 
+ 
+ ## Causada por:
+ 
+ - Heridas infectadas
+ - Cuerpos extraños
+ - Gangrena
+ - Infección quirúrgica
+ - Transfusiones de sangre de donantes con sepsis
+ - Fallo en la comprobación de habilidad de azatioprina
+ 
+ ## Efectos:
+ 
+ - Daño hepático
+ - Daño cardíaco
+ - Daño renal
+ - Daño pulmonar
+ - Daño óseo
+ - Neurotrauma
+ - Aumento de la frecuencia cardíaca
+ - Hiperventilación
+ - Confusión
+ - Fiebre
+ - Gangrena
+ 
+ ## Tratamientos:
+ 
+ - Antibióticos de amplio espectro</Manual_Description_Sepsis>
+  <Manual_Description_Hemotransfusion_Shock>El shock de hemotransfusión es una condición que solo ocurre cuando se administra un tipo de sangre incompatible a alguien (por ejemplo, dar sangre A+ a una persona O+).
+ 
+ ---
+ ##Causado por:
+ 
+ - Administración de @paquetes de sangre incompatibles (da 100% de fuerza)
+ 
+ ##Efectos:
+ 
+ - @vómitos (entre 0-40%)
+ - @dolor de pecho (entre 0-60%)
+ - @pérdida de sangre (entre 0-70%)
+ - @daño hepático (entre 0-70%)
+ - @daño cardíaco (entre 0-70%)
+ - @daño renal (entre 0-70%)
+ - @daño pulmonar (entre 0-70%)
+ - @falta de aire (entre 0-70%)
+ - @malestar abdominal (entre 0-80%)
+ - @sibilancias (entre 0-90%)
+ 
+ ##Tratamientos:
+ 
+ - @estreptoquinasa
+ - Tiempo</Manual_Description_Hemotransfusion_Shock>
+  <Manual_Description_Blood_Loss>Mientras que la pérdida de sangre puede ser extremadamente costosa en recursos para curar si es lo suficientemente grave, cuando está en o por debajo del 30%, generalmente se puede ignorar.
+ 
+ ---
+ ##Causado por:
+ 
+ - @heridas (sangrado)
+ - @shock-de-hemotransfusión (entre 0-70%)
+ - @sangrado-interno
+ - Usando un @empty-blood-pack
+ - @sangrado-arterial
+ - @ruptura-aórtica
+ - @incisión-de-cirugía (a menos que tengan @clamped-bleeding)
+ - @hematology-analyzer
+ 
+ ##Efectos:
+ 
+ - @hipotensión (escala dependiendo de cuánta pérdida de sangre)
+ - @hipoxemia (al 40% o más)
+ - @aumento-de-la-frecuencia-cardíaca (al 40% o más)
+ - @piel-pálida (al 40% o más)
+ - @dolor-de-cabeza (al 50% o más)
+ - @debilidad (al 60% o más)
+ 
+ ##Tratamientos:
+ 
+ - Dar @blood-packs
+ - @deusizine
+ - Tiempo
+ @combat-stimulant</Manual_Description_Blood_Loss>
+  <Manual_Description_Hypotension>La hipotensión es la presión arterial que ha disminuido por debajo de los niveles normales. La hipotensión es letal si es lo suficientemente grave. Porcentajes más bajos corresponden a una presión arterial más baja.
+ 
+ ---
+ ##Causado por:
+ 
+ - @pérdida-de-sangre (escala dependiendo de cuánta sangre se pierda)
+ - @shock-traumático
+ - @paro-cardíaco (establece la presión arterial en el mínimo)
+ - @taponamiento-cardíaco (reduce la presión arterial a la mitad)
+ - @nitroprusiato-de-sodio (reduce la presión arterial en un 45%)
+ - @nitroglicerina (reduce la presión arterial en un 45%)
+ - @ritmo-cardíaco-irregular
+ 
+ ##Efectos:
+ 
+ - @hipoxemia (al 70% o menos)
+ - @fibrilación
+ - @hiperventilación (al 80% o menos)
+ - @confusión (al 30% o menos)
+ - @mareo (al 60% o menos)
+ - @visión-borrosa (al 55% o menos)
+ - @piel-pálida (al 50% o menos)
+ - @dolor-de-cabeza (al 60% o menos)
+ 
+ ##Tratamientos:
+ 
+ - Dar @paquetes-de-sangre, @solución-salina o @solución-de-ringer
+ - @autopulso
+ - @adrenalina
+ - RCP
+ - Tratar las causas</Manual_Description_Hypotension>
+  <Manual_Description_Hypertension>La hipertensión es la presión arterial que ha aumentado por encima de los niveles normales. La hipertensión es mortal si es lo suficientemente grave. Porcentajes más altos corresponden a una presión arterial más alta.
+ 
+ ---
+ ##Causado por:
+ 
+ - Daño renal
+ - Daño hepático
+ - Volumen sanguíneo excesivo causado por la inyección de solución salina o solución de Ringer o paquetes de sangre
+ - Autopulse
+ - Abstinencia (abstinencia de alcohol)
+ - Adrenalina
+ - RCP
+ 
+ ##Efectos:
+ 
+ - Accidente cerebrovascular (al 150% o más)
+ - Daño renal (al 184% o más, punto en el que supera la regeneración natural, 152% si un riñón está muerto)
+ - Ataque cardíaco (al 150% o más)
+ 
+ ##Tratamientos:
+ 
+ - Inducir la pérdida de sangre (preferiblemente con una incisión quirúrgica o un paquete de sangre vacío)
+ - Nitroprusiato de sodio o nitroglicerina
+ - Tratar las causas</Manual_Description_Hypertension>
+  <Manual_Description_Acidosis>La acidosis suele ser ignorada y se requiere una acción mínima en casos de baja a mediana gravedad. La acidosis y la alcalosis se cancelarán mutuamente.
+ 
+ ##Causada por:
+ 
+ - Hiperventilación
+ - Paro respiratorio
+ - Paro cardíaco
+ - Daño renal (80% o más)
+ - Paquetes de sangre cuyo donante tenía acidosis (la acidosis adquirida será el nivel de acidosis del donante en el momento de la extracción dividido por 5)
+ - Solución salina
+ 
+ ##Efectos:
+ 
+ - Convulsiones (al 60% o más)
+ - Coma (al 60% o más)
+ - Aumento de la frecuencia cardíaca (al 20% o más)
+ - Fibrilación
+ - Dolor de cabeza (al 20% o más)
+ - Confusión (al 15% o más)
+ - Debilidad (al 35% o más)
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas
+ - Inducir alcalosis (preferiblemente con vómitos)
+ - Transfundir paquetes de sangre neutrales (a menos que el paciente tenga una pérdida de sangre del 0%)</Manual_Description_Acidosis>
+  <Manual_Description_Alkalosis>La alcalosis suele ser ignorada y se requiere una acción mínima en casos de baja a mediana gravedad. La alcalosis y la acidosis se cancelarán mutuamente.
+ 
+ ---
+ ##Causado por:
+ 
+ - @hiperventilación
+ - @vómitos
+ - @paquetes de sangre cuyo donante tenía alcalosis (la alcalosis adquirida será el nivel de alcalosis del donante en el momento de la extracción dividido por 5)
+ 
+ ##Efectos:
+ 
+ - @convulsiones (al 60% o más)
+ - @palpitaciones (al 20% o más)
+ 
+ ##Tratamientos:
+ 
+ - Tratar las causas
+ - Inducir la @acidosis (preferiblemente con @solución salina)
+ - Transfundir paquetes de sangre neutrales (a menos que el paciente tenga una pérdida de sangre del 0%)</Manual_Description_Alkalosis>
+  <Manual_Description_Adrenaline>La adrenalina se utiliza en el tratamiento del paro cardíaco. A cambio de curar el efecto, eleva la presión arterial del paciente en un 30%. Además de estos efectos, proporciona analgesia al paciente (pero no más del 4.5%), aumenta la frecuencia cardíaca, provoca hiperventilación y aumenta el daño cuerpo a cuerpo en un 20%. Reduce a la mitad la ganancia de fibrilación y disminuye la potencia de los efectos de ralentización.</Manual_Description_Adrenaline>
+  <Manual_Description_AED>Un dispositivo utilizado para corregir el latido del corazón de un paciente. 
+ Cuando se utiliza en un paciente y se carga con baterías, el DEA tiene la oportunidad de restablecer la fibrilación o curar el paro cardíaco. 
+ Con habilidad médica por debajo de 80, el DEA es superior al desfibrilador manual en todos los sentidos, excepto por tardar un segundo más en usarse. 
+ Entre 80 y 100 de habilidad médica, el desfibrilador manual supera la posibilidad del DEA de curar el paro cardíaco, pero aún tiene un peligro (desvaneciente) de causar un paro cardíaco o no corregir la fibrilación, mientras que el DEA no lo tiene. 
+ Con habilidad médica de 100, el desfibrilador manual es superior. El desfibrilador manual se vuelve completamente seguro y está garantizado para curar el paro cardíaco.</Manual_Description_AED>
+  <Manual_Description_Alien_Blood>###Comprobación de habilidad médica: 40
+ Usar Sangre Alienígena en lugar de sangre regular es extremadamente peligroso y solo debe usarse en situaciones desesperadas.
+ 
+ ###Éxito en la aplicación:
+ -7.5% de pérdida de sangre
+ +3.75% de daño a órganos normales
+ +99% de shock por hemotransfusión
+ 
+ ###Fracaso en la aplicación:
+ -7.5% de pérdida de sangre
+ +7.5% de daño a órganos normales
+ +99% de shock por hemotransfusión</Manual_Description_Alien_Blood>
+  <Manual_Description_Ambubag>Un artículo utilizado para proporcionar oxígeno suplementario si un paciente no está respirando lo suficiente o no está respirando en absoluto.
+ 
+ Usar el ambubag con un tanque de oxígeno regular en él tratará la falta de oxígeno del 90% y usará el 2% del oxígeno en el tanque.
+ 
+ Usar el ambubag con un tanque de oxígenoite en él tratará la falta de oxígeno del 90%, curará el paro respiratorio y usará el 2% del oxígeno en el tanque.
+ 
+ Usar el ambubag con un tanque de combustible de soldadura en él causará una falta de oxígeno del 110%, causará un daño pulmonar del 10% y usará el 5% del combustible de soldadura en el tanque.
+ 
+ Usar el ambubag con un tanque de combustible de incendium en él causará una falta de oxígeno del 110%, causará un daño pulmonar del 20%, causará quemaduras del 10% y usará el 5% del incendium en el tanque.
+ 
+ Usar el ambubag con pintura en él causará una falta de oxígeno del 50%, causará un daño pulmonar del 3%, causará una adicción química del 5%, tratará la retirada química del 20% y usará el 5% de la pintura en la lata.</Manual_Description_Ambubag>
+  <Manual_Description_Anaparalyzant>###Comprobación de habilidad médica: 64
+ 
+ Además de su uso original de proporcionar resistencia a la parálisis y tratar la parálisis, Anaparalizante se puede utilizar para disminuir rápidamente la @anestesia y despertar a un paciente mucho más rápido.
+ 
+ ###Éxito de la aplicación:
+ Cura instantáneamente la @anestesia
+ +5% Psicosis
+ +800% Resistencia a la parálisis.
+ 
+ ###Fracaso de la aplicación:
+ -3% @anestesia por segundo durante 60 segundos
+ +6.5% resistencia a la parálisis por segundo durante 60 segundos
+ +0.75% psicosis por segundo durante 60 segundos</Manual_Description_Anaparalyzant>
+  <Manual_Description_Antibiotic_Glue>### Comprobación de habilidad médica: 55
+ Un pegamento utilizado para sellar rápidamente heridas sangrantes y tratar quemaduras en una sola extremidad.
+ 
+ ### Éxito en la aplicación:
+ -100% de detención del sangrado
+ -30% de tratamiento de quemaduras
+ 
+ ### Fallo en la aplicación:
+ -75% de detención del sangrado
+ -15% de tratamiento de quemaduras
+ 50% de probabilidad de causar un ataque al corazón.</Manual_Description_Antibiotic_Glue>
+  <Manual_Description_Antibiotic_Ointment>###Comprobación de habilidad médica: 10
+ La pomada antibiótica es un elemento utilizado para curar las @quemaduras y tratar las @heridas-infectadas.
+ 
+ ###Aplicación exitosa:
+ -12% @quemaduras
+ -72% @heridas-infectadas
+ +100% @pomadeada
+ 
+ ###Aplicación fallida:
+ -7% @quemaduras
+ -24% @heridas-infectadas
+ +60% @pomadeada</Manual_Description_Antibiotic_Ointment>
+  <Manual_Description_Antiseptic>El antiséptico es un artículo cuyo único uso es ser cargado en el rociador de antiséptico. Por cada rociada del rociador de antiséptico, se usará el 10% de la condición del antiséptico.</Manual_Description_Antiseptic>
+  <Manual_Description_Antiseptic_Sprayer>Un rociador que rocía @antiséptico en heridas @infectadas. Usar el rociador de antiséptico con antiséptico en él tratará el 100% de las heridas infectadas, dará un 5% de @ungüento y usará el 10% del antiséptico.</Manual_Description_Antiseptic_Sprayer>
+  <Manual_Description_Autopulse>El mejor amigo del médico. Para usar el autopulso, simplemente colóquelo en la ranura de su traje de buceo. Mientras lo lleve puesto y esté equipado con baterías, el autopulso curará el paro cardíaco.</Manual_Description_Autopulse>
+  <Manual_Description_Azathioprine>### Comprobación de habilidad médica: 10
+ Azatioprina es un medicamento inmunosupresor utilizado durante la cirugía de trasplante de órganos si el rechazo de órganos está habilitado en la configuración de Neurotrauma. Disminuirá la inmunidad con el tiempo, lo que hará seguro colocar un órgano en el cuerpo cuando la inmunidad esté por debajo del 10%.
+ 
+ ### Éxito de la aplicación:
+ Disminuye la inmunidad con el tiempo.
+ 
+ ### Fallo de la aplicación:
+ Disminuye la inmunidad con el tiempo.
+ Causa sepsis.</Manual_Description_Azathioprine>
+  <Manual_Description_Bandages>### Comprobación de habilidad médica: 10
+ 
+ Vendajes utilizados para cubrir heridas y prevenir infecciones.
+ 
+ ### Éxito en la aplicación:
+ 
+ \\+50% @vendado
+ \\-24% sangrado
+ 
+ ### Fallo en la aplicación:
+ 
+ \\+36% @vendado
+ \\-18% sangrado</Manual_Description_Bandages>
+  <Manual_Description_Blood_Packs>Los paquetes de sangre se adquieren al usar un @empty-blood-pack en un humano con menos del 31% de @blood-loss. Los paquetes de sangre deben ser administrados al tipo de sangre correcto, que se indica en la descripción del objeto.
+ 
+ ###Aplicación de tipo de sangre compatible
+ -30% de pérdida de sangre
+ +30% de presión arterial
+ 
+ ###Aplicación de tipo de sangre incompatible
+ -20% de pérdida de sangre
+ +30% de presión arterial
+ +100% de @hemotransfusion-shock
+ 
+ Si el humano del que proviene el paquete de sangre sufría de @acidosis, @alkalosis o @sepsis, entonces esas aflicciones también se transmitirán a quien reciba la sangre (la aflicción adquirida será el nivel de aflicción del donante en el momento de la extracción dividido por 5). Además, si el receptor de la sangre tiene acidosis o alkalosis, la transfusión de sangre neutral acercará el pH de la sangre a neutral, tratando parcialmente tanto la alkalosis como la acidosis, a menos que el paciente tenga una pérdida de sangre del 0%.</Manual_Description_Blood_Packs>
+  <Manual_Description_Blue_Shark>### Comprobación de habilidad médica: Ninguna
+ Un pequeño tiburón azul divertido que podría curar tu inestabilidad mental.
+ 
+ ### Al aplicarlo:
+ Trata el 2% de psicosis y emite un ruido chirriante.</Manual_Description_Blue_Shark>
+  <Manual_Description_Body_Bag>La Bolsa para Cuerpos es un objeto utilizado para transportar cuerpos mucho más rápidamente que simplemente arrastrarlos. Se coloca en la ranura del Traje de Buceo y sofocará a un ser humano vivo si se coloca en él.</Manual_Description_Body_Bag>
+  <Manual_Description_Broad-spectrum_Antibiotics>### Chequeo de habilidad médica: 25
+ 
+ Los antibióticos de amplio espectro son el tratamiento principal para la @sepsis. Todavía se aplica el aumento de resistencia a la infección de la piel y reduce la infección existente de la piel con el tiempo, según lo establecido en el juego.
+ 
+ La presión arterial del paciente debe estar por encima del 70% y su @hipoxemia debe estar por debajo del 30% para tratar eficazmente la sepsis.
+ 
+ ### Éxito de la aplicación:
+ 
+ El uso exitoso de los antibióticos proporcionará una fuerza de efecto del 50%, que disminuirá en un 0,5% por segundo, totalizando 100 segundos con una dosis. Los antibióticos de amplio espectro al 50% tratarán la sepsis en un 0,95% por segundo durante 100 segundos.
+ 
+ Sin embargo, causará:
+ 
+ - 0,2% de daño a los órganos vainilla por segundo durante 100 segundos
+ - 0,175% de daño al riñón por segundo durante 100 segundos
+ - 0,175% de daño al hígado por segundo durante 100 segundos
+ - 0,1% de daño al corazón por segundo durante 100 segundos
+ - 0,1% de daño al pulmón por segundo durante 100 segundos
+ - En total, los órganos terminarán con un 20% de daño a los órganos, un 17,5% de daño al riñón y al hígado, y un 10% de daño al corazón y al pulmón.
+ 
+ ### Fallo de la aplicación:
+ 
+ Un uso fallido proporcionará una fuerza de efecto del 30%. Disminuirá y tratará la sepsis a la misma velocidad que un uso exitoso. Los antibióticos de amplio espectro al 30% tratarán la sepsis en un 0,95% por segundo durante 60 segundos.
+ 
+ Sin embargo, causará:
+ 
+ - 0,2% de daño a los órganos vainilla por segundo durante 60 segundos
+ - 0,175% de daño al riñón por segundo durante 60 segundos
+ - 0,175% de daño al hígado por segundo durante 60 segundos
+ - 0,1% de daño al corazón por segundo durante 60 segundos
+ - 0,1% de daño al pulmón por segundo durante 60 segundos
+ - En total, los órganos terminarán con un 12% de daño a los órganos, un 10,5% de daño al riñón y al hígado, y un 6% de daño al corazón y al pulmón.</Manual_Description_Broad-spectrum_Antibiotics>
+  <Manual_Description_Combat_Stimulant>El Estimulante de Combate es un estimulante que también funciona como un elemento de primeros auxilios. Desde el 1% hasta el 10% de fuerza, el químico trata quemaduras, pérdida de sangre, heridas, hemorragias internas y síndrome de abstinencia química en un 1% por segundo hasta que la fuerza de la aflicción disminuya a 0% o progrese más allá del 10% cuando se reciba otra inyección. El jugador también recibe una resistencia al aturdimiento del 45% al 10%. Este bono disminuye con la fuerza de la aflicción.
+ 
+ Desde el 11% hasta el 100% de fuerza, el químico trata los tipos de daño anteriores en un 2% por segundo y proporciona al jugador una resistencia al aturdimiento del 45% al 50%.</Manual_Description_Combat_Stimulant>
+  <Manual_Description_Deusizine>### Comprobación de habilidad médica: 72
+ Un tratamiento especial utilizado para tratar la pérdida de sangre, daño de órganos vainilla, daño interno y hipoxemia durante un período de tiempo de 20 segundos.
+ 
+ ### Éxito de la aplicación:
+ -40% de daño interno
+ -40% de pérdida de sangre
+ -100% de hipoxemia
+ -40% de daño de órganos vainilla
+ +4% de quemaduras
+ +40% de presión arterial
+ 
+ ### Fallo de la aplicación:
+ -20% de daño interno
+ -20% de pérdida de sangre
+ -40% de hipoxemia
+ -20% de daño de órganos vainilla
+ +12% de quemaduras
+ +20% de presión arterial</Manual_Description_Deusizine>
+  <Manual_Description_Diving_Knife>###Comprobación de habilidad médica: 30
+ Además de los usos normales de un cuchillo, se pueden usar para quitar vendajes.
+ 
+ ###Éxito en la aplicación:
+ Quita los vendajes en la extremidad en la que se usó el cuchillo.
+ 
+ ###Fracaso en la aplicación:
+ +15% de sangrado
+ +10% de laceraciones</Manual_Description_Diving_Knife>
+  <Manual_Description_Drainage>El drenaje es un elemento de un solo uso que se utiliza para tratar el neumotórax. Se utiliza después de la piel retraída.</Manual_Description_Drainage>
+  <Manual_Description_Empty_Blood_Pack>###Comprobación de habilidad médica: 30
+ Los paquetes de sangre vacíos se utilizan para adquirir @blood-packs. Los paquetes de sangre vacíos solo se pueden usar en humanos con menos del 31% de @blood-loss, de lo contrario no hace nada.
+ 
+ ###Éxito de la aplicación:
+ +30% de pérdida de sangre
+ 
+ ###Fracaso de la aplicación:
+ +40% de pérdida de sangre
+ 
+ Si el humano en el que se utiliza el paquete de sangre vacío sufre de @acidosis, @alkalosis o @sepsis, entonces esas aflicciones también se darán a quien reciba la sangre (la aflicción adquirida será el nivel de aflicción del donante en el momento de la extracción dividido por 5).</Manual_Description_Empty_Blood_Pack>
+  <Manual_Description_Endovascular_Balloon>El tercer paso en la cirugía de ruptura aórtica.</Manual_Description_Endovascular_Balloon>
+  <Manual_Description_Fentanyl>###Comprobación de habilidad médica: 72
+ 
+ Un analgésico potente utilizado para inducir la @analgesia.
+ 
+ ###Éxito en la aplicación:
+ +75% @analgesia
+ +15% Adicción a opiáceos
+ +22.5% @sobredosis-de-opiáceos
+ -100% @retirada-de-opiáceos.
+ 
+ ####Mientras se está borracho (&gt;30% borracho) cambia a:
+ +150% @analgesia
+ +15% Adicción a opiáceos
+ +37.5% @sobredosis-de-opiáceos
+ -100% @retirada-de-opiáceos.
+ 
+ ###Fracaso en la aplicación:
+ +50% @analgesia
+ +40% Adicción a opiáceos
+ +30% @sobredosis-de-opiáceos
+ -100% @retirada-de-opiáceos.
+ 
+ ####Mientras se está borracho (&gt;30% borracho) cambia a:
+ +100% @analgesia
+ +40% Adicción a opiáceos
+ +60% @sobredosis-de-opiáceos
+ -100% @retirada-de-opiáceos.</Manual_Description_Fentanyl>
+  <Manual_Description_Gypsum>###Comprobación de habilidad médica: 40
+ Un fino polvo que, cuando se utiliza en conjunto con vendajes, envolverá una extremidad en un yeso para curar fracturas. El yeso no funcionará si no ha utilizado vendajes o plastiseal previamente, y no hará nada por las fracturas de cráneo, costillas y cuello.
+ 
+ Por cada yeso aplicado al jugador, obtendrán una penalización de velocidad de movimiento del 20%. Los yesos pueden ser removidos con tijeras de trauma.
+ 
+ ###Éxito en la aplicación:
+ Convierte el vendaje aplicado en un yeso, que curará lentamente las fracturas de brazos y piernas encerradas en él.
+ 
+ ###Fracaso en la aplicación:
+ Elimina el yeso y no hace nada.</Manual_Description_Gypsum>
+  <Manual_Description_Health_Scanner>Un objeto extremadamente importante para el diagnóstico. Al usarlo y cargarlo con baterías, obtendrás la lectura de todos los efectos visibles al escáner de salud, y el paciente que estás escaneando ganará un 0,5% de enfermedad por radiación por segundo, y tú (la persona que escanea) ganarás un 0,3% por segundo. Además, uno puede escanearse a sí mismo y a otros usando el escáner de salud en la interfaz como un tratamiento, como lo haría con una venda. Esto provoca un 1% de enfermedad por radiación, y también te permite escanear extremidades individuales para encontrar cosas como cuerpos extraños.</Manual_Description_Health_Scanner>
+  <Manual_Description_Hematology_Analyzer>###Comprobación de habilidad médica: 30
+ 
+ ###Éxito de la aplicación:
+ +1% @pérdida-de-sangre
+ 
+ ###Fracaso de la aplicación:
+ +3% @pérdida-de-sangre
+ 
+ Tanto si fallas como si pasas la comprobación de habilidad, también recibirás una lectura de todas las dolencias relacionadas con la sangre que tenga tu paciente, como @sepsis, @acidosis o @alkalosis. El analizador hematológico también se puede utilizar para comprobar el tipo de sangre de tu paciente, para evitar el @shock-de-hemotransfusión. Al poner una tarjeta de donante en el analizador y luego usarlo, se imprimirá su tipo de sangre en la tarjeta de donante y se colocará en su ranura de tarjeta de identificación, lo que te permitirá comprobar su tipo de sangre más tarde sin el analizador.</Manual_Description_Hematology_Analyzer>
+  <Manual_Description_Hemostat>El tercer paso en la mayoría de los procedimientos quirúrgicos. El hemostato no funcionará sin una incisión quirúrgica al 100%. Su uso no requiere habilidad médica. El uso exitoso del hemostato dará al paciente una hemorragia @clamped en la extremidad en la que se utilizó la herramienta. 
+ 
+ (Note: I did not translate the word "effect" as it did not seem to fit in the context of the text.)</Manual_Description_Hemostat>
+  <Manual_Description_Hyperzine>###Comprobación de habilidad médica: 50
+ Un estimulante poderoso
+ 
+ ###Éxito en la aplicación:
+ -6% de daño interno
+ +9% de adición química
+ +9% de @neurotrauma
+ +15% de psicosis
+ 
+ ###Fracaso en la aplicación:
+ -3% de daño interno
+ +18% de adicción química
+ +30% de psicosis
+ 
+ En ambos casos, el químico proporciona un 400% de rapidez y un 400% de vigor, y reduce la @abstinencia química en un 45%. El jugador también se recupera de los aturdimientos un 90% más rápido durante 60 segundos.</Manual_Description_Hyperzine>
+  <Manual_Description_Liquid_Oxygenite>###Comprobación de habilidad médica: 72
+ Un material alienígena líquido utilizado para inyectar oxígeno directamente en el torrente sanguíneo, tratando la @hipoxemia.
+ 
+ ###Éxito en la aplicación:
+ Cura toda la @hipoxemia durante 30 segundos, todos los demás efectos ocurren durante 30 segundos:
+ +6% de daño a órganos de vainilla
+ +6% de daño a los @pulmones
+ +6% de daño al @hígado
+ +6% de daño al @corazón
+ +6% de daño al @riñón.
+ 
+ ###Fracaso en la aplicación:
+ Todos los efectos ocurren durante 20 segundos:
+ -200% de @hipoxemia
+ +10% de daño a órganos de vainilla
+ +10% de daño a los @pulmones
+ +10% de daño al @hígado
+ +10% de daño al @corazón
+ +10% de daño al @riñón.</Manual_Description_Liquid_Oxygenite>
+  <Manual_Description_Mannitol>###Comprobación de habilidad médica: 60
+ El mannitol es un medicamento utilizado para tratar el @neurotrauma siempre y cuando la presión arterial esté por encima del 70% y la @hipoxemia esté por debajo del 30%. A cambio de curar el @neurotrauma, causa daño en los órganos de vainilla, @daño-cardíaco y @daño-renal. El mannitol reducirá a la mitad la ganancia de @neurotrauma independientemente de si la sangre está estable o no.
+ 
+ El inicio del daño en los órganos por la aflicción del mannitol ocurre en un lapso de 10 segundos.
+ 
+ ###Éxito en la aplicación:
+ +50% de aflicción del mannitol, que curará el 100% del @neurotrauma con el tiempo
+ +5% de daño en los órganos de vainilla
+ +10% de @daño-cardíaco
+ +10% de @daño-renal
+ 
+ ###Fracaso en la aplicación:
+ +30% de aflicción del mannitol, que curará el 60% del @neurotrauma con el tiempo
+ +10% de daño en los órganos de vainilla
+ +20% de @daño-cardíaco
+ +20% de @daño-renal</Manual_Description_Mannitol>
+  <Manual_Description_Manual_Defibrillator>Un dispositivo utilizado para corregir el latido del corazón de un paciente. Cuando se utiliza en un paciente y se carga con baterías, el desfibrilador tiene la oportunidad de restablecer la fibrilación o curar el paro cardíaco.
+ 
+ La probabilidad de esto se representa en el gráfico a continuación, con el cian siendo la probabilidad de restablecer la fibrilación, el rosa siendo la probabilidad de causar un paro cardíaco y el naranja siendo la probabilidad de curarlo. El eje X es la habilidad médica y el eje Y es la probabilidad de hacer algo (con 1 siendo el 100%).
+ 
+ A habilidades médicas por debajo de 80, el AED corre el peligro de causar un paro cardíaco o no corregir la fibrilación, mientras que el desfibrilador manual no lo hace. A 100 habilidades médicas, el desfibrilador manual es superior. El desfibrilador manual se vuelve perfectamente seguro y está garantizado para curar el paro cardíaco.</Manual_Description_Manual_Defibrillator>
+  <Manual_Description_Medical_Stent>El cuarto paso en la cirugía de ruptura aórtica. El stent no funcionará si no ha utilizado el globo endovascular previamente. El uso del stent médico curará la ruptura aórtica y también retirará el globo endovascular del paciente.</Manual_Description_Medical_Stent>
+  <Manual_Description_Methamphetamine>###Comprobación de habilidad médica: 35
+ Un estimulante que tiene efecto en 30 segundos.
+ 
+ ###Éxito en la aplicación:
+ +15% de daño orgánico de vainilla
+ +15% de @neurotrauma
+ +15% de adicción química
+ +30% de psicosis
+ 
+ ###Fracaso en la aplicación:
+ +30% de daño orgánico de vainilla
+ +30% de @neurotrauma
+ +30% de adicción química
+ +45% de psicosis
+ 
+ En ambos casos, el usuario se recupera de los aturdimientos un 75% más rápido durante 30 segundos y el químico tratará el 90% de la @withdrawal química.</Manual_Description_Methamphetamine>
+</infotexts>

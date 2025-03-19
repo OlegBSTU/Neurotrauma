@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Traditional Chinese" nowhitespace="true" translatedname="中文(繁體)">
+  <Manual_Description_Morphine>###醫療技能檢查：30
+ 
+ 一種中等功效的止痛劑，用於誘導鎮痛。
+ 
+ ###應用成功：
+ +50％鎮痛
+ +10％鴉片成癮
+ +10％鴉片過量
+ -30％戒斷症狀。
+ 
+ ####酒醉時（&gt; 30％酒醉）變為：
+ +100％鎮痛
+ +10％鴉片成癮
+ +20％鴉片過量
+ -30％戒斷症狀。
+ 
+ ###應用失敗：
+ +30％鎮痛
+ +25％鴉片成癮
+ +20％鴉片過量
+ -30％戒斷症狀。
+ 
+ ####酒醉時（&gt; 30％酒醉）變為：
+ +60％鎮痛
+ +25％鴉片成癮
+ +40％鴉片過量
+ -30％戒斷症狀。</Manual_Description_Morphine>
+  <Manual_Description_Naloxone>###醫療技能檢查：39
+ Naloxone用於治療阿片類藥物戒斷、阿片類藥物過量和鎮痛。效果在30秒內發生。
+ 
+ ###應用成功：
+ -60％阿片類藥物戒斷
+ -60％阿片類藥物過量
+ -60％鎮痛
+ 
+ ###應用失敗：
+ -30％阿片類藥物戒斷
+ -30％阿片類藥物過量
+ -60％鎮痛
+ 50％的機會讓患者進入昏迷狀態。</Manual_Description_Naloxone>
+  <Manual_Description_Needle>針頭是一次性使用的物品，可將氣胸減弱至5％的強度，並防止其惡化。然而，它並不能完全治療氣胸。在沒有氣胸的患者身上使用針頭將會使他們患上氣胸。請注意使用。</Manual_Description_Needle>
+  <Manual_Description_Nitroglycerin>###醫療技能檢查：35
+ 一個裝有非常不穩定物質的罐子，易於在撞擊或暴露於熱源時爆炸。除了醫療技能檢查為35外，其功能與@ sodium-nitroprusside完全相同。
+ 
+ ###應用成功：
+ 降低血壓400秒
+ 
+ ###應用失敗：
+ 降低血壓200秒</Manual_Description_Nitroglycerin>
+  <Manual_Description_Opium>###醫療技能檢查：15
+ 
+ 使用弱鎮痛劑誘導@鎮痛
+ 
+ ###應用成功：
+ +20％ @鎮痛
+ +5％ 鴉片成癮
+ +8.75％ @鴉片過量
+ -15％ 鴉片@戒斷。
+ 
+ ####在醉酒時（&gt; 30％醉酒）更改為：
+ +40％ @鎮痛
+ +5％ 鴉片成癮
+ +18.75％ @鴉片過量
+ -15％ 鴉片@戒斷。
+ 
+ ###應用失敗：
+ +10％ @鎮痛
+ +20％ 鴉片成癮
+ +15％ @鴉片過量
+ -15％ 鴉片@戒斷。
+ 
+ ####在醉酒時（&gt; 30％醉酒）更改為：
+ +20％ @鎮痛
+ +20％ 鴉片成癮
+ +30％ @鴉片過量
+ -15％ 鴉片@戒斷。</Manual_Description_Opium>
+  <Manual_Description_Organ_Procurement_Scalpels>器官捐贈手術中使用器官捐贈手術刀來提取其命名的器官。每個器官都有一種類型，如下所示：腦、心臟、肺、肝臟和腎臟。
+ 
+ - 腦部手術刀的醫療技能檢查為100，可可靠地切除腦部。
+ 
+ - 心臟手術刀的醫療技能檢查為60，可可靠地切除心臟。
+ 
+ - 肺部手術刀的醫療技能檢查為50，可可靠地切除肺部。
+ 
+ - 肝臟手術刀的醫療技能檢查為40，可可靠地切除肝臟。
+ 
+ - 腎臟手術刀的醫療技能檢查為30，可可靠地切除腎臟。</Manual_Description_Organ_Procurement_Scalpels>
+  <Manual_Description_Osteosynthesis_Implants>醫療技能檢查：45
+ 
+ @骨骼合成手術的第六步。
+ 
+ ### 應用成功：
+ 
+ 治療使用植入物的肢體上的所有骨折，並使用25％的植入物。
+ 
+ ### 應用失敗：
+ 
+ +5％出血
+ +5％內傷</Manual_Description_Osteosynthesis_Implants>
+  <Manual_Description_Plastiseal>### 醫療技能檢查：22
+ 
+ 一種改進版的@繃帶，可以更有效地治療傷口。
+ 
+ ### 應用成功：
+ 
+ \\+100％ @繃帶
+ \\-48％ 出血
+ \\-24％ @燒傷
+ 
+ ### 應用失敗：
+ 
+ \\+50％ @繃帶
+ \\-24％ 出血
+ \\-12％ @燒傷
+ 
+ 應用塑膠密封劑還可以更換應用繃帶的肢體上的任何骯髒繃帶。塑膠密封劑還可以在@收縮皮膚後用於治療三度燒傷。</Manual_Description_Plastiseal>
+  <Manual_Description_Propofol>丙泊酚不再可制作
+ 
+ 丙泊酚是一种用于使人失去知觉的化学物质。它最好用于需要在船外进行的手术，因为它可以防止患者受到创伤性休克。它没有医疗技能检查。
+ 
+ 注射后，接受者会以每秒0.3％的速度缓慢获得麻醉。从1％到15％的强度，玩家将有5％的镇痛作用。
+ 
+ 一旦病情进展到16％以上，玩家将陷入昏迷状态，并将保持昏迷状态，直到病情等待进展到100％或通过麻痹剂降低到0％。在此期间，玩家将不会感到剧烈的疼痛/腹痛/胸痛，可以对他们进行手术。</Manual_Description_Propofol>
+  <Manual_Description_Raptor_Bane_Extract>猛禽毒草提取物用於治療酸中毒，通過誘發患者嘔吐以使其產生鹼中毒。請記住，痛苦是效應，當您翻譯單詞時，將痛苦命名為效應。</Manual_Description_Raptor_Bane_Extract>
+  <Manual_Description_Retractors>### 醫療技能檢定：30
+ 
+ 大多數手術程序中的第四步。如果沒有100％的夾住出血，則無法使用撐開器。
+ 
+ ### 應用成功：
+ 
+ 在使用工具的肢體上給予患者撐開的皮膚。
+ 
+ ### 應用失敗：
+ 
+ +10％的內部損傷。</Manual_Description_Retractors>
+  <Manual_Description_Ringer_Solution>林格氏液用於增加血壓。與生理鹽水不同，林格氏液不會引起酸中毒，只會增加血壓。但請注意，它可能會將您的血壓增加到不需要的水平。</Manual_Description_Ringer_Solution>
+  <Manual_Description_Saline>###醫療技能檢查：10
+ 鹽水是一種液體，用於治療鹼中毒，通過誘導酸中毒。
+ 
+ ###應用成功：
+ 增加血壓
+ +20％酸中毒
+ 
+ ###應用失敗：
+ 增加血壓
+ +12％酸中毒</Manual_Description_Saline>
+  <Manual_Description_Scalpel>###醫療技能檢查：30
+ 所有外科手術程序的第二步。如果沒有@鎮痛劑，手術刀將無法使用。
+ 
+ ###應用成功：
+ 對使用工具的肢體進行@surgery-incision，並將切除任何石膏或@繃帶。
+ 
+ ###應用失敗：
+ +15％出血
+ +10％撕裂傷</Manual_Description_Scalpel>
+  <Manual_Description_Sodium_Nitroprusside>###醫療技能檢查：10
+ 一種降低血壓的藥物。服用亞硝普酮鈉會使您的血壓下降45％。當這種藥物起作用時，由於低血壓引起的心房顫動將會減少。
+ 
+ ###應用成功：
+ 降低血壓200秒
+ 
+ ###應用失敗：
+ 降低血壓120秒</Manual_Description_Sodium_Nitroprusside>
+  <Manual_Description_Spinal_Cord_Implants>醫療技能檢查：45
+ 
+ 用於治療脊髓損傷的植入物。
+ 
+ 應用成功：
+ 
+ 成功使用植入物將治愈患者的脊椎。請注意，如果患者有頸椎骨折，它將會再次出現。
+ 
+ 應用失敗：
+ 
+ +5％出血
+ +5％內部損傷</Manual_Description_Spinal_Cord_Implants>
+  <Manual_Description_Stasis_Bag>一個特殊的袋子，可以使身體保持靜止，以便在嚴重受傷時進行適當的治療。靜止袋放在潛水服插槽中，佩戴它會以每秒0.25％的速度消耗其狀態，這意味著靜止袋可以持續400秒或大約6分半鐘。佩戴靜止袋將保護佩戴者免受壓力，最深可達10,000米，允許佩戴者以全速拖曳，並停止以下疾病的負面影響：
+ 
+ - @心臟停止
+ - @呼吸停止
+ - @心臟病發作
+ - @神經創傷
+ - @腎損傷
+ - @肝損傷
+ - @心臟損傷
+ - @肺損傷
+ - @骨損傷
+ - @敗血症
+ - @低氧血症
+ - @低血壓
+ - @高血壓
+ - @酸中毒
+ - @鹼中毒
+ - @內出血
+ - @中風
+ - @癲癇發作
+ - @昏迷
+ - @感染傷口
+ - 出血
+ 
+ 需要注意的是，無法在人們身處靜止袋內進行手術。他們需要在手術前從袋子中取出。從靜止袋中取出的患者將會出現@心臟停止，需要治療這些疾病。</Manual_Description_Stasis_Bag>
+  <Manual_Description_Streptokinase>醫療技能檢查：無
+ 一種抗凝血劑。使用鏈球菌激酶會防止自然出血再生，並會在其作用期間使中風惡化。
+ 
+ 應用時：
+ - 完全治療心臟病發作和輸血反應休克。</Manual_Description_Streptokinase>
+  <Manual_Description_Surgery_Table>手術台是一件可以從站點購買或製作後放置的物品。病人不需要在手術台上，只需要靠近它。手術台為靠近它的所有人提供人工通氣，並在病人處於鎮痛狀態下防止創傷性休克。此外，該桌會降低低氧和防止呼吸停止增加酸中毒。
+ 
+ 該桌還有可用於輸出重要信息的接線針，例如血壓、神經創傷、心率和呼吸率。
+ 
+ 值得注意的是，手術台在功能上與醫院床完全相同。其他床鋪如果你躺在上面可以防止創傷性休克，但它們不提供人工通氣。</Manual_Description_Surgery_Table>
+  <Manual_Description_Surgical_Drill>### 醫療技能檢查：45
+ 
+ @骨骼合成手術的第五步。
+ 
+ ### 應用成功：
+ 
+ 成功使用手術鑽將工具用於肢體上的@鑽孔骨會給予患者。
+ 
+ ### 應用失敗：
+ 
+ +15％出血
+ +10％@內部損傷</Manual_Description_Surgical_Drill>
+  <Manual_Description_Surgical_Saw>醫療技能檢查：45
+ 
+ 截肢手術中的第五步。
+ 
+ 應用成功：
+ 
+ 成功使用手術鋸將工具用於肢體上的骨頭上，將給予患者鋸齒狀骨折。
+ 
+ 應用失敗：
+ 
+ +15％出血
+ +6％內部損傷
+ +4％擦傷</Manual_Description_Surgical_Saw>
+  <Manual_Description_Sutures>醫療技能檢查：30
+ 
+ 所有外科手術程序的最後一步。對於治療大多數傷口出血也非常有用。
+ 
+ 應用成功：
+ 
+ 消除所有與手術有關的疾病（例如手術切口）
+ -20％槍傷
+ -20％割傷
+ -20％咬傷
+ -20％深層組織損傷
+ -40％出血
+ 
+ 應用失敗：
+ 
+ +6％內傷</Manual_Description_Sutures>
+  <Manual_Description_Thiamine>### 醫療技能檢查：10
+ 
+ 一個裝有維生素B1藥丸的容器，用於協助器官癒合。
+ 
+ ### 應用成功：
+ 
+ 器官癒合時間為200秒
+ 
+ ### 應用失敗：
+ 
+ 器官癒合時間為120秒
+ 
+ 200秒的器官癒合時間將治愈約8％的器官損傷（不包括@neurotrauma），而120秒的器官癒合時間將治愈4.8％。這是在同一時間進行自然器官癒合的基礎上進行的。硫胺酸無法使死亡的器官復活。</Manual_Description_Thiamine>
+  <Manual_Description_Tourniquet>醫療技能檢查：30
+ 一種用於限制血液流向特定肢體以減少常規和動脈出血的物品。
+ 沒有動脈出血，止血帶將無法發揮作用。可以使用創傷剪剪斷。
+ 
+ 應用成功：
+ 暫時停止動脈出血的負面影響，慢慢治療常規出血，但如果長時間保持，會引起壞疽。在頭部使用止血帶會使受害者遭受15％的神經創傷和200％的低氧。
+ 
+ 應用失敗：
+ +6％的挫傷。</Manual_Description_Tourniquet>
+  <Manual_Description_Trauma_Shears>###醫療技能檢查：10
+ 一把剪刀用於拆除石膏固定和繃帶。
+ 
+ ###應用成功：
+ 拆除了剪刀使用的肢體上的所有石膏固定、繃帶和分流卡。
+ 
+ ###應用失敗：
+ +15％ 出血
+ +10％ 擦傷</Manual_Description_Trauma_Shears>
+  <Manual_Description_Tweezers>###醫療技能檢查：30
+ 一對鑷子用於移除受損組織或子彈。
+ 
+ ###應用成功：
+ -5％ @內部損傷
+ -5％ 鈍力創傷
+ -5％ @異物
+ +5％ 擦傷
+ 
+ ###應用失敗：
+ +6％ @內部損傷
+ 
+ 如果您使用鑷子進行槍傷或深層組織損傷的患肢，則可以在未縮回皮膚的情況下使用鑷子，但這樣做會導致5％的 @創傷性休克。取出異物也有5％的機會產生刮傷。</Manual_Description_Tweezers>
+  <Manual_Description_Wrench>###醫療技能檢查：60（如果患者有@鎮痛劑，則為30）
+ 扳手用於治療@脫臼。要治療脫臼，將其拖到健康界面上的脫臼肢體上，並像使用繃帶一樣使用它作為治療。
+ 
+ ###應用成功：
+ 治療該肢體的脫臼
+ 
+ ###應用失敗：
+ 導致該肢體骨折</Manual_Description_Wrench>
+  <Manual_Description_Traumatic_Shock>創傷性休克非常致命，如果您的患者在任何時候出現這種情況，立即停止手術，將他們帶回手術臺附近或再次施行鎮靜劑。如果受害者在麻醉作用下或在手術臺附近使用鎮痛劑，創傷性休克的強度將以4倍速度下降。
+ 
+ ---
+ ##引起原因：
+ 
+ - 進行不安全的手術（沒有手術臺或沒有鎮靜劑）
+ - 通過槍傷或深層組織損傷使用鑷子（會引起非常輕微的休克，通常可以忽略不計）
+ 
+ ##影響：
+ 
+ - 低血壓（非常嚴重）
+ - 心臟停止（在40％或更高時）
+ - 呼吸停止（在30％或更高時）
+ - 神經創傷（每秒強度除以100，10％或更高是超過自然再生的點）
+ - 精神病（每秒強度除以100）
+ 
+ ##治療：
+ 
+ - 停止手術並等待
+ - 將患者帶到手術臺附近，確保患者鎮靜
+ 
+ ##預防：
+ 
+ - 確保手術在“皮膚縮回”步驟之後進行之前是安全的
+ - 確保鎮痛劑在手術過程中不會用盡</Manual_Description_Traumatic_Shock>
+  <Manual_Description_Surgery_Incision>所有外科手術的第二步驟。若手術切口未被夾住，每個切口每秒會造成0.7％的失血量，若手術切口未使用鎮痛劑或其他鎮靜方法，每個切口每秒會造成2％的創傷性休克。如果在沒有手術桌的情況下進行，這種痛苦不會引起創傷性休克，因此可以在沒有手術桌的情況下進行放血。</Manual_Description_Surgery_Incision>
+  <Manual_Description_Clamped_Bleeding>在大多數手術程序中的第三步驟。夾住出血可以防止手術切口造成的失血。這種效應是下一步驟——撐開器所必需的。</Manual_Description_Clamped_Bleeding>
+  <Manual_Description_Retracted_Skin>大多數手術程序的第四步。如果沒有手術臺，拉開皮膚會導致每秒2％的創傷性休克，每次拉開皮膚都會發生。大多數手術程序，例如骨骼合成手術或器官移植手術都源於此步驟。 (Note: The @ symbols are not necessary in Chinese language.)</Manual_Description_Retracted_Skin>
+  <Manual_Description_Drilled_Bones>骨科手術中的第五步驟。在沒有手術臺的情況下鑽孔會導致每次鑽孔骨骼產生1.5％的創傷性休克。將痛苦稱為效應。</Manual_Description_Drilled_Bones>
+  <Manual_Description_Sawed_Bones>截肢手術的第五步驟。若在沒有手術臺的情況下鋸骨頭，每鋸一次骨頭會導致1.5％的創傷性休克。請記住，痛苦是效應。</Manual_Description_Sawed_Bones>
+  <Manual_Description_Open_Close_Surgery>##步驟：
+ 
+ 1. 麻醉劑
+ 2. 手術刀
+ 3. 止血鉗
+ 4. 引開器
+ 5. 縫合線</Manual_Description_Open_Close_Surgery>
+  <Manual_Description_Osteosynthetic_Surgery>##步驟：
+ 
+ 1. 選擇麻醉劑
+ 2. @手術刀
+ 3. @止血鉗
+ 4. @撐開器
+ 5. @手術鑽
+ 6. @骨骼合成植入物
+ 7. @縫合線
+ 
+ 必須對每個身體部位進行以上步驟，以治療@骨死亡。</Manual_Description_Osteosynthetic_Surgery>
+  <Manual_Description_Aortic_Rupture_Surgery>##步驟：
+ 
+ 1. 選擇你喜歡的麻醉方式
+ 2. @手術刀
+ 3. @內視鏡球囊
+ 4. @醫用支架
+ 5. @縫合線</Manual_Description_Aortic_Rupture_Surgery>
+  <Manual_Description_Amputation_Surgery>## 步驟：
+ 
+ 1. 選擇你喜歡的麻醉方式（@analgesia）
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. @surgical-saw
+ 6. 使用仿生學或人類肢體替換截肢的肢體（可選）
+ 7. @sutures
+ 8. 如果進行了手術截肢，可以在肢體上安裝機械肢體（不是仿生植入物）。手術不需要開放以安裝機械肢體（可選）（需要NT Cybernetics插件）
+ 
+ 如果肢體有超過15％的壞疽，進行此程序將無法恢復肢體。
+ 
+ 此程序導致@surgical-amputation。</Manual_Description_Amputation_Surgery>
+  <Manual_Description_Organ_Transplant_Surgery>確保在放置器官之前使用@azathioprine，並確保他們的免疫力為10％或更低。如果放置後器官損壞達到100％，則表示它被拒絕了。如果在配置中關閉器官拒絕，則不適用此規定。
+ 
+ ##步驟：
+ 
+ 1. 選擇你喜歡的麻醉劑
+ 2. @scalpel
+ 3. @hemostat
+ 4. @retractors
+ 5. 相應的@organ-procurement-scalpels
+ 6. 相應的器官移植物品（腎臟必須進行兩次）
+ 7. @sutures</Manual_Description_Organ_Transplant_Surgery>
+  <Manual_Description_Surgical_Drapes>手術墊布是一種服裝物品，用於提高穿戴者的無菌性，從而降低手術感染的風險。
+ 
+ +100基礎無菌度
+ 穿戴時減少50％的創傷性休克獲得率</Manual_Description_Surgical_Drapes>
+  <Manual_Description_Surgical_Mask>手術口罩是一種可穿戴物品，佩戴時可以增加無菌性，減少手術感染的風險。
+ 
+ -10％ 擦傷
+ -20％ 出血</Manual_Description_Surgical_Mask>
+  <Manual_Description_Surgeon_Clothes>外科醫生服是一種可穿戴物品，穿上後可以增加無菌性，減少手術感染的風險。
+ 
+ -10％ 鈍力創傷
+ -10％ 擦傷
+ -10％ 咬傷</Manual_Description_Surgeon_Clothes>
+  <Manual_Description_Surgical_Infection>手術感染是一種機制，根據病人的環境有多少無菌，會導致脓毒症。
+ 
+ 以下將增加無菌度：
+ 
+ - 病人穿著手術包裝
+ - 附近的角色戴著手術口罩
+ - 擁有手術技能（根據以下公式獲得無菌度：10 + 手術技能 / 5）
+ - 擁有藥膏
+ 
+ 以下將降低無菌度：
+ 
+ - 病人沒有手術包裝
+ - 附近的角色沒有戴手術口罩
+ 
+ 在最低無菌度時，每兩秒有10％的機會病人會感染。</Manual_Description_Surgical_Infection>
+  <Manual_Description_Mannitol_Plus>甘露醇加是一種天賦物品，這意味著需要天賦才能製作。在使用後，即使患者不穩定，它也會在10秒內治療30％的神經創傷，並應用甘露醇的效果，而不會導致肝損傷/肺損傷/心臟損傷/腎損傷/器官損傷。</Manual_Description_Mannitol_Plus>
+  <Manual_Description_Experimental_Treatment>實驗性治療是外科醫生職業可解鎖的天賦物品。它可以隨機產生正面和負面的效果，但通常會產生更多的正面效果。
+ 
+ 從這個物品的使用中，有理論上無限的效果機會。想像一下拋硬幣，只有當你得到反面時才停止。每次你得到正面，你就可以從這個物品中獲得額外的效果。
+ 
+ 可能的正面效果列表如下：
+ 
+ ---
+ - 活力（從200-400％的力量中隨機選擇）
+ - 過度活躍（從200-400％的力量中隨機選擇）
+ - 精神病抵抗力（從200-400％的力量中隨機選擇）
+ - 脫皮感染抵抗力（從200-400％的力量中隨機選擇）
+ - 癱瘓抵抗力（從300-600％的力量中隨機選擇）
+ - @鎮痛劑（從20-100％的力量中隨機選擇）
+ - @麻醉劑（從1-100％的力量中隨機選擇）
+ - @軟膏（從20-100％的力量中隨機選擇）
+ - 戰鬥刺激劑（從30-100％的力量中隨機選擇）
+ - 壓力穩定（從30-100％的力量中隨機選擇）
+ - 完全治癒（治療20-100％的@傷口，普通器官損傷，@神經創傷和@失血，並完全治愈@敗血症）
+ 
+ ---
+ 
+ 可能的負面效果列表如下：
+ 
+ ---
+ - 任何@傷口（隨機選擇30-80％的出血，選擇5-20％的其他所有傷口）
+ - 晕倒2-15秒</Manual_Description_Experimental_Treatment>
+  <Manual_Description_Triage_Card>分流卡用於根據傷害嚴重程度標記患者。有兩種類型的分流卡，分別是手動和自動。手動分流卡的工作方式如下：
+ 
+ 將分流卡固定在腿上，標記為綠色，表示患者受輕傷，很可能能夠生存下來。
+ 將分流卡固定在手臂上，標記為黃色，表示患者受傷，如果治療時間延遲很長，很可能會死亡。
+ 將分流卡固定在軀幹上，標記為紅色，表示患者傷勢嚴重，需要立即援助。
+ 將分流卡固定在頭部，標記為黑色，表示患者已經死亡或非常接近死亡。
+ 
+ 自動分流卡將根據患者的疾病和生命力評估其健康狀況，並給出綠色、黃色、紅色或黑色的評級。</Manual_Description_Triage_Card>
+  <Manual_Description_Brain_Jar>腦罐是外科醫生可解鎖的天賦物品。與只能延遲大腦腐爛而不能完全停止的冷藏容器不同，腦罐不僅可以無限期地保存大腦，而且還可以以每10秒1％的速度慢慢修復大腦。</Manual_Description_Brain_Jar>
+  <Manual_Description_Artificial_Brain>在移除病人的大腦後使用，替換病人的大腦。防止因沒有大腦而導致神經創傷。沒有其他作用。</Manual_Description_Artificial_Brain>
+  <Manual_Description_Medical_Misconduct>閱讀時提供技能等級
+ 
+ ### 啟用手術技能：
+ 
+ +8 手術技能
+ +2 醫療技能
+ 
+ ### 未啟用手術技能：
+ 
+ +8 醫療技能</Manual_Description_Medical_Misconduct>
+  <Manual_Description_Cybernetic_Arm>一個可以附加到任何手術截肢的手臂的電子手臂插座。可以用撬棍拆卸。這將對所選肢體造成創傷性截肢。
+ 
+ ### 電子肢體的優點：
+ 
+ - 能夠承受持續的槍火而不失靈。
+ - 優秀的承受來自生物攻擊而不失靈或破裂。
+ - 理想的承受會導致危及生命的出血攻擊。
+ - 維護良好時，當受到攻擊時，不太可能被強行截肢。
+ - 不會斷裂或脫臼。在添加電子肢體之前，請確保修復任何脫臼或斷裂，否則它將是永久性的，直到您取下肢體。
+ 
+ #### 電子肢體的缺點：
+ 
+ - 它們不適合與水混合使用。不會給你帶來電擊，但如果你不穿套裝，它會隨著時間而破裂。
+ - 如果損壞，需要維護。
+ - 維護成本高，特別是如果您的子公司沒有足夠的鋼和FPGA電路來源。
+ - 製造/購買成本高昂。
+ - 如果通過材料損失嚴重損壞，會猛烈脫落。
+ 
+ ### 機械技能要求：70
+ 
+ ### 應用成功：
+ 
+ 在所選肢體上應用電子肢體，並治愈由任何以前失敗的嘗試造成的任何內部損傷。
+ 
+ ### 應用失敗：
+ 
+ 在肢體上應用20％的@internal-damage。不會刪除電子肢體。
+ 
+ ### 如何添加：
+ 
+ 首先對所選肢體進行截肢手術，然後在所選肢體上使用電子肢體。</Manual_Description_Cybernetic_Arm>
+  <Manual_Description_Cybernetic_Leg>一個可以附加到任何手術截肢的腿部換裝裝置。可以用撬棍拆卸。這會導致所選肢體的創傷性截肢。
+ 
+ ### 機械肢體的優點：
+ 
+ - 能夠承受持續的槍擊而不失靈。
+ - 優秀的抵抗來自生物攻擊而不失靈或破裂。
+ - 能夠承受會導致危及生命的出血攻擊。
+ - 維護良好時，當受到攻擊時，不太可能被強行截肢。
+ - 不會斷裂或脫臼。請確保在添加機械肢體之前修復任何脫臼或斷裂，否則它將是永久性的，直到您取下肢體。
+ 
+ #### 機械肢體的缺點：
+ 
+ - 它們不適合與水混合使用。不會給你帶來電擊，但如果你不穿套裝，它會隨著時間而破裂。
+ - 如果損壞，需要維修。
+ - 維修成本高，特別是如果您的子機沒有足夠的鋼和FPGA電路來源。
+ - 製造/購買成本高昂。
+ - 如果通過材料損失嚴重損壞，會猛烈脫落。
+ 
+ ### 機械技能要求：70
+ 
+ ### 應用成功：
+ 
+ 在所選肢體上應用機械肢體，並治愈由任何以前失敗的嘗試造成的任何內部損傷。
+ 
+ ### 應用失敗：
+ 
+ 在肢體上造成20％的內部損傷。不會刪除機械肢體。
+ 
+ ### 如何添加：
+ 
+ 首先對所選肢體進行截肢手術，然後在所選肢體上使用機械肢體。</Manual_Description_Cybernetic_Leg>
+  <Manual_Description_Cyberarm>你在這個插座裡有一個@cybernetic-arm。</Manual_Description_Cyberarm>
+  <Manual_Description_Cyberleg>你在這個插座裡有一個@cybernetic-leg。</Manual_Description_Cyberleg>
+  <Manual_Description_Damaged_Electronics>使用電子假肢的主要缺點是當暴露於水中時，它們的電子元件會受損。
+ 
+ 當電子假肢受損時，每種類型的損傷都有機會導致各種類型和數量的電子假肢特定損傷，而不是正常的損傷類型。
+ 
+ 受損電子元件的數量隨著@material-loss的數量而增加。
+ 
+ ## 原因：
+ 
+ - 沒有穿潛水服在水中
+ - 75％的機會使@burns造成200％的損傷，作為損壞的電子元件
+ - 85％的機會使槍傷造成75％的損傷，作為損壞的電子元件
+ - 50％的機會使咬傷造成25％的損傷，作為損壞的電子元件
+ - 50％的機會使深層組織損傷造成50％的損傷，作為損壞的電子元件
+ - 50％的機會使鈍力創傷造成100％的損傷，作為損壞的電子元件
+ - 75％的機會使@internal-damage造成100％的損傷，作為損壞的電子元件
+ - 75％的機會使@foreign-bodies造成75％的損傷，作為損壞的電子元件
+ 
+ ## 影響：
+ 
+ - 假肢偶爾會暫停工作，頻率隨著力量而增加
+ - 假肢變得無法使用（在99％或更高時）
+ 
+ ## 治療：
+ 
+ - @fpga-circuit</Manual_Description_Damaged_Electronics>
+  <Manual_Description_Bent_Metal>當損壞機械肢時，每種傷害都有機會導致各種類型和數量的機械肢特定損傷，而不是正常的傷害類型。
+ 
+ ## 引起原因：
+ 
+ - 燒傷有85％的機會導致25％的損傷成為彎曲的金屬
+ - 擦傷有50％的機會導致25％的損傷成為彎曲的金屬
+ - 咬傷有50％的機會導致50％的損傷成為彎曲的金屬
+ - 深層組織損傷有85％的機會導致100％的損傷成為彎曲的金屬
+ - 鈍力創傷有75％的機會導致200％的損傷成為彎曲的金屬
+ 
+ ## 影響：
+ 
+ - 如果在機械腿上，會使你變慢，與力量成比例
+ - 肢體變得無法使用（在99％或更高時）
+ 
+ ## 治療：
+ 
+ - 焊接工具</Manual_Description_Bent_Metal>
+  <Manual_Description_Loose_Screws>引起原因：
+ 
+ - 搬運時鬆動的螺絲（30％或以上）
+ - 切割傷有75％的機會導致25％的傷害成為鬆動的螺絲
+ - 深層組織損傷有80％的機會導致100％的傷害成為鬆動的螺絲
+ - 鈍力創傷有50％的機會導致50％的傷害成為鬆動的螺絲
+ - 內部損傷有75％的機會導致100％的傷害成為鬆動的螺絲
+ - 咬傷有50％的機會導致50％的傷害成為鬆動的螺絲
+ - 異物有75％的機會導致75％的傷害成為鬆動的螺絲
+ 
+ 效果：
+ 
+ - 鬆動的螺絲和材料損失
+ 
+ 治療：
+ 
+ - 螺絲刀</Manual_Description_Loose_Screws>
+  <Manual_Description_Material_Loss>當損壞機械肢時，每種傷害都有機會導致不同類型和數量的機械肢特定損傷，而非正常的傷害類型。
+ 
+ 獲得的材料損失量與鬆動螺絲的數量成比例。
+ 
+ ## 引起原因：
+ 
+ - 鬆動螺絲
+ - 切割傷有75％的機會導致25％的傷害作為材料損失
+ - 槍傷有80％的機會導致80％的傷害作為材料損失
+ - 咬傷有75％的機會導致60％的傷害作為材料損失
+ - 深層組織損傷有100％的機會導致100％的傷害作為材料損失
+ - 異物有80％的機會導致50％的傷害作為材料損失
+ 
+ ## 影響：
+ 
+ - 機械肢和創傷性截肢
+ 
+ ## 治療：
+ 
+ - 鋼棒</Manual_Description_Material_Loss>
+  <Manual_Description_FPGA_Circuit>### 電氣技能檢查：40
+ 
+ 用於修復搭載電子設備的人工肢體上的損壞。
+ 
+ ### 應用成功：
+ 
+ -50％ @damaged-electronics
+ 
+ ### 應用失敗：
+ 
+ -20％ @damaged-electronics</Manual_Description_FPGA_Circuit>
+  <Manual_Description_Welding_Tool>### 機械技能檢查：50
+ 
+ 用於修復機械化肢體上的彎曲金屬。
+ 
+ ### 應用成功：
+ 
+ -20％ 彎曲金屬
+ 
+ ### 應用失敗：
+ 
+ -5％ 彎曲金屬</Manual_Description_Welding_Tool>
+  <Manual_Description_Screwdriver>### 機械技能檢查：40
+ 
+ 用於修復機械肢體上的鬆動螺絲。
+ 
+ ### 應用成功：
+ 
+ -20％ 鬆動螺絲
+ 
+ ### 應用失敗：
+ 
+ -5％ 鬆動螺絲</Manual_Description_Screwdriver>
+  <Manual_Description_Steel_Bar>### 機械技能檢定：60
+ 
+ 用於修復機械肢體上的材料損失。
+ 
+ ### 應用成功：
+ 
+ -50％材料損失
+ 
+ ### 應用失敗：
+ 
+ -20％材料損失</Manual_Description_Steel_Bar>
+  <Manual_Description_Start_Page>歡迎來到醫學手冊，這是您全面了解神經創傷調節系統和常見醫學疾病的指南。本手冊旨在為您提供有關各種醫學主題的信息：
+ 
+ - @信息
+ - @症狀
+ - @頭腦
+ - @肺
+ - @心臟
+ - @軀幹
+ - @四肢
+ - @骨骼
+ - @任何身體部位
+ - @血液
+ - @物品-部分1
+ - @物品-部分2
+ - @物品-部分3
+ - @物品-部分4
+ - @手術
+ - @手術
+ - @擴張</Manual_Description_Start_Page>
+  <Manual_Description_Information>歡迎來到資訊標籤，這裡您可以閱讀一般資訊：
+ 
+ - @常見問題
+ - @急救箱建議
+ - @如何診斷
+ - @治療順序
+ - @神經創傷的五戒律</Manual_Description_Information>
+  <Manual_Description_Symptoms>歡迎來到症狀選項卡：
+ 
+ - @嘔吐血
+ - @蒼白的皮膚
+ - @呼吸急促
+ - @咳嗽
+ - @心跳加速
+ - @困惑
+ - @頭暈
+ - @視力模糊
+ - @腿部腫脹
+ - @喘息
+ - @虛弱
+ - @發燒
+ - @出汗
+ - @腹脹
+ - @發炎
+ - @黃疸
+ - @腹部不適
+ - @頭痛
+ - @渴望
+ - @心悸
+ - @痙攣</Manual_Description_Symptoms>
+  <Manual_Description_HeadBrain>歡迎來到頭部/腦部標籤：
+ 
+ - @神經創傷
+ - @中風
+ - @戒斷症狀
+ - @鴉片過量
+ - @癲癇發作
+ - @失去知覺
+ - @昏迷
+ - @脊髓損傷
+ - @腦震盪</Manual_Description_HeadBrain>
+  <Manual_Description_Lungs>歡迎來到肺部選項卡：
+ 
+ - @呼吸停止
+ - @肺損傷
+ - @氣胸
+ - @過度換氣
+ - @低換氣
+ - @低氧血症</Manual_Description_Lungs>
+  <Manual_Description_Heart>歡迎來到心臟標籤：
+ 
+ - @心包填塞
+ - @心臟停止
+ - @心臟病發作
+ - @心臟損傷
+ - @心跳不規則
+ - @心房顫動</Manual_Description_Heart>
+  <Manual_Description_Torso>歡迎來到軀幹標籤：
+ 
+ - @主動脈破裂
+ - @內出血
+ - @輻射病
+ - @腎損傷
+ - @肝損傷
+ - @病毒性疾病
+ - @氰化物中毒
+ - @器官損傷
+ - @鎮痛
+ - @麻醉
+ - @腹痛
+ - @嘔吐
+ - @惡心
+ - @胸痛</Manual_Description_Torso>
+  <Manual_Description_Extremities>歡迎來到極端情況選項卡：
+ 
+ - @創傷性截肢
+ - @壞疽
+ - @手術截肢
+ - @劇烈疼痛</Manual_Description_Extremities>
+  <Manual_Description_Bones>歡迎來到骨頭標籤：
+ 
+ - @骨死亡
+ - @骨損傷
+ - @骨折
+ - @脫臼</Manual_Description_Bones>
+  <Manual_Description_Any_Bodypart>歡迎來到任何身體部位標籤：
+ 
+ - @動脈出血
+ - @內部損傷
+ - @燒傷
+ - @感染傷口
+ - @異物
+ - @傷口
+ - @塗藥
+ - @繃帶
+ - @石膏夾具</Manual_Description_Any_Bodypart>
+  <Manual_Description_Blood>歡迎來到血液標籤：
+ 
+ - @低氧血症
+ - @敗血症
+ - @輸血反應性休克
+ - @失血
+ - @低血壓
+ - @高血壓
+ - @酸中毒
+ - @鹼中毒</Manual_Description_Blood>
+  <Manual_Description_Items_Part_1>歡迎來到物品第一部分選項卡：
+ 
+ - @腎上腺素
+ - @aed
+ - @外星人血液
+ - @ambubag
+ - @麻痺劑
+ - @抗生素膠
+ - @抗生素軟膏
+ - @殺菌劑
+ - @殺菌噴霧器
+ - @自動心肺復蘇器
+ - @氮芥
+ - @繃帶
+ - @血袋
+ - @藍鯊
+ - @屍袋
+ - @廣效抗生素
+ - @戰鬥刺激劑
+ - @deusizine
+ - @潛水刀
+ - @引流</Manual_Description_Items_Part_1>
+  <Manual_Description_Items_Part_2>歡迎來到物品第二部分標籤：
+ 
+ - @空血袋
+ - @血管內球囊
+ - @芬太尼
+ - @石膏
+ - @健康掃描器
+ - @血液分析儀
+ - @止血劑
+ - @超鏈菌素
+ - @液態氧化物
+ - @甘露醇
+ - @手動除顫器
+ - @醫用支架
+ - @甲基苯丙胺
+ - @嗎啡
+ - @納洛酮
+ - @針頭
+ - @硝酸甘油
+ - @鴉片
+ - @器官採購手術刀片
+ - @骨骼合成植入物</Manual_Description_Items_Part_2>
+  <Manual_Description_Items_Part_3>歡迎來到物品第三部分標籤：
+ 
+ - @plastiseal
+ - @propofol
+ - @raptor-bane-extract
+ - @retractors
+ - @ringer-solution
+ - @saline
+ - @scalpel
+ - @sodium-nitroprusside
+ - @spinal-cord-implants
+ - @stasis-bag
+ - @streptokinase
+ - @surgery-table
+ - @surgical-drill
+ - @surgical-saw
+ - @sutures
+ - @thiamine
+ - @tourniquet
+ - @trauma-shears
+ - @tweezers
+ - @wrench</Manual_Description_Items_Part_3>
+  <Manual_Description_Items_Part_4>歡迎來到物品第四部分標籤：
+ 
+ 空的</Manual_Description_Items_Part_4>
+  <Manual_Description_Surgery>歡迎來到手術標籤：
+ 
+ - @創傷性休克
+ - @手術切口
+ - @夾住出血
+ - @皮膚撕裂
+ - @鑽孔骨頭
+ - @鋸骨頭</Manual_Description_Surgery>
+  <Manual_Description_Procedures>歡迎來到程序選項卡：
+ 
+ - @開放-關閉手術
+ - @骨折固定手術
+ - @主動脈破裂手術
+ - @截肢手術
+ - @器官移植手術</Manual_Description_Procedures>
+  <Manual_Description_Expansion>歡迎來到擴展選項卡：
+ 
+ - @手術隔布
+ - @手術口罩
+ - @外科醫生服裝
+ - @手術感染
+ - @甘露醇加
+ - @實驗性治療
+ - @分流卡
+ - @腦罐
+ - @人工大腦
+ - @醫療不當行為
+ - @機械臂
+ - @機械腿
+ - @機械手臂
+ - @機械腿部
+ - @損壞的電子產品
+ - @彎曲的金屬
+ - @鬆動的螺絲
+ - @材料損失
+ - @FPGA電路
+ - @焊接工具
+ - @螺絲刀
+ - @鋼條</Manual_Description_Expansion>
+</infotexts>

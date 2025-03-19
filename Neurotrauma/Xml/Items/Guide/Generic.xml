@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="GenericTable" identifier="generictablet" category="Electrical" Tags="smallitem,logic" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light" isshootable="true">
+    <Upgrade gameversion="0.9.9000.0" scale="0.4" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="323,193,60,61" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="149,371,69,93" depth="0.8" origin="0.5,0.5" />
+    <Body width="60" height="90" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="20" handle1="-20,-50" msg="ItemMsgPickUpSelect" />
+    <MemoryComponent canbeselected="false" MaxValueLength="1000" />
+    <Deconstruct time="10">
+      <Item identifier="copper" />
+      <Item identifier="silicon" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+  </Item>
+  <Item identifier="Manual_Start_Page" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="0,0" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="0,0" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Start_Page">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="CenterLeft" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="electrical" level="50" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="silicon" />
+    </Fabricate>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.25" relativeOffset="0,0" anchor="TopRight" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Information">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Information">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Symptoms">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Symptoms">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.25" relativeOffset="0,0.25" anchor="TopRight" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_HeadBrain">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_HeadBrain">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Lungs">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Lungs">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Heart">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Heart">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Torso">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Torso">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.25" relativeOffset="0,0.5" anchor="TopRight" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Extremities">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Extremities">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Bones">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Bones">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Any_Bodypart">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Any_Bodypart">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Blood">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Blood">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.25" relativeOffset="0.15,0" anchor="TopRight" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Items_Part_1">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Items_Part_1">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Items_Part_2">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Items_Part_2">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Items_Part_3">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Items_Part_3">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Items_Part_4">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Items_Part_4">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.25" relativeOffset="0.15,0.25" anchor="TopRight" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Surgery">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Surgery">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Expansion">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Expansion">
+          <LuaHook name="neuroGuide.openPage" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+</Items>

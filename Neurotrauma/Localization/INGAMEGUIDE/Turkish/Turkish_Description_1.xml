@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+  <Manual_Description_FAQ>## Soru: Belirli bir etkene/öğeye neden ulaşamıyorum?
+ Cevap: Bu kılavuz şu anda eksiktir. Bu kılavuz, 28.03.2023 tarihli Trello kılavuzunun bir kopyasıdır.
+ 
+ ## Soru: Semptomlar ve diğer etkiler arasındaki fark nedir?
+ Cevap: Semptomlar, tek başlarına bir şey yapmayan ve sadece teşhisi kolaylaştırmak için var olan etkilerdir, diğer etkiler ise gerçekten oyun oynanışını etkileyen etkilere sahiptir.
+ 
+ ## Soru: Düğme çalışmıyor/Öğeye bağlantı eksik
+ Cevap: Eğer bir şey çalışmıyorsa veya beklenmedik bir davranış sergiliyorsa, tekrar üretme adımlarıyla birlikte Steam mod sayfasına hata raporu gönderin.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###İlk yardım çantası
+ Bu malzemeleri mürettebat veya denizaltının etrafına dağıtın
+ 
+ @bandajlar
+ @dikişler
+ @tornike
+ @autopulse - sadece doktora ulaşana kadar kendinizi bilinçli tutmak için kullanılır
+ @kan paketleri - Tercihen O- veya O+
+ @alçı
+ @travma makasları
+ @çıkık için @anahtar ile kullanmak için afyon (veya çıkık hapları)
+ (küçük kabuk sepsis hapları)
+ 
+ Bir tıbbi kiti içine yerleştirilemez, ancak çıkıklar için bir @anahtar kullanılır, bu yaygındır
+ 
+ ###Doktorun tıbbi kiti 1
+ @opium, @morfin veya ameliyat için tercih ettiğiniz @analjezi hapları
+ @bandajlar
+ @dikişler - bir ameliyat çantasına sığar, eğer taşıyorsanız
+ @tornike
+ @saglık tarayıcısı
+ @hematoloji analizörü
+ @kan paketleri - Tercihen O- veya O+
+ @alçı
+ @travma makasları - bir ameliyat çantasına sığar, eğer taşıyorsanız
+ 
+ Bu ilk tıbbi kiti en temel teşhis ve tedavileri kapsayacak, ancak ikinci bir tıbbi kiti ve/veya ameliyat kiti daha ciddi tedaviler için gereken araçların çoğunu sağlar.
+ 
+ Ayrıca sıcak çubuğunuzda bir duruş çantası tutmanız önerilir.
+ 
+ ###Doktorun tıbbi kiti 2
+ @cerrahi matkap
+ @cerrahi testere
+ @ambubag
+ @antiseptik püskürtücü, yüklü @antiseptik veya @antibiyotik merhem
+ @manuel defibrilatör veya @aed
+ @mannitol (veya nörotravma hapları)
+ @geniş spektrumlu antibiyotikler (veya küçük kabuk sepsis hapları)
+ kaliksandid (veya büyük kabuk hapları)
+ @plastiseal veya @antibiyotik yapıştırıcı
+ 
+ ###Ameliyat kiti
+ @scalpel
+ @hemostat
+ @retraktörler
+ @dikişler
+ @tweezers
+ @iğne
+ @drenaj
+ En çok kullanılan 4 @organ-procurement-scalpels veya ekstra @iğne ve @drenaj
+ 
+ Sık sık bir ameliyat kiti taşımıyorsanız, tıbbi kitiinize bir @iğne eklemeyi düşünün.</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>Tanı koyma sürecini açıklamak için \"Üç H\" kullanılır:
+ - Sağlık Arayüzü - Çoğunlukla yüzey düzeyinde olan şeyleri sağlar
+ - Sağlık Tarayıcısı - İç organlar hakkında bilgi sağlar
+ - Hematoloji Analizörü - Kan hakkında bilgi sağlar
+ 
+ Bu yöntemi kullanmak en fazla bilgiyi verir ve hastanızı doğru şekilde tedavi etmeyi ve hayatta kalma şansını artırmayı çok daha kolay hale getirir.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#Eğer hasta ölüm tehlikesiyle karşı karşıyaysa, onları bir @stasis-torbasına koyun.
+ Stasis torbası, teşhis etmek, tedavi planınızı belirlemek ve cerrahi olmayan herhangi bir tedavi uygulamak için 6 dakika duraklatılmış etki sağlar.
+ 
+ ###Önerilen tedaviler önem sırasına göre
+ 1. Hızla kötüleşen durumdaysa, stasis torbasına koyun.
+ 2. Sorunları teşhis edin ve aşağıdaki adımlardan hangilerinin uygun olduğunu belirleyin.
+ 3. @arteriyel-kanama varsa, @tourniquet uygulayın.
+ 4. Eğer büyük düzenli kanama varsa, @sutures uygulayın, gerekiyorsa @blood-packs verin ve gerektiğinde ilerleyen adımlarda da devam edin. İç veya aortik kanama varsa, kan transfüzyonu yapmadan önce bunu düzeltmeniz gerekecek veya kan torbalarını boşa harcarsınız. Hasta için stabilizasyon için ileride sıvı oksijenit kullanmayı düşünün.
+ 5. @pnomotoraks yüksekse, @needle kullanın.
+ 6. Eğer @stasis-torbasında ise, torbadan çıkarmak için hazırlayın, gerekiyorsa ilaç verin
+ \\- @azathioprine: daha sonra organ nakli gerekiyorsa
+ \\- Antirad veya stabilozin: radyasyon hastalığı ÖNEMLİ
+ \\- @broad-spectrum-antibiyotikler: sepsis
+ \\- @mannitol: nörotrama azaltma veya iyileştirme, kanları stabilse
+ \\- @morfin: cerrahi için ağrı kesici
+ \\- @thiamine: organ hasarı iyileştirme
+ Ardından, cerrahiye başlamak için stasis torbasından çıkarın (sıvı oksijenit kullanacaksanız, stasis torbası kullanıldıktan sonra uygulayın)
+ 7. Kalp atışı / solunum için ilk yardım yapın, eğer tutuklanmışlarsa veya tutuklanmak üzereyseler (veya stasis torbasından yeni çıkarıldılarsa, çünkü bu kalp atışını ve solunumu durdurur). İlk önce iç veya aortik kanama düzeltilecekse bu adımı atlayın.
+ 8. @aortic-rupture, @internal-bleeding ve @arterial-bleeding'i düzgün bir şekilde düzeltin. Gerekiyorsa daha fazla kan verin.
+ 9. Kalp / solunum problemlerini düzgün bir şekilde düzeltin, @pnomotoraksı düzeltmek için @drainage kullanın.
+ 10. Kötü @yanıkları düzeltin (yüksek ikinci derece veya herhangi bir üçüncü derece)
+ \\- İkinci derece: @antibiyotik-merhem veya o bacak cerrahiye ihtiyaç duymuyorsa @bandaj
+ \\- Üçüncü derece: @antibiyotik-yapıştırıcı, veya o bacak cerrahiye ihtiyaç duyuyorsa, cerrahiden sonra @plastiseal kullanın ve kapatma @sutures'ından önce.
+ 11. Kafa / boyun / göğüs @kırıklarında @osteosentez-implant cerrahisi yapın ve ardından @spinal-cord-injury'da @omurilik-implant cerrahisi yapın.
+ 12. @foreign-bodies'leri çıkarmak ve @internal-damage ve blunt force travmayı iyileştirmek için @tweezers cerrahisi yapın.
+ 13. Gerekiyorsa @organ-nakli-cerrahisi yapın.
+ 14. @wounds'ı düzeltmek için @sutures uygulayın.
+ 15. Kol veya</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Tanı için üç H'yi kullanacaksın. (@how-to-diagnose'da)
+ 2. Kanı döngüsel döngüsel ve havayı içeri dışarı yapacaksın.
+ 3. Belirtileri tedavi etmek yerine altta yatan nedenleri tedavi edeceksin (kendine sor, "Neden hastam @cardiac-arrest'te?")
+ 4. Hastan acı çekmesin diye @surgery-table veya @propofol olmadan ameliyat yapmayacaksın.
+ 5. Sedasyon -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (isteğe bağlı adımlar) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Kan kusmak bir belirtidir, bu da ölümcül değildir ve başka herhangi bir etki yaratmaz demektir.
+ 
+ ---
+ 
+ ##Nedenleri:
+ 
+ - @iç-kanama ( %50 veya daha fazla)
+ - @karaciğer-hasarı ( %100'de)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>Soluk cilt bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hipotansiyon (%50 veya daha az)
+ - @kan kaybı (%40 veya daha fazla)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>Nefes darlığı, ölümcül olmayan ve başka hiçbir etki yaratmayan bir belirti olduğu anlamına gelen bir etkidir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kalp-krizi
+ - @akciğer-hasarı (45% veya daha fazla)
+ - @pnömotoraks (40% veya daha fazla)
+ - @kalp-tamponadı (10% veya daha fazla)
+ - @kan-transfüzyonu-şoku (0-70% arası)
+ - @hipoksemi (20% veya daha fazla)
+ - @kalp-hasarı (80% veya daha fazla)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>Öksürük bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.
+ 
+ ---
+ 
+ ##Nedenleri:
+ 
+ - @akciğer-hasarı (%50 veya daha fazla)
+ - @kalp-hasarı (%50 veya daha fazla)
+ - @kardiyak-tamponad (%20 veya daha fazla)</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Artmış kalp atış hızı bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir, ancak yavaş yavaş artıyorsa, bu da fibrilasyon geçirdiğinizi gösterir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @asidoz (yüzde 20 veya daha fazla)
+ - @sepsis (yüzde 20 veya daha fazla)
+ - @kan kaybı (yüzde 40 veya daha fazla)
+ - @pnömotoraks (yüzde 30 veya daha fazla)
+ - @çekilme (alkol çekilmesi, yüzde 75 veya daha fazla)
+ - @fibrilasyon
+ - @adrenalin</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>Karışıklık bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @asidoz
+ - @sepsis
+ - @hipotansiyon
+ - @hipoksemi
+ - @çekilme
+ - @sarsıntı</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>Baş dönmesi bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.
+ 
+ ---
+ ##Nedeni:
+ 
+ - @hipotansiyon (%60 veya daha az)</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>Bulanık görüş, ölümcül olmayan ve başka hiçbir etki yaratmayan bir belirtidir. Adından da anlaşılacağı gibi, bu etki görüşünüzü daha bulanık hale getirecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hipotansiyon (%55 veya daha az)
+ - @sarsıntı</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>Bacak şişmesi bir belirtidir, bu da ölümcül değildir ve başka herhangi bir etki yaratmaz. Cyberlegs şişmez.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @karaciğer-hasarı (%40 veya daha fazla)
+ - @böbrek-hasarı (%60 veya daha fazla)
+ - @kalp-hasarı (%80 veya daha fazla)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>Hırıltı bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>Zayıflık bir belirtidir, bu da ölümcül değildir ve başka herhangi bir etki yaratmaz. Zayıflık, verdiğiniz yakın dövüş hasarını %80 azaltacaktır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kalp-tamponadı (%30 veya daha fazla)
+ - @kan-kaybı (%60 veya daha fazla)
+ - @asidoz (%35 veya daha fazla)</Manual_Description_Weakness>
+  <Manual_Description_Fever>Ateş bir belirtidir, bu da ölümcül değildir ve başka herhangi bir etki yaratmaz demektir. 
+ 
+ ---
+ 
+ ##Nedenleri:
+ 
+ - @sepsis (%5 veya daha fazla)
+ - @çekilme (alkol çekilmesi, %90 veya daha fazla)</Manual_Description_Fever>
+  <Manual_Description_Sweating>Terleme bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kalp krizi
+ - @çekilme ( %30 veya daha fazla)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Şişkinlik bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Karaciğer hasarı (%50 veya daha fazla)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>Enflamasyon bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @enfekte-yaralar (%10 veya daha fazla)
+ - @yabancı-cisimler (%15 veya daha fazla)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>Sarılık bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Karaciğer hasarı (@liver-damage) (%80 veya daha fazla)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>Karın rahatsızlığı bir belirtidir, bu da ölümcül olmadığı ve başka herhangi bir etki yaratmadığı anlamına gelir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @karaciğer-hasarı (%65 veya daha fazla)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>Baş ağrısı, ölümcül olmayan ve başka herhangi bir etki yaratmayan bir belirtidir. Baş ağrısı, ekranınızın kenarlarında bulanık bir görüntü oluşturacaktır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kan kaybı (%50 veya daha fazla)
+ - @asidoz ( %20 veya daha fazla)
+ - @hipoksemi (%40 veya daha fazla)
+ - @hipotansiyon (%60 veya daha az)
+ - @inme
+ - @çekilme (alkol çekilmesi, %50 veya daha fazla)
+ - @kırıklar (kafa kırıkları)
+ - @sarsıntı
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - Ağrı kesiciler</Manual_Description_Headache>
+  <Manual_Description_Craving>Özlem bir belirtidir, bu da ölümcül değildir ve başka herhangi bir etki yaratmaz. 
+ 
+ ---
+ ##Nedeni:
+ 
+ - @çekilme (yüzde 20 veya daha fazla)</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Çarpıntılar, ölümcül olmayan ve başka hiçbir etki yaratmayan bir belirtidir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @alkaloz (yüzde 20 veya daha fazla)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Kasılmalar bir belirtidir, bu da ölümcül değildir ve başka hiçbir etki yaratmaz. 
+ 
+ ---
+ ##Nedeni:
+ 
+ - @seizure</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Nörotravma sağlığınıza doğrudan zarar verebilen nadir şeylerden biridir. Nörotravma son derece tehlikelidir ve çok hızlı bir şekilde birikir ve %200'ye ulaştığında anında oyuncuyu öldürür. Beyin, yapılandırma değişmediyse ve zarar veren bir şey yoksa, saniyede %0,1 oranında iyileşir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @inme
+ - @karaciğer-hasarı ( %80 veya daha fazla, doğal yenilenmeyi geride bırakan nokta)
+ - @böbrek-hasarı (doğal yenilenmeyi %100 iptal eder)
+ - @sepsis (%25 veya daha fazla, doğal yenilenmeyi geride bırakan nokta)
+ - @kırıklar (kafatası kırıkları, bandajlanmazsa ve hasta zaten nörotravma yoksa)
+ - @hipoksemi (%10 veya daha fazla, doğal yenilenmeyi geride bırakan nokta)
+ - Başa @tourniquet kullanımı
+ - @metamfetamin
+ - @hiperzin
+ - @travmatik-şok (saniyede bölünen güce eşit, %10 veya daha fazla doğal yenilenmeyi geride bırakan nokta)
+ - @siyanür-zehirlenmesi (%70 veya daha fazla)
+ 
+ 
+ ##Etkileri:
+ 
+ - Canlılığa doğrudan zarar
+ - Anında ölüm (%200'de)
+ - @solunum-durdurma (%100 veya daha fazla)
+ - @bilinçsizlik (%100 veya daha fazla)
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - Kan basıncı %70'in üzerinde ve @hipoksemi %30'un altındaysa @mannitol kullanımı.
+ - @mannitol-plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>In Turkish:
+ 
+ Felç, beyne verilen hasarı azaltmak için mümkün olan en kısa sürede tedavi edilmelidir. Bu hastalığı yaşayan hastalara @streptokinase kullanılmamalıdır, çünkü beyne daha fazla zarar verecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hipertansiyon (150% veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ - @nörotravma
+ - @nöbet
+ - @koma
+ - @başağrısı
+ 
+ ##Tedaviler:
+ 
+ - @açık-kapalı-cerrahi</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>Nedeni:
+ 
+ - Kimyasal/alkol/opiyat bağımlılığı
+ 
+ Etkileri:
+ 
+ Alkol, kimyasal ve opiyat çekilmesinde:
+ - @arzu (yüzde 20 veya daha fazla)
+ - @terleme (yüzde 30 veya daha fazla)
+ - %50 daha yavaş hareket hızı (yüzde 80 veya daha fazla)
+ - %30 daha yavaş hareket hızı (yüzde 40 veya daha fazla)
+ - %10 daha yavaş hareket hızı (yüzde 20 veya daha fazla)
+ - @bulantı (yüzde 40 veya daha fazla)
+ 
+ Alkol çekilmesinde:
+ - @ateş (yüzde 90 veya daha fazla)
+ - @kusma (yüzde 60 veya daha fazla)
+ - @baş ağrısı (yüzde 50 veya daha fazla)
+ - @kafa karışıklığı (yüzde 80 veya daha fazla)
+ - @artmış kalp atış hızı (yüzde 75 veya daha fazla)
+ - @nöbet (yüzde 50 veya daha fazla)
+ - @yüksek tansiyon
+ 
+ Tedaviler:
+ 
+ - Haloperidol (SADECE ALKOL ÇEKİLMESİ İÇİN)
+ - @nalokson (SADECE OPIYAT ÇEKİLMESİ İÇİN)
+ - Boya içeren bir @ambubag kullanmak (SADECE KİMYASAL ÇEKİLMESİ İÇİN)
+ - Bireyin çekildiği maddeden daha fazla vermek (örneğin, opiyat çekilmesi olan birine daha fazla opiat vermek)
+ - Zaman</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>Opium doz aşımı nadirdir ve sadece opium kötüye kullanıldığında meydana gelir. Ancak, %50 eşiğinin üzerindeyse çok ölümcül olabilir ve acil bakım gerektirir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - Çok fazla opium almak
+ 
+ ## Etkileri:
+ 
+ - Solunum durması
+ - Hipovantilasyon
+ - Nöbet
+ - Bilinç kaybı
+ - %50 veya daha fazla yavaş hareket hızı
+ 
+ ## Tedaviler:
+ 
+ - Nalokson</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Nöbetler tetiklendiğinde seni yırtık bebek gibi hareketsiz bırakabilir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @inme
+ - @asidoz ( %60 veya daha fazla)
+ - @alkaloz ( %60 veya daha fazla)
+ - @çekilme (alkol çekilmesi, %50 veya daha fazla)
+ - @radyasyon hastalığı ( %50 veya daha fazla)
+ - @opioid aşırı doz ( %50 veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ - @bilinçsizlik
+ - @spazmlar
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>Bilincin kaybedilmesi genellikle çok yanlış bir şeyin olduğunu gösterir ve bir doktor en kısa sürede sizi tedavi etmek zorunda kalacaktır. Bilinç kaybı zihinsel semptomları gizleyecektir (bu hastalık tarafından gizlenen kartlar "Zihinsel Semptom" etiketiyle işaretlenir) ve aynı zamanda hastanız bilincini kaybettiği sürece bir ameliyat masası olarak da işlev görecektir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - 0'dan az canlılık sahibi olmak
+ - @hipoksemi
+ - @nörotravma
+ - @koma
+ - @aortik-çatlak
+ - @nöbet
+ - @anestezi
+ - @opioid-aşırı-doza
+ - @staz-torbası
+ 
+ ## Etkileri:
+ 
+ - Hareket edememe veya konuşamama
+ - @oksijen-düşüklüğü
+ 
+ ## Tedaviler:
+ 
+ - Nedenleri tedavi etmek</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Boğulma sonrası sıklıkla koma meydana gelir ve uygun tıbbi müdahale ile genellikle ölümcül değildir. Önerilen eylem, hastanın durumu yeterince ciddi ise otomatik nabız cihazını hastaya takmaktır.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @inme
+ - @kalp-durdurma
+ - Yüksek seviyelerde @asidoz
+ - @morbusine
+ - @nalokson beceri kontrolü başarısızlığı
+ 
+ ## Etkileri:
+ 
+ - @kalp-durdurma
+ - @bilinçsizlik
+ 
+ ## Tedaviler:
+ 
+ - Nedenleri tedavi etmek ve beklemek</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Omurilik yaralanmaları hareket etme veya konuşma yeteneğinizi ortadan kaldırabilir, bu da sizi dolaylı olarak öldürebilir. Omurilik yaralanmaları boyun kırığı tedavisinden sonra tedavi edilmelidir, aksi takdirde sadece geri gelecektir.
+ 
+ ---
+ ##Nedeni:
+ 
+ - Boyun kırıkları (@fractures)
+ 
+ 
+ ##Etkileri:
+ 
+ - Hareket edememe veya konuşamama
+ - Ağrı kesici kullanımı (@analgesia)
+ 
+ ##Tedavileri:
+ 
+ - Açık-kapalı cerrahi (@sutures uygulamadan önce @spinal-cord-implants uygulayın)</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>Bir beyin sarsıntısı, başa şiddetli bir darbe nedeniyle oluşur. Dönemsel olarak bulantı, bulanık görme, baş ağrısı ve karışıklık getirir. Rahatsızlık verici olsa da, beyin sarsıntıları ölümcül değildir.
+ 
+ ##Etkiler:
+ - @bulantı
+ - @bulanık-görme
+ - @baş-ağrısı
+ - @karışıklık
+ 
+ ##Nedenleri:
+ - Travma (patlamalar, ısırık yaraları, künt kuvvet, @iç-hasar)
+ 
+ ##Önleme:
+ - Kask takmak
+ 
+ ##Tedavi:
+ - Yok. Beklemek zorundasın. O kaskı takmalıydın.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>Solunum durması hızlı bir şekilde oksijen düşüklüğü oluşturacak ve kurbanı boğacak ve hızlı bir şekilde ele alınması gerekiyor. Bir @ameliyat-masası yakınında olmak, solunum durmasının olumsuz etkilerinin meydana gelmesini önleyecektir.
+ 
+ ## Nedenleri:
+ 
+ - @akciğer-hasarı
+ - @travmatik-şok
+ - @nörotravma
+ - @hipoksemi
+ - @opioid-aşırı-dozaşımı
+ - @staz-torbası
+ 
+ ## Etkileri:
+ 
+ - @oksijen-düşüklüğü
+ - @asidoz
+ 
+ ## Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - İçinde oksijenli bir tank olan @ambubag
+ - Bilinçli olmak
+ 
+ ## İlk Yardım:
+ 
+ - Bir @ameliyat-masası yakınında olmak
+ - @autopulse</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>Akciğer hasarı %100'ün altında olduğu sürece ölümcül değildir. Yapılandırma değişmediği, zarar veren bir şey olmadığı ve hasar %100'ün altında olduğu sürece akciğerler saniyede %0,01 oranında iyileşir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @geniş-spektrumlu-antibiyotikler
+ - @sıvı-oksiyenit
+ - Kaynak/yanıcı yakıt veya boya içeren bir @ambubag kullanımı
+ - Sigara içmek
+ - @hemotransfüzyon-şoku (0-70% arası)
+ - @radyasyon-hastalığı (28% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ - @sepsis (3% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ - @hipoksemi (4% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ 
+ ##Etkileri:
+ 
+ - @öksürük (50% veya daha fazla)
+ - @nefes-darlığı (45% veya daha fazla)
+ - @solunum-durdurma (100%)
+ 
+ ##Tedavileri:
+ 
+ - Zaman
+ - @tiamin
+ - @organ-nakli-cerrahisi</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>Pnömotoraks, hipoksemi'nin gücünün azalmasını önleyecektir. Tek başına ölümcül olmasa da, Pnömotoraks, Hipoksemi'ye neden olan hastalıklarla eşleştirildiğinde kolayca öldürebilir. Pnömotoraks'ın olumsuz etkileri, bir iğne kullanarak geçici olarak ortadan kaldırılabilir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kırıklar (kaburga kırıkları, bandajlanmazlarsa)
+ - Travma (ateşli silah yaralanmaları, patlamalar, yırtılma yaraları, ısırık yaraları, künt kuvvet, @iç-hasar)
+ 
+ ##Etkileri:
+ 
+ - @nefes-darlığı (%40 veya daha fazlasında)
+ - @hiperventilasyon (%15 veya daha fazlasında)
+ - @artmış-kalp-atışı (%30 veya daha fazlasında)
+ 
+ ##Tedaviler:
+ 
+ - Cerrahi sırasında @drenaj kullanımı (Cilt geri çekildikten sonra)
+ 
+ ##İlk Yardım:
+ 
+ - @iğne kullanımı</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>Hiperventilasyon genellikle zararsızdır ve genellikle görmezden gelinir. Hiperventilasyon ve hipoventilasyon birbirlerini iptal ederler.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hipotansiyon (%80 veya daha az)
+ - @hipoksemi (%10 veya daha fazla)
+ - @pnömotoraks (%15 veya daha fazla)
+ - @sepsis (%15 veya daha fazla)
+ - @adrenalin
+ 
+ ##Etkileri:
+ 
+ - @alkaloz
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - @hipoventilasyon indüklemek</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>Hipoventilasyon genellikle zararsızdır ve genellikle göz ardı edilebilir. Hipoventilasyon ve hiperventilasyon birbirlerini iptal edecektir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @analjezi
+ - @anestezi
+ - @opioid-aşırı-doza
+ 
+ ## Etkileri:
+ 
+ - @asidoz
+ 
+ ## Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - @hiperventilasyon indüksiyonu</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>Oksijen düşüklüğü, AKCİĞERLERDE oksijen eksikliği olduğu yerdir. @hipoksemi.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @solunum-durdurma
+ - @bilinçsizlik (0 canlılık seviyesinden az olması durumunda)
+ - Su veya oksijen kaynağı olmayan bir odada bulunmak.
+ - Nar özü
+ 
+ ## Etkileri:
+ 
+ - @hipoksemi
+ 
+ ## Tedaviler:
+ 
+ - @cerrahi-masa
+ - CPR
+ - @otomatik-kalp-masajı
+ - Oksijenli hava solunumu
+ - Oksijenli ambu çantası veya oksijen tankları</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>Kalp tamponadı, terk edilmiş karakollar veya enkazlar gibi denizaltı dışındaki çatışma görevleri sırasında sık görülür. Semptomları gösteren herkes derhal denizaltına geri dönerek tedavi edilmelidir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Travma (yırtıklar ve silah yaralanmaları)
+ 
+ ##Etkileri:
+ 
+ - @hipotansiyon (kan basıncını yarıya indirir)
+ - @zayıflık (%30 veya daha fazla)
+ - @öksürük (%20 veya daha fazla)
+ - @nefes darlığı (%10 veya daha fazla)
+ 
+ ##Tedaviler:
+ 
+ - @açık-kapalı-cerrahi</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>Kalp krizi kan basıncının önemli ölçüde düşmesine neden olacak ve hızlı bir şekilde ele alınması gerekecek.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kalp-hasarı (%100'de)
+ - @travmatik-şok (40% veya daha fazla)
+ - @koma (40% veya daha fazla)
+ - @hipoksemi (80% veya daha fazla)
+ - @düzensiz-kalp-atışı (20% veya daha fazla)
+ - @fibrilasyon
+ - @manuel-defibrilatör
+ - @staz-torbası
+ 
+ ##Etkileri:
+ 
+ - @koma
+ - @asidoz
+ - @hipotansiyon (kan basıncını minimuma ayarlar)
+ - @hipoksemi
+ 
+ ##Tedavileri:
+ 
+ - CPR
+ - @autopulse
+ - Nedenleri tedavi etmek
+ - @adrenalin
+ - @manuel-defibrilatör veya @aed
+ - @nitrogliserin hapı (NT eczanesinden)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>Bir kalp krizi, kalp yetmezliği riskini azaltmak için mümkün olan en kısa sürede tedavi edilmelidir. 
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @yüksek-tansiyon (150% veya daha fazla)
+ - @antibiyotik-yapıştırıcı beceri kontrolünden başarısızlık
+ 
+ ##Etkileri:
+ 
+ - @terleme
+ - @kalp-hasarı
+ - @nefes-darlığı
+ 
+ ##Tedaviler:
+ 
+ - @streptokinaz
+ - @nitrogliserin hapı (NT eczanesinden)
+ - Nedenleri tedavi etmek</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>Kalp hasarı, %100'ün altında olduğu sürece ölümcül değildir. Yapılandırma değişmediği, zarar veren bir şey olmadığı ve hasar %100'ün altında olduğu sürece kalp saniyede %0,01 oranında iyileşecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @kalp-krizi
+ - @geniş-spektrumlu-antibiyotikler
+ - @sıvı-oksiyenit
+ - @kan-transfüzyonu-şoku (0-70% arasında)
+ - @mannitol
+ - @radyasyon-hastalığı (doğal yenilenmeyi geçtiği %29 veya daha fazla)
+ - @sepsis (doğal yenilenmeyi geçtiği %3 veya daha fazla)
+ - @hipoksemi (doğal yenilenmeyi geçtiği %4 veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ - @öksürük ( %80 veya daha fazla)
+ - @nefes-darlığı ( %80 veya daha fazla)
+ - @kalp-durdurma ( %100)
+ - @bacak-şişmesi ( %80 veya daha fazla)
+ 
+ ##Tedaviler:
+ 
+ - Zaman
+ - @tiamin
+ - @organ-nakli-cerrahisi</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Düzensiz kalp atışı, kalbin normal hızında atmadığı durumlarda ortaya çıkar ve @kalp-durdurma'ya neden olabilir.
+ 
+ ---
+ ##Nedenleri:
+ - @fibrilasyon
+ 
+ ##Etkileri:
+ - @kalp-durdurma (yüzde 20 veya daha fazla)
+ - @hipotansiyon
+ 
+ ##Tedavi:
+ - @manuel-defibrilatör veya @aed
+ - CPR
+ - @autopulse
+ - Temel nedenleri tedavi etmek</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>Fibrilasyon 3 adımdan oluşur. İlk olarak, artan kalp atış hızı olarak başlayacak ve yavaşça artacaktır. %100 artan kalp atış hızına ulaşıldığında, düzensiz kalp atışı olacaktır ve aynı zamanda artmaya devam edecektir. %100'e ulaştığında kalp durması oluşacaktır. Ayrıca, düzensiz kalp atışının hemen kalp durmasına geçme şansı vardır ve bu, ne kadar düzensiz kalp atışınız olduğuna bağlı olarak ölçeklendirilir. Adrenalin etkisi altında fibrilasyon kazancı yarıya düşer.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - @aortic-rupture
+ - @acidosis
+ - @hypotension
+ - @hypoxemia
+ 
+ ## Etkileri:
+ 
+ - @artan-kalp-atış-hızı.
+ 
+ ## Tedaviler:
+ 
+ - @manuel-defibrilatör
+ - @autopulse
+ - Nedenleri tedavi etmek
+ - CPR</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>Aortik yırtılmaları yaşayabileceğiniz en ciddi yaralanmalardan biridir. Bu durumun kurbanı acil tıbbi bakıma ihtiyaç duyar ve büyük olasılıkla önemli bir kan kaybı yaşar.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @yaralar (torso bölgesinde ise, kanama %80 veya daha fazla)
+ - @yabancı-cisimler (torso bölgesinde ise, kanama %20 veya daha fazla)
+ 
+ ##Etkileri:
+ 
+ - Saniyede %4 @kan-kaybı
+ - @bilinç-kaybı
+ - Saniyede %8 @iç-kanama
+ - @fibrilasyon
+ 
+ ##Tedavileri:
+ 
+ - @aortik-yırtılma-cerrahisi
+ - @açık-kapalı-cerrahi
+ 
+ ##İlk Yardım:
+ 
+ - @staz-torbası</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>İç kanama hızlı bir şekilde hastanın kanını boşaltacak ve hızlı bir şekilde ele alınması gerekecektir.
+ 
+ ---
+ 
+ ## Nedenleri:
+ 
+ - Travma (ateşli silah yaralanmaları, patlamalar, ısırık yaraları, kesikler)
+ - Karaciğer hasarı
+ - Aort yırtılması
+ 
+ ## Etkileri:
+ 
+ - Kan kaybı
+ - Kan kusma
+ 
+ ## Tedaviler:
+ 
+ - Açık-kapalı cerrahi
+ - Savaş uyarıcısı</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Düşük seviyelerde radyasyon hastalığı kolayca tedavi edilebilir, ancak radyasyon hastalığı yeterince yüksekse, organları hızla öldürmeye başlayacaktır. Akciğerler diğer organlardan daha fazla radyasyon hasarı alacaktır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @health-scanner (tarama yapan kişiye saniyede %0,5, taranan kişiye saniyede %0,3, bir bandaj gibi kullanıldığında %1)
+ - Radyotoksin
+ - Nükleer patlamalar
+ - Volatile Fulgurium Yakıt Çubuğuna yakın olmak
+ 
+ ##Etkileri:
+ 
+ - @liver-damage (%29 veya daha fazlasında, doğal yenilenmeyi geride bırakan nokta)
+ - @heart-damage (%29 veya daha fazlasında, doğal yenilenmeyi geride bırakan nokta)
+ - @kidney-damage (%33 veya daha fazlasında, doğal yenilenmeyi geride bırakan nokta, bir böbrek ölmüşse %29)
+ - @lung-damage (%28 veya daha fazlasında, doğal yenilenmeyi geride bırakan nokta)
+ - @bone-damage (%31 veya daha fazlasında, doğal yenilenmeyi geride bırakan nokta)
+ - @mide-bulantısı (%80 veya daha fazlasında)
+ - @nöbet (%50 veya daha fazlasında)
+ 
+ ##Tedaviler:
+ 
+ - Antirad
+ - Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>Böbrek hasarı genellikle hayatta kalınabilir, çünkü böbrek yetmezliğine ilerlemiş olsa bile, ölüm son derece yavaş olacaktır. Böbrek hasarı, böbreklerden biri öldüğünde %50 hasarı aşarsa %50'nin altında iyileşmeyecektir. Böbrekler, yapılandırma değişmedikçe ve zarar veren bir şey olmadıkça, bir böbrek yaşıyorsa saniyede %0,01 oranında iyileşecek ve her iki böbrek de yaşıyorsa saniyede %0,02 oranında iyileşecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @geniş-spektrumlu-antibiyotikler
+ - @sıvı-oksiyenit
+ - @kan-transfüzyon-şoku (0-70% arası)
+ - @mannitol
+ - @radyasyon-hastalığı (33% veya daha fazla, doğal yenilenmeyi geçtiği nokta, bir böbrek ölmüşse %29)
+ - @hipertansiyon (184% veya daha fazla, doğal yenilenmeyi geçtiği nokta, bir böbrek ölmüşse %152)
+ - @sepsis (6% veya daha fazla, doğal yenilenmeyi geçtiği nokta, bir böbrek ölmüşse %3)
+ - @hipoksemi (8% veya daha fazla, doğal yenilenmeyi geçtiği nokta, bir böbrek ölmüşse %4)
+ 
+ ##Etkileri:
+ 
+ - @bacak-şişmesi (60% veya daha fazlasında)
+ - @asidoz (80% veya daha fazlasında)
+ - @hipertansiyon
+ - @kemik-hasarı (72% veya daha fazlasında, doğal yenilenmeyi geçtiği nokta)
+ - @kusma (60% veya daha fazlasında)
+ - @nörotravma (100%'de doğal yenilenmeyi tamamen nötralize eder)
+ - @bulantı (60% veya daha fazlasında)
+ 
+ ##Tedaviler:
+ 
+ - Zaman
+ - @tiamin
+ - @organ-nakli-cerrahisi</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Karaciğer hasarı, karaciğer yetmezliğine ilerlediğinde ölümcül olabilir ve iç kanama şeklinde büyük kan kaybına neden olabilir. Karaciğer, yapılandırma değişmediği, zarar veren bir şey olmadığı ve hasar %100'ün altında olduğu sürece saniyede %0,01 oranında iyileşecektir.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @geniş-spektrumlu-antibiyotikler
+ - @sıvı-oksiyenit
+ - @kan-transfüzyonu-şoku (0-70% arasında)
+ - @radyasyon-hastalığı (29% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ - @sepsis (3% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ - @hipoksemi (4% veya daha fazla, doğal yenilenmeyi geçtiği nokta)
+ 
+ ##Etkileri:
+ 
+ - @bacak-şişmesi (%40 veya daha fazlasında)
+ - @iç-kanama (%100'de)
+ - @kan-kusma (%100'de)
+ - @yüksek-tansiyon
+ - @nörotravma (%80 veya daha fazlasında, doğal yenilenmeyi geçtiği nokta)
+ - @karın-ağrısı (%65 veya daha fazlasında)
+ - @sarılık (%80 veya daha fazlasında)
+ - @şişkinlik (%50 veya daha fazlasında)
+ - Kanama iyileşme yeteneğinin azalması, hasar %100 olduğunda kanama hiç iyileşmeyecektir.
+ 
+ ##Tedaviler:
+ 
+ - Zaman
+ - @tiamin
+ - @organ-nakli-cerrahisi</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>##Nedeni:
+ - Morbusine
+ 
+ ##Etkiler:
+ - Ekran bozulması
+ - %20 daha yavaş hareket hızı ( %20 veya daha fazla)
+ - @koma ( %20 veya daha fazla)
+ 
+ ##Tedaviler:
+ - Morbusine Antidotu
+ - Stabilozin</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Nedeni:
+ - Siyanür
+ 
+ ##Etkiler:
+ - Düşük oksijen
+ - @hipoksemi
+ - @nörotravma ( %70 veya daha fazlasında)
+ 
+ ##Tedaviler:
+ - Siyanür Antidotu
+ - Stabilozin</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>Bazı ilaçların yan etkisi. Bu ilaçların tıbbi beceri kontrolünden geçememesi sonucu ek organ hasarı oluşur.
+ 
+ ---
+ ##Neden Olur:
+ - @alien-blood +3.75 veya %7.5
+ - @broad-spectrum-antibiotics, antibiyotik süresinin %12 veya %20'si
+ - Kloral hidrat +2.5%
+ - @liquid-oxygenite +6 veya %10
+ - @mannitol +5 veya %10
+ - @methamphetamine +15 veya %30
+ 
+ ##Tedaviler:
+ - Zaman
+ - @deusizine
+ - @organ-transplant-surgery, taze organlarla bazı vanilla organ hasarlarını iyileştirir.</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>Tüm cerrahi işlemlerde ilk adım. Analjezi, cerrahi sırasında travmatik şoku önleyen ve ağrıyı hafifleten bir etkidir. Masasız ameliyat yapılırsa travmatik şok yine de meydana gelecektir. Analjezi, hasar direnci de sağlar ve 200%'ye kadar ölçeklenebilen maksimum %50 direnç sağlar.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - Opiyatlar
+ - @adrenalin (4,5%'ten fazla analjezi sağlamaz)
+ - @omurilik-yaralanması
+ - Sarhoş olmak (5%'ten fazla analjezi sağlamaz)
+ - @anestezi (5%'ten fazla analjezi sağlamaz)
+ 
+ ##Etkileri:
+ 
+ - @hipoventilasyon (en az %20)
+ 
+ ##Tedaviler:
+ 
+ - @nalokson</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>Anestezi, ameliyat sırasında travmatik şoku önleyen bir etkidir ve @analjezi'nin aksine güvenli bir ameliyat yapmak için bir @ameliyat-masası gerektirmez. Anestezi, %100 güce ulaşıldığında hemen etkisini kaybeder. Anestezi ayrıca karakterinizi %50 yavaşlatır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @propofol
+ 
+ ##Etkileri:
+ 
+ - @hypoventilation ( %40 veya daha fazlasında)
+ - @bilinçsizlik ( %15 veya daha fazlasında)
+ - @analjezi ( %5'ten fazla analjezi vermez)
+ - %50 daha yavaş hareket hızı
+ 
+ ##Tedaviler:
+ 
+ - @anaparalizan
+ - Zaman</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>Karın ağrısı ölümcül değildir ve sadece 3-6 saniyede bir 1 saniye hızı yarıya düşürür.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hemotransfusion-shock (0-80% arası)
+ 
+ ##Etkileri:
+ 
+ - 3-6 saniyede bir 1 saniye hızı yarıya düşürür
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek
+ - Ağrı kesiciler</Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>Kusma genellikle zararlı değildir ve bazen alkaloz nedeniyle faydalı olabilir. Kusma ayrıca karakterinizi %20 yavaşlatacaktır.
+ 
+ ---
+ ##Nedenleri:
+ 
+ - @hemotransfusion-shock (%0-40 arası)
+ - @withdrawal (alkol yoksunluğu, %60 veya daha fazla)
+ - Sarhoş (%100'de)
+ - @kidney-damage (%60 veya daha fazla)
+ - @raptor-bane-extract
+ 
+ ##Etkileri:
+ 
+ - @alkaloz
+ 
+ ##Tedaviler:
+ 
+ - Nedenleri tedavi etmek</Manual_Description_Vomiting>
+</infotexts>
