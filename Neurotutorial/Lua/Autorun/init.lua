@@ -13,7 +13,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
     dofile(NTTut.Path.."/Lua/Scripts/HF.lua")
     dofile(NTTut.Path.."/Lua/Scripts/Server/signalitems.lua")
-
+    dofile(NTTut.Path.."/Lua/Scripts/Server/inertiainhibitor.lua")
+    
     Timer.Wait(function()
         if NTC == nil then
             print("Error loading NeuroTutorial: It appears Neurotrauma isn't loaded!")
