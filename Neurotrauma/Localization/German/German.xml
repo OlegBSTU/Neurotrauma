@@ -691,14 +691,14 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 <afflictiondescription.anesthesia>Der Patient befindet sich in einer medikamentösen Narkose.</afflictiondescription.anesthesia>
 
 
-<afflictionname.burn_deg1>First-degree burn</afflictionname.burn_deg1>
-<afflictiondescription.burn_deg1>The area is red and painful to the touch.</afflictiondescription.burn_deg1>
+<afflictionname.burn_deg1>Verbrennung ersten Grades</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>Der Bereich ist rot und schmerzhaft bei Berührung.</afflictiondescription.burn_deg1>
 
-<afflictionname.burn_deg2>Second-degree burn</afflictionname.burn_deg2>
-<afflictiondescription.burn_deg2>There are very painful blisters littering the affected area.</afflictiondescription.burn_deg2>
+<afflictionname.burn_deg2>Verbrennung zweiten Grades</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>Es bilden sich sehr schmerzhafte Blasen im betroffenen Bereich.</afflictiondescription.burn_deg2>
 
-<afflictionname.burn_deg3>Third-degree burn</afflictionname.burn_deg3>
-<afflictiondescription.burn_deg3>The patient doesn't feel pain in the now leathery, stiff area.</afflictiondescription.burn_deg3>
+<afflictionname.burn_deg3>Verbrennung dritten Grades</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>Der Patient spürt keinen Schmerz im nun lederartigen, steifen Bereich.</afflictiondescription.burn_deg3>
 
 <!-- /// Surgery /// -->
 <afflictionname.surgeryincision>Chirurgische Inzision</afflictionname.surgeryincision>
