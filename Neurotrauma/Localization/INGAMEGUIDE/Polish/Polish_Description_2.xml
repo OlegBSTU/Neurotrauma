@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+  <Manual_Description_Nausea>Nudności można zignorować, ponieważ same w sobie nie powodują niczego śmiertelnego.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hemotransfusion-shock (od 0 do 90%)
+ - @withdrawal (40% lub więcej)
+ - @radiation-sickness (80% lub więcej)
+ - @kidney-damage (60% lub więcej)
+ - @concussion
+ - Bycie w pobliżu nieskontrolowanych organów
+ 
+ ##Efekty:
+ 
+ - Spowalnia postać o 10%
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn</Manual_Description_Nausea>
+  <Manual_Description_Chest_Pain>Ból w klatce piersiowej nie jest śmiertelny i tylko przez 1 sekundę co 3-6 sekund zmniejsza prędkość o połowę.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hemotransfusion-shock (między 0-60%)
+ - @fractures (pęknięcia żeber)
+ 
+ ##Efekty:
+ 
+ - Zmniejszenie prędkości o połowę przez 1 sekundę co 3-6 sekund
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Leki przeciwbólowe</Manual_Description_Chest_Pain>
+  <Manual_Description_Traumatic_Amputation>Amputacja pourazowa to niechirurgiczna amputacja kończyny. Amputacja pourazowa działa dokładnie tak samo jak @amputacja-chirurgiczna, poza faktem, że przy pierwszym amputowaniu wystąpi krwawienie tętnicze. Kończyna musi być złamana, aby stać się amputacją pourazową.
+ 
+ ##Spowodowane przez:
+ - Trauma (strzały, uszkodzenia wewnętrzne, uderzenia, skaleczenia, ugryzienia i eksplozje)
+ - @utraty-materiału (99% lub więcej)
+ 
+ ##Efekty:
+ 
+ ###We wszystkich amputacjach pourazowych:
+ - @krwawienie-tętnicze
+ - @intensywny-ból
+ 
+ ###W amputacjach nóg:
+ - 1 amputacja nogi zmniejszy prędkość o połowę
+ - 2 amputacje nóg sprawią, że zostaniesz porzucony i nie będziesz mógł mówić.
+ 
+ ###W amputacjach ramion:
+ - 1 amputacja ramienia uniemożliwi korzystanie z tego ramienia (nie można już trzymać przedmiotów dwuręcznych)
+ - 2 amputacje ramion uniemożliwią interakcję z czymkolwiek, takim jak drzwi, drabiny, przyciski itp.
+ 
+ ###W amputacjach głowy:
+ - Natychmiastowa śmierć
+ 
+ ##Leczenie:
+ 
+ - @amputacja-chirurgiczna
+ - Wykonanie @amputacja-chirurgiczna (użyj odciętej kończyny przed nałożeniem @szwów)</Manual_Description_Traumatic_Amputation>
+  <Manual_Description_Gangrene>Martwica jest rzadkim zjawiskiem i występuje tylko w wyniku zaniedbania zastosowanego opaski uciskowej. Gdy martwica osiągnie 15%, jest nieodwracalna i kończyna musi zostać amputowana.
+ 
+ ## Przyczyny:
+ 
+ - Pozostawienie opaski uciskowej zbyt długo
+ - Pozostawienie balonu endowaskularnego zbyt długo
+ - Sepsa
+ 
+ ## Efekty:
+ 
+ - Sepsa
+ 
+ ## Leczenie:
+ 
+ - Operacja amputacji
+ - Czas (poniżej 15%)</Manual_Description_Gangrene>
+  <Manual_Description_Surgical_Amputation>Chirurgiczna amputacja to amputacja kończyny. Możliwe amputacje obejmują ramiona, nogi i głowę. Głowa nie może zostać ponownie przyczepiona po amputacji. W przeciwieństwie do amputacji urazowej, chirurgiczne amputacje nie spowodują krwawienia tętniczego przy pierwszym nabyciu ich.
+ 
+ ##Spowodowane przez:
+ - @amputation-surgery
+ 
+ ##Efekty:
+ 
+ ###W przypadku amputacji nogi:
+ - 1 amputacja nogi zmniejszy prędkość o połowę
+ - 2 amputacje nóg sprawią, że zostaniesz porzucony i nie będziesz mógł mówić.
+ 
+ ###W przypadku amputacji ramienia:
+ - 1 amputacja ramienia uniemożliwi korzystanie z tego ramienia (nie można już trzymać przedmiotów dwuręcznych)
+ - 2 amputacje ramion uniemożliwią interakcję z czymkolwiek, takim jak drzwi, drabiny, przyciski itp.
+ 
+ ###W przypadku amputacji głowy:
+ - Natychmiastowa śmierć
+ 
+ ##Leczenie:
+ - Wykonanie @amputation-surgery (użyj odciętej kończyny przed nałożeniem @sutures)</Manual_Description_Surgical_Amputation>
+  <Manual_Description_Intense_Pain>Intensywny ból nie jest śmiertelny i występuje tylko wtedy, gdy coś zostało zwichnięte, złamane lub amputowane. Intensywny ból będzie zmniejszał prędkość o połowę przez 1 sekundę co 3-6 sekund.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @zwichnięcia
+ - @złamania
+ - @traumatyczna-amputacja
+ 
+ ##Efekty:
+ 
+ - Zmniejszenie prędkości o połowę przez 1 sekundę co 3-6 sekund
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Stabilizacja zwichnięcia za pomocą bandaża lub złamania za pomocą gipsu
+ - Leki przeciwbólowe</Manual_Description_Intense_Pain>
+  <Manual_Description_Bone_Death>Śmierć kości, choć zwykle nieśmiertelna, może zabić, jeśli brakuje Ci implantów @osteosyntezy. Ze względu na dużą ilość implantów potrzebnych do wyleczenia tej dolegliwości, może to być dość kosztowne.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @uszkodzenie-kości (90% lub więcej)
+ 
+ 
+ ##Efekty:
+ 
+ - @złamania
+ 
+ ##Leczenie:
+ 
+ - @operacja-osteosyntetyczna na każdej części ciała</Manual_Description_Bone_Death>
+  <Manual_Description_Bone_Damage>Uszkodzenie kości nie jest śmiertelne i zwykle można je zignorować, o ile nie postępuje do @śmierci-kości.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @uszkodzenie-nerek (72% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @choroba-promieniowa (31% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @posocznica (50% lub więcej, punkt, w którym przewyższa naturalną regenerację)
+ - @hipoksemia (całkowicie neutralizuje naturalną regenerację przy 100%)
+ 
+ 
+ ##Efekty:
+ 
+ - @śmierć-kości (przy 90% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Czas
+ - @operacja-osteosyntetyczna</Manual_Description_Bone_Damage>
+  <Manual_Description_Fractures>Złamania są powszechnymi urazami, które większość członków załogi często doznaje. Złamania nie zabijają i powinny być traktowane jako ostatnie w nagłych przypadkach. Aby kończyna stała się @traumatic-amputation, musi być złamana. Cyberkończyny nie mogą ulec złamaniu.
+ 
+ ## Przyczyny:
+ 
+ - Trauma (strzały, wybuchy, skaleczenia, ugryzienia itp.)
+ - @bone-death
+ - Niepowodzenie @wrench
+ 
+ ## Efekty:
+ 
+ ### W przypadku złamań nóg:
+ 
+ - 1 złamanie nogi zmniejszy prędkość o połowę
+ - 2 złamania nóg sprawią, że będziesz ragdollem i nie będziesz mógł mówić.
+ - @intense-pain
+ - @internal-damage
+ 
+ ### W przypadku złamań ramion:
+ 
+ - 1 złamanie ramienia uniemożliwi korzystanie z tego ramienia (nie można już trzymać przedmiotów dwuręcznych)
+ - 2 złamania ramion uniemożliwią interakcję z czymkolwiek, takim jak drzwi, drabiny, przyciski itp.
+ - @intense-pain
+ - @internal-damage
+ 
+ ### W przypadku złamań czaszki:
+ 
+ - 20% lub 30% @neurotrauma
+ - @headache
+ - @internal-damage
+ 
+ ### W przypadku złamań szyi:
+ 
+ - @spinal-cord-injury
+ - @internal-damage
+ 
+ ### W przypadku złamań żeber:
+ 
+ - @pneumothorax
+ - @chest-pain
+ - @internal-damage
+ 
+ ## Leczenie:
+ 
+ - @bandages
+ - @osteosynthetic-surgery
+ 
+ ## Pierwsza pomoc:
+ 
+ - @bandages</Manual_Description_Fractures>
+  <Manual_Description_Dislocations>Przemieszczenia są powszechnymi urazami, które często dotykają większość członków załogi. Przemieszczenia nie zabijają i powinny być traktowane jako ostatnie w nagłych przypadkach. Kończyna może być zarówno przemieszczona, jak i złamana. Cyberkończyny nie mogą ulec przemieszczeniu.
+ 
+ ---
+ ##Przyczyny:
+ 
+ - Trauma (eksplozje, uderzenia, uszkodzenia wewnętrzne)
+ 
+ ##Efekty:
+ 
+ ###Przy przemieszczeniach nóg:
+ - 1 przemieszczenie nogi zmniejszy prędkość o połowę
+ - 2 przemieszczenia nóg sprawią, że zostaniesz porzucony i nie będziesz mógł mówić.
+ - @intensywny-ból
+ - @uszkodzenia-wewnętrzne
+ 
+ ###Przy przemieszczeniach ramion:
+ - 1 przemieszczenie ramienia uniemożliwi korzystanie z tego ramienia (nie będziesz mógł trzymać przedmiotów dwuręcznych)
+ - 2 przemieszczenia ramion uniemożliwią interakcję z czymkolwiek, takim jak drzwi, drabiny, przyciski itp.
+ - @intensywny-ból
+ - @uszkodzenia-wewnętrzne
+ 
+ ##Leczenie:
+ 
+ - @klucz (użyj go w interfejsie zdrowia, tak jak bandaża)
+ Wymagane jest sprawdzenie umiejętności medycznych na poziomie 60 bez i 30 z @analgezją.
+ 
+ ##Pierwsza pomoc:
+ - @bandaże lub @plastiseal</Manual_Description_Dislocations>
+  <Manual_Description_Arterial_Bleeding>Pęknięcia tętnic są niezwykle niebezpieczne i wymagają natychmiastowej opieki medycznej. Zastosowanie opaski uciskowej na dotkniętą kończynę może dać czas na leczenie, ale nie powinno się tego robić na głowie.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @rany (krwawienie, 80% lub więcej)
+ - @urazowe-amputacje
+ - @ciała-obce (20% lub więcej)
+ 
+ ##Efekty:
+ 
+ - 1,5% utraty krwi na sekundę
+ 
+ ##Leczenie:
+ 
+ - @otwarte-zamknięte-zabiegi-chirurgiczne
+ 
+ ##Pierwsza pomoc:
+ - @opaska-uciskowa</Manual_Description_Arterial_Bleeding>
+  <Manual_Description_Internal_Damage>Wewnętrzne uszkodzenia są wynikiem różnych ran. Zmniejszają witalność i są spowodowane wraz z wieloma innymi problemami, gdy wystarczająco dużo wewnętrznego uszkodzenia zostanie otrzymane w jednym uderzeniu.
+ 
+ ## Spowodowane przez:
+ 
+ - @przemieszczenia
+ - @złamania
+ - Niepowodzenie w sprawdzaniu umiejętności podczas korzystania z:
+ - @pęsety
+ - @szwów
+ - @odciągaczy
+ - @wiertła chirurgiczne
+ - @piły chirurgiczne
+ - @implantów rdzeniowych
+ - @implantów osteosyntezy
+ 
+ ## Efekty:
+ 
+ - @wstrząs mózgu
+ - @pneumotoraks
+ - @uszkodzenie serca
+ - @uszkodzenie wątroby
+ - @uszkodzenie płuc
+ - @uszkodzenie nerek
+ - @złamania
+ - @uszkodzenie zwykłych organów
+ - Uszkodzenie witalności
+ 
+ ## Leczenie:
+ 
+ - @otwarte-zamknięte-operacje
+ - Czas</Manual_Description_Internal_Damage>
+  <Manual_Description_Burns>Pierwsze stopnia oparzenia są niewielkie i zwykle można je zignorować, ale oparzenia drugiego stopnia i wyższe wymagają interwencji medycznej, aby pacjent nie ryzykował zakażenia. Oparzenia o sile od 1 do 20% to oparzenia pierwszego stopnia, od 21 do 50% to oparzenia drugiego stopnia, a od 51% wzwyż to oparzenia trzeciego stopnia.
+ 
+ ---
+ 
+ ##Efekty:
+ - Bezpośrednie uszkodzenie witalności
+ - Brudzenie @bandaża (szybkość zależy od stopnia oparzenia)
+ - @zakażone-rany (skala zależy od stopnia oparzenia)
+ 
+ ##Leczenie:
+ 
+ - @bandaż lub @plastiseal (TYLKO DLA OPARZEŃ PIERWSZEGO I DRUGIEGO STOPNIA)
+ - @otwarte-zamknięcie-operacyjne (należy nałożyć @plastiseal przed nałożeniem @szwów, działa na oparzenia każdego stopnia)
+ - @maść-antybiotykowa (TYLKO DLA OPARZEŃ PIERWSZEGO I DRUGIEGO STOPNIA)
+ - @klej-antybiotykowy (działa na oparzenia każdego stopnia)
+ - @stymulant-bojowy (działa na oparzenia każdego stopnia)</Manual_Description_Burns>
+  <Manual_Description_Infected_Wounds>Zakażone rany są spowodowane pozostawieniem ran na uboczu i powinny być oczyszczone, aby zapobiec sepsie.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Pozostawienie ran (skaleczenia, oparzenia, rany postrzałowe, rany od ugryzień, głębokie obrażenia tkanek, krwawienie). Proces ten zostanie znacznie przyspieszony, jeśli na ranie znajduje się brudna opaska.
+ 
+ ##Efekty:
+ 
+ - Sepsa (powyżej 50%)
+ - Zapalenie (powyżej 10%)
+ - Zmniejszona odporność
+ 
+ ##Leczenie:
+ 
+ - Maść antybiotykowa
+ - Spray antyseptyczny
+ 
+ ##Pierwsza pomoc:
+ 
+ - Opatrunek lub Plastiseal.</Manual_Description_Infected_Wounds>
+  <Manual_Description_Foreign_Bodies>Ciała obce są często nabyte po strzelaninach lub po wpadnięciu w eksplozję. Ciała obce powinny być usunięte jak najszybciej, aby uniknąć krwawienia tętniczego lub zakażenia pacjenta sepsą. Każde użycie pęsety usunie 5% ciał obcych. 
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Eksplozje
+ - Strzały (strzały, które łamią kość, zawsze powodują ciała obce)
+ 
+ ##Efekty:
+ 
+ - Krwawienie tętnicze (powyżej 20%)
+ - Pęknięcie aorty (powyżej 20%, jeśli w klatce piersiowej)
+ - Sepsa (powyżej 20%)
+ - Zapalenie (powyżej 15%)
+ 
+ ##Leczenie:
+ 
+ - Otwarte-zamknięte operacje (użyj pęsety przed nałożeniem szwów)
+ - Używanie pęsety na otwartą ranę postrzałową lub głębokie uszkodzenie tkanki</Manual_Description_Foreign_Bodies>
+  <Manual_Description_Wounds>##Efekty:
+ 
+ ###W przypadku urazów siłą uderzenia, skaleczeń, ran postrzałowych i głębokich obrażeń tkanek:
+ - Bezpośrednie uszkodzenie witalności
+ 
+ ###W przypadku krwawienia:
+ - @krwawienie-tętnicze (powyżej 80%)
+ - @pęknięcie-aorty (powyżej 80%, jeśli w klatce piersiowej)
+ - @utrata-krwi
+ 
+ ###W przypadku głębokich obrażeń tkanek, skaleczeń i ran postrzałowych, krwawienia i ran od ugryzień:
+ - @zakażone-rany
+ - Brudzi opatrunki (krwawienie brudzi opatrunki znacznie szybciej niż inne rany)
+ 
+ ##Leczenie:
+ 
+ - @szwy (NIE DZIAŁAJĄ DLA URZEDÓW SIŁY UDERZENIA)
+ - @otwarte-zamknięcie-operacji (użyj @pęsety przed nałożeniem @szwów, TYLKO DLA URZEDÓW SIŁY UDERZENIA)
+ - @opaska uciskowa lub @balon-endowaskularny (TYLKO DLA KRWAWIENIA)
+ - @antybiotyczne-klej (TYLKO DLA KRWAWIENIA)
+ - Czas
+ 
+ ##Pierwsza pomoc:
+ - @opatrunki lub @plastiseal</Manual_Description_Wounds>
+  <Manual_Description_Ointmented>Pomada pomoże chronić rany przed zakażeniem i jest bardzo przydatna dla pacjentów cierpiących na oparzenia. Pomada pomoże również zapobiec zakażeniu pooperacyjnemu, jeśli zostanie nałożona na część ciała, na której przeprowadzana jest operacja.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @rozpylacz-antyseptyczny
+ - @maść-antybiotykowa
+ 
+ ##Efekty:
+ - Pasywnie zwalcza i zapobiega @zainfekowanym-ranom</Manual_Description_Ointmented>
+  <Manual_Description_Bandaged>Opatrunki są niezwykle wszechstronnym elementem pierwszej pomocy. Zaleca się, aby każdy członek załogi miał przy sobie przynajmniej kilka opatrunków przez cały czas. Opatrunki staną się brudne, jeśli zostaną nałożone na rany.
+ 
+ \\---
+ 
+ ## Spowodowane przez:
+ 
+ - @opatrunki
+ 
+ ## Efekty:
+ 
+ - Stabilizuje @przemieszczenia z pęknięć żeber.
+ - Usuwa karę za spowolnienie z powodu @przemieszczeń.
+ - Spowalnia o 10% za każdy opatrunek.
+ - Przyspiesza naturalne gojenie się @ran.
+ - Chroni przed @zakażonymi ranami.</Manual_Description_Bandaged>
+  <Manual_Description_Plaster_Cast>Gipsowe opatrunki są niezwykle ważne w leczeniu złamań kończyn.
+ 
+ \\---
+ 
+ ## Spowodowane przez:
+ 
+ - Zastosowanie gipsu
+ 
+ ## Efekty:
+ 
+ - Stopniowo leczy złamania kończyn o 0,33% na sekundę
+ - Spowalnia cię o 20% za każdym razem, gdy założysz opatrunek.</Manual_Description_Plaster_Cast>
+  <Manual_Description_Hypoxemia>Hipoksemia to brak wystarczającej ilości tlenu we krwiobiegu. Hipoksemia może szybko się nasilać i powodować utratę kontroli nad pacjentem. Pacjent cierpiący na to potrzebuje natychmiastowej opieki medycznej. @pneumotoraks zapobiegnie spadkowi poziomu tlenu we krwi.
+ 
+ ---
+ ##Wywołane przez:
+ 
+ - @zatrucie-cyjanowodorem
+ - @hipotensja (70% lub mniej)
+ - @utrata-krwi (40% lub więcej)
+ - @zatrzymanie-krążenia
+ - @niski-poziom-tlenu
+ 
+ ##Efekty:
+ 
+ - @zatrzymanie-krążenia (powyżej 80%)
+ - @zatrzymanie-oddechu (powyżej 70%)
+ - @ból-głowy (powyżej 40%)
+ - @zamieszanie (powyżej 50%)
+ - @duszność (powyżej 20%)
+ - @hiperwentylacja (powyżej 10%)
+ - @migotanie-przedsionków
+ - @nieprzytomność (powyżej 80%)
+ - @uraz-neurologiczny (powyżej 10%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-wątroby (powyżej 4%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-serca (powyżej 4%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-nerek (powyżej 8%, punkt, w którym przewyższa naturalną regenerację, 4% jeśli jedna nerka jest martwa)
+ - @uszkodzenie-płuc (powyżej 4%, punkt, w którym przewyższa naturalną regenerację)
+ - @uszkodzenie-kości (całkowicie neutralizuje naturalną regenerację przy 100%)
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - @tlenek-płynny</Manual_Description_Hypoxemia>
+  <Manual_Description_Sepsis>Sepsa to niebezpieczna choroba wywołana przez zanieczyszczone rany. 
+ 
+ ## Wywołana przez:
+ 
+ - @zanieczyszczone-rany
+ - @ciała-obce
+ - @gangrena
+ - @infekcja-pooperacyjna
+ - @pakiety-krwi od dawców z sepsą
+ - Niezdany test umiejętności @azatiopryny
+ 
+ ## Efekty:
+ 
+ - @uszkodzenie-wątroby
+ - @uszkodzenie-serca
+ - @uszkodzenie-nerek
+ - @uszkodzenie-płuc
+ - @uszkodzenie-kości
+ - @urazy-neurologiczne
+ - @zwiększone-tętno
+ - @hiperwentylacja
+ - @zamieszanie
+ - @gorączka
+ - @gangrena
+ 
+ ## Leczenie:
+ 
+ - @antybiotyki-o-szerokim-spektrum</Manual_Description_Sepsis>
+  <Manual_Description_Hemotransfusion_Shock>Szał hemotransfuzji jest stanem, który występuje tylko wtedy, gdy podaje się niezgodny z grupą krwi krew (przykład: podanie osoby O+ krwi A+).
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Podanie niezgodnych @paczek krwi (daje 100% siły)
+ 
+ ##Efekty:
+ 
+ - @wymioty (między 0-40%)
+ - @ból klatki piersiowej (między 0-60%)
+ - @utrata krwi (między 0-70%)
+ - @uszkodzenie wątroby (między 0-70%)
+ - @uszkodzenie serca (między 0-70%)
+ - @uszkodzenie nerek (między 0-70%)
+ - @uszkodzenie płuc (między 0-70%)
+ - @duszność (między 0-70%)
+ - @dyskomfort brzuszny (między 0-80%)
+ - @świszczący oddech (między 0-90%)
+ 
+ ##Leczenie:
+ 
+ - @streptokinaza
+ - Czas</Manual_Description_Hemotransfusion_Shock>
+  <Manual_Description_Blood_Loss>Podczas gdy utrata krwi może być bardzo wymagająca pod względem zasobów, jeśli jest wystarczająco poważna, gdy wynosi 30% lub mniej, zwykle można ją zignorować.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @rany (krwawienie)
+ - @wstrząs-hemotransfuzyjny (między 0 a 70%)
+ - @wewnętrzne-krwawienie
+ - Użycie @pustego-opakowania-na-krew
+ - @tętnicze-krwawienie
+ - @pęknięcie-aorty
+ - @nacięcie-chirurgiczne (chyba że mają @zaciśnięte-krwawienie)
+ - @analizator-hematologiczny
+ 
+ ##Efekty:
+ 
+ - @hipotensja (skala zależy od ilości utraty krwi)
+ - @hipoksemia (przy 40% lub więcej)
+ - @zwiększone-tętno (przy 40% lub więcej)
+ - @blada-skóra (przy 40% lub więcej)
+ - @ból-głowy (przy 50% lub więcej)
+ - @osłabienie (przy 60% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Podawanie @opakowań-na-krew
+ - @deusizyna
+ - Czas
+ @stymulant-bojowy</Manual_Description_Blood_Loss>
+  <Manual_Description_Hypotension>Hipotonia to ciśnienie krwi, które spadło poniżej normalnych poziomów. Hipotonia jest śmiertelna, jeśli jest wystarczająco ciężka. Niższe procenty odpowiadają niższemu ciśnieniu krwi.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @utratę krwi (skala zależy od ilości utraty krwi)
+ - @wstrząs pourazowy
+ - @zatrzymanie serca (ustawia ciśnienie krwi na minimum)
+ - @tamponada serca (zmniejsza ciśnienie krwi o połowę)
+ - @nadtlenek azotu sodu (zmniejsza ciśnienie krwi o 45%)
+ - @nitrogliceryna (zmniejsza ciśnienie krwi o 45%)
+ - @nieregularny rytm serca
+ 
+ ##Efekty:
+ 
+ - @hipoksemia (przy 70% lub mniej)
+ - @migotanie przedsionków
+ - @hiperwentylacja (przy 80% lub mniej)
+ - @zamieszanie (przy 30% lub mniej)
+ - @zawroty głowy (przy 60% lub mniej)
+ - @rozmyte widzenie (przy 55% lub mniej)
+ - @blada skóra (przy 50% lub mniej)
+ - @ból głowy (przy 60% lub mniej)
+ 
+ ##Leczenie:
+ 
+ - Podawanie @paczek krwi, @roztworu soli fizjologicznej lub @roztworu Ringer'a
+ - @autopuls
+ - @adrenalina
+ - RKO
+ - Leczenie przyczyn</Manual_Description_Hypotension>
+  <Manual_Description_Hypertension>Nadciśnienie tętnicze to ciśnienie krwi, które wzrosło powyżej normalnych poziomów. Nadciśnienie tętnicze jest śmiertelne, jeśli jest wystarczająco ciężkie. Wyższe procenty odpowiadają wyższemu ciśnieniu krwi.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - Uszkodzenie nerek
+ - Uszkodzenie wątroby
+ - Nadmierna objętość krwi spowodowana wstrzykiwaniem soli fizjologicznej, roztworu Ringer lub pakietów krwi
+ - Autopuls
+ - Odstawienie (odstawienie alkoholu)
+ - Adrenalina
+ - RKO
+ 
+ ##Efekty:
+ 
+ - Udar (powyżej 150%)
+ - Uszkodzenie nerek (powyżej 184%, punkt, w którym przewyższa naturalną regenerację, 152% jeśli jedna nerka jest martwa)
+ - Zawał serca (powyżej 150%)
+ 
+ ##Leczenie:
+ 
+ - Wywołanie utraty krwi (najlepiej poprzez nacięcie chirurgiczne lub pusty worek krwi)
+ - Azotan sodu lub azotan glicerolu
+ - Leczenie przyczyn</Manual_Description_Hypertension>
+  <Manual_Description_Acidosis>Kwasica zazwyczaj jest ignorowana, a minimalne działania są wymagane przy niskim do średniego nasilenia. Kwasica i @alkaloza się wzajemnie znoszą.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hipowentylacja
+ - @zatrzymanie-oddechu
+ - @zatrzymanie-serca
+ - @uszkodzenie-nerek (80% lub więcej)
+ - @pakiety-krwi, których dawca miał kwasice (uzyskana kwasica będzie wynosić poziom kwasicy dawcy w czasie pobrania podzielony przez 5)
+ - @roztwór-soli
+ 
+ ##Efekty:
+ 
+ - @drgawki (60% lub więcej)
+ - @śpiączka (60% lub więcej)
+ - @zwiększone-tętno (20% lub więcej)
+ - @migotanie-przedsionków
+ - @ból-głowy (20% lub więcej)
+ - @zamieszanie (15% lub więcej)
+ - @osłabienie (35% lub więcej)
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Wywołanie @alkalozy (najlepiej poprzez @wymioty)
+ - Przeszczepienie neutralnych @paczek-krwi (chyba że pacjent ma 0% utraty krwi)</Manual_Description_Acidosis>
+  <Manual_Description_Alkalosis>Alkalozę zazwyczaj można zignorować, a minimalna interwencja jest wymagana przy niskim do średniego nasilenia. Alkalozę i @kwasice wzajemnie się znoszą.
+ 
+ ---
+ ##Spowodowane przez:
+ 
+ - @hiperwentylacja
+ - @wymioty
+ - @pakiety krwi od dawców z alkalozą (uzyskana alkaliza będzie wynikiem poziomu alkalizy dawcy w czasie pobrania podzielonej przez 5)
+ 
+ ##Efekty:
+ 
+ - @drgawki (powyżej 60%)
+ - @palpitacje (powyżej 20%)
+ 
+ ##Leczenie:
+ 
+ - Leczenie przyczyn
+ - Wywołanie @kwasicy (najlepiej za pomocą @soliny)
+ - Przeszczepienie neutralnych @paczek krwi (chyba że pacjent ma 0% utraty krwi)</Manual_Description_Alkalosis>
+  <Manual_Description_Adrenaline>Adrenalina jest stosowana w leczeniu zatrzymania akcji serca. W zamian za wyleczenie choroby, podnosi ciśnienie krwi pacjenta o 30%. Oprócz tych efektów, zapewnia pacjentowi znieczulenie (ale nie więcej niż 4,5%), zwiększa tętno, powoduje hipowentylację, zwiększa zadawane obrażenia o 20%. Halucynuje zysk fibrylacji i zmniejsza skuteczność spowalniających efektów.</Manual_Description_Adrenaline>
+  <Manual_Description_AED>Przedmiot używany do korygowania rytmu serca pacjenta. 
+ Po naładowaniu bateriami i użyciu na pacjencie, AED ma szansę na zresetowanie migotania komór lub wyleczenie zatrzymania krążenia. 
+ Przy umiejętności medycznej poniżej 80, AED jest lepszy od defibrylatora manualnego pod każdym względem, poza tym że używanie go zajmuje o sekundę dłużej niż defibrylator manualny. 
+ Między 80 a 100 umiejętnością medyczną, defibrylator manualny przewyższa szansę AED na wyleczenie zatrzymania krążenia, ale wciąż istnieje (zanikające) ryzyko wywołania zatrzymania krążenia lub niepowodzenia w resetowaniu migotania komór, podczas gdy AED tego nie ma. 
+ Przy umiejętności medycznej 100, defibrylator manualny jest lepszy. Defibrylator manualny staje się całkowicie bezpieczny i gwarantuje wyleczenie zatrzymania krążenia.</Manual_Description_AED>
+  <Manual_Description_Alien_Blood>###Sprawdzenie umiejętności medycznych: 40
+ Użycie Obcej Krwi zamiast zwykłej krwi jest niezwykle niebezpieczne i powinno być stosowane tylko w sytuacjach krytycznych.
+ 
+ ###Sukces aplikacji:
+ -7,5% @utrata-krwi
+ +3,75% uszkodzenie podstawowych organów
+ +99% @szok-hemotransfuzji
+ 
+ ###Niepowodzenie aplikacji:
+ -7,5% @utrata-krwi
+ +7,5% uszkodzenie podstawowych organów
+ +99% @szok-hemotransfuzji</Manual_Description_Alien_Blood>
+  <Manual_Description_Ambubag>Przedmiot używany do dostarczania dodatkowego tlenu, jeśli pacjent nie oddycha wystarczająco lub w ogóle nie oddycha.
+ 
+ Użycie worka Ambu z zwykłym zbiornikiem tlenu wyleczy 90% niedoboru tlenu i zużyje 2% tlenu w zbiorniku.
+ 
+ Użycie worka Ambu z zbiornikiem tlenku węgla wyleczy 90% niedoboru tlenu, wyleczy zatrzymanie oddechu i zużyje 2% tlenu w zbiorniku.
+ 
+ Użycie worka Ambu z zbiornikiem paliwa do spawania spowoduje 110% niedoboru tlenu, spowoduje 10% uszkodzenia płuc i zużyje 5% paliwa do spawania w zbiorniku.
+ 
+ Użycie worka Ambu z zbiornikiem paliwa incendium spowoduje 110% niedoboru tlenu, spowoduje 20% uszkodzenia płuc, spowoduje 10% oparzeń i zużyje 5% paliwa incendium w zbiorniku.
+ 
+ Użycie worka Ambu z farbą spowoduje 50% niedoboru tlenu, spowoduje 3% uszkodzenia płuc, spowoduje 5% uzależnienia chemicznego, wyleczy 20% odstawienia chemicznego i zużyje 5% farby w puszce.</Manual_Description_Ambubag>
+  <Manual_Description_Anaparalyzant>###Sprawdzenie umiejętności medycznych: 64
+ 
+ Oprócz pierwotnego zastosowania, jakim jest zapewnienie odporności na paraliż i leczenie paraliżu, Anaparalyzant może być używany do szybkiego zmniejszenia @narkozy i szybszego wybudzenia pacjenta.
+ 
+ ###Sukces aplikacji:
+ Natychmiastowo leczy @narkozę
+ +5% psychozy
+ +800% odporności na paraliż.
+ 
+ ###Niepowodzenie aplikacji:
+ -3% @narkozy na sekundę przez 60 sekund
+ +6,5% odporności na paraliż na sekundę przez 60 sekund
+ +0,75% psychozy na sekundę przez 60 sekund.</Manual_Description_Anaparalyzant>
+  <Manual_Description_Antibiotic_Glue>### Sprawdzenie umiejętności medycznych: 55
+ Klej używany do szybkiego zamykania krwawiących ran i leczenia oparzeń na jednej kończynie.
+ 
+ ### Sukces aplikacji:
+ -100% krwawienie
+ -30% oparzenia
+ 
+ ### Niepowodzenie aplikacji:
+ -75% krwawienie
+ -15% oparzenia
+ 50% szansa na wywołanie zawału serca.</Manual_Description_Antibiotic_Glue>
+  <Manual_Description_Antibiotic_Ointment>###Sprawdzenie umiejętności medycznych: 10
+ Maść antybiotykowa to przedmiot używany do leczenia oparzeń i leczenia zakażonych ran.
+ 
+ ###Pomyślne zastosowanie:
+ -12% oparzeń
+ -72% zakażonych ran
+ +100% nałożonej maści
+ 
+ ###Nieudane zastosowanie:
+ -7% oparzeń
+ -24% zakażonych ran
+ +60% nałożonej maści</Manual_Description_Antibiotic_Ointment>
+  <Manual_Description_Antiseptic>Antyseptyk to przedmiot, którego jedynym zastosowaniem jest załadowanie go do @antyseptycznego-rozpylacza. Dla każdego rozpylenia antyseptyku, zużyte zostanie 10% stanu antyseptyku.</Manual_Description_Antiseptic>
+  <Manual_Description_Antiseptic_Sprayer>Rozpylacz, który rozpyla środek antyseptyczny na zakażone rany. Używanie rozpylacza z antyseptykiem wyleczy 100% zakażonych ran, da 5% nasmarowania i zużyje 10% antyseptyku.</Manual_Description_Antiseptic_Sprayer>
+  <Manual_Description_Autopulse>Najlepszy przyjaciel medyka. Aby użyć autopulsu, po prostu umieść go w slocie swojego skafandra nurkowego. Gdy jest noszony i wyposażony w baterie, autopuls wyleczy @zatrzymanie-serca.</Manual_Description_Autopulse>
+  <Manual_Description_Azathioprine>### Sprawdzenie umiejętności medycznych: 10
+ Azatiopryna to lek immunosupresyjny stosowany podczas operacji przeszczepu narządów, jeśli odrzucenie narządu jest włączone w konfiguracji Neurotrauma. Zmniejszy odporność organizmu w czasie, co umożliwi bezpieczne umieszczenie narządu w ciele, gdy odporność spadnie poniżej 10%.
+ 
+ ### Sukces aplikacji:
+ Zmniejsza odporność organizmu w czasie.
+ 
+ ### Niepowodzenie aplikacji:
+ Zmniejsza odporność organizmu w czasie.
+ Powoduje sepsę.</Manual_Description_Azathioprine>
+  <Manual_Description_Bandages>### Sprawdzenie umiejętności medycznych: 10
+ 
+ Opatrunki używane do zakrywania ran w celu zapobiegania infekcji.
+ 
+ ### Sukces aplikacji:
+ 
+ \\+50% @opatrzony
+ \\-24% krwawienie
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ \\+36% @opatrzony
+ \\-18% krwawienie</Manual_Description_Bandages>
+  <Manual_Description_Blood_Packs>Pakiety krwi są uzyskiwane poprzez użycie @empty-blood-pack na człowieku z mniej niż 31% @blood-loss. Pakiety krwi muszą być podawane we właściwej grupie krwi, która jest określona w opisie przedmiotu.
+ 
+ ###Zastosowanie zgodnej grupy krwi
+ -30% utrata krwi
+ +30% ciśnienie krwi
+ 
+ ###Zastosowanie niezgodnej grupy krwi
+ -20% utrata krwi
+ +30% ciśnienie krwi
+ +100% @hemotransfusion-shock
+ 
+ Jeśli człowiek, z którego pochodzi pakiet krwi, cierpiał na @acidosis, @alkalosis lub @sepsis, to te dolegliwości zostaną również przekazane osobie, której podano krew (uzyskana dolegliwość będzie wynosić poziom dolegliwości dawcy w czasie pobrania podzielony przez 5). Dodatkowo, jeśli odbiorca krwi ma zarówno kwasice, jak i alkalozy, transfuzja neutralnej krwi zbliży pH krwi do wartości neutralnej, częściowo lecząc zarówno alkalozy, jak i kwasice, chyba że pacjent ma 0% utraty krwi.</Manual_Description_Blood_Packs>
+  <Manual_Description_Blue_Shark>### Sprawdzenie umiejętności medycznych: Brak
+ Śmieszna mała niebieska rekinia, która może wyleczyć twoją niestabilność psychiczną.
+ 
+ ### Po zastosowaniu:
+ Leczy 2% psychozy i wydaje piskliwy dźwięk.</Manual_Description_Blue_Shark>
+  <Manual_Description_Body_Bag>Torba na ciało to przedmiot używany do transportu ciał znacznie szybciej niż po prostu ciągnięcie ich. Umieszcza się go w slocie Skafandra Nurkowego i udusi żywego człowieka, jeśli zostanie w nim umieszczony. 
+ 
+ (Note: As an AI language model, I cannot guarantee the accuracy of the translation.)</Manual_Description_Body_Bag>
+  <Manual_Description_Broad-spectrum_Antibiotics>### Sprawdzenie umiejętności medycznych: 25
+ 
+ Antybiotyki o szerokim spektrum są głównym leczeniem @sepsy. Nadal działa wzmocnienie odporności na zakażenie skóry i zmniejsza istniejące zakażenie skóry zgodnie z wersją podstawową.
+ 
+ Ciśnienie krwi pacjenta musi wynosić powyżej 70%, a @hipoksemia poniżej 30%, aby skutecznie leczyć sepsę.
+ 
+ ### Sukces aplikacji:
+ 
+ Prawidłowe użycie antybiotyków zapewni siłę dolegliwości wynoszącą 50%, która będzie zmniejszać się o 0,5% na sekundę, łącznie przez 100 sekund z jedną dawką. 50% antybiotyków o szerokim spektrum będzie leczyć 0,95% sepsy na sekundę przez 100 sekund.
+ 
+ Jednakże, spowoduje to:
+ 
+ - 0,2% podstawowego uszkodzenia narządów na sekundę przez 100 sekund
+ - 0,175% uszkodzenia nerek na sekundę przez 100 sekund
+ - 0,175% uszkodzenia wątroby na sekundę przez 100 sekund
+ - 0,1% uszkodzenia serca na sekundę przez 100 sekund
+ - 0,1% uszkodzenia płuc na sekundę przez 100 sekund
+ - Łącznie narządy zakończą z 20% uszkodzenia narządów, 17,5% uszkodzenia nerek i wątroby oraz 10% uszkodzenia serca i płuc.
+ 
+ ### Niepowodzenie aplikacji:
+ 
+ Nieudane użycie spowoduje siłę dolegliwości wynoszącą 30%. Będzie ona zmniejszać się i leczyć sepsę w tym samym tempie co w przypadku udanego użycia. 30% antybiotyków o szerokim spektrum będzie leczyć 0,95% sepsy na sekundę przez 60 sekund.
+ 
+ Jednakże, spowoduje to:
+ 
+ - 0,2% podstawowego uszkodzenia narządów na sekundę przez 60 sekund
+ - 0,175% uszkodzenia nerek na sekundę przez 60 sekund
+ - 0,175% uszkodzenia wątroby na sekundę przez 60 sekund
+ - 0,1% uszkodzenia serca na sekundę przez 60 sekund
+ - 0,1% uszkodzenia płuc na sekundę przez 60 sekund
+ - Łącznie narządy zakończą z 12% uszkodzenia narządów, 10,5% uszkodzenia nerek i wątroby oraz 6% uszkodzenia serca i płuc.</Manual_Description_Broad-spectrum_Antibiotics>
+  <Manual_Description_Combat_Stimulant>Stymulant Bojowy to stymulant, który może również służyć jako przedmiot pierwszej pomocy. Od siły 1% do 10%, chemiczny preparat leczy oparzenia, utratę krwi, rany, krwotoki wewnętrzne i odstawienie chemiczne o 1% na sekundę, aż siła dolegliwości spadnie do 0% lub przekroczy 10%, gdy otrzyma się kolejną iniekcję. Gracz otrzymuje również 45% odporności na ogłuszenie przy 10%. Ten bonus zmniejsza się wraz ze wzrostem siły dolegliwości.
+ 
+ Od siły 11% do 100%, chemiczny preparat leczy poprzednie typy obrażeń o 2% na sekundę i zapewnia graczowi 45% do 50% odporności na ogłuszenie.</Manual_Description_Combat_Stimulant>
+  <Manual_Description_Deusizine>### Sprawdzenie umiejętności medycznych: 72
+ Specjalne leczenie stosowane w celu leczenia utraty krwi, uszkodzeń narządów waniliowych, uszkodzeń wewnętrznych i niedotlenienia przez okres 20 sekund.
+ 
+ ### Sukces aplikacji:
+ -40% uszkodzeń wewnętrznych
+ -40% utraty krwi
+ -100% niedotlenienia
+ -40% uszkodzeń narządów waniliowych
+ +4% oparzeń
+ +40% ciśnienia krwi
+ 
+ ### Niepowodzenie aplikacji:
+ -20% uszkodzeń wewnętrznych
+ -20% utraty krwi
+ -40% niedotlenienia
+ -20% uszkodzeń narządów waniliowych
+ +12% oparzeń
+ +20% ciśnienia krwi</Manual_Description_Deusizine>
+  <Manual_Description_Diving_Knife>###Sprawdzenie umiejętności medycznych: 30
+ Oprócz normalnego użycia noża, można go użyć do usunięcia @opatrunków.
+ 
+ ###Sukces aplikacji:
+ Usuwa @opatrunki z kończyny, na której użyto noża.
+ 
+ ###Niepowodzenie aplikacji:
+ +15% krwawienia
+ +10% skaleczeń</Manual_Description_Diving_Knife>
+  <Manual_Description_Drainage>Drenaż jest jednorazowym przedmiotem, który jest używany do leczenia @pneumotoraksu. Jest stosowany po @odciągnięciu-skóry.</Manual_Description_Drainage>
+  <Manual_Description_Empty_Blood_Pack>###Sprawdzenie umiejętności medycznych: 30
+ Puste opakowania na krew są używane do pozyskiwania @blood-packs. Puste opakowania na krew mogą być używane tylko u ludzi, którzy mają mniej niż 31% @blood-loss, w przeciwnym razie nic nie robią.
+ 
+ ###Sukces aplikacji:
+ +30% utraty krwi
+ 
+ ###Niepowodzenie aplikacji:
+ +40% utraty krwi
+ 
+ Jeśli człowiek, na którym użyto pustego opakowania na krew, cierpi na @acidosis, @alkalosis lub @sepsis, to te dolegliwości zostaną również przekazane osobie, której krew zostanie podana (dolegliwość uzyskana będzie równa poziomowi dolegliwości dawcy w czasie pobierania podzielonej przez 5).</Manual_Description_Empty_Blood_Pack>
+  <Manual_Description_Endovascular_Balloon>Trzeci krok w operacji pęknięcia aorty.</Manual_Description_Endovascular_Balloon>
+  <Manual_Description_Fentanyl>###Sprawdzenie umiejętności medycznych: 72
+ 
+ Potężny środek przeciwbólowy stosowany do wywołania @efektu-przeciwbólowego.
+ 
+ ###Sukces aplikacji:
+ +75% @efektu-przeciwbólowego
+ +15% Uzależnienia od opioidów
+ +22,5% @przedawkowania-opioidów
+ -100% @odstawienia-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmiany na:
+ +150% @efektu-przeciwbólowego
+ +15% Uzależnienia od opioidów
+ +37,5% @przedawkowania-opioidów
+ -100% @odstawienia-opioidów.
+ 
+ ###Niepowodzenie aplikacji:
+ +50% @efektu-przeciwbólowego
+ +40% Uzależnienia od opioidów
+ +30% @przedawkowania-opioidów
+ -100% @odstawienia-opioidów.
+ 
+ ####Podczas bycia pijanym (&gt;30% pijany) zmiany na:
+ +100% @efektu-przeciwbólowego
+ +40% Uzależnienia od opioidów
+ +60% @przedawkowania-opioidów
+ -100% @odstawienia-opioidów.</Manual_Description_Fentanyl>
+  <Manual_Description_Gypsum>###Sprawdzenie umiejętności medycznych: 40
+ Fein proszek, który w połączeniu z @bandażami, otoczy kończynę w gips, aby wyleczyć @złamania. Gips nie zadziała, jeśli wcześniej nie użyto bandaża lub @plastiseal, i nie pomoże w przypadku złamań czaszki, żeber i szyi.
+ 
+ Za każdy nałożony gips gracz otrzyma debuff prędkości ruchu o 20%. Gipsy można usunąć za pomocą @trauma-shears.
+ 
+ ###Powodzenie aplikacji:
+ Przekształca nałożony bandaż w gips, który powoli leczy złamania ramion i nóg otoczone nim.
+ 
+ ###Niepowodzenie aplikacji:
+ Usuwa gips i nic nie robi.</Manual_Description_Gypsum>
+  <Manual_Description_Health_Scanner>Przedmiot, który jest niezwykle ważny dla diagnozy. Po użyciu i naładowaniu bateriami, otrzymasz odczyt wszystkich dolegliwości widocznych dla skanera zdrowia, a pacjent, którego skanujesz, będzie zyskiwał 0,5% choroby promieniowej na sekundę, a ty (osoba skanująca) zyskasz 0,3% na sekundę. Dodatkowo, można skanować siebie i innych, używając skanera zdrowia w interfejsie jak opatrunku. To powoduje 1% choroby promieniowej i pozwala również na skanowanie poszczególnych kończyn, aby znaleźć takie rzeczy jak obce ciała.</Manual_Description_Health_Scanner>
+  <Manual_Description_Hematology_Analyzer>###Sprawdzenie umiejętności medycznych: 30
+ 
+ ###Sukces aplikacji:
+ +1% @utrata-krwi
+ 
+ ###Niepowodzenie aplikacji:
+ +3% @utrata-krwi
+ 
+ Niepowodzenie lub zaliczenie sprawdzenia umiejętności medycznych pozwoli również na odczytanie wszystkich chorób związanych z krwią pacjenta, takich jak @sepsa, @kwasica lub @alkaloza. Analizator hematologiczny może również być używany do sprawdzenia grupy krwi pacjenta, aby uniknąć @wstrząsu-po-przetoczeniu-krwi. Umieszczenie karty dawcy w analizatorze, a następnie jej użycie, spowoduje wydrukowanie grupy krwi na karcie dawcy i umieszczenie jej w slocie karty tożsamości, umożliwiając późniejsze sprawdzenie grupy krwi bez użycia analizatora.</Manual_Description_Hematology_Analyzer>
+  <Manual_Description_Hemostat>Trzeci krok w większości procedur chirurgicznych. Hemostat nie będzie działał bez 100% nacięcia chirurgicznego. Używanie go nie wymaga umiejętności medycznych. Skuteczne użycie hemostatu da pacjentowi zaciskanie krwawienia na kończynie, na której narzędzie zostało użyte. (Note: I did not translate the @ symbols as they do not have a clear meaning in this context)</Manual_Description_Hemostat>
+  <Manual_Description_Hyperzine>###Sprawdzenie umiejętności medycznych: 50
+ Potężny stymulant
+ 
+ ###Sukces aplikacji:
+ -6% obrażeń wewnętrznych
+ +9% uzależnienie chemiczne
+ +9% @neurotrauma
+ +15% psychoza
+ 
+ ###Niepowodzenie aplikacji:
+ -3% obrażeń wewnętrznych
+ +18% uzależnienie chemiczne
+ +30% psychoza
+ 
+ W obu przypadkach chemiczny środek zapewnia 400% Przyspieszenie i 400% Wigor oraz zmniejsza @odstawienie Chem o 45%. Gracz również szybciej wyzdrowieje z ogłuszeń o 90% przez 60 sekund.</Manual_Description_Hyperzine>
+  <Manual_Description_Liquid_Oxygenite>###Sprawdzenie umiejętności medycznych: 72
+ Płynny materiał obcego pochodzenia używany do wstrzykiwania tlenu bezpośrednio do krwiobiegu, leczący @hipoksję.
+ 
+ ###Sukces aplikacji:
+ Leczy wszystkie @hipoksje przez 30 sekund, wszystkie inne efekty występują przez 30 sekund:
+ +6% uszkodzenia podstawowych organów
+ +6% uszkodzenia @płuc
+ +6% uszkodzenia @wątroby
+ +6% uszkodzenia @serca
+ +6% uszkodzenia @nerek.
+ 
+ ###Niepowodzenie aplikacji:
+ Wszystkie efekty występują przez 20 sekund:
+ -200% @hipoksjii
+ +10% uszkodzenia podstawowych organów
+ +10% uszkodzenia @płuc
+ +10% uszkodzenia @wątroby
+ +10% uszkodzenia @serca
+ +10% uszkodzenia @nerek.</Manual_Description_Liquid_Oxygenite>
+  <Manual_Description_Mannitol>###Sprawdzenie umiejętności medycznych: 60
+ Mannitol to lek stosowany w leczeniu @neurotraumy, o ile ciśnienie krwi wynosi powyżej 70%, a @hipoksemia jest poniżej 30%. W zamian za wyleczenie @neurotraumy powoduje uszkodzenie narządów, @uszkodzenie serca i @uszkodzenie nerek. Mannitol zmniejszy zysk z @neurotraumy o połowę, niezależnie od stabilności krwi.
+ 
+ Początek uszkodzenia narządów z powodu afekcji mannitolu występuje po 10 sekundach.
+ 
+ ###Sukces aplikacji:
+ +50% afekcji mannitolu, która w czasie wyleczy 100% @neurotraumy
+ +5% uszkodzenia narządów
+ +10% @uszkodzenie serca
+ +10% @uszkodzenie nerek
+ 
+ ###Niepowodzenie aplikacji:
+ +30% afekcji mannitolu, która w czasie wyleczy 60% @neurotraumy
+ +10% uszkodzenia narządów
+ +20% @uszkodzenie serca
+ +20% @uszkodzenie nerek</Manual_Description_Mannitol>
+  <Manual_Description_Manual_Defibrillator>Przedmiot używany do korygowania rytmu serca pacjenta. Po nałożeniu na pacjenta i naładowaniu bateriami, defibrylator ma szansę na zresetowanie migotania przedsionków lub wyleczenie zatrzymania akcji serca.
+ 
+ Szansa na to jest przedstawiona na poniższym wykresie, gdzie cyjan oznacza szansę na zresetowanie migotania przedsionków, różowy oznacza szansę na wywołanie zatrzymania akcji serca, a pomarańczowy oznacza szansę na wyleczenie. Oś X to umiejętności medyczne, a oś Y to szansa na wykonanie czegoś (z 1 oznaczającym 100%).
+ 
+ Przy umiejętnościach medycznych poniżej 80, istnieje niebezpieczeństwo wywołania zatrzymania akcji serca lub niepowodzenia w zresetowaniu migotania przedsionków, podczas gdy AED tego nie robi. Przy umiejętnościach medycznych wynoszących 100, defibrylator manualny jest lepszy. Defibrylator manualny staje się całkowicie bezpieczny i gwarantuje wyleczenie zatrzymania akcji serca.</Manual_Description_Manual_Defibrillator>
+  <Manual_Description_Medical_Stent>Czwarty krok w operacji pęknięcia aorty. Stent nie będzie działał, jeśli wcześniej nie użyto balonu endowaskularnego. Użycie medycznego stentu wyleczy pęknięcie aorty i usunie balon endowaskularny z pacjenta.</Manual_Description_Medical_Stent>
+  <Manual_Description_Methamphetamine>###Sprawdzenie umiejętności medycznych: 35
+ Stymulant, który działa przez 30 sekund
+ 
+ ###Sukces aplikacji:
+ +15% uszkodzenie podstawowych organów
+ +15% @neurotrauma
+ +15% uzależnienie chemiczne
+ +30% psychoza
+ 
+ ###Niepowodzenie aplikacji:
+ +30% uszkodzenie podstawowych organów
+ +30% @neurotrauma
+ +30% uzależnienie chemiczne
+ +45% psychoza
+ 
+ W obu przypadkach użytkownik szybciej wyzdrowieje z osłabienia o 75% przez 30 sekund, a chemiczny środek leczy 90% @withdrawal.</Manual_Description_Methamphetamine>
+</infotexts>

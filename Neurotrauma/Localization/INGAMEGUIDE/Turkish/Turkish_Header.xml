@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+  <Manual_Button_Back>Geri</Manual_Button_Back>
+  <entityname.Manual_FAQ>Tıbbi Asistan: SSS</entityname.Manual_FAQ>
+  <entityname.Manual_Med_Kit_Recommendations>Tıbbi Asistan: Tıbbi Kiti Önerileri</entityname.Manual_Med_Kit_Recommendations>
+  <entityname.Manual_How_To_Diagnose>Tıbbi Asistan: Nasıl Teşhis Edilir</entityname.Manual_How_To_Diagnose>
+  <entityname.Manual_Order_of_Treatments>Tıbbi Asistan: Tedavi Sırası</entityname.Manual_Order_of_Treatments>
+  <entityname.Manual_The_5_Commandments_of_Neurotrauma>Tıbbi Asistan: Nörotravmanın 5 Emri</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+  <entityname.Manual_Vomiting_Blood>Tıbbi Asistan: Kan Kusma</entityname.Manual_Vomiting_Blood>
+  <entityname.Manual_Pale_Skin>Tıbbi Asistan: Soluk Cilt</entityname.Manual_Pale_Skin>
+  <entityname.Manual_Shortness_of_Breath>Tıbbi Asistan: Nefes Darlığı</entityname.Manual_Shortness_of_Breath>
+  <entityname.Manual_Cough>Tıbbi Asistan: Öksürük</entityname.Manual_Cough>
+  <entityname.Manual_Increased_Heartrate>Tıbbi Asistan: Artmış kalp atış hızı</entityname.Manual_Increased_Heartrate>
+  <entityname.Manual_Confusion>Tıbbi Asistan: Karışıklık</entityname.Manual_Confusion>
+  <entityname.Manual_Lightheadedness>Tıbbi Asistan: Baş dönmesi</entityname.Manual_Lightheadedness>
+  <entityname.Manual_Blurred_Vision>Tıbbi Asistan: Bulanık Görüş</entityname.Manual_Blurred_Vision>
+  <entityname.Manual_Leg_Swelling>Tıbbi Asistan: Bacak Şişmesi</entityname.Manual_Leg_Swelling>
+  <entityname.Manual_Wheezing>Tıbbi Asistan: Hırıltı</entityname.Manual_Wheezing>
+  <entityname.Manual_Weakness>Tıbbi Asistan: Zayıflık</entityname.Manual_Weakness>
+  <entityname.Manual_Fever>Tıbbi Asistan: Ateş</entityname.Manual_Fever>
+  <entityname.Manual_Sweating>Tıbbi Asistan: Terleme</entityname.Manual_Sweating>
+  <entityname.Manual_Bloating>Tıbbi Asistan: Şişkinlik</entityname.Manual_Bloating>
+  <entityname.Manual_Inflammation>Tıbbi Asistan: Enflamasyon</entityname.Manual_Inflammation>
+  <entityname.Manual_Jaundice>Tıbbi Asistan: Sarılık</entityname.Manual_Jaundice>
+  <entityname.Manual_Abdominal_Discomfort>Tıbbi Asistan: Karın Rahatsızlığı</entityname.Manual_Abdominal_Discomfort>
+  <entityname.Manual_Headache>Tıbbi Asistan: Baş ağrısı</entityname.Manual_Headache>
+  <entityname.Manual_Craving>Tıbbi Asistan: Arzu</entityname.Manual_Craving>
+  <entityname.Manual_Palpitations>Tıbbi Asistan: Çarpıntılar</entityname.Manual_Palpitations>
+  <entityname.Manual_Spasms>Tıbbi Asistan: Kasılmalar</entityname.Manual_Spasms>
+  <entityname.Manual_Neurotrauma>Tıbbi Asistan: Nörotravma</entityname.Manual_Neurotrauma>
+  <entityname.Manual_Stroke>Tıbbi Asistan: Inme</entityname.Manual_Stroke>
+  <entityname.Manual_Withdrawal>Tıbbi Asistan: Çekilme</entityname.Manual_Withdrawal>
+  <entityname.Manual_Opiate_Overdose>Tıbbi Asistan: Opium Aşırı Doz</entityname.Manual_Opiate_Overdose>
+  <entityname.Manual_Seizure>Tıbbi Asistan: Nöbet</entityname.Manual_Seizure>
+  <entityname.Manual_Unconsciousness>Tıbbi Asistan: Bilinçsizlik</entityname.Manual_Unconsciousness>
+  <entityname.Manual_Coma>Tıbbi Asistan: Koma</entityname.Manual_Coma>
+  <entityname.Manual_Spinal_Cord_Injury>Tıbbi Asistan: Omurilik Yaralanması</entityname.Manual_Spinal_Cord_Injury>
+  <entityname.Manual_Concussion>Tıbbi Asistan: Sarsıntı</entityname.Manual_Concussion>
+  <entityname.Manual_Respiratory_Arrest>Tıbbi Asistan: Solunum Durdurması</entityname.Manual_Respiratory_Arrest>
+  <entityname.Manual_Lung_Damage>Tıbbi Asistan: Akciğer Hasarı</entityname.Manual_Lung_Damage>
+  <entityname.Manual_Pneumothorax>Tıbbi Asistan: Pnömotoraks</entityname.Manual_Pneumothorax>
+  <entityname.Manual_Hyperventilation>Tıbbi Asistan: Hiperventilasyon</entityname.Manual_Hyperventilation>
+  <entityname.Manual_Hypoventilation>Tıbbi Asistan: Hipoventilasyon</entityname.Manual_Hypoventilation>
+  <entityname.Manual_Oxygen_Low>Tıbbi Asistan: Oksijen Düşük</entityname.Manual_Oxygen_Low>
+  <entityname.Manual_Cardiac_Tamponade>Tıbbi Asistan: Kardiyak Tamponad</entityname.Manual_Cardiac_Tamponade>
+  <entityname.Manual_Cardiac_Arrest>Tıbbi Asistan: Kalp Durdurma</entityname.Manual_Cardiac_Arrest>
+  <entityname.Manual_Heart_Attack>Tıbbi Asistan: Kalp krizi</entityname.Manual_Heart_Attack>
+  <entityname.Manual_Heart_Damage>Tıbbi Asistan: Kalp Hasarı</entityname.Manual_Heart_Damage>
+  <entityname.Manual_Irregular_Heartbeat>Tıbbi Asistan: Düzensiz Kalp Atışı</entityname.Manual_Irregular_Heartbeat>
+  <entityname.Manual_Fibrillation>Tıbbi Asistan: Fibrilasyon</entityname.Manual_Fibrillation>
+  <entityname.Manual_Aortic_Rupture>Tıbbi Asistan: Aortik Yırtılma</entityname.Manual_Aortic_Rupture>
+  <entityname.Manual_Internal_Bleeding>Tıbbi Asistan: İç Kanama</entityname.Manual_Internal_Bleeding>
+  <entityname.Manual_Radiation_Sickness>Tıbbi Asistan: Radyasyon Hastalığı</entityname.Manual_Radiation_Sickness>
+  <entityname.Manual_Kidney_Damage>Tıbbi Asistan: Böbrek Hasarı</entityname.Manual_Kidney_Damage>
+  <entityname.Manual_Liver_Damage>Tıbbi Asistan: Karaciğer Hasarı</entityname.Manual_Liver_Damage>
+  <entityname.Manual_Morbusine>Tıbbi Asistan: Morbusine</entityname.Manual_Morbusine>
+  <entityname.Manual_Cyanide_Poisoning>Tıbbi Asistan: Siyanoz Zehirlenmesi</entityname.Manual_Cyanide_Poisoning>
+  <entityname.Manual_Vanilla_Organ_Damage>Tıbbi Asistan: Vanilya Organ Hasarı</entityname.Manual_Vanilla_Organ_Damage>
+  <entityname.Manual_Analgesia>Tıbbi Asistan: Analjezi</entityname.Manual_Analgesia>
+  <entityname.Manual_Anesthesia>Tıbbi Asistan: Anestezi</entityname.Manual_Anesthesia>
+  <entityname.Manual_Abdominal_Pain>Tıbbi Asistan: Karın Ağrısı</entityname.Manual_Abdominal_Pain>
+  <entityname.Manual_Vomiting>Tıbbi Asistan: Kusma</entityname.Manual_Vomiting>
+  <entityname.Manual_Nausea>Tıbbi Asistan: Mide bulantısı</entityname.Manual_Nausea>
+  <entityname.Manual_Chest_Pain>Tıbbi Asistan: Göğüs Ağrısı</entityname.Manual_Chest_Pain>
+  <entityname.Manual_Traumatic_Amputation>Tıbbi Asistan: Travmatik Amputasyon</entityname.Manual_Traumatic_Amputation>
+  <entityname.Manual_Gangrene>Tıbbi Asistan: Gangren</entityname.Manual_Gangrene>
+  <entityname.Manual_Surgical_Amputation>Tıbbi Asistan: Cerrahi Amputasyon</entityname.Manual_Surgical_Amputation>
+  <entityname.Manual_Intense_Pain>Tıbbi Asistan: Yoğun Ağrı</entityname.Manual_Intense_Pain>
+  <entityname.Manual_Bone_Death>Tıbbi Asistan: Kemik Ölümü</entityname.Manual_Bone_Death>
+  <entityname.Manual_Bone_Damage>Tıbbi Asistan: Kemik Hasarı</entityname.Manual_Bone_Damage>
+  <entityname.Manual_Fractures>Tıbbi Asistan: Kırıklar</entityname.Manual_Fractures>
+  <entityname.Manual_Dislocations>Tıbbi Asistan: Çıkıklar</entityname.Manual_Dislocations>
+  <entityname.Manual_Arterial_Bleeding>Tıbbi Asistan: Arteriyel Kanama</entityname.Manual_Arterial_Bleeding>
+  <entityname.Manual_Internal_Damage>Tıbbi Asistan: Dahili Hasar</entityname.Manual_Internal_Damage>
+  <entityname.Manual_Burns>Tıbbi Asistan: Yanıklar</entityname.Manual_Burns>
+  <entityname.Manual_Infected_Wounds>Tıbbi Asistan: Enfekte Yaralar</entityname.Manual_Infected_Wounds>
+  <entityname.Manual_Foreign_Bodies>Tıbbi Asistan: Yabancı cisimler</entityname.Manual_Foreign_Bodies>
+  <entityname.Manual_Wounds>Tıbbi Asistan: Yaralar</entityname.Manual_Wounds>
+  <entityname.Manual_Ointmented>Tıbbi Asistan: Merhemli</entityname.Manual_Ointmented>
+  <entityname.Manual_Bandaged>Tıbbi Asistan: Bandajlı</entityname.Manual_Bandaged>
+  <entityname.Manual_Plaster_Cast>Tıbbi Asistan: Alçı dökümü</entityname.Manual_Plaster_Cast>
+  <entityname.Manual_Hypoxemia>Tıbbi Asistan: Hipoksemi</entityname.Manual_Hypoxemia>
+  <entityname.Manual_Sepsis>Tıbbi Asistan: Sepsis</entityname.Manual_Sepsis>
+  <entityname.Manual_Hemotransfusion_Shock>Tıbbi Asistan: Hemotransfüzyon Şoku</entityname.Manual_Hemotransfusion_Shock>
+  <entityname.Manual_Blood_Loss>Tıbbi Asistan: Kan kaybı</entityname.Manual_Blood_Loss>
+  <entityname.Manual_Hypotension>Tıbbi Asistan: Hipotansiyon</entityname.Manual_Hypotension>
+  <entityname.Manual_Hypertension>Tıbbi Asistan: Hipertansiyon</entityname.Manual_Hypertension>
+  <entityname.Manual_Acidosis>Tıbbi Asistan: Asidoz</entityname.Manual_Acidosis>
+  <entityname.Manual_Alkalosis>Tıbbi Asistan: Alkaloz</entityname.Manual_Alkalosis>
+  <entityname.Manual_Adrenaline>Tıbbi Asistan: Adrenalin</entityname.Manual_Adrenaline>
+  <entityname.Manual_AED>Tıbbi Asistan: AED: BAE Dirhemi</entityname.Manual_AED>
+  <entityname.Manual_Alien_Blood>Tıbbi Asistan: Uzaylı Kanı</entityname.Manual_Alien_Blood>
+  <entityname.Manual_Ambubag>Tıbbi Asistan: Ambu çantası</entityname.Manual_Ambubag>
+  <entityname.Manual_Anaparalyzant>Tıbbi Asistan: Anaparalizan</entityname.Manual_Anaparalyzant>
+  <entityname.Manual_Antibiotic_Glue>Tıbbi Asistan: Antibiyotik Yapıştırıcı</entityname.Manual_Antibiotic_Glue>
+  <entityname.Manual_Antibiotic_Ointment>Tıbbi Asistan: Antibiyotik Merhem</entityname.Manual_Antibiotic_Ointment>
+  <entityname.Manual_Antiseptic>Tıbbi Asistan: Antiseptik</entityname.Manual_Antiseptic>
+  <entityname.Manual_Antiseptic_Sprayer>Tıbbi Asistan: Antiseptik Püskürtücü</entityname.Manual_Antiseptic_Sprayer>
+  <entityname.Manual_Autopulse>Tıbbi Asistan: Otomatik nabız pompası</entityname.Manual_Autopulse>
+  <entityname.Manual_Azathioprine>Tıbbi Asistan: Azatiyoprin</entityname.Manual_Azathioprine>
+  <entityname.Manual_Bandages>Tıbbi Asistan: Sargı bezleri</entityname.Manual_Bandages>
+  <entityname.Manual_Blood_Packs>Tıbbi Asistan: Kan Paketleri</entityname.Manual_Blood_Packs>
+  <entityname.Manual_Blue_Shark>Tıbbi Asistan: Mavi Köpekbalığı</entityname.Manual_Blue_Shark>
+  <entityname.Manual_Body_Bag>Tıbbi Asistan: Cenaze Torbası</entityname.Manual_Body_Bag>
+  <entityname.Manual_Broad-spectrum_Antibiotics>Tıbbi Asistan: Geniş spektrumlu antibiyotikler</entityname.Manual_Broad-spectrum_Antibiotics>
+  <entityname.Manual_Combat_Stimulant>Tıbbi Asistan: Savaş Uyarıcısı</entityname.Manual_Combat_Stimulant>
+  <entityname.Manual_Deusizine>Tıbbi Asistan: Tanrısızlık</entityname.Manual_Deusizine>
+  <entityname.Manual_Diving_Knife>Tıbbi Asistan: Dalış Bıçağı</entityname.Manual_Diving_Knife>
+  <entityname.Manual_Drainage>Tıbbi Asistan: Drenaj</entityname.Manual_Drainage>
+  <entityname.Manual_Empty_Blood_Pack>Tıbbi Asistan: Boş Kan Paketi</entityname.Manual_Empty_Blood_Pack>
+  <entityname.Manual_Endovascular_Balloon>Tıbbi Asistan: Endovasküler Balon</entityname.Manual_Endovascular_Balloon>
+  <entityname.Manual_Fentanyl>Tıbbi Asistan: Fentanil</entityname.Manual_Fentanyl>
+  <entityname.Manual_Gypsum>Tıbbi Asistan: Alçı taşı</entityname.Manual_Gypsum>
+  <entityname.Manual_Health_Scanner>Tıbbi Asistan: Sağlık Tarayıcısı</entityname.Manual_Health_Scanner>
+  <entityname.Manual_Hematology_Analyzer>Tıbbi Asistan: Hematoloji Analizörü</entityname.Manual_Hematology_Analyzer>
+  <entityname.Manual_Hemostat>Tıbbi Asistan: Hemostat: Kanama durdurucu alet</entityname.Manual_Hemostat>
+  <entityname.Manual_Hyperzine>Tıbbi Asistan: Hyperzin</entityname.Manual_Hyperzine>
+  <entityname.Manual_Liquid_Oxygenite>Tıbbi Asistan: Sıvı Oksijenit</entityname.Manual_Liquid_Oxygenite>
+  <entityname.Manual_Mannitol>Tıbbi Asistan: Mannitol</entityname.Manual_Mannitol>
+  <entityname.Manual_Manual_Defibrillator>Tıbbi Asistan: Manuel Defibrilatör</entityname.Manual_Manual_Defibrillator>
+  <entityname.Manual_Medical_Stent>Tıbbi Asistan: Tıbbi Stent</entityname.Manual_Medical_Stent>
+  <entityname.Manual_Methamphetamine>Tıbbi Asistan: Metamfetamin</entityname.Manual_Methamphetamine>
+  <entityname.Manual_Morphine>Tıbbi Asistan: Morfine</entityname.Manual_Morphine>
+  <entityname.Manual_Naloxone>Tıbbi Asistan: Nalokson</entityname.Manual_Naloxone>
+  <entityname.Manual_Needle>Tıbbi Asistan: İğne</entityname.Manual_Needle>
+  <entityname.Manual_Nitroglycerin>Tıbbi Asistan: Nitrogliserin</entityname.Manual_Nitroglycerin>
+  <entityname.Manual_Opium>Tıbbi Asistan: Afyon</entityname.Manual_Opium>
+  <entityname.Manual_Organ_Procurement_Scalpels>Tıbbi Asistan: Organ Nakli Bıçakları</entityname.Manual_Organ_Procurement_Scalpels>
+  <entityname.Manual_Osteosynthesis_Implants>Tıbbi Asistan: Osteosentez İmplantları</entityname.Manual_Osteosynthesis_Implants>
+  <entityname.Manual_Plastiseal>Tıbbi Asistan: Plastiseal (Plastik Kaplama)</entityname.Manual_Plastiseal>
+  <entityname.Manual_Propofol>Tıbbi Asistan: Propofol</entityname.Manual_Propofol>
+  <entityname.Manual_Raptor_Bane_Extract>Tıbbi Asistan: Raptor Bane Özütü</entityname.Manual_Raptor_Bane_Extract>
+  <entityname.Manual_Retractors>Tıbbi Asistan: Gerdiriciler</entityname.Manual_Retractors>
+  <entityname.Manual_Ringer_Solution>Tıbbi Asistan: Ringer Çözeltisi</entityname.Manual_Ringer_Solution>
+  <entityname.Manual_Saline>Tıbbi Asistan: İzotonik çözelti</entityname.Manual_Saline>
+  <entityname.Manual_Scalpel>Tıbbi Asistan: Cerrah bıçağı</entityname.Manual_Scalpel>
+  <entityname.Manual_Sodium_Nitroprusside>Tıbbi Asistan: Sodyum Nitroprusid</entityname.Manual_Sodium_Nitroprusside>
+  <entityname.Manual_Spinal_Cord_Implants>Tıbbi Asistan: Omurilik İmplantları</entityname.Manual_Spinal_Cord_Implants>
+  <entityname.Manual_Stasis_Bag>Tıbbi Asistan: Durgunluk Çantası</entityname.Manual_Stasis_Bag>
+  <entityname.Manual_Streptokinase>Tıbbi Asistan: Streptokinaz</entityname.Manual_Streptokinase>
+  <entityname.Manual_Surgery_Table>Tıbbi Asistan: Cerrahi Masası</entityname.Manual_Surgery_Table>
+  <entityname.Manual_Surgical_Drill>Tıbbi Asistan: Cerrahi Matkap</entityname.Manual_Surgical_Drill>
+  <entityname.Manual_Surgical_Saw>Tıbbi Asistan: Cerrahi Testere</entityname.Manual_Surgical_Saw>
+  <entityname.Manual_Sutures>Tıbbi Asistan: Dikişler</entityname.Manual_Sutures>
+  <entityname.Manual_Thiamine>Tıbbi Asistan: Tiamin</entityname.Manual_Thiamine>
+  <entityname.Manual_Tourniquet>Tıbbi Asistan: Tornike</entityname.Manual_Tourniquet>
+  <entityname.Manual_Trauma_Shears>Tıbbi Asistan: Travma Makası</entityname.Manual_Trauma_Shears>
+  <entityname.Manual_Tweezers>Tıbbi Asistan: Cımbız</entityname.Manual_Tweezers>
+  <entityname.Manual_Wrench>Tıbbi Asistan: Anahtar (or İspanyo)</entityname.Manual_Wrench>
+  <entityname.Manual_Traumatic_Shock>Tıbbi Asistan: Travmatik Şok</entityname.Manual_Traumatic_Shock>
+  <entityname.Manual_Surgery_Incision>Tıbbi Asistan: Cerrahi Kesim</entityname.Manual_Surgery_Incision>
+  <entityname.Manual_Clamped_Bleeding>Tıbbi Asistan: Sıkıştırılmış Kanama</entityname.Manual_Clamped_Bleeding>
+  <entityname.Manual_Retracted_Skin>Tıbbi Asistan: Gerilmiş Cilt</entityname.Manual_Retracted_Skin>
+  <entityname.Manual_Drilled_Bones>Tıbbi Asistan: Delinmiş Kemikler</entityname.Manual_Drilled_Bones>
+  <entityname.Manual_Sawed_Bones>Tıbbi Asistan: Testereyle Kesilmiş Kemikler</entityname.Manual_Sawed_Bones>
+  <entityname.Manual_Open_Close_Surgery>Tıbbi Asistan: Açık Kapalı Cerrahi</entityname.Manual_Open_Close_Surgery>
+  <entityname.Manual_Osteosynthetic_Surgery>Tıbbi Asistan: Osteosentetik Cerrahi</entityname.Manual_Osteosynthetic_Surgery>
+  <entityname.Manual_Aortic_Rupture_Surgery>Tıbbi Asistan: Aortik Rüptür Cerrahisi</entityname.Manual_Aortic_Rupture_Surgery>
+  <entityname.Manual_Amputation_Surgery>Tıbbi Asistan: Amputasyon Cerrahisi</entityname.Manual_Amputation_Surgery>
+  <entityname.Manual_Organ_Transplant_Surgery>Tıbbi Asistan: Organ Nakli Cerrahisi</entityname.Manual_Organ_Transplant_Surgery>
+  <entityname.Manual_Surgical_Drapes>Tıbbi Asistan: Cerrahi Örtüler</entityname.Manual_Surgical_Drapes>
+  <entityname.Manual_Surgical_Mask>Tıbbi Asistan: Cerrahi Maske</entityname.Manual_Surgical_Mask>
+  <entityname.Manual_Surgeon_Clothes>Tıbbi Asistan: Cerrah Kıyafetleri</entityname.Manual_Surgeon_Clothes>
+  <entityname.Manual_Surgical_Infection>Tıbbi Asistan: Cerrahi Enfeksiyon</entityname.Manual_Surgical_Infection>
+  <entityname.Manual_Mannitol_Plus>Tıbbi Asistan: Mannitol Artı</entityname.Manual_Mannitol_Plus>
+  <entityname.Manual_Experimental_Treatment>Tıbbi Asistan: Deneysel Tedavi</entityname.Manual_Experimental_Treatment>
+  <entityname.Manual_Triage_Card>Tıbbi Asistan: Triage Kartı</entityname.Manual_Triage_Card>
+  <entityname.Manual_Brain_Jar>Tıbbi Asistan: Beyin Kavanozu</entityname.Manual_Brain_Jar>
+  <entityname.Manual_Artificial_Brain>Tıbbi Asistan: Yapay Beyin</entityname.Manual_Artificial_Brain>
+  <entityname.Manual_Medical_Misconduct>Tıbbi Asistan: Tıbbi İhmalkarlık</entityname.Manual_Medical_Misconduct>
+  <entityname.Manual_Cybernetic_Arm>Tıbbi Asistan: Sibernetik Kol</entityname.Manual_Cybernetic_Arm>
+  <entityname.Manual_Cybernetic_Leg>Tıbbi Asistan: Cybernetik Bacak</entityname.Manual_Cybernetic_Leg>
+  <entityname.Manual_Cyberarm>Tıbbi Asistan: Cyberkol</entityname.Manual_Cyberarm>
+  <entityname.Manual_Cyberleg>Tıbbi Asistan: Cyberbacak</entityname.Manual_Cyberleg>
+  <entityname.Manual_Damaged_Electronics>Tıbbi Asistan: Hasarlı Elektronikler</entityname.Manual_Damaged_Electronics>
+  <entityname.Manual_Bent_Metal>Tıbbi Asistan: Bükülmüş Metal</entityname.Manual_Bent_Metal>
+  <entityname.Manual_Loose_Screws>Tıbbi Asistan: Geçersiz Vidalar</entityname.Manual_Loose_Screws>
+  <entityname.Manual_Material_Loss>Tıbbi Asistan: Malzeme kaybı</entityname.Manual_Material_Loss>
+  <entityname.Manual_FPGA_Circuit>Tıbbi Asistan: FPGA Devresi</entityname.Manual_FPGA_Circuit>
+  <entityname.Manual_Welding_Tool>Tıbbi Asistan: Kaynak Aracı</entityname.Manual_Welding_Tool>
+  <entityname.Manual_Screwdriver>Tıbbi Asistan: Tornavida</entityname.Manual_Screwdriver>
+  <entityname.Manual_Steel_Bar>Tıbbi Asistan: Çelik Çubuk</entityname.Manual_Steel_Bar>
+  <entityname.Manual_Start_Page>Tıbbi Asistan: Başlangıç Sayfası</entityname.Manual_Start_Page>
+  <entityname.Manual_Information>Tıbbi Asistan: Bilgi</entityname.Manual_Information>
+  <entityname.Manual_Symptoms>Tıbbi Asistan: Belirtiler</entityname.Manual_Symptoms>
+  <entityname.Manual_HeadBrain>Tıbbi Asistan: BaşBeyin</entityname.Manual_HeadBrain>
+  <entityname.Manual_Lungs>Tıbbi Asistan: Akciğerler</entityname.Manual_Lungs>
+  <entityname.Manual_Heart>Tıbbi Asistan: Kalp</entityname.Manual_Heart>
+  <entityname.Manual_Torso>Tıbbi Asistan: Gövde</entityname.Manual_Torso>
+  <entityname.Manual_Extremities>Tıbbi Asistan: Uçlar</entityname.Manual_Extremities>
+  <entityname.Manual_Bones>Tıbbi Asistan: Kemikler</entityname.Manual_Bones>
+  <entityname.Manual_Any_Bodypart>Tıbbi Asistan: Herhangi bir Vücut Bölümü</entityname.Manual_Any_Bodypart>
+  <entityname.Manual_Blood>Tıbbi Asistan: Kan</entityname.Manual_Blood>
+  <entityname.Manual_Items_Part_1>Tıbbi Asistan: Öğeler Bölüm 1</entityname.Manual_Items_Part_1>
+  <entityname.Manual_Items_Part_2>Tıbbi Asistan: Öğeler Bölüm 2</entityname.Manual_Items_Part_2>
+  <entityname.Manual_Items_Part_3>Tıbbi Asistan: Öğeler Bölüm 3</entityname.Manual_Items_Part_3>
+  <entityname.Manual_Items_Part_4>Tıbbi Asistan: Öğeler Bölüm 4</entityname.Manual_Items_Part_4>
+  <entityname.Manual_Surgery>Tıbbi Asistan: Cerrahi</entityname.Manual_Surgery>
+  <entityname.Manual_Procedures>Tıbbi Asistan: İşlemler</entityname.Manual_Procedures>
+  <entityname.Manual_Expansion>Tıbbi Asistan: Genişleme</entityname.Manual_Expansion>
+  <Manual_Button_FAQ>SSS</Manual_Button_FAQ>
+  <Manual_Button_Med_Kit_Recommendations>Tıbbi Kiti Önerileri</Manual_Button_Med_Kit_Recommendations>
+  <Manual_Button_How_To_Diagnose>Nasıl Teşhis Edilir</Manual_Button_How_To_Diagnose>
+  <Manual_Button_Order_of_Treatments>Tedavi Sırası</Manual_Button_Order_of_Treatments>
+  <Manual_Button_The_5_Commandments_of_Neurotrauma>Nörotravmanın 5 Emri</Manual_Button_The_5_Commandments_of_Neurotrauma>
+  <Manual_Button_Vomiting_Blood>Kan Kusma</Manual_Button_Vomiting_Blood>
+  <Manual_Button_Pale_Skin>Soluk Cilt</Manual_Button_Pale_Skin>
+  <Manual_Button_Shortness_of_Breath>Nefes Darlığı</Manual_Button_Shortness_of_Breath>
+  <Manual_Button_Cough>Öksürük</Manual_Button_Cough>
+  <Manual_Button_Increased_Heartrate>Artmış kalp atış hızı</Manual_Button_Increased_Heartrate>
+  <Manual_Button_Confusion>Karışıklık</Manual_Button_Confusion>
+  <Manual_Button_Lightheadedness>Baş dönmesi</Manual_Button_Lightheadedness>
+  <Manual_Button_Blurred_Vision>Bulanık Görüş</Manual_Button_Blurred_Vision>
+  <Manual_Button_Leg_Swelling>Bacak Şişmesi</Manual_Button_Leg_Swelling>
+  <Manual_Button_Wheezing>Hırıltı</Manual_Button_Wheezing>
+  <Manual_Button_Weakness>Zayıflık</Manual_Button_Weakness>
+  <Manual_Button_Fever>Ateş</Manual_Button_Fever>
+  <Manual_Button_Sweating>Terleme</Manual_Button_Sweating>
+  <Manual_Button_Bloating>Şişkinlik</Manual_Button_Bloating>
+  <Manual_Button_Inflammation>Enflamasyon</Manual_Button_Inflammation>
+  <Manual_Button_Jaundice>Sarılık</Manual_Button_Jaundice>
+  <Manual_Button_Abdominal_Discomfort>Karın Rahatsızlığı</Manual_Button_Abdominal_Discomfort>
+  <Manual_Button_Headache>Baş ağrısı</Manual_Button_Headache>
+  <Manual_Button_Craving>Arzu</Manual_Button_Craving>
+  <Manual_Button_Palpitations>Çarpıntılar</Manual_Button_Palpitations>
+  <Manual_Button_Spasms>Kasılmalar</Manual_Button_Spasms>
+  <Manual_Button_Neurotrauma>Nörotravma</Manual_Button_Neurotrauma>
+  <Manual_Button_Stroke>Inme</Manual_Button_Stroke>
+  <Manual_Button_Withdrawal>Çekilme</Manual_Button_Withdrawal>
+  <Manual_Button_Opiate_Overdose>Opium Aşırı Doz</Manual_Button_Opiate_Overdose>
+  <Manual_Button_Seizure>Nöbet</Manual_Button_Seizure>
+  <Manual_Button_Unconsciousness>Bilinçsizlik</Manual_Button_Unconsciousness>
+  <Manual_Button_Coma>Koma</Manual_Button_Coma>
+  <Manual_Button_Spinal_Cord_Injury>Omurilik Yaralanması</Manual_Button_Spinal_Cord_Injury>
+  <Manual_Button_Concussion>Sarsıntı</Manual_Button_Concussion>
+  <Manual_Button_Respiratory_Arrest>Solunum Durdurması</Manual_Button_Respiratory_Arrest>
+  <Manual_Button_Lung_Damage>Akciğer Hasarı</Manual_Button_Lung_Damage>
+  <Manual_Button_Pneumothorax>Pnömotoraks</Manual_Button_Pneumothorax>
+  <Manual_Button_Hyperventilation>Hiperventilasyon</Manual_Button_Hyperventilation>
+  <Manual_Button_Hypoventilation>Hipoventilasyon</Manual_Button_Hypoventilation>
+  <Manual_Button_Oxygen_Low>Oksijen Düşük</Manual_Button_Oxygen_Low>
+  <Manual_Button_Cardiac_Tamponade>Kardiyak Tamponad</Manual_Button_Cardiac_Tamponade>
+  <Manual_Button_Cardiac_Arrest>Kalp Durdurma</Manual_Button_Cardiac_Arrest>
+  <Manual_Button_Heart_Attack>Kalp krizi</Manual_Button_Heart_Attack>
+  <Manual_Button_Heart_Damage>Kalp Hasarı</Manual_Button_Heart_Damage>
+  <Manual_Button_Irregular_Heartbeat>Düzensiz Kalp Atışı</Manual_Button_Irregular_Heartbeat>
+  <Manual_Button_Fibrillation>Fibrilasyon</Manual_Button_Fibrillation>
+  <Manual_Button_Aortic_Rupture>Aortik Yırtılma</Manual_Button_Aortic_Rupture>
+  <Manual_Button_Internal_Bleeding>İç Kanama</Manual_Button_Internal_Bleeding>
+  <Manual_Button_Radiation_Sickness>Radyasyon Hastalığı</Manual_Button_Radiation_Sickness>
+  <Manual_Button_Kidney_Damage>Böbrek Hasarı</Manual_Button_Kidney_Damage>
+  <Manual_Button_Liver_Damage>Karaciğer Hasarı</Manual_Button_Liver_Damage>
+  <Manual_Button_Morbusine>Morbusine</Manual_Button_Morbusine>
+  <Manual_Button_Cyanide_Poisoning>Siyanoz Zehirlenmesi</Manual_Button_Cyanide_Poisoning>
+  <Manual_Button_Vanilla_Organ_Damage>Vanilya Organ Hasarı</Manual_Button_Vanilla_Organ_Damage>
+  <Manual_Button_Analgesia>Analjezi</Manual_Button_Analgesia>
+  <Manual_Button_Anesthesia>Anestezi</Manual_Button_Anesthesia>
+  <Manual_Button_Abdominal_Pain>Karın Ağrısı</Manual_Button_Abdominal_Pain>
+  <Manual_Button_Vomiting>Kusma</Manual_Button_Vomiting>
+  <Manual_Button_Nausea>Mide bulantısı</Manual_Button_Nausea>
+  <Manual_Button_Chest_Pain>Göğüs Ağrısı</Manual_Button_Chest_Pain>
+  <Manual_Button_Traumatic_Amputation>Travmatik Amputasyon</Manual_Button_Traumatic_Amputation>
+  <Manual_Button_Gangrene>Gangren</Manual_Button_Gangrene>
+  <Manual_Button_Surgical_Amputation>Cerrahi Amputasyon</Manual_Button_Surgical_Amputation>
+  <Manual_Button_Intense_Pain>Yoğun Ağrı</Manual_Button_Intense_Pain>
+  <Manual_Button_Bone_Death>Kemik Ölümü</Manual_Button_Bone_Death>
+  <Manual_Button_Bone_Damage>Kemik Hasarı</Manual_Button_Bone_Damage>
+  <Manual_Button_Fractures>Kırıklar</Manual_Button_Fractures>
+  <Manual_Button_Dislocations>Çıkıklar</Manual_Button_Dislocations>
+  <Manual_Button_Arterial_Bleeding>Arteriyel Kanama</Manual_Button_Arterial_Bleeding>
+  <Manual_Button_Internal_Damage>Dahili Hasar</Manual_Button_Internal_Damage>
+  <Manual_Button_Burns>Yanıklar</Manual_Button_Burns>
+  <Manual_Button_Infected_Wounds>Enfekte Yaralar</Manual_Button_Infected_Wounds>
+  <Manual_Button_Foreign_Bodies>Yabancı cisimler</Manual_Button_Foreign_Bodies>
+  <Manual_Button_Wounds>Yaralar</Manual_Button_Wounds>
+  <Manual_Button_Ointmented>Merhemli</Manual_Button_Ointmented>
+  <Manual_Button_Bandaged>Bandajlı</Manual_Button_Bandaged>
+  <Manual_Button_Plaster_Cast>Alçı dökümü</Manual_Button_Plaster_Cast>
+  <Manual_Button_Hypoxemia>Hipoksemi</Manual_Button_Hypoxemia>
+  <Manual_Button_Sepsis>Sepsis</Manual_Button_Sepsis>
+  <Manual_Button_Hemotransfusion_Shock>Hemotransfüzyon Şoku</Manual_Button_Hemotransfusion_Shock>
+  <Manual_Button_Blood_Loss>Kan kaybı</Manual_Button_Blood_Loss>
+  <Manual_Button_Hypotension>Hipotansiyon</Manual_Button_Hypotension>
+  <Manual_Button_Hypertension>Hipertansiyon</Manual_Button_Hypertension>
+  <Manual_Button_Acidosis>Asidoz</Manual_Button_Acidosis>
+  <Manual_Button_Alkalosis>Alkaloz</Manual_Button_Alkalosis>
+  <Manual_Button_Adrenaline>Adrenalin</Manual_Button_Adrenaline>
+  <Manual_Button_AED>AED: BAE Dirhemi</Manual_Button_AED>
+  <Manual_Button_Alien_Blood>Uzaylı Kanı</Manual_Button_Alien_Blood>
+  <Manual_Button_Ambubag>Ambu çantası</Manual_Button_Ambubag>
+  <Manual_Button_Anaparalyzant>Anaparalizan</Manual_Button_Anaparalyzant>
+  <Manual_Button_Antibiotic_Glue>Antibiyotik Yapıştırıcı</Manual_Button_Antibiotic_Glue>
+  <Manual_Button_Antibiotic_Ointment>Antibiyotik Merhem</Manual_Button_Antibiotic_Ointment>
+  <Manual_Button_Antiseptic>Antiseptik</Manual_Button_Antiseptic>
+  <Manual_Button_Antiseptic_Sprayer>Antiseptik Püskürtücü</Manual_Button_Antiseptic_Sprayer>
+  <Manual_Button_Autopulse>Otomatik nabız pompası</Manual_Button_Autopulse>
+  <Manual_Button_Azathioprine>Azatiyoprin</Manual_Button_Azathioprine>
+  <Manual_Button_Bandages>Sargı bezleri</Manual_Button_Bandages>
+  <Manual_Button_Blood_Packs>Kan Paketleri</Manual_Button_Blood_Packs>
+  <Manual_Button_Blue_Shark>Mavi Köpekbalığı</Manual_Button_Blue_Shark>
+  <Manual_Button_Body_Bag>Cenaze Torbası</Manual_Button_Body_Bag>
+  <Manual_Button_Broad-spectrum_Antibiotics>Geniş spektrumlu antibiyotikler</Manual_Button_Broad-spectrum_Antibiotics>
+  <Manual_Button_Combat_Stimulant>Savaş Uyarıcısı</Manual_Button_Combat_Stimulant>
+  <Manual_Button_Deusizine>Tanrısızlık</Manual_Button_Deusizine>
+  <Manual_Button_Diving_Knife>Dalış Bıçağı</Manual_Button_Diving_Knife>
+  <Manual_Button_Drainage>Drenaj</Manual_Button_Drainage>
+  <Manual_Button_Empty_Blood_Pack>Boş Kan Paketi</Manual_Button_Empty_Blood_Pack>
+  <Manual_Button_Endovascular_Balloon>Endovasküler Balon</Manual_Button_Endovascular_Balloon>
+  <Manual_Button_Fentanyl>Fentanil</Manual_Button_Fentanyl>
+  <Manual_Button_Gypsum>Alçı taşı</Manual_Button_Gypsum>
+  <Manual_Button_Health_Scanner>Sağlık Tarayıcısı</Manual_Button_Health_Scanner>
+  <Manual_Button_Hematology_Analyzer>Hematoloji Analizörü</Manual_Button_Hematology_Analyzer>
+  <Manual_Button_Hemostat>Hemostat: Kanama durdurucu alet</Manual_Button_Hemostat>
+  <Manual_Button_Hyperzine>Hyperzin</Manual_Button_Hyperzine>
+  <Manual_Button_Liquid_Oxygenite>Sıvı Oksijenit</Manual_Button_Liquid_Oxygenite>
+  <Manual_Button_Mannitol>Mannitol</Manual_Button_Mannitol>
+  <Manual_Button_Manual_Defibrillator>Manuel Defibrilatör</Manual_Button_Manual_Defibrillator>
+  <Manual_Button_Medical_Stent>Tıbbi Stent</Manual_Button_Medical_Stent>
+  <Manual_Button_Methamphetamine>Metamfetamin</Manual_Button_Methamphetamine>
+  <Manual_Button_Morphine>Morfine</Manual_Button_Morphine>
+  <Manual_Button_Naloxone>Nalokson</Manual_Button_Naloxone>
+  <Manual_Button_Needle>İğne</Manual_Button_Needle>
+  <Manual_Button_Nitroglycerin>Nitrogliserin</Manual_Button_Nitroglycerin>
+  <Manual_Button_Opium>Afyon</Manual_Button_Opium>
+  <Manual_Button_Organ_Procurement_Scalpels>Organ Nakli Bıçakları</Manual_Button_Organ_Procurement_Scalpels>
+  <Manual_Button_Osteosynthesis_Implants>Osteosentez İmplantları</Manual_Button_Osteosynthesis_Implants>
+  <Manual_Button_Plastiseal>Plastiseal (Plastik Kaplama)</Manual_Button_Plastiseal>
+  <Manual_Button_Propofol>Propofol</Manual_Button_Propofol>
+  <Manual_Button_Raptor_Bane_Extract>Raptor Bane Özütü</Manual_Button_Raptor_Bane_Extract>
+  <Manual_Button_Retractors>Gerdiriciler</Manual_Button_Retractors>
+  <Manual_Button_Ringer_Solution>Ringer Çözeltisi</Manual_Button_Ringer_Solution>
+  <Manual_Button_Saline>İzotonik çözelti</Manual_Button_Saline>
+  <Manual_Button_Scalpel>Cerrah bıçağı</Manual_Button_Scalpel>
+  <Manual_Button_Sodium_Nitroprusside>Sodyum Nitroprusid</Manual_Button_Sodium_Nitroprusside>
+  <Manual_Button_Spinal_Cord_Implants>Omurilik İmplantları</Manual_Button_Spinal_Cord_Implants>
+  <Manual_Button_Stasis_Bag>Durgunluk Çantası</Manual_Button_Stasis_Bag>
+  <Manual_Button_Streptokinase>Streptokinaz</Manual_Button_Streptokinase>
+  <Manual_Button_Surgery_Table>Cerrahi Masası</Manual_Button_Surgery_Table>
+  <Manual_Button_Surgical_Drill>Cerrahi Matkap</Manual_Button_Surgical_Drill>
+  <Manual_Button_Surgical_Saw>Cerrahi Testere</Manual_Button_Surgical_Saw>
+  <Manual_Button_Sutures>Dikişler</Manual_Button_Sutures>
+  <Manual_Button_Thiamine>Tiamin</Manual_Button_Thiamine>
+  <Manual_Button_Tourniquet>Tornike</Manual_Button_Tourniquet>
+  <Manual_Button_Trauma_Shears>Travma Makası</Manual_Button_Trauma_Shears>
+  <Manual_Button_Tweezers>Cımbız</Manual_Button_Tweezers>
+  <Manual_Button_Wrench>Anahtar (or İspanyo)</Manual_Button_Wrench>
+  <Manual_Button_Traumatic_Shock>Travmatik Şok</Manual_Button_Traumatic_Shock>
+  <Manual_Button_Surgery_Incision>Cerrahi Kesim</Manual_Button_Surgery_Incision>
+  <Manual_Button_Clamped_Bleeding>Sıkıştırılmış Kanama</Manual_Button_Clamped_Bleeding>
+  <Manual_Button_Retracted_Skin>Gerilmiş Cilt</Manual_Button_Retracted_Skin>
+  <Manual_Button_Drilled_Bones>Delinmiş Kemikler</Manual_Button_Drilled_Bones>
+  <Manual_Button_Sawed_Bones>Testereyle Kesilmiş Kemikler</Manual_Button_Sawed_Bones>
+  <Manual_Button_Open_Close_Surgery>Açık Kapalı Cerrahi</Manual_Button_Open_Close_Surgery>
+  <Manual_Button_Osteosynthetic_Surgery>Osteosentetik Cerrahi</Manual_Button_Osteosynthetic_Surgery>
+  <Manual_Button_Aortic_Rupture_Surgery>Aortik Rüptür Cerrahisi</Manual_Button_Aortic_Rupture_Surgery>
+  <Manual_Button_Amputation_Surgery>Amputasyon Cerrahisi</Manual_Button_Amputation_Surgery>
+  <Manual_Button_Organ_Transplant_Surgery>Organ Nakli Cerrahisi</Manual_Button_Organ_Transplant_Surgery>
+  <Manual_Button_Surgical_Drapes>Cerrahi Örtüler</Manual_Button_Surgical_Drapes>
+  <Manual_Button_Surgical_Mask>Cerrahi Maske</Manual_Button_Surgical_Mask>
+  <Manual_Button_Surgeon_Clothes>Cerrah Kıyafetleri</Manual_Button_Surgeon_Clothes>
+  <Manual_Button_Surgical_Infection>Cerrahi Enfeksiyon</Manual_Button_Surgical_Infection>
+  <Manual_Button_Mannitol_Plus>Mannitol Artı</Manual_Button_Mannitol_Plus>
+  <Manual_Button_Experimental_Treatment>Deneysel Tedavi</Manual_Button_Experimental_Treatment>
+  <Manual_Button_Triage_Card>Triage Kartı</Manual_Button_Triage_Card>
+  <Manual_Button_Brain_Jar>Beyin Kavanozu</Manual_Button_Brain_Jar>
+  <Manual_Button_Artificial_Brain>Yapay Beyin</Manual_Button_Artificial_Brain>
+  <Manual_Button_Medical_Misconduct>Tıbbi İhmalkarlık</Manual_Button_Medical_Misconduct>
+  <Manual_Button_Cybernetic_Arm>Sibernetik Kol</Manual_Button_Cybernetic_Arm>
+  <Manual_Button_Cybernetic_Leg>Cybernetik Bacak</Manual_Button_Cybernetic_Leg>
+  <Manual_Button_Cyberarm>Cyberkol</Manual_Button_Cyberarm>
+  <Manual_Button_Cyberleg>Cyberbacak</Manual_Button_Cyberleg>
+  <Manual_Button_Damaged_Electronics>Hasarlı Elektronikler</Manual_Button_Damaged_Electronics>
+  <Manual_Button_Bent_Metal>Bükülmüş Metal</Manual_Button_Bent_Metal>
+  <Manual_Button_Loose_Screws>Geçersiz Vidalar</Manual_Button_Loose_Screws>
+  <Manual_Button_Material_Loss>Malzeme kaybı</Manual_Button_Material_Loss>
+  <Manual_Button_FPGA_Circuit>FPGA Devresi</Manual_Button_FPGA_Circuit>
+  <Manual_Button_Welding_Tool>Kaynak Aracı</Manual_Button_Welding_Tool>
+  <Manual_Button_Screwdriver>Tornavida</Manual_Button_Screwdriver>
+  <Manual_Button_Steel_Bar>Çelik Çubuk</Manual_Button_Steel_Bar>
+  <Manual_Button_Start_Page>Başlangıç Sayfası</Manual_Button_Start_Page>
+  <Manual_Button_Information>Bilgi</Manual_Button_Information>
+  <Manual_Button_Symptoms>Belirtiler</Manual_Button_Symptoms>
+  <Manual_Button_HeadBrain>BaşBeyin</Manual_Button_HeadBrain>
+  <Manual_Button_Lungs>Akciğerler</Manual_Button_Lungs>
+  <Manual_Button_Heart>Kalp</Manual_Button_Heart>
+  <Manual_Button_Torso>Gövde</Manual_Button_Torso>
+  <Manual_Button_Extremities>Uçlar</Manual_Button_Extremities>
+  <Manual_Button_Bones>Kemikler</Manual_Button_Bones>
+  <Manual_Button_Any_Bodypart>Herhangi bir Vücut Bölümü</Manual_Button_Any_Bodypart>
+  <Manual_Button_Blood>Kan</Manual_Button_Blood>
+  <Manual_Button_Items_Part_1>Öğeler Bölüm 1</Manual_Button_Items_Part_1>
+  <Manual_Button_Items_Part_2>Öğeler Bölüm 2</Manual_Button_Items_Part_2>
+  <Manual_Button_Items_Part_3>Öğeler Bölüm 3</Manual_Button_Items_Part_3>
+  <Manual_Button_Items_Part_4>Öğeler Bölüm 4</Manual_Button_Items_Part_4>
+  <Manual_Button_Surgery>Cerrahi</Manual_Button_Surgery>
+  <Manual_Button_Procedures>İşlemler</Manual_Button_Procedures>
+  <Manual_Button_Expansion>Genişleme</Manual_Button_Expansion>
+</infotexts>

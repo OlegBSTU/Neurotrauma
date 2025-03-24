@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Korean" nowhitespace="true" translatedname="한국어">
+  <Manual_Button_Back>뒤로가기</Manual_Button_Back>
+  <entityname.Manual_FAQ>MedAssistant: 자주 묻는 질문</entityname.Manual_FAQ>
+  <entityname.Manual_Med_Kit_Recommendations>MedAssistant: 의료용품 키트 권장사항</entityname.Manual_Med_Kit_Recommendations>
+  <entityname.Manual_How_To_Diagnose>MedAssistant: 진단 방법</entityname.Manual_How_To_Diagnose>
+  <entityname.Manual_Order_of_Treatments>MedAssistant: 치료 순서</entityname.Manual_Order_of_Treatments>
+  <entityname.Manual_The_5_Commandments_of_Neurotrauma>MedAssistant: 신경 외상의 5 가지 계명</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+  <entityname.Manual_Vomiting_Blood>MedAssistant: 토혈</entityname.Manual_Vomiting_Blood>
+  <entityname.Manual_Pale_Skin>MedAssistant: 창백한 피부</entityname.Manual_Pale_Skin>
+  <entityname.Manual_Shortness_of_Breath>MedAssistant: 호흡 곤란</entityname.Manual_Shortness_of_Breath>
+  <entityname.Manual_Cough>MedAssistant: 기침</entityname.Manual_Cough>
+  <entityname.Manual_Increased_Heartrate>MedAssistant: 증가된 심박수</entityname.Manual_Increased_Heartrate>
+  <entityname.Manual_Confusion>MedAssistant: 혼란</entityname.Manual_Confusion>
+  <entityname.Manual_Lightheadedness>MedAssistant: 어지러움</entityname.Manual_Lightheadedness>
+  <entityname.Manual_Blurred_Vision>MedAssistant: 흐린 시야</entityname.Manual_Blurred_Vision>
+  <entityname.Manual_Leg_Swelling>MedAssistant: 다리 부기</entityname.Manual_Leg_Swelling>
+  <entityname.Manual_Wheezing>MedAssistant: 천명 소리</entityname.Manual_Wheezing>
+  <entityname.Manual_Weakness>MedAssistant: 약점</entityname.Manual_Weakness>
+  <entityname.Manual_Fever>MedAssistant: 열 (yeol)</entityname.Manual_Fever>
+  <entityname.Manual_Sweating>MedAssistant: 땀 흘리기</entityname.Manual_Sweating>
+  <entityname.Manual_Bloating>MedAssistant: 팽창감</entityname.Manual_Bloating>
+  <entityname.Manual_Inflammation>MedAssistant: 염증</entityname.Manual_Inflammation>
+  <entityname.Manual_Jaundice>MedAssistant: 황달</entityname.Manual_Jaundice>
+  <entityname.Manual_Abdominal_Discomfort>MedAssistant: 복부 불쾌감</entityname.Manual_Abdominal_Discomfort>
+  <entityname.Manual_Headache>MedAssistant: 두통</entityname.Manual_Headache>
+  <entityname.Manual_Craving>MedAssistant: 갈망</entityname.Manual_Craving>
+  <entityname.Manual_Palpitations>MedAssistant: 근육 수축</entityname.Manual_Palpitations>
+  <entityname.Manual_Spasms>MedAssistant: 경련</entityname.Manual_Spasms>
+  <entityname.Manual_Neurotrauma>MedAssistant: 신경 외상 (singyeong oesang)</entityname.Manual_Neurotrauma>
+  <entityname.Manual_Stroke>MedAssistant: 뇌졸중</entityname.Manual_Stroke>
+  <entityname.Manual_Withdrawal>MedAssistant: 인출</entityname.Manual_Withdrawal>
+  <entityname.Manual_Opiate_Overdose>MedAssistant: 아편 과다 복용</entityname.Manual_Opiate_Overdose>
+  <entityname.Manual_Seizure>MedAssistant: 발작</entityname.Manual_Seizure>
+  <entityname.Manual_Unconsciousness>MedAssistant: 의식 상실 (uishi sangsil)</entityname.Manual_Unconsciousness>
+  <entityname.Manual_Coma>MedAssistant: 코마</entityname.Manual_Coma>
+  <entityname.Manual_Spinal_Cord_Injury>MedAssistant: 척수 손상</entityname.Manual_Spinal_Cord_Injury>
+  <entityname.Manual_Concussion>MedAssistant: 뇌진탕</entityname.Manual_Concussion>
+  <entityname.Manual_Respiratory_Arrest>MedAssistant: 호흡 중지</entityname.Manual_Respiratory_Arrest>
+  <entityname.Manual_Lung_Damage>MedAssistant: 폐 손상</entityname.Manual_Lung_Damage>
+  <entityname.Manual_Pneumothorax>MedAssistant: 기흉</entityname.Manual_Pneumothorax>
+  <entityname.Manual_Hyperventilation>MedAssistant: 과호흡증상</entityname.Manual_Hyperventilation>
+  <entityname.Manual_Hypoventilation>MedAssistant: 저호흡증</entityname.Manual_Hypoventilation>
+  <entityname.Manual_Oxygen_Low>MedAssistant: 산소 부족</entityname.Manual_Oxygen_Low>
+  <entityname.Manual_Cardiac_Tamponade>MedAssistant: 심장 편측압박증</entityname.Manual_Cardiac_Tamponade>
+  <entityname.Manual_Cardiac_Arrest>MedAssistant: 심장 정지</entityname.Manual_Cardiac_Arrest>
+  <entityname.Manual_Heart_Attack>MedAssistant: 심장 마비</entityname.Manual_Heart_Attack>
+  <entityname.Manual_Heart_Damage>MedAssistant: 심장 손상</entityname.Manual_Heart_Damage>
+  <entityname.Manual_Irregular_Heartbeat>MedAssistant: 불규칙적인 심장 박동</entityname.Manual_Irregular_Heartbeat>
+  <entityname.Manual_Fibrillation>MedAssistant: 세균성 심근경색</entityname.Manual_Fibrillation>
+  <entityname.Manual_Aortic_Rupture>MedAssistant: 대동맥 파열</entityname.Manual_Aortic_Rupture>
+  <entityname.Manual_Internal_Bleeding>MedAssistant: 내부 출혈</entityname.Manual_Internal_Bleeding>
+  <entityname.Manual_Radiation_Sickness>MedAssistant: 방사능 병증</entityname.Manual_Radiation_Sickness>
+  <entityname.Manual_Kidney_Damage>MedAssistant: 신장 손상</entityname.Manual_Kidney_Damage>
+  <entityname.Manual_Liver_Damage>MedAssistant: 간 손상</entityname.Manual_Liver_Damage>
+  <entityname.Manual_Morbusine>MedAssistant: 모르부신 (Morbusine)</entityname.Manual_Morbusine>
+  <entityname.Manual_Cyanide_Poisoning>MedAssistant: 시안화물 중독</entityname.Manual_Cyanide_Poisoning>
+  <entityname.Manual_Vanilla_Organ_Damage>MedAssistant: 바닐라 장기 손상</entityname.Manual_Vanilla_Organ_Damage>
+  <entityname.Manual_Analgesia>MedAssistant: 진통제</entityname.Manual_Analgesia>
+  <entityname.Manual_Anesthesia>MedAssistant: 마취 (machwi)</entityname.Manual_Anesthesia>
+  <entityname.Manual_Abdominal_Pain>MedAssistant: 복통</entityname.Manual_Abdominal_Pain>
+  <entityname.Manual_Vomiting>MedAssistant: 구토</entityname.Manual_Vomiting>
+  <entityname.Manual_Nausea>MedAssistant: 메스꺼움</entityname.Manual_Nausea>
+  <entityname.Manual_Chest_Pain>MedAssistant: 흉통</entityname.Manual_Chest_Pain>
+  <entityname.Manual_Traumatic_Amputation>MedAssistant: 외상적 절단 (oesangjeog jeoldan)</entityname.Manual_Traumatic_Amputation>
+  <entityname.Manual_Gangrene>MedAssistant: 강직성 괴사</entityname.Manual_Gangrene>
+  <entityname.Manual_Surgical_Amputation>MedAssistant: 수술적 절단술</entityname.Manual_Surgical_Amputation>
+  <entityname.Manual_Intense_Pain>MedAssistant: 강한 통증</entityname.Manual_Intense_Pain>
+  <entityname.Manual_Bone_Death>MedAssistant: 뼈 사망</entityname.Manual_Bone_Death>
+  <entityname.Manual_Bone_Damage>MedAssistant: 뼈 손상</entityname.Manual_Bone_Damage>
+  <entityname.Manual_Fractures>MedAssistant: 골절</entityname.Manual_Fractures>
+  <entityname.Manual_Dislocations>MedAssistant: 이탈 (Ital)</entityname.Manual_Dislocations>
+  <entityname.Manual_Arterial_Bleeding>MedAssistant: 동맥성 출혈</entityname.Manual_Arterial_Bleeding>
+  <entityname.Manual_Internal_Damage>MedAssistant: 내부 손상</entityname.Manual_Internal_Damage>
+  <entityname.Manual_Burns>MedAssistant: 화상</entityname.Manual_Burns>
+  <entityname.Manual_Infected_Wounds>MedAssistant: 감염된 상처</entityname.Manual_Infected_Wounds>
+  <entityname.Manual_Foreign_Bodies>MedAssistant: 외부 물질</entityname.Manual_Foreign_Bodies>
+  <entityname.Manual_Wounds>MedAssistant: 상처</entityname.Manual_Wounds>
+  <entityname.Manual_Ointmented>MedAssistant: 연고가 발라진</entityname.Manual_Ointmented>
+  <entityname.Manual_Bandaged>MedAssistant: 붕대를 감은</entityname.Manual_Bandaged>
+  <entityname.Manual_Plaster_Cast>MedAssistant: 반죽 캐스트</entityname.Manual_Plaster_Cast>
+  <entityname.Manual_Hypoxemia>MedAssistant: 저산소혈증</entityname.Manual_Hypoxemia>
+  <entityname.Manual_Sepsis>MedAssistant: 패혈증</entityname.Manual_Sepsis>
+  <entityname.Manual_Hemotransfusion_Shock>MedAssistant: 혈액 수혈 충격</entityname.Manual_Hemotransfusion_Shock>
+  <entityname.Manual_Blood_Loss>MedAssistant: 출혈</entityname.Manual_Blood_Loss>
+  <entityname.Manual_Hypotension>MedAssistant: 저혈압</entityname.Manual_Hypotension>
+  <entityname.Manual_Hypertension>MedAssistant: 고혈압</entityname.Manual_Hypertension>
+  <entityname.Manual_Acidosis>MedAssistant: 산성증상</entityname.Manual_Acidosis>
+  <entityname.Manual_Alkalosis>MedAssistant: 알칼로시스</entityname.Manual_Alkalosis>
+  <entityname.Manual_Adrenaline>MedAssistant: 아드레날린</entityname.Manual_Adrenaline>
+  <entityname.Manual_AED>MedAssistant: AED: 자동제세동기</entityname.Manual_AED>
+  <entityname.Manual_Alien_Blood>MedAssistant: 외계인의 혈액</entityname.Manual_Alien_Blood>
+  <entityname.Manual_Ambubag>MedAssistant: 앰뷸백</entityname.Manual_Ambubag>
+  <entityname.Manual_Anaparalyzant>MedAssistant: 안마 마취제</entityname.Manual_Anaparalyzant>
+  <entityname.Manual_Antibiotic_Glue>MedAssistant: 항생제 접착제</entityname.Manual_Antibiotic_Glue>
+  <entityname.Manual_Antibiotic_Ointment>MedAssistant: 항생제 연고</entityname.Manual_Antibiotic_Ointment>
+  <entityname.Manual_Antiseptic>MedAssistant: 살균제</entityname.Manual_Antiseptic>
+  <entityname.Manual_Antiseptic_Sprayer>MedAssistant: 살균 스프레이어</entityname.Manual_Antiseptic_Sprayer>
+  <entityname.Manual_Autopulse>MedAssistant: 오토펄스</entityname.Manual_Autopulse>
+  <entityname.Manual_Azathioprine>MedAssistant: 아자티오프린</entityname.Manual_Azathioprine>
+  <entityname.Manual_Bandages>MedAssistant: 붕대</entityname.Manual_Bandages>
+  <entityname.Manual_Blood_Packs>MedAssistant: 혈액 팩 (hyeol-aek paek)</entityname.Manual_Blood_Packs>
+  <entityname.Manual_Blue_Shark>MedAssistant: 블루 상어</entityname.Manual_Blue_Shark>
+  <entityname.Manual_Body_Bag>MedAssistant: 바디백</entityname.Manual_Body_Bag>
+  <entityname.Manual_Broad-spectrum_Antibiotics>MedAssistant: 광범위 항생제</entityname.Manual_Broad-spectrum_Antibiotics>
+  <entityname.Manual_Combat_Stimulant>MedAssistant: 전투 자극제</entityname.Manual_Combat_Stimulant>
+  <entityname.Manual_Deusizine>MedAssistant: Deusizine: 듀시즌</entityname.Manual_Deusizine>
+  <entityname.Manual_Diving_Knife>MedAssistant: 다이빙 나이프</entityname.Manual_Diving_Knife>
+  <entityname.Manual_Drainage>MedAssistant: 배수</entityname.Manual_Drainage>
+  <entityname.Manual_Empty_Blood_Pack>MedAssistant: 빈 혈액 포대</entityname.Manual_Empty_Blood_Pack>
+  <entityname.Manual_Endovascular_Balloon>MedAssistant: 내시경성 풍선 카테터 (Endovascular Balloon)</entityname.Manual_Endovascular_Balloon>
+  <entityname.Manual_Fentanyl>MedAssistant: 펜타닐</entityname.Manual_Fentanyl>
+  <entityname.Manual_Gypsum>MedAssistant: 석고</entityname.Manual_Gypsum>
+  <entityname.Manual_Health_Scanner>MedAssistant: 건강 스캐너</entityname.Manual_Health_Scanner>
+  <entityname.Manual_Hematology_Analyzer>MedAssistant: 혈액학 분석기</entityname.Manual_Hematology_Analyzer>
+  <entityname.Manual_Hemostat>MedAssistant: 헤모스탯</entityname.Manual_Hemostat>
+  <entityname.Manual_Hyperzine>MedAssistant: 하이퍼진</entityname.Manual_Hyperzine>
+  <entityname.Manual_Liquid_Oxygenite>MedAssistant: 액체 산소화합물</entityname.Manual_Liquid_Oxygenite>
+  <entityname.Manual_Mannitol>MedAssistant: 만니톨</entityname.Manual_Mannitol>
+  <entityname.Manual_Manual_Defibrillator>MedAssistant: 수동 제세동기</entityname.Manual_Manual_Defibrillator>
+  <entityname.Manual_Medical_Stent>MedAssistant: 의료 스텐트</entityname.Manual_Medical_Stent>
+  <entityname.Manual_Methamphetamine>MedAssistant: 메스암페타민</entityname.Manual_Methamphetamine>
+  <entityname.Manual_Morphine>MedAssistant: 모르핀</entityname.Manual_Morphine>
+  <entityname.Manual_Naloxone>MedAssistant: 나록손</entityname.Manual_Naloxone>
+  <entityname.Manual_Needle>MedAssistant: 바늘</entityname.Manual_Needle>
+  <entityname.Manual_Nitroglycerin>MedAssistant: 니트로글리세린</entityname.Manual_Nitroglycerin>
+  <entityname.Manual_Opium>MedAssistant: 아편</entityname.Manual_Opium>
+  <entityname.Manual_Organ_Procurement_Scalpels>MedAssistant: 장기 조직 수집용 면도날</entityname.Manual_Organ_Procurement_Scalpels>
+  <entityname.Manual_Osteosynthesis_Implants>MedAssistant: 골절 고정 장치</entityname.Manual_Osteosynthesis_Implants>
+  <entityname.Manual_Plastiseal>MedAssistant: 플라스티씰</entityname.Manual_Plastiseal>
+  <entityname.Manual_Propofol>MedAssistant: 프로포폴</entityname.Manual_Propofol>
+  <entityname.Manual_Raptor_Bane_Extract>MedAssistant: 랩터 베인 추출물</entityname.Manual_Raptor_Bane_Extract>
+  <entityname.Manual_Retractors>MedAssistant: 축소기</entityname.Manual_Retractors>
+  <entityname.Manual_Ringer_Solution>MedAssistant: 링거 용액</entityname.Manual_Ringer_Solution>
+  <entityname.Manual_Saline>MedAssistant: 염수</entityname.Manual_Saline>
+  <entityname.Manual_Scalpel>MedAssistant: 메스 (mes)</entityname.Manual_Scalpel>
+  <entityname.Manual_Sodium_Nitroprusside>MedAssistant: 소듐 니트로프루사이드</entityname.Manual_Sodium_Nitroprusside>
+  <entityname.Manual_Spinal_Cord_Implants>MedAssistant: 척수 이식술</entityname.Manual_Spinal_Cord_Implants>
+  <entityname.Manual_Stasis_Bag>MedAssistant: 정지 상태 가방</entityname.Manual_Stasis_Bag>
+  <entityname.Manual_Streptokinase>MedAssistant: 스트렙토키나제</entityname.Manual_Streptokinase>
+  <entityname.Manual_Surgery_Table>MedAssistant: 수술 테이블</entityname.Manual_Surgery_Table>
+  <entityname.Manual_Surgical_Drill>MedAssistant: 수술용 드릴</entityname.Manual_Surgical_Drill>
+  <entityname.Manual_Surgical_Saw>MedAssistant: 수술용 톱</entityname.Manual_Surgical_Saw>
+  <entityname.Manual_Sutures>MedAssistant: 봉합선</entityname.Manual_Sutures>
+  <entityname.Manual_Thiamine>MedAssistant: 티아민</entityname.Manual_Thiamine>
+  <entityname.Manual_Tourniquet>MedAssistant: 토니켓</entityname.Manual_Tourniquet>
+  <entityname.Manual_Trauma_Shears>MedAssistant: 외상 가위</entityname.Manual_Trauma_Shears>
+  <entityname.Manual_Tweezers>MedAssistant: 트위저</entityname.Manual_Tweezers>
+  <entityname.Manual_Wrench>MedAssistant: 렌치</entityname.Manual_Wrench>
+  <entityname.Manual_Traumatic_Shock>MedAssistant: 외상성 쇼크</entityname.Manual_Traumatic_Shock>
+  <entityname.Manual_Surgery_Incision>MedAssistant: 수술 절개 (Surgery Incision)</entityname.Manual_Surgery_Incision>
+  <entityname.Manual_Clamped_Bleeding>MedAssistant: 클램프로 동맥출혈 멈춤</entityname.Manual_Clamped_Bleeding>
+  <entityname.Manual_Retracted_Skin>MedAssistant: 축소된 피부</entityname.Manual_Retracted_Skin>
+  <entityname.Manual_Drilled_Bones>MedAssistant: 드릴링된 뼈</entityname.Manual_Drilled_Bones>
+  <entityname.Manual_Sawed_Bones>MedAssistant: 톱으로 자른 뼈</entityname.Manual_Sawed_Bones>
+  <entityname.Manual_Open_Close_Surgery>MedAssistant: 개방 폐쇄 수술</entityname.Manual_Open_Close_Surgery>
+  <entityname.Manual_Osteosynthetic_Surgery>MedAssistant: 골절 고정 수술</entityname.Manual_Osteosynthetic_Surgery>
+  <entityname.Manual_Aortic_Rupture_Surgery>MedAssistant: 대동맥 파열 수술</entityname.Manual_Aortic_Rupture_Surgery>
+  <entityname.Manual_Amputation_Surgery>MedAssistant: 절단 수술</entityname.Manual_Amputation_Surgery>
+  <entityname.Manual_Organ_Transplant_Surgery>MedAssistant: 장기 이식 수술</entityname.Manual_Organ_Transplant_Surgery>
+  <entityname.Manual_Surgical_Drapes>MedAssistant: 수술용 드레이프</entityname.Manual_Surgical_Drapes>
+  <entityname.Manual_Surgical_Mask>MedAssistant: 수술용 마스크</entityname.Manual_Surgical_Mask>
+  <entityname.Manual_Surgeon_Clothes>MedAssistant: 외과 의사 옷</entityname.Manual_Surgeon_Clothes>
+  <entityname.Manual_Surgical_Infection>MedAssistant: 수술 감염</entityname.Manual_Surgical_Infection>
+  <entityname.Manual_Mannitol_Plus>MedAssistant: 만니톨 플러스</entityname.Manual_Mannitol_Plus>
+  <entityname.Manual_Experimental_Treatment>MedAssistant: 실험적 치료</entityname.Manual_Experimental_Treatment>
+  <entityname.Manual_Triage_Card>MedAssistant: 트리아지 카드</entityname.Manual_Triage_Card>
+  <entityname.Manual_Brain_Jar>MedAssistant: 뇌병이병병이</entityname.Manual_Brain_Jar>
+  <entityname.Manual_Artificial_Brain>MedAssistant: 인공 두뇌</entityname.Manual_Artificial_Brain>
+  <entityname.Manual_Medical_Misconduct>MedAssistant: 의료 윤리 위반</entityname.Manual_Medical_Misconduct>
+  <entityname.Manual_Cybernetic_Arm>MedAssistant: 사이버네틱 팔</entityname.Manual_Cybernetic_Arm>
+  <entityname.Manual_Cybernetic_Leg>MedAssistant: 사이버네틱 다리</entityname.Manual_Cybernetic_Leg>
+  <entityname.Manual_Cyberarm>MedAssistant: 사이버암 (saibeoam)</entityname.Manual_Cyberarm>
+  <entityname.Manual_Cyberleg>MedAssistant: 사이버다리</entityname.Manual_Cyberleg>
+  <entityname.Manual_Damaged_Electronics>MedAssistant: 손상된 전자제품</entityname.Manual_Damaged_Electronics>
+  <entityname.Manual_Bent_Metal>MedAssistant: 구부러진 금속</entityname.Manual_Bent_Metal>
+  <entityname.Manual_Loose_Screws>MedAssistant: 헐거운 나사</entityname.Manual_Loose_Screws>
+  <entityname.Manual_Material_Loss>MedAssistant: 재산 손실</entityname.Manual_Material_Loss>
+  <entityname.Manual_FPGA_Circuit>MedAssistant: FPGA 회로</entityname.Manual_FPGA_Circuit>
+  <entityname.Manual_Welding_Tool>MedAssistant: 용접 도구</entityname.Manual_Welding_Tool>
+  <entityname.Manual_Screwdriver>MedAssistant: 나사 드라이버</entityname.Manual_Screwdriver>
+  <entityname.Manual_Steel_Bar>MedAssistant: 강철 바</entityname.Manual_Steel_Bar>
+  <entityname.Manual_Start_Page>MedAssistant: 시작 페이지</entityname.Manual_Start_Page>
+  <entityname.Manual_Information>MedAssistant: 정보 (Jeongbo)</entityname.Manual_Information>
+  <entityname.Manual_Symptoms>MedAssistant: 증상</entityname.Manual_Symptoms>
+  <entityname.Manual_HeadBrain>MedAssistant: 머리뇌 (meorinoe)</entityname.Manual_HeadBrain>
+  <entityname.Manual_Lungs>MedAssistant: 폐</entityname.Manual_Lungs>
+  <entityname.Manual_Heart>MedAssistant: 심장</entityname.Manual_Heart>
+  <entityname.Manual_Torso>MedAssistant: 토르소</entityname.Manual_Torso>
+  <entityname.Manual_Extremities>MedAssistant: 극단적인 부분</entityname.Manual_Extremities>
+  <entityname.Manual_Bones>MedAssistant: 뼈</entityname.Manual_Bones>
+  <entityname.Manual_Any_Bodypart>MedAssistant: 어떤 신체 부위</entityname.Manual_Any_Bodypart>
+  <entityname.Manual_Blood>MedAssistant: 피</entityname.Manual_Blood>
+  <entityname.Manual_Items_Part_1>MedAssistant: 항목 파트 1</entityname.Manual_Items_Part_1>
+  <entityname.Manual_Items_Part_2>MedAssistant: 항목 파트 2</entityname.Manual_Items_Part_2>
+  <entityname.Manual_Items_Part_3>MedAssistant: 항목 파트 3</entityname.Manual_Items_Part_3>
+  <entityname.Manual_Items_Part_4>MedAssistant: 항목 파트 4</entityname.Manual_Items_Part_4>
+  <entityname.Manual_Surgery>MedAssistant: 수술</entityname.Manual_Surgery>
+  <entityname.Manual_Procedures>MedAssistant: 절차</entityname.Manual_Procedures>
+  <entityname.Manual_Expansion>MedAssistant: 확장</entityname.Manual_Expansion>
+  <Manual_Button_FAQ>자주 묻는 질문</Manual_Button_FAQ>
+  <Manual_Button_Med_Kit_Recommendations>의료용품 키트 권장사항</Manual_Button_Med_Kit_Recommendations>
+  <Manual_Button_How_To_Diagnose>진단 방법</Manual_Button_How_To_Diagnose>
+  <Manual_Button_Order_of_Treatments>치료 순서</Manual_Button_Order_of_Treatments>
+  <Manual_Button_The_5_Commandments_of_Neurotrauma>신경 외상의 5 가지 계명</Manual_Button_The_5_Commandments_of_Neurotrauma>
+  <Manual_Button_Vomiting_Blood>토혈</Manual_Button_Vomiting_Blood>
+  <Manual_Button_Pale_Skin>창백한 피부</Manual_Button_Pale_Skin>
+  <Manual_Button_Shortness_of_Breath>호흡 곤란</Manual_Button_Shortness_of_Breath>
+  <Manual_Button_Cough>기침</Manual_Button_Cough>
+  <Manual_Button_Increased_Heartrate>증가된 심박수</Manual_Button_Increased_Heartrate>
+  <Manual_Button_Confusion>혼란</Manual_Button_Confusion>
+  <Manual_Button_Lightheadedness>어지러움</Manual_Button_Lightheadedness>
+  <Manual_Button_Blurred_Vision>흐린 시야</Manual_Button_Blurred_Vision>
+  <Manual_Button_Leg_Swelling>다리 부기</Manual_Button_Leg_Swelling>
+  <Manual_Button_Wheezing>천명 소리</Manual_Button_Wheezing>
+  <Manual_Button_Weakness>약점</Manual_Button_Weakness>
+  <Manual_Button_Fever>열 (yeol)</Manual_Button_Fever>
+  <Manual_Button_Sweating>땀 흘리기</Manual_Button_Sweating>
+  <Manual_Button_Bloating>팽창감</Manual_Button_Bloating>
+  <Manual_Button_Inflammation>염증</Manual_Button_Inflammation>
+  <Manual_Button_Jaundice>황달</Manual_Button_Jaundice>
+  <Manual_Button_Abdominal_Discomfort>복부 불쾌감</Manual_Button_Abdominal_Discomfort>
+  <Manual_Button_Headache>두통</Manual_Button_Headache>
+  <Manual_Button_Craving>갈망</Manual_Button_Craving>
+  <Manual_Button_Palpitations>근육 수축</Manual_Button_Palpitations>
+  <Manual_Button_Spasms>경련</Manual_Button_Spasms>
+  <Manual_Button_Neurotrauma>신경 외상 (singyeong oesang)</Manual_Button_Neurotrauma>
+  <Manual_Button_Stroke>뇌졸중</Manual_Button_Stroke>
+  <Manual_Button_Withdrawal>인출</Manual_Button_Withdrawal>
+  <Manual_Button_Opiate_Overdose>아편 과다 복용</Manual_Button_Opiate_Overdose>
+  <Manual_Button_Seizure>발작</Manual_Button_Seizure>
+  <Manual_Button_Unconsciousness>의식 상실 (uishi sangsil)</Manual_Button_Unconsciousness>
+  <Manual_Button_Coma>코마</Manual_Button_Coma>
+  <Manual_Button_Spinal_Cord_Injury>척수 손상</Manual_Button_Spinal_Cord_Injury>
+  <Manual_Button_Concussion>뇌진탕</Manual_Button_Concussion>
+  <Manual_Button_Respiratory_Arrest>호흡 중지</Manual_Button_Respiratory_Arrest>
+  <Manual_Button_Lung_Damage>폐 손상</Manual_Button_Lung_Damage>
+  <Manual_Button_Pneumothorax>기흉</Manual_Button_Pneumothorax>
+  <Manual_Button_Hyperventilation>과호흡증상</Manual_Button_Hyperventilation>
+  <Manual_Button_Hypoventilation>저호흡증</Manual_Button_Hypoventilation>
+  <Manual_Button_Oxygen_Low>산소 부족</Manual_Button_Oxygen_Low>
+  <Manual_Button_Cardiac_Tamponade>심장 편측압박증</Manual_Button_Cardiac_Tamponade>
+  <Manual_Button_Cardiac_Arrest>심장 정지</Manual_Button_Cardiac_Arrest>
+  <Manual_Button_Heart_Attack>심장 마비</Manual_Button_Heart_Attack>
+  <Manual_Button_Heart_Damage>심장 손상</Manual_Button_Heart_Damage>
+  <Manual_Button_Irregular_Heartbeat>불규칙적인 심장 박동</Manual_Button_Irregular_Heartbeat>
+  <Manual_Button_Fibrillation>세균성 심근경색</Manual_Button_Fibrillation>
+  <Manual_Button_Aortic_Rupture>대동맥 파열</Manual_Button_Aortic_Rupture>
+  <Manual_Button_Internal_Bleeding>내부 출혈</Manual_Button_Internal_Bleeding>
+  <Manual_Button_Radiation_Sickness>방사능 병증</Manual_Button_Radiation_Sickness>
+  <Manual_Button_Kidney_Damage>신장 손상</Manual_Button_Kidney_Damage>
+  <Manual_Button_Liver_Damage>간 손상</Manual_Button_Liver_Damage>
+  <Manual_Button_Morbusine>모르부신 (Morbusine)</Manual_Button_Morbusine>
+  <Manual_Button_Cyanide_Poisoning>시안화물 중독</Manual_Button_Cyanide_Poisoning>
+  <Manual_Button_Vanilla_Organ_Damage>바닐라 장기 손상</Manual_Button_Vanilla_Organ_Damage>
+  <Manual_Button_Analgesia>진통제</Manual_Button_Analgesia>
+  <Manual_Button_Anesthesia>마취 (machwi)</Manual_Button_Anesthesia>
+  <Manual_Button_Abdominal_Pain>복통</Manual_Button_Abdominal_Pain>
+  <Manual_Button_Vomiting>구토</Manual_Button_Vomiting>
+  <Manual_Button_Nausea>메스꺼움</Manual_Button_Nausea>
+  <Manual_Button_Chest_Pain>흉통</Manual_Button_Chest_Pain>
+  <Manual_Button_Traumatic_Amputation>외상적 절단 (oesangjeog jeoldan)</Manual_Button_Traumatic_Amputation>
+  <Manual_Button_Gangrene>강직성 괴사</Manual_Button_Gangrene>
+  <Manual_Button_Surgical_Amputation>수술적 절단술</Manual_Button_Surgical_Amputation>
+  <Manual_Button_Intense_Pain>강한 통증</Manual_Button_Intense_Pain>
+  <Manual_Button_Bone_Death>뼈 사망</Manual_Button_Bone_Death>
+  <Manual_Button_Bone_Damage>뼈 손상</Manual_Button_Bone_Damage>
+  <Manual_Button_Fractures>골절</Manual_Button_Fractures>
+  <Manual_Button_Dislocations>이탈 (Ital)</Manual_Button_Dislocations>
+  <Manual_Button_Arterial_Bleeding>동맥성 출혈</Manual_Button_Arterial_Bleeding>
+  <Manual_Button_Internal_Damage>내부 손상</Manual_Button_Internal_Damage>
+  <Manual_Button_Burns>화상</Manual_Button_Burns>
+  <Manual_Button_Infected_Wounds>감염된 상처</Manual_Button_Infected_Wounds>
+  <Manual_Button_Foreign_Bodies>외부 물질</Manual_Button_Foreign_Bodies>
+  <Manual_Button_Wounds>상처</Manual_Button_Wounds>
+  <Manual_Button_Ointmented>연고가 발라진</Manual_Button_Ointmented>
+  <Manual_Button_Bandaged>붕대를 감은</Manual_Button_Bandaged>
+  <Manual_Button_Plaster_Cast>반죽 캐스트</Manual_Button_Plaster_Cast>
+  <Manual_Button_Hypoxemia>저산소혈증</Manual_Button_Hypoxemia>
+  <Manual_Button_Sepsis>패혈증</Manual_Button_Sepsis>
+  <Manual_Button_Hemotransfusion_Shock>혈액 수혈 충격</Manual_Button_Hemotransfusion_Shock>
+  <Manual_Button_Blood_Loss>출혈</Manual_Button_Blood_Loss>
+  <Manual_Button_Hypotension>저혈압</Manual_Button_Hypotension>
+  <Manual_Button_Hypertension>고혈압</Manual_Button_Hypertension>
+  <Manual_Button_Acidosis>산성증상</Manual_Button_Acidosis>
+  <Manual_Button_Alkalosis>알칼로시스</Manual_Button_Alkalosis>
+  <Manual_Button_Adrenaline>아드레날린</Manual_Button_Adrenaline>
+  <Manual_Button_AED>AED: 자동제세동기</Manual_Button_AED>
+  <Manual_Button_Alien_Blood>외계인의 혈액</Manual_Button_Alien_Blood>
+  <Manual_Button_Ambubag>앰뷸백</Manual_Button_Ambubag>
+  <Manual_Button_Anaparalyzant>안마 마취제</Manual_Button_Anaparalyzant>
+  <Manual_Button_Antibiotic_Glue>항생제 접착제</Manual_Button_Antibiotic_Glue>
+  <Manual_Button_Antibiotic_Ointment>항생제 연고</Manual_Button_Antibiotic_Ointment>
+  <Manual_Button_Antiseptic>살균제</Manual_Button_Antiseptic>
+  <Manual_Button_Antiseptic_Sprayer>살균 스프레이어</Manual_Button_Antiseptic_Sprayer>
+  <Manual_Button_Autopulse>오토펄스</Manual_Button_Autopulse>
+  <Manual_Button_Azathioprine>아자티오프린</Manual_Button_Azathioprine>
+  <Manual_Button_Bandages>붕대</Manual_Button_Bandages>
+  <Manual_Button_Blood_Packs>혈액 팩 (hyeol-aek paek)</Manual_Button_Blood_Packs>
+  <Manual_Button_Blue_Shark>블루 상어</Manual_Button_Blue_Shark>
+  <Manual_Button_Body_Bag>바디백</Manual_Button_Body_Bag>
+  <Manual_Button_Broad-spectrum_Antibiotics>광범위 항생제</Manual_Button_Broad-spectrum_Antibiotics>
+  <Manual_Button_Combat_Stimulant>전투 자극제</Manual_Button_Combat_Stimulant>
+  <Manual_Button_Deusizine>Deusizine: 듀시즌</Manual_Button_Deusizine>
+  <Manual_Button_Diving_Knife>다이빙 나이프</Manual_Button_Diving_Knife>
+  <Manual_Button_Drainage>배수</Manual_Button_Drainage>
+  <Manual_Button_Empty_Blood_Pack>빈 혈액 포대</Manual_Button_Empty_Blood_Pack>
+  <Manual_Button_Endovascular_Balloon>내시경성 풍선 카테터 (Endovascular Balloon)</Manual_Button_Endovascular_Balloon>
+  <Manual_Button_Fentanyl>펜타닐</Manual_Button_Fentanyl>
+  <Manual_Button_Gypsum>석고</Manual_Button_Gypsum>
+  <Manual_Button_Health_Scanner>건강 스캐너</Manual_Button_Health_Scanner>
+  <Manual_Button_Hematology_Analyzer>혈액학 분석기</Manual_Button_Hematology_Analyzer>
+  <Manual_Button_Hemostat>헤모스탯</Manual_Button_Hemostat>
+  <Manual_Button_Hyperzine>하이퍼진</Manual_Button_Hyperzine>
+  <Manual_Button_Liquid_Oxygenite>액체 산소화합물</Manual_Button_Liquid_Oxygenite>
+  <Manual_Button_Mannitol>만니톨</Manual_Button_Mannitol>
+  <Manual_Button_Manual_Defibrillator>수동 제세동기</Manual_Button_Manual_Defibrillator>
+  <Manual_Button_Medical_Stent>의료 스텐트</Manual_Button_Medical_Stent>
+  <Manual_Button_Methamphetamine>메스암페타민</Manual_Button_Methamphetamine>
+  <Manual_Button_Morphine>모르핀</Manual_Button_Morphine>
+  <Manual_Button_Naloxone>나록손</Manual_Button_Naloxone>
+  <Manual_Button_Needle>바늘</Manual_Button_Needle>
+  <Manual_Button_Nitroglycerin>니트로글리세린</Manual_Button_Nitroglycerin>
+  <Manual_Button_Opium>아편</Manual_Button_Opium>
+  <Manual_Button_Organ_Procurement_Scalpels>장기 조직 수집용 면도날</Manual_Button_Organ_Procurement_Scalpels>
+  <Manual_Button_Osteosynthesis_Implants>골절 고정 장치</Manual_Button_Osteosynthesis_Implants>
+  <Manual_Button_Plastiseal>플라스티씰</Manual_Button_Plastiseal>
+  <Manual_Button_Propofol>프로포폴</Manual_Button_Propofol>
+  <Manual_Button_Raptor_Bane_Extract>랩터 베인 추출물</Manual_Button_Raptor_Bane_Extract>
+  <Manual_Button_Retractors>축소기</Manual_Button_Retractors>
+  <Manual_Button_Ringer_Solution>링거 용액</Manual_Button_Ringer_Solution>
+  <Manual_Button_Saline>염수</Manual_Button_Saline>
+  <Manual_Button_Scalpel>메스 (mes)</Manual_Button_Scalpel>
+  <Manual_Button_Sodium_Nitroprusside>소듐 니트로프루사이드</Manual_Button_Sodium_Nitroprusside>
+  <Manual_Button_Spinal_Cord_Implants>척수 이식술</Manual_Button_Spinal_Cord_Implants>
+  <Manual_Button_Stasis_Bag>정지 상태 가방</Manual_Button_Stasis_Bag>
+  <Manual_Button_Streptokinase>스트렙토키나제</Manual_Button_Streptokinase>
+  <Manual_Button_Surgery_Table>수술 테이블</Manual_Button_Surgery_Table>
+  <Manual_Button_Surgical_Drill>수술용 드릴</Manual_Button_Surgical_Drill>
+  <Manual_Button_Surgical_Saw>수술용 톱</Manual_Button_Surgical_Saw>
+  <Manual_Button_Sutures>봉합선</Manual_Button_Sutures>
+  <Manual_Button_Thiamine>티아민</Manual_Button_Thiamine>
+  <Manual_Button_Tourniquet>토니켓</Manual_Button_Tourniquet>
+  <Manual_Button_Trauma_Shears>외상 가위</Manual_Button_Trauma_Shears>
+  <Manual_Button_Tweezers>트위저</Manual_Button_Tweezers>
+  <Manual_Button_Wrench>렌치</Manual_Button_Wrench>
+  <Manual_Button_Traumatic_Shock>외상성 쇼크</Manual_Button_Traumatic_Shock>
+  <Manual_Button_Surgery_Incision>수술 절개 (Surgery Incision)</Manual_Button_Surgery_Incision>
+  <Manual_Button_Clamped_Bleeding>클램프로 동맥출혈 멈춤</Manual_Button_Clamped_Bleeding>
+  <Manual_Button_Retracted_Skin>축소된 피부</Manual_Button_Retracted_Skin>
+  <Manual_Button_Drilled_Bones>드릴링된 뼈</Manual_Button_Drilled_Bones>
+  <Manual_Button_Sawed_Bones>톱으로 자른 뼈</Manual_Button_Sawed_Bones>
+  <Manual_Button_Open_Close_Surgery>개방 폐쇄 수술</Manual_Button_Open_Close_Surgery>
+  <Manual_Button_Osteosynthetic_Surgery>골절 고정 수술</Manual_Button_Osteosynthetic_Surgery>
+  <Manual_Button_Aortic_Rupture_Surgery>대동맥 파열 수술</Manual_Button_Aortic_Rupture_Surgery>
+  <Manual_Button_Amputation_Surgery>절단 수술</Manual_Button_Amputation_Surgery>
+  <Manual_Button_Organ_Transplant_Surgery>장기 이식 수술</Manual_Button_Organ_Transplant_Surgery>
+  <Manual_Button_Surgical_Drapes>수술용 드레이프</Manual_Button_Surgical_Drapes>
+  <Manual_Button_Surgical_Mask>수술용 마스크</Manual_Button_Surgical_Mask>
+  <Manual_Button_Surgeon_Clothes>외과 의사 옷</Manual_Button_Surgeon_Clothes>
+  <Manual_Button_Surgical_Infection>수술 감염</Manual_Button_Surgical_Infection>
+  <Manual_Button_Mannitol_Plus>만니톨 플러스</Manual_Button_Mannitol_Plus>
+  <Manual_Button_Experimental_Treatment>실험적 치료</Manual_Button_Experimental_Treatment>
+  <Manual_Button_Triage_Card>트리아지 카드</Manual_Button_Triage_Card>
+  <Manual_Button_Brain_Jar>뇌병이병병이</Manual_Button_Brain_Jar>
+  <Manual_Button_Artificial_Brain>인공 두뇌</Manual_Button_Artificial_Brain>
+  <Manual_Button_Medical_Misconduct>의료 윤리 위반</Manual_Button_Medical_Misconduct>
+  <Manual_Button_Cybernetic_Arm>사이버네틱 팔</Manual_Button_Cybernetic_Arm>
+  <Manual_Button_Cybernetic_Leg>사이버네틱 다리</Manual_Button_Cybernetic_Leg>
+  <Manual_Button_Cyberarm>사이버암 (saibeoam)</Manual_Button_Cyberarm>
+  <Manual_Button_Cyberleg>사이버다리</Manual_Button_Cyberleg>
+  <Manual_Button_Damaged_Electronics>손상된 전자제품</Manual_Button_Damaged_Electronics>
+  <Manual_Button_Bent_Metal>구부러진 금속</Manual_Button_Bent_Metal>
+  <Manual_Button_Loose_Screws>헐거운 나사</Manual_Button_Loose_Screws>
+  <Manual_Button_Material_Loss>재산 손실</Manual_Button_Material_Loss>
+  <Manual_Button_FPGA_Circuit>FPGA 회로</Manual_Button_FPGA_Circuit>
+  <Manual_Button_Welding_Tool>용접 도구</Manual_Button_Welding_Tool>
+  <Manual_Button_Screwdriver>나사 드라이버</Manual_Button_Screwdriver>
+  <Manual_Button_Steel_Bar>강철 바</Manual_Button_Steel_Bar>
+  <Manual_Button_Start_Page>시작 페이지</Manual_Button_Start_Page>
+  <Manual_Button_Information>정보 (Jeongbo)</Manual_Button_Information>
+  <Manual_Button_Symptoms>증상</Manual_Button_Symptoms>
+  <Manual_Button_HeadBrain>머리뇌 (meorinoe)</Manual_Button_HeadBrain>
+  <Manual_Button_Lungs>폐</Manual_Button_Lungs>
+  <Manual_Button_Heart>심장</Manual_Button_Heart>
+  <Manual_Button_Torso>토르소</Manual_Button_Torso>
+  <Manual_Button_Extremities>극단적인 부분</Manual_Button_Extremities>
+  <Manual_Button_Bones>뼈</Manual_Button_Bones>
+  <Manual_Button_Any_Bodypart>어떤 신체 부위</Manual_Button_Any_Bodypart>
+  <Manual_Button_Blood>피</Manual_Button_Blood>
+  <Manual_Button_Items_Part_1>항목 파트 1</Manual_Button_Items_Part_1>
+  <Manual_Button_Items_Part_2>항목 파트 2</Manual_Button_Items_Part_2>
+  <Manual_Button_Items_Part_3>항목 파트 3</Manual_Button_Items_Part_3>
+  <Manual_Button_Items_Part_4>항목 파트 4</Manual_Button_Items_Part_4>
+  <Manual_Button_Surgery>수술</Manual_Button_Surgery>
+  <Manual_Button_Procedures>절차</Manual_Button_Procedures>
+  <Manual_Button_Expansion>확장</Manual_Button_Expansion>
+</infotexts>
