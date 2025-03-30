@@ -386,8 +386,10 @@ NT.Afflictions = {
 				return
 			end
 			-- calculate new neurotrauma
+			local skull = HF.HasAffliction(c.character, "h_fracture", 1) -- check for skullfracture
+			local skullmod = skull and 0 or 1 -- invert bool
 			local gain = (
-				-0.1 * c.stats.healingrate * (1 - c.afflictions.h_fracture.strength / 100) -- passive regen and fractured skull
+				-0.1 * c.stats.healingrate * (skullmod) -- passive regen and fractured skull
 				+ c.afflictions.hypoxemia.strength / 100 -- from hypoxemia
 				+ HF.Clamp(c.afflictions.stroke.strength, 0, 20) * 0.1 -- from stroke
 				+ c.afflictions.sepsis.strength / 100 * 0.4 -- from sepsis
