@@ -83,30 +83,19 @@ local function limbLockedInitial(c, limbtype, key)
 			)
 		)
 end
+
 NT.organDamageCalc = function(c, damagevalue, nomaxstrength)
 	if damagevalue >= 99 and (nomaxstrength == nil or nomaxstrength == false) then
 		return 100
 	end
 
-	-- Matriarch Healing from Genes 
+	-- Matriarch Gene Healing 
 	local matriarchStrength = HF.GetAfflictionStrength(c.character, "healdamage", 0) or 0
-	local matriarchModifier = 0
-
-	if matriarchStrength > 0 then
-		matriarchModifier = math.sqrt(matriarchStrength)/80
-	else
-		matriarchModifier = 0
-	end
-
+    local matriarchModifier = matriarchStrength > 0 and math.sqrt(matriarchStrength) / 80 or 0
+	
 	-- Surgical Bed Healing
 	local inBed = HF.GetAfflictionStrength(c.character, "laytable", 0) or 0
-	local bedModifier = 0
-
-	if inBed > 0 then
-		bedModifier = 0.004 -- Change numbers as wanted 
-	else
-		bedModifier = 0
-	end
+    local bedModifier = inBed > 0 and 0.004 or 0 -- 20% faster healing in bed
 	
 	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime - matriarchModifier - inBed
 end
@@ -117,23 +106,11 @@ local function kidneyDamageCalc(c, damagevalue)
 
 	-- Matriarch Healing from Genes 
 	local matriarchStrength = HF.GetAfflictionStrength(c.character, "healdamage", 0) or 0
-	local matriarchModifier = 0
-
-	if matriarchStrength > 0 then
-		matriarchModifier = math.sqrt(matriarchStrength)/80
-	else
-		matriarchModifier = 0
-	end
-
+    local matriarchModifier = matriarchStrength > 0 and math.sqrt(matriarchStrength) / 80 or 0
+	
 	-- Surgical Bed Healing
 	local inBed = HF.GetAfflictionStrength(c.character, "laytable", 0) or 0
-	local bedModifier = 0
-
-	if inBed > 0 then
-		bedModifier = 0.004 -- About 20% faster healing. 1225 seconds to heal 49 kidneydamage to ~1020 seconds.
-	else
-		bedModifier = 0
-	end
+    local bedModifier = inBed > 0 and 0.004 or 0 -- 20% faster healing in bed
 	
 	if damagevalue >= 50 then
 		if damagevalue <= 51 then
@@ -143,6 +120,7 @@ local function kidneyDamageCalc(c, damagevalue)
 	end
 	return damagevalue - 0.02 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime - matriarchModifier - bedModifier
 end
+
 local function isExtremity(type)
 	return type ~= LimbType.Torso and type ~= LimbType.Head
 end
