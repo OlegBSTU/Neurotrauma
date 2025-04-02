@@ -2047,10 +2047,14 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
 			local lhand = HF.GetItemInLeftHand(usingCharacter)
 			local rhand = HF.GetItemInRightHand(usingCharacter)
 			if rhand ~= nil then
-				userInventory.TryPutItem(rhand, nil, { InvSlotType.Any })
+				if not userInventory.TryPutItem(rhand, nil, { InvSlotType.Any }) then
+					rhand.Drop(usingCharacter, true)
+				end
 			end
 			if lhand ~= nil then
-				userInventory.TryPutItem(lhand, nil, { InvSlotType.Any })
+				if not userInventory.TryPutItem(lhand, nil, { InvSlotType.Any }) then
+					lhand.Drop(usingCharacter, true)
+				end
 			end
 			userInventory.TryPutItem(targetItem, 5, true, true, usingCharacter, true, true)
 			if targetInventory.TryPutItem(item, 4, true, true, usingCharacter, true, true) then

@@ -2322,8 +2322,9 @@
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
-        <Affliction identifier="analgesia" amount="10"/>
-        <Affliction identifier="givein" amount="1"/>
+        <Conditional analgesia="lte 4.5" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="analgesia" amount="1" />
       </StatusEffect>
     </Effect>
     <icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="6,0" sheetelementsize="128,128" origin="0,0"/>

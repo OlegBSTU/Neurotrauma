@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="" identifier="livertransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,liver,petfood1,petfood2,petfood3">
+    <Item name="" identifier="livertransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,liver,petfood1,petfood2,petfood3,monsterfood">
 
         <Price baseprice="1000" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -46,7 +46,7 @@
         </Price>
     </Item>
 
-    <Item name="" identifier="lungtransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,lung,petfood1,petfood2,petfood3">
+    <Item name="" identifier="lungtransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,lung,petfood1,petfood2,petfood3,monsterfood">
         <Price baseprice="2000" soldbydefault="false">
             <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
         </Price>
@@ -91,7 +91,7 @@
         </Price>
     </Item>
 
-    <Item name="" identifier="kidneytransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,kidney,petfood1,petfood2,petfood3">
+    <Item name="" identifier="kidneytransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,kidney,petfood1,petfood2,petfood3,monsterfood">
         <Price baseprice="400" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
         </Price>
@@ -136,7 +136,7 @@
         </Price>
     </Item>
 
-    <Item name="" identifier="hearttransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,heart,petfood1,petfood2,petfood3">
+    <Item name="" identifier="hearttransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,heart,petfood1,petfood2,petfood3,monsterfood">
         <Price baseprice="4000" soldbydefault="false">
             <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
         </Price>
@@ -181,7 +181,7 @@
         </Price>
     </Item>
 
-    <Item name="" identifier="braintransplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="1.5" Tags="smallitem,organ,brain,petfood1,petfood2,petfood3,braintransplant">
+    <Item name="" identifier="braintransplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="1.5" Tags="smallitem,organ,brain,petfood1,petfood2,petfood3,monsterfood,braintransplant">
         <Price baseprice="0" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="false"/>
         </Price>

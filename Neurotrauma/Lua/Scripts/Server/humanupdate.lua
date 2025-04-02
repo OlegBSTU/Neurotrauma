@@ -212,7 +212,6 @@ NT.Afflictions = {
 					and (
 						NTC.GetSymptom(c.character, i)
 						or (c.stats.lockleftleg and c.stats.lockrightleg and not c.stats.wheelchaired)
-						or c.character.IsKeyDown(InputType.Attack)
 					),
 				2
 			)
@@ -634,7 +633,7 @@ NT.Afflictions = {
 		update = function(c, i)
 			-- respiratory arrest? -> oxygen in lungs rapidly decreases
 			if c.afflictions.respiratoryarrest.strength > 0 then
-				c.afflictions.oxygenlow.strength = c.afflictions.oxygenlow.strength + 15 * (1 - HF.BoolToNum(HF.HasTalent(c.character,"thewaitinglist", 0.75)) * NT.Deltatime
+				c.afflictions.oxygenlow.strength = c.afflictions.oxygenlow.strength + 15 * (1 - HF.BoolToNum(HF.HasTalent(c.character,"thewaitinglist") and c.afflictions.sym_unconsciousness.strength > 0, 0.75) * NT.Deltatime
 			end
 		end,
 	},
