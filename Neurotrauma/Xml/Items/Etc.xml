@@ -33,7 +33,7 @@
             <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
                 <LuaHook name="surgerytable.update" />
             </StatusEffect>
-            <StatusEffect type="OnActive" target="Character"> <!-- Hospital Bed regeneration on laying down -->
+            <StatusEffect type="OnActive" target="Character"> <!-- Basic affliction Hospital Bed regeneration on laying down -->
                     <reduceaffliction identifier="nausea" strength="0.05"/>
                     <reduceaffliction identifier="opiatewithdrawal" strength="0.05"/>
                     <reduceaffliction identifier="opiateaddiction" strength="0.05"/>
@@ -43,6 +43,7 @@
                     <reduceaffliction identifier="alcoholaddiction" strength="0.05"/>
                     <reduceaffliction identifier="drunk" strength="0.05"/>
                     <reduceaffliction identifier="concussion" strength="0.02"/>
+                    <Affliction identifier="laytable" amount="2"/> <!-- Add laytable on laying down for extra regen calculations -->
                 </StatusEffect>
         </Holdable>
 
