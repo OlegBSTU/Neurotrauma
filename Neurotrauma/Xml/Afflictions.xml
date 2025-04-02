@@ -3822,6 +3822,23 @@ thats what the vomiting symptom is for -->
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+ <!-- Laying on Surgical Table
+  Invisible Status -->
+<Affliction
+    name="LayTable"
+    identifier="laytable"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="3"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="700">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
 
   <!-- Gradually applies the "alcohol withdrawal" affliction to the character -->
   <Affliction
