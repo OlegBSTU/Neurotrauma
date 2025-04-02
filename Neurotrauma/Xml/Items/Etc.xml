@@ -33,6 +33,17 @@
             <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
                 <LuaHook name="surgerytable.update" />
             </StatusEffect>
+            <StatusEffect type="OnActive" target="Character"> <!-- Hospital Bed regeneration on laying down -->
+                    <reduceaffliction identifier="nausea" strength="0.05"/>
+                    <reduceaffliction identifier="opiatewithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="opiateaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="chemwithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="chemaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="alcoholwithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="alcoholaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="drunk" strength="0.05"/>
+                    <reduceaffliction identifier="concussion" strength="0.02"/>
+                </StatusEffect>
         </Holdable>
 
         <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
