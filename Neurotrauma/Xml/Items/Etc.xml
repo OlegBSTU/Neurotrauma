@@ -33,18 +33,6 @@
             <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
                 <LuaHook name="surgerytable.update" />
             </StatusEffect>
-            <StatusEffect type="OnActive" target="Character"> <!-- Basic affliction Hospital Bed regeneration on laying down -->
-                    <reduceaffliction identifier="nausea" strength="0.05"/>
-                    <reduceaffliction identifier="opiatewithdrawal" strength="0.05"/>
-                    <reduceaffliction identifier="opiateaddiction" strength="0.05"/>
-                    <reduceaffliction identifier="chemwithdrawal" strength="0.05"/>
-                    <reduceaffliction identifier="chemaddiction" strength="0.05"/>
-                    <reduceaffliction identifier="alcoholwithdrawal" strength="0.05"/>
-                    <reduceaffliction identifier="alcoholaddiction" strength="0.05"/>
-                    <reduceaffliction identifier="drunk" strength="0.05"/>
-                    <reduceaffliction identifier="concussion" strength="0.02"/>
-                    <Affliction identifier="laytable" amount="2"/> <!-- Add laytable on laying down for extra regen calculations -->
-                </StatusEffect>
         </Holdable>
 
         <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
@@ -59,6 +47,17 @@
             <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
             <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
             <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
+            <StatusEffect type="OnActive" target="Character"> <!-- Basic affliction Hospital Bed regeneration on laying down -->
+                    <reduceaffliction identifier="nausea" strength="100"/>
+                    <reduceaffliction identifier="opiatewithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="opiateaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="chemwithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="chemaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="alcoholwithdrawal" strength="0.05"/>
+                    <reduceaffliction identifier="alcoholaddiction" strength="0.05"/>
+                    <reduceaffliction identifier="drunk" strength="0.05"/>
+                    <reduceaffliction identifier="concussion" strength="0.02"/>
+            </StatusEffect>
             <!--
             <StatusEffect type="Always" target="NearbyCharacters" range="100">
                 <Conditional sym_unconsciousness="gt 0.1"/>
