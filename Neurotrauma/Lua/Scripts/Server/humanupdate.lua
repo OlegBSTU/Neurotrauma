@@ -97,7 +97,7 @@ NT.organDamageCalc = function(c, damagevalue, nomaxstrength)
 	local inBed = HF.GetAfflictionStrength(c.character, "laytable", 0) or 0
     local bedModifier = inBed > 0 and 0.004 or 0 -- 20% faster healing in bed
 	
-	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime - matriarchModifier - inBed
+	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime - matriarchModifier - bedModifier
 end
 local function kidneyDamageCalc(c, damagevalue)
 	if damagevalue >= 99 then
