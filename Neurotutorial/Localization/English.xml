@@ -15,4 +15,8 @@
   <roomname.simulacrum>Simulacrum</roomname.simulacrum>
   <roomname.garden>Garden</roomname.garden>
 
+  <!-- InertiaInhibitor -->
+  <entityname.mb_inertiainhibitor>Inertia inhibitor</entityname.mb_inertiainhibitor>
+  <entitydescription.mb_inertiainhibitor>Requires Lua. Stops the submarine from moving.</entitydescription.mb_inertiainhibitor>
+
 </infotexts>
