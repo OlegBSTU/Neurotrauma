@@ -145,7 +145,7 @@ NT.OnDamagedMethods.gunshotwound = function(character, strength, limbtype)
 		then
 			NT.BreakLimb(character, limbtype)
 			causeFullForeignBody = true
-			HF.AddAffliction(character, "cerebralhypoxia", strength)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 2)
 		end
 	end
 
@@ -250,7 +250,7 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
-			HF.AddAffliction(character, "cerebralhypoxia", strength)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 2)
 		end
 		if
 			strength >= 15
@@ -437,7 +437,7 @@ NT.OnDamagedMethods.lacerations = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
-			HF.AddAffliction(character, "cerebralhypoxia", strength)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 2)
 		end
 	end
 
@@ -521,7 +521,7 @@ NT.OnDamagedMethods.blunttrauma = function(character, strength, limbtype)
 			)
 		then
 			NT.BreakLimb(character, limbtype)
-			HF.AddAffliction(character, "cerebralhypoxia", strength)
+			HF.AddAffliction(character, "cerebralhypoxia", strength / 2)
 		end
 		if
 			strength >= 15
