@@ -13,7 +13,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_heads_mask.png" />
     <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damage.png" sourcerect="0,0,128,128"/>
-    <damagemodifier damagemultiplier="2" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="3" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional th_amputation="gt 0"/>
       <sprite texture="%ModDir%/Images/Human/Human_[GENDER].png" sourcerect="190,510,50,10" depth="0.05" origin="0.5,0.5" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
