@@ -1426,10 +1426,13 @@ NT.LimbAfflictions = {
 			-- over time skin temperature goes up again
 			if limbaff[i].strength > 0 then
 				limbaff[i].strength = limbaff[i].strength - 1.7 * NT.Deltatime
-			end
-			-- iced slowdown
-			if limbaff[i].strength > 0 then
+			 -- iced slow down
 				c.stats.speedmultiplier = c.stats.speedmultiplier * 0.95
+				-- heal internal bleeding
+				local bleedingStrength = c.afflictions.internalbleeding.strength
+				if bleedingStrength > 0 then
+					c.afflictions.internalbleeding.strength = bleedingStrength - 1.3 * NT.DeltaTime
+				end
 			end
 		end,
 	},
