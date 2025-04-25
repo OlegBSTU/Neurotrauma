@@ -1,169 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
 	<!-- Surgery table -->
-    <Item 
-		name="" 
-		identifier="operatingtable" 
-		scale="0.4" 
-		Tags="operatingtable" 
-		maxstacksize="1" 
-		category="medical" 
-		description="" 
-		isshootable="true">
-        
-		<Upgrade 
-			gameversion="0.12.0.0" 
-			noninteractable="false"/>
-        
-		<Body 
-			width="416" 
-			height="192" 
-			density="40"/>
+	<Item name="" identifier="operatingtable" scale="0.4" Tags="operatingtable" maxstacksize="1" category="medical" description="" isshootable="true">
 
-        <Price 
-			baseprice="200" 
-			soldbydefault="false">
-			<Price 
-				storeidentifier="merchantmedical" 
-				sold="true" 
-				multiplier="0.9" 
-				minavailable="1"/>
-        </Price>
+		<Upgrade gameversion="0.12.0.0" noninteractable="false"/>
 
-        <Deconstruct 
-			time="10">
+		<Body width="416" height="192" density="40"/>
+
+		<Price baseprice="200" soldbydefault="false">
+			<Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+		</Price>
+
+		<Deconstruct time="10">
 			<Item identifier="steel"/>
-            <Item identifier="aluminium"/>
-        </Deconstruct>
+			<Item identifier="aluminium"/>
+		</Deconstruct>
 
-        <Fabricate 
-			suitablefabricators="medicalfabricator" 
-			requiredtime="30">
+		<Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
 			<RequiredSkill identifier="medical" level="50"/>
-            <RequiredItem identifier="fpgacircuit"/>
-            <RequiredItem identifier="plastic"/>
-            <RequiredItem identifier="steel"/>
-            <RequiredItem identifier="aluminium"/>
-        </Fabricate>
+			<RequiredItem identifier="fpgacircuit"/>
+			<RequiredItem identifier="plastic"/>
+			<RequiredItem identifier="steel"/>
+			<RequiredItem identifier="aluminium"/>
+		</Fabricate>
 
-        <InventoryIcon 
-			texture="Content/Map/Outposts/Art/MedBayAssets.png" 
-			sourcerect="96,304,416,192" 
-			origin="0.5,0.5"/>
-        
-		<sprite 
-			texture="Content/Map/Outposts/Art/MedBayAssets.png" 
-			sourcerect="96,304,416,192" 
-			depth="0.75" 
-			premultiplyalpha="false" 
-			origin="0.5,0.5"/>
+		<InventoryIcon texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" origin="0.5,0.5"/>
 
-        <Controller 
-			allowingameediting="false" 
-			UserPos="0,-300" 
-			direction="Right" 
-			hidehud="false" 
-			canbeselected="true"
-			selectkey="Select">
-            <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
-            <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
-            <limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
-            <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
-            <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
-            <limbposition limb="RightHand" position="234,-10" allowusinglimb="true"/>
-            <limbposition limb="LeftHand" position="234,-10" allowusinglimb="true"/>
+		<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.75" premultiplyalpha="false" origin="0.5,0.5"/>
+
+		<Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" selectkey="Select">
+			<limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
+			<limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
+			<limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
+			<limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
+			<limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
+			<limbposition limb="RightHand" position="234,-10" allowusinglimb="true"/>
+			<limbposition limb="LeftHand" position="234,-10" allowusinglimb="true"/>
 			<!-- give analgesia/anesthesia, if tank is present -->
-				<!-- Analgesia -->
-			<StatusEffect
-				type="OnActive"
-				target="Contained,Character"
-				targettags="analgesictank,Human"
-				Condition="-0.7"
-				conditionalComparison="And"
-				disabledeltatime="true"
-				interval="1">
+			<!-- Analgesia -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="analgesictank,Human" Condition="-0.7" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="analgesictank" />
 				<Conditional condition="gt 0" />
 				<Conditional analgesia="lte 11" />
 				<Affliction identifier="analgesia" amount="3" />
 			</StatusEffect>
-				<!-- Anesthesia -->
-			<StatusEffect
-				type="OnActive"
-				target="Contained,Character"
-				targettags="anesthetictank,Human"
-				Condition="-0.5"
-				conditionalComparison="And"
-				disabledeltatime="true"
-				interval="1">
+			<!-- Anesthesia -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="anesthetictank,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="anesthetictank" />
 				<Conditional condition="gt 0" />
 				<Conditional anesthesia="lte 25" />
 				<Affliction identifier="anesthesia" amount="1" />
 			</StatusEffect>
-				<!-- reduce oxygen 
-					and disable "alv" for the user 
+			<!-- reduce oxygen
+					and disable "alv" for the user
 					if welding fuel is present -->
-			<StatusEffect
-				type="OnActive"
-				target="Contained,Character"
-				targettags="weldingfuel,Human"
-				Condition="-0.5"
-				OxygenAvailable="-100.0" 
-				Oxygen="-15.0"
-				conditionalComparison="And">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="weldingfuel,Human" Condition="-0.5" OxygenAvailable="-100.0" Oxygen="-15.0" conditionalComparison="And">
 				<Conditional HasTag="weldingfuel" />
 				<Conditional condition="gt 0" />
 				<Conditional NeedsAir="true" />
 				<ReduceAffliction identifier="alv" amount="1000"/>
 			</StatusEffect>
 			<!-- Do dialysis if dialyzer is present -->
-				<!-- Alkalosis dialysis -->
-			<StatusEffect
-				type="OnActive"
-				target="Contained,Character"
-				targettags="dialysisunit,Human"
-				Condition="-1"
-				conditionalComparison="And"
-				disabledeltatime="true"
-				interval="1">
+			<!-- Alkalosis dialysis -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialysisunit,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional alkalosis="gt 0" />
 				<ReduceAffliction identifier="alkalosis" amount="0.8" />
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
-				<!-- Acidosis dialysis -->
-			<StatusEffect
-				type="OnActive"
-				target="Contained,Character"
-				targettags="dialysisunit,Human"
-				Condition="-1"
-				conditionalComparison="And"
-				disabledeltatime="true"
-				interval="1">
+			<!-- Acidosis dialysis -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialysisunit,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional acidosis="gt 0" />
 				<ReduceAffliction identifier="acidosis" amount="0.8" />
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
-        </Controller>
+		</Controller>
 
-		<ItemContainer 
-			canbeselected="true" 
-			selectkey="Attack" 
-			capacity="1"
-			maxstacksize="1" 
-			hideitems="false" 
-			hidehud="false"
-			msg="itemmsgmodifytable"
-			uilabel="operatingtabellabel">
+		<ItemContainer canbeselected="true" selectkey="Attack" capacity="1" maxstacksize="1" hideitems="false" hidehud="false" msg="itemmsgmodifytable" uilabel="operatingtabellabel">
 			<GuiFrame relativesize="0.2,0.2" anchor="BottomCenter" style="ItemUI" />
 			<!-- First Slot (Tanks) -->
 			<Containable items="analgesictank,anesthetictank,weldingfuel" />
 			<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
-			
+
 			<!-- Second Slot (dialyzer) -->
 			<SubContainer capacity="1">
 				<SlotIcon texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
@@ -171,266 +92,125 @@
 			</SubContainer>
 		</ItemContainer>
 
-        <!-- Controller output was made editable in v1.1.4.0, disallow it on surgery tables -->
-        <Upgrade 
-			gameversion="2.1.4.0" 
-			allowingameediting="false" />
-		
-        <ConnectionPanel 
-			selectkey="Action" 
-			canbeselected="true" 
-			msg="ItemMsgRewireScrewdriver" 
-			hudpriority="10">
-            <GuiFrame relativesize="0.15,0.6" minsize="300,450" maxsize="380,500" anchor="Center" style="ConnectionPanel" />
-            <RequiredItem items="screwdriver" type="Equipped" />
-            <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
-            <output name="alive_out" displayname="connection.aliveout"/>
-            <output name="conscious_out" displayname="connection.consciousout"/>
-            <output name="name_out" displayname="connection.nameout" />
-            <output name="vitality_out" displayname="connection.vitalityout" />
-            <output name="heartrate_out" displayname="connection.heartrateout" />
-            <output name="breathingrate_out" displayname="connection.breathingrateout" />
-            <output name="bloodpressure_out" displayname="connection.bloodpressureout" />
-            <output name="bloodoxygen_out" displayname="connection.bloodoxygenout" />
-            <output name="neurotrauma_out" displayname="connection.neurotraumaout" />
-            <output name="organdamage_out" displayname="connection.organdamageout" />
-            <output name="insurgery_out" displayname="connection.insurgeryout" />
-            <output name="causeofdeath_out" displayname="connection.causeofdeathout" />
-            <output name="bloodph_out" displayname="connection.bloodphout" />
-        </ConnectionPanel>
-		
-        <LightComponent 
-			range="10.0" 
-			lightcolor="255,255,255,0" 
-			IsOn="true" 
-			castshadows="false" 
-			allowingameediting="false">
-            <sprite 
-				texture="Content/Map/Outposts/Art/MedBayAssets.png" 
-				depth="0.025" 
-				sourcerect="96,304,416,192" 
-				origin="0.5,0.5" 
-				alpha="1.0"/>
-        </LightComponent>
-		
-        <Holdable 
-			selectkey="Action" 
-			pickkey="Use" 
-			slots="RightHand+LeftHand" 
-			msg="ItemMsgDetach" 
-			PickingTime="5" 
-			aimpos="85,-10" 
-			handle1="0,0" 
-			attachable="true" 
-			aimable="true">
+		<!-- Controller output was made editable in v1.1.4.0, disallow it on surgery tables -->
+		<Upgrade gameversion="2.1.4.0" allowingameediting="false" />
+
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.15,0.6" minsize="300,450" maxsize="380,500" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+			<output name="alive_out" displayname="connection.aliveout"/>
+			<output name="conscious_out" displayname="connection.consciousout"/>
+			<output name="name_out" displayname="connection.nameout" />
+			<output name="vitality_out" displayname="connection.vitalityout" />
+			<output name="heartrate_out" displayname="connection.heartrateout" />
+			<output name="breathingrate_out" displayname="connection.breathingrateout" />
+			<output name="bloodpressure_out" displayname="connection.bloodpressureout" />
+			<output name="bloodoxygen_out" displayname="connection.bloodoxygenout" />
+			<output name="neurotrauma_out" displayname="connection.neurotraumaout" />
+			<output name="organdamage_out" displayname="connection.organdamageout" />
+			<output name="insurgery_out" displayname="connection.insurgeryout" />
+			<output name="causeofdeath_out" displayname="connection.causeofdeathout" />
+			<output name="bloodph_out" displayname="connection.bloodphout" />
+		</ConnectionPanel>
+
+		<LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
+			<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0"/>
+		</LightComponent>
+
+		<Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="5" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
 			<!-- Artificial Ventilation and Table afflictions -->
-			<StatusEffect 
-				type="OnNotContained" 
-				target="NearbyCharacters" 
-				range="200" 
-				stackable="true">
-                <Affliction identifier="table" amount="2"/>
-                <Affliction identifier="alv" amount="10"/>
-            </StatusEffect>
+			<StatusEffect type="OnNotContained" target="NearbyCharacters" range="200" stackable="true">
+				<Affliction identifier="table" amount="2"/>
+				<Affliction identifier="alv" amount="10"/>
+			</StatusEffect>
 			<!-- Output value update -->
-            <StatusEffect 
-				type="Always" 
-				target="NearbyCharacters" 
-				range="200" 
-				delay="1" 
-				stackable="false">
-                <LuaHook name="surgerytable.update" />
-            </StatusEffect>
-        </Holdable>
-    </Item>
+			<StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
+				<LuaHook name="surgerytable.update" />
+			</StatusEffect>
+		</Holdable>
+	</Item>
 
 	<!-- Dialysis unit (surgery table upgrade) -->
-    <Item
-		name="" 
-		identifier="dialysisunit" 
-		category="medical" 
-		tags="dialysisunit,medical" 
-		scale="0.5"
-		maxstacksize="1" 
-		description="" 
-		cargocontaineridentifier="metalcrate" 
-		impactsoundtag="impact_metal_heavy">
-		<Price 
-			baseprice="450" 
-			soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="1"/>
-        </Price>
-        <Fabricate 
-			suitablefabricators="medicalfabricator" 
-			requiredtime="30">
-            <RequiredSkill identifier="medical" level="25" />
-            <RequiredSkill identifier="mechanical" level="45" />
-            <RequiredItem identifier="steel" amount="2" />
+	<Item name="" identifier="dialysisunit" category="medical" tags="dialysisunit,medical" scale="0.5" maxstacksize="1" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
+		<Price baseprice="450" soldbydefault="false">
+			<Price storeidentifier="merchantmedical" sold="true" multiplier="1"/>
+		</Price>
+		<Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+			<RequiredSkill identifier="medical" level="25" />
+			<RequiredSkill identifier="mechanical" level="45" />
+			<RequiredItem identifier="steel" amount="2" />
 			<RequiredItem identifier="fpgacircuit" amount="2" />
-            <RequiredItem identifier="titaniumaluminiumalloy" />
-        </Fabricate>
-        <Deconstruct time="10">
-            <Item identifier="steel" />
-            <Item identifier="copper" />
-        </Deconstruct>
-		<ItemContainer 
-			canbeselected="false" 
-			capacity="1"
-			maxstacksize="1"
-			hideitems="false"
-			drawinventory="true"
-			hidehud="false">
+			<RequiredItem identifier="titaniumaluminiumalloy" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="steel" />
+			<Item identifier="copper" />
+		</Deconstruct>
+		<ItemContainer canbeselected="false" capacity="1" maxstacksize="1" hideitems="false" drawinventory="true" hidehud="false">
 			<GuiFrame relativesize="0.2,0.2" anchor="BottomCenter" style="ItemUI" />
 			<!-- First Slot (dialyzer) -->
 			<Containable items="dialyzer" />
 			<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
 		</ItemContainer>
-       <Holdable 
-			selectkey="Action" 
-			pickkey="Use" 
-			slots="RightHand+LeftHand"
-			aimpos="85,-10" 
-			handle1="0,0">
-        </Holdable>
-        <PreferredContainer 
-			primary="medcab" />
-		<Sprite 
-			texture="%ModDir%/Images/InGameItemIconAtlas.png" 
-			sourcerect="0,768,256,256" 
-			depth="0.55" 
-			origin="0.5,0.5" />
-		<Body 
-			radius="60" 
-			width="60" 
-			density="15" />
-    </Item>
+		<Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" aimpos="85,-10" handle1="0,0">
+		</Holdable>
+		<PreferredContainer primary="medcab" />
+		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,768,256,256" depth="0.55" origin="0.5,0.5" />
+		<Body radius="60" width="60" density="15" />
+	</Item>
 
 	<!-- Blahaj -->
-    <Item 
-		name="" 
-		identifier="blahaj" 
-		category="Equipment" 
-		cargocontaineridentifier="metalcrate" 
-		impactsoundtag="impact_squeak" 
-		RequireAimToUse="True" 
-		Tags="smallitem,medical,mountableweapon" 
-		description="" 
-		useinhealthinterface="True" 
-		scale="0.25">
-		<Fabricate 
-			suitablefabricators="fabricator" 
-			requiredtime="5">
-            <RequiredSkill identifier="mechanical" level="10"/>
-            <RequiredItem identifier="plastic"/>
-        </Fabricate>
-        <Deconstruct time="5"/>
-        <Sprite 
-			texture="%ModDir%/Images/InGameItemIconAtlas.png" 
-			sourcerect="768,835,256,189" 
-			depth="0.55" 
-			origin="0.5,0.5"/>
-        <Body 
-			width="100" 
-			height="80" 
-			density="9"/>
-        <MeleeWeapon 
-			slots="Any,RightHand,LeftHand" 
-			controlpose="true" 
-			aimpos="45,10" 
-			handle1="-20,0" 
-			handle2="-10,5" 
-			holdangle="60" 
-			reload="1" 
-			range="100" 
-			combatpriority="5" 
-			msg="ItemMsgPickUpSelect">
-            <StatusEffect 
-				type="OnUse" 
-				target="This" 
-				disabledeltatime="true">
-                <Sound file="%ModDir%/Sound/squeak1.ogg" type="OnUse" range="500"/>
-                <Sound file="%ModDir%/Sound/squeak2.ogg" type="OnUse" range="500"/>
-                <Sound file="%ModDir%/Sound/squeak3.ogg" type="OnUse" range="500"/>
-                <Sound file="%ModDir%/Sound/squeak4.ogg" type="OnUse" range="500"/>
-                <Sound file="%ModDir%/Sound/squeak5.ogg" type="OnUse" range="500"/>
-            </StatusEffect>
-        </MeleeWeapon>
-    </Item>
+	<Item name="" identifier="blahaj" category="Equipment" cargocontaineridentifier="metalcrate" impactsoundtag="impact_squeak" RequireAimToUse="True" Tags="smallitem,medical,mountableweapon" description="" useinhealthinterface="True" scale="0.25">
+		<Fabricate suitablefabricators="fabricator" requiredtime="5">
+			<RequiredSkill identifier="mechanical" level="10"/>
+			<RequiredItem identifier="plastic"/>
+		</Fabricate>
+		<Deconstruct time="5"/>
+		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,835,256,189" depth="0.55" origin="0.5,0.5"/>
+		<Body width="100" height="80" density="9"/>
+		<MeleeWeapon slots="Any,RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="-20,0" handle2="-10,5" holdangle="60" reload="1" range="100" combatpriority="5" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This" disabledeltatime="true">
+				<Sound file="%ModDir%/Sound/squeak1.ogg" type="OnUse" range="500"/>
+				<Sound file="%ModDir%/Sound/squeak2.ogg" type="OnUse" range="500"/>
+				<Sound file="%ModDir%/Sound/squeak3.ogg" type="OnUse" range="500"/>
+				<Sound file="%ModDir%/Sound/squeak4.ogg" type="OnUse" range="500"/>
+				<Sound file="%ModDir%/Sound/squeak5.ogg" type="OnUse" range="500"/>
+			</StatusEffect>
+		</MeleeWeapon>
+	</Item>
 
 	<!-- Wheelchair -->
-    <Item 
-		name="" 
-		identifier="wheelchair" 
-		category="Equipment" 
-		tags="provocative,mediumitem" 
-		scale="0.5" 
-		fireproof="false" 
-		description="" 
-		cargocontaineridentifier="metalcrate" 
-		impactsoundtag="impact_metal_heavy">
-		<Price 
-			baseprice="100" 
-			soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
-        </Price>
-        <Fabricate 
-			suitablefabricators="medicalfabricator" 
-			requiredtime="20">
-            <RequiredSkill identifier="medical" level="20" />
-            <RequiredSkill identifier="mechanical" level="30" />
-            <RequiredItem identifier="steel" />
-            <RequiredItem identifier="titaniumaluminiumalloy" />
-        </Fabricate>
-        <Deconstruct 
-			time="10">
-            <Item identifier="steel" />
-        </Deconstruct>
-        <PreferredContainer 
-			primary="medcab"/>
-        <PreferredContainer 
-			primary="wreckmedcab,abandonedmedcab" 
-			minamount="0" 
-			maxamount="1" 
-			spawnprobability="0.1" />
-        <Sprite 
-			texture="%ModDir%/Images/InGameItemIconAtlas.png" 
-			sourcerect="0,768,256,256" 
-			depth="0.55" 
-			origin="0.5,0.5" />
-        <Body 
-			radius="60" 
-			width="60" 
-			density="15" />
-        <Wearable 
-			slots="Any,OuterClothes" 
-			msg="ItemMsgEquipSelect" 
-			autoequipwhenfull="true">
-            <sprite 
-				texture="%ModDir%/Images/InGameItemIconAtlas.png" 
-				limb="Waist" 
-				hidelimb="false" 
-				inherittexturescale="true" 
-				hideotherwearables="false" 
-				inheritorigin="false" 
-				sourcerect="0,768,256,256" 
-				inheritlimbdepth="false" 
-				depth="0.10003" />
-            <!-- depth="0.11504" -->
-        </Wearable>
-        <Controller 
-			UserPos="0,-300" 
-			direction="Right" 
-			hidehud="false" 
-			canbeselected="true">
-            <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
-            <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
-            <limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
-            <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
-            <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
-            <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
-            <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
-        </Controller>
-        <aitarget 
-			maxsightrange="50" />
-    </Item>
+	<Item name="" identifier="wheelchair" category="Equipment" tags="provocative,mediumitem" scale="0.5" fireproof="false" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
+		<Price baseprice="100" soldbydefault="false">
+			<Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+		</Price>
+		<Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+			<RequiredSkill identifier="medical" level="20" />
+			<RequiredSkill identifier="mechanical" level="30" />
+			<RequiredItem identifier="steel" />
+			<RequiredItem identifier="titaniumaluminiumalloy" />
+		</Fabricate>
+		<Deconstruct time="10">
+			<Item identifier="steel" />
+		</Deconstruct>
+		<PreferredContainer primary="medcab"/>
+		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,768,256,256" depth="0.55" origin="0.5,0.5" />
+		<Body radius="60" width="60" density="15" />
+		<Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="true">
+			<sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="false" sourcerect="0,768,256,256" inheritlimbdepth="false" depth="0.10003" />
+			<!-- depth="0.11504" -->
+		</Wearable>
+		<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+			<limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
+			<limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
+			<limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
+			<limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
+			<limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
+			<limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
+			<limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
+		</Controller>
+		<aitarget maxsightrange="50" />
+	</Item>
 </Items>

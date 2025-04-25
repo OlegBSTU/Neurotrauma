@@ -29,7 +29,7 @@
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" Condition="-100"/>
             <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="1" stackable="false"/>
-			<!-- Oxygen/Oxygenite Tank -->
+            <!-- Oxygen/Oxygenite Tank -->
             <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-2" comparison="and">
                 <RequiredItem items="oxygentank" type="Contained"/>
                 <Conditional IsDead="false"/>
@@ -41,7 +41,7 @@
                 <ReduceAffliction identifier="oxygenlow" amount="90" />
                 <ReduceAffliction identifier="respiratoryarrest" amount="100" />
             </StatusEffect>
-			<!-- Analgesic Tank -->
+            <!-- Analgesic Tank -->
             <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-25" comparison="and">
                 <RequiredItem items="analgesictank,anesthetictank" type="Contained"/>
                 <Conditional IsDead="false"/>
@@ -53,15 +53,15 @@
                 <Affliction identifier="opiateaddiction" amount="4"/>
                 <Affliction identifier="opiateoverdose" amount="3"/>
                 <ReduceAffliction identifier="opiatewithdrawal" amount="7.5"/>
-            </StatusEffect>            
-			<StatusEffect type="OnUse" target="Contained,UseTarget" duration="10" comparison="and">
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" duration="10" comparison="and">
                 <RequiredItem items="analgesictank" type="Contained"/>
                 <Conditional IsDead="false"/>
                 <Conditional drunk="gt 30" />
                 <Affliction identifier="analgesia" amount="5"/>
                 <Affliction identifier="opiateoverdose" amount="3"/>
-            </StatusEffect>			
-			<!-- Anesthetic Tank -->
+            </StatusEffect>
+            <!-- Anesthetic Tank -->
             <StatusEffect type="OnUse" target="Contained,UseTarget" duration="11" comparison="and">
                 <RequiredItem items="anesthetictank" type="Contained"/>
                 <Conditional IsDead="false"/>
