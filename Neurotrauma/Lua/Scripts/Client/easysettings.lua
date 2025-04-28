@@ -111,7 +111,7 @@ end
 --save and exit
 easySettings.SaveButton = function(parent)
 	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.33, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft),
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft),
 		"Save and Exit",
 		GUI.Alignment.Center,
 		"GUIButton"
@@ -132,7 +132,7 @@ end
 --discard and exit
 easySettings.CloseButton = function(parent)
 	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.33, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter),
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter),
 		"Discard and Exit",
 		GUI.Alignment.Center,
 		"GUIButton"
@@ -149,7 +149,7 @@ end
 --reset and exit
 easySettings.ResetButton = function(parent)
 	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.33, 0.05), parent.RectTransform, GUI.Anchor.BottomRight),
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomRight),
 		"Reset Config",
 		GUI.Alignment.Center,
 		"GUIButton"
