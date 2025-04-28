@@ -69,7 +69,7 @@ local function ConstructUI(parent)
 
 	--info text
 	local userBlock = GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform),
+		GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform),
 		"Server config can be changed by owner or a client with manage settings permission. If the server doesn't allow writing into the config folder, then it must be edited manually.",
 		Color(200, 255, 255),
 		nil,
@@ -79,7 +79,7 @@ local function ConstructUI(parent)
 		Color(0, 0, 0)
 	)
 	local difficultyBlock = GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform),
+		GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform),
 		"",
 		Color(200, 255, 255),
 		nil,
@@ -95,9 +95,6 @@ local function ConstructUI(parent)
 		difficultyBlock.Text = difficultyRate
 	end
 	OnChanged()
-
-	--empty space
-	--GUI.TextBlock(GUI.RectTransform(Vector2(0.2, 0.1), list.Content.RectTransform), "", Color(255,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
 
 	-- procedurally construct config UI
 	for key, entry in pairs(NTConfig.Entries) do
@@ -190,12 +187,12 @@ local function ConstructUI(parent)
 				OnChanged()
 			end
 		elseif entry.type == "category" then
-			-- visual separation
+			-- Change visual separation to subheader
 			GUI.TextBlock(
-				GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform),
+				GUI.RectTransform(Vector2(1, 0.10), list.Content.RectTransform),
 				entry.name,
-				Color(255, 255, 255),
-				nil,
+				Color(255, 255, 237),
+				GUI.GUIStyle.SubHeadingFont,
 				GUI.Alignment.Center,
 				true,
 				nil,
@@ -203,18 +200,6 @@ local function ConstructUI(parent)
 			)
 		end
 	end
-
-	--empty space as last tickbox was getting cutoff
-	GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform),
-		"",
-		Color(255, 255, 255),
-		nil,
-		GUI.Alignment.Center,
-		true,
-		nil,
-		Color(0, 0, 0)
-	)
 
 	if Game.IsMultiplayer and not Game.Client.HasPermission(ClientPermissions.ManageSettings) then
 		for guicomponent in list.GetAllChildren() do
