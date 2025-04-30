@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+  <Manual_Button_Back>Zurück</Manual_Button_Back>
+  <entityname.Manual_FAQ>Medizinische Assistenz: Häufig gestellte Fragen</entityname.Manual_FAQ>
+  <entityname.Manual_Med_Kit_Recommendations>Medizinische Assistenz: Medizinische Ausrüstungsempfehlungen</entityname.Manual_Med_Kit_Recommendations>
+  <entityname.Manual_How_To_Diagnose>Medizinische Assistenz: Wie man diagnostiziert</entityname.Manual_How_To_Diagnose>
+  <entityname.Manual_Order_of_Treatments>Medizinische Assistenz: Reihenfolge der Behandlungen</entityname.Manual_Order_of_Treatments>
+  <entityname.Manual_The_5_Commandments_of_Neurotrauma>Medizinische Assistenz: Die 5 Gebote des Neurotraumas</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+  <entityname.Manual_Vomiting_Blood>Medizinische Assistenz: Blut erbrechen</entityname.Manual_Vomiting_Blood>
+  <entityname.Manual_Pale_Skin>Medizinische Assistenz: Blass Haut</entityname.Manual_Pale_Skin>
+  <entityname.Manual_Shortness_of_Breath>Medizinische Assistenz: Atemnot</entityname.Manual_Shortness_of_Breath>
+  <entityname.Manual_Cough>Medizinische Assistenz: Husten</entityname.Manual_Cough>
+  <entityname.Manual_Increased_Heartrate>Medizinische Assistenz: Erhöhte Herzfrequenz</entityname.Manual_Increased_Heartrate>
+  <entityname.Manual_Confusion>Medizinische Assistenz: Verwirrung</entityname.Manual_Confusion>
+  <entityname.Manual_Lightheadedness>Medizinische Assistenz: Benommenheit</entityname.Manual_Lightheadedness>
+  <entityname.Manual_Blurred_Vision>Medizinische Assistenz: Verschwommenes Sehen</entityname.Manual_Blurred_Vision>
+  <entityname.Manual_Leg_Swelling>Medizinische Assistenz: Beinschwellung</entityname.Manual_Leg_Swelling>
+  <entityname.Manual_Wheezing>Medizinische Assistenz: Keuchen</entityname.Manual_Wheezing>
+  <entityname.Manual_Weakness>Medizinische Assistenz: Schwäche</entityname.Manual_Weakness>
+  <entityname.Manual_Fever>Medizinische Assistenz: Fieber</entityname.Manual_Fever>
+  <entityname.Manual_Sweating>Medizinische Assistenz: Schwitzen</entityname.Manual_Sweating>
+  <entityname.Manual_Bloating>Medizinische Assistenz: Aufblähung</entityname.Manual_Bloating>
+  <entityname.Manual_Inflammation>Medizinische Assistenz: Entzündung</entityname.Manual_Inflammation>
+  <entityname.Manual_Jaundice>Medizinische Assistenz: Gelbsucht</entityname.Manual_Jaundice>
+  <entityname.Manual_Abdominal_Discomfort>Medizinische Assistenz: Bauchbeschwerden</entityname.Manual_Abdominal_Discomfort>
+  <entityname.Manual_Headache>Medizinische Assistenz: Kopfschmerzen</entityname.Manual_Headache>
+  <entityname.Manual_Craving>Medizinische Assistenz: Verlangen</entityname.Manual_Craving>
+  <entityname.Manual_Palpitations>Medizinische Assistenz: Herzklopfen</entityname.Manual_Palpitations>
+  <entityname.Manual_Spasms>Medizinische Assistenz: Krämpfe</entityname.Manual_Spasms>
+  <entityname.Manual_Neurotrauma>Medizinische Assistenz: Neurotrauma</entityname.Manual_Neurotrauma>
+  <entityname.Manual_Stroke>Medizinische Assistenz: Schlaganfall</entityname.Manual_Stroke>
+  <entityname.Manual_Withdrawal>Medizinische Assistenz: Abhebung</entityname.Manual_Withdrawal>
+  <entityname.Manual_Opiate_Overdose>Medizinische Assistenz: Opiatüberdosis</entityname.Manual_Opiate_Overdose>
+  <entityname.Manual_Seizure>Medizinische Assistenz: Anfall</entityname.Manual_Seizure>
+  <entityname.Manual_Unconsciousness>Medizinische Assistenz: Bewusstlosigkeit</entityname.Manual_Unconsciousness>
+  <entityname.Manual_Coma>Medizinische Assistenz: Koma</entityname.Manual_Coma>
+  <entityname.Manual_Spinal_Cord_Injury>Medizinische Assistenz: Rückenmarksverletzung</entityname.Manual_Spinal_Cord_Injury>
+  <entityname.Manual_Concussion>Medizinische Assistenz: Gehirnerschütterung</entityname.Manual_Concussion>
+  <entityname.Manual_Respiratory_Arrest>Medizinische Assistenz: Atemstillstand</entityname.Manual_Respiratory_Arrest>
+  <entityname.Manual_Lung_Damage>Medizinische Assistenz: Lungenschaden</entityname.Manual_Lung_Damage>
+  <entityname.Manual_Pneumothorax>Medizinische Assistenz: Pneumothorax</entityname.Manual_Pneumothorax>
+  <entityname.Manual_Hyperventilation>Medizinische Assistenz: Hyperventilation</entityname.Manual_Hyperventilation>
+  <entityname.Manual_Hypoventilation>Medizinische Assistenz: Hypoventilation</entityname.Manual_Hypoventilation>
+  <entityname.Manual_Oxygen_Low>Medizinische Assistenz: Sauerstoff niedrig</entityname.Manual_Oxygen_Low>
+  <entityname.Manual_Cardiac_Tamponade>Medizinische Assistenz: Kardiale Tamponade</entityname.Manual_Cardiac_Tamponade>
+  <entityname.Manual_Cardiac_Arrest>Medizinische Assistenz: Herzstillstand</entityname.Manual_Cardiac_Arrest>
+  <entityname.Manual_Heart_Attack>Medizinische Assistenz: Herzinfarkt</entityname.Manual_Heart_Attack>
+  <entityname.Manual_Heart_Damage>Medizinische Assistenz: Herzschaden</entityname.Manual_Heart_Damage>
+  <entityname.Manual_Irregular_Heartbeat>Medizinische Assistenz: Unregelmäßiger Herzschlag</entityname.Manual_Irregular_Heartbeat>
+  <entityname.Manual_Fibrillation>Medizinische Assistenz: Fibrillation - Fibrillation</entityname.Manual_Fibrillation>
+  <entityname.Manual_Aortic_Rupture>Medizinische Assistenz: Aortenruptur</entityname.Manual_Aortic_Rupture>
+  <entityname.Manual_Internal_Bleeding>Medizinische Assistenz: Innere Blutung</entityname.Manual_Internal_Bleeding>
+  <entityname.Manual_Radiation_Sickness>Medizinische Assistenz: Strahlenkrankheit</entityname.Manual_Radiation_Sickness>
+  <entityname.Manual_Kidney_Damage>Medizinische Assistenz: Nierenschaden</entityname.Manual_Kidney_Damage>
+  <entityname.Manual_Liver_Damage>Medizinische Assistenz: Leberschaden</entityname.Manual_Liver_Damage>
+  <entityname.Manual_Morbusine>Medizinische Assistenz: Morbusine</entityname.Manual_Morbusine>
+  <entityname.Manual_Cyanide_Poisoning>Medizinische Assistenz: Zyanidvergiftung</entityname.Manual_Cyanide_Poisoning>
+  <entityname.Manual_Vanilla_Organ_Damage>Medizinische Assistenz: Vanille Organ Schaden</entityname.Manual_Vanilla_Organ_Damage>
+  <entityname.Manual_Analgesia>Medizinische Assistenz: Analgesie</entityname.Manual_Analgesia>
+  <entityname.Manual_Anesthesia>Medizinische Assistenz: Anästhesie</entityname.Manual_Anesthesia>
+  <entityname.Manual_Abdominal_Pain>Medizinische Assistenz: Bauchschmerzen</entityname.Manual_Abdominal_Pain>
+  <entityname.Manual_Vomiting>Medizinische Assistenz: Erbrechen</entityname.Manual_Vomiting>
+  <entityname.Manual_Nausea>Medizinische Assistenz: Übelkeit</entityname.Manual_Nausea>
+  <entityname.Manual_Chest_Pain>Medizinische Assistenz: Brustschmerzen</entityname.Manual_Chest_Pain>
+  <entityname.Manual_Traumatic_Amputation>Medizinische Assistenz: Traumatische Amputation</entityname.Manual_Traumatic_Amputation>
+  <entityname.Manual_Gangrene>Medizinische Assistenz: Brandwunde</entityname.Manual_Gangrene>
+  <entityname.Manual_Surgical_Amputation>Medizinische Assistenz: Chirurgische Amputation</entityname.Manual_Surgical_Amputation>
+  <entityname.Manual_Intense_Pain>Medizinische Assistenz: Intensiver Schmerz</entityname.Manual_Intense_Pain>
+  <entityname.Manual_Bone_Death>Medizinische Assistenz: Knochensterben</entityname.Manual_Bone_Death>
+  <entityname.Manual_Bone_Damage>Medizinische Assistenz: Knochenschaden</entityname.Manual_Bone_Damage>
+  <entityname.Manual_Fractures>Medizinische Assistenz: Brüche</entityname.Manual_Fractures>
+  <entityname.Manual_Dislocations>Medizinische Assistenz: Versetzungen</entityname.Manual_Dislocations>
+  <entityname.Manual_Arterial_Bleeding>Medizinische Assistenz: Arterielle Blutung</entityname.Manual_Arterial_Bleeding>
+  <entityname.Manual_Internal_Damage>Medizinische Assistenz: Interner Schaden</entityname.Manual_Internal_Damage>
+  <entityname.Manual_Burns>Medizinische Assistenz: Verbrennungen</entityname.Manual_Burns>
+  <entityname.Manual_Infected_Wounds>Medizinische Assistenz: Infizierte Wunden</entityname.Manual_Infected_Wounds>
+  <entityname.Manual_Foreign_Bodies>Medizinische Assistenz: Fremdkörper</entityname.Manual_Foreign_Bodies>
+  <entityname.Manual_Wounds>Medizinische Assistenz: Verletzungen</entityname.Manual_Wounds>
+  <entityname.Manual_Ointmented>Medizinische Assistenz: Eingecremt</entityname.Manual_Ointmented>
+  <entityname.Manual_Bandaged>Medizinische Assistenz: Verbunden</entityname.Manual_Bandaged>
+  <entityname.Manual_Plaster_Cast>Medizinische Assistenz: Gipsverband</entityname.Manual_Plaster_Cast>
+  <entityname.Manual_Hypoxemia>Medizinische Assistenz: Hypoxämie</entityname.Manual_Hypoxemia>
+  <entityname.Manual_Sepsis>Medizinische Assistenz: Sepsis</entityname.Manual_Sepsis>
+  <entityname.Manual_Hemotransfusion_Shock>Medizinische Assistenz: Hämotransfusions-Schock</entityname.Manual_Hemotransfusion_Shock>
+  <entityname.Manual_Blood_Loss>Medizinische Assistenz: Blutverlust</entityname.Manual_Blood_Loss>
+  <entityname.Manual_Hypotension>Medizinische Assistenz: Hypotonie</entityname.Manual_Hypotension>
+  <entityname.Manual_Hypertension>Medizinische Assistenz: Hypertonie</entityname.Manual_Hypertension>
+  <entityname.Manual_Acidosis>Medizinische Assistenz: Azidose</entityname.Manual_Acidosis>
+  <entityname.Manual_Alkalosis>Medizinische Assistenz: Alkalose</entityname.Manual_Alkalosis>
+  <entityname.Manual_Adrenaline>Medizinische Assistenz: Adrenalin</entityname.Manual_Adrenaline>
+  <entityname.Manual_AED>Medizinische Assistenz: AED (Automated External Defibrillator)</entityname.Manual_AED>
+  <entityname.Manual_Alien_Blood>Medizinische Assistenz: Außerirdisches Blut</entityname.Manual_Alien_Blood>
+  <entityname.Manual_Ambubag>Medizinische Assistenz: Ambubag</entityname.Manual_Ambubag>
+  <entityname.Manual_Anaparalyzant>Medizinische Assistenz: Anaparalytikum</entityname.Manual_Anaparalyzant>
+  <entityname.Manual_Antibiotic_Glue>Medizinische Assistenz: Antibiotischer Klebstoff</entityname.Manual_Antibiotic_Glue>
+  <entityname.Manual_Antibiotic_Ointment>Medizinische Assistenz: Antibiotische Salbe</entityname.Manual_Antibiotic_Ointment>
+  <entityname.Manual_Antiseptic>Medizinische Assistenz: Antiseptikum</entityname.Manual_Antiseptic>
+  <entityname.Manual_Antiseptic_Sprayer>Medizinische Assistenz: Antiseptischer Sprüher</entityname.Manual_Antiseptic_Sprayer>
+  <entityname.Manual_Autopulse>Medizinische Assistenz: Autopulse</entityname.Manual_Autopulse>
+  <entityname.Manual_Azathioprine>Medizinische Assistenz: Azathioprin</entityname.Manual_Azathioprine>
+  <entityname.Manual_Bandages>Medizinische Assistenz: Verbände</entityname.Manual_Bandages>
+  <entityname.Manual_Blood_Packs>Medizinische Assistenz: Blutbeutel</entityname.Manual_Blood_Packs>
+  <entityname.Manual_Blue_Shark>Medizinische Assistenz: Blauer Hai</entityname.Manual_Blue_Shark>
+  <entityname.Manual_Body_Bag>Medizinische Assistenz: Leichensack</entityname.Manual_Body_Bag>
+  <entityname.Manual_Broad-spectrum_Antibiotics>Medizinische Assistenz: Breitbandantibiotika</entityname.Manual_Broad-spectrum_Antibiotics>
+  <entityname.Manual_Combat_Stimulant>Medizinische Assistenz: Kampfanregungsmittel</entityname.Manual_Combat_Stimulant>
+  <entityname.Manual_Deusizine>Medizinische Assistenz: Deusizine (There is no translation available for this word as it does not exist in either English or German language.)</entityname.Manual_Deusizine>
+  <entityname.Manual_Diving_Knife>Medizinische Assistenz: Tauchmesser</entityname.Manual_Diving_Knife>
+  <entityname.Manual_Drainage>Medizinische Assistenz: Entwässerung</entityname.Manual_Drainage>
+  <entityname.Manual_Empty_Blood_Pack>Medizinische Assistenz: Leere Blutpackung</entityname.Manual_Empty_Blood_Pack>
+  <entityname.Manual_Endovascular_Balloon>Medizinische Assistenz: Endovaskulärer Ballon</entityname.Manual_Endovascular_Balloon>
+  <entityname.Manual_Fentanyl>Medizinische Assistenz: Fentanyl</entityname.Manual_Fentanyl>
+  <entityname.Manual_Gypsum>Medizinische Assistenz: Gips</entityname.Manual_Gypsum>
+  <entityname.Manual_Health_Scanner>Medizinische Assistenz: Gesundheitsscanner</entityname.Manual_Health_Scanner>
+  <entityname.Manual_Hematology_Analyzer>Medizinische Assistenz: Hämatologie-Analysator</entityname.Manual_Hematology_Analyzer>
+  <entityname.Manual_Hemostat>Medizinische Assistenz: Hämostat</entityname.Manual_Hemostat>
+  <entityname.Manual_Hyperzine>Medizinische Assistenz: Hyperzin</entityname.Manual_Hyperzine>
+  <entityname.Manual_Liquid_Oxygenite>Medizinische Assistenz: Flüssiger Sauerstoffit</entityname.Manual_Liquid_Oxygenite>
+  <entityname.Manual_Mannitol>Medizinische Assistenz: Mannitol</entityname.Manual_Mannitol>
+  <entityname.Manual_Manual_Defibrillator>Medizinische Assistenz: Manueller Defibrillator</entityname.Manual_Manual_Defibrillator>
+  <entityname.Manual_Medical_Stent>Medizinische Assistenz: Medizinischer Stent</entityname.Manual_Medical_Stent>
+  <entityname.Manual_Methamphetamine>Medizinische Assistenz: Methamphetamin</entityname.Manual_Methamphetamine>
+  <entityname.Manual_Morphine>Medizinische Assistenz: Morphin</entityname.Manual_Morphine>
+  <entityname.Manual_Naloxone>Medizinische Assistenz: Naloxon</entityname.Manual_Naloxone>
+  <entityname.Manual_Needle>Medizinische Assistenz: Nadel</entityname.Manual_Needle>
+  <entityname.Manual_Nitroglycerin>Medizinische Assistenz: Nitroglycerin</entityname.Manual_Nitroglycerin>
+  <entityname.Manual_Opium>Medizinische Assistenz: Opium</entityname.Manual_Opium>
+  <entityname.Manual_Organ_Procurement_Scalpels>Medizinische Assistenz: Organbeschaffungsskalpelle</entityname.Manual_Organ_Procurement_Scalpels>
+  <entityname.Manual_Osteosynthesis_Implants>Medizinische Assistenz: Osteosynthese-Implantate</entityname.Manual_Osteosynthesis_Implants>
+  <entityname.Manual_Plastiseal>Medizinische Assistenz: Plastiseal</entityname.Manual_Plastiseal>
+  <entityname.Manual_Propofol>Medizinische Assistenz: Propofol</entityname.Manual_Propofol>
+  <entityname.Manual_Raptor_Bane_Extract>Medizinische Assistenz: Raptor Bane Extrakt</entityname.Manual_Raptor_Bane_Extract>
+  <entityname.Manual_Retractors>Medizinische Assistenz: Retraktoren</entityname.Manual_Retractors>
+  <entityname.Manual_Ringer_Solution>Medizinische Assistenz: Ringer-Lösung</entityname.Manual_Ringer_Solution>
+  <entityname.Manual_Saline>Medizinische Assistenz: Salzlösung</entityname.Manual_Saline>
+  <entityname.Manual_Scalpel>Medizinische Assistenz: Skalpell</entityname.Manual_Scalpel>
+  <entityname.Manual_Sodium_Nitroprusside>Medizinische Assistenz: Natriumnitroprussid</entityname.Manual_Sodium_Nitroprusside>
+  <entityname.Manual_Spinal_Cord_Implants>Medizinische Assistenz: Rückenmarksimplantate</entityname.Manual_Spinal_Cord_Implants>
+  <entityname.Manual_Stasis_Bag>Medizinische Assistenz: Stasebeutel</entityname.Manual_Stasis_Bag>
+  <entityname.Manual_Streptokinase>Medizinische Assistenz: Streptokinase</entityname.Manual_Streptokinase>
+  <entityname.Manual_Surgery_Table>Medizinische Assistenz: Operations-Tisch</entityname.Manual_Surgery_Table>
+  <entityname.Manual_Surgical_Drill>Medizinische Assistenz: Chirurgischer Bohrer</entityname.Manual_Surgical_Drill>
+  <entityname.Manual_Surgical_Saw>Medizinische Assistenz: Chirurgische Säge</entityname.Manual_Surgical_Saw>
+  <entityname.Manual_Sutures>Medizinische Assistenz: Nähte</entityname.Manual_Sutures>
+  <entityname.Manual_Thiamine>Medizinische Assistenz: Thiamin</entityname.Manual_Thiamine>
+  <entityname.Manual_Tourniquet>Medizinische Assistenz: Tourniquet (German: Blutdruckmanschette)</entityname.Manual_Tourniquet>
+  <entityname.Manual_Trauma_Shears>Medizinische Assistenz: Traumaschere</entityname.Manual_Trauma_Shears>
+  <entityname.Manual_Tweezers>Medizinische Assistenz: Pinzette</entityname.Manual_Tweezers>
+  <entityname.Manual_Wrench>Medizinische Assistenz: Schraubenschlüssel</entityname.Manual_Wrench>
+  <entityname.Manual_Traumatic_Shock>Medizinische Assistenz: Traumatischer Schock</entityname.Manual_Traumatic_Shock>
+  <entityname.Manual_Surgery_Incision>Medizinische Assistenz: Chirurgischer Einschnitt</entityname.Manual_Surgery_Incision>
+  <entityname.Manual_Clamped_Bleeding>Medizinische Assistenz: Geklemmte Blutung</entityname.Manual_Clamped_Bleeding>
+  <entityname.Manual_Retracted_Skin>Medizinische Assistenz: Zurückgezogene Haut</entityname.Manual_Retracted_Skin>
+  <entityname.Manual_Drilled_Bones>Medizinische Assistenz: Gebohrte Knochen</entityname.Manual_Drilled_Bones>
+  <entityname.Manual_Sawed_Bones>Medizinische Assistenz: Gesägte Knochen</entityname.Manual_Sawed_Bones>
+  <entityname.Manual_Open_Close_Surgery>Medizinische Assistenz: Offene und geschlossene Operation</entityname.Manual_Open_Close_Surgery>
+  <entityname.Manual_Osteosynthetic_Surgery>Medizinische Assistenz: Osteosynthetische Chirurgie</entityname.Manual_Osteosynthetic_Surgery>
+  <entityname.Manual_Aortic_Rupture_Surgery>Medizinische Assistenz: Aortenruptur-Chirurgie</entityname.Manual_Aortic_Rupture_Surgery>
+  <entityname.Manual_Amputation_Surgery>Medizinische Assistenz: Amputationschirurgie</entityname.Manual_Amputation_Surgery>
+  <entityname.Manual_Organ_Transplant_Surgery>Medizinische Assistenz: Organtransplantationschirurgie</entityname.Manual_Organ_Transplant_Surgery>
+  <entityname.Manual_Surgical_Drapes>Medizinische Assistenz: Chirurgische Abdeckungen</entityname.Manual_Surgical_Drapes>
+  <entityname.Manual_Surgical_Mask>Medizinische Assistenz: Chirurgische Maske</entityname.Manual_Surgical_Mask>
+  <entityname.Manual_Surgeon_Clothes>Medizinische Assistenz: Chirurgenkleidung</entityname.Manual_Surgeon_Clothes>
+  <entityname.Manual_Surgical_Infection>Medizinische Assistenz: Chirurgische Infektion</entityname.Manual_Surgical_Infection>
+  <entityname.Manual_Mannitol_Plus>Medizinische Assistenz: Mannitol Plus</entityname.Manual_Mannitol_Plus>
+  <entityname.Manual_Experimental_Treatment>Medizinische Assistenz: Experimentelle Behandlung</entityname.Manual_Experimental_Treatment>
+  <entityname.Manual_Triage_Card>Medizinische Assistenz: Triage-Karte</entityname.Manual_Triage_Card>
+  <entityname.Manual_Brain_Jar>Medizinische Assistenz: Gehirn-Glas</entityname.Manual_Brain_Jar>
+  <entityname.Manual_Artificial_Brain>Medizinische Assistenz: Künstliches Gehirn</entityname.Manual_Artificial_Brain>
+  <entityname.Manual_Medical_Misconduct>Medizinische Assistenz: Medizinisches Fehlverhalten</entityname.Manual_Medical_Misconduct>
+  <entityname.Manual_Cybernetic_Arm>Medizinische Assistenz: Kybernetischer Arm</entityname.Manual_Cybernetic_Arm>
+  <entityname.Manual_Cybernetic_Leg>Medizinische Assistenz: Kybernetisches Bein</entityname.Manual_Cybernetic_Leg>
+  <entityname.Manual_Cyberarm>Medizinische Assistenz: Cyberarm</entityname.Manual_Cyberarm>
+  <entityname.Manual_Cyberleg>Medizinische Assistenz: Cyberbein</entityname.Manual_Cyberleg>
+  <entityname.Manual_Damaged_Electronics>Medizinische Assistenz: Beschädigte Elektronik</entityname.Manual_Damaged_Electronics>
+  <entityname.Manual_Bent_Metal>Medizinische Assistenz: Gebogenes Metall</entityname.Manual_Bent_Metal>
+  <entityname.Manual_Loose_Screws>Medizinische Assistenz: Lose Schrauben</entityname.Manual_Loose_Screws>
+  <entityname.Manual_Material_Loss>Medizinische Assistenz: Materieller Verlust</entityname.Manual_Material_Loss>
+  <entityname.Manual_FPGA_Circuit>Medizinische Assistenz: FPGA-Schaltung</entityname.Manual_FPGA_Circuit>
+  <entityname.Manual_Welding_Tool>Medizinische Assistenz: Schweißwerkzeug</entityname.Manual_Welding_Tool>
+  <entityname.Manual_Screwdriver>Medizinische Assistenz: Schraubenzieher</entityname.Manual_Screwdriver>
+  <entityname.Manual_Steel_Bar>Medizinische Assistenz: Stahlstange</entityname.Manual_Steel_Bar>
+  <entityname.Manual_Start_Page>Medizinische Assistenz: Startseite</entityname.Manual_Start_Page>
+  <entityname.Manual_Information>Medizinische Assistenz: Informationen</entityname.Manual_Information>
+  <entityname.Manual_Symptoms>Medizinische Assistenz: Symptome</entityname.Manual_Symptoms>
+  <entityname.Manual_HeadBrain>Medizinische Assistenz: KopfGehirn</entityname.Manual_HeadBrain>
+  <entityname.Manual_Lungs>Medizinische Assistenz: Lungen</entityname.Manual_Lungs>
+  <entityname.Manual_Heart>Medizinische Assistenz: Herz</entityname.Manual_Heart>
+  <entityname.Manual_Torso>Medizinische Assistenz: Torso</entityname.Manual_Torso>
+  <entityname.Manual_Extremities>Medizinische Assistenz: Extremitäten</entityname.Manual_Extremities>
+  <entityname.Manual_Bones>Medizinische Assistenz: Knochen</entityname.Manual_Bones>
+  <entityname.Manual_Any_Bodypart>Medizinische Assistenz: Jeder Körperteil</entityname.Manual_Any_Bodypart>
+  <entityname.Manual_Blood>Medizinische Assistenz: Blut</entityname.Manual_Blood>
+  <entityname.Manual_Items_Part_1>Medizinische Assistenz: Gegenstände Teil 1</entityname.Manual_Items_Part_1>
+  <entityname.Manual_Items_Part_2>Medizinische Assistenz: Gegenstände Teil 2</entityname.Manual_Items_Part_2>
+  <entityname.Manual_Items_Part_3>Medizinische Assistenz: Gegenstände Teil 3</entityname.Manual_Items_Part_3>
+  <entityname.Manual_Items_Part_4>Medizinische Assistenz: Gegenstände Teil 4</entityname.Manual_Items_Part_4>
+  <entityname.Manual_Surgery>Medizinische Assistenz: Chirurgie</entityname.Manual_Surgery>
+  <entityname.Manual_Procedures>Medizinische Assistenz: Verfahren</entityname.Manual_Procedures>
+  <entityname.Manual_Expansion>Medizinische Assistenz: Erweiterung</entityname.Manual_Expansion>
+  <Manual_Button_FAQ>Häufig gestellte Fragen</Manual_Button_FAQ>
+  <Manual_Button_Med_Kit_Recommendations>Medizinische Ausrüstungsempfehlungen</Manual_Button_Med_Kit_Recommendations>
+  <Manual_Button_How_To_Diagnose>Wie man diagnostiziert</Manual_Button_How_To_Diagnose>
+  <Manual_Button_Order_of_Treatments>Reihenfolge der Behandlungen</Manual_Button_Order_of_Treatments>
+  <Manual_Button_The_5_Commandments_of_Neurotrauma>Die 5 Gebote des Neurotraumas</Manual_Button_The_5_Commandments_of_Neurotrauma>
+  <Manual_Button_Vomiting_Blood>Blut erbrechen</Manual_Button_Vomiting_Blood>
+  <Manual_Button_Pale_Skin>Blass Haut</Manual_Button_Pale_Skin>
+  <Manual_Button_Shortness_of_Breath>Atemnot</Manual_Button_Shortness_of_Breath>
+  <Manual_Button_Cough>Husten</Manual_Button_Cough>
+  <Manual_Button_Increased_Heartrate>Erhöhte Herzfrequenz</Manual_Button_Increased_Heartrate>
+  <Manual_Button_Confusion>Verwirrung</Manual_Button_Confusion>
+  <Manual_Button_Lightheadedness>Benommenheit</Manual_Button_Lightheadedness>
+  <Manual_Button_Blurred_Vision>Verschwommenes Sehen</Manual_Button_Blurred_Vision>
+  <Manual_Button_Leg_Swelling>Beinschwellung</Manual_Button_Leg_Swelling>
+  <Manual_Button_Wheezing>Keuchen</Manual_Button_Wheezing>
+  <Manual_Button_Weakness>Schwäche</Manual_Button_Weakness>
+  <Manual_Button_Fever>Fieber</Manual_Button_Fever>
+  <Manual_Button_Sweating>Schwitzen</Manual_Button_Sweating>
+  <Manual_Button_Bloating>Aufblähung</Manual_Button_Bloating>
+  <Manual_Button_Inflammation>Entzündung</Manual_Button_Inflammation>
+  <Manual_Button_Jaundice>Gelbsucht</Manual_Button_Jaundice>
+  <Manual_Button_Abdominal_Discomfort>Bauchbeschwerden</Manual_Button_Abdominal_Discomfort>
+  <Manual_Button_Headache>Kopfschmerzen</Manual_Button_Headache>
+  <Manual_Button_Craving>Verlangen</Manual_Button_Craving>
+  <Manual_Button_Palpitations>Herzklopfen</Manual_Button_Palpitations>
+  <Manual_Button_Spasms>Krämpfe</Manual_Button_Spasms>
+  <Manual_Button_Neurotrauma>Neurotrauma</Manual_Button_Neurotrauma>
+  <Manual_Button_Stroke>Schlaganfall</Manual_Button_Stroke>
+  <Manual_Button_Withdrawal>Abhebung</Manual_Button_Withdrawal>
+  <Manual_Button_Opiate_Overdose>Opiatüberdosis</Manual_Button_Opiate_Overdose>
+  <Manual_Button_Seizure>Anfall</Manual_Button_Seizure>
+  <Manual_Button_Unconsciousness>Bewusstlosigkeit</Manual_Button_Unconsciousness>
+  <Manual_Button_Coma>Koma</Manual_Button_Coma>
+  <Manual_Button_Spinal_Cord_Injury>Rückenmarksverletzung</Manual_Button_Spinal_Cord_Injury>
+  <Manual_Button_Concussion>Gehirnerschütterung</Manual_Button_Concussion>
+  <Manual_Button_Respiratory_Arrest>Atemstillstand</Manual_Button_Respiratory_Arrest>
+  <Manual_Button_Lung_Damage>Lungenschaden</Manual_Button_Lung_Damage>
+  <Manual_Button_Pneumothorax>Pneumothorax</Manual_Button_Pneumothorax>
+  <Manual_Button_Hyperventilation>Hyperventilation</Manual_Button_Hyperventilation>
+  <Manual_Button_Hypoventilation>Hypoventilation</Manual_Button_Hypoventilation>
+  <Manual_Button_Oxygen_Low>Sauerstoff niedrig</Manual_Button_Oxygen_Low>
+  <Manual_Button_Cardiac_Tamponade>Kardiale Tamponade</Manual_Button_Cardiac_Tamponade>
+  <Manual_Button_Cardiac_Arrest>Herzstillstand</Manual_Button_Cardiac_Arrest>
+  <Manual_Button_Heart_Attack>Herzinfarkt</Manual_Button_Heart_Attack>
+  <Manual_Button_Heart_Damage>Herzschaden</Manual_Button_Heart_Damage>
+  <Manual_Button_Irregular_Heartbeat>Unregelmäßiger Herzschlag</Manual_Button_Irregular_Heartbeat>
+  <Manual_Button_Fibrillation>Fibrillation - Fibrillation</Manual_Button_Fibrillation>
+  <Manual_Button_Aortic_Rupture>Aortenruptur</Manual_Button_Aortic_Rupture>
+  <Manual_Button_Internal_Bleeding>Innere Blutung</Manual_Button_Internal_Bleeding>
+  <Manual_Button_Radiation_Sickness>Strahlenkrankheit</Manual_Button_Radiation_Sickness>
+  <Manual_Button_Kidney_Damage>Nierenschaden</Manual_Button_Kidney_Damage>
+  <Manual_Button_Liver_Damage>Leberschaden</Manual_Button_Liver_Damage>
+  <Manual_Button_Morbusine>Morbusine</Manual_Button_Morbusine>
+  <Manual_Button_Cyanide_Poisoning>Zyanidvergiftung</Manual_Button_Cyanide_Poisoning>
+  <Manual_Button_Vanilla_Organ_Damage>Vanille Organ Schaden</Manual_Button_Vanilla_Organ_Damage>
+  <Manual_Button_Analgesia>Analgesie</Manual_Button_Analgesia>
+  <Manual_Button_Anesthesia>Anästhesie</Manual_Button_Anesthesia>
+  <Manual_Button_Abdominal_Pain>Bauchschmerzen</Manual_Button_Abdominal_Pain>
+  <Manual_Button_Vomiting>Erbrechen</Manual_Button_Vomiting>
+  <Manual_Button_Nausea>Übelkeit</Manual_Button_Nausea>
+  <Manual_Button_Chest_Pain>Brustschmerzen</Manual_Button_Chest_Pain>
+  <Manual_Button_Traumatic_Amputation>Traumatische Amputation</Manual_Button_Traumatic_Amputation>
+  <Manual_Button_Gangrene>Brandwunde</Manual_Button_Gangrene>
+  <Manual_Button_Surgical_Amputation>Chirurgische Amputation</Manual_Button_Surgical_Amputation>
+  <Manual_Button_Intense_Pain>Intensiver Schmerz</Manual_Button_Intense_Pain>
+  <Manual_Button_Bone_Death>Knochensterben</Manual_Button_Bone_Death>
+  <Manual_Button_Bone_Damage>Knochenschaden</Manual_Button_Bone_Damage>
+  <Manual_Button_Fractures>Brüche</Manual_Button_Fractures>
+  <Manual_Button_Dislocations>Versetzungen</Manual_Button_Dislocations>
+  <Manual_Button_Arterial_Bleeding>Arterielle Blutung</Manual_Button_Arterial_Bleeding>
+  <Manual_Button_Internal_Damage>Interner Schaden</Manual_Button_Internal_Damage>
+  <Manual_Button_Burns>Verbrennungen</Manual_Button_Burns>
+  <Manual_Button_Infected_Wounds>Infizierte Wunden</Manual_Button_Infected_Wounds>
+  <Manual_Button_Foreign_Bodies>Fremdkörper</Manual_Button_Foreign_Bodies>
+  <Manual_Button_Wounds>Verletzungen</Manual_Button_Wounds>
+  <Manual_Button_Ointmented>Eingecremt</Manual_Button_Ointmented>
+  <Manual_Button_Bandaged>Verbunden</Manual_Button_Bandaged>
+  <Manual_Button_Plaster_Cast>Gipsverband</Manual_Button_Plaster_Cast>
+  <Manual_Button_Hypoxemia>Hypoxämie</Manual_Button_Hypoxemia>
+  <Manual_Button_Sepsis>Sepsis</Manual_Button_Sepsis>
+  <Manual_Button_Hemotransfusion_Shock>Hämotransfusions-Schock</Manual_Button_Hemotransfusion_Shock>
+  <Manual_Button_Blood_Loss>Blutverlust</Manual_Button_Blood_Loss>
+  <Manual_Button_Hypotension>Hypotonie</Manual_Button_Hypotension>
+  <Manual_Button_Hypertension>Hypertonie</Manual_Button_Hypertension>
+  <Manual_Button_Acidosis>Azidose</Manual_Button_Acidosis>
+  <Manual_Button_Alkalosis>Alkalose</Manual_Button_Alkalosis>
+  <Manual_Button_Adrenaline>Adrenalin</Manual_Button_Adrenaline>
+  <Manual_Button_AED>AED (Automated External Defibrillator)</Manual_Button_AED>
+  <Manual_Button_Alien_Blood>Außerirdisches Blut</Manual_Button_Alien_Blood>
+  <Manual_Button_Ambubag>Ambubag</Manual_Button_Ambubag>
+  <Manual_Button_Anaparalyzant>Anaparalytikum</Manual_Button_Anaparalyzant>
+  <Manual_Button_Antibiotic_Glue>Antibiotischer Klebstoff</Manual_Button_Antibiotic_Glue>
+  <Manual_Button_Antibiotic_Ointment>Antibiotische Salbe</Manual_Button_Antibiotic_Ointment>
+  <Manual_Button_Antiseptic>Antiseptikum</Manual_Button_Antiseptic>
+  <Manual_Button_Antiseptic_Sprayer>Antiseptischer Sprüher</Manual_Button_Antiseptic_Sprayer>
+  <Manual_Button_Autopulse>Autopulse</Manual_Button_Autopulse>
+  <Manual_Button_Azathioprine>Azathioprin</Manual_Button_Azathioprine>
+  <Manual_Button_Bandages>Verbände</Manual_Button_Bandages>
+  <Manual_Button_Blood_Packs>Blutbeutel</Manual_Button_Blood_Packs>
+  <Manual_Button_Blue_Shark>Blauer Hai</Manual_Button_Blue_Shark>
+  <Manual_Button_Body_Bag>Leichensack</Manual_Button_Body_Bag>
+  <Manual_Button_Broad-spectrum_Antibiotics>Breitbandantibiotika</Manual_Button_Broad-spectrum_Antibiotics>
+  <Manual_Button_Combat_Stimulant>Kampfanregungsmittel</Manual_Button_Combat_Stimulant>
+  <Manual_Button_Deusizine>Deusizine (There is no translation available for this word as it does not exist in either English or German language.)</Manual_Button_Deusizine>
+  <Manual_Button_Diving_Knife>Tauchmesser</Manual_Button_Diving_Knife>
+  <Manual_Button_Drainage>Entwässerung</Manual_Button_Drainage>
+  <Manual_Button_Empty_Blood_Pack>Leere Blutpackung</Manual_Button_Empty_Blood_Pack>
+  <Manual_Button_Endovascular_Balloon>Endovaskulärer Ballon</Manual_Button_Endovascular_Balloon>
+  <Manual_Button_Fentanyl>Fentanyl</Manual_Button_Fentanyl>
+  <Manual_Button_Gypsum>Gips</Manual_Button_Gypsum>
+  <Manual_Button_Health_Scanner>Gesundheitsscanner</Manual_Button_Health_Scanner>
+  <Manual_Button_Hematology_Analyzer>Hämatologie-Analysator</Manual_Button_Hematology_Analyzer>
+  <Manual_Button_Hemostat>Hämostat</Manual_Button_Hemostat>
+  <Manual_Button_Hyperzine>Hyperzin</Manual_Button_Hyperzine>
+  <Manual_Button_Liquid_Oxygenite>Flüssiger Sauerstoffit</Manual_Button_Liquid_Oxygenite>
+  <Manual_Button_Mannitol>Mannitol</Manual_Button_Mannitol>
+  <Manual_Button_Manual_Defibrillator>Manueller Defibrillator</Manual_Button_Manual_Defibrillator>
+  <Manual_Button_Medical_Stent>Medizinischer Stent</Manual_Button_Medical_Stent>
+  <Manual_Button_Methamphetamine>Methamphetamin</Manual_Button_Methamphetamine>
+  <Manual_Button_Morphine>Morphin</Manual_Button_Morphine>
+  <Manual_Button_Naloxone>Naloxon</Manual_Button_Naloxone>
+  <Manual_Button_Needle>Nadel</Manual_Button_Needle>
+  <Manual_Button_Nitroglycerin>Nitroglycerin</Manual_Button_Nitroglycerin>
+  <Manual_Button_Opium>Opium</Manual_Button_Opium>
+  <Manual_Button_Organ_Procurement_Scalpels>Organbeschaffungsskalpelle</Manual_Button_Organ_Procurement_Scalpels>
+  <Manual_Button_Osteosynthesis_Implants>Osteosynthese-Implantate</Manual_Button_Osteosynthesis_Implants>
+  <Manual_Button_Plastiseal>Plastiseal</Manual_Button_Plastiseal>
+  <Manual_Button_Propofol>Propofol</Manual_Button_Propofol>
+  <Manual_Button_Raptor_Bane_Extract>Raptor Bane Extrakt</Manual_Button_Raptor_Bane_Extract>
+  <Manual_Button_Retractors>Retraktoren</Manual_Button_Retractors>
+  <Manual_Button_Ringer_Solution>Ringer-Lösung</Manual_Button_Ringer_Solution>
+  <Manual_Button_Saline>Salzlösung</Manual_Button_Saline>
+  <Manual_Button_Scalpel>Skalpell</Manual_Button_Scalpel>
+  <Manual_Button_Sodium_Nitroprusside>Natriumnitroprussid</Manual_Button_Sodium_Nitroprusside>
+  <Manual_Button_Spinal_Cord_Implants>Rückenmarksimplantate</Manual_Button_Spinal_Cord_Implants>
+  <Manual_Button_Stasis_Bag>Stasebeutel</Manual_Button_Stasis_Bag>
+  <Manual_Button_Streptokinase>Streptokinase</Manual_Button_Streptokinase>
+  <Manual_Button_Surgery_Table>Operations-Tisch</Manual_Button_Surgery_Table>
+  <Manual_Button_Surgical_Drill>Chirurgischer Bohrer</Manual_Button_Surgical_Drill>
+  <Manual_Button_Surgical_Saw>Chirurgische Säge</Manual_Button_Surgical_Saw>
+  <Manual_Button_Sutures>Nähte</Manual_Button_Sutures>
+  <Manual_Button_Thiamine>Thiamin</Manual_Button_Thiamine>
+  <Manual_Button_Tourniquet>Tourniquet (German: Blutdruckmanschette)</Manual_Button_Tourniquet>
+  <Manual_Button_Trauma_Shears>Traumaschere</Manual_Button_Trauma_Shears>
+  <Manual_Button_Tweezers>Pinzette</Manual_Button_Tweezers>
+  <Manual_Button_Wrench>Schraubenschlüssel</Manual_Button_Wrench>
+  <Manual_Button_Traumatic_Shock>Traumatischer Schock</Manual_Button_Traumatic_Shock>
+  <Manual_Button_Surgery_Incision>Chirurgischer Einschnitt</Manual_Button_Surgery_Incision>
+  <Manual_Button_Clamped_Bleeding>Geklemmte Blutung</Manual_Button_Clamped_Bleeding>
+  <Manual_Button_Retracted_Skin>Zurückgezogene Haut</Manual_Button_Retracted_Skin>
+  <Manual_Button_Drilled_Bones>Gebohrte Knochen</Manual_Button_Drilled_Bones>
+  <Manual_Button_Sawed_Bones>Gesägte Knochen</Manual_Button_Sawed_Bones>
+  <Manual_Button_Open_Close_Surgery>Offene und geschlossene Operation</Manual_Button_Open_Close_Surgery>
+  <Manual_Button_Osteosynthetic_Surgery>Osteosynthetische Chirurgie</Manual_Button_Osteosynthetic_Surgery>
+  <Manual_Button_Aortic_Rupture_Surgery>Aortenruptur-Chirurgie</Manual_Button_Aortic_Rupture_Surgery>
+  <Manual_Button_Amputation_Surgery>Amputationschirurgie</Manual_Button_Amputation_Surgery>
+  <Manual_Button_Organ_Transplant_Surgery>Organtransplantationschirurgie</Manual_Button_Organ_Transplant_Surgery>
+  <Manual_Button_Surgical_Drapes>Chirurgische Abdeckungen</Manual_Button_Surgical_Drapes>
+  <Manual_Button_Surgical_Mask>Chirurgische Maske</Manual_Button_Surgical_Mask>
+  <Manual_Button_Surgeon_Clothes>Chirurgenkleidung</Manual_Button_Surgeon_Clothes>
+  <Manual_Button_Surgical_Infection>Chirurgische Infektion</Manual_Button_Surgical_Infection>
+  <Manual_Button_Mannitol_Plus>Mannitol Plus</Manual_Button_Mannitol_Plus>
+  <Manual_Button_Experimental_Treatment>Experimentelle Behandlung</Manual_Button_Experimental_Treatment>
+  <Manual_Button_Triage_Card>Triage-Karte</Manual_Button_Triage_Card>
+  <Manual_Button_Brain_Jar>Gehirn-Glas</Manual_Button_Brain_Jar>
+  <Manual_Button_Artificial_Brain>Künstliches Gehirn</Manual_Button_Artificial_Brain>
+  <Manual_Button_Medical_Misconduct>Medizinisches Fehlverhalten</Manual_Button_Medical_Misconduct>
+  <Manual_Button_Cybernetic_Arm>Kybernetischer Arm</Manual_Button_Cybernetic_Arm>
+  <Manual_Button_Cybernetic_Leg>Kybernetisches Bein</Manual_Button_Cybernetic_Leg>
+  <Manual_Button_Cyberarm>Cyberarm</Manual_Button_Cyberarm>
+  <Manual_Button_Cyberleg>Cyberbein</Manual_Button_Cyberleg>
+  <Manual_Button_Damaged_Electronics>Beschädigte Elektronik</Manual_Button_Damaged_Electronics>
+  <Manual_Button_Bent_Metal>Gebogenes Metall</Manual_Button_Bent_Metal>
+  <Manual_Button_Loose_Screws>Lose Schrauben</Manual_Button_Loose_Screws>
+  <Manual_Button_Material_Loss>Materieller Verlust</Manual_Button_Material_Loss>
+  <Manual_Button_FPGA_Circuit>FPGA-Schaltung</Manual_Button_FPGA_Circuit>
+  <Manual_Button_Welding_Tool>Schweißwerkzeug</Manual_Button_Welding_Tool>
+  <Manual_Button_Screwdriver>Schraubenzieher</Manual_Button_Screwdriver>
+  <Manual_Button_Steel_Bar>Stahlstange</Manual_Button_Steel_Bar>
+  <Manual_Button_Start_Page>Startseite</Manual_Button_Start_Page>
+  <Manual_Button_Information>Informationen</Manual_Button_Information>
+  <Manual_Button_Symptoms>Symptome</Manual_Button_Symptoms>
+  <Manual_Button_HeadBrain>KopfGehirn</Manual_Button_HeadBrain>
+  <Manual_Button_Lungs>Lungen</Manual_Button_Lungs>
+  <Manual_Button_Heart>Herz</Manual_Button_Heart>
+  <Manual_Button_Torso>Torso</Manual_Button_Torso>
+  <Manual_Button_Extremities>Extremitäten</Manual_Button_Extremities>
+  <Manual_Button_Bones>Knochen</Manual_Button_Bones>
+  <Manual_Button_Any_Bodypart>Jeder Körperteil</Manual_Button_Any_Bodypart>
+  <Manual_Button_Blood>Blut</Manual_Button_Blood>
+  <Manual_Button_Items_Part_1>Gegenstände Teil 1</Manual_Button_Items_Part_1>
+  <Manual_Button_Items_Part_2>Gegenstände Teil 2</Manual_Button_Items_Part_2>
+  <Manual_Button_Items_Part_3>Gegenstände Teil 3</Manual_Button_Items_Part_3>
+  <Manual_Button_Items_Part_4>Gegenstände Teil 4</Manual_Button_Items_Part_4>
+  <Manual_Button_Surgery>Chirurgie</Manual_Button_Surgery>
+  <Manual_Button_Procedures>Verfahren</Manual_Button_Procedures>
+  <Manual_Button_Expansion>Erweiterung</Manual_Button_Expansion>
+</infotexts>

@@ -1,0 +1,961 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+  <Manual_Description_FAQ>## Q: Warum kann ich eine bestimmte Wirkung/Gegenstand nicht finden?
+ A: Dieser Leitfaden ist derzeit unvollständig. Dieser Leitfaden ist eine Kopie des Trello-Leitfadens vom 28.03.2023.
+ 
+ ## Q: Was ist der Unterschied zwischen Symptomen und anderen Wirkungen?
+ A: Symptome sind Wirkungen, die von sich aus nichts bewirken und lediglich existieren, um die Diagnose zu erleichtern, während andere Wirkungen tatsächlich Auswirkungen auf das Gameplay haben.
+ 
+ ## Q: Button funktioniert nicht/Link zum Gegenstand fehlt
+ A: Wenn etwas nicht funktioniert oder unerwartetes Verhalten auftritt, senden Sie einen Fehlerbericht an die Steam-Mod-Seite mit Schritten zur Reproduktion.</Manual_Description_FAQ>
+  <Manual_Description_Med_Kit_Recommendations>###Erste-Hilfe-Set
+ Verteilen Sie diese an die Besatzung oder um das U-Boot herum.
+ 
+ @Verband
+ @Nähte
+ @Tourniquet
+ @Autopulse - nur zur Bewusstseinserhaltung bis zum Erreichen eines Arztes
+ @Blutpackungen - am besten O- oder O+
+ @Gips
+ @Trauma-Scheren
+ @Opium zur Verwendung mit einem @Schraubenschlüssel bei Verrenkungen (oder Verrenkungspillen)
+ (Pillen gegen leichte Husk-Sepsis)
+ 
+ Es kann nicht in einem medizinischen Kit platziert werden, aber ein @Schraubenschlüssel wird für Verrenkungen verwendet, die häufig vorkommen.
+ 
+ ###Arzt-Medizin-Set 1
+ @Opium, @Morphin oder Ihre Wahl von @Analgesie-Pillen für die Operation
+ @Verband
+ @Nähte - passt stattdessen in die Operationswerkzeugkiste, wenn Sie eine tragen
+ @Tourniquet
+ @Gesundheitsscanner
+ @Hämatologie-Analysator
+ @Blutpackungen - am besten O- oder O+
+ @Gips
+ @Trauma-Scheren - passt stattdessen in die Operationswerkzeugkiste, wenn Sie eine tragen
+ 
+ Dieses erste Medizin-Set deckt die grundlegendsten Diagnosen und Behandlungen ab, aber ein zweites Medizin-Set und/oder ein Operations-Set bietet die meisten Werkzeuge für ernsthaftere Behandlungen.
+ 
+ Es wird auch empfohlen, einen Stasebeutel in Ihrer Hotbar aufzubewahren.
+ 
+ ###Arzt-Medizin-Set 2
+ @Chirurgie-Bohrer
+ @Chirurgie-Säge
+ @Ambubag
+ @Antiseptikum-Sprüher mit geladenem @Antiseptikum oder @Antibiotika-Salbe
+ @Manuelle-Defibrillator oder @AED
+ @Mannitol (oder Neurotrauma-Pillen)
+ @Breitband-Antibiotika (oder Pillen gegen leichte Husk-Sepsis)
+ Calyxanid (oder Pillen gegen schwere Husk-Sepsis)
+ @Plastiseal oder @Antibiotikum-Kleber
+ 
+ ###Operations-Set
+ @Skalpell
+ @Hämostat
+ @Retraktoren
+ @Nähte
+ @Pinzette
+ @Nadel
+ @Drainage
+ Die 4 am häufigsten verwendeten @Organbeschaffungs-Skalpelle oder zusätzliche @Nadel und @Drainage
+ 
+ Erwägen Sie, eine @Nadel zu Ihrem Medizin-Set hinzuzufügen, wenn Sie nicht regelmäßig ein Operations-Set mit sich herumtragen.</Manual_Description_Med_Kit_Recommendations>
+  <Manual_Description_How_To_Diagnose>Die Diagnose wird verwendet, um den Prozess der Verwendung der "Drei H's" zu beschreiben:
+ - Health Interface - Bietet hauptsächlich oberflächliche Dinge
+ - Health Scanner - Bietet Informationen über die inneren Organe
+ - Hämatologie-Analysator - Bietet Informationen über das Blut
+ 
+ Die Verwendung dieser Methode gibt Ihnen die meisten Informationen und erleichtert es Ihnen, Ihren Patienten richtig zu behandeln und ihre Überlebenschancen zu erhöhen.</Manual_Description_How_To_Diagnose>
+  <Manual_Description_Order_of_Treatments>#Wenn der Patient in unmittelbarer Lebensgefahr ist, legen Sie ihn in einen @Stase-Beutel.
+ Ein Stase-Beutel gibt Ihnen 6 Minuten Zeit, um die Affektionen zu pausieren, eine Diagnose zu stellen, Ihren Behandlungsplan zu erstellen und alle Behandlungen außer Operationen durchzuführen.
+ 
+ ###Empfohlene Behandlungen in der Reihenfolge der Wichtigkeit
+ 1. Legen Sie sie in einen Stase-Beutel, wenn sie sich in schnell verschlechterndem Zustand befinden.
+ 2. Diagnostizieren Sie Probleme und finden Sie heraus, welche Schritte unten relevant sind.
+ 3. @Tourniquet bei @arteriellen Blutungen.
+ 4. Wenn es starke regelmäßige Blutungen gibt, @Nähen Sie sie, geben Sie @Blutpackungen, wenn nötig, und setzen Sie dies in weiteren Schritten fort, wenn nötig. Wenn sie innere oder aortale Blutungen haben, müssen diese vor der Bluttransfusion behoben werden, da sonst Blutbeutel verschwendet werden. Erwägen Sie, flüssigen Sauerstoff weiter unten zu verwenden, um den Patienten für diese Operationen zu stabilisieren.
+ 5. Verwenden Sie eine @Nadel, wenn der @Pneumothorax hoch ist.
+ 6. Wenn sie im @Stase-Beutel sind, bereiten Sie den Patienten auf die Entfernung aus dem Beutel vor und geben Sie ihm bei Bedarf Medikamente.
+ \\- @Azathioprin: wenn sie später Organtransplantationen benötigen.
+ \\- Antirad oder Stabilozin: Strahlungskrankheit WICHTIG
+ \\- @Breitband-Antibiotika: Sepsis
+ \\- @Mannitol: Neurotrauma-Reduktion oder Heilung, wenn ihr Blut stabil ist.
+ \\- @Morphin: Schmerzmittel für die Operation
+ \\- @Thiamin: Heilung von Organschäden
+ Dann nehmen Sie sie aus dem Stase-Beutel, um die Operation zu beginnen (hier wenden Sie @flüssigen Sauerstoff an, wenn Sie ihn nach Verwendung eines Stase-Beutels verwenden).
+ 
+ 7. Erste Hilfe für Herzschlag/Atmung, wenn sie verhaftet sind oder kurz davor stehen (oder wenn sie gerade aus dem Stase-Beutel genommen wurden, da dies den Herzschlag und die Atmung stoppt). Überspringen Sie diesen Schritt, wenn sie massive innere oder aortale Blutungen haben, die zuerst behoben werden müssen.
+ 8. Beheben Sie @Aortenruptur, @innere Blutungen und @arterielle Blutungen ordnungsgemäß. Geben Sie bei Bedarf mehr Blut.
+ 9. Beheben Sie alle Herz-/Atemprobleme ordnungsgemäß, einschließlich der Verwendung von @Drainage, um @Pneumothorax zu beheben.
+ 10. Beheben Sie schlechte @Verbrennungen (hoher zweiter Grad oder jeder dritte Grad)
+ \\- Zweiter Grad: @Antibiotika-Salbe oder @Verbände, wenn diese Gliedmaße keine Operation benötigt.
+ \\- Dritter Grad: @Antibiotikakleber, oder wenn diese Gliedmaße operiert werden müssen, warten Sie bis zum Ende der Operation und verwenden Sie @Plastiseal vor dem Schließen der @Nähte.
+ 11. Führen Sie @Osteosynthese-Implantat-Operationen am Kopf/Hals/Brust @Frakturen durch und dann @Rückenmark-Implantat-Operationen bei @Rückenmarksverletzungen.
+ 12. @Gesundheitsscanner Körperteile und führen Sie @Pinzettensurgery durch, um @Fremdkörper zu entfernen sowie @innere Schäden und stumpfe Gewalttraumata zu heilen.
+ 13. @Organtransplantationsoperation, wenn nötig.
+ 14. Wenden Sie @Nähte an, um Operationen zur Behebung von @Wunden zu schließen.
+ 15. @Verbände und dann @Gips bei @Frakturen an Armen oder Beinen, um sie zu gipsen.
+ 16. Verwenden Sie @H</Manual_Description_Order_of_Treatments>
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>1. Du sollst die drei Hs der Diagnose verwenden. (in @how-to-diagnose)
+ 2. Du sollst das Blut kreiseln lassen und die Luft ein- und ausatmen lassen.
+ 3. Du sollst die zugrunde liegenden Ursachen behandeln, anstatt nur die Symptome zu behandeln (frage dich: "Warum ist mein Patient in @cardiac-arrest?")
+ 4. Du sollst keine Operation ohne einen @surgery-table oder @propofol durchführen, damit dein Patient nicht leidet.
+ 5. Sedierung -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (optionale Schritte) -&gt; @sutures</Manual_Description_The_5_Commandments_of_Neurotrauma>
+  <Manual_Description_Vomiting_Blood>Erbrechen von Blut ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ 
+ ##Verursacht durch:
+ 
+ - @innere-Blutungen (50% oder mehr)
+ - @Leberschäden (bei 100%)</Manual_Description_Vomiting_Blood>
+  <Manual_Description_Pale_Skin>Blasse Haut ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypotonie (50% oder weniger)
+ - @Blutverlust (40% oder mehr)</Manual_Description_Pale_Skin>
+  <Manual_Description_Shortness_of_Breath>Kurzatmigkeit ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Herzinfarkt
+ - @Lungenschäden (45% oder mehr)
+ - @Pneumothorax (40% oder mehr)
+ - @Herzbeuteltamponade (10% oder mehr)
+ - @Hämotransfusionsschock (zwischen 0-70%)
+ - @Hypoxämie (20% oder mehr)
+ - @Herzschäden (80% oder mehr)</Manual_Description_Shortness_of_Breath>
+  <Manual_Description_Cough>Husten ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Lungenschäden (50% oder mehr)
+ - @Herzschäden (50% oder mehr)
+ - @Herzbeuteltamponade (20% oder mehr)</Manual_Description_Cough>
+  <Manual_Description_Increased_Heartrate>Erhöhte Herzfrequenz ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht, es sei denn, es steigt langsam an, was bedeutet, dass Sie eine Fibrillation durchmachen.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Azidose (20% oder mehr)
+ - @Sepsis (20% oder mehr)
+ - @Blutverlust (40% oder mehr)
+ - @Pneumothorax (30% oder mehr)
+ - @Entzug (Alkoholentzug, 75% oder mehr)
+ - @Fibrillation
+ - @Adrenalin</Manual_Description_Increased_Heartrate>
+  <Manual_Description_Confusion>Verwirrung ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - @Azidose
+ - @Sepsis
+ - @Hypotonie
+ - @Hypoxämie
+ - @Entzug
+ - @Gehirnerschütterung</Manual_Description_Confusion>
+  <Manual_Description_Lightheadedness>Schwindelgefühl ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypotonie (60% oder weniger)</Manual_Description_Lightheadedness>
+  <Manual_Description_Blurred_Vision>Verschwommenes Sehen ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht. Wie der Name schon sagt, wird diese Affektion Ihre Sicht unschärfer machen.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypotonie (55% oder weniger)
+ - @Gehirnerschütterung</Manual_Description_Blurred_Vision>
+  <Manual_Description_Leg_Swelling>Beinschwellung ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht. Cyberbeine werden nicht anschwellen.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Leberschäden (40% oder mehr)
+ - Nierenschäden (60% oder mehr)
+ - Herzerkrankungen (80% oder mehr)</Manual_Description_Leg_Swelling>
+  <Manual_Description_Wheezing>Keuchen ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht. 
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hämotransfusions-Schock (zwischen 0-90%)</Manual_Description_Wheezing>
+  <Manual_Description_Weakness>Schwäche ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht. Schwäche verringert den Nahkampfschaden, den du um 80% verursachst.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Herzbeuteltamponade (30% oder mehr)
+ - @Blutverlust (60% oder mehr)
+ - @Azidose (35% oder mehr)</Manual_Description_Weakness>
+  <Manual_Description_Fever>Fieber ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Sepsis (5% oder mehr)
+ - @Entzug (Alkoholentzug, 90% oder mehr)</Manual_Description_Fever>
+  <Manual_Description_Sweating>Schwitzen ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Herzinfarkt
+ - @Entzug (30% oder mehr)</Manual_Description_Sweating>
+  <Manual_Description_Bloating>Aufgeblähtsein ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Leberschäden (50% oder mehr)</Manual_Description_Bloating>
+  <Manual_Description_Inflammation>Entzündung ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @infizierte-wunden (10% oder mehr)
+ - @fremdkörper (15% oder mehr)</Manual_Description_Inflammation>
+  <Manual_Description_Jaundice>Gelbsucht ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Leberschäden (80% oder mehr)</Manual_Description_Jaundice>
+  <Manual_Description_Abdominal_Discomfort>Bauchbeschwerden sind ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Leberschäden (65% oder mehr)</Manual_Description_Abdominal_Discomfort>
+  <Manual_Description_Headache>Kopfschmerzen sind ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht. Kopfschmerzen werden eine unscharfe Überlagerung an den Rändern Ihres Bildschirms erzeugen.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Blutverlust (50% oder mehr)
+ - @Azidose (20% oder mehr)
+ - @Hypoxämie (40% oder mehr)
+ - @Hypotonie (60% oder weniger)
+ - @Schlaganfall
+ - @Entzug (Alkoholentzug, 50% oder mehr)
+ - @Frakturen (Schädelbrüche)
+ - @Gehirnerschütterung
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Schmerzmittel</Manual_Description_Headache>
+  <Manual_Description_Craving>Verlangen ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Wirkungen verursacht. 
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Entzug (20% oder mehr)</Manual_Description_Craving>
+  <Manual_Description_Palpitations>Herzklopfen ist ein Symptom, was bedeutet, dass es nicht tödlich ist und keine anderen Auswirkungen verursacht.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Alkalose (20% oder mehr)</Manual_Description_Palpitations>
+  <Manual_Description_Spasms>Krämpfe sind ein Symptom, was bedeutet, dass sie nicht tödlich sind und keine anderen Wirkungen verursachen. 
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Anfall</Manual_Description_Spasms>
+  <Manual_Description_Neurotrauma>Neurotrauma ist eine der wenigen Dinge, die direkt Schaden an Ihrer Gesundheit verursachen können. Neurotrauma ist extrem gefährlich und kann sich sehr schnell aufbauen und bei Erreichen von 200% den Spieler sofort töten. Das Gehirn heilt mit einer Rate von 0,1% pro Sekunde, vorausgesetzt, die Konfiguration bleibt unverändert und es wird nichts beschädigt.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Schlaganfall
+ - @Leberschaden (80% oder mehr, Punkt, an dem er die natürliche Regeneration übertrifft)
+ - @Nierenschaden (hebt die natürliche Regeneration bei 100% auf)
+ - @Sepsis (25% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Frakturen (Schädelbrüche, wenn sie nicht verbunden sind und der Patient kein Neurotrauma hat)
+ - @Hypoxämie (10% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - Verwendung eines @Tourniquets am Kopf
+ - @Methamphetamin
+ - @Hyperzin
+ - @Traumatischer Schock (gleich der Stärke geteilt durch 100 pro Sekunde, 10% oder mehr ist der Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Cyanid-Vergiftung (70% oder mehr)
+ 
+ 
+ ##Effekte:
+ 
+ - Direkter Schaden an der Vitalität
+ - Sofortiger Tod (bei 200%)
+ - @Atemstillstand (bei 100% oder mehr)
+ - @Bewusstlosigkeit (bei 100% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - @Mannitol, wenn das Blut stabil ist. (Blutdruck liegt über 70% und @Hypoxämie liegt unter 30%)
+ - @Mannitol-Plus</Manual_Description_Neurotrauma>
+  <Manual_Description_Stroke>Schlaganfall muss so schnell wie möglich behandelt werden, um den Schaden im Gehirn zu reduzieren. @Streptokinase darf bei Patienten, die daran leiden, NICHT verwendet werden, da es das Gehirn weiter schädigen wird.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypertonie (150% oder mehr)
+ 
+ ##Effekte:
+ 
+ - @Neurotrauma
+ - @Krampfanfall
+ - @Koma
+ - @Kopfschmerzen
+ 
+ ##Behandlungen:
+ 
+ - @Offen-Geschlossen-Chirurgie</Manual_Description_Stroke>
+  <Manual_Description_Withdrawal>Verursacht durch:
+ 
+ - Chemische/Alkohol/Opiat-Abhängigkeit
+ 
+ Effekte:
+ 
+ ###Bei Alkohol-, chemischen und Opiat-Entzug:
+ - @Verlangen (bei 20% oder mehr)
+ - @Schwitzen (bei 30% oder mehr)
+ - 50% langsamere Bewegungsgeschwindigkeit (bei 80% oder mehr)
+ - 30% langsamere Bewegungsgeschwindigkeit (bei 40% oder mehr)
+ - 10% langsamere Bewegungsgeschwindigkeit (bei 20% oder mehr)
+ - @Übelkeit (bei 40% oder mehr)
+ 
+ ###Bei Alkoholentzug:
+ - @Fieber (bei 90% oder mehr)
+ - @Erbrechen (bei 60% oder mehr)
+ - @Kopfschmerzen (bei 50% oder mehr)
+ - @Verwirrung (bei 80% oder mehr)
+ - @erhöhter Herzschlag (bei 75% oder mehr)
+ - @Krampfanfall (bei 50% oder mehr)
+ - @Hypertonie
+ 
+ Behandlungen:
+ 
+ - Haloperidol (NUR BEI ALKOHOLENTZUG)
+ - @Naloxon (NUR BEI OPIATENTZUG)
+ - Verwendung eines @Ambubeutels mit Farbe (NUR BEI CHEMISCHEM ENTZUG)
+ - Verabreichung mehr der Substanz, von der die Person sich entzieht (z.B. jemandem mit Opiatentzug mehr Opioide geben)
+ - Zeit</Manual_Description_Withdrawal>
+  <Manual_Description_Opiate_Overdose>Eine Überdosis von Opiaten ist selten und tritt nur bei Missbrauch von Opiaten auf. Wenn jedoch die 50%-Schwelle überschritten wird, ist sie sehr tödlich und erfordert eine Notfallbehandlung.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - Einnahme von zu vielen Opiaten (@Opium)
+ 
+ ## Effekte:
+ 
+ - @Atemstillstand
+ - @Hypoventilation
+ - @Krampfanfälle
+ - @Bewusstlosigkeit
+ - 50% langsamere Bewegungsgeschwindigkeit (bei 50% oder mehr)
+ 
+ ## Behandlungen:
+ 
+ - @Naloxon</Manual_Description_Opiate_Overdose>
+  <Manual_Description_Seizure>Krampfanfälle werden dazu führen, dass Sie sich wie eine Stoffpuppe bewegen, wann immer sie ausgelöst werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Schlaganfall
+ - @Azidose (60% oder mehr)
+ - @Alkalose (60% oder mehr)
+ - @Entzug (Alkoholentzug, 50% oder mehr)
+ - @Strahlenkrankheit (50% oder mehr)
+ - @Opiat-Überdosis (50% oder mehr)
+ 
+ ##Effekte:
+ 
+ - @Bewusstlosigkeit
+ - @Krämpfe
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen</Manual_Description_Seizure>
+  <Manual_Description_Unconsciousness>of unconsciousness
+ - Administering oxygen
+ - Providing medical attention and care
+ - Monitoring vital signs
+ - Performing necessary surgeries or procedures
+ 
+ ---
+ 
+ Bewusstlosigkeit bedeutet in der Regel, dass etwas sehr Schlimmes passiert ist und ein Arzt Sie so schnell wie möglich behandeln muss. Bewusstlosigkeit verdeckt geistige Symptome (Karten, die von dieser Affektion verdeckt werden, sind mit dem Label "Geistiges Symptom" versehen) und fungiert auch als @surgery-table, solange Ihr Patient bewusstlos ist.
+ 
+ ## Verursacht durch:
+ 
+ - Weniger als 0 Vitalität haben
+ - @Hypoxämie
+ - @Neurotrauma
+ - @Koma
+ - @Aortenruptur
+ - @Anfall
+ - @Anästhesie
+ - @Opiat-Überdosis
+ - @Stase-Beutel
+ 
+ ## Auswirkungen:
+ 
+ - Unfähigkeit sich zu bewegen oder zu sprechen
+ - @Sauerstoffmangel
+ 
+ ## Behandlungen:
+ 
+ - Behandlung der Ursachen von Bewusstlosigkeit
+ - Verabreichung von Sauerstoff
+ - Bereitstellung medizinischer Aufmerksamkeit und Pflege
+ - Überwachung der Vitalfunktionen
+ - Durchführung notwendiger Operationen oder Verfahren</Manual_Description_Unconsciousness>
+  <Manual_Description_Coma>Koma tritt oft nach Erstickung auf und ist in der Regel bei angemessener medizinischer Versorgung nicht tödlich. Der empfohlene Behandlungsweg besteht darin, dem Patienten bei schweren Fällen einen Autopuls anzulegen.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - @Schlaganfall
+ - @Herzstillstand
+ - Hohe @Azidosewerte
+ - @Morbusine
+ - Fehlgeschlagener @Naloxon-Fertigkeitscheck
+ 
+ ## Effekte:
+ 
+ - @Herzstillstand
+ - @Bewusstlosigkeit
+ 
+ ## Behandlungen:
+ 
+ - Behandlung der Ursachen und Warten</Manual_Description_Coma>
+  <Manual_Description_Spinal_Cord_Injury>Rückenmarksverletzungen werden Ihre Fähigkeit zu bewegen oder zu sprechen entfernen, was Sie indirekt töten könnte. Rückenmarksverletzungen müssen nach der Behandlung des Halsbruchs behandelt werden, sonst wird es einfach zurückkommen.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Halsfrakturen (@fractures)
+ 
+ 
+ ##Effekte:
+ 
+ - Unfähigkeit zu bewegen oder zu sprechen 
+ - Schmerzlinderung (@analgesia)
+ 
+ ##Behandlungen:
+ 
+ - Offen-geschlossene Operation (Anwendung von Rückenmarkimplantaten (@spinal-cord-implants) vor Anwendung von Nähten (@sutures))</Manual_Description_Spinal_Cord_Injury>
+  <Manual_Description_Concussion>Eine Gehirnerschütterung wird durch einen schweren Schlag auf den Kopf verursacht. Sie verursacht periodisch Übelkeit, verschwommenes Sehen, Kopfschmerzen und Verwirrung. Obwohl sie lästig sind, sind Gehirnerschütterungen nicht tödlich.
+ 
+ ##Effekte:
+ - @Übelkeit
+ - @verschwommenes-sehen
+ - @Kopfschmerzen
+ - @Verwirrung
+ 
+ ##Verursacht durch:
+ - Trauma (Explosionen, Bisswunden, stumpfe Gewalt, @innere Verletzungen)
+ 
+ ##Prävention:
+ - Tragen eines Helms
+ 
+ ##Behandlung:
+ - Es gibt keine. Du musst es aussitzen. Hättest du den Helm getragen.</Manual_Description_Concussion>
+  <Manual_Description_Respiratory_Arrest>Atemstillstand führt schnell zu einem niedrigen Sauerstoffgehalt und erstickt das Opfer. Es muss schnell gehandelt werden. In der Nähe eines Operationstisches können die negativen Auswirkungen eines Atemstillstands verhindert werden.
+ 
+ ## Verursacht durch:
+ 
+ - @Lungenverletzung
+ - @traumatischer Schock
+ - @Neurotrauma
+ - @Hypoxämie
+ - @Opiat-Überdosis
+ - @Stase-Beutel
+ 
+ ## Auswirkungen:
+ 
+ - @niedriger Sauerstoffgehalt
+ - @Azidose
+ 
+ ## Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - @Ambubag mit einem Sauerstofftank
+ - Bewusstsein bewahren
+ 
+ ## Erste Hilfe:
+ 
+ - In der Nähe eines Operationstisches sein
+ - @Autopulse</Manual_Description_Respiratory_Arrest>
+  <Manual_Description_Lung_Damage>Lungenschäden sind nicht tödlich, solange sie unter 100% liegen. Die Lungen heilen mit einer Rate von 0,01% pro Sekunde, vorausgesetzt, die Konfiguration bleibt unverändert, es wird nichts beschädigt und sie sind unter 100% Schaden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Breitband-Antibiotika
+ - @flüssiger Sauerstoff
+ - Verwendung eines @Ambubags mit Schweiß- / Brennstoff oder Farbe
+ - Rauchen
+ - @Hämotransfusions-Schock (zwischen 0-70%)
+ - @Strahlungs-Krankheit (28% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ - @Sepsis (3% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ - @Hypoxämie (4% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ 
+ ##Effekte:
+ 
+ - @Husten (bei 50% oder mehr)
+ - @Atemnot (bei 45% oder mehr)
+ - @Atemstillstand (bei 100%)
+ 
+ ##Behandlungen:
+ 
+ - Zeit
+ - @Thiamin
+ - @Organtransplantations-Operation</Manual_Description_Lung_Damage>
+  <Manual_Description_Pneumothorax>Pneumothorax wird verhindern, dass die Hypoxämie an Stärke abnimmt. Obwohl es allein nicht tödlich ist, kann Pneumothorax leicht tödlich sein, wenn er mit Affektionen kombiniert wird, die Hypoxämie verursachen. Die negativen Auswirkungen von Pneumothorax können vorübergehend durch die Verwendung einer Nadel negiert werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Frakturen (Rippenfrakturen, wenn sie nicht verbunden sind)
+ - Trauma (Schüsse, Explosionen, Schnittwunden, Bisswunden, stumpfe Gewalt, @innere Verletzungen)
+ 
+ ##Auswirkungen:
+ 
+ - @Atemnot (bei 40% oder mehr)
+ - @Hyperventilation (bei 15% oder mehr)
+ - @erhöhter Herzschlag (bei 30% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Verwendung einer @Drainage während der Operation (nach @zurückgezogener Haut)
+ 
+ ##Erste Hilfe:
+ 
+ - @Nadel</Manual_Description_Pneumothorax>
+  <Manual_Description_Hyperventilation>Hyperventilation ist normalerweise harmlos und kann in der Regel ignoriert werden. Hyperventilation und Hypoventilation heben sich gegenseitig auf.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypotonie (80% oder weniger)
+ - @Hypoxämie (10% oder mehr)
+ - @Pneumothorax (15% oder mehr)
+ - @Sepsis (15% oder mehr)
+ - @Adrenalin
+ 
+ ##Effekte:
+ 
+ - @Alkalose
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Induktion von @Hypoventilation</Manual_Description_Hyperventilation>
+  <Manual_Description_Hypoventilation>Hypoventilation ist normalerweise harmlos und kann in der Regel ignoriert werden. Hypoventilation und Hyperventilation heben sich gegenseitig auf.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - @Analgesie
+ - @Anästhesie
+ - @Opiat-Überdosis
+ 
+ ## Effekte:
+ 
+ - @Azidose
+ 
+ ## Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Induktion von @Hyperventilation</Manual_Description_Hypoventilation>
+  <Manual_Description_Oxygen_Low>Sauerstoffmangel tritt auf, wenn es einen Mangel an Sauerstoff in den LUNGEN gibt. @Hypoxämie.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - @Atemstillstand
+ - @Bewusstlosigkeit (wenn durch weniger als 0 Vitalität verursacht)
+ - Aufenthalt im Wasser oder in einem Raum ohne Sauerstoffquelle.
+ - Granatapfelextrakt
+ 
+ ## Effekte:
+ 
+ - @Hypoxämie
+ 
+ ## Behandlungen:
+ 
+ - @Operations-Tisch
+ - Wiederbelebung (CPR)
+ - @Autopulse
+ - Atmen von sauerstoffhaltiger Luft
+ - @Ambubag mit Sauerstoff oder Oxygenite-Tanks</Manual_Description_Oxygen_Low>
+  <Manual_Description_Cardiac_Tamponade>Herzbeuteltamponade tritt häufig während Missionen auf, die Kämpfe außerhalb des U-Boots beinhalten, wie verlassene Außenposten oder Wracks. Jeder, der Symptome zeigt, sollte sofort zurück zum U-Boot gehen, um behandelt zu werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Trauma (Schnittwunden und Schussverletzungen)
+ 
+ ##Effekte:
+ 
+ - @Hypotonie (halbiert den Blutdruck)
+ - @Schwäche (bei 30% oder mehr)
+ - @Husten (bei 20% oder mehr)
+ - @Atemnot (bei 10% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - @Offen-Geschlossen-Operation</Manual_Description_Cardiac_Tamponade>
+  <Manual_Description_Cardiac_Arrest>Ein Herzstillstand wird den Blutdruck signifikant sinken lassen und muss schnell behandelt werden.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Herzschaden (bei 100%)
+ - @traumatischer Schock (40% oder mehr)
+ - @Koma (40% oder mehr)
+ - @Hypoxämie (80% oder mehr)
+ - @unregelmäßiger Herzschlag (20% oder mehr)
+ - @Fibrillation
+ - @manueller Defibrillator
+ - @Stase-Beutel
+ 
+ ##Effekte:
+ 
+ - @Koma
+ - @Azidose
+ - @Hypotonie (setzt den Blutdruck auf das Minimum)
+ - @Hypoxämie
+ 
+ ##Behandlungen:
+ 
+ - Wiederbelebung
+ - @Autopulse
+ - Behandlung der Ursachen
+ - @Adrenalin
+ - @manueller Defibrillator oder @AED
+ - @Nitroglycerin-Tablette (aus der NT-Apotheke)</Manual_Description_Cardiac_Arrest>
+  <Manual_Description_Heart_Attack>Eine Herzattacke muss so schnell wie möglich behandelt werden, um das Risiko eines Herzversagens zu reduzieren.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Hypertonie (150% oder mehr)
+ - Fehlgeschlagener @Antibiotikum-Klebe-Fertigkeitscheck
+ 
+ ##Effekte:
+ 
+ - @Schwitzen
+ - @Herzschäden
+ - @Atemnot
+ 
+ ##Behandlungen:
+ 
+ - @Streptokinase
+ - @Nitroglycerin-Pille (aus der NT-Apotheke)
+ - Behandlung der Ursachen</Manual_Description_Heart_Attack>
+  <Manual_Description_Heart_Damage>Herzschaden ist nicht tödlich, solange er unter 100% liegt. Das Herz heilt mit einer Rate von 0,01% pro Sekunde, vorausgesetzt, die Konfiguration bleibt unverändert, es wird nichts beschädigt und der Schaden liegt unter 100%.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Herzinfarkt
+ - @Breitband-Antibiotika
+ - @flüssiger Sauerstoff
+ - @Hämotransfusionsschock (zwischen 0-70%)
+ - @Mannitol
+ - @Strahlungsvergiftung (29% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Sepsis (3% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Hypoxämie (4% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ 
+ ##Effekte:
+ 
+ - @Husten (bei 80% oder mehr)
+ - @Atemnot (bei 80% oder mehr)
+ - @Herzstillstand (bei 100%)
+ - @Beinschwellung (bei 80% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Zeit
+ - @Thiamin
+ - @Organtransplantationschirurgie</Manual_Description_Heart_Damage>
+  <Manual_Description_Irregular_Heartbeat>Unregelmäßiger Herzschlag tritt auf, wenn das Herz nicht mit seiner normalen Rate schlägt und zu einem @Herzstillstand führen kann.
+ 
+ ---
+ ##Verursacht durch:
+ - @Fibrillation
+ 
+ ##Effekte:
+ - @Herzstillstand (bei 20% oder mehr)
+ - @Hypotonie
+ 
+ ##Behandlung:
+ - @Manueller-Defibrillator oder @AED
+ - Wiederbelebung
+ - @Autopulse
+ - Behandlung der zugrunde liegenden Ursachen</Manual_Description_Irregular_Heartbeat>
+  <Manual_Description_Fibrillation>Fibrillation ist ein 3-Schritte-Prozess. Zunächst beginnt es als erhöhte Herzfrequenz, die langsam ansteigt. Bei Erreichen einer 100%igen Erhöhung der Herzfrequenz wird es zu einem unregelmäßigen Herzschlag, der ebenfalls ansteigt, und wird bei Erreichen von 100% zu einem Herzstillstand. Zusätzlich besteht die Möglichkeit, dass ein unregelmäßiger Herzschlag sofort zum Herzstillstand übergeht, was je nach Ausmaß des unregelmäßigen Herzschlags skaliert. Die Fibrillation wird halbiert, wenn man unter den Auswirkungen von @adrenaline steht.
+ 
+ ## Verursacht durch:
+ 
+ - @aortic-rupture
+ - @acidosis
+ - @hypotension
+ - @hypoxemia
+ 
+ ## Auswirkungen:
+ 
+ - @increased-heartrate.
+ 
+ ## Behandlungen:
+ 
+ - @manual-defibrillator
+ - @autopulse
+ - Behandlung der Ursachen
+ - CPR</Manual_Description_Fibrillation>
+  <Manual_Description_Aortic_Rupture>Aortenrupturen sind eine der schwerwiegendsten Verletzungen, die man erleiden kann. Der Betroffene benötigt sofortige medizinische Versorgung und wird höchstwahrscheinlich einen signifikanten Teil seines Blutes verlieren.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Wunden (Blutungen, 80% oder mehr, wenn im Rumpf)
+ - @Fremdkörper (20% oder mehr, wenn im Rumpf)
+ 
+ ##Effekte:
+ 
+ - 4% @Blutverlust pro Sekunde
+ - @Bewusstlosigkeit
+ - 8% @innere Blutungen pro Sekunde
+ - @Fibrillation
+ 
+ ##Behandlungen:
+ 
+ - @Aortenruptur-Chirurgie
+ - @Offen-Geschlossen-Chirurgie
+ 
+ ##Erste Hilfe:
+ 
+ - @Stase-Beutel</Manual_Description_Aortic_Rupture>
+  <Manual_Description_Internal_Bleeding>Interne Blutungen werden schnell das Blut aus dem Patienten ablassen und müssen schnell behandelt werden.
+ 
+ ---
+ 
+ ## Verursacht durch:
+ 
+ - Trauma (Schüsse, Explosionen, Bisswunden, Schnittwunden)
+ - Leberschäden
+ - Aortenruptur
+ 
+ ## Auswirkungen:
+ 
+ - Blutverlust
+ - Bluterbrechen
+ 
+ ## Behandlungen:
+ 
+ - Offen-geschlossene Operation
+ - Kampfstimulans</Manual_Description_Internal_Bleeding>
+  <Manual_Description_Radiation_Sickness>Niedrige Strahlungskrankheit ist leicht behandelbar, aber wenn die Strahlungskrankheit hoch genug wird, beginnt sie schnell, die Organe zu töten. Lungen nehmen mehr Schaden durch Strahlung als andere Organe.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @health-scanner (0,5% pro Sekunde für die gescannte Person, 0,3% pro Sekunde für die Person, die scannt, 1% bei Verwendung als Behandlung, wie bei einem Verband)
+ - Radiotoxin
+ - Atomexplosionen
+ - In der Nähe eines volatilen Fulgurium-Brennstabs
+ 
+ ##Effekte:
+ 
+ - @leberschaden (bei 29% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @herzschaden (bei 29% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @nierenschaden (bei 33% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft, 29% wenn eine Niere tot ist)
+ - @lungenschaden (bei 28% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @knochenschaden (bei 31% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Übelkeit (bei 80% oder mehr)
+ - @Krampfanfall (bei 50% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Antirad
+ - Stabilozine</Manual_Description_Radiation_Sickness>
+  <Manual_Description_Kidney_Damage>Nierenschäden sind in der Regel überlebbar, da sie selbst im Falle eines Nierenversagens extrem langsam tödlich wirken. Nierenschäden heilen nicht unter 50% Schaden, wenn sie die 50%-Schwelle überschritten haben, da eine der Nieren gestorben ist. Die Nieren heilen mit einer Rate von 0,01% pro Sekunde, wenn eine Niere lebt, und mit einer Rate von 0,02% pro Sekunde, wenn beide Nieren leben, vorausgesetzt, dass die Konfiguration unverändert bleibt und nichts sie beschädigt.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Breitband-Antibiotika
+ - @flüssiger Sauerstoff
+ - @Hämotransfusions-Schock (zwischen 0-70%)
+ - @Mannitol
+ - @Strahlungs-Krankheit (33% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft, 29% wenn eine Niere tot ist)
+ - @Hypertonie (184% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft, 152% wenn eine Niere tot ist)
+ - @Sepsis (6% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft, 3% wenn eine Niere tot ist)
+ - @Hypoxämie (8% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft, 4% wenn eine Niere tot ist)
+ 
+ ##Effekte:
+ 
+ - @Beinschwellung (bei 60% oder mehr)
+ - @Azidose (bei 80% oder mehr)
+ - @Hypertonie
+ - @Knochenschäden (bei 72% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ - @Erbrechen (bei 60% oder mehr)
+ - @Neurotrauma (neutralisiert die natürliche Regeneration vollständig bei 100%)
+ - @Übelkeit (bei 60% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - Zeit
+ - @Thiamin
+ - @Organtransplantations-Operation</Manual_Description_Kidney_Damage>
+  <Manual_Description_Liver_Damage>Leberschäden, wenn sie zu Leberversagen fortschreiten, sind tödlich und können massive Blutungen in Form von @inneren-Blutungen verursachen. Die Leber heilt mit einer Rate von 0,01% pro Sekunde, vorausgesetzt, dass die Konfiguration unverändert bleibt, nichts sie beschädigt und sie unter 100% Schaden liegt.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @Breitband-Antibiotika
+ - @flüssiger-Sauerstoff
+ - @Hämotransfusions-Schock (zwischen 0-70%)
+ - @Strahlenkrankheit (29% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ - @Sepsis (3% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ - @Hypoxämie (4% oder mehr, Punkt, an dem sie die natürliche Regeneration übertrifft)
+ 
+ ##Effekte:
+ 
+ - @Beinschwellung (bei 40% oder mehr)
+ - @inneren-Blutungen (bei 100%)
+ - @Blut erbrechen (bei 100%)
+ - @Hypertonie
+ - @Neurotrauma (bei 80% oder mehr, Punkt, an dem es die natürliche Regeneration übertrifft)
+ - @Bauchbeschwerden (bei 65% oder mehr)
+ - @Gelbsucht (bei 80% oder mehr)
+ - @Aufblähung (bei 50% oder mehr)
+ - Verringerte Fähigkeit, Blutungen zu heilen, Blutungen heilen bei 100% Schaden überhaupt nicht
+ 
+ ##Behandlungen:
+ 
+ - Zeit
+ - @Thiamin
+ - @Organtransplantationschirurgie</Manual_Description_Liver_Damage>
+  <Manual_Description_Morbusine>##Verursacht durch:
+ - Morbusine
+ 
+ ##Effekte:
+ - Bildschirmverzerrung
+ - 20% langsamere Bewegungsgeschwindigkeit (bei 20% oder mehr)
+ - @Koma (bei 20% oder mehr)
+ 
+ ##Behandlungen:
+ - Morbusine-Antidot
+ - Stabilozin</Manual_Description_Morbusine>
+  <Manual_Description_Cyanide_Poisoning>##Verursacht durch:
+ - Cyanid
+ 
+ ##Effekte:
+ - Sauerstoffmangel
+ - @Hypoxämie
+ - @Neurotrauma (bei 70% oder mehr)
+ 
+ ##Behandlungen:
+ - Cyanid-Antidot
+ - Stabilozin</Manual_Description_Cyanide_Poisoning>
+  <Manual_Description_Vanilla_Organ_Damage>Eine Nebenwirkung einiger Medikamente. Zusätzliche Organschäden werden verursacht, wenn der medizinische Fähigkeitstest dieser Medikamente fehlschlägt.
+ 
+ ---
+ ##Verursacht durch:
+ - @alien-blood +3,75 oder 7,5%
+ - @breitband-antibiotika +12 oder 20% über die Antibiotikadauer
+ - Chloralhydrat +2,5%
+ - @flüssigsauerstoffit +6 oder 10%
+ - @mannitol +5 oder 10%
+ - @methamphetamin +15 oder 30%
+ 
+ ##Behandlungen:
+ - Zeit
+ - @deusizine
+ - @organ-transplant-surgery heilt einige Schäden an Vanilla-Organen mit frischen Organen.</Manual_Description_Vanilla_Organ_Damage>
+  <Manual_Description_Analgesia>Der erste Schritt bei allen chirurgischen Eingriffen. Analgesie ist eine Wirkung, die einen traumatischen Schock während der Operation verhindert und Schmerzen lindert. Ein traumatischer Schock tritt immer noch auf, wenn die Operation ohne Analgesie durchgeführt wird. Analgesie gibt auch Schadensresistenz, die bis zu einem Maximum von 50% Resistenz bei 200% skaliert.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Opioide
+ - @Adrenalin (gibt nicht mehr als 4,5% Analgesie)
+ - @Rückenmarksverletzung
+ - Betrunken sein (gibt nicht mehr als 5% Analgesie)
+ - @Anästhesie (gibt nicht mehr als 5% Analgesie)
+ 
+ ##Effekte:
+ 
+ - @Hypoventilation (bei 20% oder mehr)
+ 
+ ##Behandlungen:
+ 
+ - @Naloxon</Manual_Description_Analgesia>
+  <Manual_Description_Anesthesia>Anästhesie ist eine Wirkung, die einen traumatischen Schock während einer Operation verhindert und im Gegensatz zur Analgesie keine Operationstabelle erfordert, um eine sichere Operation durchzuführen. Die Anästhesie lässt sofort nach, wenn sie eine Stärke von 100% erreicht hat. Die Anästhesie verlangsamt auch die Bewegungsgeschwindigkeit des Charakters um 50%.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - Propofol
+ 
+ ##Wirkungen:
+ 
+ - Hypoventilation (bei 40% oder mehr)
+ - Bewusstlosigkeit (bei 15% oder mehr)
+ - Analgesie (gibt nicht mehr als 5% Analgesie)
+ - 50% langsamere Bewegungsgeschwindigkeit
+ 
+ ##Behandlungen:
+ 
+ - Anaparalytikum
+ - Zeit</Manual_Description_Anesthesia>
+  <Manual_Description_Abdominal_Pain>Bauchschmerzen sind nicht tödlich und reduzieren nur die Geschwindigkeit für 1 Sekunde alle 3-6 Sekunden um die Hälfte.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @hemotransfusion-shock (zwischen 0-80%)
+ 
+ ##Effekte:
+ 
+ - Halbierte Geschwindigkeit für 1 Sekunde alle 3-6 Sekunden
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen
+ - Schmerzmittel</Manual_Description_Abdominal_Pain>
+  <Manual_Description_Vomiting>Übelkeit ist normalerweise nicht schädlich und kann manchmal aufgrund der Alkalose, die sie verursacht, sogar vorteilhaft sein. Übelkeit verlangsamt auch Ihren Charakter um 20%.
+ 
+ ---
+ ##Verursacht durch:
+ 
+ - @hemotransfusion-shock (zwischen 0-40%)
+ - @withdrawal (Alkoholentzug, 60% oder mehr)
+ - Betrunken (bei 100%)
+ - @kidney-damage (60% oder mehr)
+ - @raptor-bane-extract
+ 
+ ##Effekte:
+ 
+ - @alkalosis
+ 
+ ##Behandlungen:
+ 
+ - Behandlung der Ursachen</Manual_Description_Vomiting>
+</infotexts>
