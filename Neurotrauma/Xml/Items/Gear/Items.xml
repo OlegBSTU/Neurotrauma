@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
+   <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3"/>
 
@@ -21,7 +21,7 @@
         <SuitableTreatment identifier="oxygenlow" suitability="50"/>
 
         <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
-            <RequiredItems identifier="weldingtoolfuel,oxygensource,paint" type="Contained" msg="ItemMsgOxygenTankRequired"/>
+            <RequiredItems identifier="weldingtoolfuel,oxygensource,paint,analgesictank,anesthetictank" type="Contained" msg="ItemMsgOxygenTankRequired"/>
             <StatusEffect type="OnUse" target="UseTarget">
                 <ReduceAffliction identifier="oxygenlow" amount="10" />
                 <Conditional IsDead="false"/>
@@ -29,6 +29,7 @@
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" Condition="-100"/>
             <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="1" stackable="false"/>
+            <!-- Oxygen/Oxygenite Tank -->
             <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-2" comparison="and">
                 <RequiredItem items="oxygentank" type="Contained"/>
                 <Conditional IsDead="false"/>
@@ -40,7 +41,33 @@
                 <ReduceAffliction identifier="oxygenlow" amount="90" />
                 <ReduceAffliction identifier="respiratoryarrest" amount="100" />
             </StatusEffect>
-            <!-- We do a little trolling  -->
+            <!-- Analgesic Tank -->
+            <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-25" comparison="and">
+                <RequiredItem items="analgesictank,anesthetictank" type="Contained"/>
+                <Conditional IsDead="false"/>
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" duration="10" comparison="and">
+                <RequiredItem items="analgesictank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="analgesia" amount="5.6"/>
+                <Affliction identifier="opiateaddiction" amount="4"/>
+                <Affliction identifier="opiateoverdose" amount="3"/>
+                <ReduceAffliction identifier="opiatewithdrawal" amount="7.5"/>
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained,UseTarget" duration="10" comparison="and">
+                <RequiredItem items="analgesictank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Conditional drunk="gt 30" />
+                <Affliction identifier="analgesia" amount="5"/>
+                <Affliction identifier="opiateoverdose" amount="3"/>
+            </StatusEffect>
+            <!-- Anesthetic Tank -->
+            <StatusEffect type="OnUse" target="Contained,UseTarget" duration="11" comparison="and">
+                <RequiredItem items="anesthetictank" type="Contained"/>
+                <Conditional IsDead="false"/>
+                <Affliction identifier="anesthesia" amount="1.5"/>
+            </StatusEffect>
+            <!-- We do a little trolling  (Welding Tanks)-->
             <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-5" comparison="and">
                 <RequiredItem items="weldingfueltank" type="Contained"/>
                 <Conditional IsDead="false"/>
@@ -68,7 +95,7 @@
         <Pickable msg="ItemMsgPickUpSelect"/>
 
         <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
-            <Containable items="weldingtoolfuel,oxygensource,paint"/>
+            <Containable items="weldingtoolfuel,oxygensource,paint,analgesictank,anesthetictank"/>
         </ItemContainer>
     </Item>
 
