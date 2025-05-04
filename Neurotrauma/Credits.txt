@@ -1,11 +1,15 @@
 
+Videogame People Playground - heavy blood sounds
 Evil Factory - Lua help
+I only use this when bored - Better scanner code and contributions to config GUI
+Luka - Config GUI contributions
+ThousandFields - Code contributions
 Ydrec - Code contributions
 Nebual - Code contributions
 _[|M|]_ - Bag overlays
 peelz - Bloodpack conversion code
 Vetinarix - Propofol maintenance
-themanyfaceddemon - meta data for barotrauma mod loader
+themanyfaceddemon - Split XML into files, meta data for barotrauma mod loader
 Viktor Livingshield - Russian localization
 Brian Damage - Russian localization
 Kaofan - Polish localization
@@ -16,3 +20,4 @@ MEI - Portuguese localization
 Oskar - Spanish localization
 mefy - Turkish localization
 profole - German localization
+Liatoast - Further improvements to German localization
