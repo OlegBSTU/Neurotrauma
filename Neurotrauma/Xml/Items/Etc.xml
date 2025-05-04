@@ -26,7 +26,7 @@
 
 		<InventoryIcon texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" origin="0.5,0.5"/>
 
-		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" depth="0.75" premultiplyalpha="false" origin="0.5,0.5"/> 
+		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" depth="0.53" premultiplyalpha="false" origin="0.5,0.5"/> 
 
 		<Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" selectkey="Select">
 			<limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
@@ -62,19 +62,89 @@
 			</StatusEffect>
 			<!-- Do dialysis if dialyzer is present -->
 			<!-- Alkalosis dialysis -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialysisunit,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional alkalosis="gt 0" />
 				<ReduceAffliction identifier="alkalosis" amount="0.8" />
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
+			
 			<!-- Acidosis dialysis -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialysisunit,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional acidosis="gt 0" />
 				<ReduceAffliction identifier="acidosis" amount="0.8" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			
+			<!-- Toxin Cleanup -->
+			<!-- Sufforin Counter -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional sufforinpoisoning="gte 50" />
+				<ReduceAffliction identifier="sufforinpoisoning" amount="1.8" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			<!-- Sufforin Cure -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional sufforinpoisoning="lt 50" />
+				<ReduceAffliction identifier="sufforinpoisoning" amount="1.0" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			
+			<!-- Cyanide Counter -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional cyanidepoisoning="gte 30" />
+				<ReduceAffliction identifier="cyanidepoisoning" amount="5.5" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			<!-- Cyanide Cure -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional cyanidepoisoning="lt 30" />
+				<ReduceAffliction identifier="cyanidepoisoning" amount="2.8" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			
+			<!-- Morbusine Counter -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional morbusinepoisoning="gte 50" />
+				<ReduceAffliction identifier="morbusinepoisoning" amount="2.3" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			<!-- Morbusine Cure -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional morbusinepoisoning="lt 50" />
+				<ReduceAffliction identifier="morbusinepoisoning" amount="1.8" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			
+			<!-- Deliriumine Counter -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional deliriuminepoisoning="gte 50" />
+				<ReduceAffliction identifier="deliriuminepoisoning" amount="2.3" />
+				<Affliction identifier="sepsis" amount="1" probability="0.001" />
+			</StatusEffect>
+			<!-- Deliriumine Cure -->
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+				<Conditional HasTag="toxfilter" />
+				<Conditional condition="gt 0" />
+				<Conditional deliriuminepoisoning="lt 50" />
+				<ReduceAffliction identifier="deliriuminepoisoning" amount="1.6" />
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
 		</Controller>
@@ -82,17 +152,17 @@
 		<ItemContainer canbeselected="true" selectkey="Attack" capacity="0" maxstacksize="0" hideitems="false" hidehud="false" msg="itemmsgmodifytable" uilabel="operatingtabellabel">
 		<GuiFrame relativesize="0.2,0.2" anchor="BottomCenter" style="ItemUI" />
 		
-			<!-- Subcontainers to prepare for future sprite changes (slots could show their contents on sprite) - Lukako -->
+			<!-- Subcontainers to prepare for future sprite changes - Lukako -->
 			<!-- First Slot (Tanks) -->
 			<SubContainer capacity="1">
 				<Containable items="analgesictank,anesthetictank,weldingfuel" />
 				<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
 			</SubContainer>
 			
-			<!-- Second Slot (Dialyzer) -->
+			<!-- Second Slot (Filters) -->
 			<SubContainer capacity="1">
 				<SlotIcon texture="Content/UI/StatusMonitorUI.png" sourcerect="448,448,64,64" origin="0.5,0.5" />
-				<Containable items="dialysisunit" />
+				<Containable items="dialyzer,toxfilter" />
 			</SubContainer>
 			
 			<!-- Third Slot (Organ Storage) -->
@@ -139,35 +209,6 @@
 				<LuaHook name="surgerytable.update" />
 			</StatusEffect>
 		</Holdable>
-	</Item>
-
-	<!-- Dialysis unit (surgery table upgrade) -->
-	<Item name="" identifier="dialysisunit" category="medical" tags="dialysisunit,medical" scale="0.35" maxstacksize="1" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
-		<Price baseprice="450" soldbydefault="false">
-			<Price storeidentifier="merchantmedical" sold="true" multiplier="1"/>
-		</Price>
-		<Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
-			<RequiredSkill identifier="medical" level="25" />
-			<RequiredSkill identifier="mechanical" level="45" />
-			<RequiredItem identifier="steel" amount="2" />
-			<RequiredItem identifier="fpgacircuit" amount="2" />
-			<RequiredItem identifier="titaniumaluminiumalloy" />
-		</Fabricate>
-		<Deconstruct time="10">
-			<Item identifier="steel" />
-			<Item identifier="copper" />
-		</Deconstruct>
-		<ItemContainer canbeselected="false" capacity="1" maxstacksize="1" hideitems="false" drawinventory="true" hidehud="false">
-			<GuiFrame relativesize="0.2,0.2" anchor="BottomCenter" style="ItemUI" />
-			<!-- First Slot (Dialyzer) -->
-			<Containable items="dialyzer" />
-			<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
-		</ItemContainer>
-		<Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" aimpos="85,-10" handle1="0,0">
-		</Holdable>
-		<PreferredContainer primary="medcab" />
-		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" depth="0.55" origin="0.5,0.5" />
-		<Body radius="60" width="60" density="15" />
 	</Item>
 
     <Item name="" identifier="blahaj" category="Equipment" cargocontaineridentifier="metalcrate" impactsoundtag="impact_squeak" RequireAimToUse="True" Tags="smallitem,medical,mountableweapon" description="" useinhealthinterface="True" scale="0.25">
