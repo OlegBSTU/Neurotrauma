@@ -142,7 +142,7 @@
 	</Item>
 
 	<!-- Dialysis unit (surgery table upgrade) -->
-	<Item name="" identifier="dialysisunit" category="medical" tags="dialysisunit,medical" scale="0.5" maxstacksize="1" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
+	<Item name="" identifier="dialysisunit" category="medical" tags="dialysisunit,medical" scale="0.35" maxstacksize="1" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
 		<Price baseprice="450" soldbydefault="false">
 			<Price storeidentifier="merchantmedical" sold="true" multiplier="1"/>
 		</Price>
@@ -166,10 +166,9 @@
 		<Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" aimpos="85,-10" handle1="0,0">
 		</Holdable>
 		<PreferredContainer primary="medcab" />
-		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,768,256,256" depth="0.55" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" depth="0.55" origin="0.5,0.5" />
 		<Body radius="60" width="60" density="15" />
 	</Item>
-
 
     <Item name="" identifier="blahaj" category="Equipment" cargocontaineridentifier="metalcrate" impactsoundtag="impact_squeak" RequireAimToUse="True" Tags="smallitem,medical,mountableweapon" description="" useinhealthinterface="True" scale="0.25">
         <Fabricate suitablefabricators="fabricator" requiredtime="5">
