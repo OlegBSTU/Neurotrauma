@@ -36,11 +36,11 @@
 <entityname.anesthetictank>Anesthetic Tank</entityname.anesthetictank>
 <entitydescription.anesthetictank>A tank of gaseous anesthetics that can be installed on a surgery table or used in an ambubag.</entitydescription.anesthetictank>
 
-<entityname.dialysisunit>Dialysis Unit</entityname.dialysisunit>
-<entitydescription.dialysisunit>An advanced device which will filter the blood of the patient when installed on surgery tables and equipped with a dialysis filter.</entitydescription.dialysisunit>
-  
 <entityname.dialyzer>Dialysis Filter</entityname.dialyzer>
-<entitydescription.dialyzer>An advanced filter which to be installed on a dialysis unit.</entitydescription.dialyzer>
+<entitydescription.dialyzer>An advanced filter which can be installed on a surgery table to counter alkalosis and acidosis.</entitydescription.dialyzer>
+
+<entityname.toxfilter>Toxin Filter</entityname.toxfilter>
+<entitydescription.toxfilter>An advanced filter which can be installed on a surgery table to help remove poisons from the bloodstream.</entitydescription.toxfilter>
   
 <itemmsgmodifytable>[[attack]] Interact</itemmsgmodifytable>
 <operatingtabellabel>Surgery Table Upgrades</operatingtabellabel>
