@@ -62,7 +62,7 @@
 			</StatusEffect>
 			<!-- Do dialysis if dialyzer is present -->
 			<!-- Alkalosis dialysis -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional alkalosis="gt 0" />
@@ -71,7 +71,7 @@
 			</StatusEffect>
 			
 			<!-- Acidosis dialysis -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-1" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="dialyzer,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="dialyzer" />
 				<Conditional condition="gt 0" />
 				<Conditional acidosis="gt 0" />
@@ -81,7 +81,7 @@
 			
 			<!-- Toxin Cleanup -->
 			<!-- Sufforin Counter -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional sufforinpoisoning="gte 50" />
@@ -89,7 +89,7 @@
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
 			<!-- Sufforin Cure -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional sufforinpoisoning="lt 50" />
@@ -98,7 +98,7 @@
 			</StatusEffect>
 			
 			<!-- Cyanide Counter -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional cyanidepoisoning="gte 30" />
@@ -106,7 +106,7 @@
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
 			<!-- Cyanide Cure -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional cyanidepoisoning="lt 30" />
@@ -115,7 +115,7 @@
 			</StatusEffect>
 			
 			<!-- Morbusine Counter -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional morbusinepoisoning="gte 50" />
@@ -123,7 +123,7 @@
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
 			<!-- Morbusine Cure -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional morbusinepoisoning="lt 50" />
@@ -132,7 +132,7 @@
 			</StatusEffect>
 			
 			<!-- Deliriumine Counter -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional deliriuminepoisoning="gte 50" />
@@ -140,7 +140,7 @@
 				<Affliction identifier="sepsis" amount="1" probability="0.001" />
 			</StatusEffect>
 			<!-- Deliriumine Cure -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.8" conditionalComparison="And" disabledeltatime="true" interval="1">
+			<StatusEffect type="OnActive" target="Contained,Character" targettags="toxfilter,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
 				<Conditional HasTag="toxfilter" />
 				<Conditional condition="gt 0" />
 				<Conditional deliriuminepoisoning="lt 50" />
