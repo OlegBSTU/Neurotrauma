@@ -25,11 +25,25 @@
 <entityname.traumashears>Trauma shears</entityname.traumashears>
 <entitydescription.traumashears>A tool used to remove bandages and casts.</entitydescription.traumashears>
 
-
 <entityname.wheelchair>Wheelchair</entityname.wheelchair>
 <entitydescription.wheelchair>Makes you depend on your arms instead of your legs for movement.</entitydescription.wheelchair>
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
+
+<entityname.analgesictank>Analgesic Tank</entityname.analgesictank>
+<entitydescription.analgesictank>A tank of gaseous analgesics that can be installed on a surgery table or used in an ambubag.</entitydescription.analgesictank>
+  
+<entityname.anesthetictank>Anesthetic Tank</entityname.anesthetictank>
+<entitydescription.anesthetictank>A tank of gaseous anesthetics that can be installed on a surgery table or used in an ambubag.</entitydescription.anesthetictank>
+
+<entityname.dialysisunit>Dialysis Unit</entityname.dialysisunit>
+<entitydescription.dialysisunit>An advanced device which will filter the blood of the patient when installed on surgery tables and equipped with a dialysis filter.</entitydescription.dialysisunit>
+  
+<entityname.dialyzer>Dialysis Filter</entityname.dialyzer>
+<entitydescription.dialyzer>An advanced filter which to be installed on a dialysis unit.</entitydescription.dialyzer>
+  
+<itemmsgmodifytable>[[attack]] Interact</itemmsgmodifytable>
+<operatingtabellabel>Surgery Table Upgrades</operatingtabellabel>
 
 <Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
