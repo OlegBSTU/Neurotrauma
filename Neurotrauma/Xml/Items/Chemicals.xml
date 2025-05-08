@@ -446,7 +446,7 @@
             <RequiredItem identifier="morphine" amount="2" />
         </Fabricate>
         <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="6,663,42,112" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="6,663,42,112" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="6,663,42,112" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnFire" target="This" Condition="-1.0" tags="onfire" duration="1" stackable="false" />
@@ -462,7 +462,7 @@
     </Item>
 
     <!-- Anesthetic Tank -->
-    <Item name="" identifier="anesthetictank" category="Medical" health="100" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,anesthetictank" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+    <Item name="" identifier="anesthetictank" category="Medical" health="100" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,anesthetictank" cargocontaineridentifier="metalcrate" scale="0.24	" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         <Deconstruct time="10">
             <Item identifier="aluminium" />
         </Deconstruct>
@@ -478,7 +478,7 @@
             <RequiredItem identifier="propofol" amount="1" />
         </Fabricate>
         <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="52,665,49,110" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="52,665,49,110" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="52,665,49,110" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnFire" target="This" Condition="-1.0" tags="onfire" duration="1" stackable="false" />
@@ -494,7 +494,7 @@
     </Item>
 
     <!-- Dialyzer -->
-    <Item name="" identifier="dialyzer" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,dialyzer" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+    <Item name="" identifier="dialyzer" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,dialyzer" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         <Deconstruct time="10">
             <Item identifier="aluminium" />
         </Deconstruct>
@@ -513,7 +513,7 @@
             <RequiredItem identifier="organicfiber" amount="4" />
         </Fabricate>
         <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect"/>
         <Quality>
@@ -522,7 +522,7 @@
     </Item>
 	
 	 <!-- Toxin Filter -->
-    <Item name="" identifier="toxfilter" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,toxfilter" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+    <Item name="" identifier="toxfilter" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,toxfilter" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         <Deconstruct time="10">
             <Item identifier="aluminium" />
         </Deconstruct>
@@ -542,7 +542,7 @@
 			<RequiredItem identifier="stabilozine" amount="2" />
         </Fabricate>
         <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="110,677,77,95" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="110,677,77,95" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="110,677,77,95" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect"/>
         <Quality>
