@@ -65,7 +65,7 @@
             <StatusEffect type="OnUse" target="Contained,UseTarget" duration="11" comparison="and">
                 <RequiredItem items="anesthetictank" type="Contained"/>
                 <Conditional IsDead="false"/>
-                <Affliction identifier="anesthesia" amount="1.5"/>
+                <Affliction identifier="anesthesia" amount="0.75"/>
             </StatusEffect>
             <!-- We do a little trolling  (Welding Tanks)-->
             <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-5" comparison="and">
