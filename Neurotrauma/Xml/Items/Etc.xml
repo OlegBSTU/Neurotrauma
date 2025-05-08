@@ -44,13 +44,6 @@
 				<Conditional analgesia="lte 11" />
 				<Affliction identifier="analgesia" amount="3" />
 			</StatusEffect>
-			<!-- Anesthesia -->
-			<StatusEffect type="OnActive" target="Contained,Character" targettags="anesthetictank,Human" Condition="-0.5" conditionalComparison="And" disabledeltatime="true" interval="1">
-				<Conditional HasTag="anesthetictank" />
-				<Conditional condition="gt 0" />
-				<Conditional anesthesia="lte 25" />
-				<Affliction identifier="anesthesia" amount="1" />
-			</StatusEffect>
 			<!-- reduce oxygen and disable "alv" for the user if welding fuel is present -->
 			<StatusEffect type="OnActive" target="Contained,Character" targettags="weldingfuel,Human" Condition="-0.5" OxygenAvailable="-100.0" Oxygen="-15.0" conditionalComparison="And">
 				<Conditional HasTag="weldingfuel" />
