@@ -13,7 +13,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_heads_mask.png" />
     <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damage.png" sourcerect="0,0,128,128"/>
-    <damagemodifier damagemultiplier="3" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="3" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional th_amputation="gt 0"/>
       <sprite texture="%ModDir%/Images/Human/Human_[GENDER].png" sourcerect="190,510,50,10" depth="0.05" origin="0.5,0.5" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -27,7 +27,7 @@
     <sprite texture="" sourcerect="272,0,64,96" origin="0.5,0.5" depth="0.02" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,0,64,96"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -39,7 +39,7 @@
     <sprite texture="" sourcerect="272,160,64,48" origin="0.44,0.4" depth="0.015" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,160,64,48"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -61,7 +61,7 @@
     <sprite texture="" sourcerect="336,0,64,96" origin="0.5,0.5" depth="0.14" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,0,64,96"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -73,7 +73,7 @@
     <sprite texture="" sourcerect="336,160,64,48" origin="0.44,0.4" depth="0.16" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,160,64,48"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -96,7 +96,7 @@
     <sprite texture="" sourcerect="80,0,80,128" origin="0.5,0.5" depth="0.13" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="80,0,80,128"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -108,7 +108,7 @@
     <sprite texture="" sourcerect="80,128,80,128" origin="0.5,0.5" depth="0.131" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="80,128,80,128"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -131,7 +131,7 @@
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,208,64,48"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -153,7 +153,7 @@
     <sprite texture="" sourcerect="0,0,80,128" origin="0.5,0.5" depth="0.12" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="0,0,80,128"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -165,7 +165,7 @@
     <sprite texture="" sourcerect="0,128,80,128" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="0,128,80,128"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -189,7 +189,7 @@
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,208,64,48"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -218,7 +218,7 @@
     <sprite texture="" sourcerect="336,96,64,64" origin="0.5,0.5" depth="0.15" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,96,64,64"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -241,7 +241,7 @@
     <sprite texture="" sourcerect="272,96,64,64" origin="0.5,0.5" depth="0.01" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,96,64,64"/>
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
 
     <conditionalsprite exclusive="True">
