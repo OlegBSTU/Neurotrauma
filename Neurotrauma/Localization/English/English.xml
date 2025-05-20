@@ -836,4 +836,535 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
+<!-- In-Game Guide Buttons -->
+	<!-- Universal Buttons -->
+	<Manual_Button_Start_Page>Return to Start Page</Manual_Button_Start_Page>
+	<Manual_Button_Back>Go to previous page</Manual_Button_Back>
+	
+	<!-- Base Neurotrauma: General Information -->
+	<entityname.Manual_Start_Page>MedAssistant: Start Page</entityname.Manual_Start_Page>
+	<entityname.Manual_Information>MedAssistant: Information</entityname.Manual_Information>
+	<entityname.Manual_FAQ>MedAssistant: FAQ</entityname.Manual_FAQ>
+	<entityname.Manual_Med_Kit_Recommendations>MedAssistant: Med Kit Recommendations</entityname.Manual_Med_Kit_Recommendations>
+	<entityname.Manual_How_To_Diagnose>MedAssistant: How To Diagnose</entityname.Manual_How_To_Diagnose>
+	<entityname.Manual_Order_of_Treatments>MedAssistant: Order of Treatments</entityname.Manual_Order_of_Treatments>
+	<entityname.Manual_The_5_Commandments_of_Neurotrauma>MedAssistant: The 5 Commandments of Neurotrauma</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+	 
+	<!-- Base Neurotrauma: Symptoms -->
+	<entityname.Manual_Symptoms>MedAssistant: Symptoms</entityname.Manual_Symptoms>
+	
+	<entityname.Manual_Vomiting_Blood>MedAssistant: Vomiting Blood</entityname.Manual_Vomiting_Blood>
+	<entityname.Manual_Pale_Skin>MedAssistant: Pale Skin</entityname.Manual_Pale_Skin>
+	<entityname.Manual_Shortness_of_Breath>MedAssistant: Shortness of Breath</entityname.Manual_Shortness_of_Breath>
+	<entityname.Manual_Cough>MedAssistant: Cough</entityname.Manual_Cough>
+	<entityname.Manual_Nausea>MedAssistant: Nausea</entityname.Manual_Nausea>
+	<entityname.Manual_Increased_Heartrate>MedAssistant: Increased Heartrate</entityname.Manual_Increased_Heartrate>
+	<entityname.Manual_Lightheadedness>MedAssistant: Lightheadedness</entityname.Manual_Lightheadedness>
+	<entityname.Manual_Blurred_Vision>MedAssistant: Blurred Vision</entityname.Manual_Blurred_Vision>
+	<entityname.Manual_Leg_Swelling>MedAssistant: Leg Swelling</entityname.Manual_Leg_Swelling>
+	<entityname.Manual_Wheezing>MedAssistant: Wheezing</entityname.Manual_Wheezing>
+	<entityname.Manual_Weakness>MedAssistant: Weakness</entityname.Manual_Weakness>
+	<entityname.Manual_Fever>MedAssistant: Fever</entityname.Manual_Fever>
+	<entityname.Manual_Sweating>MedAssistant: Sweating</entityname.Manual_Sweating>
+	<entityname.Manual_Bloating>MedAssistant: Bloating</entityname.Manual_Bloating>
+	<entityname.Manual_Inflammation>MedAssistant: Inflammation</entityname.Manual_Inflammation>
+	<entityname.Manual_Jaundice>MedAssistant: Jaundice</entityname.Manual_Jaundice>
+	<entityname.Manual_Abdominal_Discomfort>MedAssistant: Abdominal Discomfort</entityname.Manual_Abdominal_Discomfort>
+    <entityname.Manual_Confusion>MedAssistant: Confusion</entityname.Manual_Confusion>
+	<entityname.Manual_Headache>MedAssistant: Headache</entityname.Manual_Headache>
+	<entityname.Manual_Craving>MedAssistant: Craving</entityname.Manual_Craving>
+	<entityname.Manual_Palpitations>MedAssistant: Palpitations</entityname.Manual_Palpitations>
+	<entityname.Manual_Spasms>MedAssistant: Spasms</entityname.Manual_Spasms>
+	<entityname.Manual_Abdominal_Pain>MedAssistant: Abdominal Pain</entityname.Manual_Abdominal_Pain>
+	<entityname.Manual_Chest_Pain>MedAssistant: Chest Pain</entityname.Manual_Chest_Pain>
+	<entityname.Manual_Intense_Pain>MedAssistant: Intense Pain</entityname.Manual_Intense_Pain>
+	<entityname.Manual_Vomiting>MedAssistant: Vomiting</entityname.Manual_Vomiting>
+	
+	<!-- Base Neurotrauma: Other Afflictions -->
+	<!-- Head & Brain -->
+	<entityname.Manual_HeadBrain>MedAssistant: HeadBrain</entityname.Manual_HeadBrain>
+	
+	<entityname.Manual_Neurotrauma>MedAssistant: Neurotrauma</entityname.Manual_Neurotrauma>
+	<entityname.Manual_Stroke>MedAssistant: Stroke</entityname.Manual_Stroke>
+	<entityname.Manual_Withdrawal>MedAssistant: Withdrawal</entityname.Manual_Withdrawal>
+	<entityname.Manual_Opiate_Overdose>MedAssistant: Opiate Overdose</entityname.Manual_Opiate_Overdose>
+	<entityname.Manual_Seizure>MedAssistant: Seizure</entityname.Manual_Seizure>
+	<entityname.Manual_Unconsciousness>MedAssistant: Unconsciousness</entityname.Manual_Unconsciousness>
+	<entityname.Manual_Coma>MedAssistant: Coma</entityname.Manual_Coma>
+	<entityname.Manual_Spinal_Cord_Injury>MedAssistant: Spinal Cord Injury</entityname.Manual_Spinal_Cord_Injury>
+	<entityname.Manual_Concussion>MedAssistant: Concussion</entityname.Manual_Concussion>
+	<!-- todo <entityname.Manual_Drunk>MedAssistant: Drunk</entityname.Manual_Drunk> -->
+	
+	<!-- Lungs -->
+	<entityname.Manual_Lungs>MedAssistant: Lungs</entityname.Manual_Lungs>
+	
+	<entityname.Manual_Respiratory_Arrest>MedAssistant: Respiratory Arrest</entityname.Manual_Respiratory_Arrest>
+	<entityname.Manual_Lung_Damage>MedAssistant: Lung Damage</entityname.Manual_Lung_Damage>
+	<entityname.Manual_Pneumothorax>MedAssistant: Pneumothorax</entityname.Manual_Pneumothorax>
+	<entityname.Manual_Hyperventilation>MedAssistant: Hyperventilation</entityname.Manual_Hyperventilation>
+	<entityname.Manual_Hypoventilation>MedAssistant: Hypoventilation</entityname.Manual_Hypoventilation>
+	<entityname.Manual_Oxygen_Low>MedAssistant: Oxygen Low</entityname.Manual_Oxygen_Low>
+	
+	<!-- Heart -->
+	<entityname.Manual_Heart>MedAssistant: Heart</entityname.Manual_Heart>
+	
+	<entityname.Manual_Cardiac_Tamponade>MedAssistant: Cardiac Tamponade</entityname.Manual_Cardiac_Tamponade>
+	<entityname.Manual_Cardiac_Arrest>MedAssistant: Cardiac Arrest</entityname.Manual_Cardiac_Arrest>
+	<entityname.Manual_Heart_Attack>MedAssistant: Heart Attack</entityname.Manual_Heart_Attack>
+	<entityname.Manual_Heart_Damage>MedAssistant: Heart Damage</entityname.Manual_Heart_Damage>
+	<entityname.Manual_Irregular_Heartbeat>MedAssistant: Irregular Heartbeat</entityname.Manual_Irregular_Heartbeat>
+	<entityname.Manual_Fibrillation>MedAssistant: Fibrillation</entityname.Manual_Fibrillation>
+	
+	<!-- Torso -->
+	<entityname.Manual_Torso>MedAssistant: Torso</entityname.Manual_Torso>
+	
+	<entityname.Manual_Aortic_Rupture>MedAssistant: Aortic Rupture</entityname.Manual_Aortic_Rupture>
+	<entityname.Manual_Internal_Bleeding>MedAssistant: Internal Bleeding</entityname.Manual_Internal_Bleeding>
+	<entityname.Manual_Radiation_Sickness>MedAssistant: Radiation Sickness</entityname.Manual_Radiation_Sickness>
+	<entityname.Manual_Kidney_Damage>MedAssistant: Kidney Damage</entityname.Manual_Kidney_Damage>
+	<entityname.Manual_Liver_Damage>MedAssistant: Liver Damage</entityname.Manual_Liver_Damage>
+	<entityname.Manual_Morbusine>MedAssistant: Morbusine</entityname.Manual_Morbusine>
+	<entityname.Manual_Cyanide_Poisoning>MedAssistant: Cyanide Poisoning</entityname.Manual_Cyanide_Poisoning>
+	<!-- todo <entityname.Manual_Sufforin_Poisoning>MedAssistant: Sufforin Poisoning</entityname.Manual_Sufforin_Poisoning> -->
+	<entityname.Manual_Vanilla_Organ_Damage>MedAssistant: Vanilla Organ Damage</entityname.Manual_Vanilla_Organ_Damage>
+	<entityname.Manual_Analgesia>MedAssistant: Analgesia</entityname.Manual_Analgesia>
+	<entityname.Manual_Anesthesia>MedAssistant: Anesthesia</entityname.Manual_Anesthesia>
+	
+	<!-- Extremities -->
+	<entityname.Manual_Extremities>MedAssistant: Extremities</entityname.Manual_Extremities>
+	
+	<entityname.Manual_Traumatic_Amputation>MedAssistant: Traumatic Amputation</entityname.Manual_Traumatic_Amputation>
+	<entityname.Manual_Gangrene>MedAssistant: Gangrene</entityname.Manual_Gangrene>
+	<entityname.Manual_Surgical_Amputation>MedAssistant: Surgical Amputation</entityname.Manual_Surgical_Amputation>
+	<entityname.Manual_Plaster_Cast>MedAssistant: Plaster Cast</entityname.Manual_Plaster_Cast>
+	<entityname.Manual_Clamped_Bleeding>MedAssistant: Clamped Bleeding</entityname.Manual_Clamped_Bleeding>
+	
+	<!-- Bones -->
+	<entityname.Manual_Bones>MedAssistant: Bones</entityname.Manual_Bones>
+	
+	<entityname.Manual_Bone_Death>MedAssistant: Bone Death</entityname.Manual_Bone_Death>
+	<entityname.Manual_Bone_Damage>MedAssistant: Bone Damage</entityname.Manual_Bone_Damage>
+	<entityname.Manual_Fractures>MedAssistant: Fractures</entityname.Manual_Fractures>
+	<entityname.Manual_Dislocations>MedAssistant: Dislocations</entityname.Manual_Dislocations>
+	
+	<!-- Any Bodypart -->
+	<entityname.Manual_Any_Bodypart>MedAssistant: Any Bodypart</entityname.Manual_Any_Bodypart>
+	
+	<entityname.Manual_Arterial_Bleeding>MedAssistant: Arterial Bleeding</entityname.Manual_Arterial_Bleeding>
+	<entityname.Manual_Burns>MedAssistant: Burns</entityname.Manual_Burns>
+	<entityname.Manual_Internal_Damage>MedAssistant: Internal Damage</entityname.Manual_Internal_Damage> <!-- Perhaps combine into Internal Wounds -->
+	<!-- todo <entityname.Manual_Blunttrauma>MedAssistant: Blunt Force Trauma</entityname.Manual_Blunttrauma> -->
+	<entityname.Manual_Wounds>MedAssistant: Wounds</entityname.Manual_Wounds>
+	<entityname.Manual_Infected_Wounds>MedAssistant: Infected Wounds</entityname.Manual_Infected_Wounds>
+	<entityname.Manual_Foreign_Bodies>MedAssistant: Foreign Bodies</entityname.Manual_Foreign_Bodies>
+	<!-- todo <entityname.Manual_Bleeding>MedAssistant: Bleeding</entityname.Manual_Bleeding> -->
+	<entityname.Manual_Ointmented>MedAssistant: Ointmented</entityname.Manual_Ointmented>
+	<!-- todo <entityname.Manual_Chilled>MedAssistant: Chilled</entityname.Manual_Chilled> -->
+	<entityname.Manual_Bandaged>MedAssistant: Bandaged</entityname.Manual_Bandaged>
+	
+	<!-- Blood -->
+	<entityname.Manual_Blood>MedAssistant: Blood</entityname.Manual_Blood>
+	
+	<entityname.Manual_Hypoxemia>MedAssistant: Hypoxemia</entityname.Manual_Hypoxemia>
+	<entityname.Manual_Sepsis>MedAssistant: Sepsis</entityname.Manual_Sepsis>
+	<entityname.Manual_Hemotransfusion_Shock>MedAssistant: Hemotransfusion Shock</entityname.Manual_Hemotransfusion_Shock>
+	<entityname.Manual_Blood_Loss>MedAssistant: Blood Loss</entityname.Manual_Blood_Loss>
+	<entityname.Manual_Hypotension>MedAssistant: Hypotension</entityname.Manual_Hypotension>
+	<entityname.Manual_Hypertension>MedAssistant: Hypertension</entityname.Manual_Hypertension>
+	<entityname.Manual_Acidosis>MedAssistant: Acidosis</entityname.Manual_Acidosis>
+	<entityname.Manual_Alkalosis>MedAssistant: Alkalosis</entityname.Manual_Alkalosis>
+	<!-- todo <entityname.Manual_Immunity>MedAssistant: Immunity</entityname.Manual_Immunity> -->
+  
+	<!-- Base Neurotrauma: Items -->
+	<entityname.Manual_Items_Part_1>MedAssistant: Items Part 1</entityname.Manual_Items_Part_1>
+	<entityname.Manual_Items_Part_2>MedAssistant: Items Part 2</entityname.Manual_Items_Part_2>
+	<entityname.Manual_Items_Part_3>MedAssistant: Items Part 3</entityname.Manual_Items_Part_3>
+	<entityname.Manual_Items_Part_4>MedAssistant: Items Part 4</entityname.Manual_Items_Part_4>
+	
+	<!-- Organs -->
+	<!-- todo <entityname.Manual_Brain_Transplant>MedAssistant: Brain</entityname.Manual_Brain_Transplant> -->
+	<!-- todo <entityname.Manual_Heart_Transplant>MedAssistant: Heart</entityname.Manual_Heart_Transplant> -->
+	<!-- todo <entityname.Manual_Kidney_Transplant>MedAssistant: Kidney</entityname.Manual_Kidney_Transplant> -->
+	<!-- todo <entityname.Manual_Liver_Transplant>MedAssistant: Liver</entityname.Manual_Liver_Transplant> -->
+	<!-- todo <entityname.Manual_Lungs_Transplant>MedAssistant: Lungs</entityname.Manual_Lungs_Transplant> -->
+	
+	<!-- Others -->
+	<entityname.Manual_Adrenaline>MedAssistant: Adrenaline</entityname.Manual_Adrenaline>
+	<entityname.Manual_AED>MedAssistant: AED</entityname.Manual_AED>
+	<entityname.Manual_Alien_Blood>MedAssistant: Alien Blood</entityname.Manual_Alien_Blood>
+	<entityname.Manual_Ambubag>MedAssistant: Ambubag</entityname.Manual_Ambubag>
+	<entityname.Manual_Anaparalyzant>MedAssistant: Anaparalyzant</entityname.Manual_Anaparalyzant>
+	<entityname.Manual_Antibiotic_Glue>MedAssistant: Antibiotic Glue</entityname.Manual_Antibiotic_Glue>
+	<entityname.Manual_Antibiotic_Ointment>MedAssistant: Antibiotic Ointment</entityname.Manual_Antibiotic_Ointment>
+	<entityname.Manual_Antiseptic>MedAssistant: Antiseptic</entityname.Manual_Antiseptic>
+	<entityname.Manual_Antiseptic_Sprayer>MedAssistant: Antiseptic Sprayer</entityname.Manual_Antiseptic_Sprayer>
+	<!-- todo <entityname.Manual_Arm>MedAssistant: Arm</entityname.Manual_Arm> -->
+	<entityname.Manual_Autopulse>MedAssistant: Autopulse</entityname.Manual_Autopulse>
+	<entityname.Manual_Azathioprine>MedAssistant: Azathioprine</entityname.Manual_Azathioprine>
+	<entityname.Manual_Bandages>MedAssistant: Bandages</entityname.Manual_Bandages>
+	<entityname.Manual_Blood_Packs>MedAssistant: Blood Packs</entityname.Manual_Blood_Packs>
+	<entityname.Manual_Blue_Shark>MedAssistant: Blue Shark</entityname.Manual_Blue_Shark>
+	<entityname.Manual_Body_Bag>MedAssistant: Body Bag</entityname.Manual_Body_Bag>
+	<entityname.Manual_Broad-spectrum_Antibiotics>MedAssistant: Broad-spectrum Antibiotics</entityname.Manual_Broad-spectrum_Antibiotics>
+	<entityname.Manual_Combat_Stimulant>MedAssistant: Combat Stimulant</entityname.Manual_Combat_Stimulant>
+	<entityname.Manual_Deusizine>MedAssistant: Deusizine</entityname.Manual_Deusizine>
+	<entityname.Manual_Diving_Knife>MedAssistant: Diving Knife</entityname.Manual_Diving_Knife>
+	<entityname.Manual_Drainage>MedAssistant: Drainage</entityname.Manual_Drainage>
+	<entityname.Manual_Empty_Blood_Pack>MedAssistant: Empty Blood Pack</entityname.Manual_Empty_Blood_Pack>
+	<entityname.Manual_Endovascular_Balloon>MedAssistant: Endovascular Balloon</entityname.Manual_Endovascular_Balloon>
+	<entityname.Manual_Fentanyl>MedAssistant: Fentanyl</entityname.Manual_Fentanyl>
+	<entityname.Manual_Gypsum>MedAssistant: Gypsum</entityname.Manual_Gypsum>
+	<!-- todo <entityname.Manual_Haloperidol>MedAssistant: Haloperidol</entityname.Manual_Haloperidol> -->
+	<entityname.Manual_Health_Scanner>MedAssistant: Health Scanner</entityname.Manual_Health_Scanner>
+	<entityname.Manual_Hematology_Analyzer>MedAssistant: Hematology Analyzer</entityname.Manual_Hematology_Analyzer>
+	<entityname.Manual_Hemostat>MedAssistant: Hemostat</entityname.Manual_Hemostat>
+	<entityname.Manual_Hyperzine>MedAssistant: Hyperzine</entityname.Manual_Hyperzine>
+	<entityname.Manual_Liquid_Oxygenite>MedAssistant: Liquid Oxygenite</entityname.Manual_Liquid_Oxygenite>
+	<entityname.Manual_Mannitol>MedAssistant: Mannitol</entityname.Manual_Mannitol>
+	<entityname.Manual_Manual_Defibrillator>MedAssistant: Manual Defibrillator</entityname.Manual_Manual_Defibrillator>
+	<entityname.Manual_Medical_Stent>MedAssistant: Medical Stent</entityname.Manual_Medical_Stent>
+	<entityname.Manual_Methamphetamine>MedAssistant: Methamphetamine</entityname.Manual_Methamphetamine>
+	<entityname.Manual_Morphine>MedAssistant: Morphine</entityname.Manual_Morphine>
+	<entityname.Manual_Naloxone>MedAssistant: Naloxone</entityname.Manual_Naloxone>
+	<entityname.Manual_Needle>MedAssistant: Needle</entityname.Manual_Needle>
+	<entityname.Manual_Nitroglycerin>MedAssistant: Nitroglycerin</entityname.Manual_Nitroglycerin>
+	<entityname.Manual_Opium>MedAssistant: Opium</entityname.Manual_Opium>
+	<!-- todo <entityname.Manual_Multipurpose_Scalpel>MedAssistant: Multipurpose Scalpel</entityname.Manual_Multipurpose_Scalpel> -->
+	<entityname.Manual_Organ_Procurement_Scalpels>MedAssistant: Organ Procurement Scalpels</entityname.Manual_Organ_Procurement_Scalpels>
+	<entityname.Manual_Osteosynthesis_Implants>MedAssistant: Osteosynthesis Implants</entityname.Manual_Osteosynthesis_Implants>
+	<entityname.Manual_Plastiseal>MedAssistant: Plastiseal</entityname.Manual_Plastiseal>
+	<entityname.Manual_Propofol>MedAssistant: Propofol</entityname.Manual_Propofol>
+	<entityname.Manual_Raptor_Bane_Extract>MedAssistant: Raptor Bane Extract</entityname.Manual_Raptor_Bane_Extract>
+	<entityname.Manual_Scalpel>MedAssistant: Scalpel</entityname.Manual_Scalpel>
+	<entityname.Manual_Retractors>MedAssistant: Skin Retractors</entityname.Manual_Retractors>
+	<entityname.Manual_Ringer_Solution>MedAssistant: Ringer's Solution</entityname.Manual_Ringer_Solution>
+	<!-- todo <entityname.Manual_Refrigerated_Containers>MedAssistant: Refrigerated Containers</entityname.Manual_Refrigerated_Containers> both crate and handheld container?-->
+	<entityname.Manual_Saline>MedAssistant: Saline</entityname.Manual_Saline>
+	<entityname.Manual_Sodium_Nitroprusside>MedAssistant: Sodium Nitroprusside</entityname.Manual_Sodium_Nitroprusside>
+	<entityname.Manual_Spinal_Cord_Implants>MedAssistant: Spinal Cord Implants</entityname.Manual_Spinal_Cord_Implants>
+	<entityname.Manual_Stasis_Bag>MedAssistant: Stasis Bag</entityname.Manual_Stasis_Bag>
+	<entityname.Manual_Streptokinase>MedAssistant: Streptokinase</entityname.Manual_Streptokinase>
+	<entityname.Manual_Surgery_Table>MedAssistant: Surgery Table</entityname.Manual_Surgery_Table>
+	<entityname.Manual_Surgical_Drill>MedAssistant: Surgical Drill</entityname.Manual_Surgical_Drill>
+	<entityname.Manual_Surgical_Saw>MedAssistant: Surgical Saw</entityname.Manual_Surgical_Saw>
+	<entityname.Manual_Sutures>MedAssistant: Sutures</entityname.Manual_Sutures>
+	<entityname.Manual_Thiamine>MedAssistant: Thiamine</entityname.Manual_Thiamine>
+	<entityname.Manual_Tourniquet>MedAssistant: Tourniquet</entityname.Manual_Tourniquet>
+	<entityname.Manual_Trauma_Shears>MedAssistant: Trauma Shears</entityname.Manual_Trauma_Shears>
+	<entityname.Manual_Tweezers>MedAssistant: Tweezers</entityname.Manual_Tweezers>
+	<entityname.Manual_Wrench>MedAssistant: Wrench</entityname.Manual_Wrench>
+	
+	<!-- Base Neurotrauma: Surgical Afflictions -->
+	<entityname.Manual_Traumatic_Shock>MedAssistant: Traumatic Shock</entityname.Manual_Traumatic_Shock>
+	<entityname.Manual_Surgery_Incision>MedAssistant: Surgery Incision</entityname.Manual_Surgery_Incision>
+	<entityname.Manual_Clamped_Bleeding>MedAssistant: Clamped Bleeding</entityname.Manual_Clamped_Bleeding>
+	<entityname.Manual_Retracted_Skin>MedAssistant: Retracted Skin</entityname.Manual_Retracted_Skin>
+	<entityname.Manual_Drilled_Bones>MedAssistant: Drilled Bones</entityname.Manual_Drilled_Bones>
+	<entityname.Manual_Sawed_Bones>MedAssistant: Sawed Bones</entityname.Manual_Sawed_Bones>
+	
+	<!-- Base Neurotrauma: Surgical Procedures -->
+	<entityname.Manual_Surgery>MedAssistant: Surgery</entityname.Manual_Surgery>
+	<entityname.Manual_Procedures>MedAssistant: Procedures</entityname.Manual_Procedures>
+	
+	<entityname.Manual_Open_Close_Surgery>MedAssistant: Open Close Surgery</entityname.Manual_Open_Close_Surgery>
+	<entityname.Manual_Osteosynthetic_Surgery>MedAssistant: Osteosynthetic Surgery</entityname.Manual_Osteosynthetic_Surgery>
+	<entityname.Manual_Aortic_Rupture_Surgery>MedAssistant: Aortic Rupture Surgery</entityname.Manual_Aortic_Rupture_Surgery>
+	<entityname.Manual_Amputation_Surgery>MedAssistant: Amputation Surgery</entityname.Manual_Amputation_Surgery>
+	<entityname.Manual_Organ_Transplant_Surgery>MedAssistant: Organ Transplant Surgery</entityname.Manual_Organ_Transplant_Surgery>
+	
+	<!-- Neurotrauma Expansions: -->
+	<entityname.Manual_Expansion>MedAssistant: Expansion</entityname.Manual_Expansion>
+	
+	<!-- Expanded Surgery -->
+	<!-- Expanded Surgery: Items-->
+	<entityname.Manual_Surgical_Drapes>MedAssistant: Surgical Drapes</entityname.Manual_Surgical_Drapes>
+	<entityname.Manual_Surgical_Mask>MedAssistant: Surgical Mask</entityname.Manual_Surgical_Mask>
+	<entityname.Manual_Surgeon_Clothes>MedAssistant: Surgeon Clothes</entityname.Manual_Surgeon_Clothes>
+	<entityname.Manual_Mannitol_Plus>MedAssistant: Mannitol Plus</entityname.Manual_Mannitol_Plus>
+	<entityname.Manual_Experimental_Treatment>MedAssistant: Experimental Treatment</entityname.Manual_Experimental_Treatment>
+	<entityname.Manual_Triage_Card>MedAssistant: Triage Card</entityname.Manual_Triage_Card>
+	<entityname.Manual_Brain_Jar>MedAssistant: Brain Jar</entityname.Manual_Brain_Jar>
+	<entityname.Manual_Artificial_Brain>MedAssistant: Artificial Brain</entityname.Manual_Artificial_Brain>
+	<entityname.Manual_Medical_Misconduct>MedAssistant: Medical Misconduct</entityname.Manual_Medical_Misconduct>
+	
+	<!-- Expanded Surgery: Afflictions -->
+	<entityname.Manual_Surgical_Infection>MedAssistant: Surgical Infection</entityname.Manual_Surgical_Infection>
+  
+	<!-- Cybernetics Expanded -->
+	<!-- Cybernetics Expanded: Items -->
+	<entityname.Manual_Cybernetic_Arm>MedAssistant: Cybernetic Arm</entityname.Manual_Cybernetic_Arm>
+	<entityname.Manual_Cybernetic_Leg>MedAssistant: Cybernetic Leg</entityname.Manual_Cybernetic_Leg>
+	<entityname.Manual_Cyberarm>MedAssistant: Cyberarm</entityname.Manual_Cyberarm>
+	<entityname.Manual_Cyberleg>MedAssistant: Cyberleg</entityname.Manual_Cyberleg>
+	
+	<!-- Cybernetics Expanded: Afflictions -->
+	<entityname.Manual_Damaged_Electronics>MedAssistant: Damaged Electronics</entityname.Manual_Damaged_Electronics>
+	<entityname.Manual_Bent_Metal>MedAssistant: Bent Metal</entityname.Manual_Bent_Metal>
+	<entityname.Manual_Loose_Screws>MedAssistant: Loose Screws</entityname.Manual_Loose_Screws>
+	<entityname.Manual_Material_Loss>MedAssistant: Material Loss</entityname.Manual_Material_Loss>
+	
+	<!-- Cybernetics Expanded: Surgical Procedures -->
+	<entityname.Manual_FPGA_Circuit>MedAssistant: FPGA Circuit</entityname.Manual_FPGA_Circuit>
+	<entityname.Manual_Welding_Tool>MedAssistant: Welding Tool</entityname.Manual_Welding_Tool>
+	<entityname.Manual_Screwdriver>MedAssistant: Screwdriver</entityname.Manual_Screwdriver>
+	<entityname.Manual_Steel_Bar>MedAssistant: Steel Bar</entityname.Manual_Steel_Bar>
+  
+	<!-- Page Buttons -->
+	<!-- Base Neurotrauma: General Information Buttons -->
+	<Manual_Button_FAQ>FAQ</Manual_Button_FAQ>
+	<Manual_Button_Med_Kit_Recommendations>Med Kit Recommendations</Manual_Button_Med_Kit_Recommendations>
+	<Manual_Button_How_To_Diagnose>How To Diagnose</Manual_Button_How_To_Diagnose>
+	<Manual_Button_Order_of_Treatments>Order of Treatments</Manual_Button_Order_of_Treatments>
+	<Manual_Button_The_5_Commandments_of_Neurotrauma>The 5 Commandments of Neurotrauma</Manual_Button_The_5_Commandments_of_Neurotrauma>
+	
+	<!-- Base Neurotrauma: Symptoms Buttons -->
+	<Manual_Button_Symptoms>Symptoms</Manual_Button_Symptoms>
+	
+	<Manual_Button_Vomiting_Blood>Vomiting Blood</Manual_Button_Vomiting_Blood>
+	<Manual_Button_Pale_Skin>Pale Skin</Manual_Button_Pale_Skin>
+	<Manual_Button_Shortness_of_Breath>Shortness of Breath</Manual_Button_Shortness_of_Breath>
+	<Manual_Button_Cough>Cough</Manual_Button_Cough>
+	<Manual_Button_Increased_Heartrate>Increased Heartrate</Manual_Button_Increased_Heartrate>
+	<Manual_Button_Confusion>Confusion</Manual_Button_Confusion>
+	<Manual_Button_Lightheadedness>Lightheadedness</Manual_Button_Lightheadedness>
+	<Manual_Button_Blurred_Vision>Blurred Vision</Manual_Button_Blurred_Vision>
+	<Manual_Button_Leg_Swelling>Leg Swelling</Manual_Button_Leg_Swelling>
+	<Manual_Button_Wheezing>Wheezing</Manual_Button_Wheezing>
+	<Manual_Button_Weakness>Weakness</Manual_Button_Weakness>
+	<Manual_Button_Fever>Fever</Manual_Button_Fever>
+	<Manual_Button_Sweating>Sweating</Manual_Button_Sweating>
+	<Manual_Button_Bloating>Bloating</Manual_Button_Bloating>
+	<Manual_Button_Inflammation>Inflammation</Manual_Button_Inflammation>
+	<Manual_Button_Jaundice>Jaundice</Manual_Button_Jaundice>
+	<Manual_Button_Abdominal_Discomfort>Abdominal Discomfort</Manual_Button_Abdominal_Discomfort>
+	<Manual_Button_Headache>Headache</Manual_Button_Headache>
+	<Manual_Button_Craving>Craving</Manual_Button_Craving>
+	<Manual_Button_Palpitations>Palpitations</Manual_Button_Palpitations>
+	<Manual_Button_Spasms>Spasms</Manual_Button_Spasms>
+	<Manual_Button_Abdominal_Pain>Abdominal Pain</Manual_Button_Abdominal_Pain>
+	<Manual_Button_Vomiting>Vomiting</Manual_Button_Vomiting>
+	<Manual_Button_Nausea>Nausea</Manual_Button_Nausea>
+	<Manual_Button_Chest_Pain>Chest Pain</Manual_Button_Chest_Pain>
+	<Manual_Button_Intense_Pain>Intense Pain</Manual_Button_Intense_Pain>
+	
+	<!-- Base Neurotrauma: Other Afflictions -->
+	<!-- Head & Brain Buttons -->
+	<Manual_Button_HeadBrain>HeadBrain</Manual_Button_HeadBrain>
+	
+	<Manual_Button_Neurotrauma>Neurotrauma</Manual_Button_Neurotrauma>
+	<Manual_Button_Stroke>Stroke</Manual_Button_Stroke>
+	<Manual_Button_Withdrawal>Withdrawal</Manual_Button_Withdrawal>
+	<Manual_Button_Opiate_Overdose>Opiate Overdose</Manual_Button_Opiate_Overdose>
+	<Manual_Button_Seizure>Seizure</Manual_Button_Seizure>
+	<Manual_Button_Unconsciousness>Unconsciousness</Manual_Button_Unconsciousness>
+	<Manual_Button_Coma>Coma</Manual_Button_Coma>
+	<Manual_Button_Spinal_Cord_Injury>Spinal Cord Injury</Manual_Button_Spinal_Cord_Injury>
+	<Manual_Button_Concussion>Concussion</Manual_Button_Concussion>
+	<!-- todo <Manual_Button_Drunk>Drunk</Manual_Button_Drunk> -->
+	
+	<!-- Lungs Buttons -->
+	<Manual_Button_Lungs>Lungs</Manual_Button_Lungs>
+	
+	<Manual_Button_Respiratory_Arrest>Respiratory Arrest</Manual_Button_Respiratory_Arrest>
+	<Manual_Button_Lung_Damage>Lung Damage</Manual_Button_Lung_Damage>
+	<Manual_Button_Pneumothorax>Pneumothorax</Manual_Button_Pneumothorax>
+	<Manual_Button_Hyperventilation>Hyperventilation</Manual_Button_Hyperventilation>
+	<Manual_Button_Hypoventilation>Hypoventilation</Manual_Button_Hypoventilation>
+	<Manual_Button_Oxygen_Low>Oxygen Low</Manual_Button_Oxygen_Low>
+	
+	<!-- Heart Buttons -->
+	<Manual_Button_Heart>Heart</Manual_Button_Heart>
+	
+	<Manual_Button_Cardiac_Tamponade>Cardiac Tamponade</Manual_Button_Cardiac_Tamponade>
+	<Manual_Button_Cardiac_Arrest>Cardiac Arrest</Manual_Button_Cardiac_Arrest>
+	<Manual_Button_Heart_Attack>Heart Attack</Manual_Button_Heart_Attack>
+	<Manual_Button_Heart_Damage>Heart Damage</Manual_Button_Heart_Damage>
+	<Manual_Button_Irregular_Heartbeat>Irregular Heartbeat</Manual_Button_Irregular_Heartbeat>
+	<Manual_Button_Fibrillation>Fibrillation</Manual_Button_Fibrillation>
+	
+	<!-- Torso Buttons -->
+	<Manual_Button_Torso>Torso</Manual_Button_Torso>
+	
+	<Manual_Button_Aortic_Rupture>Aortic Rupture</Manual_Button_Aortic_Rupture>
+	<Manual_Button_Internal_Bleeding>Internal Bleeding</Manual_Button_Internal_Bleeding>
+	<Manual_Button_Radiation_Sickness>Radiation Sickness</Manual_Button_Radiation_Sickness>
+	<Manual_Button_Kidney_Damage>Kidney Damage</Manual_Button_Kidney_Damage>
+	<Manual_Button_Liver_Damage>Liver Damage</Manual_Button_Liver_Damage>
+	<Manual_Button_Morbusine>Morbusine</Manual_Button_Morbusine> <!-- todo fix wording? -->
+	<Manual_Button_Cyanide_Poisoning>Cyanide Poisoning</Manual_Button_Cyanide_Poisoning>
+	<!-- todo <entityname.Manual_Sufforin_Poisoning>Sufforin Poisoning</entityname.Manual_Sufforin_Poisoning> -->
+	<Manual_Button_Vanilla_Organ_Damage>Vanilla Organ Damage</Manual_Button_Vanilla_Organ_Damage>
+	<Manual_Button_Analgesia>Analgesia</Manual_Button_Analgesia>
+	<Manual_Button_Anesthesia>Anesthesia</Manual_Button_Anesthesia>
+	
+	<!-- Extremities Buttons -->
+	<Manual_Button_Extremities>Extremities</Manual_Button_Extremities>
+	
+	<Manual_Button_Traumatic_Amputation>Traumatic Amputation</Manual_Button_Traumatic_Amputation>
+	<Manual_Button_Gangrene>Gangrene</Manual_Button_Gangrene>
+	<Manual_Button_Surgical_Amputation>Surgical Amputation</Manual_Button_Surgical_Amputation>
+	<Manual_Button_Plaster_Cast>Plaster Cast</Manual_Button_Plaster_Cast>
+	<Manual_Button_Clamped_Bleeding>Clamped Bleeding</Manual_Button_Clamped_Bleeding> <!-- note: 2 clamped bleedings exist. hemostat and tourniquet. -->
+	
+	<!-- Bones Buttons -->
+	<Manual_Button_Bones>Bones</Manual_Button_Bones>
+	
+	<Manual_Button_Bone_Death>Bone Death</Manual_Button_Bone_Death>
+	<Manual_Button_Bone_Damage>Bone Damage</Manual_Button_Bone_Damage>
+	<Manual_Button_Fractures>Fractures</Manual_Button_Fractures>
+	<Manual_Button_Dislocations>Dislocations</Manual_Button_Dislocations>
+	
+	<!-- Any Bodypart Buttons -->
+	<Manual_Button_Any_Bodypart>Any Bodypart</Manual_Button_Any_Bodypart>
+	
+	<Manual_Button_Arterial_Bleeding>Arterial Bleeding</Manual_Button_Arterial_Bleeding>
+	<Manual_Button_Internal_Damage>Internal Damage</Manual_Button_Internal_Damage>
+	<Manual_Button_Burns>Burns</Manual_Button_Burns>
+	<Manual_Button_Infected_Wounds>Infected Wounds</Manual_Button_Infected_Wounds>
+	<Manual_Button_Foreign_Bodies>Foreign Bodies</Manual_Button_Foreign_Bodies>
+	<Manual_Button_Wounds>Wounds</Manual_Button_Wounds>
+	<Manual_Button_Ointmented>Ointmented</Manual_Button_Ointmented>
+	<Manual_Button_Bandaged>Bandaged</Manual_Button_Bandaged>
+	<!-- todo <Manual_Blunttrauma>Blunt Force Trauma</Manual_Blunttrauma> -->
+	<!-- todo <Manual_Bleeding>Bleeding</Manual_Bleeding> -->
+	<!-- todo <Manual_Chilled>Chilled</Manual_Chilled> -->
+	
+	<!-- Blood Buttons -->
+	<Manual_Button_Blood>Blood</Manual_Button_Blood>
+	
+	<Manual_Button_Hypoxemia>Hypoxemia</Manual_Button_Hypoxemia>
+	<Manual_Button_Sepsis>Sepsis</Manual_Button_Sepsis>
+	<Manual_Button_Hemotransfusion_Shock>Hemotransfusion Shock</Manual_Button_Hemotransfusion_Shock>
+	<Manual_Button_Blood_Loss>Blood Loss</Manual_Button_Blood_Loss>
+	<Manual_Button_Hypotension>Hypotension</Manual_Button_Hypotension>
+	<Manual_Button_Hypertension>Hypertension</Manual_Button_Hypertension>
+	<Manual_Button_Acidosis>Acidosis</Manual_Button_Acidosis>
+	<Manual_Button_Alkalosis>Alkalosis</Manual_Button_Alkalosis>
+	<!-- todo <Manual_Immunity>MedAssistant: Immunity</Manual_Immunity> -->
+	
+	<!-- Base Neurotrauma: Item Buttons -->
+	<Manual_Button_Items_Part_1>Items Part 1</Manual_Button_Items_Part_1>
+	<Manual_Button_Items_Part_2>Items Part 2</Manual_Button_Items_Part_2>
+	<Manual_Button_Items_Part_3>Items Part 3</Manual_Button_Items_Part_3>
+	<Manual_Button_Items_Part_4>Items Part 4</Manual_Button_Items_Part_4>
+	
+	<Manual_Button_Adrenaline>Adrenaline</Manual_Button_Adrenaline>
+	<Manual_Button_AED>AED</Manual_Button_AED>
+	<Manual_Button_Alien_Blood>Alien Blood</Manual_Button_Alien_Blood>
+	<Manual_Button_Ambubag>Ambubag</Manual_Button_Ambubag>
+	<Manual_Button_Anaparalyzant>Anaparalyzant</Manual_Button_Anaparalyzant>
+	<Manual_Button_Antibiotic_Glue>Antibiotic Glue</Manual_Button_Antibiotic_Glue>
+	<Manual_Button_Antibiotic_Ointment>Antibiotic Ointment</Manual_Button_Antibiotic_Ointment>
+	<Manual_Button_Antiseptic>Antiseptic</Manual_Button_Antiseptic>
+	<Manual_Button_Antiseptic_Sprayer>Antiseptic Sprayer</Manual_Button_Antiseptic_Sprayer>
+	<Manual_Button_Autopulse>Autopulse</Manual_Button_Autopulse>
+	<Manual_Button_Azathioprine>Azathioprine</Manual_Button_Azathioprine>
+	<Manual_Button_Bandages>Bandages</Manual_Button_Bandages>
+	<Manual_Button_Blood_Packs>Blood Packs</Manual_Button_Blood_Packs>
+	<Manual_Button_Blue_Shark>Blue Shark</Manual_Button_Blue_Shark>
+	<Manual_Button_Body_Bag>Body Bag</Manual_Button_Body_Bag>
+	<Manual_Button_Broad-spectrum_Antibiotics>Broad-spectrum Antibiotics</Manual_Button_Broad-spectrum_Antibiotics>
+	<Manual_Button_Combat_Stimulant>Combat Stimulant</Manual_Button_Combat_Stimulant>
+	<Manual_Button_Deusizine>Deusizine</Manual_Button_Deusizine>
+	<Manual_Button_Diving_Knife>Diving Knife</Manual_Button_Diving_Knife>
+	<Manual_Button_Drainage>Drainage</Manual_Button_Drainage>
+	<Manual_Button_Empty_Blood_Pack>Empty Blood Pack</Manual_Button_Empty_Blood_Pack>
+	<Manual_Button_Endovascular_Balloon>Endovascular Balloon</Manual_Button_Endovascular_Balloon>
+	<Manual_Button_Fentanyl>Fentanyl</Manual_Button_Fentanyl>
+	<Manual_Button_Gypsum>Gypsum</Manual_Button_Gypsum>
+	<Manual_Button_Health_Scanner>Health Scanner</Manual_Button_Health_Scanner>
+	<Manual_Button_Hematology_Analyzer>Hematology Analyzer</Manual_Button_Hematology_Analyzer>
+	<Manual_Button_Hemostat>Hemostat</Manual_Button_Hemostat>
+	<Manual_Button_Hyperzine>Hyperzine</Manual_Button_Hyperzine>
+	<Manual_Button_Liquid_Oxygenite>Liquid Oxygenite</Manual_Button_Liquid_Oxygenite>
+	<Manual_Button_Mannitol>Mannitol</Manual_Button_Mannitol>
+	<Manual_Button_Manual_Defibrillator>Manual Defibrillator</Manual_Button_Manual_Defibrillator>
+	<Manual_Button_Medical_Stent>Medical Stent</Manual_Button_Medical_Stent>
+	<Manual_Button_Methamphetamine>Methamphetamine</Manual_Button_Methamphetamine>
+	<Manual_Button_Morphine>Morphine</Manual_Button_Morphine>
+	<Manual_Button_Naloxone>Naloxone</Manual_Button_Naloxone>
+	<Manual_Button_Needle>Needle</Manual_Button_Needle>
+	<Manual_Button_Nitroglycerin>Nitroglycerin</Manual_Button_Nitroglycerin>
+	<Manual_Button_Opium>Opium</Manual_Button_Opium>
+	<Manual_Button_Organ_Procurement_Scalpels>Organ Procurement Scalpels</Manual_Button_Organ_Procurement_Scalpels>
+	<Manual_Button_Osteosynthesis_Implants>Osteosynthesis Implants</Manual_Button_Osteosynthesis_Implants>
+	<Manual_Button_Plastiseal>Plastiseal</Manual_Button_Plastiseal>
+	<Manual_Button_Propofol>Propofol</Manual_Button_Propofol>
+	<Manual_Button_Raptor_Bane_Extract>Raptor Bane Extract</Manual_Button_Raptor_Bane_Extract>
+	<Manual_Button_Retractors>Retractors</Manual_Button_Retractors>
+	<Manual_Button_Ringer_Solution>Ringer's Solution</Manual_Button_Ringer_Solution>
+	<Manual_Button_Saline>Saline</Manual_Button_Saline>
+	<Manual_Button_Scalpel>Scalpel</Manual_Button_Scalpel>
+	<Manual_Button_Sodium_Nitroprusside>Sodium Nitroprusside</Manual_Button_Sodium_Nitroprusside>
+	<Manual_Button_Spinal_Cord_Implants>Spinal Cord Implants</Manual_Button_Spinal_Cord_Implants>
+	<Manual_Button_Stasis_Bag>Stasis Bag</Manual_Button_Stasis_Bag>
+	<Manual_Button_Streptokinase>Streptokinase</Manual_Button_Streptokinase>
+	<Manual_Button_Surgery_Table>Surgery Table</Manual_Button_Surgery_Table>
+	<Manual_Button_Surgical_Drill>Surgical Drill</Manual_Button_Surgical_Drill>
+	<Manual_Button_Surgical_Saw>Surgical Saw</Manual_Button_Surgical_Saw>
+	<Manual_Button_Sutures>Sutures</Manual_Button_Sutures>
+	<Manual_Button_Thiamine>Thiamine</Manual_Button_Thiamine>
+	<Manual_Button_Tourniquet>Tourniquet</Manual_Button_Tourniquet>
+	<Manual_Button_Trauma_Shears>Trauma Shears</Manual_Button_Trauma_Shears>
+	<Manual_Button_Tweezers>Tweezers</Manual_Button_Tweezers>
+	<Manual_Button_Wrench>Wrench</Manual_Button_Wrench>
+	<!-- todo <Manual_Arm>Arm</entityname.Manual_Arm> -->
+	<!-- todo <Manual_Haloperidol>Haloperidol</Manual_Haloperidol> -->
+	<!-- todo <Manual_Multipurpose_Scalpel>Multipurpose Scalpel</Manual_Multipurpose_Scalpel> -->
+	<!-- todo <Manual_Refrigerated_Containers>Refrigerated Containers</Manual_Refrigerated_Containers> both crate and handheld container?-->
+	
+	<!-- Base Neurotrauma: Surgery Afflictions Buttons -->
+	<Manual_Button_Traumatic_Shock>Traumatic Shock</Manual_Button_Traumatic_Shock>
+	<Manual_Button_Surgery_Incision>Surgery Incision</Manual_Button_Surgery_Incision>
+	<Manual_Button_Clamped_Bleeding>Clamped Bleeding</Manual_Button_Clamped_Bleeding>
+	<Manual_Button_Retracted_Skin>Retracted Skin</Manual_Button_Retracted_Skin>
+	<Manual_Button_Drilled_Bones>Drilled Bones</Manual_Button_Drilled_Bones>
+	<Manual_Button_Sawed_Bones>Sawed Bones</Manual_Button_Sawed_Bones>
+	
+	<!-- Base Neurotrauma: Surgical Procedure Buttons -->
+	<Manual_Button_Surgery>Surgery</Manual_Button_Surgery>
+	<Manual_Button_Procedures>Procedures</Manual_Button_Procedures>
+	
+	<Manual_Button_Open_Close_Surgery>Open Close Surgery</Manual_Button_Open_Close_Surgery>
+	<Manual_Button_Osteosynthetic_Surgery>Osteosynthetic Surgery</Manual_Button_Osteosynthetic_Surgery>
+	<Manual_Button_Aortic_Rupture_Surgery>Aortic Rupture Surgery</Manual_Button_Aortic_Rupture_Surgery>
+	<Manual_Button_Amputation_Surgery>Amputation Surgery</Manual_Button_Amputation_Surgery>
+	<Manual_Button_Organ_Transplant_Surgery>Organ Transplant Surgery</Manual_Button_Organ_Transplant_Surgery>
+	
+	<!-- Neurotrauma Expansions Buttons -->
+	<Manual_Button_Expansion>Expansion</Manual_Button_Expansion>
+	
+	<!-- Expanded Surgery Buttons -->
+	<!-- Expanded Surgery Item Buttons -->
+	<Manual_Button_Surgical_Drapes>Surgical Drapes</Manual_Button_Surgical_Drapes>
+	<Manual_Button_Surgical_Mask>Surgical Mask</Manual_Button_Surgical_Mask>
+	<Manual_Button_Surgeon_Clothes>Surgeon Clothes</Manual_Button_Surgeon_Clothes>
+	<Manual_Button_Mannitol_Plus>Mannitol Plus</Manual_Button_Mannitol_Plus>
+	<Manual_Button_Experimental_Treatment>Experimental Treatment</Manual_Button_Experimental_Treatment>
+	<Manual_Button_Triage_Card>Triage Card</Manual_Button_Triage_Card>
+	<Manual_Button_Brain_Jar>Brain Jar</Manual_Button_Brain_Jar>
+	<Manual_Button_Artificial_Brain>Artificial Brain</Manual_Button_Artificial_Brain>
+	<Manual_Button_Medical_Misconduct>Medical Misconduct</Manual_Button_Medical_Misconduct>
+	
+	<!-- Expanded Surgery Affliction Buttons -->
+	<Manual_Button_Surgical_Infection>Surgical Infection</Manual_Button_Surgical_Infection>
+	
+	<!-- Cybernetics Expanded Buttons -->
+	<!-- Cybernetics Expanded Item Buttons -->
+	<Manual_Button_Cybernetic_Arm>Cybernetic Arm</Manual_Button_Cybernetic_Arm>
+	<Manual_Button_Cybernetic_Leg>Cybernetic Leg</Manual_Button_Cybernetic_Leg>
+	<Manual_Button_Cyberarm>Cyberarm</Manual_Button_Cyberarm>
+	<Manual_Button_Cyberleg>Cyberleg</Manual_Button_Cyberleg>
+	
+	<!-- Cybernetics Expanded Affliction Buttons -->
+	<Manual_Button_Damaged_Electronics>Damaged Electronics</Manual_Button_Damaged_Electronics>
+	<Manual_Button_Bent_Metal>Bent Metal</Manual_Button_Bent_Metal>
+	<Manual_Button_Loose_Screws>Loose Screws</Manual_Button_Loose_Screws>
+	<Manual_Button_Material_Loss>Material Loss</Manual_Button_Material_Loss>
+	<Manual_Button_FPGA_Circuit>FPGA Circuit</Manual_Button_FPGA_Circuit>
+	<Manual_Button_Welding_Tool>Welding Tool</Manual_Button_Welding_Tool>
+	<Manual_Button_Screwdriver>Screwdriver</Manual_Button_Screwdriver>
+	<Manual_Button_Steel_Bar>Steel Bar</Manual_Button_Steel_Bar>
+	<Manual_Button_Information>Information</Manual_Button_Information>
+
 </infotexts>
