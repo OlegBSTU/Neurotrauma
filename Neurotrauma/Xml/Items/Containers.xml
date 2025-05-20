@@ -319,7 +319,7 @@
             
             <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
             
-            <StatusEffect tags="stasis" type="OnWearing" target="Character" duration="1" stackable="false" />
+            <StatusEffect settags="stasis" type="OnWearing" target="Character" duration="1" stackable="false" />
             
             <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
                 <!--<Affliction identifier="givein" amount="10" />-->

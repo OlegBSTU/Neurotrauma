@@ -38,20 +38,20 @@
       <RequiredSkill identifier="medical" level="38" />
       <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
+      <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="1">
         <Conditional huskinfection="lt 100.0" />
         <Affliction identifier="af_calyxanide" amount="100" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
+      <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="1">
         <Conditional huskinfection="lt 100.0" />
         <Affliction identifier="af_calyxanide" amount="100" />
       </StatusEffect>
       <!-- Injecting a still-conscious Husk will only piss it off and kill the "conscious" faster -->
-      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
+      <StatusEffect statuseffecttags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
         <Conditional huskinfection="eq 100.0" />
         <Affliction identifier="organdamage" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0" comparison="or">
+      <StatusEffect statuseffecttags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0" comparison="or">
         <Conditional IsHusk="true" />
         <Affliction identifier="organdamage" amount="4" />
       </StatusEffect>

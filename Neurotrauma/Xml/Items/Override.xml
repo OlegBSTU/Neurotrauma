@@ -170,14 +170,14 @@
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
 
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget, This" duration="15.0">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget, This" duration="15.0">
                     <Affliction identifier="organdamage" amount="0.25"/>
                     <Affliction identifier="hemotransfusionshock" amount="6.6"/>
                     <ReduceAffliction identifier="bloodloss" amount="0.5"/>
                     <Affliction identifier="psychosis" amount="3" />
                 </StatusEffect>
 
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget, This" duration="15.0">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget, This" duration="15.0">
                     <Affliction identifier="organdamage" amount="0.5"/>
                     <Affliction identifier="hemotransfusionshock" amount="6.6"/>
                     <ReduceAffliction identifier="bloodloss" amount="0.5"/>
@@ -220,13 +220,13 @@
 
             <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
                 <RequiredSkill identifier="medical" level="10"/>
-                <StatusEffect tags="medical" type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget, This" duration="10">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget, This" duration="10">
                     <Affliction identifier="afsaline" amount="5"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget, This" duration="10">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget, This" duration="10">
                     <Affliction identifier="afsaline" amount="3"/>
                 </StatusEffect>
                 <StatusEffect type="OnBroken" target="This">
@@ -593,24 +593,24 @@
                 <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
                     <Affliction identifier="analgesia" amount="1.1"/>
                     <Affliction identifier="opiateaddiction" amount="1"/>
                     <Affliction identifier="opiateoverdose" amount="1"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="1.4"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="0.8"/>
                     <Affliction identifier="opiateoverdose" amount="1"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
                     <Affliction identifier="analgesia" amount="0.7"/>
                     <Affliction identifier="opiateoverdose" amount="1.5"/>
                     <Affliction identifier="opiateaddiction" amount="1.75"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="1.4"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="0.4"/>
                     <Affliction identifier="opiateoverdose" amount="1.5"/>
@@ -665,24 +665,24 @@
                 <RequiredSkill identifier="medical" level="50"/>
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20">
                     <Affliction identifier="analgesia" amount="2.8"/>
                     <Affliction identifier="opiateaddiction" amount="1.0"/>
                     <Affliction identifier="opiateoverdose" amount="1.0"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="3.75"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="2.5"/>
                     <Affliction identifier="opiateoverdose" amount="1.0"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20">
                     <Affliction identifier="analgesia" amount="1.8"/>
                     <Affliction identifier="opiateaddiction" amount="2.0"/>
                     <Affliction identifier="opiateoverdose" amount="1.5"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="3.75"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="1.5"/>
                     <Affliction identifier="opiateoverdose" amount="1.5"/>
@@ -745,29 +745,29 @@
                 <RequiredSkill identifier="medical" level="72"/>
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="5">
                     <Affliction identifier="analgesia" amount="15"/>
                     <Affliction identifier="opiateoverdose" amount="5"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="5">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="15"/>
                     <Affliction identifier="opiateoverdose" amount="5"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="25">
                     <Affliction identifier="opiateaddiction" amount="1"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="4"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="5">
                     <Affliction identifier="analgesia" amount="10"/>
                     <Affliction identifier="opiateoverdose" amount="8"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="5">
                     <Conditional drunk="gt 30" />
                     <Affliction identifier="analgesia" amount="10"/>
                     <Affliction identifier="opiateoverdose" amount="8"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="25">
                     <Affliction identifier="opiateaddiction" amount="1"/>
                     <ReduceAffliction identifier="opiatewithdrawal" amount="4"/>
                 </StatusEffect>
@@ -823,13 +823,13 @@
                 <RequiredSkill identifier="medical" level="39"/>
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
                     <ReduceAffliction identifier="opiatewithdrawal" amount="2.0" />
                     <ReduceAffliction identifier="opiateoverdose" amount="2.0" />
                     <ReduceAffliction identifier="opiateaddiction" amount="2.0" />
                     <ReduceAffliction identifier="analgesia" amount="2.0" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="30.0">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="30.0">
                     <ReduceAffliction identifier="opiatewithdrawal" amount="1.0" />
                     <ReduceAffliction identifier="opiateoverdose" amount="1.0" />
                     <ReduceAffliction identifier="opiateaddiction" amount="1.0" />
@@ -884,14 +884,14 @@
                 <RequiredSkill identifier="medical" level="25"/>
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="10.0">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="10.0">
                     <Affliction identifier="afantibiotics" amount="5"/>
                     <Affliction identifier="bloodpressure" amount="2"/>
                 </StatusEffect>
                 <StatusEffect type="OnSuccess" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="huskinfectionresistance" amount="600" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="10.0">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="10.0">
                     <Affliction identifier="afantibiotics" amount="3"/>
                     <Affliction identifier="bloodpressure" amount="2"/>
                 </StatusEffect>
@@ -909,10 +909,10 @@
                 <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
                     <Affliction identifier="stun" amount="0.1" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="5">
                     <Affliction identifier="drunkweakness" amount="10" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="5">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="5">
                     <Affliction identifier="drunkweakness" amount="20" />
                 </StatusEffect>
                 <StatusEffect type="OnBroken" target="This">
@@ -976,7 +976,7 @@
                 <StatusEffect type="OnSecondaryUse" target="Contained" Condition="-4.0" disabledeltatime="false">
                     <RequiredItem items="pipetobacco" type="Contained" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSecondaryUse" target="Character">
+                <StatusEffect statuseffecttags="medical" type="OnSecondaryUse" target="Character">
                     <Affliction identifier="psychosisresistance" amount="15" />
                     <ReduceAffliction identifier="psychosis" amount="5" />
                     <ReduceAffliction identifier="hallucinating" amount="10" />
@@ -1014,7 +1014,7 @@
                     <Conditional InWater="true" />
                     <ParticleEmitter particle="bubbles" particlespersecond="3" scalemin="0.3" scalemax="0.5" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSecondaryUse" target="Character">
+                <StatusEffect statuseffecttags="medical" type="OnSecondaryUse" target="Character">
                     <Affliction identifier="psychosisresistance" amount="20" />
                     <Affliction identifier="lungdamage" amount="0.6" />
                     <ReduceAffliction identifier="psychosis" amount="6" />
@@ -1053,7 +1053,7 @@
                 <RequiredSkill identifier="medical" level="50" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
                     <Affliction identifier="organdamage" amount="0.2" />
                     <Affliction identifier="kidneydamage" amount="0.2" />
                     <Affliction identifier="heartdamage" amount="0.2" />
@@ -1061,7 +1061,7 @@
                     <Affliction identifier="liverdamage" amount="0.2" />
                     <ReduceAffliction identifier="hypoxemia" amount="100" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="20.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="20.0">
                     <Affliction identifier="organdamage" amount="0.5" />
                     <Affliction identifier="kidneydamage" amount="0.5" />
                     <Affliction identifier="heartdamage" amount="0.5" />
@@ -1133,7 +1133,7 @@
                 <RequiredSkill identifier="medical" level="72" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20" delay="1">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20" delay="1">
                     <Affliction identifier="burn" amount="0.2" />
                     <Affliction identifier="bloodpressure" amount="2" />
                     <ReduceAffliction type="organdamage" amount="1" />
@@ -1143,10 +1143,10 @@
                     <ReduceAffliction identifier="bleeding" amount="2.5" />
                     <ReduceAffliction identifier="stun" amount="0.3" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="strengthen" amount="200" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20" delay="1">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20" delay="1">
                     <Affliction identifier="burn" amount="1" />
                     <Affliction identifier="bloodpressure" amount="1" />
                     <ReduceAffliction type="organdamage" amount="0.5" />
@@ -1156,7 +1156,7 @@
                     <ReduceAffliction identifier="bleeding" amount="0.5" />
                     <ReduceAffliction identifier="stun" amount="0.15" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="strengthen" amount="200" />
                 </StatusEffect>
                 <StatusEffect type="OnSuccess" target="UseTarget">
@@ -1216,21 +1216,21 @@
                     <Sound file="Content/Items/Medical/Bandage1.ogg" range="500" />
                     <Sound file="Content/Items/Medical/Bandage2.ogg" range="500" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="2.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="This, Limb" duration="2.0">
                     <ReduceAffliction type="bleeding" amount="40" />
                     <ReduceAffliction type="burn" amount="20" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="60.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="This, Limb" duration="60.0">
                     <ReduceAffliction type="infectedwound" amount="10" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="2.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="This, Limb" duration="2.0">
                     <ReduceAffliction type="bleeding" amount="30" />
                     <ReduceAffliction type="burn" amount="15" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="60.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="This, Limb" duration="60.0">
                     <ReduceAffliction type="infectedwound" amount="8" />
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="This, Limb" disabledeltatime="true" delay="20">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="This, Limb" disabledeltatime="true" delay="20">
                     <Affliction identifier="heartattack" amount="100" probability="0.5" />
                 </StatusEffect>
                 <StatusEffect type="OnBroken" target="This">
@@ -1277,7 +1277,7 @@
                 <RequiredSkill identifier="medical" level="35" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
                     <Affliction identifier="organdamage" amount="0.5" />
                     <Affliction identifier="cerebralhypoxia" amount="0.5" />
                     <Affliction identifier="psychosis" amount="1" />
@@ -1285,10 +1285,10 @@
                     <Affliction identifier="chemaddiction" amount="0.5" />
                     <ReduceAffliction identifier="chemwithdrawal" amount="3" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="haste" amount="420" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="30.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="30.0">
                     <Affliction identifier="organdamage" amount="1" />
                     <Affliction identifier="cerebralhypoxia" amount="1" />
                     <Affliction identifier="psychosis" amount="1.5" />
@@ -1296,7 +1296,7 @@
                     <Affliction identifier="chemaddiction" amount="1" />
                     <ReduceAffliction identifier="chemwithdrawal" amount="3" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="haste" amount="300" />
                 </StatusEffect>
                 <StatusEffect type="OnSuccess" target="UseTarget">
@@ -1353,7 +1353,7 @@
                 <RequiredSkill identifier="medical" level="50" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="60.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="60.0">
                     <ReduceAffliction identifier="internaldamage" amount="0.2" />
                     <ReduceAffliction identifier="stun" amount="0.9" />
                     <Affliction identifier="chemaddiction" amount="0.3" />
@@ -1361,11 +1361,11 @@
                     <Affliction identifier="psychosis" amount="0.5" />
                     <ReduceAffliction identifier="chemwithdrawal" amount="1.5" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="haste" amount="400" />
                     <Affliction identifier="strengthen" amount="400" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="60.0">
                     <!-- TODO: should this be any affliction of type damage?-->
                     <ReduceAffliction identifier="internaldamage" amount="0.1" />
                     <ReduceAffliction identifier="stun" amount="0.25" />
@@ -1375,7 +1375,7 @@
                     <ReduceAffliction identifier="chemwithdrawal" amount="1.5" />
                     <Affliction identifier="burn" amount="0.125" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true">
                     <Affliction identifier="haste" amount="400" />
                     <Affliction identifier="strengthen" amount="400" />
                 </StatusEffect>
@@ -1501,12 +1501,12 @@
                 <RequiredSkill identifier="medical" level="37" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="1">
                     <ReduceAffliction identifier="psychosis" amount="100" />
                     <ReduceAffliction identifier="hallucinating" amount="100" />
                     <ReduceAffliction identifier="alcoholwithdrawal" amount="100" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="1">
                     <ReduceAffliction identifier="psychosis" amount="25" />
                     <ReduceAffliction identifier="hallucinating" amount="25" />
                     <ReduceAffliction identifier="alcoholwithdrawal" amount="25" />
@@ -1568,12 +1568,12 @@
                 <RequiredSkill identifier="medical" level="64" />
                 <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1.0">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="1.0">
                     <Affliction identifier="paralysisresistance" amount="800" />
                     <Affliction identifier="psychosis" amount="5" />
                     <ReduceAffliction identifier="anesthesia" amount="200" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="60.0">
                     <Affliction identifier="paralysisresistance" amount="6.5" />
                     <Affliction identifier="psychosis" amount="0.75" />
                     <ReduceAffliction identifier="anesthesia" amount="3" />
@@ -1677,7 +1677,7 @@
                     <Use/>
                 </StatusEffect>
                 <StatusEffect type="OnUse" target="This" Condition="0.0" setvalue="true"/>
-                <StatusEffect tags="medical" type="OnUse" target="UseTarget" disabledeltatime="true" allowwhenbroken="true">
+                <StatusEffect statuseffecttags="medical" type="OnUse" target="UseTarget" disabledeltatime="true" allowwhenbroken="true">
                     <Affliction identifier="durationincrease" amount="300" />
                 </StatusEffect>
                 <StatusEffect type="OnBroken" target="This">
@@ -1726,18 +1726,18 @@
                     <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="2000" />
                 </StatusEffect>
                 <RequiredSkill identifier="medical" level="35" />
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" disabledeltatime="true">
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                     <Affliction identifier="afpressuredrug" amount="100" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnSuccess" target="This" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="This" disabledeltatime="true">
                     <Remove/>
                 </StatusEffect>
-                <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" disabledeltatime="true">
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                     <Affliction identifier="afpressuredrug" amount="50" />
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="This" disabledeltatime="true">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="This" disabledeltatime="true">
                     <Remove/>
                 </StatusEffect>
             </Throwable>

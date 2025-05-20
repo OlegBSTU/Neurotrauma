@@ -126,7 +126,7 @@
         <Body width="41" height="64" density="40"/>
 
         <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
-            <StatusEffect tags="medical" type="OnUse" target="This, Limb">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This, Limb">
                 <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500"/>
                 <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500"/>
             </StatusEffect>

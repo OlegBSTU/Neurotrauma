@@ -58,7 +58,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
             </StatusEffect>
         </MeleeWeapon>
 
@@ -110,7 +110,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
                 <Conditional retractedskin="gte 1"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>
@@ -147,7 +147,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
                 <Conditional retractedskin="gte 1"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>
@@ -184,7 +184,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
                 <Conditional retractedskin="gte 1"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>
@@ -221,7 +221,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
                 <Conditional retractedskin="gte 1"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>
@@ -259,7 +259,7 @@
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
             <!-- extracting organ -->
-            <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
                 <Conditional retractedskin="gte 1"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500"/>
                 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500"/>

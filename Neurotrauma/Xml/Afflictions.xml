@@ -688,12 +688,12 @@
 
     <Effect minstrength="0" maxstrength="2"
       strengthchange="-0.5">
-      <StatusEffect tags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
         <ReduceAffliction identifier="cardiacarrest"  amount="2" />
         <ReduceAffliction identifier="fibrillation"  amount="1" />
         <Affliction identifier="bloodpressure" amount="4"/>
       </StatusEffect>
-      <StatusEffect tags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
         <Conditional cardiacarrest="lte 0.5"/>
         <Conditional cardiacarrest="gte 0.1"/>
         <ReduceAffliction identifier="cardiacarrest"  amount="100" />
@@ -720,13 +720,13 @@
 
     <Effect minstrength="0" maxstrength="2"
       strengthchange="-0.5">
-      <StatusEffect tags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
         <ReduceAffliction identifier="cardiacarrest"  amount="1.5" />
         <ReduceAffliction identifier="fibrillation"  amount="1" />
         <Affliction identifier="bloodpressure" amount="5"/>
         <ReduceAffliction identifier="oxygenlow" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
         <Conditional cardiacarrest="lte 0.5"/>
         <Conditional cardiacarrest="gte 0.1"/>
         <ReduceAffliction identifier="cardiacarrest"  amount="100" />
@@ -3903,12 +3903,15 @@ thats what the vomiting symptom is for -->
       healableinmedicalclinic="false">
 
       <Effect minstrength="0" maxstrength="40"
+        convulseamount="0.05"
         strengthchange="-0.05"/>
 
       <Effect minstrength="40" maxstrength="80"
+        convulseamount="0.1"
         strengthchange="-0.1"/>
 
       <Effect minstrength="80" maxstrength="100"
+        convulseamount="0.25"
         strengthchange="-0.2">
       </Effect>
 
@@ -4573,7 +4576,8 @@ thats what the vomiting symptom is for -->
         minchromaticaberration="0.0"
         maxchromaticaberration="10.0"
         minradialdistort="0.0"
-        maxradialdistort="10.0"/>
+        maxradialdistort="10.0"
+        convulseamount="0.25"/>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,768,128,128" color="103,103,103,255" origin="0,0"/>
     </Affliction>
   <!-- Vanilla affliction override end -->
@@ -4603,7 +4607,8 @@ thats what the vomiting symptom is for -->
         maxchromaticaberration="1.0"
         dialogflag="OpiateWithdrawalLow"
         minfacetint="255,255,255,0"
-        maxfacetint="255,255,255,50"/>
+        maxfacetint="255,255,255,50"
+        convulseamount="0.05"/>
 
       <!-- Decrease vitality more. The strength of the affliction drops faster, meaning that 
     the character needs a stronger opiate addiction for the withdrawal symptoms to stay at this level -->
@@ -4613,7 +4618,8 @@ thats what the vomiting symptom is for -->
         maxchromaticaberration="5.0"
         dialogflag="OpiateWithdrawalMedium"
         minfacetint="255,255,255,50"
-        maxfacetint="255,255,255,100"/>
+        maxfacetint="255,255,255,100"
+        convulseamount="0.1"/>
 
       <!-- Withdrawal symptoms start to get lethal at this level -->
       <Effect minstrength="80" maxstrength="100"
@@ -4626,7 +4632,8 @@ thats what the vomiting symptom is for -->
         maxradialdistort="80.0"
         dialogflag="OpiateWithdrawalHigh"
         minfacetint="255,255,255,100"
-        maxfacetint="255,255,255,150">
+        maxfacetint="255,255,255,150"
+        convulseamount="0.25">
         <StatusEffect target="Character" color="195,136,60,255"/>
       </Effect>
 
@@ -4698,7 +4705,8 @@ thats what the vomiting symptom is for -->
         minchromaticaberration="0.0"
         maxchromaticaberration="1.0"
         minfacetint="255,255,255,0"
-        maxfacetint="255,255,255,50">
+        maxfacetint="255,255,255,50"
+        convulseamount="0.05">
         <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true"/>
       </Effect>
 
@@ -4709,7 +4717,8 @@ thats what the vomiting symptom is for -->
         minchromaticaberration="1.0"
         maxchromaticaberration="5.0"
         minfacetint="255,255,255,50"
-        maxfacetint="255,255,255,100">
+        maxfacetint="255,255,255,100"
+        convulseamount="0.1">
         <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
       </Effect>
 
@@ -4723,7 +4732,8 @@ thats what the vomiting symptom is for -->
         minradialdistort="40.0"
         maxradialdistort="80.0"
         minfacetint="255,255,255,100"
-        maxfacetint="255,255,255,150">
+        maxfacetint="255,255,255,150"
+        convulseamount="0.25">
         <StatusEffect target="Character" SpeedMultiplier="0.5" color="195,136,60,255" setvalue="true"/>
       </Effect>
 
