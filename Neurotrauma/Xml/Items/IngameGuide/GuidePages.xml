@@ -2654,6 +2654,538 @@
       </Button>
     </CustomInterface>
   </Item>
+
+ <!-- Lungs Guide Page -->
+ <Item identifier="Manual_Lungs" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="0,0" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="0,0" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Lungs">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Respiratory_Arrest">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Respiratory_Arrest">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Lung_Damage">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Lung_Damage">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Pneumothorax">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Pneumothorax">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hyperventilation">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hyperventilation">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hypoventilation">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoventilation">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Oxygen_Low">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Oxygen_Low">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
   
+  <!-- Respiratory Arrest -->
+  <Item identifier="Manual_Respiratory_Arrest" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="13,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="13,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Respiratory_Arrest">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Surgery_Table">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Surgery_Table">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Lung_Damage">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Lung_Damage">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Traumatic_Shock">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Traumatic_Shock">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Neurotrauma">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Neurotrauma">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hypoxemia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoxemia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Opiate_Overdose">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Opiate_Overdose">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Stasis_Bag">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Stasis_Bag">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Oxygen_Low">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Oxygen_Low">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Acidosis">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Acidosis">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Ambubag">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Ambubag">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Autopulse">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Autopulse">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  
+  <!-- Lung Damage -->
+  <Item identifier="Manual_Lung_Damage" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="14,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="14,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Lung_Damage">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+     <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Broad-spectrum_Antibiotics">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Broad-spectrum_Antibiotics">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Liquid_Oxygenite">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Liquid_Oxygenite">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Ambubag">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Ambubag">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hemotransfusion_Shock">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hemotransfusion_Shock">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Radiation_Sickness">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Radiation_Sickness">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Sepsis">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Sepsis">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hypoxemia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoxemia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Cough">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Cough">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Shortness_of_Breath">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Shortness_of_Breath">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Respiratory_Arrest">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Respiratory_Arrest">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Thiamine">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Thiamine">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Organ_Transplant_Surgery">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Organ_Transplant_Surgery">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  
+  <!-- Pneumothorax -->
+  <Item identifier="Manual_Pneumothorax" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="15,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="15,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Pneumothorax">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Hypoxemia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoxemia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Needle">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Needle">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Fractures">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Fractures">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Internal_Damage">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Internal_Damage">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Shortness_of_Breath">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Shortness_of_Breath">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hyperventilation">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hyperventilation">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Increased_Heartrate">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Increased_Heartrate">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Drainage">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Drainage">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Retracted_Skin">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Retracted_Skin">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  
+<!-- Hyperventilation -->
+  <Item identifier="Manual_Hyperventilation" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="16,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="16,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Hyperventilation">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Hypotension">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypotension">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hypoxemia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoxemia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Pneumothorax">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Pneumothorax">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Sepsis">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Sepsis">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Adrenaline">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Adrenaline">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Alkalosis">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Alkalosis">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hypoventilation">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoventilation">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  
+  <!-- Hypoventilation -->
+  <Item identifier="Manual_Hypoventilation" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="17,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="17,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Hypoventilation">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Analgesia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Analgesia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Anesthesia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Anesthesia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Opiate_Overdose">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Opiate_Overdose">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Acidosis">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Acidosis">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Hyperventilation">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hyperventilation">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  
+  <!-- Oxygen Low -->
+  <Item identifier="Manual_Oxygen_Low" variantof="generictablet">
+    <InventoryIcon texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="18,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/NeuroGuideIcons.png" sheetindex="18,1" sheetelementsize="77,101" origin="0.5,0.5" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" readonly="true" autoscrolltobottom="false" AutoHideScrollbar="true" linestartsymbol="" marginmultiplier="1.5" drawhudwhenequipped="true" textcolor="173,216,230,255" welcomemessage="Manual_Description_Oxygen_Low">
+      <GuiFrame relativesize="0.35,0.65" relativeoffset="0.0,0.0" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+    </Terminal>
+	<!-- Start & Back Button -->
+	<CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.14" relativeOffset="0,-1.0" anchor="BottomCenter" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Start_Page">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Start_Page">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Back">
+        <StatusEffect type="OnUse" target="Character">
+          <LuaHook name="neuroGuide.backButton" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" allowuioverlap="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.14,0.65" relativeOffset="0.25,-0.065" anchor="Center" style="ItemUI" hidedragicons="true" draggable="false" />
+      <Button text="Manual_Button_Hypoxemia">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Hypoxemia">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Respiratory_Arrest">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Respiratory_Arrest">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Unconsciousness">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Unconsciousness">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Surgery_Table">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Surgery_Table">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Autopulse">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Autopulse">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+      <Button text="Manual_Button_Ambubag">
+        <StatusEffect type="OnUse" target="Character" tags="Manual_Ambubag">
+          <LuaHook name="neuroGuide.openPage" />
+		  <sound file="Content/Items/Button/Button.ogg" type="OnUse" range="100.0" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
 
 </Items>
