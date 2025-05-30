@@ -20,6 +20,7 @@
   <Other file="%ModDir%/Images/Human/Human_male_mask.png" />
 
   <Afflictions  file="%ModDir%/Xml/Afflictions.xml" />
+  <Talents      file="%ModDir%/Xml/Talents.xml"/>
   <Item         file="%ModDir%/Xml/Items/Blood/BloodPacks.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/DonorCard.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/Gear.xml" />

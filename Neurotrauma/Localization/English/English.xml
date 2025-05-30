@@ -752,6 +752,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <!-- misc -->
 <roomname.surgical>Surgical</roomname.surgical>
 
+<!-- Talents -->
+<talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Alien Blood‖end‖ gives [amount]% less ‖color:gui.orange‖Psychosis‖end‖ and [amount2]% less ‖color:gui.orange‖Hemotransfusion Shock‖end‖.</talentdescription.itemgiveslessaffliction>
+
 <!-- /// Loading Screen Tips /// -->
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Non-medical personnel can treat cardiac arrest with the use of adrenaline or an AutoPulse.</loadingscreentip>
