@@ -171,14 +171,14 @@
                 </StatusEffect>
 
                 <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="1">
-                    <ReduceAffliction identifier="bloodloss" amount="15" />
+                    <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
                     <Affliction identifier="bloodpressure" amount="15" />
                 </StatusEffect>
 
                 <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="1">
-                    <ReduceAffliction identifier="bloodloss" amount="15" />
+                    <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
                     <Affliction identifier="bloodpressure" amount="15" />
