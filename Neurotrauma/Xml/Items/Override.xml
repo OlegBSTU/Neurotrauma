@@ -174,14 +174,14 @@
                     <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
-                    <Affliction identifier="bloodpressure" amount="15" />
+                    <Affliction identifier="bloodpressure" amount="20" />
                 </StatusEffect>
 
                 <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="1" multiplyafflictionsbymaxvitality="true">
                     <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
-                    <Affliction identifier="bloodpressure" amount="15" />
+                    <Affliction identifier="bloodpressure" amount="20" />
                 </StatusEffect>
 
                 <StatusEffect type="OnBroken" target="This">
