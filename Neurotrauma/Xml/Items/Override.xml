@@ -170,14 +170,14 @@
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="1">
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="1" multiplyafflictionsbymaxvitality="true">
                     <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
                     <Affliction identifier="bloodpressure" amount="15" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="1">
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="1" multiplyafflictionsbymaxvitality="true">
                     <ReduceAffliction identifier="bloodloss" amount="20" />
                     <Affliction identifier="hemotransfusionshock" amount="100"/>
                     <Affliction identifier="psychosis" amount="60" />
