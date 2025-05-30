@@ -164,24 +164,24 @@
             <Body width="30" height="55" density="11" />
 
             <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
-                <RequiredSkill identifier="medical" level="40"/>
+                <RequiredSkill identifier="medical" level="55"/>
 
                 <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget, This" duration="15.0">
-                    <Affliction identifier="organdamage" amount="0.25"/>
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
+                    <ReduceAffliction identifier="bloodloss" amount="1" />
                     <Affliction identifier="hemotransfusionshock" amount="6.6"/>
-                    <ReduceAffliction identifier="bloodloss" amount="0.5"/>
-                    <Affliction identifier="psychosis" amount="3" />
+                    <Affliction identifier="psychosis" amount="4" />
+                    <Affliction identifier="organdamage" amount="0.25" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget, This" duration="15.0">
-                    <Affliction identifier="organdamage" amount="0.5"/>
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="15">
+                    <ReduceAffliction identifier="bloodloss" amount="0.5" />
                     <Affliction identifier="hemotransfusionshock" amount="6.6"/>
-                    <ReduceAffliction identifier="bloodloss" amount="0.5"/>
-                    <Affliction identifier="psychosis" amount="3" />
+                    <Affliction identifier="psychosis" amount="4" />
+                    <Affliction identifier="organdamage" amount="0.50" />
                 </StatusEffect>
 
                 <StatusEffect type="OnBroken" target="This">
