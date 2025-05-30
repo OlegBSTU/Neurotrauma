@@ -170,18 +170,18 @@
                     <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
-                    <ReduceAffliction identifier="bloodloss" amount="1" />
-                    <Affliction identifier="hemotransfusionshock" amount="6.6"/>
-                    <Affliction identifier="psychosis" amount="4" />
-                    <Affliction identifier="organdamage" amount="0.25" />
+                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="1">
+                    <ReduceAffliction identifier="bloodloss" amount="15" />
+                    <Affliction identifier="hemotransfusionshock" amount="100"/>
+                    <Affliction identifier="psychosis" amount="60" />
+                    <Affliction identifier="bloodpressure" amount="15" />
                 </StatusEffect>
 
-                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="15">
-                    <ReduceAffliction identifier="bloodloss" amount="0.5" />
-                    <Affliction identifier="hemotransfusionshock" amount="6.6"/>
-                    <Affliction identifier="psychosis" amount="4" />
-                    <Affliction identifier="organdamage" amount="0.50" />
+                <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="1">
+                    <ReduceAffliction identifier="bloodloss" amount="15" />
+                    <Affliction identifier="hemotransfusionshock" amount="100"/>
+                    <Affliction identifier="psychosis" amount="60" />
+                    <Affliction identifier="bloodpressure" amount="15" />
                 </StatusEffect>
 
                 <StatusEffect type="OnBroken" target="This">
@@ -189,7 +189,7 @@
                 </StatusEffect>
             </Holdable>
 
-            <SkillRequirementHint identifier="medical" level="40"/>
+            <SkillRequirementHint identifier="medical" level="55"/>
         </Item>
 
         <Item name="" identifier="antibloodloss1" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,petfood2,petfood3" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
