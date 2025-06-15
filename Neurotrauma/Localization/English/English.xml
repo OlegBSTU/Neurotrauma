@@ -36,6 +36,10 @@
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
 </Override>
 
+<!-- ‖color:BaseColor‖Affliction readout for ‖color:end‖‖color:NameColor‖targetCharacter.Name‖color:end‖‖color:BaseColor‖ on limb LimbType:\n‖color:end‖ -->
+<!-- BaseColor, NameColor, targetCharacter.Name, BaseColor, LimbType -->
+<healthscanner.startReadout>‖color:%s‖Affliction readout for ‖color:end‖‖color:%s‖%s‖color:end‖‖color:%s‖ on limb %s:\n‖color:end‖</healthscanner.startReadout>
+
 <stasisbagequipconfirmation>Equipping this will cause you to go unconscious. Are you sure?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
 

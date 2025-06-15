@@ -82,23 +82,24 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		HF.AddAffliction(usingCharacter, "radiationsickness", 0.6)
 
 		-- print readout of afflictions
-		local startReadout = "‖color:"
-			.. BaseColor
-			.. "‖"
-			.. "Affliction readout for "
-			.. "‖color:end‖"
-			.. "‖color:"
-			.. NameColor
-			.. "‖"
-			.. targetCharacter.Name
-			.. "‖color:end‖"
-			.. "‖color:"
-			.. BaseColor
-			.. "‖"
-			.. " on limb "
-			.. HF.LimbTypeToString(limbtype)
-			.. ":\n"
-			.. "‖color:end‖"
+		local startReadout = string.format(TextManager.Get("healthscanner.startReadout").Value, BaseColor, NameColor, targetCharacter.Name, BaseColor, HF.LimbTypeToString(limbtype))
+		-- local startReadout = "‖color:"
+		-- 	.. BaseColor
+		-- 	.. "‖"
+		-- 	.. "Affliction readout for "
+		-- 	.. "‖color:end‖"
+		-- 	.. "‖color:"
+		-- 	.. NameColor
+		-- 	.. "‖"
+		-- 	.. targetCharacter.Name
+		-- 	.. "‖color:end‖"
+		-- 	.. "‖color:"
+		-- 	.. BaseColor
+		-- 	.. "‖"
+		-- 	.. " on limb "
+		-- 	.. HF.LimbTypeToString(limbtype)
+		-- 	.. ":\n"
+		-- 	.. "‖color:end‖"
 		local LowPressureReadout = ""
 		local HighPressureReadout = ""
 		local LowStrengthReadout = ""
