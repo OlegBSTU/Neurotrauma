@@ -65,7 +65,6 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 	dofile(NT.Path .. "/Lua/Scripts/Server/screams.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/modconflict.lua")
 
-	dofile(NT.Path .. "/Lua/Scripts/testing.lua")
 end
 
 -- server-side code only
@@ -98,3 +97,5 @@ dofile(NT.Path .. "/Lua/Scripts/Shared/surgerytable.lua") -- Heelge: fix for htt
 -- Consent Required Extended with adjustments
 -- mod page: https://steamcommunity.com/sharedfiles/filedetails/?id=2892602084
 dofile(NT.Path .. "/Lua/ConsentRequiredExtended/init.lua")
+
+dofile(NT.Path .. "/Lua/Scripts/testing.lua")
