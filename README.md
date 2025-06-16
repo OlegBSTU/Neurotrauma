@@ -8,7 +8,7 @@ Neurotrauma is inspired by real life medicine. It dwells on the concepts of real
 * [Steam Workshop](https://steamcommunity.com/workshop/filedetails/?id=3190189044)
 * [Collection (Fork-supported Mods)](https://steamcommunity.com/sharedfiles/filedetails/?id=3338931653)
 
-* [Tutorial Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2860450711)
+* [Tutorial Map](https://steamcommunity.com/sharedfiles/filedetails/?id=3355559986)
 * [Trello Guide](https://trello.com/b/lA0BSokX/neurotrauma-and-medical-guide)
 
 ## Issues
