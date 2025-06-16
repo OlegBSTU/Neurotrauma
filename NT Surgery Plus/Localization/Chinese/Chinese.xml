@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <Override>
   <!-- Translations provided by the wonderful 殇泣乀! https://steamcommunity.com/profiles/76561198852819481-->
   <!-- ITEMS -->
   <entityname.mannitolplus>甘露醇+</entityname.mannitolplus>
@@ -107,4 +108,5 @@
   <talentname.ntsp_fellowtoaster>卷死工程师</talentname.ntsp_fellowtoaster>
   <talentdescription.ntsp_imasurgeonnota1>在你的 "外科智慧™" 的加持下，你可以获得 [amount] 额外技能点</talentdescription.ntsp_imasurgeonnota1>
   <talentdescription.ntsp_imasurgeonnota2>或者你可以选择 [jobname]，这将给予你额外 [amount] 的全职业技能点</talentdescription.ntsp_imasurgeonnota2>
+</Override>
 </infotexts>

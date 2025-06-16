@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <Override>
   <!-- version by @Zugar https://steamcommunity.com/profiles/76561198868900136 and @Good Gamer  	https://steamcommunity.com/profiles/76561198033275555 -->
   <!-- ITEMS -->
   <entityname.mannitolplus>Маннитол плюс</entityname.mannitolplus>
@@ -98,4 +99,5 @@
 <talentdescription.ntsp_selfcarepsychosis>Дает 50% устойчивости к психозу</talentdescription.ntsp_selfcarepsychosis> это для медицинских предметов для самопомощи
 
  -->
+</Override>
 </infotexts>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+  <Override>
   <!-- Translated by the astounding profole / Übersetzt von profole -->
   <!-- ITEMS -->
   <entityname.mannitolplus>Mannitol Plus</entityname.mannitolplus>
@@ -89,4 +90,5 @@
   <talentdescription.ntsp_imasurgeonnota2>Oder du kannst [jobname] auswählen, um stattdessen [amount] überall Bonusfähigkeiten zu erhalen (Sorry für die wahrscheinlich grausame Übersetzung :P).</talentdescription.ntsp_imasurgeonnota2>
   <talentname.ntsp_properfol>Kratz jetzt nicht ab, Soldat!</talentname.ntsp_properfol>
   <talentdescription.ntsp_properfol>[itemname], dass du benutzt wirkt sofort.</talentdescription.ntsp_properfol>
+  </Override>
 </infotexts>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
+  <Override>
   <!-- ITEMS -->
   <entityname.mannitolplus>Mannitol plus</entityname.mannitolplus>
   <entitydescription.mannitolplus>An improved version of mannitol. It is used to quickly treat neurotrauma.</entitydescription.mannitolplus>
@@ -97,4 +98,5 @@
   <talentdescription.ntsp_selfcarepsychosis>Gain 50% psychosis resistance</talentdescription.ntsp_selfcarepsychosis> this will be for the self use medical items 
 
   -->
+</Override>
 </infotexts>

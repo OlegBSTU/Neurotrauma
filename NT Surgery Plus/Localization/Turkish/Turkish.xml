@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+<Override>
 
 <!-- ITEMS -->
 
@@ -106,4 +107,5 @@
 <talentname.ntsp_experimental>Etik olmayan kaynak kullanımı</talentname.ntsp_experimental>
 <talentname.ntsp_frankenstein>Dr. Frankenstein</talentname.ntsp_frankenstein>
 
+</Override>
 </infotexts>
