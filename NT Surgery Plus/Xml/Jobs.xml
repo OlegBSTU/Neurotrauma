@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Jobs>
+  <Override>
   <Job identifier="surgeon" allowalways="true" minkarma="10" uicolor="0.82,0.42,0.38" vitalitymodifier="5" pricemultiplier="1.3" idlebehavior="Active">
     <Jobicon>
       <sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
@@ -81,7 +82,7 @@
       <Order identifier="requestfirstaid" />
     </AppropriateOrders>
   </Job>
-  <!--<Override>
+  <!--
     <Job identifier="medicaldoctor" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active">
       <Jobicon>
         <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
@@ -200,6 +201,6 @@
         <Order identifier="rescue" />
         <Order identifier="requestfirstaid" />
       </AppropriateOrders>
-    </Job>
-  </Override>-->
+    </Job>-->
+  </Override>
 </Jobs>

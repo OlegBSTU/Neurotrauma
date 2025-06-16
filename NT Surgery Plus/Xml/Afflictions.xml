@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
+  <Override>
   <Affliction
     identifier="injectorready"
     type="talentbuff"
@@ -170,4 +171,5 @@
       sheetelementsize="128,128"
       origin="0,0" />
   </Affliction>
+  </Override>
 </Afflictions>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
   <!-- mannitol plus, talent item -->
   <Item name="" identifier="mannitolplus" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="8">
@@ -81,3 +82,4 @@
     </Projectile>
   </Item>
   </Items>
+</Override>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
   <Item name="" identifier="brainjar" category="Equipment" tags="mediumitem,braincontainer" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.4" fireproof="true" description="" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" />
@@ -21,3 +22,4 @@
     </ItemContainer>
   </Item>
 </Items>
+</Override>

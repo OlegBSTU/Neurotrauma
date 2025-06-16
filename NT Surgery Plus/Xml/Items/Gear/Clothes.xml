@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<Override>
 <Items>
   <Item name="" identifier="surgeonclothes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,sterile" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="outpostcrewcabinet,abandonedcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />
@@ -98,3 +99,4 @@
     </Wearable>
   </Item>
 </Items>
+</Override>

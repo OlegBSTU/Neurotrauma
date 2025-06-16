@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<Override>
 <Items>
   <!-- medical misconduct -->
   <Item name="" identifier="skillbooksurgery" category="Equipment" Tags="smallitem,skillbook" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
@@ -66,3 +67,4 @@
     </MeleeWeapon>
   </Item>
 </Items>
+</Override>
