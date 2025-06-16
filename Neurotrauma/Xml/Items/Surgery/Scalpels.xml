@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
         <PreferredContainer primary="locker"/>
@@ -78,3 +79,4 @@
         </CustomInterface>
     </Item>
 </Items>
+</Override>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <!-- /// this is unelegant, pls fix, lua man! /// -->
     <Item name="." identifier="ntvfx_explosion" description="." hideinmenus="true">
@@ -15,3 +16,4 @@
         </ItemComponent>
     </Item>
 </Items>
+</Override>

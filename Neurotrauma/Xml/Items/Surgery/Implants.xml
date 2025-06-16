@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
         <Price baseprice="200" soldbydefault="false">
@@ -67,3 +68,4 @@
         <SkillRequirementHint identifier="medical" level="45"/>
     </Item>
 </Items>
+</Override>

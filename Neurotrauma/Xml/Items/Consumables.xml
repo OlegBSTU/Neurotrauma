@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="suture" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
         <PreferredContainer primary="medcab" minamount="20" maxamount="32" spawnprobability="1"/>
@@ -168,3 +169,4 @@
         <SkillRequirementHint identifier="medical" level="40"/>
     </Item>
 </Items>
+</Override>

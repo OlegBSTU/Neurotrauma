@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <!-- Blood type analyzer + collection cartridge -->
     <Item name="" description="" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,medical" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
@@ -72,3 +73,4 @@
         </Holdable>
     </Item>
 </Items>
+</Override>

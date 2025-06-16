@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <!-- Tourniquet / clamps bleeding arteries / causes gangrene if left on for too long -->
     <Item name="" identifier="tourniquet" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.250">
@@ -117,3 +118,4 @@
         <SkillRequirementHint identifier="medical" level="40"/>
     </Item>
 </Items>
+</Override>

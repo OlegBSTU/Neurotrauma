@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -126,3 +127,4 @@
     </Item>
 
 </Items>
+</Override>

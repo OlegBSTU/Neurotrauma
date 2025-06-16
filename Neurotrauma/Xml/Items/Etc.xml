@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="operatingtable" scale="0.4" Tags="" maxstacksize="1" category="medical" description="" isshootable="true">
         <Upgrade gameversion="0.12.0.0" noninteractable="false"/>
@@ -148,3 +149,4 @@
         </MeleeWeapon>
     </Item>
 </Items>
+</Override>
