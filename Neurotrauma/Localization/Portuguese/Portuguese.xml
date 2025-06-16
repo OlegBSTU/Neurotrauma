@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -21,10 +21,10 @@
 <entityname.wheelchair>Cadeira de Rodas</entityname.wheelchair>
 <entitydescription.wheelchair>Faz você depender de seus braços ao invés de suas pernas para a movimentação.</entitydescription.wheelchair>
 <entityname.blahaj>Tubarão Azul</entityname.blahaj>
-<Override>
+
 <entityname.healthscanner>Visor de Saúde</entityname.healthscanner>
 <entitydescription.healthscanner>Usado para diagnosticar as causas subjacentes dos sintomas.</entitydescription.healthscanner>
-</Override>
+
 <stasisbagequipconfirmation>Equipar isso vai te deixar inconsciente. Você tem certeza?</stasisbagequipconfirmation>
 <!-- /// Surgery /// -->
 <entityname.advscalpel>Bisturi</entityname.advscalpel>
@@ -129,10 +129,10 @@
 <entitydescription.bloodpackbminus>Administrado para: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
 <entityname.bloodpackabminus>Bolsa de Sangue AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administrado para: AB-, AB+</entitydescription.bloodpackabminus>
-<Override>
+
 <entityname.antibloodloss2>Bolsa de Sangue O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Um pacote de sangue que pode ser usado em qualquer paciente.</entitydescription.antibloodloss2>
-</Override>
+
 <entityname.ominuscard>Cartão de Doador de Sangue O-</entityname.ominuscard>
 <entitydescription.ominuscard>Pode receber sangue de: O-
 Pode dar sangue para: Todos tipos</entitydescription.ominuscard>
@@ -517,5 +517,5 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 
 <!-- A1.8 -->
 
-
+</Override>
 </infotexts>

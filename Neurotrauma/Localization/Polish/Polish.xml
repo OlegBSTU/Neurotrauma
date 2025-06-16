@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Polish" nowhitespace="false" translatedname="Polski">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Żarłacz błękitny</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Skaner zdrowia</entityname.healthscanner>
 <entitydescription.healthscanner>Podobnie jak analizator krwi, służy do diagnozowania przyczyn objawów. UWAGA: promieniowanie rentgenowskie.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Założenie spowoduje utratę przytomności. Czy na pewno chcesz to założyć?</stasisbagequipconfirmation>
 
@@ -743,5 +741,5 @@ Biorcy: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Medyczna skrzynia startowa</entityname.medstartercrate> 
 <entitydescription.medstartercrate>Skrzynia, która zawiera wszystkie niezbędne rzeczy, wygodnie zamknięte w jednym przepisie craftingowym.</entitydescription.medstartercrate>
-
+</Override>
 </infotexts>

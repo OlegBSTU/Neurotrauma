@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
-
+<Override>
 <!-- Предметы -->
 
 <!-- /// Экипировка /// -->
@@ -30,10 +30,8 @@
 
 <entityname.blahaj>Синяя акула</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Сканер здоровья</entityname.healthscanner>
 <entitydescription.healthscanner>Используется для выявления скрытых причин симптомов</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>После надевания вы потеряете сознание. Вы уверены?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>После надевания вы не сможете двигаться. Вы уверены?</emergencysuitequipconfirmation>-->
@@ -181,10 +179,8 @@
 <entityname.bloodpackabminus>Пакет с кровью AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Можно переливать: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
 <entityname.antibloodloss2>Пакет с кровью O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Пакет с кровью, подходящей любому пациенту.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Карточка донора O-</entityname.ominuscard>
 <entitydescription.ominuscard>Может получать кровь типов: O-
@@ -837,5 +833,5 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-
+</Override>
 </infotexts>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<Override>
 <!-- Translation reworked, mistakes corrected, and new strings added by liatoast. -->
 <!-- Originally translated by Profole and Mannatu -->
   
@@ -34,10 +35,8 @@
 
 <entityname.blahaj>Blahaj</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Vitalitätsscanner</entityname.healthscanner>
 <entitydescription.healthscanner>Verwendet um die Ursachen von Symptomen zu erkennen.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Wenn du das ausrüstest wirst du bewusstlos. Bist du sicher?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
@@ -753,5 +752,5 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 
 <!-- misc -->
 <roomname.surgical>OP-Raum</roomname.surgical>
-
+</Override>
 </infotexts>

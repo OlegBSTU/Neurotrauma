@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="French" nowhitespace="false" translatedname="Français">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Requin bleu</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Scanneur de santé</entityname.healthscanner>
 <entitydescription.healthscanner>Utilisé pour identifier les causes sous-jacentes de symptômes.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Équiper cela vous fera perdre connaissance. En êtes-vous sûr(e)?</stasisbagequipconfirmation>
 
@@ -187,10 +185,8 @@
 <entityname.bloodpackabminus>Poche de sang AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Peut être donné à: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
 <entityname.antibloodloss2>Poche de sang O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Une poche de sang qui peut être utilisée sur n'importe quel patient.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Carte de donneur O-</entityname.ominuscard>
 <entitydescription.ominuscard>Peut recevoir du sang de: O-
@@ -743,5 +739,5 @@ Peut donner du sang à: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Coffret de débutant en médecine</entityname.medstartercrate> 
 <entitydescription.medstartercrate>Un coffret contenant tous les essentiels, pragmatiquement emballés dans une seule recette.</entitydescription.medstartercrate>
-
+</Override>
 </infotexts>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Equipping this will cause you to go unconscious. Are you sure?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
@@ -192,10 +190,9 @@
 <entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
+
 <entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Donor card O-</entityname.ominuscard>
 <entitydescription.ominuscard>Can take blood from: O-
@@ -844,5 +841,5 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-
+</Override>
 </infotexts>
