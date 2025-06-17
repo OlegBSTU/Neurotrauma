@@ -1,0 +1,55 @@
+<Talents>
+    <Override>
+        <!-- Vanilla talents override -->
+
+        <!-- Bloody Business -->
+        <Talent identifier="bloodybusiness">
+            <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128"/>
+            <Description tag="talentdescription.itemgiveslessaffliction" >
+                <Replace tag="[amount]" value="50" color="gui.green"/>
+                <Replace tag="[amount2]" value="95" color="gui.green"/>
+            </Description>
+            <Description tag="talentdescription.bloodybusiness">
+                <Replace tag="[item]" value="entityname.alienblood" color="gui.orange"/>
+            </Description>
+            <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+                <Conditions>
+                    <AbilityConditionItem identifiers="alienblood" />
+                </Conditions>
+                <Abilities>
+                    <CharacterAbilityApplyStatusEffects>
+                        <StatusEffects>
+                            <!-- counter half of the psychosis applied by alien blood -->
+                            <!-- also counter most of the hemo shock -->
+                            <!-- this still causes approximately 5% bloodloss and 2.5% organ damage -->
+                            <StatusEffect tags="medical" type="OnAbility" target="UseTarget" duration="1.0">
+                                <ReduceAffliction identifier="psychosis" amount="30" />
+                                <ReduceAffliction identifier="hemotransfusionshock" amount="95" />
+                            </StatusEffect>
+                        </StatusEffects>
+                    </CharacterAbilityApplyStatusEffects>
+                </Abilities>
+            </AbilityGroupEffect>
+            <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+                <Conditions>
+                    <AbilityConditionCharacter targettype="Monster">
+                        <Conditional IsMachine="false" />
+                        <Conditional IsHusk="false" />
+                        <Conditional maxhealth="gt 300"/>
+                    </AbilityConditionCharacter>
+                    <AbilityConditionCharacterNotLooted identifier="bloodybusiness" />
+                </Conditions>
+                <Abilities>
+                    <CharacterAbilityApplyStatusEffects>
+                        <StatusEffects>
+                            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
+                                <SpawnItem identifiers="alienblood" spawnposition="ThisInventory" />
+                            </StatusEffect>
+                        </StatusEffects>
+                    </CharacterAbilityApplyStatusEffects>
+                    <CharacterAbilityMarkAsLooted identifier="bloodybusiness"/>
+                </Abilities>
+            </AbilityGroupEffect>
+        </Talent>
+    </Override>
+</Talents>

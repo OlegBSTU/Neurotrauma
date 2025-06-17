@@ -1,0 +1,4 @@
+Heelge - author
+Echo - author
+Torca - idcard patch https://steamcommunity.com/sharedfiles/filedetails/?id=2913895660
+Curly Fries - alot of maintenance code

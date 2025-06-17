@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="organcrate" tags="crate,refrigerated" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true" description="">
+        <Price baseprice="150">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
+        </Price>
+        
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="4" />
+        </Deconstruct>
+        
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="4" />
+            <Item identifier="phosphorus" amount="2" />
+        </Fabricate>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" depth="0.54" sourcerect="10,578,146,82" origin="0.5,0.5" />
+        <Body width="145" height="85" density="50" />
+        <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
+        
+        <ItemContainer capacity="12" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="smallitem,organ" excludeditems="toolbox,cargoscooter" />
+        </ItemContainer>
+    </Item>
+    
+    <Item name="" identifier="organtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,refrigerated,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1"/>
+        <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
+        <PreferredContainer secondary="locker"/>
+        
+        <Price baseprice="100">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
+        </Price>
+        
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="2" />
+        </Deconstruct>
+        
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="2" />
+            <Item identifier="phosphorus" />
+        </Fabricate>
+        
+        <Price baseprice="25">
+            <Price locationtype="outpost" multiplier="1" minavailable="4" />
+            <Price locationtype="city" multiplier="0.9" minavailable="6" />
+            <Price locationtype="research" multiplier="1.25" minavailable="1" />
+            <Price locationtype="military" multiplier="1.25" minavailable="1" />
+            <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+        </Price>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="173,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        
+        <ItemContainer capacity="6" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="smallitem,organ" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+        
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+   
+    <Item name="" identifier="medtoolbox" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
+        <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
+        <PreferredContainer secondary="locker"/>
+        
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+       
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" amount="2"/>
+        </Fabricate>
+       
+        <Price baseprice="25">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
+        </Price>
+       
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="1,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+       
+        <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+       
+        <ItemContainer capacity="9" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="medical,chem,organ" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+       
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+    
+    <Item name="" identifier="surgerytoolbox" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer secondary="locker"/>
+       
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+       
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" amount="2"/>
+        </Fabricate>
+       
+        <Price baseprice="25">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
+        </Price>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="259,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="45" height="30" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,14" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="1" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+       
+        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+       
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+    
+    <Item name="" identifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+        <PreferredContainer secondary="locker"/>
+       
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+       
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" amount="3"/>
+            <Item identifier="zinc" amount="2"/>
+            <Item identifier="fpgacircuit" amount="1"/>
+            <Item identifier="titaniumaluminiumalloy" amount="1"/>
+        </Fabricate>
+       
+        <Price baseprice="25">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
+        </Price>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="259,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="45" height="30" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,14" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="1" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+       
+        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="traumashears" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
+       
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+
+    <Item name="" identifier="medstartercrate" tags="crate" scale="0.4" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true" description="">
+        <Price baseprice="600">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
+        </Price>
+       
+        <Deconstruct/>
+        
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" amount="8"/>
+            <Item identifier="copper" amount="2"/>
+            <Item identifier="zinc" amount="3"/>
+            <Item identifier="organicfiber" amount="6"/>
+            <Item identifier="plastic" amount="8"/>
+        </Fabricate>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" depth="0.54" sourcerect="158,578,146,82" origin="0.5,0.5" />
+        <Body width="145" height="85" density="50" />
+        <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
+        
+        <ItemContainer capacity="9" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="medtoolbox,medical,surgerytoolbox" excludeditems="cargoscooter" />
+        </ItemContainer>
+        
+        <ItemComponent>
+            <StatusEffect type="OnSpawn" target="This" disabledeltatime="true">
+                <Conditional scale="0.4" />
+                <LuaHook name="NT.medstartercrate.spawn" />
+            </StatusEffect>
+        </ItemComponent>
+    </Item>
+
+    <!-- a bodybag *is* a container of sorts, right? -->
+    <Item name="" identifier="bodybag" category="Equipment" tags="provocative,mediumitem" scale="0.9" fireproof="false" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+        <Price baseprice="60" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6"/>
+        </Price>
+        
+        <Fabricate suitablefabricators="fabricator" requiredtime="15">
+            <RequiredSkill identifier="medical" level="5" />
+            <RequiredItem identifier="plastic" />
+        </Fabricate>
+        
+        <Deconstruct time="10"/>
+
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.75" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+        <InventoryIcon texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" depth="0.55" origin="0.5,0.5" />
+        <Body radius="20" width="67" density="15" />
+        
+        <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
+            <sprite texture="%ModDir%\Images/Suits/bodybaghelmets.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" hideotherwearables="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+          
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+           
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+            
+            <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.8" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true" />
+            
+            <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
+                <Affliction identifier="bodybagoverlay" amount="3"/>
+            </StatusEffect>
+            
+            <StatusEffect type="OnWearing" target="Character" interval="0.25" disabledeltatime="true">
+                <LuaHook name="bodybag.dragfast" custom="Character" />
+            </StatusEffect>
+
+            <!--
+            <StatusEffect type="OnWearing" target="NearbyCharacters" range="100" stackable="true" setvalue="true">
+                <Conditional ishuman="true"/>
+                <Affliction identifier="stretchers" amount="100" />
+            </StatusEffect>
+            -->
+        </Wearable>
+        
+        <aitarget maxsightrange="50" />
+    </Item>
+    
+    <Item name="" identifier="stasisbag" category="Equipment" useinhealthinterface="True" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbagequipconfirmation">
+        <Price baseprice="1500" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+       
+        <Fabricate suitablefabricators="fabricator" requiredtime="50">
+            <RequiredSkill identifier="medical" level="50" />
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="stabilozine" />
+            <RequiredItem identifier="mannitol" />
+            <RequiredItem identifier="potassium" />
+        </Fabricate>
+       
+        <Deconstruct time="10">
+            <Item identifier="plastic" />
+            <Item identifier="potassium" />
+        </Deconstruct>
+       
+        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+        <InventoryIcon texture="%ModDir%\Images\Suits\bag.png" sourcerect="0,0,67,46" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%\Images\Suits\bag.png" sourcerect="0,0,68,46" depth="0.55" origin="0.5,0.5" />
+        <Body radius="20" width="67" density="15" />
+      
+        <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
+            
+            <sprite texture="%ModDir%\Images/Suits/baghelmets.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" hideotherwearables="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/stasisbag.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
+            
+            <StatusEffect settags="stasis" type="OnWearing" target="Character" duration="1" stackable="false" />
+            
+            <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
+                <!--<Affliction identifier="givein" amount="10" />-->
+                <Affliction identifier="stasis" amount="3"/>
+                <Affliction identifier="stasisbagoverlay" amount="3"/>
+            </StatusEffect>
+            
+            <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="7000.0" SpeedMultiplier="-10.0" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true" />
+
+            <StatusEffect type="OnWearing" target="Character" interval="0.25" disabledeltatime="true">
+                <LuaHook name="bodybag.dragfast" custom="Character" />
+            </StatusEffect>
+            
+            <StatusEffect type="OnWearing" target="This" Condition="-0.25" />
+            
+            <StatusEffect type="OnBroken" target="This">
+                <Remove />
+            </StatusEffect>
+            
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bloodloss,hypoxemia,cerebralhypoxia,organdamage,gangrene,sepsis,psychosis" damagemultiplier="0.0" damagesound="LimbArmor" />
+            <StatValue stattype="FlowResistance" value="0.9" />
+
+            <!-- 
+            <StatusEffect type="OnWearing" target="NearbyCharacters" range="150" stackable="true" setvalue="true">
+                <Affliction identifier="stretchers" amount="100" />
+            </StatusEffect> 
+            -->
+        </Wearable>
+        
+        <Holdable canBeCombined="true" slots="Any" handle1="0,0" msg="ItemMsgPickUpSelect" />
+        <aitarget maxsightrange="50" />
+    </Item>
+    
+    <!-- TODO
+    <Item name="" identifier="emergencysuit" category="Equipment" useinhealthinterface="True" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="emergencysuitequipconfirmation">
+        <Price baseprice="800" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+       
+        <Fabricate suitablefabricators="fabricator" requiredtime="50">
+            <RequiredSkill identifier="medical" level="50" />
+            <RequiredItem identifier="combatdivingsuit" />
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="fpgacircuit" />
+            <RequiredItem identifier="rubber" />
+        </Fabricate>
+       
+        <Deconstruct time="10">
+            <Item identifier="plastic" />
+            <Item identifier="steel" />
+        </Deconstruct>
+       
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+        <InventoryIcon texture="%ModDir%\Images\Suits\redsuit.png" sourcerect="0,0,67,46" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%\Images\Suits\redsuit.png" sourcerect="0,0,68,46" depth="0.55" origin="0.5,0.5" />
+        <Body radius="20" width="67" density="15" />
+      
+        <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuithelmets.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" hideotherwearables="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <sprite texture="%ModDir%\Images/Suits/emergencysuit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+            
+            <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+            
+            <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="7000.0" SpeedMultiplier="-10.0" LowPassMultiplier="0.1" setvalue="true" disabledeltatime="true">
+                <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+                <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+                <Affliction identifier="table" amount="2"/>
+            </StatusEffect>
+
+            <StatusEffect type="OnWearing" target="Character" interval="0.25" disabledeltatime="true">
+                <LuaHook name="bodybag.dragfast" custom="Character" />
+            </StatusEffect>
+            
+            <StatusEffect type="OnBroken" target="This">
+                <Remove />
+            </StatusEffect>
+            
+            
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding,explosiondamage" damagemultiplier="0.80" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
+            <StatValue stattype="FlowResistance" value="0.9" />
+        </Wearable>
+        <ItemContainer capacity="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+          <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+          <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+          <StatusEffect type="OnWearing" target="Contained" targetslot="0" playsoundonrequireditemfailure="true">
+            <RequiredItem items="oxygensource" type="Contained" targetslot="0" matchonempty="true" />
+            <Conditional condition="lte 0.0" />
+            <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
+          </StatusEffect>
+          <SubContainer capacity="1" maxstacksize="1">
+            <Containable items="oxygensource,weldingtoolfuel" />
+            <Containable items="oxygensource">
+              <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" />
+              <StatusEffect type="OnWearing" target="Contained" Condition="-0.2" comparison="And">
+                <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+              </StatusEffect>
+              <StatusEffect type="OnWearing" target="Contained">
+                <Conditional condition="lt 5.0" />
+                <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true"/>
+              </StatusEffect>
+            </Containable>
+            <Containable items="oxygenitetank">
+              <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-10.0" setvalue="true" targetslot="0" comparison="And">
+                <Conditional IsDead="false" />
+                <Conditional DecreasedOxygenConsumption="lt 99" />
+                <Conditional NeedsAir="true" />
+              </StatusEffect>
+            </Containable>
+            <Containable items="weldingfueltank" blameequipperfordeath="true">
+              <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+                <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+              </StatusEffect>
+              <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+                <Conditional IsDead="false" />
+                <Conditional DecreasedOxygenConsumption="lt 99" />
+                <Conditional NeedsAir="true" />
+              </StatusEffect>
+            </Containable>
+            <Containable items="incendiumfueltank" blameequipperfordeath="true">
+              <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+                <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+              </StatusEffect>
+              <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+                <Affliction identifier="burn" amount="20.0"  />
+                <Conditional IsDead="false" />
+                <Conditional DecreasedOxygenConsumption="lt 99" />
+                <Conditional NeedsAir="true" />
+              </StatusEffect>
+            </Containable> 
+          </SubContainer>
+          <SubContainer capacity="1" maxstacksize="1">
+            <Containable items="mobilebattery">
+              <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
+                <Conditional IsDead="false" />
+              </StatusEffect>
+              <StatusEffect type="OnWearing" target="Contained,Character">
+                <Conditional condition="gt 0.5"/>
+                <Affliction identifier="alv" amount="10"/>
+              </StatusEffect>
+              <StatusEffect type="OnWearing" target="Contained" Condition="-0.3" comparison="And">
+                <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+                <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+              </StatusEffect>
+            </Containable>
+          </SubContainer>
+        </ItemContainer>
+        
+        <Holdable canBeCombined="false" slots="Any" handle1="0,0" msg="ItemMsgPickUpSelect" />
+        <aitarget maxsightrange="50" />
+    </Item>
+    -->
+</Items>
+</Override>

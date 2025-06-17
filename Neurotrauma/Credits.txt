@@ -1,14 +1,23 @@
 
+Evil Factory - Lua help
+I only use this when bored - Better scanner code and contributions to config GUI
+Luka - Config GUI contributions
+ThousandFields - Code contributions
+Ydrec - Code contributions
+Nebual - Code contributions
+Heelge - Sprite and code contributions
+_[|M|]_ - Bag overlays
+peelz - Bloodpack conversion code
+Vetinarix - Propofol maintenance
+themanyfaceddemon - Split XML into files, meta data for barotrauma mod loader
 Viktor Livingshield - Russian localization
 Brian Damage - Russian localization
 Kaofan - Polish localization
 Krzeszny - Polish localization
 rermi - French localization
-Evil Factory - Lua help
-peelz - Bloodpack conversion code
-Vetinarix - Propofol maintenance
 JellyQoo - Korean localization
 MEI - Portuguese localization
 Oskar - Spanish localization
 mefy - Turkish localization
 profole - German localization
+Liatoast - Further improvements to German localization

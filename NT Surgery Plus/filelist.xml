@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Surgery Plus" path="%ModDir%/filelist.xml" corepackage="false" gameversion="0.16.7.0" steamworkshopid="2790455798" installtime="1650155527">
+<contentpackage name="NT Surgery Plus" corepackage="false" gameversion="0.16.7.0" >
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
-  <Item file="%ModDir%/Xml/items.xml" />
+  <Item file="%ModDir%/Xml/Items/BodyParts/Organs.xml" />
+  <Item file="%ModDir%/Xml/Items/Gear/Clothes.xml" />
+  <Item file="%ModDir%/Xml/Items/Gear/Defibrillators.xml" />
+  <Item file="%ModDir%/Xml/Items/Surgery/Implants.xml" />
+  <Item file="%ModDir%/Xml/Items/Surgery/Instruments.xml" />
+  <Item file="%ModDir%/Xml/Items/Surgery/Scalpels.xml" />
+  <Item file="%ModDir%/Xml/Items/Chemicals.xml" />
+  <Item file="%ModDir%/Xml/Items/Consumables.xml" />
+  <Item file="%ModDir%/Xml/Items/Containers.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Text file="%ModDir%/Localization/Russian/Russian.xml" />
   <Text file="%ModDir%/Localization/Polish/Polish.xml" />
@@ -11,6 +19,7 @@
 	<Text file="%ModDir%/Localization/Portuguese/Portuguese.xml" />
 	<Text file="%ModDir%/Localization/Turkish/Turkish.xml" />
 	<Text file="%ModDir%/Localization/Spanish/Spanish.xml" />
+	<Text file="%ModDir%/Localization/Chinese/Chinese.xml" />
 	<Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Talents file="%ModDir%/Xml/TalentsSurgeon.xml" />
   <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />

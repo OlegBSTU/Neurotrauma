@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <Override>
+  <!-- Translations provided by the wonderful 殇泣乀! https://steamcommunity.com/profiles/76561198852819481-->
+  <!-- ITEMS -->
+  <entityname.mannitolplus>甘露醇+</entityname.mannitolplus>
+  <entitydescription.mannitolplus>甘露醇的升级版，可以更加快速的治疗精神创伤。</entitydescription.mannitolplus>
+  <entityname.artificialbrain>人工仿生大脑</entityname.artificialbrain>
+  <entitydescription.artificialbrain>一种专门为移植设计的人造大脑，当原大脑被切除时，它可以使身体仍然存活。</entitydescription.artificialbrain>
+  <entityname.surgeonclothes>外科医生制服</entityname.surgeonclothes>
+  <entitydescription.surgeonclothes>一种无菌的外科护具，穿上它可以有效防止手术时的感染。</entitydescription.surgeonclothes>
+  <entityname.surgicalmask>医用口罩</entityname.surgicalmask>
+  <entitydescription.surgicalmask>用于手术过程中隔离空气中的病原体。</entitydescription.surgicalmask>
+  <entityname.brainjar>脑罐</entityname.brainjar>
+  <entitydescription.brainjar>一个可以永久存放大脑的罐子</entitydescription.brainjar>
+  <entityname.surgicaldrapes>手术创巾</entityname.surgicaldrapes>
+  <entitydescription.surgicaldrapes>无菌薄布，用于防止手术时的感染。</entitydescription.surgicaldrapes>
+  <entityname.skillbooksurgery>'医疗时不应踩的雷区'</entityname.skillbooksurgery>
+  <entitydescription.skillbooksurgery>一本包含许多外科手术知识和手术步骤详解的手册。</entitydescription.skillbooksurgery>
+  <entityname.triagetag>伤患分类标签(自动)</entityname.triagetag>
+  <entitydescription.triagetag>在多名船员伤亡时，用于确定患者伤情，进行所需护理类型和紧急程度分类的标签。</entitydescription.triagetag>
+  <entityname.manualtriagetag>伤患分类标签(手动)</entityname.manualtriagetag>
+  <entitydescription.manualtriagetag>人工伤患分类标签。优先级是腿部受伤为绿色，手臂受伤为黄色，躯干受伤为红色，头部受伤为黑色。</entitydescription.manualtriagetag>
+  <entityname.experimentaltreatment>实验性药物</entityname.experimentaltreatment>
+  <entitydescription.experimentaltreatment>这是一种实验性药物，跟开盲盒似的，增益和减益全看脸。</entitydescription.experimentaltreatment>
+  <entityname.suture>缝合线</entityname.suture>
+  <entitydescription.suture>可降解的生物缝合线，用来缝合外伤伤口和手术刀口。</entitydescription.suture>
+  <entityname.bloodpackominus>O-血袋</entityname.bloodpackominus>
+  <entitydescription.bloodpackominus>它可以输给任何血型的人。蕾米莉亚大小姐的最爱。</entitydescription.bloodpackominus>
+  <entityname.propofol>异丙酚</entityname.propofol>
+  <entitydescription.propofol>短效程药物，让患者失去意识和知觉，说白了就是麻醉剂，用于开始手术使用的全身麻醉。至少能让手术台上的人少叫几声。</entitydescription.propofol>
+  <!-- AFFLICTIONS -->
+  <afflictionname.preventativepermit>预防性许可证</afflictionname.preventativepermit>
+  <afflictiondescription.preventativepermit>不容易受到致命打击。</afflictiondescription.preventativepermit>
+  <afflictionname.artificialbrain>人工仿生脑</afflictionname.artificialbrain>
+  <afflictiondescription.artificialbrain>患者其实已经死了，但他的身体仍然活着。</afflictiondescription.artificialbrain>
+  <afflictionname.triagetag_green>伤患标签：“擦碰”</afflictionname.triagetag_green>
+  <afflictiondescription.triagetag_green>患者被贴上了“擦碰”的伤患标签。目前还不需要治疗。</afflictiondescription.triagetag_green>
+  <afflictionname.triagetag_yellow>伤患标签：“轻伤”</afflictionname.triagetag_yellow>
+  <afflictiondescription.triagetag_yellow>患者被贴上了“轻伤”的伤患标签。他们的伤势并没有生命危险。</afflictiondescription.triagetag_yellow>
+  <afflictionname.triagetag_red>伤患标签：“紧急”</afflictionname.triagetag_red>
+  <afflictiondescription.triagetag_red>患者被贴上了“紧急”的伤患标签。他们需要立即治疗！</afflictiondescription.triagetag_red>
+  <afflictionname.triagetag_black>伤患标签：“死亡”</afflictionname.triagetag_black>
+  <afflictiondescription.triagetag_black>患者被贴上了“死亡”的伤患标签。基本没救了，把人都撤走吧，让他死快点。对了，他签了遗体捐献书，如果可以记得把他的器官都挖走。</afflictiondescription.triagetag_black>
+  <!-- JOBS -->
+  <jobname.surgeon>外科医生</jobname.surgeon>
+  <jobdescription.surgeon>虽然普通医生更适合急救和发生紧急事件时的快速反应，但他们远没有外科医生熟悉手术流程。外科医生执行的手术感染风险较低，执行速度更快，可以毫不夸张的说，如果和手术有关，那必然也和外科医生有关。</jobdescription.surgeon>
+  <skillname.surgery>外科手术</skillname.surgery>
+  <!-- 原版精创手术内容TALENTS -->
+  <talenttree.researcher>研究员</talenttree.researcher>
+  <talenttree.hospitalizer>住院医师</talenttree.hospitalizer>
+  <talenttree.fieldsurgeon>野战医生</talenttree.fieldsurgeon>
+  <talentname.ntsp_autoimmune>自身免疫系统抑制</talentname.ntsp_autoimmune>
+  <talentdescription.ntsp_autoimmune>移植的器官即使不吃阻断剂也不会被排斥。</talentdescription.ntsp_autoimmune>
+  <talentname.ntsp_firemanscarry>消防搬运</talentname.ntsp_firemanscarry>
+  <talentname.ntsp_properfol>异丙酚专家</talentname.ntsp_properfol>
+  <talentdescription.ntsp_properfol>你给患者打的[itemname]会立即生效。</talentdescription.ntsp_properfol>
+  <talentname.ntsp_soothingsurgeon>安抚性外科医生</talentname.ntsp_soothingsurgeon>
+  <talentdescription.ntsp_soothingsurgeon>你做的手术更少发生创伤性休克。</talentdescription.ntsp_soothingsurgeon>
+  <talentname.ntsp_imadoctornota>我是一个医生！而不是...</talentname.ntsp_imadoctornota>
+  <talentname.ntsp_preventativepermit>预防性许可证</talentname.ntsp_preventativepermit>
+  <talentdescription.ntsp_preventativepermit>最后一个得到你命令的人获得[physicalresistance]%的伤害抗性，并避免其受到致命的打击。</talentdescription.ntsp_preventativepermit>
+  <talentname.ntsp_medicallicence>医疗执照</talentname.ntsp_medicallicence>
+  <talentdescription.ntsp_medicallicence>你切除的器官将以全价出售。</talentdescription.ntsp_medicallicence>
+  <talentname.ntsp_bedsidemanner>严阵以待</talentname.ntsp_bedsidemanner>
+  <talentdescription.ntsp_bedsidemanner>加速你身边伤员的恢复速度，如果他们躺在床上效果会翻倍。</talentdescription.ntsp_bedsidemanner>
+  <talentname.ntsp_rinseandrepeat>洗洗还能用</talentname.ntsp_rinseandrepeat>
+  <talentdescription.ntsp_rinseandrepeat>血管内球囊、通气针和引流器在使用时不会被消耗。</talentdescription.ntsp_rinseandrepeat>
+  <talentname.ntsp_underpressure>压力重重</talentname.ntsp_underpressure>
+  <talentdescription.ntsp_underpressure>你身边已经休克的伤员会获得[amount]%对于失血、器官损伤和精神创伤的抗性。</talentdescription.ntsp_underpressure>
+  <talentname.ntsp_rapiddeoployment>快速部署</talentname.ntsp_rapiddeoployment>
+  <talentdescription.ntsp_rapiddeoployment>获得相当于手术技能[skillpercentage]%的移动速度加成。</talentdescription.ntsp_rapiddeoployment>
+  <talentname.ntsp_humanmachine>人型机械</talentname.ntsp_humanmachine>
+  <talentname.ntsp_firstaidtraining>急救先遣队</talentname.ntsp_firstaidtraining>
+  <talentname.ntsp_mannitol>甘露醇狂人</talentname.ntsp_mannitol>
+  <talentname.ntsp_experimental>非正规的药物来源</talentname.ntsp_experimental>
+  <talentname.ntsp_frankenstein>科学怪人</talentname.ntsp_frankenstein>
+  <!-- Curly的精创手术内容TALENTS -->
+  <talenttree.ethicalmedicine>医学伦理</talenttree.ethicalmedicine>
+  <talenttree.dabblingpharmacist>业余药剂师</talenttree.dabblingpharmacist>
+  <talentname.ntsp_fisharespecimens>禁止食用样本！</talentname.ntsp_fisharespecimens>
+  <talentdescription.ntsp_fisharespecimens>当你或其他船员在潜艇外杀死怪物时，你有 [amount]% 的几率在怪物身上找到随机遗传物质。</talentdescription.ntsp_fisharespecimens>
+  <talentname.ntsp_surgeonsintuition>外科医生的直觉</talentname.ntsp_surgeonsintuition>
+  <talentdescription.ntsp_surgeonsintuition>当你第一次打开一个医疗或者异星容器时，你有[probability]%的几率找到额外的物品</talentdescription.ntsp_surgeonsintuition>
+  <talentname.ntsp_unspecialisedspecialist>非专业专家</talentname.ntsp_unspecialisedspecialist>
+  <talentdescription.ntsp_unspecialisedspecialist>获取 [skillname]的[amount] 技能点数。</talentdescription.ntsp_unspecialisedspecialist>
+  <talentname.ntsp_captainresist>娱乐性射击警告！</talentname.ntsp_captainresist>
+  <talentname.ntsp_fallenandcantgetup>摆烂</talentname.ntsp_fallenandcantgetup>
+  <talentname.ntsp_imasurgeonnota>只是外科医生…？</talentname.ntsp_imasurgeonnota>
+  <talentname.ntsp_brucereitzperk>外科鼻祖</talentname.ntsp_brucereitzperk>
+  <talentdescription.ntsp_brucereitzperk>你切除的器官将以全价出售且移植的器官即使不吃阻断剂也不会被排斥。</talentdescription.ntsp_brucereitzperk>
+  <talentname.ntsp_ultrasoniccleaner>洗洗还能用</talentname.ntsp_ultrasoniccleaner>
+  <talentdescription.ntsp_rnr>血管内球囊、通气针和引流器在使用时不会被消耗。</talentdescription.ntsp_rnr>
+  <talentdescription.ntsp_sterlise>当手术没有引发败血症时获取 [amount] 技能奖励，好耶！</talentdescription.ntsp_sterlise>
+  <talentdescription.ntsp_rapiddeoploymentdrag>你可以全速拖动角色</talentdescription.ntsp_rapiddeoploymentdrag>
+  <talentname.ntsp_homecarepackage>预备包</talentname.ntsp_homecarepackage>
+  <talentdescription.ntsp_homecarepackage>在每个巡回开始时，获得：</talentdescription.ntsp_homecarepackage>
+  <talentname.ntsp_selfcare>自我护理</talentname.ntsp_selfcare>
+  <talentdescription.ntsp_selfcarepsychosis>获得 [amount]% 的 [affliction] 抗性</talentdescription.ntsp_selfcarepsychosis>
+  <talentdescription.ntsp_selfcareunlocktree>解锁当前天赋树中尚未获取的天赋</talentdescription.ntsp_selfcareunlocktree>
+  <talentname.ntsp_therapisttintraining>实习医师</talentname.ntsp_therapisttintraining>
+  <talentdescription.ntsp_therapisttintraining>获得 [amount]% 的额外生命值</talentdescription.ntsp_therapisttintraining>
+  <talentname.ntsp_adrenalinepump>肾上腺素泵</talentname.ntsp_adrenalinepump>
+  <talentname.ntsp_autodidact>自学成才</talentname.ntsp_autodidact>
+  <talentdescription.ntsp_autodidact>如果在巡回结束后你治疗了船员，获得 [amount]% 的额外经验</talentdescription.ntsp_autodidact>
+  <talentname.ntsp_injectorgeneral>通用注射</talentname.ntsp_injectorgeneral>
+  <talentdescription.ntsp_injectorgeneral>你所使用的医疗物品拥有额外 [amount]% 效果</talentdescription.ntsp_injectorgeneral>
+  <talentname.ntsp_fellowtoaster>卷死工程师</talentname.ntsp_fellowtoaster>
+  <talentdescription.ntsp_imasurgeonnota1>在你的 "外科智慧™" 的加持下，你可以获得 [amount] 额外技能点</talentdescription.ntsp_imasurgeonnota1>
+  <talentdescription.ntsp_imasurgeonnota2>或者你可以选择 [jobname]，这将给予你额外 [amount] 的全职业技能点</talentdescription.ntsp_imasurgeonnota2>
+</Override>
+</infotexts>

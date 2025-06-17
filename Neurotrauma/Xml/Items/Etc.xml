@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="operatingtable" scale="0.4" Tags="" maxstacksize="1" category="medical" description="" isshootable="true">
+        <Upgrade gameversion="0.12.0.0" noninteractable="false"/>
+        <Body width="416" height="192" density="40"/>
+
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Deconstruct time="10">
+            <Item identifier="steel"/>
+            <Item identifier="aluminium"/>
+            <Item identifier="copper"/>
+        </Deconstruct>
+
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="medical" level="50"/>
+            <RequiredItem identifier="fpgacircuit"/>
+            <RequiredItem identifier="plastic"/>
+            <RequiredItem identifier="steel"/>
+            <RequiredItem identifier="aluminium"/>
+        </Fabricate>
+
+        <InventoryIcon texture="%ModDir%/Images/MedBayAssets.png" sourcerect="96,304,416,192" origin="0.5,0.5"/>
+        <sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.75" premultiplyalpha="false" origin="0.5,0.5"/>
+
+        <Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="5" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="200" stackable="true">
+                <Affliction identifier="table" amount="2"/>
+                <Affliction identifier="alv" amount="10"/>
+            </StatusEffect>
+            <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
+                <LuaHook name="surgerytable.update" />
+            </StatusEffect>
+        </Holdable>
+
+        <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
+            <sprite texture="%ModDir%/Images/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0"/>
+        </LightComponent>
+
+        <Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+            <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
+            <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
+            <limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
+            <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
+            <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
+            <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
+            <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
+            <!--
+            <StatusEffect type="Always" target="NearbyCharacters" range="100">
+                <Conditional sym_unconsciousness="gt 0.1"/>
+                <LuaHook name="surgerytable.forceon" />
+            </StatusEffect>
+            -->
+            <StatusEffect type="OnActive" target="Character">
+                <reduceaffliction identifier="nausea" strength="0.05"/>
+                <reduceaffliction identifier="opiatewithdrawal" strength="0.05"/>
+                <reduceaffliction identifier="opiateaddiction" strength="0.05"/>
+                <reduceaffliction identifier="chemwithdrawal" strength="0.05"/>
+                <reduceaffliction identifier="chemaddiction" strength="0.05"/>
+                <reduceaffliction identifier="alcoholwithdrawal" strength="0.05"/>
+                <reduceaffliction identifier="alcoholaddiction" strength="0.05"/>
+                <reduceaffliction identifier="drunk" strength="0.05"/>
+                <reduceaffliction identifier="concussion" strength="0.02"/>
+            </StatusEffect>
+        </Controller>
+
+        <!-- Controller output was made editable in v1.1.4.0, disallow it on surgery tables -->
+        <Upgrade gameversion="1.1.4.0" allowingameediting="false" />
+        <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+            <GuiFrame relativesize="0.15,0.6" minsize="300,450" maxsize="380,500" anchor="Center" style="ConnectionPanel" />
+            <RequiredItem items="screwdriver" type="Equipped" />
+            <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+            <output name="alive_out" displayname="connection.aliveout"/>
+            <output name="conscious_out" displayname="connection.consciousout"/>
+            <output name="name_out" displayname="connection.nameout" />
+            <output name="vitality_out" displayname="connection.vitalityout" />
+            <output name="heartrate_out" displayname="connection.heartrateout" />
+            <output name="breathingrate_out" displayname="connection.breathingrateout" />
+            <output name="bloodpressure_out" displayname="connection.bloodpressureout" />
+            <output name="bloodoxygen_out" displayname="connection.bloodoxygenout" />
+            <output name="neurotrauma_out" displayname="connection.neurotraumaout" />
+            <output name="organdamage_out" displayname="connection.organdamageout" />
+            <output name="insurgery_out" displayname="connection.insurgeryout" />
+            <output name="causeofdeath_out" displayname="connection.causeofdeathout" />
+            <output name="bloodph_out" displayname="connection.bloodphout" />
+        </ConnectionPanel>
+    </Item>
+
+    <Item name="" identifier="wheelchair" category="Equipment" tags="provocative,mediumitem" scale="0.5" fireproof="false" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
+        <Price baseprice="100" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+        </Price>
+
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="medical" level="20" />
+            <RequiredSkill identifier="mechanical" level="30" />
+            <RequiredItem identifier="steel" />
+            <RequiredItem identifier="titaniumaluminiumalloy" />
+        </Fabricate>
+
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+
+        <PreferredContainer primary="medcab" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,768,256,256" depth="0.55" origin="0.5,0.5" />
+        <Body radius="60" width="60" density="15" />
+
+        <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="true">
+            <sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="false" sourcerect="0,768,256,256" inheritlimbdepth="false" depth="0.10003" />
+            <!-- depth="0.11504" -->
+        </Wearable>
+
+        <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+            <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
+            <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
+            <limbposition limb="Waist" position="244,-80" allowusinglimb="true"/>
+            <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true"/>
+            <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
+            <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
+            <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
+        </Controller>
+        <aitarget maxsightrange="50" />
+    </Item>
+
+    <Item name="" identifier="blahaj" category="Equipment" cargocontaineridentifier="metalcrate" impactsoundtag="impact_squeak" RequireAimToUse="True" Tags="smallitem,medical,mountableweapon" description="" useinhealthinterface="True" scale="0.25">
+        <Fabricate suitablefabricators="fabricator" requiredtime="5">
+            <RequiredSkill identifier="mechanical" level="10"/>
+            <RequiredItem identifier="plastic"/>
+        </Fabricate>
+
+        <Deconstruct time="5"/>
+
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,835,256,189" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="80" density="9"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="-20,0" handle2="-10,5" holdangle="60" reload="1" range="100" combatpriority="5" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+                <Sound file="%ModDir%/Sound/squeak1.ogg" type="OnUse" range="500"/>
+                <Sound file="%ModDir%/Sound/squeak2.ogg" type="OnUse" range="500"/>
+                <Sound file="%ModDir%/Sound/squeak3.ogg" type="OnUse" range="500"/>
+                <Sound file="%ModDir%/Sound/squeak4.ogg" type="OnUse" range="500"/>
+                <Sound file="%ModDir%/Sound/squeak5.ogg" type="OnUse" range="500"/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+</Items>
+</Override>

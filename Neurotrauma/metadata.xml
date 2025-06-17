@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <meta>
+        <author>guns</author>
+        <id>guns.Neurotrauma</id>
+    </meta>
+
+    <dependencies>
+        <conflict name="Neurotrauma" steamID="2776270649" message="Mods do not combine, please remove Neurotrauma by Mannatu, as it is no longer supported"/>
+    </dependencies>
+</metadata>

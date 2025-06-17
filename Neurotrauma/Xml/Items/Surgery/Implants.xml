@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+        <PreferredContainer primary="locker"/>
+
+        <Fabricate suitablefabricators="medicalfabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="titaniumaluminiumalloy"/>
+            <RequiredItem identifier="liquidoxygenite"/>
+            <RequiredItem identifier="calcium"/>
+        </Fabricate>
+
+        <Deconstruct time="10"/>
+
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="87,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="65" height="15" density="50"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb, this" comparison="and">
+                <Conditional drilledbones="gte 99"/>
+                <Conditional analgesia="gte 1"/>
+                <Sound file="%ModDir%/Sound/drill.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+
+    <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool">
+        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator">
+            <RequiredSkill identifier="medical" level="70"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="titaniumaluminiumalloy"/>
+            <RequiredItem identifier="liquidoxygenite"/>
+            <RequiredItem identifier="calcium"/>
+        </Fabricate>
+
+        <Deconstruct time="10"/>
+
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="344,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="60" height="90" density="20"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
+                <Conditional retractedskin="gt 50"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+</Items>
+</Override>

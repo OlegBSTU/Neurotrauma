@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <!-- Tourniquet / clamps bleeding arteries / causes gangrene if left on for too long -->
+    <Item name="" identifier="tourniquet" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="2">
+            <RequiredSkill identifier="medical" level="15"/>
+            <RequiredItem identifier="organicfiber"/>
+        </Fabricate>
+
+        <Deconstruct time="2"/>
+
+        <Price baseprice="60" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,128,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+        <SuitableTreatment identifier="arterialcut" suitability="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <RequiredSkill identifier="medical" level="30"/>
+            <StatusEffect type="OnUse" target="This">
+                <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500"/>
+                <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <!-- Needle / prevents pneuomothorax from worsening -->
+    <Item name="" identifier="needle" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="4">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
+
+        <Price baseprice="80" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="40" amount="4">
+            <RequiredSkill identifier="medical" level="20"/>
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="aluminium" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="640,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="35" height="65" density="20"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="20"/>
+    </Item>
+
+    <!-- Gel ice pack / a better version of bandage for blunt force trauma / worsens infection on open wounds -->
+    <Item name="" identifier="gelipack" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical,canexpire" useinhealthinterface="true" description="" scale="0.275" impactsoundtag="impact_soft">
+        <Upgrade gameversion="0.10.0.0" scale="0.5"/>
+        <PreferredContainer primary="medcab" minamount="2" maxamount="3"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.35"/>
+        <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
+        <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
+
+        <Price baseprice="100">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
+            <RequiredSkill identifier="medical" level="40"/>
+            <RequiredItem identifier="antibloodloss1"/>
+            <RequiredItem identifier="sodium" amount="2"/>
+            <RequiredItem identifier="carbon" amount="2"/>
+        </Fabricate>
+
+        <Deconstruct time="5">
+            <Item identifier="carbon"/>
+        </Deconstruct>
+
+        <SuitableTreatment identifier="blunttrauma" suitability="40"/>
+        <SuitableTreatment identifier="infectedwound" suitability="-100"/>
+        <SuitableTreatment identifier="inflammation" suitability="-100"/>
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,256,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="896,512,128,128" depth="0.6" origin="0.5,0.5"/>
+        <Body width="80" height="45" density="11"/>
+
+        <MeleeWeapon canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+            <!-- HE compatibility -->
+            <StatusEffect type="Always" target="This" interval="5" disabledeltatime="true" condition="-0.15">
+                <Conditional hastag="neq refrigerated" targetcontainer="true" />
+                <Conditional HasStatusTag="neq activecooling" targetcontainer="true" />
+            </StatusEffect>
+            <!-- HE compatibility -->
+            <StatusEffect type="OnContained" target="This" interval="5" disabledeltatime="true" condition="17.5">
+                <Conditional hastag="refrigerated" targetcontainer="true" />
+                <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+        </MeleeWeapon>
+
+        <AiTarget sightrange="1000" static="true"/>
+        <SkillRequirementHint identifier="medical" level="40"/>
+    </Item>
+</Items>
+</Override>

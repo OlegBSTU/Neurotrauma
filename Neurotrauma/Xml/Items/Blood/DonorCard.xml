@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="ominuscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="opluscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="aminuscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="apluscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="bminuscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="bpluscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="abminuscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+
+    <Item name="" identifier="abpluscard" category="Equipment" description="" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+        <Body width="16" height="12" density="20"/>
+        <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+        <Deconstruct/>
+    </Item>
+</Items>
+</Override>

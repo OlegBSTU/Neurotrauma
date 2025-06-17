@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="bloodpackoplus" nameidentifier="bloodpackoplus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="200">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackaminus" nameidentifier="bloodpackaminus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="200">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackaplus" nameidentifier="bloodpackaplus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="150">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackbminus" nameidentifier="bloodpackbminus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="200">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackbplus" nameidentifier="bloodpackbplus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="150">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackabminus" nameidentifier="bloodpackabminus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="150">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <Item name="" identifier="bloodpackabplus" nameidentifier="bloodpackabplus" variantof="antibloodloss2">
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer secondary="medcontainer"/>
+
+        <Price baseprice="100">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+    </Item>
+
+    <!-- Maybe it's worth moving to Consumables.xml. By: TheManyFacedDemon -->
+    <Item name="" identifier="emptybloodpack" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
+
+        <Price baseprice="25">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" amount="4">
+            <RequiredSkill identifier="medical" level="10"/>
+            <RequiredItem identifier="plastic" />
+        </Fabricate>
+
+        <Deconstruct time="5"/>
+
+        <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,0,64,85" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,0,64,85" depth="0.6" origin="0.5,0.5"/>
+        <Body width="80" height="42" density="11"/>
+
+        <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </Holdable>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+</Items>
+</Override>

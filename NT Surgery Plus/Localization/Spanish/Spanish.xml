@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
+<Override>
 
 <!-- ITEMS -->
 
@@ -106,4 +107,5 @@
 <talentname.ntsp_experimental>Abastecimiento negligente</talentname.ntsp_experimental>
 <talentname.ntsp_frankenstein>Dc.Frankenstein</talentname.ntsp_frankenstein>
 
+</Override>
 </infotexts>

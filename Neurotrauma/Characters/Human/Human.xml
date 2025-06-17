@@ -12,7 +12,7 @@ PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDis
 DisableDistance="25000" SoundInterval="10">
   <name firstname="Content/Characters/Human/firstnames_[GENDER].txt" lastname="Content/Characters/Human/lastnames.txt" />
   <ragdolls folder="%ModDir%\Characters\Human\Ragdolls"/>
-  <animations folder="%ModDir%\Characters\Human\Animations"/>
+  <animations folder="Content\Characters\Human\Animations"/>
 
   <StatusEffect type="always" target="This" delay="1" stackable="false" disabledeltatime="true">
     <Conditional IsDead="false"/>
@@ -54,36 +54,36 @@ DisableDistance="25000" SoundInterval="10">
     <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
     <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
     <Limb name="Head">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="1,515,126,374" />
       <VitalityMultiplier type="damage" multiplier="1.0" />
     </Limb>
     <Limb name="Torso">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="631,515,126,374" />
       <VitalityMultiplier type="bleeding" multiplier="1.0" />
     </Limb>
     <Limb name="LeftArm">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="378,0,132,374" highlightarea="1,69,27,140" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="378,515,132,374" />
       <VitalityMultiplier type="damage" multiplier="0.15" />
       <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="RightArm">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="125,0,136,374" highlightarea="100,69,27,140" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="125,515,136,374" />
       <VitalityMultiplier type="damage" multiplier="0.15" />
       <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="LeftLeg">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="505,515,126,374" />
       <VitalityMultiplier type="damage" multiplier="0.15" />
       <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="RightLeg">
-      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
-      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+      <Sprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="260,0,107,374" highlightarea="68,180,57,194" />
+      <Highlightsprite texture="%ModDir:Neurotrauma%/Images/UI/MedUIAtlas.png" sourcerect="260,515,107,374" />
       <VitalityMultiplier type="damage" multiplier="0.15" />
       <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
@@ -332,6 +332,6 @@ DisableDistance="25000" SoundInterval="10">
     </Wearable>
 
   </HeadAttachments>
-  
+
 </Character>
 </Override>

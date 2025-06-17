@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+    <Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="locker"/>
+        
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="110" density="50"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+    </Item>
+
+    <Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.2">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,128,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="110" density="50"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="80" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="100" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-20" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and">
+                <Conditional analgesia="gte 1"/>
+                <Sound file="%ModDir%/Sound/drill.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+
+    <Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="100" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="50" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,-7" holdangle="90" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="And">
+                <Conditional analgesia="gte 1"/>
+                <Conditional retractedskin="gte 99"/>
+                <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak1.ogg" range="500"/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="50"/>
+    </Item>
+
+    <Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.150">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="65" height="65" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,-5" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+                <Sound file="%ModDir%/Sound/squelch1.ogg"/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <Item name="" identifier="traumashears" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgerytool" description="" useinhealthinterface="True" scale="0.5">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="50" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="55" density="50"/>
+        <SuitableTreatment identifier="dirtybandage" suitability="100"/>
+        <SuitableTreatment identifier="bandaged" suitability="100"/>
+        <SuitableTreatment identifier="gypsumcast" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_green" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_yellow" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_red" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_black" suitability="100"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="10,-10" holdangle="210" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and"/>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="10"/>
+    </Item>
+</Items>
+</Override>

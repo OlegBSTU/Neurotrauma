@@ -4,6 +4,7 @@
   <limb id="0" name="Torso (0)" type="Torso" height="70" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="30" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="1" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="160,0,112,192" origin="0.5,0.5" depth="0.06" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="160,0,112,192"/>
     <damagemodifier damagemultiplier="1.1" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <!--<damagemodifier damagemultiplier="1" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />-->
   </limb>
@@ -11,7 +12,8 @@
     <sprite texture="Content/Characters/Human/Human_[GENDER]_heads.png" sourcerect="0,0,128,128" depth="0.05" origin="0.5,0.5" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_heads_mask.png" />
     <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
-    <damagemodifier damagemultiplier="3" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damage.png" sourcerect="0,0,128,128"/>
+    <damagemodifier damagemultiplier="3" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional th_amputation="gt 0"/>
       <sprite texture="%ModDir%/Images/Human/Human_[GENDER].png" sourcerect="190,510,50,10" depth="0.05" origin="0.5,0.5" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -24,7 +26,8 @@
   <limb id="2" name="RightArm (2)" type="RightArm" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="3" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="272,0,64,96" origin="0.5,0.5" depth="0.02" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,0,64,96"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -35,7 +38,8 @@
   <limb id="3" name="RightHand (3)" type="RightHand" height="20" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="13" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="3" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="272,160,64,48" origin="0.44,0.4" depth="0.015" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,160,64,48"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -56,7 +60,8 @@
   <limb id="4" name="LeftArm (4)" type="LeftArm" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="336,0,64,96" origin="0.5,0.5" depth="0.14" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,0,64,96"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -67,7 +72,8 @@
   <limb id="5" name="LeftHand (5)" type="LeftHand" height="20" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="13" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="336,160,64,48" origin="0.44,0.4" depth="0.16" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,160,64,48"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -89,7 +95,8 @@
   <limb id="6" name="LeftThigh (6)" type="LeftThigh" height="65" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="20" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="4" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="80,0,80,128" origin="0.5,0.5" depth="0.13" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="80,0,80,128"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -100,7 +107,8 @@
   <limb id="7" name="LeftLeg (7)" type="LeftLeg" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="4" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="80,128,80,128" origin="0.5,0.5" depth="0.131" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="80,128,80,128"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -122,7 +130,8 @@
     <sprite texture="" sourcerect="336,208,64,48" origin="0.48,0.55" depth="0.132" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,208,64,48"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -143,7 +152,8 @@
   <limb id="9" name="RightThigh (9)" type="RightThigh" height="65" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="20" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="5" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="0,0,80,128" origin="0.5,0.5" depth="0.12" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="0,0,80,128"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
   
     <conditionalsprite exclusive="False">
@@ -154,7 +164,8 @@
   <limb id="10" name="RightLeg (10)" type="RightLeg" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="5" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="0,128,80,128" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="0,128,80,128"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -177,7 +188,8 @@
     <sprite texture="" sourcerect="272,208,64,48" origin="0.48,0.55" depth="0.122" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,208,64,48"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -198,13 +210,15 @@
   <limb id="12" name="Waist (12)" type="Waist" height="0" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="25" density="10" ignorecollisions="False" angulardamping="1000" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="1" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="160,192,112,64" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="160,192,112,64"/>
     <damagemodifier damagemultiplier="1.1" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <!--<damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />-->
   </limb>
   <limb id="13" radius="13" width="0" height="35" name="LeftForearm (13)" type="LeftForearm" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="180" steerforce="0" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="336,96,64,64" origin="0.5,0.5" depth="0.15" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="336,96,64,64"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     
     <conditionalsprite exclusive="True">
@@ -226,7 +240,8 @@
   <limb id="14" radius="13" width="0" height="35" name="RightForearm (14)" type="RightForearm" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="3" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="272,96,64,64" origin="0.5,0.5" depth="0.01" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="%ModDir%/Images/Human/Human_[GENDER]_mask.png" />
-    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagedsprite texture="Content/Characters/Human/Human_damageoverlay.png" sourcerect="272,96,64,64"/>
+    <damagemodifier damagemultiplier="0.7" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma,bitewounds,explosiondamage" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
 
     <conditionalsprite exclusive="True">

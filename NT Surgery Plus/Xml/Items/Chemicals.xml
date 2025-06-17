@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+  <!-- mannitol plus, talent item -->
+  <Item name="" identifier="mannitolplus" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="8">
+    <PreferredContainer primary="medcab" />
+    <Price baseprice="500" soldbydefault="false"></Price>
+    <SkillRequirementHint identifier="medical" level="70" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="medical" level="80" />
+      <RequiredSkill identifier="surgery" level="80" />
+      <RequiredItem identifier="mannitol" />
+      <RequiredItem identifier="adrenaline" />
+      <RequiredItem identifier="liquidoxygenite" />
+      <RequiredItem identifier="stabilozine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="mannitol" copycondition="true" mincondition="0.1" />
+      <Item identifier="adrenaline" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <SuitableTreatment identifier="cerebralhypoxia" suitability="30" />
+    <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="128,128,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="640,128,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <RequiredSkill identifier="medical" level="70"></RequiredSkill>
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="20">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="afmannitol" amount="8" />
+        <ReduceAffliction identifier="cerebralhypoxia" amount="20" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="afmannitol" amount="6" />
+        <ReduceAffliction identifier="cerebralhypoxia" amount="5" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Conditional entitytype="eq Character" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <Conditional entitytype="eq Character" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+        <Affliction identifier="stun" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+  </Item>
+  <!-- experimental treatment, talent item -->
+  <Item name="" identifier="experimentaltreatment" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="8">
+    <PreferredContainer primary="medcab" />
+    <Price baseprice="300" soldbydefault="false"></Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" requiresrecipe="true" amount="4">
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredSkill identifier="surgery" level="40" />
+      <RequiredItem identifier="propofol" />
+      <RequiredItem identifier="cyanide" />
+      <RequiredItem identifier="adrenaline" />
+      <RequiredItem identifier="uranium" />
+    </Fabricate>
+    <Deconstruct time="10" />
+    <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,192,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="256,256,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect tags="medical" type="OnUse" target="Character" />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  </Items>
+</Override>

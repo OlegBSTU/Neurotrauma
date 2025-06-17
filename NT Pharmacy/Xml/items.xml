@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Override>
 <Items>
     <!-- Courtesy of Grass's Pill bottles mod -->
@@ -158,7 +158,6 @@
     </Price>
     <Deconstruct time="15">
       <Item identifier="plastic" />
-      <Item identifier="fulgurium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="electrical" level="50" />
@@ -534,7 +533,7 @@
     <Deconstruct time="2">
       <Item identifier="plastic" outcondition="0.5" />
     </Deconstruct>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="4">
+    <Fabricate suitablefabricators="fabricator" requiredtime="4">
       <RequiredSkill identifier="medical" level="10" />
       <RequiredItem identifier="plastic" />
     </Fabricate>
@@ -569,7 +568,7 @@
     <Deconstruct time="2">
       <Item identifier="plastic" outcondition="0.5" />
     </Deconstruct>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="4">
+    <Fabricate suitablefabricators="fabricator" requiredtime="4">
       <RequiredSkill identifier="medical" level="50" />
       <RequiredItem identifier="plastic" />
     </Fabricate>

@@ -1,10 +1,10 @@
 
 NTP = {} -- Neurotrauma Pharmacy
 NTP.Name="Pharmacy"
-NTP.Version = "A1.0.6h2"
-NTP.VersionNum = 01000602
-NTP.MinNTVersion = "A1.9.0"
-NTP.MinNTVersionNum = 01090000
+NTP.Version = "A1.0.7"
+NTP.VersionNum = 01000700
+NTP.MinNTVersion = "A1.12.1"
+NTP.MinNTVersionNum = 01120100
 NTP.Path = table.pack(...)[1]
 Timer.Wait(function() if NTC ~= nil and NTC.RegisterExpansion ~= nil then NTC.RegisterExpansion(NTP) end end,1)
 
@@ -24,6 +24,11 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
         NTC.AddPreHumanUpdateHook(NTP.PreUpdateHuman)
         NTC.AddHumanUpdateHook(NTP.PostUpdateHuman)
+
+        -- Symbiote patch for pill effects with calyxanide ingredient / husk cure combo
+        if NTS ~= nil then 
+            dofile(NTP.Path.."/Lua/Scripts/symbiotepatch.lua")
+        end
     end,1)
 
 end

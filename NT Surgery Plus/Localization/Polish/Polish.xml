@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Polish" nowhitespace="false" translatedname="Polski">
-
+<Override>
 <!-- ITEMS -->
 
 <entityname.mannitolplus>Mannitol Forte</entityname.mannitolplus>
@@ -106,4 +106,5 @@
 <talentname.ntsp_experimental>Nieetyczne źródła</talentname.ntsp_experimental>
 <talentname.ntsp_frankenstein>Dr Frankenstein</talentname.ntsp_frankenstein>
 
+</Override>
 </infotexts>

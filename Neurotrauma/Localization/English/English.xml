@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,12 +31,11 @@
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Equipping this will cause you to go unconscious. Are you sure?</stasisbagequipconfirmation>
+<!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
 
 <!-- /// Surgery /// -->
 <entityname.advscalpel>Scalpel</entityname.advscalpel>
@@ -85,15 +84,15 @@
 <entitydescription.organscalpel_brain>A specialized scalpel for the removal of the brain.</entitydescription.organscalpel_brain>
 
 <entityname.multiscalpel>Multipurpose scalpel</entityname.multiscalpel>
-<entitydescription.multiscalpel>A scalpel you can choose what to do with, be it make an incision, extract organs, remove bandages, or do malpractice.</entitydescription.multiscalpel>
-<multiscalpel.incision>Mode: Surgery incision</multiscalpel.incision>
-<multiscalpel.kidneys>Mode: Extract kidneys</multiscalpel.kidneys>
-<multiscalpel.liver>Mode: Extract liver</multiscalpel.liver>
-<multiscalpel.lungs>Mode: Extract lungs</multiscalpel.lungs>
-<multiscalpel.heart>Mode: Extract heart</multiscalpel.heart>
-<multiscalpel.brain>Mode: Extract brain</multiscalpel.brain>
-<multiscalpel.bandage>Mode: Remove bandages and casts / malpractice</multiscalpel.bandage>
-<multiscalpel.speedflex>Mode: Adaptive organ extraction. Use on head for brain, left arm for kidneys, torso for liver, right arm for heart, left leg for lungs.</multiscalpel.speedflex>
+<entitydescription.multiscalpel>Novelty scalpel. Disabled and needs activation. In the practitioner’s hands, a button pad can be utilised to activate the scalpel and switch between between operations: making incisions, extracting organs, removing bandages, or doing malpractice.</entitydescription.multiscalpel>
+<multiscalpel.incision>Mode active: Surgery incision</multiscalpel.incision>
+<multiscalpel.kidneys>Mode active: Extract kidneys</multiscalpel.kidneys>
+<multiscalpel.liver>Mode active: Extract liver</multiscalpel.liver>
+<multiscalpel.lungs>Mode active: Extract lungs</multiscalpel.lungs>
+<multiscalpel.heart>Mode active: Extract heart</multiscalpel.heart>
+<multiscalpel.brain>Mode active: Extract brain</multiscalpel.brain>
+<multiscalpel.bandage>Mode active: Remove bandages and casts / malpractice</multiscalpel.bandage>
+<multiscalpel.speedflex>Mode active: Adaptive organ extraction. Use on head for brain, left arm for kidneys, torso for liver, right arm for heart, left leg for lungs.</multiscalpel.speedflex>
 
 <multiscalpel.btn.incision>Incision</multiscalpel.btn.incision>
 <multiscalpel.btn.kidneys>Kidneys</multiscalpel.btn.kidneys>
@@ -191,10 +190,9 @@
 <entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
+
 <entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Donor card O-</entityname.ominuscard>
 <entitydescription.ominuscard>Can take blood from: O-
@@ -234,8 +232,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <entityname.medtoolbox>Medical container</entityname.medtoolbox> 
 <entitydescription.medtoolbox>Can store medicine and medical instruments</entitydescription.medtoolbox>
 
-<entityname.surgerytoolbox>Surgery toolbox</entityname.surgerytoolbox> 
+<entityname.surgerytoolbox>Surgery toolbox</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Can store many small items that are used during surgery</entitydescription.surgerytoolbox>
+
+<entityname.surgerytoolboxset>Surgery toolbox (kit) </entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Can store many small items that are used during surgery</entitydescription.surgerytoolboxset>
 
 <entityname.organcrate>Refrigerated crate</entityname.organcrate> 
 <entitydescription.organcrate>A place to store your precious transplant-ready organs</entitydescription.organcrate>
@@ -252,6 +253,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <entityname.stasisbag>Stasis bag</entityname.stasisbag>
 <entitydescription.stasisbag>Stops most biological processes from taking place.</entitydescription.stasisbag>
 
+<!--<entityname.emergencysuit>Emergency suit</entityname.emergencysuit>
+<entitydescription.emergencysuit>Makes it relatively safe for using defibrillator and performing all kinds of surgeries. Stops movement, but has a battery slot to power artificial ventilation.</entitydescription.emergencysuit>-->
+
 
 
 <!-- /// Limbs and organs /// -->
@@ -266,6 +270,12 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <entityname.lleg>Left leg</entityname.lleg>
 <entitydescription.lleg>A severed left leg. Can be surgically reattached.</entitydescription.lleg>
+
+<entityname.headta>Head remains</entityname.headta>
+<entitydescription.headta>A severed head, or what's left of it.</entitydescription.headta>
+
+<entityname.headsa>Amputated head</entityname.headsa>
+<entitydescription.headsa>A severed head for recycling.</entitydescription.headsa>
 
 <entityname.rarmp>Right arm bionic prosthesis</entityname.rarmp>
 <entitydescription.rarmp>A bionic right arm. Can be used to treat amputation.</entitydescription.rarmp>
@@ -448,7 +458,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
 <afflictiondescription.surgeryincision>An incision has been made by a scalpel.</afflictiondescription.surgeryincision>
-  
+
 <afflictionname.clampedbleeders>Clamped bleeding</afflictionname.clampedbleeders>
 <afflictiondescription.clampedbleeders>Surgical bleeders have been staunched.</afflictiondescription.clampedbleeders>
 
@@ -686,10 +696,10 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <afflictionname.luabotomy>Lualess</afflictionname.luabotomy>
 <afflictiondescription.luabotomy>Lua isn't running. That means neurotrauma and any other mods that use it won't work. Please read the workshop pages of mods you plan to use.</afflictiondescription.luabotomy>
-  
+
 <afflictionname.modconflict>Mod conflict</afflictionname.modconflict>
 <afflictiondescription.modconflict>There is a mod conflict. A different mod is overriding some of the same items Neurotrauma does. Some things may not function correctly. Please adjust your load order.</afflictiondescription.modconflict>
-  
+
 <afflictionname.analgesia>Analgesia</afflictionname.analgesia>
 <afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
 
@@ -745,4 +755,91 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <!-- misc -->
 <roomname.surgical>Surgical</roomname.surgical>
 
+<!-- Talents -->
+<talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Alien Blood‖end‖ gives [amount]% less ‖color:gui.orange‖Psychosis‖end‖ and [amount2]% less ‖color:gui.orange‖Hemotransfusion Shock‖end‖.</talentdescription.itemgiveslessaffliction>
+
+<!-- /// Loading Screen Tips /// -->
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Non-medical personnel can treat cardiac arrest with the use of adrenaline or an AutoPulse.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ On fire? You may be closer to a diving suit than the ballast or fire extinguisher.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you cannot safely treat a dislocation, a bandage will restore the limb's function.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Analgesia isn't limited to surgical use. Painlessness increases damage and stun resistance.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The AED will always reset fibrillation regardless of medical training.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Drugs can still be administered to a patient in a Stasis Bag.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Liquid oxygenite prevents unconsciousness caused by hypoxemia.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Remember to pick up your limb after it is traumatically amputated.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Kidney and liver damage will cause neurotrauma.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ For a full range of diagnosis, remember to check the Health UI, health scanner, and hematology analyzer.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Multiple symptoms are exclusive to hemotransfusion shock.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you have taken too much damage on one limb, it may no longer naturally regenerate. Bandages and ice packs speed up natural regeneration, instead of treating wounds.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can administer an AutoPulse in the Health UI to immediately equip it on the individual. Wrench on torso will unequip it.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Keep an eye on your visual effects. An early diagnosis can be made based on the situation.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neck fractures can cause spinal cord injury before becoming visible in the Health UI.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The AutoPulse is always better than CPR, and their effects do not stack.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Hypoxemia refers to insufficient oxygen in the blood. Not to be confused with hypoxia, also known as oxygen low (insufficient oxygen in the lungs).</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Mannitol only treats neurotrauma if blood pressure is greater than 70% and hypoxemia is less than 30%. If conditions aren't met, it will slow down the progression of neurotrauma.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bots will not alert you of their health status. Check on them often.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can use a tweezer through open gunshot or deep tissue wounds, but this will always cause minor traumatic shock.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Fibrillation is always dangerous. Blood pressure drops much faster than it rises.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Concussions are never dangerous, but cause multiple symptoms which may be confused with dangerous afflictions.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The human body will always reject alien blood, regardless of immunity strength.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Immunity strength affects natural healing of infected wounds, organ rejection, and incompatible blood type rejection.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you are using the Trello guide, make sure you are using the version for the Community Fork.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Internal wounds such as blunt force trauma have no risk of infection.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Sepsis can only be treated with broad-spectrum antibiotics. Make sure to keep some around.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Any bed other than a surgical or hospital one only prevent traumatic shock if the patient is laying on them.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can collect one blood pack at a time from healthy humans, assuming the application is successful.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ To treat gangrene past 15%, you must attach a limb if none exists, stitch, remove it, stitch, attach a new limb, stitch.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Most affliction chances and gain rates can be configured. To find the config, open the Esc menu after loading into a game. Screams, gypsum cast behavior, and organ rejection may also be configured.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ It is possible, but mentally demanding, to play without a health scanner or hematology analyzer. Most afflictions can be diagnosed with context, symptoms, and visual effects.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Dislocations are extremely common after being caught in an explosion.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The chance of gaining most afflictions, such as fractures and cardiac tamponade, depends on damage taken. If you take less damage, you will require less treatment.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Low on gypsum? Limbs can be deconstructed into calcium.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Chemical and opiate withdrawal are never lethal, but severe alcohol withdrawal can be.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Heart and lung damage are non-lethal until they reach 100%.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Keep a blue shark around. You never know when you might need one.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Some symptoms override each other. You can't hear palpitations if your heart isn't beating.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
+
+<!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
+</Override>
 </infotexts>

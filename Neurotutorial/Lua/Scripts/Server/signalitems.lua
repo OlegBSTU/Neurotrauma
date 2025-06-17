@@ -5,7 +5,7 @@ NTTut.signalCache = {}
 
 local function SpawnSubject(position,name,job,team,dontgivejobitems,dontgiveobjective)
     local info = CharacterInfo("human", name or "Robert")
-    info.Job = Job(JobPrefab.Get(job or "assistant"))
+    info.Job = Job(JobPrefab.Get(job or "assistant"), false)
     local character = Character.Create(info, position, tostring(math.random(0, 1000000)), 0, false, true)
     character.TeamID = team or CharacterTeamType.Team1
 
@@ -14,7 +14,7 @@ local function SpawnSubject(position,name,job,team,dontgivejobitems,dontgiveobje
     end
 
     if not dontgivejobitems then
-        character.GiveJobItems()
+        character.GiveJobItems(false)
         character.Info.StartItemsGiven = true
     end
 

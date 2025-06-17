@@ -1,0 +1,18 @@
+# TODO:
+- rework bloodloss to 400, balance everything to that new value = now regular and internal bleeding are never as dangerous as arterial bleeding
+- add "bundled" items for crafting to optimize medfab recipes count
+- add Care Package container which holds necessary items instead of filling cabinets with the items
+- add Lua StatusEffects to syringes to handle by Consent Required code
+- one manned stretcher with minor rest buffs and remove normal speed drag buffs from bags
+- bloody murder meat skull / bagged head for traumatic/surgery amputations
+- make all amputated limbs placeable
+- increase the blood pack loot a little more
+- add mobile stretchers that you lie down onto for surgeries / stabilizes fractures to avoid complications
+- for defibrillator, aed: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook
+- autocpr: remove all of this when defibs get better (<Fabricate>?)
+- add some effect for adrenaline, sticktocharacters false until there is an effect.
+- hyperzine: should this be any affliction of type damage? (for <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">)
+- add bag container to the hotbar slots for bodybags and stasis bags
+- add animated medical interactions with individual xml based proxy items
+- some system to browse info on afflictions from scanner readout
+- some system from toomanybaro to browse info on items added or overridden and hovered over

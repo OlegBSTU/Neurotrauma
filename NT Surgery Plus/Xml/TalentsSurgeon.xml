@@ -1,296 +1,526 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
-<Talents>
-
-  <!-- Researcher -->
-  <Talent identifier="ntsp_humanmachine">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="2,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.simultaneousskillgain">
-      <Replace tag="[skillname1]" value="skillname.surgery" color="gui.orange"/>
-      <Replace tag="[skillname2]" value="skillname.mechanical" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.gaindoubleskillatskill">
-      <Replace tag="[skillname1]" value="skillname.surgery" color="gui.orange"/>
-      <Replace tag="[skilltotal]" value="100" color="gui.orange"/>
-      <Replace tag="[skillname2]" value="skillname.mechanical" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.simultaneousskillgain">
-      <Replace tag="[skillname1]" value="skillname.medical" color="gui.orange"/>
-      <Replace tag="[skillname2]" value="skillname.electrical" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.gaindoubleskillatskill">
-      <Replace tag="[skillname1]" value="skillname.medical" color="gui.orange"/>
-      <Replace tag="[skilltotal]" value="100" color="gui.orange"/>
-      <Replace tag="[skillname2]" value="skillname.electrical" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-      <Conditions>
-        <AbilityConditionSkill skillidentifier="mechanical"/>
-        <AbilityConditionHasSkill skillidentifier="surgery" minvalue="100"/>
-      </Conditions>
+  <Talents>
+    <!-- Ethical Medicine -->
+    <Talent identifier="ntsp_bedsidemanner">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_bedsidemanner" />
+      <Description tag="talentdescription.gainmissionxpanditem">
+        <Replace tag="[amount]" value="30" color="gui.green" />
+        <Replace tag="[item]" value="entityname.skillbooksurgery" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.assistantsdontcount" />
+      <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+        <Conditions>
+          <AbilityConditionNoCrewDied />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyvalue="1.30" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+        <Conditions>
+          <AbilityConditionNoCrewDied />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityPutItem itemidentifier="skillbooksurgery" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_fisharespecimens">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128" />
+      <Description tag="talentdescription.geneharvester">
+        <Replace tag="[probability]" value="20" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityResetPermanentStat statidentifier="NTgeneharvester_*" value="1" setvalue="true" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster">
+            <Conditional maxhealth="gt 25" />
+            <Conditional ismachine="false" />
+            <Conditional ispet="false" />
+          </AbilityConditionCharacter>
+          <AbilityConditionCharacterNotLooted identifier="NTgeneharvester" />
+          <AbilityConditionServerRandom randomchance="0.2" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true">
+                <SpawnItem identifiers="geneticmaterial_unresearched" spawnposition="ThisInventory" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster" />
+          <AbilityConditionCharacterNotLooted identifier="NTgeneharvester" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityMarkAsLooted identifier="NTgeneharvester" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_underpressure">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_underpressure">
+        <Replace tag="[amount]" value="50" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies maxdistance="500" allowself="true">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" delay="1" stackable="false" disabledeltatime="true">
+                <Conditional sym_unconsciousness="gt 0.1" />
+                <Affliction identifier="underpressure" amount="5" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffectsToAllies maxdistance="200" allowself="true">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" delay="1" stackable="false" disabledeltatime="true">
+                <ReduceAffliction identifier="traumaticshock" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="ntsp_surgeonsintuition">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,4" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_surgeonsintuition">
+        <Replace tag="[probability]" value="30" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnOpenItemContainer">
+        <Conditions>
+          <AbilityConditionItem tags="aliencontainer,wreckmedcab,abandonedmedcab,medcab" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityRegenerateLoot randomchance="0.3" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_unspecialisedspecialist">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_unspecialisedspecialist">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+        <Replace tag="[skillname]" value="skillname.surgery" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="SurgerySkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_brucereitzperk">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_brucereitzperk" />
+    </Talent>
+    <!-- Dabbling Pharmacist -->
+    <Talent identifier="ntsp_therapisttintraining">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_therapisttintraining">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.artificialbrain,entityname.brainjar" color="gui.orange" />
+      </Description>
       <Abilities>
-        <CharacterAbilityGainSimultaneousSkill skillidentifier="mechanical" />
+        <CharacterAbilityGiveStat stattype="MaximumHealthMultiplier" value="0.2" />
       </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-      <Conditions>
-        <AbilityConditionSkill skillidentifier="surgery"/>
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityGainSimultaneousSkill skillidentifier="mechanical" />
-      </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-      <Conditions>
-        <AbilityConditionSkill skillidentifier="electrical"/>
-        <AbilityConditionHasSkill skillidentifier="medical" minvalue="100"/>
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityGainSimultaneousSkill skillidentifier="electrical" />
-      </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-      <Conditions>
-        <AbilityConditionSkill skillidentifier="medical"/>
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityGainSimultaneousSkill skillidentifier="electrical" />
-      </Abilities>
-    </AbilityGroupEffect>
-  </Talent>
-
-  <Talent identifier="ntsp_firstaidtraining">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,1" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.aed" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.skillbonus">
-      <Replace tag="[amount]" value="15"/>
-      <Replace tag="[skillname]" value="skillname.electrical" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="15"/>
-      </Abilities>
-    </AbilityGroupEffect>
-    <AddedRecipe itemidentifier="aed"/>
-  </Talent>
-
-  <Talent identifier="ntsp_frankenstein">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="3,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.additionalresistanceself">
-      <Replace tag="[amount]" value="50" color="gui.green"/>
-      <Replace tag="[affliction]" value="afflictionname.psychosis" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.brainjar" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.artificialbrain" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None" >
-      <Abilities>
-        <CharacterAbilityGiveResistance resistance="psychosis" multiplier="0.5" />
-      </Abilities>
-    </AbilityGroupEffect>
-    <AddedRecipe itemidentifier="brainjar"/>
-    <AddedRecipe itemidentifier="artificialbrain"/>
-  </Talent>
-
-  <Talent identifier="ntsp_autoimmune">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_autoimmune">
-      <Replace tag="[itemname]" value="entityname.aed" color="gui.orange"/>
-    </Description>
-    <AddedRecipe itemidentifier="aed"/>
-  </Talent>
-
-  <Talent identifier="ntsp_mannitol">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.mannitolplus" color="gui.orange"/>
-    </Description>
-    <AddedRecipe itemidentifier="mannitolplus"/>
-  </Talent>
-
-  <Talent identifier="ntsp_experimental">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.experimentaltreatment" color="gui.orange"/>
-    </Description>
-    <AddedRecipe itemidentifier="experimentaltreatment"/>
-  </Talent>
-  
-  <!-- Hospitalizer -->
-
-  <Talent identifier="ntsp_medicallicence">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_medicallicence"/>
-  </Talent>
-
-  <Talent identifier="ntsp_bedsidemanner">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_bedsidemanner"/>
-    <Description tag="talentdescription.gainmissionxpanditem">
-      <Replace tag="[amount]" value="40" color="gui.green"/>
-      <Replace tag="[item]" value="entityname.skillbooksurgery" color="gui.green"/>
-    </Description>
-    <Description tag="talentdescription.assistantsdontcount"/>
-    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
-      <Conditions>
-        <AbilityConditionNoCrewDied />
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityModifyValue addedvalue="0.4" />
-      </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
-      <Conditions>
-        <AbilityConditionNoCrewDied />
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityPutItem itemidentifier="skillbooksurgery"/>
-      </Abilities>
-    </AbilityGroupEffect>
-  </Talent>
-
-  <Talent identifier="ntsp_rinseandrepeat">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,1" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_rinseandrepeat"/>
-  </Talent>
-
-  <Talent identifier="ntsp_underpressure">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="3,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_underpressure">
-      <Replace tag="[amount]" value="50" color="gui.green"/>
-    </Description>
-    <AbilityGroupInterval>
-      <Abilities>
-        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="500" allowself="true">
-          <StatusEffects>
-            <StatusEffect type="OnAbility" target="Character" delay="1" stackable="false" disabledeltatime="true">
-              <Conditional sym_unconsciousness="gt 0.1"/>
-              <Affliction identifier="underpressure" amount="5"/>
-            </StatusEffect>
-          </StatusEffects>
-        </CharacterAbilityApplyStatusEffectsToAllies>
-      </Abilities>
-    </AbilityGroupInterval>
-  </Talent>
-
-  <!-- Field surgeon -->
-
-  <Talent identifier="ntsp_rapiddeoployment">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.additionalstattypeself">
-      <Replace tag="[amount]" value="50" color="gui.green"/>
-      <Replace tag="[stattype]" value="stattypenames.swimmingspeed" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.ntsp_rapiddeoployment">
-      <Replace tag="[skillpercentage]" value="30" color="gui.green"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGiveStat stattype="SwimmingSpeed" value="0.3"/>
-      </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupInterval interval="0.5">
-      <Abilities>
-        <CharacterAbilityModifyStatToSkill stattype="MovementSpeed" maxvalue="0.3" skillidentifier="surgery"/>
-      </Abilities>
-    </AbilityGroupInterval>
-  </Talent>
-
-  <Talent identifier="ntsp_firemanscarry" >
-    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,5" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.firemanscarry"/>
-    <Description tag="talentdescription.additionalresistanceself">
-      <Replace tag="[amount]" value="25" color="gui.green"/>
-      <Replace tag="[affliction]" value="afflictionname.gunshotwound" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.additionalresistanceself">
-      <Replace tag="[amount]" value="25" color="gui.green"/>
-      <Replace tag="[affliction]" value="afflictionname.bitewounds" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None" >
-      <Abilities>
-        <CharacterAbilityGiveFlag flagtype="MoveNormallyWhileDragging" />
-        <CharacterAbilityGiveResistance resistance="gunshotwound" multiplier="0.25" />
-        <CharacterAbilityGiveResistance resistance="bitewounds" multiplier="0.25" />
-      </Abilities>
-    </AbilityGroupEffect>
-  </Talent>
-  
-  <Talent identifier="ntsp_properfol">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_properfol">
-      <Replace tag="[itemname]" value="entityname.propofol" color="gui.orange"/>
-    </Description>
-  </Talent>
-
-  <Talent identifier="ntsp_soothingsurgeon">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.ntsp_soothingsurgeon"/>
-    <AbilityGroupInterval>
-      <Abilities>
-        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="100" allowself="true">
-          <StatusEffects>
-            <StatusEffect type="OnAbility" target="Character" delay="1" stackable="false" disabledeltatime="true">
-              <ReduceAffliction identifier="traumaticshock" amount="1"/>
-            </StatusEffect>
-          </StatusEffects>
-        </CharacterAbilityApplyStatusEffectsToAllies>
-      </Abilities>
-    </AbilityGroupInterval>
-  </Talent>
-
-  <Talent identifier="ntsp_imadoctornota">
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,1" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.skillbonus">
-      <Replace tag="[amount]" value="15"/>
-      <Replace tag="[skillname]" value="skillname.electrical" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.skillbonus">
-      <Replace tag="[amount]" value="15"/>
-      <Replace tag="[skillname]" value="skillname.mechanical" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.skillbonus">
-      <Replace tag="[amount]" value="15"/>
-      <Replace tag="[skillname]" value="skillname.helm" color="gui.orange"/>
-    </Description>
-    <Description tag="talentdescription.skillbonus">
-      <Replace tag="[amount]" value="15"/>
-      <Replace tag="[skillname]" value="skillname.weapons" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="15"/>
-        <CharacterAbilityGiveStat stattype="MechanicalSkillBonus" value="15"/>
-        <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="15"/>
-        <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="15"/>
-      </Abilities>
-    </AbilityGroupEffect>
-    <AddedRecipe itemidentifier="aed"/>
-  </Talent>
-
-  <Talent identifier="ntsp_preventativepermit">
-    <Description tag="talentdescription.ntsp_preventativepermit">
-      <Replace tag="[physicalresistance]" value="35" color="gui.green"/>
-    </Description>
-    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128"/>
-    <Description tag="talentdescription.commanderreminder"/>
-    <AbilityGroupInterval>
-      <Abilities>
-        <CharacterAbilityApplyStatusEffectsToLastOrderedCharacter>
-          <StatusEffects>
-            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-              <Affliction identifier="preventativepermit" amount="5.0"/>
-            </StatusEffect>
-          </StatusEffects>
-        </CharacterAbilityApplyStatusEffectsToLastOrderedCharacter>
-      </Abilities>
-    </AbilityGroupInterval>
-  </Talent>
-  
-</Talents>
+      <AddedRecipe itemidentifier="brainjar" />
+      <AddedRecipe itemidentifier="artificialbrain" />
+    </Talent>
+    <Talent identifier="ntsp_ultrasoniccleaner">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,7" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_rnr" />
+      <Description tag="talentdescription.ntsp_sterlise">
+        <Replace tag="[amount]" value="30" color="gui.green" />
+      </Description>
+    </Talent>
+    <Talent identifier="ntsp_homecarepackage">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_homecarepackage"></Description>
+      <Description tag="talentdescription.gainitem">
+        <Replace tag="[amount]" value="3" color="gui.green" />
+        <Replace tag="[itemname]" value="entityname.suture" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.gainitem">
+        <Replace tag="[amount]" value="1" color="gui.green" />
+        <Replace tag="[itemname]" value="entityname.bloodpackominus" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.gainitem">
+        <Replace tag="[amount]" value="1" color="gui.green" />
+        <Replace tag="[itemname]" value="entityname.opium" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+        <Abilities>
+          <CharacterAbilityPutItem itemidentifier="suture" amount="3" />
+          <CharacterAbilityPutItem itemidentifier="antibloodloss2" amount="1" />
+          <CharacterAbilityPutItem itemidentifier="opium" amount="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_mannitol">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.mannitolplus" color="gui.orange" />
+      </Description>
+      <AddedRecipe itemidentifier="mannitolplus" />
+    </Talent>
+    <Talent identifier="ntsp_experimental">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,5" sheetelementsize="128,128" />
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.experimentaltreatment" color="gui.orange" />
+      </Description>
+      <AddedRecipe itemidentifier="experimentaltreatment" />
+    </Talent>
+    <Talent identifier="ntsp_selfcare">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="3,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_selfcarepsychosis">
+        <Replace tag="[amount]" value="50" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.psychosis" color="gui.orange" />
+      </Description>
+      <!--  <Description tag="talentdescription.ntsp_selfcareunlocktree" /> Redundant... #nevaforget -->
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <!-- <CharacterAbilityUnlockTree/> -->
+          <CharacterAbilityGiveResistance resistance="psychosis" multiplier="0.5" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <!-- Field surgeon -->
+    <Talent identifier="ntsp_rapiddeoployment">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.additionalstattypeself">
+        <Replace tag="[amount]" value="40" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.swimmingspeed" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.ntsp_rapiddeoployment">
+        <Replace tag="[skillpercentage]" value="25" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="SwimmingSpeed" value="0.4" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupInterval interval="0.5">
+        <Abilities>
+          <CharacterAbilityModifyStatToSkill stattype="MovementSpeed" maxvalue="0.25" skillidentifier="surgery" />
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="ntsp_captainresist">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,6" sheetelementsize="128,128" />
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="25" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.gunshotwound" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="25" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.lacerations" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistance="gunshotwound" multiplier="0.25" />
+          <CharacterAbilityGiveResistance resistance="lacerations" multiplier="0.25" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_fallenandcantgetup">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="6,4" sheetelementsize="128,128" />
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="25" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.blunttrauma" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="30" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.stun" color="gui.orange" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="ntsp_fallenandcantgetupstunresist" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistance="blunttrauma" multiplier="0.25" />
+          <!-- <CharacterAbilityModifyResistance resistanceid="stun" resistance="0.3"/> -->
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_imasurgeonnota">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,6" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_imasurgeonnota1">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.ntsp_imasurgeonnota2">
+        <Replace tag="[amount]" value="5" color="gui.green" />
+        <Replace tag="[jobname]" value="assistant" color="gui.orange" />
+      </Description>
+    </Talent>
+    <!-- Im a suregon not a showcase section -->
+    <Talent identifier="ntsp_apprenticeship_captain" nameidentifier="jobname.captain" coloroverride="0.65,0.73,0.8">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.captain" color="0.65,0.73,0.84" />
+      </Description>
+      <Description tag="talentdescription.additionalskill">
+        <Replace tag="[amount]" value="111" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.helmskillbonus" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_apprenticeship_doctor" nameidentifier="jobname.medicaldoctor" coloroverride="0.81,0.31,0.19">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.medicaldoctor" color="0.81,0.31,0.19" />
+      </Description>
+      <Description tag="talentdescription.additionalskill">
+        <Replace tag="[amount]" value="222" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.medicalskillbonus" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_apprenticeship_security" nameidentifier="jobname.securityofficer" coloroverride="0.57,0.48,0.43">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.securityofficer" color="0.57,0.48,0.43" />
+      </Description>
+      <Description tag="talentdescription.additionalskill">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.weaponsskillbonus" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_apprenticeship_mechanic" nameidentifier="jobname.mechanic" coloroverride="0.5,0.86,0.9">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.mechanic" color="0.5,0.86,0.9" />
+      </Description>
+      <Description tag="talentdescription.additionalskill">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.mechanicalskillbonus" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="MechanicalSkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_apprenticeship_engineer" nameidentifier="jobname.engineer" coloroverride="0.88,0.72,0.43">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.engineer" color="0.88,0.72,0.43" />
+      </Description>
+      <Description tag="talentdescription.additionalskill">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.electricalskillbonus" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="20" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_apprenticeship_assistant" nameidentifier="jobname.engineer">
+      <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,256,128,128" origin="0.5,0.5" />
+      <Description tag="talentdescription.apprenticeshipjob">
+        <Replace tag="[job]" value="jobname.assistant" />
+      </Description>
+      <Description tag="talentdescription.gainbonustoallskills">
+        <Replace tag="[amount]" value="5" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="5" />
+          <CharacterAbilityGiveStat stattype="MechanicalSkillBonus" value="5" />
+          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="5" />
+          <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="5" />
+          <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="5" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <!-- End showcase section -->
+    <Talent identifier="ntsp_preventativepermit">
+      <Description tag="talentdescription.ntsp_preventativepermit">
+        <Replace tag="[physicalresistance]" value="35" color="gui.green" />
+      </Description>
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.commanderreminder" />
+      <AbilityGroupInterval>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToLastOrderedCharacter>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="preventativepermit" amount="5.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToLastOrderedCharacter>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <!-- Don't you die on me soldier! perk -->
+    <Talent identifier="ntsp_properfol">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,2" sheetelementsize="128,128" />
+      <Description tag="talentdescription.miracleworker" />
+      <Description tag="talentdescription.miracleworkerreminder" />
+      <Description tag="talentdescription.ntsp_properfol">
+        <Replace tag="[itemname]" value="entityname.propofol" color="gui.orange" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" allowself="false">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+                <Affliction identifier="miracleworker" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+        </Abilities>
+      </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="miracleworker" multiplier="0" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_adrenalinepump">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,4" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_rapiddeoploymentdrag" />
+      <Description tag="talentdescription.ntsp_rapiddeoployment">
+        <Replace tag="[skillpercentage]" value="10" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.5">
+        <Abilities>
+          <CharacterAbilityModifyStatToSkill stattype="MovementSpeed" maxvalue="0.1" skillidentifier="surgery" />
+        </Abilities>
+      </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveFlag flagtype="MoveNormallyWhileDragging" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="ntsp_autodidact">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,2" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_autodidact">
+        <Replace tag="[amount]" value="15" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.aed" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+        <Conditions>
+          <AbilityConditionHasPermanentStat statidentifier="autodidact" min="1" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyvalue="1.15" />
+          <CharacterAbilityResetPermanentStat statidentifier="autodidact" />
+        </Abilities>
+        <FallbackAbilities>
+          <CharacterAbilityResetPermanentStat statidentifier="autodidact" />
+        </FallbackAbilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Ally,NotSelf" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGivePermanentStat statidentifier="autodidact" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="aed" />
+    </Talent>
+    <Talent identifier="ntsp_injectorgeneral">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.ntsp_injectorgeneral">
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <CharacterAbilityGiveStat stattype="MedicalItemApplyingMultiplier" value="0.25" />
+    </Talent>
+    <Talent identifier="ntsp_fellowtoaster">
+      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="2,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.simultaneousskillgain">
+        <Replace tag="[skillname1]" value="skillname.surgery" color="gui.orange" />
+        <Replace tag="[skillname2]" value="skillname.mechanical" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.gaindoubleskillatskill">
+        <Replace tag="[skillname1]" value="skillname.surgery" color="gui.orange" />
+        <Replace tag="[skilltotal]" value="100" color="gui.orange" />
+        <Replace tag="[skillname2]" value="skillname.mechanical" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.simultaneousskillgain">
+        <Replace tag="[skillname1]" value="skillname.medical" color="gui.orange" />
+        <Replace tag="[skillname2]" value="skillname.electrical" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.gaindoubleskillatskill">
+        <Replace tag="[skillname1]" value="skillname.medical" color="gui.orange" />
+        <Replace tag="[skilltotal]" value="100" color="gui.orange" />
+        <Replace tag="[skillname2]" value="skillname.electrical" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.autoinjectorheadset" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+        <Conditions>
+          <AbilityConditionSkill skillidentifier="mechanical" />
+          <AbilityConditionHasSkill skillidentifier="surgery" minvalue="100" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGainSimultaneousSkill skillidentifier="mechanical" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+        <Conditions>
+          <AbilityConditionSkill skillidentifier="surgery" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGainSimultaneousSkill skillidentifier="mechanical" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+        <Conditions>
+          <AbilityConditionSkill skillidentifier="electrical" />
+          <AbilityConditionHasSkill skillidentifier="medical" minvalue="100" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGainSimultaneousSkill skillidentifier="electrical" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+        <Conditions>
+          <AbilityConditionSkill skillidentifier="medical" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGainSimultaneousSkill skillidentifier="electrical" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="autoinjectorheadset" />
+    </Talent>
+  </Talents>
 </Override>

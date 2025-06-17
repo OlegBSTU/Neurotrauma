@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+<Items>
+  <!-- medical misconduct -->
+  <Item name="" identifier="skillbooksurgery" category="Equipment" Tags="smallitem,skillbook" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="storagecab,crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="350" buyingpricemodifier="2.5">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="420,128,35,52" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="386,128,31,38" depth="0.6" origin="0.5,0.5" />
+    <Body width="28" height="36" density="20" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimable="false" aimpos="40,-20" handle1="5,0" holdangle="260" swingamount="0,3" swingspeed="0.5" swingwhenaiming="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-10" />
+      <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
+        <Conditional Condition="lte 0" />
+        <GiveSkill skillidentifier="surgery" amount="8" triggertalents="false" />
+        <GiveSkill skillidentifier="medical" amount="2" triggertalents="false" />
+        <RemoveItem />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <!-- triage tag (automatic) -->
+  <Item name="" identifier="triagetag" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="true" scale="0.3" impactsoundtag="impact_metal_light" maxstacksize="8">
+    <PreferredContainer primary="medcab" />
+    <Price baseprice="50" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="5" amount="2">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <Deconstruct time="5" />
+    <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="256,128,64,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="256,128,64,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="5" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect tags="medical" type="OnUse" target="This" />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <!-- triage tag (manual) -->
+  <Item name="" identifier="manualtriagetag" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="true" scale="0.3" impactsoundtag="impact_metal_light" maxstacksize="8">
+    <PreferredContainer primary="medcab" />
+    <Price baseprice="50" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="5" amount="2">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <Deconstruct time="5" />
+    <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="320,128,64,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="320,128,64,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="5" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect tags="medical" type="OnUse" target="This" />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+</Items>
+</Override>
