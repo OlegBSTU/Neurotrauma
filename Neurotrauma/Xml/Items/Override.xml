@@ -1773,5 +1773,52 @@
                 <QualityStat stattype="RepairSpeed" value="0.1"/>
             </Quality>
         </Item>
+        <Item name="" identifier="bloodsamplevial" hideinmenus="true" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="mediccrate" Tags="smallitem,traitormissionitem" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <Deconstruct time="20">
+                <Item identifier="opium" />
+            </Deconstruct>
+            <InventoryIcon texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+            <Sprite texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="419,268,16,46" depth="0.6" origin="0.5,0.5" />
+            <Body width="25" height="65" density="10.2" waterdragcoefficient="1" />
+            <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+                <!-- 1% condition because otherwise the item is "broken" and can't be swung-->
+                <!-- adding a bunch of conditionals for NT afflictions, and we don't want multiple SEs to trigger at once (making the vial fill up to three times faster) -->
+                <StatusEffect type="OnSpawn" target="this" condition="1" setvalue="true" />
+                <StatusEffect type="OnSuccess" target="UseTarget" condition="10" AllowWhenBroken="true" disabledeltatime="true" comparison="And">
+                    <Conditional bleeding="gt 0"/>
+                    <Conditional hasstatustag="! bloodsampletaken"/>
+                    <Conditional istraitor="false"/>
+                    <EventTarget eventidentifier="bloodsamples" tag="sampletaken"/>
+                </StatusEffect>
+                <StatusEffect type="OnSuccess" target="UseTarget" condition="10" AllowWhenBroken="true" disabledeltatime="true" comparison="And">
+                    <Conditional surgeryincision="gt 0"/>
+                    <Conditional clampedbleeders="lt 0"/>
+                    <Conditional bleeding="lt 0"/>
+                    <Conditional hasstatustag="! bloodsampletaken"/>
+                    <Conditional istraitor="false"/>
+                    <EventTarget eventidentifier="bloodsamples" tag="sampletaken"/>
+                </StatusEffect>
+                <StatusEffect type="OnSuccess" target="UseTarget" condition="10" AllowWhenBroken="true" disabledeltatime="true" comparison="And">
+                    <Conditional arterialcut="gt 0"/>
+                    <Conditional bleeding="lt 0"/>
+                    <Conditional surgeryincision="lt 0"/>
+                    <Conditional hasstatustag="! bloodsampletaken"/>
+                    <Conditional istraitor="false"/>
+                    <EventTarget eventidentifier="bloodsamples" tag="sampletaken"/>
+                </StatusEffect>
+                <!-- increase condition ("fill the vial" when used on a bleeding target) -->
+                <StatusEffect type="OnSuccess" target="UseTarget,This" condition="10" AllowWhenBroken="true" disabledeltatime="true" comparison="Or">
+                    <Conditional bleeding="gt 0"/>
+                    <Conditional arterialcut="gt 0"/>
+                </StatusEffect>
+                <StatusEffect type="OnSuccess" target="UseTarget,This" condition="10" AllowWhenBroken="true" disabledeltatime="true" comparison="And">
+                    <Conditional surgeryincision="gt 0"/>
+                    <Conditional clampedbleeders="lt 0"/>
+                    <Conditional bleeding="lt 0"/>
+                    <Conditional arterialcut="lt 0"/>
+                </StatusEffect>
+            </MeleeWeapon>
+        </Item>
     </Items>
 </Override>
