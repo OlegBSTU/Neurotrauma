@@ -65,6 +65,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 	dofile(NT.Path .. "/Lua/Scripts/Server/screams.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/modconflict.lua")
 
+	dofile(NT.Path.."/Lua/Scripts/Server/TerminalButtons.lua") -- WIP 
+
 	dofile(NT.Path .. "/Lua/Scripts/testing.lua")
 end
 
