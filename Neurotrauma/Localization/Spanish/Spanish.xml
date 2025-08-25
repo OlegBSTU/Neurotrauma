@@ -740,5 +740,93 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Caja de inicio médica</entityname.medstartercrate>
 <entitydescription.medstartercrate>Una caja que contiene todos los elementos esenciales, convenientemente empaquetados en una sola receta de elaboración.</entitydescription.medstartercrate>
+
+<!-- /// Sistema de Fatiga Médica /// -->
+
+<!-- Loading Screen Tips -->
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ La fatiga médica afecta la precisión quirúrgica. Toma descansos y usa café para mantener el máximo rendimiento.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Perder pacientes aumenta el estrés médico. Usa técnicas de relajación y descanso adecuado para recuperarte.</loadingscreentip>
+
+<!-- Fatiga Física -->
+<afflictionname.medical_fatigue_light>Fatiga leve</afflictionname.medical_fatigue_light>
+<afflictiondescription.medical_fatigue_light>El profesional médico se siente ligeramente cansado pero aún puede rendir con normalidad.</afflictiondescription.medical_fatigue_light>
+
+<afflictionname.medical_fatigue_moderate>Fatiga moderada</afflictionname.medical_fatigue_moderate>
+<afflictiondescription.medical_fatigue_moderate>El profesional médico está cansado y muestra signos de precisión reducida en los procedimientos.</afflictiondescription.medical_fatigue_moderate>
+
+<afflictionname.medical_fatigue_severe>Fatiga severa</afflictionname.medical_fatigue_severe>
+<afflictiondescription.medical_fatigue_severe>El profesional médico está agotado, con manos notablemente temblorosas y juicio deteriorado.</afflictiondescription.medical_fatigue_severe>
+
+<afflictionname.medical_fatigue_extreme>Fatiga extrema</afflictionname.medical_fatigue_extreme>
+<afflictiondescription.medical_fatigue_extreme>El profesional médico está al borde del colapso, con habilidades motoras severamente comprometidas y alto riesgo de errores médicos.</afflictiondescription.medical_fatigue_extreme>
+
+<!-- Estrés Mental -->
+<afflictionname.medical_stress_light>Estrés leve</afflictionname.medical_stress_light>
+<afflictiondescription.medical_stress_light>El profesional médico se siente ligeramente estresado pero permanece concentrado.</afflictiondescription.medical_stress_light>
+
+<afflictionname.medical_stress_moderate>Estrés moderado</afflictionname.medical_stress_moderate>
+<afflictiondescription.medical_stress_moderate>El profesional médico está bajo estrés notable, afectando la concentración.</afflictiondescription.medical_stress_moderate>
+
+<afflictionname.medical_stress_severe>Estrés severo</afflictionname.medical_stress_severe>
+<afflictiondescription.medical_stress_severe>El profesional médico está muy estresado, con ansiedad visible que afecta el rendimiento.</afflictiondescription.medical_stress_severe>
+
+<afflictionname.medical_stress_extreme>Agotamiento total</afflictionname.medical_stress_extreme>
+<afflictiondescription.medical_stress_extreme>El profesional médico está experimentando agotamiento completo, con severo estrés psicológico.</afflictiondescription.medical_stress_extreme>
+
+<!-- Efectos de Temblor en las Manos -->
+<afflictionname.hand_tremor_light>Temblor leve</afflictionname.hand_tremor_light>
+<afflictiondescription.hand_tremor_light>Las manos tiemblan ligeramente, pero el control motor fino está mayormente intacto.</afflictiondescription.hand_tremor_light>
+
+<afflictionname.hand_tremor_moderate>Temblor en las manos</afflictionname.hand_tremor_moderate>
+<afflictiondescription.hand_tremor_moderate>Temblor notable en las manos que afecta la precisión en procedimientos delicados.</afflictiondescription.hand_tremor_moderate>
+
+<afflictionname.hand_tremor_severe>Temblor severo</afflictionname.hand_tremor_severe>
+<afflictiondescription.hand_tremor_severe>Temblor severo en las manos que hace extremadamente difíciles los movimientos precisos.</afflictiondescription.hand_tremor_severe>
+
+<!-- Estados de Recuperación -->
+<afflictionname.medical_rest>Descanso médico</afflictionname.medical_rest>
+<afflictiondescription.medical_rest>El profesional médico está descansando y recuperando energía.</afflictiondescription.medical_rest>
+
+<afflictionname.caffeine_boost>Impulso de cafeína</afflictionname.caffeine_boost>
+<afflictiondescription.caffeine_boost>Estado de alerta temporalmente aumentado y fatiga reducida por el consumo de cafeína.</afflictiondescription.caffeine_boost>
+
+<afflictionname.adrenaline_rush>Subida de adrenalina</afflictionname.adrenaline_rush>
+<afflictiondescription.adrenaline_rush>Situación de alto estrés que proporciona un impulso temporal de energía y concentración.</afflictiondescription.adrenaline_rush>
+
+<!-- Nuevos Objetos de Fatiga Médica -->
+<entityname.medical_coffee>Café médico</entityname.medical_coffee>
+<entitydescription.medical_coffee>Café fuerte diseñado para ayudar al personal médico a mantenerse alerta durante turnos largos. Reduce la fatiga temporalmente.</entitydescription.medical_coffee>
+
+<entityname.energy_drink>Bebida energética</entityname.energy_drink>
+<entitydescription.energy_drink>Bebida alta en cafeína que proporciona un impulso rápido de energía. Puede causar nerviosismo si se abusa.</entitydescription.energy_drink>
+
+<entityname.rest_pills>Medicación para descansar</entityname.rest_pills>
+<entitydescription.rest_pills>Sedante suave para ayudar al personal médico a obtener descanso de calidad entre turnos.</entitydescription.rest_pills>
+
+<entityname.stress_medication>Medicación anti-ansiedad</entityname.stress_medication>
+<entitydescription.stress_medication>Medicación para ayudar a manejar el estrés y la ansiedad en situaciones médicas de alta presión.</entitydescription.stress_medication>
+
+<entityname.medical_bed>Cama de descanso médico</entityname.medical_bed>
+<entitydescription.medical_bed>Cama especializada diseñada para que el personal médico obtenga descanso de calidad durante los turnos.</entitydescription.medical_bed>
+
+<entityname.relaxation_chair>Silla de relajación</entityname.relaxation_chair>
+<entitydescription.relaxation_chair>Silla cómoda diseñada para ayudar al personal médico a relajarse y reducir el estrés.</entitydescription.relaxation_chair>
+
+<!-- Mensajes Relacionados con Fatiga -->
+<fatigue.warning.light>Empiezas a sentirte cansado. Considera tomar un breve descanso.</fatigue.warning.light>
+<fatigue.warning.moderate>Estás notablemente cansado. Tus manos comienzan a temblar ligeramente.</fatigue.warning.moderate>
+<fatigue.warning.severe>Estás muy cansado. Tu concentración está fallando y tus manos tiemblan.</fatigue.warning.severe>
+<fatigue.warning.extreme>¡Estás agotado! Corres el riesgo de cometer errores médicos graves en este estado.</fatigue.warning.extreme>
+
+<stress.warning.light>Te sientes ligeramente estresado pero permaneces concentrado.</stress.warning.light>
+<stress.warning.moderate>La presión te está afectando. Tómate un momento para calmarte.</stress.warning.moderate>
+<stress.warning.severe>Estás muy estresado. Tu ansiedad está afectando tu juicio médico.</stress.warning.severe>
+<stress.warning.extreme>Estás experimentando agotamiento total. Necesitas descanso inmediato y alivio del estrés.</stress.warning.extreme>
+
+<fatigue.error.surgery>¡Tu fatiga te hizo cometer un error durante la cirugía!</fatigue.error.surgery>
+<fatigue.error.medication>¡Tu agotamiento te llevó a un error de medicación!</fatigue.error.medication>
+<fatigue.collapse>¡Colapses por el agotamiento!</fatigue.collapse>
+
 </Override>
 </infotexts>

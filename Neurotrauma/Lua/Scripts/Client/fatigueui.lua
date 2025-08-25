@@ -76,6 +76,9 @@ function NT.FatigueUI.Initialize()
     -- Create warning text
     NT.FatigueUI.CreateWarningSection()
     
+    -- Create surgical precision indicator
+    NT.FatigueUI.CreateSurgicalPrecisionIndicator()
+    
     NT.FatigueUI.State.initialized = true
     print("NT Medical Fatigue UI initialized")
 end
@@ -174,6 +177,37 @@ function NT.FatigueUI.CreateWarningSection()
     NT.FatigueUI.Elements.warningText.Visible = false
 end
 
+-- Create surgical precision indicator
+function NT.FatigueUI.CreateSurgicalPrecisionIndicator()
+    local yOffset = 95
+    
+    -- Precision label
+    NT.FatigueUI.Elements.precisionText = GUI.GUITextBlock(
+        GUI.RectTransform(Vector2(120, 15), NT.FatigueUI.Elements.frame.RectTransform, GUI.Anchor.TopLeft),
+        "Surgical Precision: 100%",
+        Color.White,
+        GUI.Alignment.CenterLeft,
+        ""
+    )
+    NT.FatigueUI.Elements.precisionText.RectTransform.AbsoluteOffset = Vector2(10, yOffset)
+    NT.FatigueUI.Elements.precisionText.Font = GUI.SmallFont
+    
+    -- Precision bar background
+    local precisionBarBg = GUI.GUIFrame(
+        GUI.RectTransform(Vector2(200, 8), NT.FatigueUI.Elements.frame.RectTransform, GUI.Anchor.TopLeft),
+        ""
+    )
+    precisionBarBg.RectTransform.AbsoluteOffset = Vector2(40, yOffset + 18)
+    precisionBarBg.Color = Color(50, 50, 50, 255)
+    
+    -- Precision bar
+    NT.FatigueUI.Elements.precisionBar = GUI.GUIFrame(
+        GUI.RectTransform(Vector2(1, 8), precisionBarBg.RectTransform, GUI.Anchor.TopLeft),
+        ""
+    )
+    NT.FatigueUI.Elements.precisionBar.Color = Color(100, 255, 100, 255)  -- Green when good
+end
+
 -- Get color based on level
 function NT.FatigueUI.GetLevelColor(level, colorSet)
     if level >= 75 then
@@ -269,6 +303,9 @@ function NT.FatigueUI.Update()
     -- Update warnings
     NT.FatigueUI.UpdateWarnings(NT.FatigueUI.State.currentFatigue, NT.FatigueUI.State.currentStress)
     
+    -- Update surgical precision indicator
+    NT.FatigueUI.UpdateSurgicalPrecision(NT.FatigueUI.State.currentFatigue, NT.FatigueUI.State.currentStress)
+    
     -- Update visibility
     NT.FatigueUI.UpdateVisibility(NT.FatigueUI.State.currentFatigue, NT.FatigueUI.State.currentStress)
 end
@@ -358,6 +395,81 @@ function NT.FatigueUI.UpdateVisibility(fatigueLevel, stressLevel)
     
     NT.FatigueUI.Elements.frame.Color = Color(0, 0, 0, 180 * NT.FatigueUI.State.alpha)
     NT.FatigueUI.Elements.frame.Visible = NT.FatigueUI.State.alpha > 0.1
+end
+
+-- Update surgical precision indicator
+function NT.FatigueUI.UpdateSurgicalPrecision(fatigueLevel, stressLevel)
+    if not NT.FatigueUI.Elements.precisionBar or not NT.FatigueUI.Elements.precisionText then return end
+    
+    -- Calculate precision based on fatigue and stress
+    local precision = 100
+    
+    -- Fatigue reduces precision
+    if fatigueLevel >= 75 then
+        precision = precision - 30  -- 70% precision at extreme fatigue
+    elseif fatigueLevel >= 50 then
+        precision = precision - 15  -- 85% precision at severe fatigue
+    elseif fatigueLevel >= 25 then
+        precision = precision - 5   -- 95% precision at moderate fatigue
+    end
+    
+    -- Stress also reduces precision (but less than fatigue)
+    if stressLevel >= 75 then
+        precision = precision - 15  
+    elseif stressLevel >= 50 then
+        precision = precision - 8
+    elseif stressLevel >= 25 then
+        precision = precision - 3
+    end
+    
+    -- Ensure precision doesn't go below 40%
+    precision = math.max(precision, 40)
+    
+    -- Check if character is holding surgical instruments
+    local character = Character.Controlled
+    local holdingSurgical = false
+    if character and character.SelectedItem then
+        local surgicalItems = {"advscalpel", "advhemostat", "advretractors", "tweezers", "surgerysaw", "surgicaldrill"}
+        for _, item in ipairs(surgicalItems) do
+            if character.SelectedItem.Prefab.Identifier.Value == item then
+                holdingSurgical = true
+                break
+            end
+        end
+    end
+    
+    -- Only show precision indicator when holding surgical tools
+    local shouldShow = holdingSurgical
+    NT.FatigueUI.Elements.precisionText.Visible = shouldShow
+    NT.FatigueUI.Elements.precisionBar.Visible = shouldShow
+    
+    if shouldShow then
+        -- Update precision bar
+        NT.FatigueUI.Elements.precisionBar.RectTransform.RelativeSize = Vector2(precision / 100, 1)
+        
+        -- Update precision color
+        local precisionColor
+        if precision >= 90 then
+            precisionColor = Color(100, 255, 100, 255)  -- Green
+        elseif precision >= 75 then
+            precisionColor = Color(255, 255, 100, 255)  -- Yellow
+        elseif precision >= 60 then
+            precisionColor = Color(255, 150, 100, 255)  -- Orange
+        else
+            precisionColor = Color(255, 100, 100, 255)  -- Red
+        end
+        NT.FatigueUI.Elements.precisionBar.Color = precisionColor
+        
+        -- Update text
+        NT.FatigueUI.Elements.precisionText.Text = string.format("Surgical Precision: %d%%", precision)
+        
+        -- Show warning for low precision
+        if precision < 70 then
+            NT.FatigueUI.Elements.precisionText.Color = Color.Red
+        else
+            NT.FatigueUI.Elements.precisionText.Color = Color.White
+        end
+    end
 end
 
 -- Toggle UI visibility

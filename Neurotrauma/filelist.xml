@@ -76,6 +76,8 @@
   <Other file="%ModDir%/Lua/Scripts/Server/ntcompat.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/modconflict.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/medicalfatigue.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/surgicalintegration.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/surgicalhooks.lua" />
   <Other file="%ModDir%/Lua/Scripts/Client/fatigueui.lua" />
   <Other file="%ModDir%/Lua/Scripts/Client/fatigueeffects.lua" />
   <Other file="%ModDir%/Lua/Scripts/fatigueconfig.lua" />
