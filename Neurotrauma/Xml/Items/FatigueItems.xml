@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+
+    <!-- /// Medical Coffee /// -->
+    <Item name="" identifier="medical_coffee" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,consumable" description="" useinhealthinterface="True" scale="0.35">
+        <PreferredContainer primary="medcab" minamount="2" maxamount="4" spawnprobability="0.3"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="1" maxamount="2" spawnprobability="0.4"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="4" requiredtime="5">
+            <RequiredSkill identifier="medical" level="15"/>
+            <RequiredItem identifier="ethanol" />
+            <RequiredItem identifier="organicfiber" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="25">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.1" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,256,128,128" depth="0.55" origin="0.5,0.5"/>
+
+        <Body width="35" height="50" density="30"/>
+
+        <SuitableTreatment identifier="medical_fatigue_light" suitability="80"/>
+        <SuitableTreatment identifier="medical_fatigue_moderate" suitability="60"/>
+        <SuitableTreatment identifier="medical_fatigue_severe" suitability="40"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="Character">
+                <Sound file="%ModDir%/Sound/pills1.ogg" range="300"/>
+                <ReduceAffliction identifier="medical_fatigue_light" amount="50"/>
+                <ReduceAffliction identifier="medical_fatigue_moderate" amount="30"/>
+                <ReduceAffliction identifier="medical_fatigue_severe" amount="15"/>
+                <Affliction identifier="caffeine_boost" amount="25"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="10"/>
+    </Item>
+
+    <!-- /// Energy Drink /// -->
+    <Item name="" identifier="energy_drink" category="Medical" maxstacksize="6" maxstacksizecharacterinventory="3" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,consumable" description="" useinhealthinterface="True" scale="0.4">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.3"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="2" requiredtime="8">
+            <RequiredSkill identifier="medical" level="20"/>
+            <RequiredItem identifier="adrenaline" />
+            <RequiredItem identifier="ethanol" />
+            <RequiredItem identifier="sodium" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="45">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.2" minavailable="3"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="128,256,128,128" depth="0.55" origin="0.5,0.5"/>
+
+        <Body width="30" height="60" density="25"/>
+
+        <SuitableTreatment identifier="medical_fatigue_moderate" suitability="90"/>
+        <SuitableTreatment identifier="medical_fatigue_severe" suitability="70"/>
+        <SuitableTreatment identifier="medical_fatigue_extreme" suitability="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="Character">
+                <Sound file="%ModDir%/Sound/pills2.ogg" range="300"/>
+                <ReduceAffliction identifier="medical_fatigue_moderate" amount="60"/>
+                <ReduceAffliction identifier="medical_fatigue_severe" amount="40"/>
+                <ReduceAffliction identifier="medical_fatigue_extreme" amount="25"/>
+                <Affliction identifier="caffeine_boost" amount="40"/>
+                <Affliction identifier="adrenaline_rush" amount="20"/>
+                <!-- Side effect: jitters -->
+                <Affliction identifier="hand_tremor_light" amount="10"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="15"/>
+    </Item>
+
+    <!-- /// Rest Medication /// -->
+    <Item name="" identifier="rest_pills" category="Medical" maxstacksize="12" maxstacksizecharacterinventory="6" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,consumable" description="" useinhealthinterface="True" scale="0.25">
+        <PreferredContainer primary="medcab" minamount="3" maxamount="6" spawnprobability="0.4"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="2" maxamount="4" spawnprobability="0.5"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="8" requiredtime="12">
+            <RequiredSkill identifier="medical" level="30"/>
+            <RequiredItem identifier="opium" />
+            <RequiredItem identifier="thiamine" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="35">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.0" minavailable="8"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="512,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,256,128,128" depth="0.55" origin="0.5,0.5"/>
+
+        <Body width="25" height="25" density="20"/>
+
+        <SuitableTreatment identifier="medical_fatigue_light" suitability="95"/>
+        <SuitableTreatment identifier="medical_fatigue_moderate" suitability="85"/>
+        <SuitableTreatment identifier="medical_fatigue_severe" suitability="75"/>
+        <SuitableTreatment identifier="medical_fatigue_extreme" suitability="60"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="Character">
+                <Sound file="%ModDir%/Sound/pills3.ogg" range="300"/>
+                <ReduceAffliction identifier="medical_fatigue_light" amount="80"/>
+                <ReduceAffliction identifier="medical_fatigue_moderate" amount="60"/>
+                <ReduceAffliction identifier="medical_fatigue_severe" amount="45"/>
+                <ReduceAffliction identifier="medical_fatigue_extreme" amount="30"/>
+                <Affliction identifier="medical_rest" amount="50"/>
+                <!-- Side effect: drowsiness -->
+                <Affliction identifier="opiatewithdr" amount="5"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="25"/>
+    </Item>
+
+    <!-- /// Anti-anxiety Medication /// -->
+    <Item name="" identifier="stress_medication" category="Medical" maxstacksize="10" maxstacksizecharacterinventory="5" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,consumable" description="" useinhealthinterface="True" scale="0.25">
+        <PreferredContainer primary="medcab" minamount="2" maxamount="4" spawnprobability="0.3"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="1" maxamount="3" spawnprobability="0.4"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="6" requiredtime="15">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredItem identifier="opium" />
+            <RequiredItem identifier="sodium" />
+            <RequiredItem identifier="calcium" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="50">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.3" minavailable="4"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="576,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,256,128,128" depth="0.55" origin="0.5,0.5"/>
+
+        <Body width="25" height="25" density="20"/>
+
+        <SuitableTreatment identifier="medical_stress_light" suitability="90"/>
+        <SuitableTreatment identifier="medical_stress_moderate" suitability="80"/>
+        <SuitableTreatment identifier="medical_stress_severe" suitability="70"/>
+        <SuitableTreatment identifier="medical_stress_extreme" suitability="60"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="Character">
+                <Sound file="%ModDir%/Sound/pills1.ogg" range="300"/>
+                <ReduceAffliction identifier="medical_stress_light" amount="70"/>
+                <ReduceAffliction identifier="medical_stress_moderate" amount="50"/>
+                <ReduceAffliction identifier="medical_stress_severe" amount="35"/>
+                <ReduceAffliction identifier="medical_stress_extreme" amount="25"/>
+                <ReduceAffliction identifier="hand_tremor_light" amount="20"/>
+                <ReduceAffliction identifier="hand_tremor_moderate" amount="15"/>
+                <ReduceAffliction identifier="hand_tremor_severe" amount="10"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+</Items>
+</Override>

@@ -11,6 +11,8 @@
 	<impact_squeak file="%ModDir%/Sound/squeak4.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak5.ogg" range="500"/>
 	
+	<!-- Medical Fatigue Sounds - Using existing game sounds -->
+	
 	<!-- override to remove oxygenlow heartbeat sound -->
 
 	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>

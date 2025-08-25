@@ -844,6 +844,94 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
 
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Medical fatigue affects surgical precision. Take breaks and use coffee to maintain peak performance.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Losing patients increases medical stress. Use relaxation techniques and proper rest to recover.</loadingscreentip>
+
+<!-- /// Medical Fatigue System /// -->
+
+<!-- Physical Fatigue -->
+<afflictionname.medical_fatigue_light>Light fatigue</afflictionname.medical_fatigue_light>
+<afflictiondescription.medical_fatigue_light>The medical professional feels slightly tired but can still perform at normal capacity.</afflictiondescription.medical_fatigue_light>
+
+<afflictionname.medical_fatigue_moderate>Moderate fatigue</afflictionname.medical_fatigue_moderate>
+<afflictiondescription.medical_fatigue_moderate>The medical professional is tired and showing signs of reduced precision in procedures.</afflictiondescription.medical_fatigue_moderate>
+
+<afflictionname.medical_fatigue_severe>Severe fatigue</afflictionname.medical_fatigue_severe>
+<afflictiondescription.medical_fatigue_severe>The medical professional is exhausted, with noticeably shaky hands and impaired judgment.</afflictiondescription.medical_fatigue_severe>
+
+<afflictionname.medical_fatigue_extreme>Extreme fatigue</afflictionname.medical_fatigue_extreme>
+<afflictiondescription.medical_fatigue_extreme>The medical professional is on the verge of collapse, with severely compromised motor skills and high risk of medical errors.</afflictiondescription.medical_fatigue_extreme>
+
+<!-- Mental Stress -->
+<afflictionname.medical_stress_light>Light stress</afflictionname.medical_stress_light>
+<afflictiondescription.medical_stress_light>The medical professional feels slightly stressed but remains focused.</afflictiondescription.medical_stress_light>
+
+<afflictionname.medical_stress_moderate>Moderate stress</afflictionname.medical_stress_moderate>
+<afflictiondescription.medical_stress_moderate>The medical professional is under noticeable stress, affecting concentration.</afflictiondescription.medical_stress_moderate>
+
+<afflictionname.medical_stress_severe>Severe stress</afflictionname.medical_stress_severe>
+<afflictiondescription.medical_stress_severe>The medical professional is highly stressed, with visible anxiety affecting performance.</afflictiondescription.medical_stress_severe>
+
+<afflictionname.medical_stress_extreme>Burnout</afflictionname.medical_stress_extreme>
+<afflictiondescription.medical_stress_extreme>The medical professional is experiencing complete burnout, with severe psychological distress.</afflictiondescription.medical_stress_extreme>
+
+<!-- Hand Tremor Effects -->
+<afflictionname.hand_tremor_light>Light tremor</afflictionname.hand_tremor_light>
+<afflictiondescription.hand_tremor_light>The hands shake slightly, but fine motor control is mostly intact.</afflictiondescription.hand_tremor_light>
+
+<afflictionname.hand_tremor_moderate>Hand tremor</afflictionname.hand_tremor_moderate>
+<afflictiondescription.hand_tremor_moderate>Noticeable hand tremor affecting precision in delicate procedures.</afflictiondescription.hand_tremor_moderate>
+
+<afflictionname.hand_tremor_severe>Severe tremor</afflictionname.hand_tremor_severe>
+<afflictiondescription.hand_tremor_severe>Severe hand tremor making precise movements extremely difficult.</afflictiondescription.hand_tremor_severe>
+
+<!-- Recovery States -->
+<afflictionname.medical_rest>Medical rest</afflictionname.medical_rest>
+<afflictiondescription.medical_rest>The medical professional is resting and recovering energy.</afflictiondescription.medical_rest>
+
+<afflictionname.caffeine_boost>Caffeine boost</afflictionname.caffeine_boost>
+<afflictiondescription.caffeine_boost>Temporarily increased alertness and reduced fatigue from caffeine consumption.</afflictiondescription.caffeine_boost>
+
+<afflictionname.adrenaline_rush>Adrenaline rush</afflictionname.adrenaline_rush>
+<afflictiondescription.adrenaline_rush>High-stress situation providing temporary energy and focus boost.</afflictiondescription.adrenaline_rush>
+
+<!-- /// New Medical Fatigue Items /// -->
+
+<entityname.medical_coffee>Medical coffee</entityname.medical_coffee>
+<entitydescription.medical_coffee>Strong coffee designed to help medical personnel stay alert during long shifts. Reduces fatigue temporarily.</entitydescription.medical_coffee>
+
+<entityname.energy_drink>Energy drink</entityname.energy_drink>
+<entitydescription.energy_drink>High-caffeine beverage that provides quick energy boost. May cause jitters if overused.</entitydescription.energy_drink>
+
+<entityname.rest_pills>Rest medication</entityname.rest_pills>
+<entitydescription.rest_pills>Mild sedative to help medical personnel get quality rest between shifts.</entitydescription.rest_pills>
+
+<entityname.stress_medication>Anti-anxiety medication</entityname.stress_medication>
+<entitydescription.stress_medication>Medication to help manage stress and anxiety in high-pressure medical situations.</entitydescription.stress_medication>
+
+<entityname.medical_bed>Medical rest bed</entityname.medical_bed>
+<entitydescription.medical_bed>Specialized bed designed for medical personnel to get quality rest during shifts.</entitydescription.medical_bed>
+
+<entityname.relaxation_chair>Relaxation chair</entityname.relaxation_chair>
+<entitydescription.relaxation_chair>Comfortable chair designed to help medical staff relax and reduce stress.</entitydescription.relaxation_chair>
+
+<!-- /// Fatigue-related Messages /// -->
+
+<fatigue.warning.light>You're starting to feel tired. Consider taking a short break.</fatigue.warning.light>
+<fatigue.warning.moderate>You're noticeably tired. Your hands are beginning to shake slightly.</fatigue.warning.moderate>
+<fatigue.warning.severe>You're very tired. Your concentration is wavering and your hands are shaking.</fatigue.warning.severe>
+<fatigue.warning.extreme>You're exhausted! You risk making serious medical errors in this state.</fatigue.warning.extreme>
+
+<stress.warning.light>You're feeling slightly stressed but remain focused.</stress.warning.light>
+<stress.warning.moderate>The pressure is getting to you. Take a moment to compose yourself.</stress.warning.moderate>
+<stress.warning.severe>You're highly stressed. Your anxiety is affecting your medical judgment.</stress.warning.severe>
+<stress.warning.extreme>You're experiencing burnout. You need immediate rest and stress relief.</stress.warning.extreme>
+
+<fatigue.error.surgery>Your fatigue caused you to make an error during surgery!</fatigue.error.surgery>
+<fatigue.error.medication>Your exhaustion led to a medication error!</fatigue.error.medication>
+<fatigue.collapse>You collapse from exhaustion!</fatigue.collapse>
+
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 </Override>
 </infotexts>

@@ -20,6 +20,7 @@
   <Other file="%ModDir%/Images/Human/Human_male_mask.png" />
 
   <Afflictions  file="%ModDir%/Xml/Afflictions.xml" />
+  <Afflictions  file="%ModDir%/Xml/FatigueAfflictions.xml" />
   <Talents      file="%ModDir%/Xml/Talents.xml"/>
   <Item         file="%ModDir%/Xml/Items/Blood/BloodPacks.xml" />
   <Item         file="%ModDir%/Xml/Items/Blood/DonorCard.xml" />
@@ -37,6 +38,7 @@
   <Item         file="%ModDir%/Xml/Items/Containers.xml" />
   <Item         file="%ModDir%/Xml/Items/Etc.xml" />
   <Item         file="%ModDir%/Xml/Items/FirstAID.xml" />
+  <Item         file="%ModDir%/Xml/Items/FatigueItems.xml" />
   <Item         file="%ModDir%/Xml/Items/Override.xml" />
   <Item         file="%ModDir%/Xml/Items/SFX.xml" />
   <Item         file="%ModDir%/Xml/Items/VFX.xml" />
@@ -73,6 +75,10 @@
   <Other file="%ModDir%/Lua/Scripts/Server/cpr.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/ntcompat.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/modconflict.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Server/medicalfatigue.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Client/fatigueui.lua" />
+  <Other file="%ModDir%/Lua/Scripts/Client/fatigueeffects.lua" />
+  <Other file="%ModDir%/Lua/Scripts/fatigueconfig.lua" />
 
   <Other file="%ModDir%/Sound/drill.ogg" />
   <Other file="%ModDir%/Sound/squelch1.ogg" />

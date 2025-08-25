@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+
+<Afflictions>
+
+  <!-- /// Medical Fatigue System Afflictions /// -->
+
+  <!-- Physical Fatigue Levels -->
+  <Affliction
+    name=""
+    identifier="medical_fatigue_light"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_fatigue"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,200,100,255;255,200,100,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.1">
+      <!-- Light fatigue effects -->
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Slight movement speed reduction -->
+        <Affliction identifier="slowness" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_fatigue_moderate"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_fatigue"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,150,50,255;255,150,50,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Moderate effects: tremor and slower movement -->
+        <Affliction identifier="hand_tremor_light" amount="0.3"/>
+        <Affliction identifier="slowness" amount="0.2"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_fatigue_severe"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_fatigue"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,100,0,255;255,100,0,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.3">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Severe effects: noticeable tremor, confusion, slower reactions -->
+        <Affliction identifier="hand_tremor_moderate" amount="0.5"/>
+        <Affliction identifier="sym_confusion" amount="0.2"/>
+        <Affliction identifier="slowness" amount="0.4"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_fatigue_extreme"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_fatigue"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,0,0,255;255,0,0,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.5">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Extreme effects: severe tremor, high confusion, risk of collapse -->
+        <Affliction identifier="hand_tremor_severe" amount="0.7"/>
+        <Affliction identifier="sym_confusion" amount="0.5"/>
+        <Affliction identifier="sym_unconsciousness" amount="0.1"/>
+        <Affliction identifier="slowness" amount="0.6"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <!-- Mental Stress Levels -->
+  <Affliction
+    name=""
+    identifier="medical_stress_light"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_stress"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="200,200,255,255;200,200,255,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.1">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Light stress: slight nervousness -->
+        <Affliction identifier="sym_palpitations" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_stress_moderate"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_stress"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="150,150,255,255;150,150,255,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Moderate stress: anxiety symptoms -->
+        <Affliction identifier="sym_palpitations" amount="0.3"/>
+        <Affliction identifier="sym_sweating" amount="0.2"/>
+        <Affliction identifier="hand_tremor_light" amount="0.2"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_stress_severe"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_stress"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="100,100,255,255;100,100,255,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.3">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Severe stress: panic symptoms -->
+        <Affliction identifier="sym_palpitations" amount="0.5"/>
+        <Affliction identifier="sym_sweating" amount="0.4"/>
+        <Affliction identifier="hand_tremor_moderate" amount="0.3"/>
+        <Affliction identifier="sym_confusion" amount="0.2"/>
+        <Affliction identifier="sym_nausea" amount="0.2"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="6,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="medical_stress_extreme"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="medical_stress"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="50,50,255,255;50,50,255,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="0.5">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Extreme stress/burnout: severe psychological symptoms -->
+        <Affliction identifier="sym_palpitations" amount="0.7"/>
+        <Affliction identifier="sym_sweating" amount="0.6"/>
+        <Affliction identifier="hand_tremor_severe" amount="0.5"/>
+        <Affliction identifier="sym_confusion" amount="0.5"/>
+        <Affliction identifier="sym_nausea" amount="0.4"/>
+        <Affliction identifier="sym_vomiting" amount="0.2"/>
+        <Affliction identifier="sym_headache" amount="0.3"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,8" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <!-- Hand Tremor Effects -->
+  <Affliction
+    name=""
+    identifier="hand_tremor_light"
+    description=""
+    limbspecific="true"
+    indicatorlimb="RightHand"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="hand_tremor"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,255,200,255;255,255,200,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-0.5">
+      <!-- Light tremor decays naturally -->
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="hand_tremor_moderate"
+    description=""
+    limbspecific="true"
+    indicatorlimb="RightHand"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="hand_tremor"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,200,100,255;255,200,100,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-0.3">
+      <!-- Moderate tremor decays slowly -->
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="hand_tremor_severe"
+    description=""
+    limbspecific="true"
+    indicatorlimb="RightHand"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="hand_tremor"
+    isbuff="false"
+    healableinmedicalclinic="false"
+    iconcolors="255,100,0,255;255,100,0,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-0.1">
+      <!-- Severe tremor decays very slowly -->
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <!-- Recovery States -->
+  <Affliction
+    name=""
+    identifier="medical_rest"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="recovery"
+    isbuff="true"
+    healableinmedicalclinic="false"
+    iconcolors="100,255,100,255;100,255,100,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-1">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Rest reduces all fatigue and stress -->
+        <ReduceAffliction identifier="medical_fatigue_light" amount="2"/>
+        <ReduceAffliction identifier="medical_fatigue_moderate" amount="1.5"/>
+        <ReduceAffliction identifier="medical_fatigue_severe" amount="1"/>
+        <ReduceAffliction identifier="medical_fatigue_extreme" amount="0.5"/>
+        <ReduceAffliction identifier="medical_stress_light" amount="1.5"/>
+        <ReduceAffliction identifier="medical_stress_moderate" amount="1"/>
+        <ReduceAffliction identifier="medical_stress_severe" amount="0.5"/>
+        <ReduceAffliction identifier="medical_stress_extreme" amount="0.3"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="caffeine_boost"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="recovery"
+    isbuff="true"
+    healableinmedicalclinic="false"
+    iconcolors="200,255,200,255;200,255,200,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-0.5">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Caffeine provides temporary alertness -->
+        <ReduceAffliction identifier="medical_fatigue_light" amount="1"/>
+        <ReduceAffliction identifier="medical_fatigue_moderate" amount="0.5"/>
+        <ReduceAffliction identifier="medical_fatigue_severe" amount="0.3"/>
+        <Affliction identifier="sym_palpitations" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="adrenaline_rush"
+    description=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+    targets="human"
+    type="recovery"
+    isbuff="true"
+    healableinmedicalclinic="false"
+    iconcolors="255,200,255,255;255,200,255,255">
+    
+    <Effect minstrength="1" maxstrength="100" strengthchange="-2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="false">
+        <conditional ishuman="true"/>
+        <!-- Adrenaline provides temporary energy and focus -->
+        <ReduceAffliction identifier="medical_fatigue_moderate" amount="1"/>
+        <ReduceAffliction identifier="medical_fatigue_severe" amount="0.8"/>
+        <ReduceAffliction identifier="medical_fatigue_extreme" amount="0.5"/>
+        <ReduceAffliction identifier="hand_tremor_light" amount="1"/>
+        <ReduceAffliction identifier="hand_tremor_moderate" amount="0.5"/>
+        <Affliction identifier="tachycardia" amount="0.2"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,9" sheetelementsize="64,64" origin="0,0"/>
+  </Affliction>
+
+</Afflictions>
+
+</Override>
