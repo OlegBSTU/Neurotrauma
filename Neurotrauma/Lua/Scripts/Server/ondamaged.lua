@@ -22,6 +22,45 @@ local function getCalculatedConcussionReduction(armor, strength)
 	end
 	return reduction
 end
+Hook.Add(
+	"character.damageLimb",
+	"NT.ondamagedby",
+	function(
+		character,
+		worldPosition,
+		hitLimb,
+		afflictions,
+		stun,
+		playSound,
+		attackImpulse,
+		attacker,
+		damageMultiplier,
+		allowStacking,
+		penetration,
+		shouldImplode
+	)
+		if -- invalid attack data, don't do anything
+			character == nil
+			or character.IsDead
+			or not character.IsHuman
+			or afflictions == nil
+			or hitLimb == nil
+			or hitLimb.IsSevered
+			or attacker == nil
+			or not NTConfig.Get("NT_Calculations", true)
+		then
+			return
+		end
+		local creatureCategory = NTConfig.Get("NT_creatureNoFallDamage", 1)
+		-- they make the game miserable with falldamage on
+		for val in creatureCategory do
+			if attacker.SpeciesName == val then
+				HF.AddAffliction(character, "stopcreatureabuse", 2)
+				break
+			end
+		end
+	end
+)
 Hook.Add("character.applyDamage", "NT.ondamaged", function(characterHealth, attackResult, hitLimb)
 	--print(hitLimb.HealthIndex or hitLimb ~= nil)
 
@@ -35,8 +74,13 @@ Hook.Add("character.applyDamage", "NT.ondamaged", function(characterHealth, atta
 		or #attackResult.Afflictions <= 0
 		or hitLimb == nil
 		or hitLimb.IsSevered
+		or not NTConfig.Get("NT_Calculations", true)
 	then
 		return
+	end
+
+	if not HF.HasAffliction(characterHealth.Character, "luabotomy") then
+		HF.SetAffliction(characterHealth.Character, "luabotomy", 1)
 	end
 
 	local afflictions = attackResult.Afflictions
@@ -263,7 +307,7 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 		then
 			HF.AddAffliction(character, "n_fracture", 5)
 		end
-		if strength >= 25 and HF.Chance(0.25) then
+		if strength >= 75 and HF.Chance(0.25) then
 			-- drop previously held item
 			local previtem = HF.GetHeadWear(character)
 			if previtem ~= nil then

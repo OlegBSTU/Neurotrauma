@@ -1,100 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <Override>
+  <!-- version by @Zugar https://steamcommunity.com/profiles/76561198868900136 and @Good Gamer  	https://steamcommunity.com/profiles/76561198033275555 -->
+  <!-- ITEMS -->
+  <entityname.mannitolplus>Маннитол плюс</entityname.mannitolplus>
+  <entitydescription.mannitolplus>Улучшенная версия маннитола. Используется для быстрого лечения нейротравм.</entitydescription.mannitolplus>
+  <entityname.artificialbrain>Искусственный мозг</entityname.artificialbrain>
+  <entitydescription.artificialbrain>Искуственный головной мозг, поддерживающий тело в вегетативном состоянии до пересадки мозга.</entitydescription.artificialbrain>
+  <entityname.surgeonclothes>Хирургический костюм</entityname.surgeonclothes>
+  <entitydescription.surgeonclothes>Стерильный хирургический костюм для предотвращения заражения во время операции.</entitydescription.surgeonclothes>
+  <entityname.surgicalmask>Хирургическая маска</entityname.surgicalmask>
+  <entitydescription.surgicalmask>Маска, защищающая пациента от воздушно-капельных патогенов во время операции.</entitydescription.surgicalmask>
+  <entityname.brainjar>Сосуд для мозга</entityname.brainjar>
+  <entitydescription.brainjar>Сосуд для длительного хранения головного мозга.</entitydescription.brainjar>
+  <entityname.surgicaldrapes>Хирургическая простыня</entityname.surgicaldrapes>
+  <entitydescription.surgicaldrapes>Стерильная простыня для предотвращения заражения во время операции.</entitydescription.surgicaldrapes>
+  <entityname.skillbooksurgery>"Врачебные ошибки"</entityname.skillbooksurgery>
+  <entitydescription.skillbooksurgery>Руководство по проведению хирургических процедур.</entitydescription.skillbooksurgery>
+  <entityname.triagetag>Первичная медицинская карточка (автоматическая)</entityname.triagetag>
+  <entitydescription.triagetag>Метка, которая используется для эффективного распределения пациентов в порядке срочности лечения.</entitydescription.triagetag>
+  <entityname.manualtriagetag>Первичная медицинская карточка (ручная)</entityname.manualtriagetag>
+  <entitydescription.manualtriagetag>Первичная медицинская карточка. Наносится на ноги для зеленого, на руки для желтого, на туловище для красного и на голову для черного.</entitydescription.manualtriagetag>
+  <entityname.experimentaltreatment>Экспериментальный препарат</entityname.experimentaltreatment>
+  <entitydescription.experimentaltreatment>Непредсказуемый препарат, который может вызвать как незначительное (или значительное) улучшение, так и ухудшение состояния пациента.</entitydescription.experimentaltreatment>
+  <!-- AFFLICTIONS -->
+  <afflictionname.preventativepermit>Профилактическое разрешение</afflictionname.preventativepermit>
+  <afflictiondescription.preventativepermit>Серьезные травмы менее вероятны.</afflictiondescription.preventativepermit>
+  <afflictionname.artificialbrain>Искусственный мозг</afflictionname.artificialbrain>
+  <afflictiondescription.artificialbrain>Пациент постоянно находится в вегетативном состоянии, но тело остается живым.</afflictiondescription.artificialbrain>
+  <afflictionname.triagetag_green>Маркер: Незначительные травмы</afflictionname.triagetag_green>
+  <afflictiondescription.triagetag_green>Пациент получил метку "незначительные травмы". Лечение не требуется.</afflictiondescription.triagetag_green>
+  <afflictionname.triagetag_yellow>Маркер: Отложенная помощь</afflictionname.triagetag_yellow>
+  <afflictiondescription.triagetag_yellow>Пациент получил метку "отложенная помощь". Его травмы не опасны для жизни.</afflictiondescription.triagetag_yellow>
+  <afflictionname.triagetag_red>Маркер: Неотложная помощь</afflictionname.triagetag_red>
+  <afflictiondescription.triagetag_red>Пациент получил метку "неотложная помощь". Ему требуется немедленное лечение.</afflictiondescription.triagetag_red>
+  <afflictionname.triagetag_black>Маркер: Мёртв</afflictionname.triagetag_black>
+  <afflictiondescription.triagetag_black>Пациент получил метку "мёртв". Медицинская помощь должна быть оказана другим. Спасение пациента маловеротно или невозможно.</afflictiondescription.triagetag_black>
+  <!-- JOBS -->
+  <jobname.surgeon>Хирург</jobname.surgeon>
+  <jobdescription.surgeon>В то время как врач лучше лучше оказывает первую медицинскую помощь и быстро реагирует, хирург специализируется на оптимизации хирургических процедур. Меньший риск заражения и более быстрое исполнение работы.</jobdescription.surgeon>
+  <skillname.surgery>Хирургия</skillname.surgery>
+  <!-- TALENTS -->
+  <talenttree.ethicalmedicine>Этичная медицина</talenttree.ethicalmedicine>
+  <talenttree.dabblingpharmacist>Начинающий фармацевт</talenttree.dabblingpharmacist>
+  <talenttree.fieldsurgeon>Полевой хирург</talenttree.fieldsurgeon>
+  <!-- Tier 1 -->
+  <talentname.ntsp_adrenalinepump>Адреналиновый насос</talentname.ntsp_adrenalinepump>
+  <talentdescription.ntsp_rapiddeoploymentdrag>Таскание тел на полной скорости.</talentdescription.ntsp_rapiddeoploymentdrag>
+  <talentdescription.ntsp_rapiddeoployment>Дает дополнительную скорость передвижения, равную [skillpercentage]% Вашего навыка хирургии.</talentdescription.ntsp_rapiddeoployment>
+  <talentname.ntsp_autodidact>Самоучка</talentname.ntsp_autodidact>
+  <talentdescription.ntsp_autodidact>Дает [amount]% бонусного опыта за выполнение миссии, во время которой Вы производили лечение члена экипажа.</talentdescription.ntsp_autodidact>
+  <talentname.ntsp_surgeonsintuition>Интуиция хирурга</talentname.ntsp_surgeonsintuition>
+  <talentdescription.ntsp_surgeonsintuition>Впервые открывая медицинский (или инопланетный) контейнер, у Вас есть вероятность в [probability]% найти дополнительные предметы.</talentdescription.ntsp_surgeonsintuition>
+  <!-- Tier 2 -->
+  <talentname.ntsp_fellowtoaster>Здорово, инженеры!</talentname.ntsp_fellowtoaster>
+  <talentname.ntsp_homecarepackage>Аптечка первой помощи</talentname.ntsp_homecarepackage>
+  <talentdescription.ntsp_homecarepackage>В начале каждого раунда дает:</talentdescription.ntsp_homecarepackage>
+  <talentname.ntsp_injectorgeneral>Главный инъектор</talentname.ntsp_injectorgeneral>
+  <talentdescription.ntsp_injectorgeneral>Применяемые вами медицинские предметы становятся на [amount]% эффективнее.</talentdescription.ntsp_injectorgeneral>
+  <!-- Ethical Medicine Tree -->
+  <talentname.ntsp_underpressure>Под давлением</talentname.ntsp_underpressure>
+  <talentdescription.ntsp_underpressure>Находящиеся рядом с вами, бессознательные пациенты получают [amount]% устойчивости к кровопотере, повреждению органов и нейротравмам.</talentdescription.ntsp_underpressure>
+  <talentname.ntsp_fisharespecimens>Рыба - это образцы, а не еда!</talentname.ntsp_fisharespecimens>
+  <talentdescription.ntsp_fisharespecimens>Когда Вы или другой член экипажа убивает монстра за пределами вашей подлодки, у Вас есть вероятность в [amount]% найти случайный генетический материал на нем.</talentdescription.ntsp_fisharespecimens>
+  <talentname.ntsp_bedsidemanner>Комфортные условия для пациента</talentname.ntsp_bedsidemanner>
+  <talentdescription.ntsp_bedsidemanner>Пациенты рядом с вами восстанавливаются быстрее. Эффект удваивается, если они лежат в постели.</talentdescription.ntsp_bedsidemanner>
+  <talentname.ntsp_brucereitzperk>Меня зовут Брюс... Рейц</talentname.ntsp_brucereitzperk>
+  <talentdescription.ntsp_brucereitzperk>Органы, которые Вы извлекаете, продаются по полной цене, а трансплантированные Вами органы никогда не отторгаются.</talentdescription.ntsp_brucereitzperk>
+  <!-- Dabbling Pharmacist Tree -->
+  <talentname.ntsp_ultrasoniccleaner>Ультразвуковой очиститель</talentname.ntsp_ultrasoniccleaner>
+  <talentdescription.ntsp_rnr>Дренажи, эндоваскулярные баллоны и иглы больше не расходуются, когда Вы их используете.</talentdescription.ntsp_rnr>
+  <talentdescription.ntsp_sterlise>Дает бонус в размере [amount] к стерильности, меньше сепсиса - ура!</talentdescription.ntsp_sterlise>
+  <talentname.ntsp_therapisttintraining>Терапевт-стажер</talentname.ntsp_therapisttintraining>
+  <talentdescription.ntsp_therapisttintraining>Дает [amount]% дополнительного здоровья.</talentdescription.ntsp_therapisttintraining>
+  <talentname.ntsp_experimental>Неэтичная медицина</talentname.ntsp_experimental>
+  <talentname.ntsp_mannitol>Маннитоловый маньяк</talentname.ntsp_mannitol>
+  <talentname.ntsp_selfcare>Самообслуживание</talentname.ntsp_selfcare>
+  <talentdescription.ntsp_selfcarepsychosis>Дает [amount]% устойчивости к [affliction].</talentdescription.ntsp_selfcarepsychosis>
+  <!-- Field Surgeon Tree -->
+  <talentname.ntsp_rapiddeoployment>Быстрое развертывание</talentname.ntsp_rapiddeoployment>
+  <talentname.ntsp_captainresist>Пожалуйста, перестаньте стрелять в меня ради удовольствия, капитан</talentname.ntsp_captainresist>
+  <talentname.ntsp_fallenandcantgetup>Я упал и не могу встать!</talentname.ntsp_fallenandcantgetup>
+  <talentname.ntsp_preventativepermit>Профилактическое разрешение</talentname.ntsp_preventativepermit>
+  <talentdescription.ntsp_preventativepermit>Последний человек, которому Вы дали приказ, получает [physicalresistance]% к сопротивлению урону и снижается веротность полочения им тяжёлых травм.</talentdescription.ntsp_preventativepermit>
+  <talentname.ntsp_imasurgeonnota>Я хирург, а не...</talentname.ntsp_imasurgeonnota>
+  <talentdescription.ntsp_imasurgeonnota1>Используя Ваш превосходный "Интеллект хирурга™", Вы можете получить [amount] бонусного навыка, вот так просто!</talentdescription.ntsp_imasurgeonnota1>
+  <talentdescription.ntsp_imasurgeonnota2>Или Вы можете выбрать вариант [jobname], что даст Вам [amount] бонусных навыков ко всему остальному.</talentdescription.ntsp_imasurgeonnota2>
+  <talentname.ntsp_properfol>Ты не умрёшь, солдат!</talentname.ntsp_properfol>
+  <talentdescription.ntsp_properfol>[itemname], который Вы применяете, действует мнгновенно.</talentdescription.ntsp_properfol>
+  <!-- unused/depricated talents, these are only kept for historical purposes.
 
-<!-- ITEMS -->
+<talentname.ntsp_unspecialisedspecialist>Неспециализированный специалист</talentname.ntsp_unspecialisedspecialist>
+<talentdescription.ntsp_unspecialisedspecialist>Дает бонус в [amount] к [skillname].</talentdescription.ntsp_unspecialisedspecialist>
+<talentname.ntsp_soothingsurgeon>Успокаивающий хирург</talentname.ntsp_soothingsurgeon>
+<talentdescription.ntsp_soothingsurgeon>Люди, которых Вы оперируете, меньше страдают от травматического шока</talentdescription.ntsp_soothingsurgeon>
+<talentname.ntsp_firstaidtraining>Обучение первой помощи</talentname.ntsp_firstaidtraining>
+<talentdescription.ntsp_selfcareunlocktree>Дает таланты, которые Вы еще не разблокировали в этом дереве.</talentdescription.ntsp_selfcareunlocktree>
+<talentdescription.ntsp_selfcarepsychosis>Дает 50% устойчивости к психозу</talentdescription.ntsp_selfcarepsychosis> это для медицинских предметов для самопомощи
 
-<entityname.mannitolplus>Маннитол плюс</entityname.mannitolplus>
-<entitydescription.mannitolplus>Улучшенная версия маннитола. Используется для быстрого лечения нейротравм.</entitydescription.mannitolplus>
-
-<entityname.artificialbrain>Искусственный мозг</entityname.artificialbrain>
-<entitydescription.artificialbrain>Искусственный мозг, удерживающий тело живым при отсутствии оригинального мозга.</entitydescription.artificialbrain>
-
-<entityname.surgeonclothes>Одежда хирурга</entityname.surgeonclothes>
-<entitydescription.surgeonclothes>Стерильная одежда хирурга для предотвращения инфицирования во время операции.</entitydescription.surgeonclothes>
-
-<entityname.surgicalmask>Хирургическая маска</entityname.surgicalmask>
-<entitydescription.surgicalmask>Маска, предохраняющая вашего пациента от воздушно-капельных патогенов во время операции.</entitydescription.surgicalmask>
-
-<entityname.brainjar>Сосуд для мозга</entityname.brainjar>
-<entitydescription.brainjar>Контейнер для долговременного хранения мозга.</entitydescription.brainjar>
-
-<entityname.surgicaldrapes>Хирургическая простыня</entityname.surgicaldrapes>
-<entitydescription.surgicaldrapes>Стерильные простыни для предотвращения инфицирования пациента во время операции.</entitydescription.surgicaldrapes>
-
-
-<!-- AFFLICTIONS -->
-
-<afflictionname.preventativepermit>Превентивные меры</afflictionname.preventativepermit>
-<afflictiondescription.preventativepermit>Сниженный риск серьёзных травм.</afflictiondescription.preventativepermit>
-
-<afflictionname.artificialbrain>Искусственный мозг</afflictionname.artificialbrain>
-<afflictiondescription.artificialbrain>Тело пациента поддерживается живым, несмотря на отсутствие настоящего мозга.</afflictiondescription.artificialbrain>
-
-
-<!-- JOBS -->
-
-<jobname.surgeon>Хирург</jobname.surgeon>
-<jobdescription.surgeon>В то время как задача медиков - быстрое реагирование, хирург специализируется на оптимизации хирургических процедур. Снижен риск инфицирования, ускорены базовые хирургические процедуры и другие хирургические мероприятия.</jobdescription.surgeon>
-
-<skillname.surgery>Хирургия</skillname.surgery>
-
-<!-- TALENTS -->
-
-<talenttree.researcher>Исследователь</talenttree.researcher>
-<talenttree.hospitalizer>Госпитализатор</talenttree.hospitalizer>
-<talenttree.fieldsurgeon>Полевой хирург</talenttree.fieldsurgeon>
-
-<talentname.ntsp_autoimmune>Аутоиммунное подавление</talentname.ntsp_autoimmune>
-<talentdescription.ntsp_autoimmune>Органы, которые вы трансплантируете, никогда не будут отторгнуты.</talentdescription.ntsp_autoimmune>
-
-<talentname.ntsp_firemanscarry>Оперативное спасение</talentname.ntsp_firemanscarry>
-
-<talentname.ntsp_properfol>Эксперт по пропофолу</talentname.ntsp_properfol>
-<talentdescription.ntsp_properfol>[itemname], применяемый вами, подействует мгновенно.</talentdescription.ntsp_properfol>
-
-<talentname.ntsp_soothingsurgeon>Бережный хирург</talentname.ntsp_soothingsurgeon>
-<talentdescription.ntsp_soothingsurgeon>Люди, которых вы оперируете, меньше страдают от травматического шока</talentdescription.ntsp_soothingsurgeon>
-
-<talentname.ntsp_imadoctornota>Я врач, а не...</talentname.ntsp_imadoctornota>
-
-<talentname.ntsp_preventativepermit>Превентивные меры</talentname.ntsp_preventativepermit>
-<talentdescription.ntsp_preventativepermit>Последний, кому вы отдали приказ, получает [physicalresistance]% сопротивления урону и в меньшей степени подвержен серьёзным ранениям.</talentdescription.ntsp_preventativepermit>
-
-<talentname.ntsp_medicallicence>Медицинская лицензия</talentname.ntsp_medicallicence>
-<talentdescription.ntsp_medicallicence>Извлекаемые вами органы продаются по полной цене.</talentdescription.ntsp_medicallicence>
-
-<talentname.ntsp_bedsidemanner>Постельный режим</talentname.ntsp_bedsidemanner>
-<talentdescription.ntsp_bedsidemanner>Пациенты вокруг вас быстрее пассивно лечатся. Эффект удвоен для тех, кто лежит на кровати.</talentdescription.ntsp_bedsidemanner>
-
-<talentname.ntsp_rinseandrepeat>Отмоется!</talentname.ntsp_rinseandrepeat>
-<talentdescription.ntsp_rinseandrepeat>Дренажи, эндоваскулярные баллоны и иглы больше не расходуются при использовании.</talentdescription.ntsp_rinseandrepeat>
-
-<talentname.ntsp_underpressure>Под давлением</talentname.ntsp_underpressure>
-<talentdescription.ntsp_underpressure>Пациенты без сознания вокруг вас на [amount]% устойчивее к кровопотере, урону органам и нейротравме.</talentdescription.ntsp_underpressure>
-
-<talentname.ntsp_rapiddeoployment>Быстрое развёртывание</talentname.ntsp_rapiddeoployment>
-<talentdescription.ntsp_rapiddeoployment>Получите дополнительную скорость передвижения, равную [проценту навыка]% от вашего хирургического навыка.</talentdescription.ntsp_rapiddeoployment>
-
-<talentname.ntsp_humanmachine>Человек-машина</talentname.ntsp_humanmachine>
-
-<talentname.ntsp_firstaidtraining>Первая помощь</talentname.ntsp_firstaidtraining>
-<talentname.ntsp_mannitol>Маннитоловый маньяк</talentname.ntsp_mannitol>
-<talentname.ntsp_frankenstein>Др. Франкенштейн</talentname.ntsp_frankenstein>
-
-<!--A1.1-->
-
-<entityname.skillbooksurgery>'Медицинский этикет'</entityname.skillbooksurgery>
-<entitydescription.skillbooksurgery>Справочник, детально описывающий множество хирургических процедур и их проведение.</entitydescription.skillbooksurgery>
-
-<entityname.triagetag>Первичная медицинская карточка (автоматическая)</entityname.triagetag>
-<entitydescription.triagetag>Ярлык, используемый для быстрого определения типа и срочности медицинской помощи, необходимой пациенту в случае массовых жертв.</entitydescription.triagetag>
-
-<entityname.manualtriagetag>Первичная медицинская карточка (вручную)</entityname.manualtriagetag>
-<entitydescription.manualtriagetag>Ярлык ручного распределения. При применении к ногам - зеленый цвет, к рукам — желтый, к туловищу — красный, к голове — черный.</entitydescription.manualtriagetag>
-
-<entityname.experimentaltreatment>Экспериментальный препарат</entityname.experimentaltreatment>
-<entitydescription.experimentaltreatment>В высшей степени экспериментальный реагент, который может причинить как мало, так и много хорошего или плохого.</entitydescription.experimentaltreatment>
-
-<talentname.ntsp_experimental>Неэтичные методики</talentname.ntsp_experimental>
-
+ -->
+</Override>
 </infotexts>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Translated by guns(Heelge) / Перевёл guns(Heelge) -->
+
+  <!-- ITEMS -->
+  <!-- signal components -->
+
+  <entityname.nttut_subjectcomponent>Компонент для сценария</entityname.nttut_subjectcomponent>
+  <entitydescription.nttut_subjectcomponent>Требует Луа. Управляет сценариями.</entitydescription.nttut_subjectcomponent>
+
+  <!-- connections -->
+  <connection.subject_scenario_in>назначить_сценарий</connection.subject_scenario_in>
+  <connection.subject_scenario_out>сценарий_из</connection.subject_scenario_out>
+  <connection.subject_state_out>состояние_из</connection.subject_state_out>
+  <connection.subject_special_out>специальное_из</connection.subject_special_out>
+
+  <roomname.simulacrum>Симулякрум</roomname.simulacrum>
+  <roomname.garden>Сад</roomname.garden>
+
+  <!-- Mannabuildables -->
+  <entityname.mb_containerholder>Держатель для контейнера</entityname.mb_containerholder>
+  <entitydescription.mb_containerholder>Держит один контейнер для быстрого хранения и доступа.</entitydescription.mb_containerholder>
+  <entityname.mb_inertiainhibitor>Подавитель инерции</entityname.mb_inertiainhibitor>
+  <entitydescription.mb_inertiainhibitor>Требует Lua. Останавливает движение подлодки.</entitydescription.mb_inertiainhibitor>
+</infotexts>

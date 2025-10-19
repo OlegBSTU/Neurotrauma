@@ -1,4 +1,4 @@
 # TODO:
 - implement body temp
-- rebalance skill gain amount from existing treatments
+- make the limb replacement surgery require osteosynthesis
 - rest are probably in .lua files themselves

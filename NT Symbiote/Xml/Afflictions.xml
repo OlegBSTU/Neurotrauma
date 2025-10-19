@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<Override>
 <Afflictions>
 
 <!-- Calyxanide buff, only visible on hematology analyzer -->
@@ -181,5 +182,32 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
+  
+  <Affliction
+    name=""
+    identifier="afantibiotics"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="200"
+    showinhealthscannerthreshold="200"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.5">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true"/>
+        <!--<ReduceAffliction identifier="huskinfection" amount="0.5"/>-->
+        <Affliction identifier="organdamage" amount="0.2"/>
+        <Affliction identifier="kidneydamage" amount="0.175"/>
+        <Affliction identifier="liverdamage" amount="0.175"/>
+        <Affliction identifier="heartdamage" amount="0.1"/>
+        <Affliction identifier="lungdamage" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
 
 </Afflictions>
+</Override>

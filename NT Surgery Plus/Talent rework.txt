@@ -1,0 +1,111 @@
+Barotrauma Talents by echo__seven
+review in progress by -Heelge-
+
+Primary talents in other (vanilla) classes:
+
+- Total of four needed to advance to trees with usually better/specialised talents
+- Additional EXP gain based on mission type or other factors (Captain, Security, Assistant)
+- Additional skill gain (All)
+- Bonus to skill not frequenttly used by class (Captain, Security)
+- Debuff resistance (Captain, Security, Medical Doctor)
+- One-time rewards (Captain, Engineer)
+- Minor additional movement speed (Security)
+- Recipes for semi useful items (Almost all)
+- Books to help self or others gain skill when doing one's job (Security)
+- Fabricate at higher quality (Security)
+- Gain item on round end (Medical Doctor)
+- More damage with commonly used tools (Engineer, Mechanic)
+
+Trees:
+
+Generally start with minor buffs that get more significant as you go down the tree
+- High Morale -> Excellent Morale (Captain)
+- Commendations -> Medals (Captain)
+- Less dual wield penalty -> No dual wield penalty (Captain)
+- Boarding Axe -> double damage = 1-hit KO with Axe (Security)
+- Riot Shield -> Can't die for a short while (Security)
+- 10% more damage -> 50% more damage (Security)
+- the list goes on
+
+More useful skills are deeper down the tree or mutually exclusive
+- See previous list for former
+- Big skill boost for close teammates vs small skill boost for all (Captain)
+- Earn more marks with specific faction vs flat marks gain with (potentially) every faction (Captain)
+- More swimming speed vs less damage taken (Security)
+- the list goes on
+
+Movement speed bonuses generally minor or tied to conditions and temporary
+Movement Speed
+- 5%/10%, only for others (Captain)
+- 10% (Security)
+- 20% while aiming (Security)
+- 40% while crewmember unconscious (Medical Doctor)
+- 25% while wearing Exosuit (Mechanic)
+- 10% while wearing clown suit -> no to barely any resistances (Assistant)
+Swimming Speed
+- 50% if sub flooded (Captain)
+- 25% while missing out on 20% damage reduction (Security)
+- 50% while in wrecks (Mechanic)
+- 50% while wearing clown suit -> no to barely any resistances (Assistant)
+
+Current Surgeon issues (imo):
+
+- Tree access after two talent points invested in base skills -yeah thats an issue-
+- Dragging at full speed **plus** extra movement speed -> both their own talents in other classes (Medical Doctor & Security)
+- Bonus EXP essentially for free **plus** recipe for semi useful item -> both their own talents in other classes and EXP talent tied to conditions not met every round by default
+- Chance of finding additional items in primary talents -> lags server like crazy every time it triggers (not modder's fault, just thought I'd mention it) + is a tree talent & has less proc chance for Security and Mechanic. I also don't see why a surgeon would find extra alien items. Medical containers are already covered by Security talent and could thus proc multiple times.
+- Gain Mechanical/Electrical on Surgery/Medical + doubled skill gain if respective skill at 100 -> Old talent from Captain, removed for being a little too broken. Double effect here (two skills instead of just one) makes it even worse.
+- Genetic Material -> Skill from other class, not Surgeon's concern
+- Patients heal faster **plus** a whopping 30% more EXP on no death **plus** a skill book to help self or others gain skill -> three talents in one, 30% bonus EXP is a lot for something somewhat easily achievable plus other EXP bonus already present
+- Organs sell at high price -> Can easily be exploited (is hella fun tho)
+- 20% extra health as tree talent -> underwhelming, others have it as primary talent (Security, Medical Doctor)
+- 50% psychosis resistance as final tree talent -> kinda meh compared to what other classes get
+- 40% hecking percent swimming speed just like that **PLUS** 25% more movement speed -> **absolutely** blown out of proportion if compared to what other classes get, also two talents in one
+- 25% resistance to common damage types -> other classes get 5% - 10% flat (Captain, Mechanic in wrecks, Assistant with clown power) or higher with conditions: 20% if nobody around (Captain), 25% if attacked and only 4 seconds (Security), 20% if below 50% health (Mechanic)
+- Preventative Permit feels more like a final tree talent
+- Preventative Permit mutually exclusive with other powerful talent. Good and bad
+
+Proposed changes
+
+**Primary talents**
+Have a total of 10 - 12 primary talents, just like other classes + Have to spend total of 4 talent points to get access to trees
+
+First row
+- Fastest scalpel on Europa: Gain up to 10% additional movement speed based on your surgery skill.
+- Injector General: Medical items are 20% more potent when applied to others.
+- Preparation Package: At the start of every round gain: 5x Suture, 1x Blood Pack O-
+- Priorities Straight: While no crew member has died during a mission, gain 10% bonus XP. The deaths of assistants do not count.
+- Therapist-in-Training: Gain an additional 10% Maximum Health. Unlock recipe: Automated external defibrillator.
+Second row
+- Heavy Lifting: You can drag characters at full speed.
+- Flawless Job: Gain 15% bonus XP when you finish a mission in which you operated on at least one crewmember without them becoming septic.
+- Human Experiment: Unlock Recipe: Experimental Treatment
+- Stab stab stab: Deal Triple damage with all Scalpels (Note: Scalpels would have to be very weak melee weapons first, on par with or weaker than screwdrivers)
+- Ultrasonic Cleaner: Drainages, Endovascular Balloons and Needles no longer get consumed when you use them. Gain 30 bonus to sterility checks while operating.
+
+**Left Tree**
+Ethical Medicine
+- Under Pressure: Unconscious patients next to you gain 50% Bloodloss, Organ Damage and Neurotrauma resistance
+- Fine Bedside Manners: Patients near you heal at an accelerated rate. The effect is double if they are laying in bed.
+- Autopsy Report: Whenever you finish a mission in which you transplanted at least one organ, gain the item 'Medical Misconduct'.
+- My name is Reitz. Bruce Reitz.: Organs you extract sell for full price and never get rejected when transplanted.
+
+**Middle Tree**
+Dabbling Pharmacist
+- I'm a Surgeon, not a...: (Effect as is, very well done talent)
+- Expert Anesthetist: Crewmembers you administer opiates to gain 30% Opiate Addiction resistance for 5 minutes. Propofol that you administer instantly takes effect.
+or
+- You got a license for that?: You can craft Hyperzine _[and maybe other drugs]_ with much fewer materials.
+- Brainiac: Unlock recipe: Artificial brain. Unlock recipe: Brain jar. Unlock recipe: Mannitol plus.
+- Heart-in-a-Box: Craft an advanced organ storage solution that is capable of fully restoring transplants that have lost up to 20% health. Unlock recipe: Organ Care System
+
+**Right Tree**
+Field Surgeon
+- Rapid Deployment: You move and swim 25% faster if any crewmember is unconscious.
+- Seen it all: Whenever you are attacked, gain an additional 20% physical damage resistance.
+or
+- Bounce back: Gain 20% Stun resistance and 20% Blunt force trauma resistance
+- Preventative Permit: (Effect as is)
+or
+- Self Care: Once per mission, if your health has dropped below 40%, gain Combat Stimulant applied for 10 seconds. Gain 50% Psychosis resistance.
+- Miracle Worker: While wearing full Surgeon outfit, nearby crewmembers are unable to succumb to their injuries unless they give in. Become immune to Miracle In Progress.

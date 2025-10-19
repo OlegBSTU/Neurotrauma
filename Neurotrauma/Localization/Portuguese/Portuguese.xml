@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -21,10 +21,10 @@
 <entityname.wheelchair>Cadeira de Rodas</entityname.wheelchair>
 <entitydescription.wheelchair>Faz você depender de seus braços ao invés de suas pernas para a movimentação.</entitydescription.wheelchair>
 <entityname.blahaj>Tubarão Azul</entityname.blahaj>
-<Override>
+
 <entityname.healthscanner>Visor de Saúde</entityname.healthscanner>
 <entitydescription.healthscanner>Usado para diagnosticar as causas subjacentes dos sintomas.</entitydescription.healthscanner>
-</Override>
+
 <stasisbagequipconfirmation>Equipar isso vai te deixar inconsciente. Você tem certeza?</stasisbagequipconfirmation>
 <!-- /// Surgery /// -->
 <entityname.advscalpel>Bisturi</entityname.advscalpel>
@@ -36,7 +36,7 @@
 <entityname.tweezers>Pinça</entityname.tweezers>
 <entitydescription.tweezers>Uma pequena ferramenta que permite a remoção de balas, assim como tecido danificado e infectado.</entitydescription.tweezers>
 <entityname.surgerysaw>Serra Cirúrgica</entityname.surgerysaw>
-<entitydescription.surgerysaw>Uma ferramenta usada para serrar ossos.</entitydescription.surgerysaw>		
+<entitydescription.surgerysaw>Uma ferramenta usada para serrar ossos.</entitydescription.surgerysaw>
 <entityname.suture>Sutura</entityname.suture>
 <entitydescription.suture>Suturas biodegradáveis ​​para costurar feridas e incisões cirúrgicas.</entitydescription.suture>
 <entityname.surgicaldrill>Furadeira Cirúrgica</entityname.surgicaldrill>
@@ -129,10 +129,10 @@
 <entitydescription.bloodpackbminus>Administrado para: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
 <entityname.bloodpackabminus>Bolsa de Sangue AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administrado para: AB-, AB+</entitydescription.bloodpackabminus>
-<Override>
+
 <entityname.antibloodloss2>Bolsa de Sangue O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Um pacote de sangue que pode ser usado em qualquer paciente.</entitydescription.antibloodloss2>
-</Override>
+
 <entityname.ominuscard>Cartão de Doador de Sangue O-</entityname.ominuscard>
 <entitydescription.ominuscard>Pode receber sangue de: O-
 Pode dar sangue para: Todos tipos</entitydescription.ominuscard>
@@ -158,13 +158,16 @@ Pode dar sangue para: AB-, AB+</entitydescription.abminuscard>
 <entitydescription.abpluscard>Pode receber sangue de: Todos tipos
 Pode dar sangue para: AB+</entitydescription.abpluscard>
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Contêiner Médico</entityname.medtoolbox> 
+<entityname.medtoolbox>Contêiner Médico</entityname.medtoolbox>
 <entitydescription.medtoolbox>Pode armazenar medicamentos e instrumentos médicos.</entitydescription.medtoolbox>
-<entityname.surgerytoolbox>Caixa de Equipamento Cirúrgico</entityname.surgerytoolbox> 
+<entityname.surgerytoolbox>Caixa de Equipamento Cirúrgico</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Pode armazenar muitos itens pequenos que são usados ​​durante uma cirurgia.</entitydescription.surgerytoolbox>
-<entityname.organcrate>Caixa Refrigerada</entityname.organcrate> 
+<entityname.surgerytoolboxset>Caixa de Equipamento Cirúrgico</entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Pode armazenar muitos itens pequenos que são usados ​​durante uma cirurgia.</entitydescription.surgerytoolboxset>
+<displayname.surgeryset>[itemname] (kit)</displayname.surgeryset>
+<entityname.organcrate>Caixa Refrigerada</entityname.organcrate>
 <entitydescription.organcrate>Um lugar para armazenar seus preciosos órgãos, prontos para transplante... né?</entitydescription.organcrate>
-<entityname.organtoolbox>Contêiner Refrigerado</entityname.organtoolbox> 
+<entityname.organtoolbox>Contêiner Refrigerado</entityname.organtoolbox>
 <entitydescription.organtoolbox>Um lugar para armazenar seus preciosos órgãos recém-tirados.</entitydescription.organtoolbox>
 <entityname.bodybag>Saco para Cadáver</entityname.bodybag>
 <entitydescription.bodybag>Permite arrastar pessoas mais rapidamente.</entitydescription.bodybag>
@@ -515,5 +518,5 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 
 <!-- A1.8 -->
 
-
+</Override>
 </infotexts>

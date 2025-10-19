@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="20"/>
-            <RequiredSkill identifier="mechanical" level="15"/>
-            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
-        </Fabricate>
         
         <Deconstruct time="5"/>
 
@@ -20,19 +13,13 @@
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,0,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body width="120" height="110" density="50"/>
-        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+        <SuitableTreatment identifier="analgesia" suitability="50"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="50"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-13" holdangle="-90" reload="1.0"/>
     </Item>
 
     <Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.2">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="20"/>
-            <RequiredSkill identifier="mechanical" level="15"/>
-            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
-        </Fabricate>
 
         <Deconstruct time="5"/>
 
@@ -43,21 +30,14 @@
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,128,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body width="120" height="110" density="50"/>
-        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0"/>
+        <SuitableTreatment identifier="analgesia" suitability="25"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="25"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-13" holdangle="-90" reload="1.0"/>
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
 
     <Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="30"/>
-            <RequiredSkill identifier="mechanical" level="30"/>
-            <RequiredItem identifier="steel" mincondition="0.5" usecondition="true"/>
-            <RequiredItem identifier="zinc" mincondition="0.5" usecondition="true"/>
-            <RequiredItem identifier="fpgacircuit"/>
-        </Fabricate>
 
         <Deconstruct time="5"/>
 
@@ -83,14 +63,7 @@
     </Item>
 
     <Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="30"/>
-            <RequiredSkill identifier="mechanical" level="30"/>
-            <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.5" usecondition="true"/>
-        </Fabricate>
 
         <Deconstruct time="5"/>
 
@@ -117,15 +90,7 @@
     </Item>
 
     <Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.150">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="20"/>
-            <RequiredSkill identifier="mechanical" level="15"/>
-            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
-        </Fabricate>
 
         <Deconstruct time="5"/>
 
@@ -136,6 +101,8 @@
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,256,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body width="65" height="65" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="10"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="10"/>
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,-5" holdangle="10" reload="1.0">
             <StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
@@ -147,15 +114,7 @@
     </Item>
 
     <Item name="" identifier="traumashears" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgerytool" description="" useinhealthinterface="True" scale="0.5">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
-
-        <Fabricate suitablefabricators="fabricator">
-            <RequiredSkill identifier="medical" level="10"/>
-            <RequiredSkill identifier="mechanical" level="10"/>
-            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-            <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
-        </Fabricate>
 
         <Deconstruct time="5"/>
 
@@ -174,10 +133,11 @@
         <SuitableTreatment identifier="triagetag_red" suitability="100"/>
         <SuitableTreatment identifier="triagetag_black" suitability="100"/>
 
-        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="10,-10" holdangle="210" reload="1.0">
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="12,-2" holdangle="210" reload="1.0">
             <StatusEffect type="OnUse" target="Limb" comparison="and"/>
         </MeleeWeapon>
 
         <SkillRequirementHint identifier="medical" level="10"/>
     </Item>
 </Items>
+</Override>

@@ -67,10 +67,6 @@ Hook.Add(
 				HF.SpawnItemPlusFunction("traumashears", nil, nil, params.item.OwnInventory, 5)
 				HF.SpawnItemPlusFunction("drainage", nil, nil, params.item.OwnInventory, 6)
 				HF.SpawnItemPlusFunction("needle", nil, nil, params.item.OwnInventory, 7)
-				HF.SpawnItemPlusFunction("organscalpel_kidneys", nil, nil, params.item.OwnInventory, 8)
-				HF.SpawnItemPlusFunction("organscalpel_liver", nil, nil, params.item.OwnInventory, 9)
-				HF.SpawnItemPlusFunction("organscalpel_lungs", nil, nil, params.item.OwnInventory, 10)
-				HF.SpawnItemPlusFunction("organscalpel_heart", nil, nil, params.item.OwnInventory, 11)
 			end, nil, item.OwnInventory, 3)
 
 			HF.SpawnItemPlusFunction("bloodanalyzer", nil, nil, item.OwnInventory, 6)

@@ -38,20 +38,20 @@
       <RequiredSkill identifier="medical" level="38" />
       <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
+      <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="1">
         <Conditional huskinfection="lt 100.0" />
         <Affliction identifier="af_calyxanide" amount="100" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
+      <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="1">
         <Conditional huskinfection="lt 100.0" />
         <Affliction identifier="af_calyxanide" amount="100" />
       </StatusEffect>
       <!-- Injecting a still-conscious Husk will only piss it off and kill the "conscious" faster -->
-      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
+      <StatusEffect statuseffecttags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0">
         <Conditional huskinfection="eq 100.0" />
         <Affliction identifier="organdamage" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0" comparison="or">
+      <StatusEffect statuseffecttags="medical,calyxanide" type="OnSuccess" target="UseTarget" duration="10.0" comparison="or">
         <Conditional IsHusk="true" />
         <Affliction identifier="organdamage" amount="4" />
       </StatusEffect>
@@ -105,6 +105,72 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
     </LightComponent>
+  </Item>
+  </Override>
+
+  <!-- Rum override -->
+  <Override>
+  <Item name="" identifier="rum" category="Medical,Misc" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" amount="1" spawnprobability="0.01" />
+    <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+    <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+    <PreferredContainer primary="medfabcab" secondary="medcab"/>
+    <Price baseprice="130" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="true">
+        <Reputation faction="clowns" min="30"/>
+      </Price>
+      <Price storeidentifier="merchantnightclub" minavailable="0" maxavailable="3" sold="true"/>
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true">
+      <RequiredItem identifier="ethanol" />
+      <RequiredItem tag="distillable" />
+    </Fabricate>
+    <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" depth="0.6" origin="0.5,0.5" />
+    <SuitableTreatment type="infection" suitability="30" />
+    <SuitableTreatment type="burn" suitability="-3" />
+    <Body width="27" height="66" density="20" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0" />
+      <StatusEffect type="OnSecondaryUse" target="This">
+        <Conditional Condition="gte 100" />
+        <Sound file="Content/Items/Medical/ITEM_bottleOpen.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="This">
+        <Conditional Condition="lt 95" />
+        <Sound file="Content/Items/Medical/ITEM_drinkingLoop.ogg" range="250" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/ITEM_liquid.ogg" range="500" />
+      </StatusEffect>
+      <!-- When Rum is drunk -->
+      <StatusEffect type="OnSecondaryUse" target="This,UseTarget" disabledeltatime="true" stackable="false">
+        <Conditional Condition="lte 1" />
+        <Affliction identifier="psychosisresistance" amount="600" />
+      </StatusEffect>
+      <!--<StatusEffect type="OnSecondaryUse" target="This,UseTarget" duration="30" stackable="false" ConditionalComparison="And">
+        <Conditional Condition="lte 1" />
+        <Conditional huskinfection="lt 50.0" />
+        <ReduceAffliction identifier="huskinfection" amount="1" />
+      </StatusEffect>-->
+      <StatusEffect type="OnSecondaryUse" target="This,UseTarget" duration="30" stackable="false">
+        <Conditional Condition="lte 1" />
+        <ReduceAffliction identifier="psychosis" amount="3" />
+        <ReduceAffliction identifier="hallucinating" amount="3" />
+        <Affliction identifier="drunk" amount="3" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="This">
+        <ParticleEmitter particle="juicedrop" particlespersecond="10" scalemin="1" scalemax="1.5" distancemin="20" distancemax="25" anglemin="80" anglemax="100" velocitymin="40" velocitymax="60" copyentityangle="true" lifetimemultiplier="0.10" />
+      </StatusEffect>
+      <!-- When Rum is used in Health GUI -->
+      <StatusEffect type="OnUse" target="This, Limb" duration="10">
+        <ReduceAffliction identifier="infection" amount="1.5" />
+        <Affliction identifier="burn" amount="0.15" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
   </Item>
   </Override>
 

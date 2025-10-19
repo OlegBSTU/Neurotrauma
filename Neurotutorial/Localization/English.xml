@@ -15,8 +15,10 @@
   <roomname.simulacrum>Simulacrum</roomname.simulacrum>
   <roomname.garden>Garden</roomname.garden>
 
-  <!-- InertiaInhibitor -->
+  <!-- Mannabuildables -->
   <entityname.mb_inertiainhibitor>Inertia inhibitor</entityname.mb_inertiainhibitor>
   <entitydescription.mb_inertiainhibitor>Requires Lua. Stops the submarine from moving.</entitydescription.mb_inertiainhibitor>
+  <entityname.mb_containerholder>Container holder</entityname.mb_containerholder>
+  <entitydescription.mb_containerholder>Holds one container for quick storage and access.</entitydescription.mb_containerholder>
 
 </infotexts>

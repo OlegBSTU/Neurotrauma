@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -48,7 +48,6 @@
 <Override>
 <entityname.healthscanner>Health scanner</entityname.healthscanner>
 <entitydescription.healthscanner>Used to diagnose underlying causes of symptoms.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Equipping this will cause you to go unconscious. Are you sure?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
@@ -67,7 +66,7 @@
 <entitydescription.tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.tweezers>
 
 <entityname.surgerysaw>Surgical saw</entityname.surgerysaw>
-<entitydescription.surgerysaw>A tool used to saw through bones.</entitydescription.surgerysaw>		
+<entitydescription.surgerysaw>A tool used to saw through bones.</entitydescription.surgerysaw>
 
 <entityname.suture>Suture</entityname.suture>
 <entitydescription.suture>Biodegradeable sutures for stitching up wounds and surgical incisions alike.</entitydescription.suture>
@@ -138,7 +137,7 @@
 <entitydescription.pressuremeds>A medication used to lower blood pressure.</entitydescription.pressuremeds>
 
 <entityname.ointment>Antibiotic ointment</entityname.ointment>
-<entitydescription.ointment>A highly antiseptic gel that promotes the recovery from burns as well as from minor infections.</entitydescription.ointment>
+<entitydescription.ointment>A potent antibiotic gel that promotes the recovery from minor infections and makes the applied area sterile.</entitydescription.ointment>
 
 <entityname.endovascballoon>Endovascular balloon</entityname.endovascballoon>
 <entitydescription.endovascballoon>A balloon inserted into major arteries following their rupture. It will cut off bloodflow, but it will stop the bleeding.</entitydescription.endovascballoon>
@@ -206,10 +205,9 @@
 <entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
+
 <entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Donor card O-</entityname.ominuscard>
 <entitydescription.ominuscard>Can take blood from: O-
@@ -246,19 +244,23 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Medical container</entityname.medtoolbox> 
+<entityname.medtoolbox>Medical container</entityname.medtoolbox>
 <entitydescription.medtoolbox>Can store medicine and medical instruments</entitydescription.medtoolbox>
 
 <entityname.surgerytoolbox>Surgery toolbox</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Can store many small items that are used during surgery</entitydescription.surgerytoolbox>
 
-<entityname.organcrate>Refrigerated crate</entityname.organcrate> 
+<entityname.surgerytoolboxset>Surgery toolbox</entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Can store many small items that are used during surgery</entitydescription.surgerytoolboxset>
+<displayname.surgeryset>[itemname] (kit)</displayname.surgeryset>
+
+<entityname.organcrate>Refrigerated crate</entityname.organcrate>
 <entitydescription.organcrate>A place to store your precious transplant-ready organs</entitydescription.organcrate>
 
-<entityname.medstartercrate>Medical starter crate</entityname.medstartercrate> 
+<entityname.medstartercrate>Medical starter crate</entityname.medstartercrate>
 <entitydescription.medstartercrate>A crate that contains all the essentials, conveniently packaged into a single crafting recipe</entitydescription.medstartercrate>
 
-<entityname.organtoolbox>Refrigerated container</entityname.organtoolbox> 
+<entityname.organtoolbox>Refrigerated container</entityname.organtoolbox>
 <entitydescription.organtoolbox>A place to store your precious transplant-ready organs</entitydescription.organtoolbox>
 
 <entityname.bodybag>Body bag</entityname.bodybag>
@@ -285,8 +287,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <entityname.lleg>Left leg</entityname.lleg>
 <entitydescription.lleg>A severed left leg. Can be surgically reattached.</entitydescription.lleg>
 
-<entityname.heada>Head</entityname.heada>
-<entitydescription.heada>A severed head, or what's left of it.</entitydescription.heada>
+<entityname.headta>Head remains</entityname.headta>
+<entitydescription.headta>A severed head, or what's left of it.</entitydescription.headta>
+
+<entityname.headsa>Amputated head</entityname.headsa>
+<entitydescription.headsa>A severed head for recycling.</entitydescription.headsa>
 
 <entityname.rarmp>Right arm bionic prosthesis</entityname.rarmp>
 <entitydescription.rarmp>A bionic right arm. Can be used to treat amputation.</entitydescription.rarmp>
@@ -711,6 +716,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.modconflict>Mod conflict</afflictionname.modconflict>
 <afflictiondescription.modconflict>There is a mod conflict. A different mod is overriding some of the same items Neurotrauma does. Some things may not function correctly. Please adjust your load order.</afflictiondescription.modconflict>
 
+<afflictionname.tshocktimeout>Traumatic shock immunity</afflictionname.tshocktimeout>
+<afflictiondescription.tshocktimeout>The patient was left unattended, for some time they won't be aware about having themselves opened.</afflictiondescription.tshocktimeout>
+
 <afflictionname.analgesia>Analgesia</afflictionname.analgesia>
 <afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
 
@@ -765,6 +773,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <!-- misc -->
 <roomname.surgical>Surgical</roomname.surgical>
+
+<!-- Talents -->
+<talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Alien Blood‖end‖ gives [amount]% less ‖color:gui.orange‖Psychosis‖end‖ and ‖color:gui.green‖90%‖end‖ less ‖color:gui.orange‖Hemotransfusion Shock‖end‖.</talentdescription.itemgiveslessaffliction>
 
 <!-- /// Loading Screen Tips /// -->
 
@@ -849,5 +860,5 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-
+</Override>
 </infotexts>

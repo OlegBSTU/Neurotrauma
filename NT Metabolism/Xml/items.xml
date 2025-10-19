@@ -59,12 +59,12 @@
         </StatusEffect>
       </Attack>
       <!-- butchering -->
-      <StatusEffect tags="butchery" type="OnFailure" target="UseTarget" comparison="And">
+      <StatusEffect statuseffecttags="butchery" type="OnFailure" target="UseTarget" comparison="And">
         <Conditional isdead="true" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.8" shockwave="false" underwaterbubble="false" />
         <LuaHook name="ntmb.butcher.progress" />
       </StatusEffect>
-      <StatusEffect tags="butchery" type="OnSuccess" target="UseTarget" comparison="And">
+      <StatusEffect statuseffecttags="butchery" type="OnSuccess" target="UseTarget" comparison="And">
         <Conditional isdead="true" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.8" shockwave="false" underwaterbubble="false" />
         <LuaHook name="ntmb.butcher.progress" />

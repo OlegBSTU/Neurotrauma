@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Latinamerican Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Tiburón azul</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Escáner de Salud</entityname.healthscanner>
 <entitydescription.healthscanner>Se utiliza para diagnosticar las causas subyacentes de los síntomas.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Equipar esto hará que quedes inconsciente. ¿Está seguro?</stasisbagequipconfirmation>
 
@@ -52,7 +50,7 @@
 <entitydescription.tweezers>Una pequeña herramienta que permite la extracción de balas, así como tejido dañado y necrótico.</entitydescription.tweezers>
 
 <entityname.surgerysaw>sierra quirúrgica</entityname.surgerysaw>
-<entitydescription.surgerysaw>Herramienta que se usa para cortar huesos.</entitydescription.surgerysaw>		
+<entitydescription.surgerysaw>Herramienta que se usa para cortar huesos.</entitydescription.surgerysaw>
 
 <entityname.suture>Sutura</entityname.suture>
 <entitydescription.suture>Suturas biodegradables para coser heridas e incisiones quirúrgicas por igual.</entitydescription.suture>
@@ -186,10 +184,8 @@
 <entityname.bloodpackabminus>Paquete de sangre AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administrable a: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
 <entityname.antibloodloss2>Paquete de sangre O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Un paquete de sangre que se puede utilizar en cualquier paciente.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Tarjeta de donante O-</entityname.ominuscard>
 <entitydescription.ominuscard>Puede tomar sangre de: O-
@@ -226,16 +222,20 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 
 
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Contenedor medico</entityname.medtoolbox> 
+<entityname.medtoolbox>Contenedor medico</entityname.medtoolbox>
 <entitydescription.medtoolbox>Puede almacenar medicamentos e instrumentos médicos.</entitydescription.medtoolbox>
 
-<entityname.surgerytoolbox>Caja de herramientas de cirugía</entityname.surgerytoolbox> 
+<entityname.surgerytoolbox>Caja de herramientas de cirugía</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Puede almacenar muchos artículos pequeños que se usan durante la cirugía.</entitydescription.surgerytoolbox>
 
-<entityname.organcrate>Caja refrigerada</entityname.organcrate> 
+<entityname.surgerytoolboxset>Caja de herramientas de cirugía</entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Puede almacenar muchos artículos pequeños que se usan durante la cirugía.</entitydescription.surgerytoolboxset>
+<displayname.surgeryset>[itemname] (equipo)</displayname.surgeryset>
+
+<entityname.organcrate>Caja refrigerada</entityname.organcrate>
 <entitydescription.organcrate>Un lugar para almacenar sus preciados órganos listos para trasplante.</entitydescription.organcrate>
 
-<entityname.organtoolbox>Contenedor refrigerado</entityname.organtoolbox> 
+<entityname.organtoolbox>Contenedor refrigerado</entityname.organtoolbox>
 <entitydescription.organtoolbox>A place to store your precious transplant-ready organs.</entitydescription.organtoolbox>
 
 <entityname.bodybag>Bolsa para cadáveres</entityname.bodybag>
@@ -437,7 +437,7 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 
 <afflictionname.surgeryincision>Incisión de cirugía</afflictionname.surgeryincision>
 <afflictiondescription.surgeryincision>Se ha hecho una incisión con un bisturí.</afflictiondescription.surgeryincision>
-  
+
 <afflictionname.clampedbleeders>Sangrado pinzado</afflictionname.clampedbleeders>
 <afflictiondescription.clampedbleeders>Los sangrados quirúrgicos han sido restañados.</afflictiondescription.clampedbleeders>
 
@@ -676,7 +676,7 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 
 <afflictionname.traumaticshock>Choque traumático</afflictionname.traumaticshock>
 <afflictiondescription.traumaticshock>El paciente experimenta dolor intenso y estrés.</afflictiondescription.traumaticshock>
-  
+
 <afflictionname.analgesia>Analgesia</afflictionname.analgesia>
 <afflictiondescription.analgesia>Insensibilidad al dolor.</afflictiondescription.analgesia>
 
@@ -738,7 +738,7 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 <entityname.pressuremeds>Nitroprusiato de sodio</entityname.pressuremeds>
 <entitydescription.pressuremeds>Medicamento que se usa para bajar la presión sanguínea</entitydescription.pressuremeds>
 
-<entityname.medstartercrate>Caja de inicio médica</entityname.medstartercrate> 
+<entityname.medstartercrate>Caja de inicio médica</entityname.medstartercrate>
 <entitydescription.medstartercrate>Una caja que contiene todos los elementos esenciales, convenientemente empaquetados en una sola receta de elaboración.</entitydescription.medstartercrate>
-
+</Override>
 </infotexts>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Korean" nowhitespace="false" translatedname="Korean">
+<Override>
 
 <!-- ITEMS -->
 
@@ -106,4 +107,5 @@
 <talentname.ntsp_experimental>비윤리적 소싱</talentname.ntsp_experimental>
 <talentname.ntsp_frankenstein>프랑켄슈타인 박사</talentname.ntsp_frankenstein>
 
+</Override>
 </infotexts>

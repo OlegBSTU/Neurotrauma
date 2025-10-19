@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+<Items>
+  <Item name="" identifier="surgeonclothes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,sterile" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="outpostcrewcabinet,abandonedcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="150" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="10" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sheetindex="7,8" sheetelementsize="64,64" />
+    <Sprite name="medicalofficer" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="245,149,119,56" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="MedicalOfficer's Uniform Torso" texture="%ModDir%/Images/SurgeonClothes.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Hand" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Hand" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Lower Arm" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Lower Arm" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Upper Arm" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Upper Arm" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Waist" texture="%ModDir%/Images/SurgeonClothes.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Thigh" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Thigh" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Leg" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Leg" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Right Shoe" texture="%ModDir%/Images/SurgeonClothes.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MedicalOfficer's Uniform Left Shoe" texture="%ModDir%/Images/SurgeonClothes.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.9" />
+    </Wearable>
+    <ItemContainer capacity="2">
+      <Containable items="chem,medical" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="surgicaldrapes" category="Equipment" tags="smallitem,clothing,sterile" scale="0.5" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <Price baseprice="100" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="50">
+      <RequiredSkill identifier="medical" level="15" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,363,124,67" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,363,124,67" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
+      <sprite texture="%ModDir%\Images/drapehelmet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" hideotherwearables="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="%ModDir%\Images/drapes.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="traumaticshock" damagemultiplier="0.5" damagesound="LimbArmor" />
+    </Wearable>
+    <aitarget maxsightrange="50" />
+  </Item>
+  <Item name="" identifier="surgicalmask" scale="0.5" category="Equipment" Tags="smallitem,clothing,sterile,medical" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <Price baseprice="50" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="16" />
+    </Price>
+    <PreferredContainer primary="outpostcrewcabinet,abandonedcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5" />
+    <Sprite name="Surgical Mask" texture="%ModDir%/Images/MainAtlas.png" depth="0.55" sourcerect="0,134,64,44" origin="0.5,0.5" />
+    <Body width="32" height="20" density="11" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Surgical Mask Wearable" texture="%ModDir%/Images/SurgeonClothes.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hidelimb="false" hideotherwearables="false" sourcerect="443,14,60,51" origin="0.25,0.1" />
+      <!--hidewearablesoftype="moustache,beard"-->
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.8" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.9" />
+    </Wearable>
+  </Item>
+</Items>
+</Override>

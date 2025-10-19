@@ -23,7 +23,7 @@
   StepLiftOffset="-0.49999997"
   StepLiftFrequency="2"
   BackwardsMovementMultiplier="0.55"
-  MovementSpeed="0.5"
+  MovementSpeed="0.8"
   CycleSpeed="8"
   HeadAngle="-30"
   TorsoAngle="-30"

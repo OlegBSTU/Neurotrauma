@@ -2,8 +2,8 @@
 
 NT = {} -- Neurotrauma
 NT.Name = "Neurotrauma"
-NT.Version = "A1.12.1"
-NT.VersionNum = 01120100
+NT.Version = "A1.14.7"
+NT.VersionNum = 01140700
 NT.Path = table.pack(...)[1]
 
 dofile(NT.Path .. "/Lua/Scripts/helperfunctions.lua")
@@ -48,14 +48,14 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 		end, 1)
 	end, 1)
 
-	--dofile(NT.Path .. "/Lua/Scripts/Server/characterpatches.lua")
+	dofile(NT.Path .. "/Lua/Scripts/Server/characterpatches.lua")
 
 	dofile(NT.Path .. "/Lua/Scripts/Server/ntcompat.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/blood.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/humanupdate.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/ondamaged.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/items.lua")
-	dofile(NT.Path .. "/Lua/Scripts/Server/onfire.lua")
+	--dofile(NT.Path .. "/Lua/Scripts/Server/onfire.lua") -- we got onfire in vanilla, plus it has severe perf issues
 	dofile(NT.Path .. "/Lua/Scripts/Server/cpr.lua")
 	--dofile(NT.Path.."/Lua/Scripts/Server/surgerytable.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/fuckbots.lua")
@@ -98,3 +98,5 @@ dofile(NT.Path .. "/Lua/Scripts/Shared/surgerytable.lua") -- Heelge: fix for htt
 -- Consent Required Extended with adjustments
 -- mod page: https://steamcommunity.com/sharedfiles/filedetails/?id=2892602084
 dofile(NT.Path .. "/Lua/ConsentRequiredExtended/init.lua")
+
+dofile(NT.Path .. "/Lua/Scripts/testing.lua")

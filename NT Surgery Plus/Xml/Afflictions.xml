@@ -1,124 +1,175 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
-    <Affliction
-        identifier="underpressure"
-        type="talentbuff"
-        isbuff="true"
-        limbspecific="false"
-        showiconthreshold="200"
-        showinhealthscannerthreshold="200"
-        maxstrength="5"
-        iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="5" strengthchange="-1"
-            resistancefor="bloodloss,organdamage,cerebralhypoxia"
-            minresistance="0.5"
-            maxresistance="0.5" >
-        </Effect>
-        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
-    </Affliction>
+  <Override>
+  <Affliction
+    identifier="injectorready"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="1"
+    maxstrength="100"
+    duration="10"
+    treatmentthreshold="1000"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="1" maxstrength="100">
+      <StatValue stattype="MedicalItemApplyingMultiplier" minvalue="1" maxvalue="10" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
 
-    <Affliction
-        identifier="preventativepermit"
-        type="talentbuff"
-        isbuff="true"
-        limbspecific="false"
-        showiconthreshold="0"
-        showinhealthscannerthreshold="200"
-        maxstrength="5"
-        iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="5" strengthchange="-1"
-            resistancefor="damage"
-            minresistance="0.35"
-            maxresistance="0.35" >
-        </Effect>
-        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
-    </Affliction>
+  <Affliction
+    identifier="ntsp_fallenandcantgetupstunresist"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    hideiconafterdelay="true"
+    showiconthreshold="2"
+    maxstrength="1"
+    duration="1"
+    treatmentthreshold="1000"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1"
+      resistancefor="stun"
+      minresistance="0.3"
+      maxresistance="0.3" />
+    <Icon texture="Content/UI/TalentsIcons4.png"
+      sheetindex="2,1"
+      sheetelementsize="128,128"
+      color="10,193,114,255"
+      origin="0,0" />
+  </Affliction>
 
-    <Affliction
-        name=""
-        identifier="artificialbrain"
-        description=""
-        targets="human"
-        healableinmedicalclinic="false"
-        limbspecific="false"
-        indicatorlimb="Head"
-        showiconthreshold="1"
-        showinhealthscannerthreshold="1"
-        type="gaze"
-        isbuff="false"
-        causeofdeathdescription="Died of missing a brain"
-        selfcauseofdeathdescription="Your brain got removed."
-        iconcolors="127,127,127,255;127,127,127,255"
-        maxstrength="2">
-        <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,5" sheetelementsize="128,128" origin="0,0"/>
-    </Affliction>
+  <Affliction identifier="underpressure"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="200"
+    showinhealthscannerthreshold="200"
+    maxstrength="5"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="5"
+      strengthchange="-1"
+      resistancefor="bloodloss,organdamage,cerebralhypoxia"
+      minresistance="0.5"
+      maxresistance="0.5" />
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
 
-<!-- Triage tags -->
-    <Affliction
-        name=""
-        identifier="triagetag_green"
-        description=""
-        targets="human"
-        healableinmedicalclinic="false"
-        limbspecific="false"
-        indicatorlimb="LeftLeg"
-        showiconthreshold="1"
-        showinhealthscannerthreshold="100"
-        type="triagetag"
-        isbuff="true"
-        iconcolors="0,145,14,255;0,145,14,255"
-        maxstrength="2">
-        <icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,1" sheetelementsize="128,128" origin="0,0"/>
-    </Affliction>
+  <Affliction
+    identifier="preventativepermit"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="0"
+    showinhealthscannerthreshold="200"
+    maxstrength="5"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="5"
+      strengthchange="-1"
+      resistancefor="damage"
+      minresistance="0.35"
+      maxresistance="0.35" />
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
 
-    <Affliction
-        name=""
-        identifier="triagetag_yellow"
-        description=""
-        targets="human"
-        healableinmedicalclinic="false"
-        limbspecific="false"
-        indicatorlimb="LeftLeg"
-        showiconthreshold="1"
-        showinhealthscannerthreshold="100"
-        type="triagetag"
-        isbuff="true"
-        iconcolors="224,193,38,255;224,193,38,255"
-        maxstrength="2">
-        <icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,1" sheetelementsize="128,128" origin="0,0"/>
-    </Affliction>
+  <Affliction
+    name=""
+    identifier="artificialbrain"
+    description=""
+    targets="human"
+    healableinmedicalclinic="false"
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    type="gaze"
+    isbuff="false"
+    causeofdeathdescription="Died of missing a brain"
+    selfcauseofdeathdescription="Your brain got removed."
+    iconcolors="127,127,127,255;127,127,127,255"
+    maxstrength="2">
+    <icon texture="%ModDir:3190189044%/Images/AfflictionIcons.png" sheetindex="4,5" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
 
-    <Affliction
-        name=""
-        identifier="triagetag_red"
-        description=""
-        targets="human"
-        healableinmedicalclinic="false"
-        limbspecific="false"
-        indicatorlimb="LeftLeg"
-        showiconthreshold="1"
-        showinhealthscannerthreshold="100"
-        type="triagetag"
-        isbuff="true"
-        iconcolors="188,26,26,255;188,26,26,255"
-        maxstrength="2">
-        <icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,1" sheetelementsize="128,128" origin="0,0"/>
-    </Affliction>
+  <!-- Triage tags -->
+  <Affliction
+    name=""
+    identifier="triagetag_green"
+    description=""
+    targets="human"
+    healableinmedicalclinic="false"
+    limbspecific="false"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="100"
+    type="triagetag"
+    isbuff="true"
+    iconcolors="0,145,14,255;0,145,14,255"
+    maxstrength="2">
+    <icon texture="%ModDir%/Images/MainAtlas.png"
+      sheetindex="5,1"
+      sheetelementsize="128,128"
+      origin="0,0" />
+  </Affliction>
 
-    <Affliction
-        name=""
-        identifier="triagetag_black"
-        description=""
-        targets="human"
-        healableinmedicalclinic="false"
-        limbspecific="false"
-        indicatorlimb="LeftLeg"
-        showiconthreshold="1"
-        showinhealthscannerthreshold="100"
-        type="triagetag"
-        isbuff="true"
-        iconcolors="64,64,64,255;64,64,64,255"
-        maxstrength="2">
-        <icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="5,1" sheetelementsize="128,128" origin="0,0"/>
-    </Affliction>
+  <Affliction
+    name=""
+    identifier="triagetag_yellow"
+    description=""
+    targets="human"
+    healableinmedicalclinic="false"
+    limbspecific="false"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="100"
+    type="triagetag"
+    isbuff="true"
+    iconcolors="224,193,38,255;224,193,38,255"
+    maxstrength="2">
+    <icon texture="%ModDir%/Images/MainAtlas.png"
+      sheetindex="5,1"
+      sheetelementsize="128,128"
+      origin="0,0" />
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="triagetag_red"
+    description=""
+    targets="human"
+    healableinmedicalclinic="false"
+    limbspecific="false"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="100"
+    type="triagetag"
+    isbuff="true"
+    iconcolors="188,26,26,255;188,26,26,255"
+    maxstrength="2">
+    <icon texture="%ModDir%/Images/MainAtlas.png"
+      sheetindex="5,1"
+      sheetelementsize="128,128"
+      origin="0,0" />
+  </Affliction>
+
+  <Affliction
+    name=""
+    identifier="triagetag_black"
+    description=""
+    targets="human"
+    healableinmedicalclinic="false"
+    limbspecific="false"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="100"
+    type="triagetag"
+    isbuff="true"
+    iconcolors="64,64,64,255;64,64,64,255"
+    maxstrength="2">
+    <icon texture="%ModDir%/Images/MainAtlas.png"
+      sheetindex="5,1"
+      sheetelementsize="128,128"
+      origin="0,0" />
+  </Affliction>
+  </Override>
 </Afflictions>

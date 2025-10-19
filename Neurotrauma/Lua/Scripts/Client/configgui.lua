@@ -212,8 +212,8 @@ end
 
 Networking.Receive("NT.ConfigUpdate", function(msg)
 	NTConfig.ReceiveConfig(msg)
-	local parent = configUI.Parent.Parent
-	configUI.RectTransform.Parent = nil
+	local parent = configUI.Parent.Parent.Parent.Parent.Parent
+	configUI.RectTransform.Parent.Parent.Parent.Parent = nil
 	configUI = nil
 	configUI = ConstructUI(parent)
 end)

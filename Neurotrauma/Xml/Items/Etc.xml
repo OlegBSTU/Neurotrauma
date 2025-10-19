@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
    <!-- Surgery table -->
 	<Item name="" identifier="operatingtable" scale="0.4" Tags="operatingtable" maxstacksize="1" category="medical" description="" isshootable="true">
@@ -232,3 +233,4 @@
         </MeleeWeapon>
     </Item>
 </Items>
+</Override>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="bloodpackoplus" nameidentifier="bloodpackoplus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
@@ -85,9 +86,9 @@
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
         </Price>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10" amount="4">
             <RequiredSkill identifier="medical" level="10"/>
-            <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+            <RequiredItem identifier="plastic" />
         </Fabricate>
 
         <Deconstruct time="5"/>
@@ -105,3 +106,4 @@
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
 </Items>
+</Override>

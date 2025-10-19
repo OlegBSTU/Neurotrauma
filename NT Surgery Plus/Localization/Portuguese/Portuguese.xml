@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
+<Override>
 <!-- ITEMS -->
 <entityname.mannitolplus>Manitol +</entityname.mannitolplus>
 <entitydescription.mannitolplus>Uma versão melhorada do manitol. É usado para tratar neurotrauma rapidamente.</entitydescription.mannitolplus>
@@ -67,4 +68,5 @@
 <talentname.ntsp_mannitol>Maníaco do Manitol</talentname.ntsp_mannitol>
 <talentname.ntsp_experimental>Fornecedor Antiético</talentname.ntsp_experimental>
 <talentname.ntsp_frankenstein>Dr. Frankenstein</talentname.ntsp_frankenstein>
+</Override>
 </infotexts>

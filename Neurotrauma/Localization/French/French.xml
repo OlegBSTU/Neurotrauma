@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="French" nowhitespace="false" translatedname="Français">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Requin bleu</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Scanneur de santé</entityname.healthscanner>
 <entitydescription.healthscanner>Utilisé pour identifier les causes sous-jacentes de symptômes.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Équiper cela vous fera perdre connaissance. En êtes-vous sûr(e)?</stasisbagequipconfirmation>
 
@@ -52,7 +50,7 @@
 <entitydescription.tweezers>Un petit outil permettant de retirer les balles ainsi que les tissus endommagés et nécrosés.</entitydescription.tweezers>
 
 <entityname.surgerysaw>Scie chirurgicale</entityname.surgerysaw>
-<entitydescription.surgerysaw>Un outil utilisé pour scier à travers les os.</entitydescription.surgerysaw>		
+<entitydescription.surgerysaw>Un outil utilisé pour scier à travers les os.</entitydescription.surgerysaw>
 
 <entityname.suture>Suture</entityname.suture>
 <entitydescription.suture>Sutures biodégradables pour recoudre les plaies et les incisions.</entitydescription.suture>
@@ -187,10 +185,8 @@
 <entityname.bloodpackabminus>Poche de sang AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Peut être donné à: AB-, AB+</entitydescription.bloodpackabminus>
 
-<Override>
 <entityname.antibloodloss2>Poche de sang O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Une poche de sang qui peut être utilisée sur n'importe quel patient.</entitydescription.antibloodloss2>
-</Override>
 
 <entityname.ominuscard>Carte de donneur O-</entityname.ominuscard>
 <entitydescription.ominuscard>Peut recevoir du sang de: O-
@@ -227,16 +223,20 @@ Peut donner du sang à: AB+</entitydescription.abpluscard>
 
 
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Conteneur médical</entityname.medtoolbox> 
+<entityname.medtoolbox>Conteneur médical</entityname.medtoolbox>
 <entitydescription.medtoolbox>Peut stocker des médicaments et des instruments médicaux.</entitydescription.medtoolbox>
 
-<entityname.surgerytoolbox>Boîte à outils chirurgicaux</entityname.surgerytoolbox> 
+<entityname.surgerytoolbox>Boîte à outils chirurgicaux</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Peut stocker de nombreux petits objets utilisés lors d'une chirurgie.</entitydescription.surgerytoolbox>
 
-<entityname.organcrate>Caisse réfrigérée</entityname.organcrate> 
+<entityname.surgerytoolboxset>Boîte à outils chirurgicaux</entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Peut stocker de nombreux petits objets utilisés lors d'une chirurgie.</entitydescription.surgerytoolboxset>
+<displayname.surgeryset>[itemname] (l'ensemble)</displayname.surgeryset>
+
+<entityname.organcrate>Caisse réfrigérée</entityname.organcrate>
 <entitydescription.organcrate>Une caisse pour entreposer vos précieux organes prêts à être greffés.</entitydescription.organcrate>
 
-<entityname.organtoolbox>Conteneur réfrigéré</entityname.organtoolbox> 
+<entityname.organtoolbox>Conteneur réfrigéré</entityname.organtoolbox>
 <entitydescription.organtoolbox>Un conteneur pour entreposer vos précieux organes prêts à être greffés.</entitydescription.organtoolbox>
 
 <entityname.bodybag>Sac mortuaire</entityname.bodybag>
@@ -677,7 +677,7 @@ Peut donner du sang à: AB+</entitydescription.abpluscard>
 
 <afflictionname.traumaticshock>Choc traumatique</afflictionname.traumaticshock>
 <afflictiondescription.traumaticshock>Le patient ressent une douleur émotionnelle pétrifiante et des vertiges, ainsi qu'un stress intense et étouffant.</afflictiondescription.traumaticshock>
-  
+
 <afflictionname.analgesia>Analgésie</afflictionname.analgesia>
 <afflictiondescription.analgesia>Insensibilité à la douleur.</afflictiondescription.analgesia>
 
@@ -738,7 +738,7 @@ Peut donner du sang à: AB+</entitydescription.abpluscard>
 <entityname.pressuremeds>Nitroprussiate de sodium</entityname.pressuremeds>
 <entitydescription.pressuremeds>Médicament vasodilateur utilisé pour diminuer la tension artérielle.</entitydescription.pressuremeds>
 
-<entityname.medstartercrate>Coffret de débutant en médecine</entityname.medstartercrate> 
+<entityname.medstartercrate>Coffret de débutant en médecine</entityname.medstartercrate>
 <entitydescription.medstartercrate>Un coffret contenant tous les essentiels, pragmatiquement emballés dans une seule recette.</entitydescription.medstartercrate>
-
+</Override>
 </infotexts>

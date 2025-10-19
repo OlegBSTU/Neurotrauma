@@ -1,277 +1,206 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Jobs>
   <Override>
-  <Job identifier="surgeon"
-       minkarma="30"
-       uicolor="0.82,0.42,0.38"
-       vitalitymodifier="5"
-       pricemultiplier="1.3"
-       idlebehavior="Active">
+  <Job identifier="surgeon" allowalways="true" minkarma="10" uicolor="0.82,0.42,0.38" vitalitymodifier="5" pricemultiplier="1.3" idlebehavior="Active">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5"/>
+      <sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="128,0,28,28" origin="0.5,0.5"/>
+      <sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="128,0,28,28" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
-      <Skill identifier="surgery" level="40,50" primary="true"/>
-      <Skill identifier="medical" level="30,35"/>
-      <Skill identifier="weapons" level="10,15"/>
-      <Skill identifier="mechanical" level="5,10"/>
-      <Skill identifier="electrical" level="5,10"/>
-      <Skill identifier="helm" level="1,5"/>
+      <Skill identifier="surgery" level="40,50" primary="true" />
+      <Skill identifier="medical" level="30,35" />
+      <Skill identifier="weapons" level="10,15" />
+      <Skill identifier="mechanical" level="5,10" />
+      <Skill identifier="electrical" level="5,10" />
+      <Skill identifier="helm" level="1,5" />
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-      <Item identifier="surgeonclothes" equip="true" outfit="true"/>
-      <Item identifier="surgicalmask" equip="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-      <Item identifier="healthscanner"/>
-      <Item identifier="bloodanalyzer"/>  
-      <!-- surgery kit -->     
-      <Item identifier="surgerytoolbox">
-        <Item identifier="advscalpel"/>
-        <Item identifier="advhemostat"/>
-        <Item identifier="advretractors"/>
-        <Item identifier="tweezers"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="drainage"/>
-        <Item identifier="endovascballoon"/>
-        <Item identifier="medstent"/>
-        <Item identifier="organscalpel_kidneys"/>
-        <Item identifier="organscalpel_liver"/>
-        <Item identifier="organscalpel_lungs"/>
-        <Item identifier="organscalpel_heart"/>
-      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="surgeonclothes" equip="true" outfit="true" />
+      <Item identifier="surgicalmask" equip="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="healthscanner" />
+      <Item identifier="bloodanalyzer" />
+      <!-- surgery kit -->
+      <!--<Item identifier="surgerytoolbox">
+        <Item identifier="advscalpel" />
+        <Item identifier="advhemostat" />
+        <Item identifier="advretractors" />
+        <Item identifier="tweezers" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="suture" />
+        <Item identifier="drainage" />
+        <Item identifier="endovascballoon" />
+        <Item identifier="medstent" />
+        <Item identifier="organscalpel_kidneys" />
+        <Item identifier="organscalpel_liver" />
+        <Item identifier="organscalpel_lungs" />
+        <Item identifier="organscalpel_heart" />
+      </Item>-->
       <!-- surgery tools and treatments kit -->
-      <Item identifier="medtoolbox">
-        <Item identifier="defibrillator"/>
-        <Item identifier="bvm"/>
-        <Item identifier="autocpr"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-      </Item>
+      <!--<Item identifier="medtoolbox">
+        <Item identifier="defibrillator" />
+        <Item identifier="bvm" />
+        <Item identifier="autocpr" />
+        <Item identifier="antidama1" />
+        <Item identifier="antidama1" />
+        <Item identifier="antidama1" />
+        <Item identifier="antidama1" />
+        <Item identifier="traumashears" />
+      </Item>-->
       <!-- bone surgery kit -->
-      <Item identifier="medtoolbox">
-        <Item identifier="surgicaldrill"/>
-        <Item identifier="surgerysaw"/>
-        <Item identifier="osteosynthesisimplants"/>
-        <Item identifier="spinalimplant"/>
-        <Item identifier="immunosuppressant"/>
-        <Item identifier="immunosuppressant"/>
-      </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-      <Item identifier="surgeonclothes" equip="true" outfit="true"/>
-      <Item identifier="surgicalmask" equip="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-      <Item identifier="healthscanner"/>
-      <Item identifier="bloodanalyzer"/>  
-      <!-- surgery kit -->     
-      <Item identifier="surgerytoolbox">
-        <Item identifier="advscalpel"/>
-        <Item identifier="advhemostat"/>
-        <Item identifier="advretractors"/>
-        <Item identifier="tweezers"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="drainage"/>
-        <Item identifier="endovascballoon"/>
-        <Item identifier="medstent"/>
-        <Item identifier="organscalpel_kidneys"/>
-        <Item identifier="organscalpel_liver"/>
-        <Item identifier="organscalpel_lungs"/>
-        <Item identifier="organscalpel_heart"/>
-      </Item>
-      <!-- surgery tools and treatments kit -->
-      <Item identifier="medtoolbox">
-        <Item identifier="defibrillator"/>
-        <Item identifier="bvm"/>
-        <Item identifier="autocpr"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-        <Item identifier="antidama1"/>
-      </Item>
-      <!-- bone surgery kit -->
-      <Item identifier="medtoolbox">
-        <Item identifier="surgicaldrill"/>
-        <Item identifier="surgerysaw"/>
-        <Item identifier="osteosynthesisimplants"/>
-        <Item identifier="spinalimplant"/>
-        <Item identifier="immunosuppressant"/>
-        <Item identifier="immunosuppressant"/>
-      </Item>
+      <!--<Item identifier="medtoolbox">
+        <Item identifier="surgicaldrill" />
+        <Item identifier="surgerysaw" />
+        <Item identifier="osteosynthesisimplants" />
+        <Item identifier="spinalimplant" />
+        <Item identifier="immunosuppressant" />
+        <Item identifier="immunosuppressant" />
+      </Item>-->
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
       </PreviewSprites>
     </ItemSet>
     <PortraitClothing>
-      <sprite name="Portrait Clothing Medic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1"/>
+      <sprite name="Portrait Clothing Medic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1" />
     </PortraitClothing>
     <AutonomousObjectives>
-      <Order identifier="rescue" prioritymodifier="1"/>
-      <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier="0.5" />
     </AutonomousObjectives>
     <AppropriateOrders>
-      <Order identifier="rescue"/>
-      <Order identifier="requestfirstaid"/>
+      <Order identifier="rescue" />
+      <Order identifier="requestfirstaid" />
     </AppropriateOrders>
   </Job>
+  <!--
+    <Job identifier="medicaldoctor" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active">
+      <Jobicon>
+        <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
+      </Jobicon>
+      <JobiconSmall>
+        <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,698,28,28" origin="0.5,0.5" />
+      </JobiconSmall>
+      <Skills>
+        <Skill identifier="medical" level="40,50" primary="true" />
+        <Skill identifier="weapons" level="15,25" />
+        <Skill identifier="mechanical" level="15,25" />
+        <Skill identifier="electrical" level="15,25" />
+        <Skill identifier="helm" level="5,10" />
+      </Skills>
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+        <Item identifier="doctorsuniform1" equip="true" outfit="true" />
+        <Item identifier="headset" equip="true" showpreview="false">
+          <Item identifier="batterycell" showpreview="false" />
+        </Item>
+        <Item identifier="healthscanner" />
+        <Item identifier="bloodanalyzer" />
+        <Item identifier="syringegun" />
+        <Item identifier="medtoolbox">
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="opium" />
+          <Item identifier="opium" />
+          <Item identifier="wrench" />
+          <Item identifier="ointment" />
+          <Item identifier="ointment" />
+          <Item identifier="ointment" />
+          <Item identifier="antibloodloss2" />
+          <Item identifier="antibloodloss2" />
+        </Item>
+        <Item identifier="medtoolbox">
+          <Item identifier="defibrillator" />
+          <Item identifier="bvm" />
+          <Item identifier="autocpr" />
+          <Item identifier="traumashears" />
+          <Item identifier="tourniquet" />
+          <Item identifier="tourniquet" />
+          <Item identifier="needle" />
+        </Item>
+        <PreviewSprites dims="120,109">
+          <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+          <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+        </PreviewSprites>
+      </ItemSet>
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+        <Item identifier="doctorsuniform2" equip="true" outfit="true" />
+        <Item identifier="headset" equip="true" showpreview="false">
+          <Item identifier="batterycell" showpreview="false" />
+        </Item>
+        <Item identifier="healthscanner" />
+        <Item identifier="bloodanalyzer" />
+        <Item identifier="syringegun" />
+        <Item identifier="medtoolbox">
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding1" />
+          <Item identifier="antibleeding2" />
+          <Item identifier="antibleeding2" />
+          <Item identifier="antibleeding2" />
+          <Item identifier="antibleeding2" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="suture" />
+          <Item identifier="antinarc" />
+          <Item identifier="antinarc" />
+          <Item identifier="calyxanide" />
+          <Item identifier="calyxanide" />
+          <Item identifier="antiparalysis" />
+          <Item identifier="antiparalysis" />
+        </Item>
+        <Item identifier="medtoolbox">
+          <Item identifier="defibrillator" />
+          <Item identifier="bvm" />
+          <Item identifier="autocpr" />
+          <Item identifier="traumashears" />
+          <Item identifier="tourniquet" />
+          <Item identifier="tourniquet" />
+          <Item identifier="needle" />
+        </Item>
+        <PreviewSprites dims="120,109">
+          <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
+          <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
+        </PreviewSprites>
+      </ItemSet>
+      <PortraitClothing>
+        <sprite name="Portrait Clothing Medic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1" />
+      </PortraitClothing>
+      <AutonomousObjectives>
+        <Order identifier="rescue" prioritymodifier="1" />
+        <Order identifier="extinguishfires" prioritymodifier="0.5" />
+        <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      </AutonomousObjectives>
+      <AppropriateOrders>
+        <Order identifier="rescue" />
+        <Order identifier="requestfirstaid" />
+      </AppropriateOrders>
+    </Job>-->
   </Override>
-
-  <Override>
-  <Job identifier="medicaldoctor"
-       minkarma="30"
-       uicolor="0.81,0.31,0.19"
-       vitalitymodifier="10"
-       pricemultiplier="1.15"
-       idlebehavior="Active">
-    <Jobicon>
-      <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5"/>
-    </Jobicon>
-    <JobiconSmall>
-      <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,698,28,28" origin="0.5,0.5"/>
-    </JobiconSmall>
-    <Skills>
-      <Skill identifier="medical" level="40,50" primary="true"/>
-      <Skill identifier="weapons" level="15,25"/>
-      <Skill identifier="mechanical" level="15,25"/>
-      <Skill identifier="electrical" level="15,25"/>
-      <Skill identifier="helm" level="5,10"/>
-    </Skills>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-      <Item identifier="doctorsuniform1" equip="true" outfit="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-      <Item identifier="healthscanner"/>
-      <Item identifier="bloodanalyzer"/>  
-      <Item identifier="syringegun"/>      
-      <Item identifier="medtoolbox">
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="opium"/>
-        <Item identifier="opium"/>
-        <Item identifier="wrench"/>
-        <Item identifier="bloodpackominus"/>
-        <Item identifier="bloodpackominus"/>
-        <Item identifier="ointment"/>
-        <Item identifier="ointment"/>
-        <Item identifier="ointment"/>
-        <Item identifier="ointment"/>
-      </Item>
-      <Item identifier="medtoolbox">
-        <Item identifier="defibrillator"/>
-        <Item identifier="bvm"/>
-        <Item identifier="autocpr"/>
-        <Item identifier="traumashears"/>
-        <Item identifier="tourniquet"/>
-        <Item identifier="tourniquet"/>
-        <Item identifier="needle"/>
-      </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-      <Item identifier="doctorsuniform2" equip="true" outfit="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-      <Item identifier="healthscanner"/>
-      <Item identifier="bloodanalyzer"/>  
-      <Item identifier="syringegun"/>      
-      <Item identifier="medtoolbox">
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="antibleeding2"/>
-        <Item identifier="antibleeding2"/>
-        <Item identifier="antibleeding2"/>
-        <Item identifier="antibleeding2"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="suture"/>
-        <Item identifier="antinarc"/>
-        <Item identifier="antinarc"/>
-        <Item identifier="calyxanide"/>
-        <Item identifier="calyxanide"/>
-        <Item identifier="antiparalysis"/>
-        <Item identifier="antiparalysis"/>
-      </Item>
-      <Item identifier="medtoolbox">
-        <Item identifier="defibrillator"/>
-        <Item identifier="bvm"/>
-        <Item identifier="autocpr"/>
-        <Item identifier="traumashears"/>
-        <Item identifier="tourniquet"/>
-        <Item identifier="tourniquet"/>
-        <Item identifier="needle"/>
-      </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <PortraitClothing>
-      <sprite name="Portrait Clothing Medic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1"/>
-    </PortraitClothing>
-    <AutonomousObjectives>
-      <Order identifier="rescue" prioritymodifier="1"/>
-      <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
-      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2"/>
-    </AutonomousObjectives>
-    <AppropriateOrders>
-      <Order identifier="rescue"/>
-      <Order identifier="requestfirstaid"/>
-    </AppropriateOrders>
-  </Job>
-  </Override>
-
-
 </Jobs>

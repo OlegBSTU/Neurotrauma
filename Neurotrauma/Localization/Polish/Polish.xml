@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Polish" nowhitespace="false" translatedname="Polski">
-
+<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -31,10 +31,8 @@
 
 <entityname.blahaj>Żarłacz błękitny</entityname.blahaj>
 
-<Override>
 <entityname.healthscanner>Skaner zdrowia</entityname.healthscanner>
 <entitydescription.healthscanner>Podobnie jak analizator krwi, służy do diagnozowania przyczyn objawów. UWAGA: promieniowanie rentgenowskie.</entitydescription.healthscanner>
-</Override>
 
 <stasisbagequipconfirmation>Założenie spowoduje utratę przytomności. Czy na pewno chcesz to założyć?</stasisbagequipconfirmation>
 
@@ -52,7 +50,7 @@
 <entitydescription.tweezers>Narzędzie, które umożliwia usuwanie odłamków oraz martwych tkanek.</entitydescription.tweezers>
 
 <entityname.surgerysaw>Piła chirurgiczna</entityname.surgerysaw>
-<entitydescription.surgerysaw>Narzędzie używane do przecinania kości.</entitydescription.surgerysaw>		
+<entitydescription.surgerysaw>Narzędzie używane do przecinania kości.</entitydescription.surgerysaw>
 
 <entityname.suture>Szew</entityname.suture>
 <entitydescription.suture>Biodegradowalne szwy do zszywania ran i nacięć chirurgicznych.</entitydescription.suture>
@@ -227,16 +225,20 @@ Biorcy: AB+</entitydescription.abpluscard>
 
 
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Pojemnik medyczny</entityname.medtoolbox> 
+<entityname.medtoolbox>Pojemnik medyczny</entityname.medtoolbox>
 <entitydescription.medtoolbox>Może przechowywać lekarstwa i instrumenty medyczne</entitydescription.medtoolbox>
 
-<entityname.surgerytoolbox>Przybornik chirurgiczny</entityname.surgerytoolbox> 
+<entityname.surgerytoolbox>Przybornik chirurgiczny</entityname.surgerytoolbox>
 <entitydescription.surgerytoolbox>Pomieści wiele małych narzędzi chirurgicznych.</entitydescription.surgerytoolbox>
 
-<entityname.organcrate>Skrzynia chłodnicza</entityname.organcrate> 
+<entityname.surgerytoolboxset>Przybornik chirurgiczny</entityname.surgerytoolboxset>
+<entitydescription.surgerytoolboxset>Pomieści wiele małych narzędzi chirurgicznych.</entitydescription.surgerytoolboxset>
+<displayname.surgeryset>[itemname] (zestaw)</displayname.surgeryset>
+
+<entityname.organcrate>Skrzynia chłodnicza</entityname.organcrate>
 <entitydescription.organcrate>Miejsce do przechowywania cennych narządów gotowych do przeszczepu.</entitydescription.organcrate>
 
-<entityname.organtoolbox>Pojemnik chłodniczy</entityname.organtoolbox> 
+<entityname.organtoolbox>Pojemnik chłodniczy</entityname.organtoolbox>
 <entitydescription.organtoolbox>Miejsce do przechowywania cennych narządów gotowych do przeszczepu.</entitydescription.organtoolbox>
 
 <entityname.bodybag>Worek na ciało</entityname.bodybag>
@@ -438,7 +440,7 @@ Biorcy: AB+</entitydescription.abpluscard>
 
 <afflictionname.surgeryincision>Nacięcie chirurgiczne</afflictionname.surgeryincision>
 <afflictiondescription.surgeryincision>Nacięcie zostało wykonane skalpelem.</afflictiondescription.surgeryincision>
-  
+
 <afflictionname.clampedbleeders>Zaciśnięte krwawienie</afflictionname.clampedbleeders>
 <afflictiondescription.clampedbleeders>Krwawienia operacyjne zostały zatamowane.</afflictiondescription.clampedbleeders>
 
@@ -677,7 +679,7 @@ Biorcy: AB+</entitydescription.abpluscard>
 
 <afflictionname.traumaticshock>Szok traumatyczny</afflictionname.traumaticshock>
 <afflictiondescription.traumaticshock>Pacjent odczuwa silny ból i stres.</afflictiondescription.traumaticshock>
-  
+
 <afflictionname.analgesia>Znieczulenie</afflictionname.analgesia>
 <afflictiondescription.analgesia>Niewrażliwość na ból.</afflictiondescription.analgesia>
 
@@ -738,7 +740,7 @@ Biorcy: AB+</entitydescription.abpluscard>
 <entityname.pressuremeds>Nitroprusydek sodu</entityname.pressuremeds>
 <entitydescription.pressuremeds>Lek stosowany w doraźnym obniżaniu ciśnienia tętniczego.</entitydescription.pressuremeds>
 
-<entityname.medstartercrate>Medyczna skrzynia startowa</entityname.medstartercrate> 
+<entityname.medstartercrate>Medyczna skrzynia startowa</entityname.medstartercrate>
 <entitydescription.medstartercrate>Skrzynia, która zawiera wszystkie niezbędne rzeczy, wygodnie zamknięte w jednym przepisie craftingowym.</entitydescription.medstartercrate>
-
+</Override>
 </infotexts>

@@ -14,10 +14,11 @@ DisableDistance="25000" SoundInterval="10">
   <ragdolls folder="%ModDir%\Characters\Human\Ragdolls"/>
   <animations folder="Content\Characters\Human\Animations"/>
 
+    <!--
   <StatusEffect type="always" target="This" delay="1" stackable="false" disabledeltatime="true">
     <Conditional IsDead="false"/>
     <Affliction identifier="luabotomy" amount="1" />
-  </StatusEffect>
+  </StatusEffect>-->
     <!--
   <StatusEffect type="always" target="This" comparison="And">
     <Conditional InPressure="true"/>

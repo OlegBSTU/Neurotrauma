@@ -1,1 +1,2 @@
 Cyanhur - helping fixing Lua code
+profole - German localisation

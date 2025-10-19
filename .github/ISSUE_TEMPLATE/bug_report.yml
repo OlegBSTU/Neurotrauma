@@ -19,6 +19,11 @@ body:
     attributes:
       label: LuaForBarotrauma version
       options:
+        - 1.0.105
+        - 1.0.104
+        - 1.0.103
+        - 1.0.102
+        - 1.0.101
         - 1.0.100
         - 1.0.99
         - 1.0.98
@@ -27,11 +32,6 @@ body:
         - 1.0.95
         - 1.0.94
         - 1.0.93
-        - 1.0.92
-        - 1.0.91
-        - 1.0.90
-        - 1.0.89
-        - 1.0.88
     validations:
       required: true
   - type: dropdown
@@ -42,6 +42,7 @@ body:
       options:
         - "NT Symbiosis"
         - "NT Cybernetics"
+        - "NT Cybernetics Enhanced"
         - "NT Pharmacy"
         - "Curly's NT Surgery Plus Ultra (name Pending)"
         - "Neurotrauma Tutorial Map: Mercy Hospital Updated"
@@ -54,7 +55,7 @@ body:
     id: version
     attributes:
       label: Neurotrauma Version
-      placeholder: "A1.12.0h1"
+      placeholder: "A1.14.7"
     validations:
       required: true
   - type: textarea

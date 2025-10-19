@@ -13,7 +13,7 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 		HF.SetAfflictionLimb(client.Character, "gate_ta_ll", LimbType.LeftLeg, 100)
 
 		return true -- hide message
-	elseif msg == "nt unfuck" then -- a command to remove non-sensical extremity amputations on the head and torso
+	elseif msg == "nt unfuck" then -- a command to remove non-sensical stuff
 		if client.Character == nil then
 			return true
 		end
@@ -27,6 +27,19 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 		HF.SetAfflictionLimb(client.Character, "trl_amputation", LimbType.Torso, 0)
 		HF.SetAfflictionLimb(client.Character, "tla_amputation", LimbType.Torso, 0)
 		HF.SetAfflictionLimb(client.Character, "tra_amputation", LimbType.Torso, 0)
+
+		for key, character in pairs(Character.CharacterList) do
+			if not character.IsDead then
+				if character.IsHuman then
+					HF.AddAffliction(character, "luabotomypurger", 2)
+					if character.TeamID == 1 or character.TeamID == 2 then
+						Timer.Wait(function()
+							HF.SetAffliction(character, "luabotomy", 0.1)
+						end, 4000)
+					end
+				end
+			end
+		end
 
 		return true -- hide message
 	elseif msg == "nt1" then
@@ -74,3 +87,260 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 		return true
 	end
 end)
+
+DebugConsole = LuaUserData.CreateStatic("Barotrauma.DebugConsole")
+
+local function registerDebugCommands()
+	LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.DebugConsole"], "GetCharacterNames")
+	LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.DebugConsole"], "FindMatchingCharacter")
+
+	LuaUserData.MakeFieldAccessible(Descriptors["Barotrauma.CharacterHealth"], "afflictions")
+	LuaUserData.MakeFieldAccessible(Descriptors["Barotrauma.CharacterHealth"], "limbHealths")
+	LuaUserData.MakeMethodAccessible(
+		Descriptors["Barotrauma.CharacterHealth"],
+		"GetVitalityDecreaseWithVitalityMultipliers"
+	)
+	LuaUserData.RegisterType(
+		"System.Collections.Generic.Dictionary`2[[Barotrauma.Affliction],[Barotrauma.CharacterHealth+LimbHealth]]"
+	)
+	LuaUserData.RegisterType(
+		"System.Collections.Generic.KeyValuePair`2[[Barotrauma.Affliction],[Barotrauma.CharacterHealth+LimbHealth]]"
+	)
+
+	local function findCharacter(str)
+		local character = nil
+		if not str or str == "" or str == "/me" then
+			character = Character.Controlled
+		else
+			character = DebugConsole.FindMatchingCharacter({ str })
+		end
+		return character
+	end
+
+	Game.AddCommand(
+		"nt_listafflictions",
+		"nt_listafflictions [character name] [client/server]: Lists all afflictions on a character",
+		function(args)
+			if CLIENT and args[2] == "server" then
+				if Game.IsMultiplayer then
+					if not args[1] or args[1] == "/me" then
+						args[1] = Character.Controlled and Character.Controlled.Name or ""
+					end
+					Game.client.SendConsoleCommand("nt_listafflictions " .. '"' .. args[1] .. '"')
+				end
+				return
+			end
+
+			local target = findCharacter(args[1])
+			if not target then
+				return
+			end
+
+			print(target.Name, " vitality: ", target.Vitality, "/", target.MaxVitality, " Mass: ", target.Mass)
+			local genericafflictions, limbafflictions = {}, {}
+			for kvp in target.CharacterHealth.afflictions do
+				if kvp.Value then
+					if not limbafflictions[kvp.Value] then
+						limbafflictions[kvp.Value] = {}
+					end
+					table.insert(limbafflictions[kvp.Value], kvp.Key)
+				else
+					table.insert(genericafflictions, kvp.Key)
+				end
+			end
+			for limbhealth, afflictions in pairs(limbafflictions) do
+				print(limbhealth.Name or "Unnamed limb")
+				for affliction in afflictions do
+					print(
+						"#  ",
+						affliction.Name,
+						" = ",
+						affliction.Strength,
+						" (vitality decrease: ",
+						target.CharacterHealth.GetVitalityDecreaseWithVitalityMultipliers(affliction),
+						")"
+					)
+				end
+			end
+			print("Generic afflictions")
+			for affliction in genericafflictions do
+				print(
+					"# ",
+					affliction.Name,
+					" = ",
+					affliction.Strength,
+					" (vitality decrease: ",
+					affliction.GetVitalityDecrease(target.CharacterHealth),
+					")"
+				)
+			end
+		end,
+		--GetValidArguments
+		function()
+			return { DebugConsole.GetCharacterNames(), { "client", "server" } }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_listcreatures",
+		"nt_listcreatures [printafflictionsgeneric/printafflictionsfull]: Lists all non-human creatures currently on the server",
+		function(args)
+			if CLIENT and Game.IsMultiplayer then
+				Game.client.SendConsoleCommand("nt_listcreatures " .. '"' .. args[1] .. '"')
+				return
+			end
+
+			local function printAfflictions(target, args)
+				local genericafflictions, limbafflictions = {}, {}
+				for kvp in target.CharacterHealth.afflictions do
+					if kvp.Value then
+						if not limbafflictions[kvp.Value] then
+							limbafflictions[kvp.Value] = {}
+						end
+						table.insert(limbafflictions[kvp.Value], kvp.Key)
+					else
+						table.insert(genericafflictions, kvp.Key)
+					end
+				end
+				if args[1] == "printafflictionsgeneric" or args[1] == "printafflictionsfull" then
+					print("Generic afflictions")
+					for affliction in genericafflictions do
+						print(
+							"# ",
+							affliction.Name,
+							" = ",
+							affliction.Strength,
+							" (vitality decrease: ",
+							affliction.GetVitalityDecrease(target.CharacterHealth),
+							")"
+						)
+					end
+				end
+				if args[1] == "printafflictionsfull" then
+					print("Limb afflictions")
+					for limbhealth, afflictions in pairs(limbafflictions) do
+						print(limbhealth.Name or "Unnamed limb")
+						for affliction in afflictions do
+							print(
+								"#  ",
+								affliction.Name,
+								" = ",
+								affliction.Strength,
+								" (vitality decrease: ",
+								target.CharacterHealth.GetVitalityDecreaseWithVitalityMultipliers(affliction),
+								")"
+							)
+						end
+					end
+				end
+			end
+
+			for key, character in pairs(Character.CharacterList) do
+				if not character.IsHuman then
+					print(
+						character.SpeciesName,
+						" vitality: ",
+						character.Vitality,
+						"/",
+						character.MaxVitality,
+						" Mass: ",
+						character.Mass
+					)
+					if args[1] == "printafflictionsgeneric" or args[1] == "printafflictionsfull" then
+						printAfflictions(character, args)
+					end
+				end
+			end
+		end,
+		--GetValidArguments
+		function()
+			return { { "printafflictionsgeneric", "printafflictionsfull" } }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_nugget",
+		"nt_nugget [character name]: Nuggets the character",
+		function(args)
+			if CLIENT and Game.IsMultiplayer then
+				if not args[1] or args[1] == "/me" then
+					args[1] = Character.Controlled and Character.Controlled.Name or ""
+				end
+				Game.client.SendConsoleCommand("nt_nugget " .. '"' .. args[1] .. '"')
+				return
+			end
+
+			local target = findCharacter(args[1])
+			if not target then
+				return
+			end
+
+			HF.SetAfflictionLimb(target, "gate_ta_ra", LimbType.RightArm, 100)
+			HF.SetAfflictionLimb(target, "gate_ta_la", LimbType.LeftArm, 100)
+			HF.SetAfflictionLimb(target, "gate_ta_rl", LimbType.RightLeg, 100)
+			HF.SetAfflictionLimb(target, "gate_ta_ll", LimbType.LeftLeg, 100)
+		end,
+		--GetValidArguments
+		function()
+			return { DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_unnugget",
+		"nt_unnugget [character name]: Unnuggets the character",
+		function(args)
+			if CLIENT and Game.IsMultiplayer then
+				if not args[1] or args[1] == "/me" then
+					args[1] = Character.Controlled and Character.Controlled.Name or ""
+				end
+				Game.client.SendConsoleCommand("nt_unnugget " .. '"' .. args[1] .. '"')
+				return
+			end
+
+			local target = findCharacter(args[1])
+			if not target then
+				return
+			end
+
+			HF.SetAfflictionLimb(target, "tll_amputation", LimbType.Head, 0)
+			HF.SetAfflictionLimb(target, "trl_amputation", LimbType.Head, 0)
+			HF.SetAfflictionLimb(target, "tla_amputation", LimbType.Head, 0)
+			HF.SetAfflictionLimb(target, "tra_amputation", LimbType.Head, 0)
+
+			HF.SetAfflictionLimb(target, "tll_amputation", LimbType.Torso, 0)
+			HF.SetAfflictionLimb(target, "trl_amputation", LimbType.Torso, 0)
+			HF.SetAfflictionLimb(target, "tla_amputation", LimbType.Torso, 0)
+			HF.SetAfflictionLimb(target, "tra_amputation", LimbType.Torso, 0)
+		end,
+		--GetValidArguments
+		function()
+			return { DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
+end
+
+Game.AddCommand("nt_debug", "nt_debug : Enables debug neurotrauma commands", function()
+	if not NT.TestingEnabled then
+		print("neurotrauma debug enabled")
+		registerDebugCommands()
+		NT.TestingEnabled = true
+
+		local msg = Networking.Start("NT_debug")
+		Networking.Send(msg)
+	end
+end, nil, true)
+
+if CLIENT and Game.IsMultiplayer then
+	Networking.Receive("NT_debug", function(msg)
+		registerDebugCommands()
+	end)
+end
+
+if NT.TestingEnabled then
+	registerDebugCommands()
+end

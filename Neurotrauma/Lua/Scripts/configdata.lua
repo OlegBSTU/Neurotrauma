@@ -184,6 +184,21 @@ NT.ConfigData = {
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
 	},
+	--NT_velocityWeight = {
+	--	name = "Velocity weight",
+	--	default = 1,
+	--	range = { 0, 100 },
+	--	type = "float",
+	--	difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+	--	description = "How much fall velocity is allowed for sharing damage into other limbs.",
+	--},
+	NT_falldamageCeiling = {
+		name = "Maximum fall damage",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+	},
 	NT_falldamage = {
 		name = "Falldamage",
 		default = 1,
@@ -198,11 +213,17 @@ NT.ConfigData = {
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
 	},
+	NT_Calculations = {
+		name = "Enable character calculations",
+		default = true,
+		type = "bool",
+		description = "Runs various calculations necessary for the functionality of the mod. Shouldn't be disabled unless the server is dying.",
+	},
 	NT_vanillaSkillCheck = {
 		name = "Vanilla skill check formula",
 		default = false,
 		type = "bool",
-		description = "Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100",
+		description = "Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100 .",
 	},
 	NT_disableBotAlgorithms = {
 		name = "Disable bot treatment algorithms",
@@ -230,6 +251,19 @@ NT.ConfigData = {
 		type = "bool",
 		difficultyCharacteristics = { multiplier = 0.5 },
 		description = "When receiving damage that would cause a fracture, remove plaster casts on the limb",
+	},
+	NT_creatureNoFallDamage = {
+		name = "Excluded creatures that abuse the fall damage mechanic",
+		default = {
+			"Mudraptor",
+			"Mudraptor_unarmored",
+			"Mudraptor_veteran",
+			"Spineling_giant",
+		},
+		style = "SpeciesName,SpeciesName",
+		type = "string",
+		boxsize = 0.1,
+		description = "You can add or remove creatures to customize this list to your liking. Use debug command `nt_listcreatures` to list the SpeciesName of the creature you are patching in your game. Report creatures that abuse fall damage to the discord server to improve this default list.",
 	},
 
 	NTCRE_header1 = { name = "Consent Required", type = "category" },
@@ -378,7 +412,7 @@ NT.ConfigData = {
 
 	NTSCAN_CustomCategory = {
 		name = "Custom Affliction Category",
-		default = {""},
+		default = { "" },
 		style = "identifier,identifier",
 		type = "string",
 		boxsize = 0.1,

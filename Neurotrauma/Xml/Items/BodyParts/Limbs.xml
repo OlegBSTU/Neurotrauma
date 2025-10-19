@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Override>
 <Items>
     <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3,monsterfood">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
@@ -155,10 +156,49 @@
         </Throwable>
     </Item>
 
-    <Item name="" identifier="heada" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3,monsterfood">
+    <Item name="" identifier="headta" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3,monsterfood">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="129,31,58,51" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="129,31,58,51" depth="0.6" origin="0.5,0.5"/>
-        <Body width="60" height="90" density="20"/>
+        <Body width="58" height="51" density="20"/>
+
+        <Deconstruct time="10">
+            <Item identifier="calcium" amount="1" />
+        </Deconstruct>
+
+        <Price baseprice="50" soldbydefault="false"></Price>
+
+        <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+            <StatusEffect target="Character" type="OnSpawn">
+                <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="This" condition="-1.0">
+                <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_red" decalsize="0.7" />
+                <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+            </StatusEffect>
+            <!-- making the limb go kaputt if left outside of refrigeration -->
+            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+                <Conditional hastag="neq refrigerated" targetcontainer="true" />
+                <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+                <Conditional condition="gte 95" />
+                <Conditional hastag="refrigerated" targetcontainer="true" />
+            </StatusEffect>
+            <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+            <!-- yuck! severed limbs on the floor!
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+            <Affliction identifier="nausea" amount="0.2"/>
+          </StatusEffect>-->
+            <StatusEffect type="OnBroken" target="This">
+                <LuaHook name="NT.RotOrgan" />
+            </StatusEffect>
+        </Throwable>
+    </Item>
+
+    <Item name="" identifier="headsa" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3,monsterfood">
+        <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="195,18,58,66" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="195,18,58,66" depth="0.6" origin="0.5,0.5"/>
+        <Body width="58" height="66" density="20"/>
 
         <Deconstruct time="10">
             <Item identifier="calcium" amount="1" />
@@ -258,3 +298,4 @@
         </Throwable>
     </Item>
 </Items>
+</Override>

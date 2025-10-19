@@ -96,9 +96,14 @@ local function getCalculatedConcussionReduction(armor, strength)
 	return reduction
 end
 Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, impactPos, velocity)
+	-- don't run the code if we ignore the code
+	if not NTConfig.Get("NT_Calculations", true) then
+		return 0
+	end
+
 	-- dont bother with creatures
 	if not character.IsHuman then
-		return
+		return 0
 	end
 
 	-- dont apply fall damage in water
@@ -111,8 +116,17 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 		return 0
 	end
 
+	-- don't apply fall damage if were specifically immune to it
+	if HF.HasAffliction(character, "cpr_fracturebuff") or HF.HasAffliction(character, "stopcreatureabuse") then
+		return 0
+	end
+
+	if not HF.HasAffliction(character, "luabotomy") then
+		HF.SetAffliction(character, "luabotomy", 1)
+	end
+
 	local velocityMagnitude = HF.Magnitude(velocity)
-	velocityMagnitude = velocityMagnitude ^ 1.5
+	velocityMagnitude = velocityMagnitude ^ 1.3
 
 	-- apply fall damage to all limbs based on fall direction
 	local mainlimbPos = character.AnimController.MainLimb.WorldPosition
@@ -167,7 +181,7 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 		-- lets limit the numbers to the max value of blunttrauma so that resistances make sense
 		local damageInflictedToThisLimb = math.min(
 			relativeWeight * math.max(0, velocityMagnitude - 10) ^ 1.5 * NTConfig.Get("NT_falldamage", 1) * 0.5,
-			200
+			NTConfig.Get("NT_falldamageCeiling", 1) * 60
 		)
 		NT.CauseFallDamage(character, type, damageInflictedToThisLimb)
 	end
@@ -268,7 +282,7 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 		if
 			strength >= 55
 			and HF.Chance(
-				math.min((strength - 55) / 100, 0.7)
+				math.min((strength - 15) / 100, 0.7)
 					* NTC.GetMultiplier(character, "anyfracturechance")
 					* NTConfig.Get("NT_fractureChance", 1)
 					* injuryChanceMultiplier

@@ -1,10 +1,10 @@
 
 NTS = {} -- Neurotrauma Symbiote
 NTS.Name="Symbiote"
-NTS.Version = "A1.0.0h1"
-NTS.VersionNum = 01000001
-NTS.MinNTVersion = "A1.8.5"
-NTS.MinNTVersionNum = 01080500
+NTS.Version = "A1.0.1"
+NTS.VersionNum = 01000100
+NTS.MinNTVersion = "A1.12.1"
+NTS.MinNTVersionNum = 01120100
 NTS.Path = table.pack(...)[1]
 Timer.Wait(function() if NTC ~= nil and NTC.RegisterExpansion ~= nil then NTC.RegisterExpansion(NTS) end end,1)
 

@@ -32,6 +32,30 @@ function NT.BreakLimb(character, limbtype, strength)
 		HF.SetAfflictionLimb(character, "gypsumcast", limbtype, 0)
 	end
 end
+function NT.SurgicallyAmputateLimbAndGenerateItem(usingCharacter, targetCharacter, limbtype)
+	-- drop previously worn headgear item
+	local previtem = HF.GetHeadWear(targetCharacter)
+	if previtem ~= nil and limbtype == LimbType.Head then
+		previtem.Drop(usingCharacter, true)
+	end
+
+	local droplimb = not NT.LimbIsAmputated(targetCharacter, limbtype)
+		and not HF.HasAfflictionLimb(targetCharacter, "gangrene", limbtype, 15)
+
+	NT.SurgicallyAmputateLimb(targetCharacter, limbtype)
+	if droplimb then
+		local limbtoitem = {}
+		limbtoitem[LimbType.RightLeg] = "rleg"
+		limbtoitem[LimbType.LeftLeg] = "lleg"
+		limbtoitem[LimbType.RightArm] = "rarm"
+		limbtoitem[LimbType.LeftArm] = "larm"
+		limbtoitem[LimbType.Head] = "headsa"
+		if limbtoitem[limbtype] ~= nil then
+			HF.GiveItem(usingCharacter, limbtoitem[limbtype])
+			HF.GiveSurgerySkill(usingCharacter, 0.5)
+		end
+	end
+end
 function NT.SurgicallyAmputateLimb(character, limbtype, strength, traumampstrength)
 	strength = strength or 100
 	traumampstrength = traumampstrength or 0
@@ -54,6 +78,7 @@ function NT.SurgicallyAmputateLimb(character, limbtype, strength, traumampstreng
 	limbtoaffliction[LimbType.LeftArm] = "tla_amputation"
 	limbtoaffliction[LimbType.Head] = "th_amputation"
 	HF.SetAffliction(character, limbtoaffliction[limbtype], traumampstrength)
+	HF.SetAfflictionLimb(character, "gangrene", limbtype, 0)
 end
 function NT.TraumamputateLimb(character, limbtype)
 	local limbtoaffliction = {}
@@ -73,7 +98,7 @@ function NT.TraumamputateLimbMinusItem(character, limbtype)
 	limbtoaffliction[LimbType.LeftLeg] = "gate_ta_ll_2"
 	limbtoaffliction[LimbType.RightArm] = "gate_ta_ra_2"
 	limbtoaffliction[LimbType.LeftArm] = "gate_ta_la_2"
-	limbtoaffliction[LimbType.Head] = "gate_ta_h"
+	limbtoaffliction[LimbType.Head] = "gate_ta_h_2"
 	if limbtoaffliction[limbtype] == nil then
 		return
 	end
@@ -387,6 +412,7 @@ function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggress
 		character.AnimController.GetLimb(limbtype),
 		affliction,
 		false,
+		false,
 		recalculateVitality
 	)
 
@@ -645,21 +671,39 @@ function HF.SpawnItemPlusFunction(identifier, func, params, inventory, targetslo
 	-- use server spawn method
 	Timer.Wait(function()
 		local prefab = ItemPrefab.GetItemPrefab(identifier)
-		Entity.Spawner.AddItemToSpawnQueue(
-			prefab,
-			position or inventory.Container.Item.WorldPosition,
-			nil,
-			nil,
-			function(newitem)
-				if inventory ~= nil then
-					inventory.TryPutItem(newitem, targetslot, true, true, nil)
+		if tostring(inventory) == "Barotrauma.CharacterInventory" then
+			Entity.Spawner.AddItemToSpawnQueue(
+				prefab,
+				position or inventory.Owner.AnimController.WorldPosition,
+				nil,
+				nil,
+				function(newitem)
+					if inventory ~= nil then
+						inventory.TryPutItem(newitem, targetslot, true, true, nil)
+					end
+					params["item"] = newitem
+					if func ~= nil then
+						func(params)
+					end
 				end
-				params["item"] = newitem
-				if func ~= nil then
-					func(params)
+			)
+		else
+			Entity.Spawner.AddItemToSpawnQueue(
+				prefab,
+				position or inventory.Container.Item.WorldPosition,
+				nil,
+				nil,
+				function(newitem)
+					if inventory ~= nil then
+						inventory.TryPutItem(newitem, targetslot, true, true, nil)
+					end
+					params["item"] = newitem
+					if func ~= nil then
+						func(params)
+					end
 				end
-			end
-		)
+			)
+		end
 	end, 35)
 end
 
