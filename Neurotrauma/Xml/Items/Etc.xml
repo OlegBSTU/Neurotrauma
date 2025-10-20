@@ -29,46 +29,6 @@
 
 		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" depth="0.53" premultiplyalpha="false" origin="0.5,0.5"/> 
 
-		<!-- Tank Upgrade lightsource -->
-		<!-- Green - Tank is slotted and working fine -->
-		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
-      		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,505,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" />
-			<IsActive targetitemcomponent="ItemContainer" hastag="analgesictank" targetcontaineditem="true" condition="gt 0" />
-    	</LightComponent>
-		
-		<!-- Red - Tank is slotted and empty -->
-		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
-      		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,505,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" />
-			<IsActive targetitemcomponent="ItemContainer" hastag="analgesictank" targetcontaineditem="true" condition="eq 0" />
-    	</LightComponent>
-
-
-		<!-- Filter Upgrade lightsource -->
-		<!-- Green - Dialysis Filter is slotted and working fine -->
-		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
-			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" /> 
-			<IsActive targetitemcomponent="ItemContainer" hastag="dialyzer" targetcontaineditem="true" condition="gt 0" />
-		</LightComponent>
-
-		<!-- Red - Dialysis Filter is slotted and empty -->
-		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
-			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" /> 
-			<IsActive targetitemcomponent="ItemContainer" hastag="dialyzer" targetcontaineditem="true" condition="eq 0" />
-		</LightComponent>
-
-		<!-- Green - Toxin Filter is slotted and working fine -->
-		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
-			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" /> 
-			<IsActive targetitemcomponent="ItemContainer" hastag="toxfilter" targetcontaineditem="true" condition="gt 0" />
-		</LightComponent>
-
-		<!-- Red - Toxin Filter is slotted and empty -->
-		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
-			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" /> 
-			<IsActive targetitemcomponent="ItemContainer" hastag="toxtiler" targetcontaineditem="true" condition="eq 0" />
-		</LightComponent>
-
-
 		<Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" selectkey="Select">
 			<limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
 			<limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
