@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Override>
 <Items>
-   <!-- Surgery table -->
+  <!-- Surgery table -->
 	<Item name="" identifier="operatingtable" scale="0.4" Tags="operatingtable" maxstacksize="1" category="medical" description="" isshootable="true">
 
 		<Upgrade gameversion="0.12.0.0" noninteractable="false"/>
@@ -28,6 +28,46 @@
 		<InventoryIcon texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" origin="0.5,0.5"/>
 
 		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,311,407,184" depth="0.53" premultiplyalpha="false" origin="0.5,0.5"/> 
+
+		<!-- Tank Upgrade lightsource -->
+		<!-- Green - Tank is slotted and working fine -->
+		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+      		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,505,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" />
+			<IsActive targetitemcomponent="ItemContainer" hastag="analgesictank" targetcontaineditem="true" condition="gt 0" />
+    	</LightComponent>
+		
+		<!-- Red - Tank is slotted and empty -->
+		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
+      		<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,505,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" />
+			<IsActive targetitemcomponent="ItemContainer" hastag="analgesictank" targetcontaineditem="true" condition="eq 0" />
+    	</LightComponent>
+
+
+		<!-- Filter Upgrade lightsource -->
+		<!-- Green - Dialysis Filter is slotted and working fine -->
+		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" /> 
+			<IsActive targetitemcomponent="ItemContainer" hastag="dialyzer" targetcontaineditem="true" condition="gt 0" />
+		</LightComponent>
+
+		<!-- Red - Dialysis Filter is slotted and empty -->
+		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
+			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" /> 
+			<IsActive targetitemcomponent="ItemContainer" hastag="dialyzer" targetcontaineditem="true" condition="eq 0" />
+		</LightComponent>
+
+		<!-- Green - Toxin Filter is slotted and working fine -->
+		<LightComponent range="10.0" lightcolor="0,255,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false">
+			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.4" /> 
+			<IsActive targetitemcomponent="ItemContainer" hastag="toxfilter" targetcontaineditem="true" condition="gt 0" />
+		</LightComponent>
+
+		<!-- Red - Toxin Filter is slotted and empty -->
+		<LightComponent range="10.0" lightcolor="255,0,0,0" alphablend="true" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
+			<sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="100,698,407,184" depth="0.1" origin="0.5,0.5" alpha="0.5" /> 
+			<IsActive targetitemcomponent="ItemContainer" hastag="toxtiler" targetcontaineditem="true" condition="eq 0" />
+		</LightComponent>
+
 
 		<Controller allowingameediting="false" UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" selectkey="Select">
 			<limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
@@ -151,18 +191,19 @@
 			<!-- Subcontainers to prepare for future sprite changes - Lukako -->
 			<!-- First Slot (Tanks) -->
 			<SubContainer capacity="1">
-				<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-				<Containable items="analgesictank,anesthetictank,weldingfuel" itempos="102, -57" rotation="270" /> <!-- Put analgesic / anesthetic tank on the surgerytable sprite. -->
+				<SlotIcon texture="%ModDir%/Images/UI/MedUIAtlas.png" sourcerect="869,964,25,56" origin="0.5,0.5" />
+				<Containable items="analgesictank,weldingfuel" itempos="102, -57" rotation="270" /> <!-- Put analgesic tank on the surgerytable sprite. -->
 			</SubContainer>
 			
 			<!-- Second Slot (Filters) -->
 			<SubContainer capacity="1">
-				<SlotIcon texture="Content/UI/StatusMonitorUI.png" sourcerect="448,448,64,64" origin="0.5,0.5" />
+				<SlotIcon texture="%ModDir%/Images/UI/MedUIAtlas.png" sourcerect="978,967,41,52" origin="0.5,0.5" />
 				<Containable items="dialyzer,toxfilter" itempos="23, -63" rotation="-270" /> <!-- Put the filters on the surgerytable sprite --> 
 			</SubContainer>
 			
 			<!-- Third Slot (Organ Storage) -->
 			<SubContainer capacity="1">
+				<SlotIcon texture="%ModDir%/Images/UI/MedUIAtlas.png" sourcerect="898,972,75,42" origin="0.5,0.5" />
 				<Containable items="organcrate" itempos="115, -27" /> <!-- Slot container in the back -->
 			</SubContainer>
 		</ItemContainer>
