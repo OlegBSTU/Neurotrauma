@@ -4090,7 +4090,7 @@ thats what the vomiting symptom is for -->
         minspeedmultiplier="0.9"
         maxspeedmultiplier="0.7"
         tag="poisoned">
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="oxygenlow" amount="12" />
         </StatusEffect>
       </Effect>
@@ -4215,7 +4215,7 @@ thats what the vomiting symptom is for -->
       maxscreenblur="0.4"
       minfacetint="0,100,180,0"
       maxfacetint="0,100,180,20">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="11" />
       </StatusEffect>
     </Effect>
@@ -4231,7 +4231,7 @@ thats what the vomiting symptom is for -->
       maxbodytint="0,100,180,20"
       minspeedmultiplier="1.0"
       maxspeedmultiplier="0.9">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="12" />
       </StatusEffect>
       <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -4250,7 +4250,7 @@ thats what the vomiting symptom is for -->
       maxbodytint="0,100,180,40"
       minspeedmultiplier="0.9"
       maxspeedmultiplier="0.7">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="13" />
       </StatusEffect>
       <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -4270,14 +4270,14 @@ thats what the vomiting symptom is for -->
       minspeedmultiplier="0.7"
       maxspeedmultiplier="0.7"
       tag="poisoned">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="17" />
       </StatusEffect>
       <StatusEffect target="Character" setvalue="true">
         <Conditional healthpercentage="lt 75"/>
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Conditional IsHuman="false"/>
         <Affliction identifier="organdamage" amount="20" />
       </StatusEffect>
@@ -4298,14 +4298,14 @@ thats what the vomiting symptom is for -->
       minspeedmultiplier="0.7"
       maxspeedmultiplier="0.7"
       tag="poisoned">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="30" />
       </StatusEffect>
       <StatusEffect target="Character" setvalue="true">
         <Conditional healthpercentage="lt 90"/>
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Conditional IsHuman="false"/>
         <Affliction identifier="organdamage" amount="60" />
       </StatusEffect>
@@ -4327,14 +4327,14 @@ thats what the vomiting symptom is for -->
       maxspeedmultiplier="0.7"
       tag="poisoned">
 
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxemia" amount="70" />
       </StatusEffect>
       <StatusEffect target="Character" setvalue="true">
         <Conditional healthpercentage="lt 90"/>
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Conditional IsHuman="false"/>
         <Affliction identifier="organdamage" amount="60" />
       </StatusEffect>
@@ -4411,12 +4411,12 @@ thats what the vomiting symptom is for -->
       minspeedmultiplier="0.8"
       maxspeedmultiplier="0.8"
       tag="poisoned">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="liverdamage" amount="0.7" />
         <Affliction identifier="kidneydamage" amount="0.7" />
         <Affliction identifier="heartdamage" amount="0.3" />
       </StatusEffect>
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Conditional IsHuman="false"/>
         <Affliction identifier="organdamage" amount="15" />
       </StatusEffect>
@@ -4441,7 +4441,7 @@ thats what the vomiting symptom is for -->
       minspeedmultiplier="0.8"
       maxspeedmultiplier="0.8"
       tag="poisoned">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="liverdamage" amount="1.5" />
         <Affliction identifier="kidneydamage" amount="1.5" />
         <Affliction identifier="heartdamage" amount="0.8" />
@@ -4450,7 +4450,7 @@ thats what the vomiting symptom is for -->
         <Conditional healthpercentage="lt 90"/>
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <Conditional IsHuman="false"/>
         <Affliction identifier="organdamage" amount="20" />
       </StatusEffect>
@@ -4464,7 +4464,7 @@ thats what the vomiting symptom is for -->
       </StatusEffect>
     </Effect>
     <PeriodicEffect mininterval="1" maxinterval="3" minstrength="60" maxstrength="100">
-      <StatusEffect target="Character" multiplybymaxvitality="true">
+      <StatusEffect target="Character">
         <Affliction identifier="nausea" amount="50" probability="0.25" />
       </StatusEffect>
     </PeriodicEffect>
