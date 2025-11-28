@@ -455,8 +455,8 @@
             <RequiredItem identifier="analgesictank" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
             <RequiredItem identifier="morphine" amount="2" />
         </Fabricate>
-        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="6,663,42,112" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="6,663,42,112" depth="0.52" origin="0.5,0.5" />
+        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="261,912,46,112" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="261,912,46,112" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnFire" target="This" Condition="-1.0" tags="onfire" duration="1" stackable="false" />
@@ -470,8 +470,8 @@
             <QualityStat stattype="Condition" value="0.05"/>
         </Quality>
     </Item>
-	
-	 <!-- Toxin Filter -->
+    
+     <!-- Toxin Filter -->
     <Item name="" identifier="toxfilter" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,toxfilter" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         <Deconstruct time="10">
             <Item identifier="aluminium" />
@@ -480,19 +480,19 @@
             <RequiredSkill identifier="medical" level="40" />
             <RequiredSkill identifier="mechanical" level="40" />
             <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
-			<RequiredItem identifier="fpgacircuit" amount="2" />
+            <RequiredItem identifier="fpgacircuit" amount="2" />
             <RequiredItem identifier="organicfiber" amount="2" />
             <RequiredItem identifier="sodium" amount="2" />
-			<RequiredItem identifier="stabilozine" amount="2" />
+            <RequiredItem identifier="stabilozine" amount="2" />
         </Fabricate>
         <Fabricate suitablefabricators="medicalfabricator" displayname="recycleitem" requiredtime="10">
             <RequiredSkill identifier="medical" level="40" />
             <RequiredItem identifier="toxfilter" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
             <RequiredItem identifier="organicfiber" amount="2" />
-			<RequiredItem identifier="stabilozine" amount="2" />
+            <RequiredItem identifier="stabilozine" amount="2" />
         </Fabricate>
-        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="110,677,77,95" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="110,677,77,95" depth="0.52" origin="0.5,0.5" />
+        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="366,924,78,95" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="366,924,78,95" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect"/>
         <Quality>
@@ -511,7 +511,7 @@
             <RequiredSkill identifier="medical" level="60" />
             <RequiredSkill identifier="mechanical" level="40" />
             <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
-			<RequiredItem identifier="fpgacircuit" amount="2" />
+            <RequiredItem identifier="fpgacircuit" amount="2" />
             <RequiredItem identifier="organicfiber" amount="4" />
             <RequiredItem identifier="sodium" amount="2" />
             <RequiredItem identifier="calcium" amount="1" />
@@ -523,8 +523,8 @@
             <RequiredItem identifier="organicfiber" amount="4" />
         </Fabricate>
 
-        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="190,677,77,95" depth="0.52" origin="0.5,0.5" />
+        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="447,924,76,95" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="447,924,76,95" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect"/>
         
