@@ -7,6 +7,7 @@
 local Api = require("ConsentRequiredExtended.Api")
 local OnItemApplied = require("ConsentRequiredExtended.OnItemApplied")
 local onMeleeWeaponHandleImpact = require("ConsentRequiredExtended.onMeleeWeaponHandleImpact")
+local onHandleProjectileCollision = require("ConsentRequiredExtended.onHandleProjectileCollision")
 local Config = require("ConsentRequiredExtended.Config")
 
 local LUA_EVENT_ITEM_APPLYTREATMENT = "item.ApplyTreatment"
@@ -29,3 +30,5 @@ Hook.Add(LUA_EVENT_ITEM_APPLYTREATMENT, HOOK_NAME_ITEM_APPLYTREATMENT, OnItemApp
 Hook.Add(LUA_EVENT_MELEEWEAPON_HANDLEIMPACT, HOOK_NAME_MELEEWEAPON_HANDLEIMPACT, onMeleeWeaponHandleImpact)
 
 Hook.Add(LUA_EVENT_ROUNDSTART, HOOK_NAME_UPDATE_RESCUETARGETS, Api.UpdateRescueTargets)
+
+Hook.Patch('ConsentRequiredExtended.onandleProjectileCollision','Barotrauma.Items.Components.Projectile', 'HandleProjectileCollision', onHandleProjectileCollision, Hook.HookMethodType.After)

@@ -37,13 +37,21 @@ function IsItemAffected(identifier)
 	return false
 end
 
+LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.HumanAIController"], "RespondToAttack")
+
 local ADD_ATTACKER_DAMAGE = 130 -- Heelge: this used to max out negative rep gain, now only around 4 negative rep, any less negative rep is too forgiving.
 
 ---@param aiChar Barotrauma_Character The AI character to be made hostile.
 ---@param instigator Barotrauma_Character The character to be the target of the AI's wrath.
 function makeHostile(aiChar, instigator)
-	aiChar.AIController.OnAttacked(instigator, Barotrauma.AttackResult.NewAttackResultFromDamage(ADD_ATTACKER_DAMAGE))
-	aiChar.AddAttacker(instigator, ADD_ATTACKER_DAMAGE)
+	--There is a bit of code which causes attackresults without afflictions to get discarded if some other affliction happens whichin a second
+	--That one was "fun" to debug
+	--aiChar.AIController.OnAttacked(instigator, Barotrauma.AttackResult.NewAttackResultFromDamage(ADD_ATTACKER_DAMAGE))
+	Timer.Wait(function()
+		aiChar.AIController.RespondToAttack(instigator, Barotrauma.AttackResult.NewAttackResultFromDamage(ADD_ATTACKER_DAMAGE))
+		aiChar.AddAttacker(instigator, ADD_ATTACKER_DAMAGE)
+	end, 500)
+	-- as this bypasses usual npc reaction timer add a bit of delay to make it not instant
 end
 
 ---@param char1 Barotrauma_Character Character one.

@@ -16,6 +16,9 @@ AffectedItems = {
 	"propofol", -- 异丙酚
 	"mannitol", -- 甘露醇
 	"pressuremeds", -- 压力药物
+	"meth",
+	"needle",
+	"adrenaline",
 	"multiscalpel", -- 多功能手术刀
 	"advscalpel", -- 手术刀
 	"advhemostat", -- 止血钳

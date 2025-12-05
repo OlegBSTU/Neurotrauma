@@ -1,4 +1,12 @@
-Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, targetCharacter, limb)
+-- Items for which we call ItemMethod via LuaHook in its xml so they shouldnt be called again by applytreatment
+local manuallyCalledItems = {
+	needle = true,
+	streptokinase = true,
+	propofol = true,
+	adrenaline = true,
+}
+
+local function UseItemMethod(item, usingCharacter, targetCharacter, limb, manualCall)
 	if -- invalid use, dont do anything
 		item == nil
 		or usingCharacter == nil
@@ -16,6 +24,7 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
 
 	local methodtorun = NT.ItemMethods[identifier] -- get the function associated with the identifier
 	if methodtorun ~= nil then
+		if manuallyCalledItems[identifier] and not manualCall then return end
 		-- run said function
 		methodtorun(item, usingCharacter, targetCharacter, limb)
 		return
@@ -28,7 +37,22 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
 			return
 		end
 	end
+end
+
+Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, targetCharacter, limb)
+	UseItemMethod(item, usingCharacter, targetCharacter, limb)
 end)
+
+Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, item, targets, worldPosition, element)
+	local target = targets[1]
+	if not target then return end
+    if LuaUserData.IsTargetType(target, "Barotrauma.Limb") then
+ 		UseItemMethod(item, effect.user, target.character, target, true)
+    elseif LuaUserData.IsTargetType(target, "Barotrauma.Character") then
+    	UseItemMethod(item, effect.user, target, target.AnimController.MainLimb, true)
+    end
+end)
+
 -- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
 -- storing all of the item-specific functions in a table
 NT.ItemMethods = {} -- with the identifier as the key
@@ -1842,7 +1866,6 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 end
 NT.ItemMethods.needle = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
-
 	-- don't work on stasis
 	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
 		return
