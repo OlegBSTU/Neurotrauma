@@ -58,14 +58,26 @@
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="640,256,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body width="35" height="65" density="20"/>
 
-        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="3,0" holdangle="190" reload="1.0" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
                 <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
+            <StatusEffect type="OnUse" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
         </MeleeWeapon>
+
+        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
+        </Projectile>
 
         <SkillRequirementHint identifier="medical" level="20"/>
     </Item>

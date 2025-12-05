@@ -101,7 +101,7 @@
                 <Conditional entitytype="eq Character"/>
                 <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
             </StatusEffect>
-            <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+            <StatusEffect type="OnUse" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
                 <Affliction identifier="stun" amount="0.1" />
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
@@ -278,9 +278,19 @@
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
+            <StatusEffect type="OnUse" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
         </MeleeWeapon>
 
-        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
+        </Projectile>
     </Item>
 
     <!-- Antibiotic ointment / heals infected wound -->
@@ -431,9 +441,19 @@
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
+            <StatusEffect type="OnUse" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
         </MeleeWeapon>
 
-        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
+        </Projectile>
     </Item>
 
      <!-- Analgesic Tank -->

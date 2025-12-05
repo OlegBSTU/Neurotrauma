@@ -830,7 +830,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />-->
+            <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
             <SkillRequirementHint identifier="medical" level="50"/>
         </Item>
 
@@ -914,7 +914,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />-->
+             <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
             <SkillRequirementHint identifier="medical" level="72"/>
         </Item>
 
@@ -979,7 +979,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />-->
+             <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
             <SkillRequirementHint identifier="medical" level="39"/>
         </Item>
 
@@ -1047,7 +1047,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />-->
+             <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
             <SkillRequirementHint identifier="medical" level="25"/>
         </Item>
 
@@ -1068,8 +1068,21 @@
             <Body width="25" height="55" density="10.2" waterdragcoefficient="1"/>
             <SuitableTreatment identifier="cardiacarrest" suitability="100"/>
             <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+                <StatusEffect type="OnBroken" target="This">
+                    <Remove/>
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <LuaHook name="NT.runItemMethod"/>
+                </StatusEffect>
             </MeleeWeapon>
-            <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+            <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90">
+                <StatusEffect type="OnBroken" target="This">
+                    <Remove/>
+                </StatusEffect>
+                <StatusEffect type="OnImpact" target="UseTarget">
+                    <LuaHook name="NT.runItemMethod"/>
+                </StatusEffect>
+            </Projectile>
         </Item>
 
         <!-- captains pipe -->
@@ -1436,7 +1449,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>-->
+            <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>
             <SkillRequirementHint identifier="medical" level="35" />
         </Item>
 
@@ -1516,7 +1529,7 @@
                 </StatusEffect>
             </MeleeWeapon>
 
-            <!-- No <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>-->
+            <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>
             <SkillRequirementHint identifier="medical" level="50" />
         </Item>
 
