@@ -1,0 +1,3875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+<!-- Guide Buttons -->
+	<!-- Universal Buttons -->
+	<Manual_Button_Start_Page>Return to Start Page</Manual_Button_Start_Page>
+	<Manual_Button_Back>Go to previous page</Manual_Button_Back>
+	
+	<!-- Base Neurotrauma: General Information -->
+	<entityname.Manual_Start_Page>MedAssistant: Start Page</entityname.Manual_Start_Page>
+	<entityname.Manual_Information>MedAssistant: Information</entityname.Manual_Information>
+	<entityname.Manual_FAQ>MedAssistant: FAQ</entityname.Manual_FAQ>
+	<entityname.Manual_Med_Kit_Recommendations>MedAssistant: Med Kit Recommendations</entityname.Manual_Med_Kit_Recommendations>
+	<entityname.Manual_How_To_Diagnose>MedAssistant: How To Diagnose</entityname.Manual_How_To_Diagnose>
+	<entityname.Manual_Order_of_Treatments>MedAssistant: Order of Treatments</entityname.Manual_Order_of_Treatments>
+	<entityname.Manual_The_5_Commandments_of_Neurotrauma>MedAssistant: The 5 Commandments of Neurotrauma</entityname.Manual_The_5_Commandments_of_Neurotrauma>
+	 
+	<!-- Base Neurotrauma: Symptoms -->
+	<entityname.Manual_Symptoms>MedAssistant: Symptoms</entityname.Manual_Symptoms>
+	
+	<entityname.Manual_Vomiting_Blood>MedAssistant: Vomiting Blood</entityname.Manual_Vomiting_Blood>
+	<entityname.Manual_Pale_Skin>MedAssistant: Pale Skin</entityname.Manual_Pale_Skin>
+	<entityname.Manual_Shortness_of_Breath>MedAssistant: Shortness of Breath</entityname.Manual_Shortness_of_Breath>
+	<entityname.Manual_Cough>MedAssistant: Cough</entityname.Manual_Cough>
+	<entityname.Manual_Nausea>MedAssistant: Nausea</entityname.Manual_Nausea>
+	<entityname.Manual_Increased_Heartrate>MedAssistant: Increased Heartrate</entityname.Manual_Increased_Heartrate>
+	<entityname.Manual_Lightheadedness>MedAssistant: Lightheadedness</entityname.Manual_Lightheadedness>
+	<entityname.Manual_Blurred_Vision>MedAssistant: Blurred Vision</entityname.Manual_Blurred_Vision>
+	<entityname.Manual_Leg_Swelling>MedAssistant: Leg Swelling</entityname.Manual_Leg_Swelling>
+	<entityname.Manual_Wheezing>MedAssistant: Wheezing</entityname.Manual_Wheezing>
+	<entityname.Manual_Weakness>MedAssistant: Weakness</entityname.Manual_Weakness>
+	<entityname.Manual_Fever>MedAssistant: Fever</entityname.Manual_Fever>
+	<entityname.Manual_Sweating>MedAssistant: Sweating</entityname.Manual_Sweating>
+	<entityname.Manual_Bloating>MedAssistant: Bloating</entityname.Manual_Bloating>
+	<entityname.Manual_Inflammation>MedAssistant: Inflammation</entityname.Manual_Inflammation>
+	<entityname.Manual_Jaundice>MedAssistant: Jaundice</entityname.Manual_Jaundice>
+	<entityname.Manual_Abdominal_Discomfort>MedAssistant: Abdominal Discomfort</entityname.Manual_Abdominal_Discomfort>
+    <entityname.Manual_Confusion>MedAssistant: Confusion</entityname.Manual_Confusion>
+	<entityname.Manual_Headache>MedAssistant: Headache</entityname.Manual_Headache>
+	<entityname.Manual_Craving>MedAssistant: Craving</entityname.Manual_Craving>
+	<entityname.Manual_Palpitations>MedAssistant: Palpitations</entityname.Manual_Palpitations>
+	<entityname.Manual_Spasms>MedAssistant: Spasms</entityname.Manual_Spasms>
+	<entityname.Manual_Abdominal_Pain>MedAssistant: Abdominal Pain</entityname.Manual_Abdominal_Pain>
+	<entityname.Manual_Chest_Pain>MedAssistant: Chest Pain</entityname.Manual_Chest_Pain>
+	<entityname.Manual_Intense_Pain>MedAssistant: Intense Pain</entityname.Manual_Intense_Pain>
+	<entityname.Manual_Vomiting>MedAssistant: Vomiting</entityname.Manual_Vomiting>
+	
+	<!-- Base Neurotrauma: Other Afflictions -->
+	<!-- Head & Brain -->
+	<entityname.Manual_HeadBrain>MedAssistant: HeadBrain</entityname.Manual_HeadBrain>
+	
+	<entityname.Manual_Neurotrauma>MedAssistant: Neurotrauma</entityname.Manual_Neurotrauma>
+	<entityname.Manual_Stroke>MedAssistant: Stroke</entityname.Manual_Stroke>
+	<entityname.Manual_Withdrawal>MedAssistant: Withdrawal</entityname.Manual_Withdrawal>
+	<entityname.Manual_Opiate_Overdose>MedAssistant: Opiate Overdose</entityname.Manual_Opiate_Overdose>
+	<entityname.Manual_Seizure>MedAssistant: Seizure</entityname.Manual_Seizure>
+	<entityname.Manual_Unconsciousness>MedAssistant: Unconsciousness</entityname.Manual_Unconsciousness>
+	<entityname.Manual_Coma>MedAssistant: Coma</entityname.Manual_Coma>
+	<entityname.Manual_Spinal_Cord_Injury>MedAssistant: Spinal Cord Injury</entityname.Manual_Spinal_Cord_Injury>
+	<entityname.Manual_Concussion>MedAssistant: Concussion</entityname.Manual_Concussion>
+	<!-- todo <entityname.Manual_Drunk>MedAssistant: Drunk</entityname.Manual_Drunk> -->
+	
+	<!-- Lungs -->
+	<entityname.Manual_Lungs>MedAssistant: Lungs</entityname.Manual_Lungs>
+	
+	<entityname.Manual_Respiratory_Arrest>MedAssistant: Respiratory Arrest</entityname.Manual_Respiratory_Arrest>
+	<entityname.Manual_Lung_Damage>MedAssistant: Lung Damage</entityname.Manual_Lung_Damage>
+	<entityname.Manual_Pneumothorax>MedAssistant: Pneumothorax</entityname.Manual_Pneumothorax>
+	<entityname.Manual_Hyperventilation>MedAssistant: Hyperventilation</entityname.Manual_Hyperventilation>
+	<entityname.Manual_Hypoventilation>MedAssistant: Hypoventilation</entityname.Manual_Hypoventilation>
+	<entityname.Manual_Oxygen_Low>MedAssistant: Oxygen Low</entityname.Manual_Oxygen_Low>
+	
+	<!-- Heart -->
+	<entityname.Manual_Heart>MedAssistant: Heart</entityname.Manual_Heart>
+	
+	<entityname.Manual_Cardiac_Tamponade>MedAssistant: Cardiac Tamponade</entityname.Manual_Cardiac_Tamponade>
+	<entityname.Manual_Cardiac_Arrest>MedAssistant: Cardiac Arrest</entityname.Manual_Cardiac_Arrest>
+	<entityname.Manual_Heart_Attack>MedAssistant: Heart Attack</entityname.Manual_Heart_Attack>
+	<entityname.Manual_Heart_Damage>MedAssistant: Heart Damage</entityname.Manual_Heart_Damage>
+	<entityname.Manual_Irregular_Heartbeat>MedAssistant: Irregular Heartbeat</entityname.Manual_Irregular_Heartbeat>
+	<entityname.Manual_Fibrillation>MedAssistant: Fibrillation</entityname.Manual_Fibrillation>
+	
+	<!-- Torso -->
+	<entityname.Manual_Torso>MedAssistant: Torso</entityname.Manual_Torso>
+	
+	<entityname.Manual_Aortic_Rupture>MedAssistant: Aortic Rupture</entityname.Manual_Aortic_Rupture>
+	<entityname.Manual_Internal_Bleeding>MedAssistant: Internal Bleeding</entityname.Manual_Internal_Bleeding>
+	<entityname.Manual_Radiation_Sickness>MedAssistant: Radiation Sickness</entityname.Manual_Radiation_Sickness>
+	<entityname.Manual_Kidney_Damage>MedAssistant: Kidney Damage</entityname.Manual_Kidney_Damage>
+	<entityname.Manual_Liver_Damage>MedAssistant: Liver Damage</entityname.Manual_Liver_Damage>
+	<entityname.Manual_Morbusine>MedAssistant: Morbusine</entityname.Manual_Morbusine>
+	<entityname.Manual_Cyanide_Poisoning>MedAssistant: Cyanide Poisoning</entityname.Manual_Cyanide_Poisoning>
+	<!-- todo <entityname.Manual_Sufforin_Poisoning>MedAssistant: Sufforin Poisoning</entityname.Manual_Sufforin_Poisoning> -->
+	<entityname.Manual_Vanilla_Organ_Damage>MedAssistant: Vanilla Organ Damage</entityname.Manual_Vanilla_Organ_Damage>
+	<entityname.Manual_Analgesia>MedAssistant: Analgesia</entityname.Manual_Analgesia>
+	<entityname.Manual_Anesthesia>MedAssistant: Anesthesia</entityname.Manual_Anesthesia>
+	
+	<!-- Extremities -->
+	<entityname.Manual_Extremities>MedAssistant: Extremities</entityname.Manual_Extremities>
+	
+	<entityname.Manual_Traumatic_Amputation>MedAssistant: Traumatic Amputation</entityname.Manual_Traumatic_Amputation>
+	<entityname.Manual_Gangrene>MedAssistant: Gangrene</entityname.Manual_Gangrene>
+	<entityname.Manual_Surgical_Amputation>MedAssistant: Surgical Amputation</entityname.Manual_Surgical_Amputation>
+	<entityname.Manual_Plaster_Cast>MedAssistant: Plaster Cast</entityname.Manual_Plaster_Cast>
+	<entityname.Manual_Clamped_Bleeding>MedAssistant: Clamped Bleeding</entityname.Manual_Clamped_Bleeding>
+	
+	<!-- Bones -->
+	<entityname.Manual_Bones>MedAssistant: Bones</entityname.Manual_Bones>
+	
+	<entityname.Manual_Bone_Death>MedAssistant: Bone Death</entityname.Manual_Bone_Death>
+	<entityname.Manual_Bone_Damage>MedAssistant: Bone Damage</entityname.Manual_Bone_Damage>
+	<entityname.Manual_Fractures>MedAssistant: Fractures</entityname.Manual_Fractures>
+	<entityname.Manual_Dislocations>MedAssistant: Dislocations</entityname.Manual_Dislocations>
+	
+	<!-- Any Bodypart -->
+	<entityname.Manual_Any_Bodypart>MedAssistant: Any Bodypart</entityname.Manual_Any_Bodypart>
+	
+	<entityname.Manual_Arterial_Bleeding>MedAssistant: Arterial Bleeding</entityname.Manual_Arterial_Bleeding>
+	<entityname.Manual_Burns>MedAssistant: Burns</entityname.Manual_Burns>
+	<entityname.Manual_Internal_Damage>MedAssistant: Internal Damage</entityname.Manual_Internal_Damage> <!-- Perhaps combine into Internal Wounds -->
+	<!-- todo <entityname.Manual_Blunttrauma>MedAssistant: Blunt Force Trauma</entityname.Manual_Blunttrauma> -->
+	<entityname.Manual_Wounds>MedAssistant: Wounds</entityname.Manual_Wounds>
+	<entityname.Manual_Infected_Wounds>MedAssistant: Infected Wounds</entityname.Manual_Infected_Wounds>
+	<entityname.Manual_Foreign_Bodies>MedAssistant: Foreign Bodies</entityname.Manual_Foreign_Bodies>
+	<!-- todo <entityname.Manual_Bleeding>MedAssistant: Bleeding</entityname.Manual_Bleeding> -->
+	<entityname.Manual_Ointmented>MedAssistant: Ointmented</entityname.Manual_Ointmented>
+	<!-- todo <entityname.Manual_Chilled>MedAssistant: Chilled</entityname.Manual_Chilled> -->
+	<entityname.Manual_Bandaged>MedAssistant: Bandaged</entityname.Manual_Bandaged>
+	
+	<!-- Blood -->
+	<entityname.Manual_Blood>MedAssistant: Blood</entityname.Manual_Blood>
+	
+	<entityname.Manual_Hypoxemia>MedAssistant: Hypoxemia</entityname.Manual_Hypoxemia>
+	<entityname.Manual_Sepsis>MedAssistant: Sepsis</entityname.Manual_Sepsis>
+	<entityname.Manual_Hemotransfusion_Shock>MedAssistant: Hemotransfusion Shock</entityname.Manual_Hemotransfusion_Shock>
+	<entityname.Manual_Blood_Loss>MedAssistant: Blood Loss</entityname.Manual_Blood_Loss>
+	<entityname.Manual_Hypotension>MedAssistant: Hypotension</entityname.Manual_Hypotension>
+	<entityname.Manual_Hypertension>MedAssistant: Hypertension</entityname.Manual_Hypertension>
+	<entityname.Manual_Acidosis>MedAssistant: Acidosis</entityname.Manual_Acidosis>
+	<entityname.Manual_Alkalosis>MedAssistant: Alkalosis</entityname.Manual_Alkalosis>
+	<!-- todo <entityname.Manual_Immunity>MedAssistant: Immunity</entityname.Manual_Immunity> -->
+  
+	<!-- Base Neurotrauma: Items -->
+	<entityname.Manual_Items_Part_1>MedAssistant: Items Part 1</entityname.Manual_Items_Part_1>
+	<entityname.Manual_Items_Part_2>MedAssistant: Items Part 2</entityname.Manual_Items_Part_2>
+	<entityname.Manual_Items_Part_3>MedAssistant: Items Part 3</entityname.Manual_Items_Part_3>
+	<entityname.Manual_Items_Part_4>MedAssistant: Items Part 4</entityname.Manual_Items_Part_4>
+	
+	<!-- Organs -->
+	<!-- todo <entityname.Manual_Brain_Transplant>MedAssistant: Brain</entityname.Manual_Brain_Transplant> -->
+	<!-- todo <entityname.Manual_Heart_Transplant>MedAssistant: Heart</entityname.Manual_Heart_Transplant> -->
+	<!-- todo <entityname.Manual_Kidney_Transplant>MedAssistant: Kidney</entityname.Manual_Kidney_Transplant> -->
+	<!-- todo <entityname.Manual_Liver_Transplant>MedAssistant: Liver</entityname.Manual_Liver_Transplant> -->
+	<!-- todo <entityname.Manual_Lungs_Transplant>MedAssistant: Lungs</entityname.Manual_Lungs_Transplant> -->
+	
+	<!-- Others -->
+	<entityname.Manual_Adrenaline>MedAssistant: Adrenaline</entityname.Manual_Adrenaline>
+	<entityname.Manual_AED>MedAssistant: AED</entityname.Manual_AED>
+	<entityname.Manual_Alien_Blood>MedAssistant: Alien Blood</entityname.Manual_Alien_Blood>
+	<entityname.Manual_Ambubag>MedAssistant: Ambubag</entityname.Manual_Ambubag>
+	<entityname.Manual_Anaparalyzant>MedAssistant: Anaparalyzant</entityname.Manual_Anaparalyzant>
+	<entityname.Manual_Antibiotic_Glue>MedAssistant: Antibiotic Glue</entityname.Manual_Antibiotic_Glue>
+	<entityname.Manual_Antibiotic_Ointment>MedAssistant: Antibiotic Ointment</entityname.Manual_Antibiotic_Ointment>
+	<entityname.Manual_Antiseptic>MedAssistant: Antiseptic</entityname.Manual_Antiseptic>
+	<entityname.Manual_Antiseptic_Sprayer>MedAssistant: Antiseptic Sprayer</entityname.Manual_Antiseptic_Sprayer>
+	<!-- todo <entityname.Manual_Arm>MedAssistant: Arm</entityname.Manual_Arm> -->
+	<entityname.Manual_Autopulse>MedAssistant: Autopulse</entityname.Manual_Autopulse>
+	<entityname.Manual_Azathioprine>MedAssistant: Azathioprine</entityname.Manual_Azathioprine>
+	<entityname.Manual_Bandages>MedAssistant: Bandages</entityname.Manual_Bandages>
+	<entityname.Manual_Blood_Packs>MedAssistant: Blood Packs</entityname.Manual_Blood_Packs>
+	<entityname.Manual_Blue_Shark>MedAssistant: Blue Shark</entityname.Manual_Blue_Shark>
+	<entityname.Manual_Body_Bag>MedAssistant: Body Bag</entityname.Manual_Body_Bag>
+	<entityname.Manual_Broad-spectrum_Antibiotics>MedAssistant: Broad-spectrum Antibiotics</entityname.Manual_Broad-spectrum_Antibiotics>
+	<entityname.Manual_Combat_Stimulant>MedAssistant: Combat Stimulant</entityname.Manual_Combat_Stimulant>
+	<entityname.Manual_Deusizine>MedAssistant: Deusizine</entityname.Manual_Deusizine>
+	<entityname.Manual_Diving_Knife>MedAssistant: Diving Knife</entityname.Manual_Diving_Knife>
+	<entityname.Manual_Drainage>MedAssistant: Drainage</entityname.Manual_Drainage>
+	<entityname.Manual_Empty_Blood_Pack>MedAssistant: Empty Blood Pack</entityname.Manual_Empty_Blood_Pack>
+	<entityname.Manual_Endovascular_Balloon>MedAssistant: Endovascular Balloon</entityname.Manual_Endovascular_Balloon>
+	<entityname.Manual_Fentanyl>MedAssistant: Fentanyl</entityname.Manual_Fentanyl>
+	<entityname.Manual_Gypsum>MedAssistant: Gypsum</entityname.Manual_Gypsum>
+	<!-- todo <entityname.Manual_Haloperidol>MedAssistant: Haloperidol</entityname.Manual_Haloperidol> -->
+	<entityname.Manual_Health_Scanner>MedAssistant: Health Scanner</entityname.Manual_Health_Scanner>
+	<entityname.Manual_Hematology_Analyzer>MedAssistant: Hematology Analyzer</entityname.Manual_Hematology_Analyzer>
+	<entityname.Manual_Hemostat>MedAssistant: Hemostat</entityname.Manual_Hemostat>
+	<entityname.Manual_Hyperzine>MedAssistant: Hyperzine</entityname.Manual_Hyperzine>
+	<entityname.Manual_Liquid_Oxygenite>MedAssistant: Liquid Oxygenite</entityname.Manual_Liquid_Oxygenite>
+	<entityname.Manual_Mannitol>MedAssistant: Mannitol</entityname.Manual_Mannitol>
+	<entityname.Manual_Manual_Defibrillator>MedAssistant: Manual Defibrillator</entityname.Manual_Manual_Defibrillator>
+	<entityname.Manual_Medical_Stent>MedAssistant: Medical Stent</entityname.Manual_Medical_Stent>
+	<entityname.Manual_Methamphetamine>MedAssistant: Methamphetamine</entityname.Manual_Methamphetamine>
+	<entityname.Manual_Morphine>MedAssistant: Morphine</entityname.Manual_Morphine>
+	<entityname.Manual_Naloxone>MedAssistant: Naloxone</entityname.Manual_Naloxone>
+	<entityname.Manual_Needle>MedAssistant: Needle</entityname.Manual_Needle>
+	<entityname.Manual_Nitroglycerin>MedAssistant: Nitroglycerin</entityname.Manual_Nitroglycerin>
+	<entityname.Manual_Opium>MedAssistant: Opium</entityname.Manual_Opium>
+	<!-- todo <entityname.Manual_Multipurpose_Scalpel>MedAssistant: Multipurpose Scalpel</entityname.Manual_Multipurpose_Scalpel> -->
+	<entityname.Manual_Organ_Procurement_Scalpels>MedAssistant: Organ Procurement Scalpels</entityname.Manual_Organ_Procurement_Scalpels>
+	<entityname.Manual_Osteosynthesis_Implants>MedAssistant: Osteosynthesis Implants</entityname.Manual_Osteosynthesis_Implants>
+	<entityname.Manual_Plastiseal>MedAssistant: Plastiseal</entityname.Manual_Plastiseal>
+	<entityname.Manual_Propofol>MedAssistant: Propofol</entityname.Manual_Propofol>
+	<entityname.Manual_Raptor_Bane_Extract>MedAssistant: Raptor Bane Extract</entityname.Manual_Raptor_Bane_Extract>
+	<entityname.Manual_Scalpel>MedAssistant: Scalpel</entityname.Manual_Scalpel>
+	<entityname.Manual_Retractors>MedAssistant: Skin Retractors</entityname.Manual_Retractors>
+	<entityname.Manual_Ringer_Solution>MedAssistant: Ringer's Solution</entityname.Manual_Ringer_Solution>
+	<!-- todo <entityname.Manual_Refrigerated_Containers>MedAssistant: Refrigerated Containers</entityname.Manual_Refrigerated_Containers> both crate and handheld container?-->
+	<entityname.Manual_Saline>MedAssistant: Saline</entityname.Manual_Saline>
+	<entityname.Manual_Sodium_Nitroprusside>MedAssistant: Sodium Nitroprusside</entityname.Manual_Sodium_Nitroprusside>
+	<entityname.Manual_Spinal_Cord_Implants>MedAssistant: Spinal Cord Implants</entityname.Manual_Spinal_Cord_Implants>
+	<entityname.Manual_Stasis_Bag>MedAssistant: Stasis Bag</entityname.Manual_Stasis_Bag>
+	<entityname.Manual_Streptokinase>MedAssistant: Streptokinase</entityname.Manual_Streptokinase>
+	<entityname.Manual_Surgery_Table>MedAssistant: Surgery Table</entityname.Manual_Surgery_Table>
+	<entityname.Manual_Surgical_Drill>MedAssistant: Surgical Drill</entityname.Manual_Surgical_Drill>
+	<entityname.Manual_Surgical_Saw>MedAssistant: Surgical Saw</entityname.Manual_Surgical_Saw>
+	<entityname.Manual_Sutures>MedAssistant: Sutures</entityname.Manual_Sutures>
+	<entityname.Manual_Thiamine>MedAssistant: Thiamine</entityname.Manual_Thiamine>
+	<entityname.Manual_Tourniquet>MedAssistant: Tourniquet</entityname.Manual_Tourniquet>
+	<entityname.Manual_Trauma_Shears>MedAssistant: Trauma Shears</entityname.Manual_Trauma_Shears>
+	<entityname.Manual_Tweezers>MedAssistant: Tweezers</entityname.Manual_Tweezers>
+	<entityname.Manual_Wrench>MedAssistant: Wrench</entityname.Manual_Wrench>
+	
+	<!-- Base Neurotrauma: Surgical Afflictions -->
+	<entityname.Manual_Traumatic_Shock>MedAssistant: Traumatic Shock</entityname.Manual_Traumatic_Shock>
+	<entityname.Manual_Surgery_Incision>MedAssistant: Surgery Incision</entityname.Manual_Surgery_Incision>
+	<entityname.Manual_Clamped_Bleeding>MedAssistant: Clamped Bleeding</entityname.Manual_Clamped_Bleeding>
+	<entityname.Manual_Retracted_Skin>MedAssistant: Retracted Skin</entityname.Manual_Retracted_Skin>
+	<entityname.Manual_Drilled_Bones>MedAssistant: Drilled Bones</entityname.Manual_Drilled_Bones>
+	<entityname.Manual_Sawed_Bones>MedAssistant: Sawed Bones</entityname.Manual_Sawed_Bones>
+	
+	<!-- Base Neurotrauma: Surgical Procedures -->
+	<entityname.Manual_Surgery>MedAssistant: Surgery</entityname.Manual_Surgery>
+	<entityname.Manual_Procedures>MedAssistant: Procedures</entityname.Manual_Procedures>
+	
+	<entityname.Manual_Open_Close_Surgery>MedAssistant: Open Close Surgery</entityname.Manual_Open_Close_Surgery>
+	<entityname.Manual_Osteosynthetic_Surgery>MedAssistant: Osteosynthetic Surgery</entityname.Manual_Osteosynthetic_Surgery>
+	<entityname.Manual_Aortic_Rupture_Surgery>MedAssistant: Aortic Rupture Surgery</entityname.Manual_Aortic_Rupture_Surgery>
+	<entityname.Manual_Amputation_Surgery>MedAssistant: Amputation Surgery</entityname.Manual_Amputation_Surgery>
+	<entityname.Manual_Organ_Transplant_Surgery>MedAssistant: Organ Transplant Surgery</entityname.Manual_Organ_Transplant_Surgery>
+	
+	<!-- Neurotrauma Expansions: -->
+	<entityname.Manual_Expansion>MedAssistant: Expansion</entityname.Manual_Expansion>
+	
+	<!-- Expanded Surgery -->
+	<!-- Expanded Surgery: Items-->
+	<entityname.Manual_Surgical_Drapes>MedAssistant: Surgical Drapes</entityname.Manual_Surgical_Drapes>
+	<entityname.Manual_Surgical_Mask>MedAssistant: Surgical Mask</entityname.Manual_Surgical_Mask>
+	<entityname.Manual_Surgeon_Clothes>MedAssistant: Surgeon Clothes</entityname.Manual_Surgeon_Clothes>
+	<entityname.Manual_Mannitol_Plus>MedAssistant: Mannitol Plus</entityname.Manual_Mannitol_Plus>
+	<entityname.Manual_Experimental_Treatment>MedAssistant: Experimental Treatment</entityname.Manual_Experimental_Treatment>
+	<entityname.Manual_Triage_Card>MedAssistant: Triage Card</entityname.Manual_Triage_Card>
+	<entityname.Manual_Brain_Jar>MedAssistant: Brain Jar</entityname.Manual_Brain_Jar>
+	<entityname.Manual_Artificial_Brain>MedAssistant: Artificial Brain</entityname.Manual_Artificial_Brain>
+	<entityname.Manual_Medical_Misconduct>MedAssistant: Medical Misconduct</entityname.Manual_Medical_Misconduct>
+	
+	<!-- Expanded Surgery: Afflictions -->
+	<entityname.Manual_Surgical_Infection>MedAssistant: Surgical Infection</entityname.Manual_Surgical_Infection>
+  
+	<!-- Cybernetics Expanded -->
+	<!-- Cybernetics Expanded: Items -->
+	<entityname.Manual_Cybernetic_Arm>MedAssistant: Cybernetic Arm</entityname.Manual_Cybernetic_Arm>
+	<entityname.Manual_Cybernetic_Leg>MedAssistant: Cybernetic Leg</entityname.Manual_Cybernetic_Leg>
+	<entityname.Manual_Cyberarm>MedAssistant: Cyberarm</entityname.Manual_Cyberarm>
+	<entityname.Manual_Cyberleg>MedAssistant: Cyberleg</entityname.Manual_Cyberleg>
+	
+	<!-- Cybernetics Expanded: Afflictions -->
+	<entityname.Manual_Damaged_Electronics>MedAssistant: Damaged Electronics</entityname.Manual_Damaged_Electronics>
+	<entityname.Manual_Bent_Metal>MedAssistant: Bent Metal</entityname.Manual_Bent_Metal>
+	<entityname.Manual_Loose_Screws>MedAssistant: Loose Screws</entityname.Manual_Loose_Screws>
+	<entityname.Manual_Material_Loss>MedAssistant: Material Loss</entityname.Manual_Material_Loss>
+	
+	<!-- Cybernetics Expanded: Surgical Procedures -->
+	<entityname.Manual_FPGA_Circuit>MedAssistant: FPGA Circuit</entityname.Manual_FPGA_Circuit>
+	<entityname.Manual_Welding_Tool>MedAssistant: Welding Tool</entityname.Manual_Welding_Tool>
+	<entityname.Manual_Screwdriver>MedAssistant: Screwdriver</entityname.Manual_Screwdriver>
+	<entityname.Manual_Steel_Bar>MedAssistant: Steel Bar</entityname.Manual_Steel_Bar>
+  
+	<!-- Page Buttons -->
+	<!-- Base Neurotrauma: General Information Buttons -->
+	<Manual_Button_FAQ>FAQ</Manual_Button_FAQ>
+	<Manual_Button_Med_Kit_Recommendations>Med Kit Recommendations</Manual_Button_Med_Kit_Recommendations>
+	<Manual_Button_How_To_Diagnose>How To Diagnose</Manual_Button_How_To_Diagnose>
+	<Manual_Button_Order_of_Treatments>Order of Treatments</Manual_Button_Order_of_Treatments>
+	<Manual_Button_The_5_Commandments_of_Neurotrauma>The 5 Commandments of Neurotrauma</Manual_Button_The_5_Commandments_of_Neurotrauma>
+	
+	<!-- Base Neurotrauma: Symptoms Buttons -->
+	<Manual_Button_Symptoms>Symptoms</Manual_Button_Symptoms>
+	
+	<Manual_Button_Vomiting_Blood>Vomiting Blood</Manual_Button_Vomiting_Blood>
+	<Manual_Button_Pale_Skin>Pale Skin</Manual_Button_Pale_Skin>
+	<Manual_Button_Shortness_of_Breath>Shortness of Breath</Manual_Button_Shortness_of_Breath>
+	<Manual_Button_Cough>Cough</Manual_Button_Cough>
+	<Manual_Button_Increased_Heartrate>Increased Heartrate</Manual_Button_Increased_Heartrate>
+	<Manual_Button_Confusion>Confusion</Manual_Button_Confusion>
+	<Manual_Button_Lightheadedness>Lightheadedness</Manual_Button_Lightheadedness>
+	<Manual_Button_Blurred_Vision>Blurred Vision</Manual_Button_Blurred_Vision>
+	<Manual_Button_Leg_Swelling>Leg Swelling</Manual_Button_Leg_Swelling>
+	<Manual_Button_Wheezing>Wheezing</Manual_Button_Wheezing>
+	<Manual_Button_Weakness>Weakness</Manual_Button_Weakness>
+	<Manual_Button_Fever>Fever</Manual_Button_Fever>
+	<Manual_Button_Sweating>Sweating</Manual_Button_Sweating>
+	<Manual_Button_Bloating>Bloating</Manual_Button_Bloating>
+	<Manual_Button_Inflammation>Inflammation</Manual_Button_Inflammation>
+	<Manual_Button_Jaundice>Jaundice</Manual_Button_Jaundice>
+	<Manual_Button_Abdominal_Discomfort>Abdominal Discomfort</Manual_Button_Abdominal_Discomfort>
+	<Manual_Button_Headache>Headache</Manual_Button_Headache>
+	<Manual_Button_Craving>Craving</Manual_Button_Craving>
+	<Manual_Button_Palpitations>Palpitations</Manual_Button_Palpitations>
+	<Manual_Button_Spasms>Spasms</Manual_Button_Spasms>
+	<Manual_Button_Abdominal_Pain>Abdominal Pain</Manual_Button_Abdominal_Pain>
+	<Manual_Button_Vomiting>Vomiting</Manual_Button_Vomiting>
+	<Manual_Button_Nausea>Nausea</Manual_Button_Nausea>
+	<Manual_Button_Chest_Pain>Chest Pain</Manual_Button_Chest_Pain>
+	<Manual_Button_Intense_Pain>Intense Pain</Manual_Button_Intense_Pain>
+	
+	<!-- Base Neurotrauma: Other Afflictions -->
+	<!-- Head & Brain Buttons -->
+	<Manual_Button_HeadBrain>HeadBrain</Manual_Button_HeadBrain>
+	
+	<Manual_Button_Neurotrauma>Neurotrauma</Manual_Button_Neurotrauma>
+	<Manual_Button_Stroke>Stroke</Manual_Button_Stroke>
+	<Manual_Button_Withdrawal>Withdrawal</Manual_Button_Withdrawal>
+	<Manual_Button_Opiate_Overdose>Opiate Overdose</Manual_Button_Opiate_Overdose>
+	<Manual_Button_Seizure>Seizure</Manual_Button_Seizure>
+	<Manual_Button_Unconsciousness>Unconsciousness</Manual_Button_Unconsciousness>
+	<Manual_Button_Coma>Coma</Manual_Button_Coma>
+	<Manual_Button_Spinal_Cord_Injury>Spinal Cord Injury</Manual_Button_Spinal_Cord_Injury>
+	<Manual_Button_Concussion>Concussion</Manual_Button_Concussion>
+	<!-- todo <Manual_Button_Drunk>Drunk</Manual_Button_Drunk> -->
+	
+	<!-- Lungs Buttons -->
+	<Manual_Button_Lungs>Lungs</Manual_Button_Lungs>
+	
+	<Manual_Button_Respiratory_Arrest>Respiratory Arrest</Manual_Button_Respiratory_Arrest>
+	<Manual_Button_Lung_Damage>Lung Damage</Manual_Button_Lung_Damage>
+	<Manual_Button_Pneumothorax>Pneumothorax</Manual_Button_Pneumothorax>
+	<Manual_Button_Hyperventilation>Hyperventilation</Manual_Button_Hyperventilation>
+	<Manual_Button_Hypoventilation>Hypoventilation</Manual_Button_Hypoventilation>
+	<Manual_Button_Oxygen_Low>Oxygen Low</Manual_Button_Oxygen_Low>
+	
+	<!-- Heart Buttons -->
+	<Manual_Button_Heart>Heart</Manual_Button_Heart>
+	
+	<Manual_Button_Cardiac_Tamponade>Cardiac Tamponade</Manual_Button_Cardiac_Tamponade>
+	<Manual_Button_Cardiac_Arrest>Cardiac Arrest</Manual_Button_Cardiac_Arrest>
+	<Manual_Button_Heart_Attack>Heart Attack</Manual_Button_Heart_Attack>
+	<Manual_Button_Heart_Damage>Heart Damage</Manual_Button_Heart_Damage>
+	<Manual_Button_Irregular_Heartbeat>Irregular Heartbeat</Manual_Button_Irregular_Heartbeat>
+	<Manual_Button_Fibrillation>Fibrillation</Manual_Button_Fibrillation>
+	
+	<!-- Torso Buttons -->
+	<Manual_Button_Torso>Torso</Manual_Button_Torso>
+	
+	<Manual_Button_Aortic_Rupture>Aortic Rupture</Manual_Button_Aortic_Rupture>
+	<Manual_Button_Internal_Bleeding>Internal Bleeding</Manual_Button_Internal_Bleeding>
+	<Manual_Button_Radiation_Sickness>Radiation Sickness</Manual_Button_Radiation_Sickness>
+	<Manual_Button_Kidney_Damage>Kidney Damage</Manual_Button_Kidney_Damage>
+	<Manual_Button_Liver_Damage>Liver Damage</Manual_Button_Liver_Damage>
+	<Manual_Button_Morbusine>Morbusine</Manual_Button_Morbusine> <!-- todo fix wording? -->
+	<Manual_Button_Cyanide_Poisoning>Cyanide Poisoning</Manual_Button_Cyanide_Poisoning>
+	<!-- todo <entityname.Manual_Sufforin_Poisoning>Sufforin Poisoning</entityname.Manual_Sufforin_Poisoning> -->
+	<Manual_Button_Vanilla_Organ_Damage>Vanilla Organ Damage</Manual_Button_Vanilla_Organ_Damage>
+	<Manual_Button_Analgesia>Analgesia</Manual_Button_Analgesia>
+	<Manual_Button_Anesthesia>Anesthesia</Manual_Button_Anesthesia>
+	
+	<!-- Extremities Buttons -->
+	<Manual_Button_Extremities>Extremities</Manual_Button_Extremities>
+	
+	<Manual_Button_Traumatic_Amputation>Traumatic Amputation</Manual_Button_Traumatic_Amputation>
+	<Manual_Button_Gangrene>Gangrene</Manual_Button_Gangrene>
+	<Manual_Button_Surgical_Amputation>Surgical Amputation</Manual_Button_Surgical_Amputation>
+	<Manual_Button_Plaster_Cast>Plaster Cast</Manual_Button_Plaster_Cast>
+	<Manual_Button_Clamped_Bleeding>Clamped Bleeding</Manual_Button_Clamped_Bleeding> <!-- note: 2 clamped bleedings exist. hemostat and tourniquet. -->
+	
+	<!-- Bones Buttons -->
+	<Manual_Button_Bones>Bones</Manual_Button_Bones>
+	
+	<Manual_Button_Bone_Death>Bone Death</Manual_Button_Bone_Death>
+	<Manual_Button_Bone_Damage>Bone Damage</Manual_Button_Bone_Damage>
+	<Manual_Button_Fractures>Fractures</Manual_Button_Fractures>
+	<Manual_Button_Dislocations>Dislocations</Manual_Button_Dislocations>
+	
+	<!-- Any Bodypart Buttons -->
+	<Manual_Button_Any_Bodypart>Any Bodypart</Manual_Button_Any_Bodypart>
+	
+	<Manual_Button_Arterial_Bleeding>Arterial Bleeding</Manual_Button_Arterial_Bleeding>
+	<Manual_Button_Internal_Damage>Internal Damage</Manual_Button_Internal_Damage>
+	<Manual_Button_Burns>Burns</Manual_Button_Burns>
+	<Manual_Button_Infected_Wounds>Infected Wounds</Manual_Button_Infected_Wounds>
+	<Manual_Button_Foreign_Bodies>Foreign Bodies</Manual_Button_Foreign_Bodies>
+	<Manual_Button_Wounds>Wounds</Manual_Button_Wounds>
+	<Manual_Button_Ointmented>Ointmented</Manual_Button_Ointmented>
+	<Manual_Button_Bandaged>Bandaged</Manual_Button_Bandaged>
+	<!-- todo <Manual_Blunttrauma>Blunt Force Trauma</Manual_Blunttrauma> -->
+	<!-- todo <Manual_Bleeding>Bleeding</Manual_Bleeding> -->
+	<!-- todo <Manual_Chilled>Chilled</Manual_Chilled> -->
+	
+	<!-- Blood Buttons -->
+	<Manual_Button_Blood>Blood</Manual_Button_Blood>
+	
+	<Manual_Button_Hypoxemia>Hypoxemia</Manual_Button_Hypoxemia>
+	<Manual_Button_Sepsis>Sepsis</Manual_Button_Sepsis>
+	<Manual_Button_Hemotransfusion_Shock>Hemotransfusion Shock</Manual_Button_Hemotransfusion_Shock>
+	<Manual_Button_Blood_Loss>Blood Loss</Manual_Button_Blood_Loss>
+	<Manual_Button_Hypotension>Hypotension</Manual_Button_Hypotension>
+	<Manual_Button_Hypertension>Hypertension</Manual_Button_Hypertension>
+	<Manual_Button_Acidosis>Acidosis</Manual_Button_Acidosis>
+	<Manual_Button_Alkalosis>Alkalosis</Manual_Button_Alkalosis>
+	<!-- todo <Manual_Immunity>MedAssistant: Immunity</Manual_Immunity> -->
+	
+	<!-- Base Neurotrauma: Item Buttons -->
+	<Manual_Button_Items_Part_1>Items Part 1</Manual_Button_Items_Part_1>
+	<Manual_Button_Items_Part_2>Items Part 2</Manual_Button_Items_Part_2>
+	<Manual_Button_Items_Part_3>Items Part 3</Manual_Button_Items_Part_3>
+	<Manual_Button_Items_Part_4>Items Part 4</Manual_Button_Items_Part_4>
+	
+	<Manual_Button_Adrenaline>Adrenaline</Manual_Button_Adrenaline>
+	<Manual_Button_AED>AED</Manual_Button_AED>
+	<Manual_Button_Alien_Blood>Alien Blood</Manual_Button_Alien_Blood>
+	<Manual_Button_Ambubag>Ambubag</Manual_Button_Ambubag>
+	<Manual_Button_Anaparalyzant>Anaparalyzant</Manual_Button_Anaparalyzant>
+	<Manual_Button_Antibiotic_Glue>Antibiotic Glue</Manual_Button_Antibiotic_Glue>
+	<Manual_Button_Antibiotic_Ointment>Antibiotic Ointment</Manual_Button_Antibiotic_Ointment>
+	<Manual_Button_Antiseptic>Antiseptic</Manual_Button_Antiseptic>
+	<Manual_Button_Antiseptic_Sprayer>Antiseptic Sprayer</Manual_Button_Antiseptic_Sprayer>
+	<Manual_Button_Autopulse>Autopulse</Manual_Button_Autopulse>
+	<Manual_Button_Azathioprine>Azathioprine</Manual_Button_Azathioprine>
+	<Manual_Button_Bandages>Bandages</Manual_Button_Bandages>
+	<Manual_Button_Blood_Packs>Blood Packs</Manual_Button_Blood_Packs>
+	<Manual_Button_Blue_Shark>Blue Shark</Manual_Button_Blue_Shark>
+	<Manual_Button_Body_Bag>Body Bag</Manual_Button_Body_Bag>
+	<Manual_Button_Broad-spectrum_Antibiotics>Broad-spectrum Antibiotics</Manual_Button_Broad-spectrum_Antibiotics>
+	<Manual_Button_Combat_Stimulant>Combat Stimulant</Manual_Button_Combat_Stimulant>
+	<Manual_Button_Deusizine>Deusizine</Manual_Button_Deusizine>
+	<Manual_Button_Diving_Knife>Diving Knife</Manual_Button_Diving_Knife>
+	<Manual_Button_Drainage>Drainage</Manual_Button_Drainage>
+	<Manual_Button_Empty_Blood_Pack>Empty Blood Pack</Manual_Button_Empty_Blood_Pack>
+	<Manual_Button_Endovascular_Balloon>Endovascular Balloon</Manual_Button_Endovascular_Balloon>
+	<Manual_Button_Fentanyl>Fentanyl</Manual_Button_Fentanyl>
+	<Manual_Button_Gypsum>Gypsum</Manual_Button_Gypsum>
+	<Manual_Button_Health_Scanner>Health Scanner</Manual_Button_Health_Scanner>
+	<Manual_Button_Hematology_Analyzer>Hematology Analyzer</Manual_Button_Hematology_Analyzer>
+	<Manual_Button_Hemostat>Hemostat</Manual_Button_Hemostat>
+	<Manual_Button_Hyperzine>Hyperzine</Manual_Button_Hyperzine>
+	<Manual_Button_Liquid_Oxygenite>Liquid Oxygenite</Manual_Button_Liquid_Oxygenite>
+	<Manual_Button_Mannitol>Mannitol</Manual_Button_Mannitol>
+	<Manual_Button_Manual_Defibrillator>Manual Defibrillator</Manual_Button_Manual_Defibrillator>
+	<Manual_Button_Medical_Stent>Medical Stent</Manual_Button_Medical_Stent>
+	<Manual_Button_Methamphetamine>Methamphetamine</Manual_Button_Methamphetamine>
+	<Manual_Button_Morphine>Morphine</Manual_Button_Morphine>
+	<Manual_Button_Naloxone>Naloxone</Manual_Button_Naloxone>
+	<Manual_Button_Needle>Needle</Manual_Button_Needle>
+	<Manual_Button_Nitroglycerin>Nitroglycerin</Manual_Button_Nitroglycerin>
+	<Manual_Button_Opium>Opium</Manual_Button_Opium>
+	<Manual_Button_Organ_Procurement_Scalpels>Organ Procurement Scalpels</Manual_Button_Organ_Procurement_Scalpels>
+	<Manual_Button_Osteosynthesis_Implants>Osteosynthesis Implants</Manual_Button_Osteosynthesis_Implants>
+	<Manual_Button_Plastiseal>Plastiseal</Manual_Button_Plastiseal>
+	<Manual_Button_Propofol>Propofol</Manual_Button_Propofol>
+	<Manual_Button_Raptor_Bane_Extract>Raptor Bane Extract</Manual_Button_Raptor_Bane_Extract>
+	<Manual_Button_Retractors>Retractors</Manual_Button_Retractors>
+	<Manual_Button_Ringer_Solution>Ringer's Solution</Manual_Button_Ringer_Solution>
+	<Manual_Button_Saline>Saline</Manual_Button_Saline>
+	<Manual_Button_Scalpel>Scalpel</Manual_Button_Scalpel>
+	<Manual_Button_Sodium_Nitroprusside>Sodium Nitroprusside</Manual_Button_Sodium_Nitroprusside>
+	<Manual_Button_Spinal_Cord_Implants>Spinal Cord Implants</Manual_Button_Spinal_Cord_Implants>
+	<Manual_Button_Stasis_Bag>Stasis Bag</Manual_Button_Stasis_Bag>
+	<Manual_Button_Streptokinase>Streptokinase</Manual_Button_Streptokinase>
+	<Manual_Button_Surgery_Table>Surgery Table</Manual_Button_Surgery_Table>
+	<Manual_Button_Surgical_Drill>Surgical Drill</Manual_Button_Surgical_Drill>
+	<Manual_Button_Surgical_Saw>Surgical Saw</Manual_Button_Surgical_Saw>
+	<Manual_Button_Sutures>Sutures</Manual_Button_Sutures>
+	<Manual_Button_Thiamine>Thiamine</Manual_Button_Thiamine>
+	<Manual_Button_Tourniquet>Tourniquet</Manual_Button_Tourniquet>
+	<Manual_Button_Trauma_Shears>Trauma Shears</Manual_Button_Trauma_Shears>
+	<Manual_Button_Tweezers>Tweezers</Manual_Button_Tweezers>
+	<Manual_Button_Wrench>Wrench</Manual_Button_Wrench>
+	<!-- todo <Manual_Arm>Arm</entityname.Manual_Arm> -->
+	<!-- todo <Manual_Haloperidol>Haloperidol</Manual_Haloperidol> -->
+	<!-- todo <Manual_Multipurpose_Scalpel>Multipurpose Scalpel</Manual_Multipurpose_Scalpel> -->
+	<!-- todo <Manual_Refrigerated_Containers>Refrigerated Containers</Manual_Refrigerated_Containers> both crate and handheld container?-->
+	
+	<!-- Base Neurotrauma: Surgery Afflictions Buttons -->
+	<Manual_Button_Traumatic_Shock>Traumatic Shock</Manual_Button_Traumatic_Shock>
+	<Manual_Button_Surgery_Incision>Surgery Incision</Manual_Button_Surgery_Incision>
+	<Manual_Button_Clamped_Bleeding>Clamped Bleeding</Manual_Button_Clamped_Bleeding>
+	<Manual_Button_Retracted_Skin>Retracted Skin</Manual_Button_Retracted_Skin>
+	<Manual_Button_Drilled_Bones>Drilled Bones</Manual_Button_Drilled_Bones>
+	<Manual_Button_Sawed_Bones>Sawed Bones</Manual_Button_Sawed_Bones>
+	
+	<!-- Base Neurotrauma: Surgical Procedure Buttons -->
+	<Manual_Button_Surgery>Surgery</Manual_Button_Surgery>
+	<Manual_Button_Procedures>Procedures</Manual_Button_Procedures>
+	
+	<Manual_Button_Open_Close_Surgery>Open Close Surgery</Manual_Button_Open_Close_Surgery>
+	<Manual_Button_Osteosynthetic_Surgery>Osteosynthetic Surgery</Manual_Button_Osteosynthetic_Surgery>
+	<Manual_Button_Aortic_Rupture_Surgery>Aortic Rupture Surgery</Manual_Button_Aortic_Rupture_Surgery>
+	<Manual_Button_Amputation_Surgery>Amputation Surgery</Manual_Button_Amputation_Surgery>
+	<Manual_Button_Organ_Transplant_Surgery>Organ Transplant Surgery</Manual_Button_Organ_Transplant_Surgery>
+	
+	<!-- Neurotrauma Expansions Buttons -->
+	<Manual_Button_Expansion>Expansion</Manual_Button_Expansion>
+	
+	<!-- Expanded Surgery Buttons -->
+	<!-- Expanded Surgery Item Buttons -->
+	<Manual_Button_Surgical_Drapes>Surgical Drapes</Manual_Button_Surgical_Drapes>
+	<Manual_Button_Surgical_Mask>Surgical Mask</Manual_Button_Surgical_Mask>
+	<Manual_Button_Surgeon_Clothes>Surgeon Clothes</Manual_Button_Surgeon_Clothes>
+	<Manual_Button_Mannitol_Plus>Mannitol Plus</Manual_Button_Mannitol_Plus>
+	<Manual_Button_Experimental_Treatment>Experimental Treatment</Manual_Button_Experimental_Treatment>
+	<Manual_Button_Triage_Card>Triage Card</Manual_Button_Triage_Card>
+	<Manual_Button_Brain_Jar>Brain Jar</Manual_Button_Brain_Jar>
+	<Manual_Button_Artificial_Brain>Artificial Brain</Manual_Button_Artificial_Brain>
+	<Manual_Button_Medical_Misconduct>Medical Misconduct</Manual_Button_Medical_Misconduct>
+	
+	<!-- Expanded Surgery Affliction Buttons -->
+	<Manual_Button_Surgical_Infection>Surgical Infection</Manual_Button_Surgical_Infection>
+	
+	<!-- Cybernetics Expanded Buttons -->
+	<!-- Cybernetics Expanded Item Buttons -->
+	<Manual_Button_Cybernetic_Arm>Cybernetic Arm</Manual_Button_Cybernetic_Arm>
+	<Manual_Button_Cybernetic_Leg>Cybernetic Leg</Manual_Button_Cybernetic_Leg>
+	<Manual_Button_Cyberarm>Cyberarm</Manual_Button_Cyberarm>
+	<Manual_Button_Cyberleg>Cyberleg</Manual_Button_Cyberleg>
+	
+	<!-- Cybernetics Expanded Affliction Buttons -->
+	<Manual_Button_Damaged_Electronics>Damaged Electronics</Manual_Button_Damaged_Electronics>
+	<Manual_Button_Bent_Metal>Bent Metal</Manual_Button_Bent_Metal>
+	<Manual_Button_Loose_Screws>Loose Screws</Manual_Button_Loose_Screws>
+	<Manual_Button_Material_Loss>Material Loss</Manual_Button_Material_Loss>
+	<Manual_Button_FPGA_Circuit>FPGA Circuit</Manual_Button_FPGA_Circuit>
+	<Manual_Button_Welding_Tool>Welding Tool</Manual_Button_Welding_Tool>
+	<Manual_Button_Screwdriver>Screwdriver</Manual_Button_Screwdriver>
+	<Manual_Button_Steel_Bar>Steel Bar</Manual_Button_Steel_Bar>
+	<Manual_Button_Information>Information</Manual_Button_Information>
+
+<!-- Information Texts -->
+<!-- Base Neurotrauma: -->
+	<Manual_Description_FAQ>
+    Frequently Asked Questions:
+
+    ## Q: Why can't I find a specific affliction/item?
+    A: This guide is incomplete at the current moment. This guide is a copy of Trello guide, by 28.03.2023
+
+    ## Q: What is the difference between Symptoms and other afflictions?
+    A: Symptoms are afflictions that don't do anything on their own, and merely exist to make diagnosis easier, while other afflictions have effects that actually impact gameplay.
+
+    ## Q: Button not work/Link to item missing
+    A: If something not working, or have unexpected behaviour, send bug report into steam mod page, with steps to reproduce.
+  </Manual_Description_FAQ>
+
+  <Manual_Description_Med_Kit_Recommendations>
+    ###First aid kit
+    Distribute these to crew or around the sub
+
+    @bandages
+    @sutures
+    @tourniquet
+    @autopulse - only used to keep yourself conscious till reaching a doctor
+    @blood-packs - Preferably O- or O+
+    @gypsum
+    @trauma-shears
+    @opium to use with a @wrench on dislocations (or dislocation pills)
+    (minor husk sepsis pills)
+
+    It can't be placed in a med kit, but a @wrench is used for dislocations, which are common
+
+    ###Doctor's med kit 1
+    @opium, @morphine, or your choice of @analgesia pills for surgery
+    @bandages
+    @sutures - fits in surgery toolbox instead if you carry one
+    @tourniquet
+    @health-scanner
+    @hematology-analyzer
+    @blood-packs - Preferably O- or O+
+    @gypsum
+    @trauma-shears - fits in surgery toolbox instead if you carry one
+
+    This first med kit will cover the most basic diagnosis and treatments, but a second med kit and/or surgery kit provides most of the tools for more serious treatments.
+
+    Also recommended to keep a stasis bag in your hotbar
+
+    ###Doctor's med kit 2
+    @surgical-drill
+    @surgical-saw
+    @ambubag
+    @antiseptic-sprayer with @antiseptic loaded or @antibiotic-ointment
+    @manual-defibrillator or @aed
+    @mannitol (or neurotrauma pills)
+    @broad-spectrum-antibiotics (or minor husk sepsis pills)
+    calyxanide (or major husk pills)
+    @plastiseal or @antibiotic-glue
+
+    ###Surgery kit
+    @scalpel
+    @hemostat
+    @retractors
+    @sutures
+    @tweezers
+    @needle
+    @drainage
+    The 4 most used @organ-procurement-scalpels or extra @needle and @drainage
+
+    Consider adding a @needle to your med kit if you don't carry around a surgery kit regularly
+  </Manual_Description_Med_Kit_Recommendations>
+
+  <Manual_Description_How_To_Diagnose>
+    Diagnosing is used to describe the process of using the "Three H's":
+    - Health Interface - Provides things that are mostly surface level
+    - Health Scanner - Provides information about the internals
+    - Hematology Analyzer - Provides information about the blood
+
+    Using this method gives you the most information and makes it much easier to properly treat your patient and increase their chances of survival.
+  </Manual_Description_How_To_Diagnose>
+
+  <Manual_Description_Order_of_Treatments>
+    #If the patient is in immediate danger of dying put them in a @stasis-bag
+    A stasis bag will give you 6 minutes of paused afflictions to diagnose, figure out your treatment plan, and administer any treatments short of surgery.
+
+    ###Suggested treatments in order of importance
+    1. Put them in stasis bag if they're in rapidly deteriorating condition
+    2. Diagnose problems and figure out which steps from below are relevant
+    3. @tourniquet any @arterial-bleeding
+    4. If there's major regular bleeding, @sutures them, give @blood-packs if necessary and continue doing so in further steps if necessary. If they have internal or aortic bleeding, that will need to be fixed before transfusing blood or you will waste blood bags. Consider using liquid oxygenite further down to stabilize the patient for those surgeries.
+    5. Use a @needle if @pneumothorax is high
+    6. If in @stasis-bag, prep patient for removal from bag, give any drugs if they need it
+    \- @azathioprine: if they need later organ transplants
+    \- Antirad or stabilozine: radiation sickness IMPORTANT
+    \- @broad-spectrum-antibiotics: sepsis
+    \- @mannitol: neurotrama reduction or healing if their blood is stable
+    \- @morphine: painkiller for surgery
+    \- @thiamine: organ damage healing
+    Then take them out of the stasis bag to start surgery (here's where you apply @liquid-oxygenite if you're going to after using a stasis bag)
+    7. First aid for heartbeat/breathing if they're arrested or about to arrest (or if just taken out of stasis bag, as that arrests heartbeat and breathing). Skip this step if they have massive internal or aortic bleeding to fix first.
+    8. Fix @aortic-rupture, @internal-bleeding, and @arterial-bleeding properly. Give more blood if needed.
+    9. Properly fix any heart/breathing problems, including using @drainage to fix @pneumothorax
+    10. Fix bad @burns (high second degree or any third degree)
+    \- Second degree: @antibiotic-ointment or @bandages if that limb doesn't need surgery
+    \- Third degree: @antibiotic-glue, or if that limb needs surgery, wait till the end of surgery and use @plastiseal before the closing @sutures.
+    11. Do @osteosynthesis-implants surgeries on head/neck/chest @fractures and then @spinal-cord-implants surgery on @spinal-cord-injury
+    12. @health-scanner body parts and perform @tweezers surgery to remove @foreign-bodies as well as heal @internal-damage and blunt force trauma
+    13. @organ-transplant-surgery surgery if needed.
+    14. Apply @sutures to close surgeries to fix @wounds
+    15. @bandages then @gypsum any @fractures on arms or legs to cast them
+    16. Use @hematology-analyzer to check if they have any lingering blood problems and administer @broad-spectrum-antibiotics if they have @sepsis if you didn't give it to them earlier
+
+    An additional option is @liquid-oxygenite if they're having @neurotrauma and/or having massive bleeding problems. It negates all need for breathing, heartbeat, and having any blood for 30 seconds. LO2 gives you some time to fix @arterial-bleeding or @aortic-rupture properly while not accruing damage for 30 seconds. It will cause some organ damage though.
+
+    You can also choose to use @liquid-oxygenite to outright ignore bleeding, breathing, and heartbeat problems for 30 seconds while you do surgery, then apply @blood-packs and restart heartbeat/breathing after fixing problems with surgery. If they have an @aortic-rupture it might be a good idea to use LO2 and ignore the massive blood loss and replace the blood after fixing the aortic rupture and any other serious bleeding.
+  </Manual_Description_Order_of_Treatments>
+
+  <Manual_Description_The_5_Commandments_of_Neurotrauma>
+    1. Thou shalt use the three Hs of diagnosis. (in @how-to-diagnose)
+    2. Thou shalt make the blood go circly circly and the air go innie outtie.
+    3. Thou shalt treat underlying causes over treating symptoms (ask yourself, "Why is my patient in @cardiac-arrest?")
+    4. Thou shalt not do surgery without a @surgery-table or @propofol, lest thine patient suffer.
+    5. Sedation -&gt; @scalpel -&gt; @hemostat -&gt; @retractors -&gt; (optional steps) -&gt; @sutures
+  </Manual_Description_The_5_Commandments_of_Neurotrauma>
+
+  <Manual_Description_Vomiting_Blood>
+    Vomiting blood is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+
+    ##Caused by:
+
+    - @internal-bleeding (50% or more)
+    - @liver-damage (at 100%)
+  </Manual_Description_Vomiting_Blood>
+
+  <Manual_Description_Pale_Skin>
+    Pale skin is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @hypotension (50% or less)
+    - @blood-loss (40% or more)
+  </Manual_Description_Pale_Skin>
+
+  <Manual_Description_Shortness_of_Breath>
+    Shortness of breath is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @heart-attack
+    - @lung-damage (45% or more)
+    - @pneumothorax (40% or more)
+    - @cardiac-tamponade (10% or more)
+    - @hemotransfusion-shock (between 0-70%)
+    - @hypoxemia (20% or more)
+    - @heart-damage (80% or more)
+  </Manual_Description_Shortness_of_Breath>
+
+  <Manual_Description_Cough>
+    Cough is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @lung-damage (50% or more)
+    - @heart-damage (50% or more)
+    - @cardiac-tamponade (20% or more)
+
+  </Manual_Description_Cough>
+
+  <Manual_Description_Increased_Heartrate>
+    Increased heartrate is a symptom, which means that it isn't fatal and doesn't cause any other afflictions, unless it is slowly increasing, which means that you are undergoing fibrillation.
+
+    ---
+    ##Caused by:
+
+    - @acidosis (20% or more)
+    - @sepsis (20% or more)
+    - @blood-loss (40% or more)
+    - @pneumothorax (30% or more)
+    - @withdrawal (alcohol withdrawal, 75% or more)
+    - @fibrillation
+    - @adrenaline
+  </Manual_Description_Increased_Heartrate>
+
+  <Manual_Description_Confusion>
+    Confusion is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+
+    ## Caused by:
+
+    - @acidosis
+    - @sepsis
+    - @hypotension
+    - @hypoxemia
+    - @withdrawal
+    - @concussion
+  </Manual_Description_Confusion>
+
+  <Manual_Description_Lightheadedness>
+    Lightheadedness is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @hypotension (60% or less)
+  </Manual_Description_Lightheadedness>
+
+  <Manual_Description_Blurred_Vision>
+    Blurred vision is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. As the name suggests, this affliction will make your vision blurrier.
+
+    ---
+    ##Caused by:
+
+    - @hypotension (55% or less)
+    - @concussion
+  </Manual_Description_Blurred_Vision>
+
+  <Manual_Description_Leg_Swelling>
+    Leg swelling is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Cyberlegs will not swell.
+
+    ---
+    ##Caused by:
+
+    - @liver-damage (40% or more)
+    - @kidney-damage (60% or more)
+    - @heart-damage (80% or more)
+  </Manual_Description_Leg_Swelling>
+
+  <Manual_Description_Wheezing>
+    Wheezing is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @hemotransfusion-shock (between 0-90%)
+  </Manual_Description_Wheezing>
+
+  <Manual_Description_Weakness>
+    Weakness is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Weakness will decrease melee damage you deal by 80%.
+
+    ---
+    ##Caused by:
+
+    - @cardiac-tamponade (30% or more)
+    - @blood-loss (60% or more)
+    - @acidosis (35% or more)
+  </Manual_Description_Weakness>
+
+  <Manual_Description_Fever>
+    Fever is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @sepsis (5% or more)
+    - @withdrawal (alcohol withdrawal, 90% or more)
+  </Manual_Description_Fever>
+
+  <Manual_Description_Sweating>
+    Sweating is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @heart-attack
+    - @withdrawal (30% or more)
+  </Manual_Description_Sweating>
+
+  <Manual_Description_Bloating>
+    Bloating is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @liver-damage (50% or more)
+  </Manual_Description_Bloating>
+
+  <Manual_Description_Inflammation>
+    Inflammation is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @infected-wounds (10% or more)
+    - @foreign-bodies (15% or more)
+  </Manual_Description_Inflammation>
+
+  <Manual_Description_Jaundice>
+    Jaundice is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @liver-damage (80% or more)
+  </Manual_Description_Jaundice>
+
+  <Manual_Description_Abdominal_Discomfort>
+    Abdominal discomfort is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @liver-damage (65% or more)
+  </Manual_Description_Abdominal_Discomfort>
+
+  <Manual_Description_Headache>
+    Headache is a symptom, which means that it isn't fatal and doesn't cause any other afflictions. Headache will create a fuzzy overlay on the borders of your screen.
+
+    ---
+    ##Caused by:
+
+    - @blood-loss (50% or more)
+    - @acidosis (20% or more)
+    - @hypoxemia (40% or more)
+    - @hypotension (60% or less)
+    - @stroke
+    - @withdrawal (alcohol withdrawal, 50% or more)
+    - @fractures (skull fractures)
+    - @concussion
+
+    ##Treatments:
+
+    - Treating the causes
+    - Painkillers
+  </Manual_Description_Headache>
+
+  <Manual_Description_Craving>
+    Craving is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @withdrawal (20% or more)
+  </Manual_Description_Craving>
+
+  <Manual_Description_Palpitations>
+    Palpitations is a symptom, which means that it isn't fatal and doesn't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @alkalosis (20% or more)
+  </Manual_Description_Palpitations>
+
+  <Manual_Description_Spasms>
+    Spasms are a symptom, which means that they aren't fatal and don't cause any other afflictions.
+
+    ---
+    ##Caused by:
+
+    - @seizure
+  </Manual_Description_Spasms>
+
+  <Manual_Description_Neurotrauma>
+    Neurotrauma is one of the only things that can deal direct damage to your health. Neurotrauma is extremely dangerous and can build up very quickly, and upon reaching 200%, will instantly kill the player. The brain will heal at a rate of 0.1% per second, assuming that the config is unchanged and nothing is damaging it.
+
+    ---
+    ##Caused by:
+
+    - @stroke
+    - @liver-damage (80% or more, point at which it outpaces natural regeneration)
+    - @kidney-damage (cancels out natural regeneration at 100%)
+    - @sepsis (25% or more, point at which it outpaces natural regeneration)
+    - @fractures (skull fractures, if they aren't bandaged and patient doesn't have neurotrauma already)
+    - @hypoxemia (10% or more, point at which it outpaces natural regeneration)
+    - Using a @tourniquet on the head
+    - @methamphetamine
+    - @hyperzine
+    - @traumatic-shock (equal to strength divided by 100 per second, 10% or more is the point at which it outpaces natural regeneration)
+    - @cyanide-poisoning (70% or more)
+
+
+    ##Effects:
+
+    - Direct damage to vitality
+    - Instant death (at 200%)
+    - @respiratory-arrest (at 100% or more)
+    - @unconsciousness (at 100% or more)
+
+    ##Treatments:
+
+    - Treating the causes
+    - @mannitol if blood is stable. (Blood pressure is above 70% and @hypoxemia is below 30%)
+    - @mannitol-plus
+  </Manual_Description_Neurotrauma>
+
+  <Manual_Description_Stroke>
+    Stroke must be treated as quickly as possible to reduce the damage done to the brain. @streptokinase must NOT be used on patients suffering from this, as it will damage the brain further.
+
+    ---
+    ##Caused by:
+
+    - @hypertension (150% or more)
+
+    ##Effects:
+
+    - @neurotrauma
+    - @seizure
+    - @coma
+    - @headache
+
+
+    ##Treatments:
+
+    - @open-close-surgery
+  </Manual_Description_Stroke>
+
+  <Manual_Description_Withdrawal>
+    ##Caused by:
+
+    - Chemical/alcohol/opiate addiction
+
+    ##Effects:
+
+    ###In alcohol, chemical and opiate withdrawal:
+    - @craving (at 20% or more)
+    - @sweating (at 30% or more)
+    - 50% slower movement speed (at 80% or more)
+    - 30% slower movement speed (at 40% or more)
+    - 10% slower movement speed (at 20% or more)
+    - @nausea (at 40% or more)
+
+
+    ###In alcohol withdrawal:
+    - @fever (at 90% or more)
+    - @vomiting (at 60% or more)
+    - @headache (at 50% or more)
+    - @confusion (at 80% or more)
+    - @increased-heartrate (at 75% or more)
+    - @seizure (at 50% or more)
+    - @hypertension
+
+    ##Treatments:
+
+    - Haloperidol (ONLY FOR ALCOHOL WITHDRAWAL)
+    - @naloxone (ONLY FOR OPIATE WITHDRAWAL)
+    - Using an @ambubag containing paint (ONLY FOR CHEMICAL WITHDRAWAL)
+    - Administering more of the substance the individual is in withdrawal from (e.g., giving someone with opiate withdrawal more opiates)
+    - Time
+  </Manual_Description_Withdrawal>
+
+  <Manual_Description_Opiate_Overdose>
+    Opiate overdose is rare, and only occurs from abusing opiates. However, if above the 50% threshold, it is very deadly, and requires emergency care.
+
+    ---
+
+    ## Caused by:
+
+    - Taking too many opiates (@opium
+
+    ## Effects:
+
+    - @respiratory-arrest
+    - @hypoventilation
+    - @seizure
+    - @unconsciousness
+    - 50% slower movement speed (at 50% or more)
+
+    ## Treatments:
+
+    - @naloxone
+
+    ‌
+  </Manual_Description_Opiate_Overdose>
+
+  <Manual_Description_Seizure>
+    Seizures will cause you to ragdoll whenever they trigger.
+
+    ---
+    ##Caused by:
+
+    - @stroke
+    - @acidosis (60% or more)
+    - @alkalosis (60% or more)
+    - @withdrawal (alcohol withdrawal, 50% or more)
+    - @radiation-sickness (50% or more)
+    - @opiate-overdose (50% or more)
+
+    ##Effects:
+
+    - @unconsciousness
+    - @spasms
+
+    ##Treatments:
+
+    - Treating the causes
+  </Manual_Description_Seizure>
+
+  <Manual_Description_Unconsciousness>
+    Unconsciousness usually means that something very wrong has happened, and a medic will need to treat you as soon as possible. Unconsciousness will hide mental symptoms (cards hidden by this affliction are tagged with the "Mental Symptom" label), and will also function as a @surgery-table as long as your patient is unconscious.
+
+    ---
+
+    ## Caused by:
+
+    - Having less than 0 vitality
+    - @hypoxemia
+    - @neurotrauma
+    - @coma
+    - @aortic-rupture
+    - @seizure
+    - @anesthesia
+    - @opiate-overdose
+    - @stasis-bag
+
+    ## Effects:
+
+    - Inability to move or speak
+    - @oxygen-low
+
+    ## Treatments:
+
+    - Treating the causes
+  </Manual_Description_Unconsciousness>
+
+  <Manual_Description_Coma>
+    Coma often happens after suffocating, and usually isn't fatal with proper medical attention. The recommended course of action is to strap an autopulse onto the patient if it is severe enough.
+
+    ---
+
+    ## Caused by:
+
+    - @stroke
+    - @cardiac-arrest
+    - High levels of @acidosis
+    - @morbusine
+    - Failing @naloxone skill check
+
+    ## Effects:
+
+    - @cardiac-arrest
+    - @unconsciousness
+
+    ## Treatments:
+
+    - Treating the causes and waiting
+
+    ‌
+  </Manual_Description_Coma>
+
+  <Manual_Description_Spinal_Cord_Injury>
+    Spinal cord injuries will remove your ability to move or speak, which could get you killed indirectly. Spinal cord injuries must be treated after treating the neck fracture, otherwise it will simply come back.
+
+    ---
+    ##Caused by:
+
+    - @fractures (neck fractures)
+
+
+    ##Effects:
+
+    - Inability to move or speak
+    - @analgesia
+
+    ##Treatments:
+
+    - @open-close-surgery (apply @spinal-cord-implants before applying @sutures )
+  </Manual_Description_Spinal_Cord_Injury>
+
+  <Manual_Description_Concussion>
+    A concussion is caused by a severe attack to the head. It periodically brings nausea, blurred vision, headaches, and confusion. While a nuisance, concussions aren't lethal.
+
+    ##Effects:
+    - @nausea
+    - @blurred-vision
+    - @headache
+    - @confusion
+
+    ##Caused by:
+    - Trauma (explosions, bite wounds, blunt force, @internal-damage)
+
+
+    ##Prevention:
+    - Wearing a helmet
+
+    ##Treatment:
+    - There is none. You gotta wait it out. Should've worn that helmet.
+  </Manual_Description_Concussion>
+
+  <Manual_Description_Respiratory_Arrest>
+    Respiratory arrest will quickly build up oxygen low and suffocate the victim, and must be dealt with swiftly. Being near a @surgery-table will prevent the negative effects of respiratory arrest from taking place.
+
+    ---
+
+    ## Caused by:
+
+    - @lung-damage
+    - @traumatic-shock
+    - @neurotrauma
+    - @hypoxemia
+    - @opiate-overdose
+    - @stasis-bag
+
+    ## Effects:
+
+    - @oxygen-low
+    - @acidosis
+
+    ## Treatments:
+
+    - Treating the causes
+    - @ambubag with an oxygenite tank in it
+    - Being conscious
+
+    ## First Aid:
+
+    - Being near a @surgery-table
+    - @autopulse
+
+    ‌
+  </Manual_Description_Respiratory_Arrest>
+
+  <Manual_Description_Lung_Damage>
+    Lung damage is not lethal, as long as it is below 100%. The lungs will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging them and they're below 100% damage.
+
+    ---
+    ##Caused by:
+
+    - @broad-spectrum-antibiotics
+    - @liquid-oxygenite
+    - Using an @ambubag containing welding/incendium fuel or paint
+    - Smoking
+    - @hemotransfusion-shock (between 0-70%)
+    - @radiation-sickness (28% or more, point at which it outpaces natural regeneration)
+    - @sepsis (3% or more, point at which it outpaces natural regeneration)
+    - @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+    ##Effects:
+
+    - @cough (at 50% or more)
+    - @shortness-of-breath (at 45% or more)
+    - @respiratory-arrest (at 100%)
+
+    ##Treatments:
+
+    - Time
+    - @thiamine
+    - @organ-transplant-surgery
+  </Manual_Description_Lung_Damage>
+
+  <Manual_Description_Pneumothorax>
+    Pneumothorax will prevent @hypoxemia from decreasing in strength. While not lethal on its own, Pneumothorax can easily kill if paired with afflictions that cause Hypoxemia. Pneumothorax's negative effects can be temporarily negated by using a @needle.
+
+    ---
+    ##Caused by:
+
+    - @fractures (rib fractures, if they arent bandaged)
+    - Trauma (gunshots, explosions, lacerations, bite wounds, blunt force, @internal-damage)
+
+    ##Effects:
+
+    - @shortness-of-breath (at 40% or more)
+    - @hyperventilation (at 15% or more)
+    - @increased-heartrate (at 30% or more)
+
+    ##Treatments:
+
+    - Using a @drainage during surgery (After @retracted-skin)
+
+    ##First Aid:
+
+    - @needle
+  </Manual_Description_Pneumothorax>
+
+  <Manual_Description_Hyperventilation>
+    Hyperventilation is normally harmless, and can usually be ignored. Hyperventilation and hypoventilation will cancel each other out.
+
+    ---
+    ##Caused by:
+
+    - @hypotension (80% or less)
+    - @hypoxemia (10% or more)
+    - @pneumothorax (15% or more)
+    - @sepsis (15% or more)
+    - @adrenaline
+
+    ##Effects:
+
+    - @alkalosis
+
+    ##Treatments:
+
+    - Treating the causes
+    - Inducing @hypoventilation
+  </Manual_Description_Hyperventilation>
+
+  <Manual_Description_Hypoventilation>
+    Hypoventilation is normally harmless, and can usually be ignored. Hypoventilation and hyperventilation will cancel each other out.
+
+    ---
+
+    ## Caused by:
+
+    - @analgesia
+    - @anesthesia
+    - @opiate-overdose
+
+    ## Effects:
+
+    - @acidosis
+
+    ## Treatments:
+
+    - Treating the causes
+    - Inducing @hyperventilation
+
+    ‌
+  </Manual_Description_Hypoventilation>
+
+  <Manual_Description_Oxygen_Low>
+    Oxygen low is where there is a lack of oxygen in the LUNGS. @hypoxemia.
+
+    ---
+
+    ## Caused by:
+
+    - @respiratory-arrest
+    - @unconsciousness (if caused by having less than 0 vitality)
+    - Being in water or a room without a source of oxygen.
+    - Pomegrenade Extract
+
+    ## Effects:
+
+    - @hypoxemia
+
+    ## Treatments:
+
+    - @surgery-table
+    - CPR
+    - @autopulse
+    - Breathing oxygenated air
+    - @ambubag with Oxygen or Oxygenite tanks
+  </Manual_Description_Oxygen_Low>
+
+  <Manual_Description_Cardiac_Tamponade>
+    Cardiac tamponade is common during missions involving combat outside the submarine, such as abandoned outposts or wrecks. Anyone showing symptoms should immediately head back to the submarine to get treated.
+
+    ---
+    ##Caused by:
+
+    - Trauma (lacerations and gunshots)
+
+    ##Effects:
+
+    - @hypotension (halves blood pressure)
+    - @weakness (at 30% or more)
+    - @cough (at 20% or more)
+    - @shortness-of-breath (at 10% or more)
+
+
+    ##Treatments:
+
+    - @open-close-surgery
+  </Manual_Description_Cardiac_Tamponade>
+
+  <Manual_Description_Cardiac_Arrest>
+    Cardiac arrest will cause blood pressure to plummet significantly, and must be dealt with swiftly.
+
+    ---
+    ##Caused by:
+
+    - @heart-damage (at 100%)
+    - @traumatic-shock (40% or more)
+    - @coma (40% or more)
+    - @hypoxemia (80% or more)
+    - @irregular-heartbeat (20% or more)
+    - @fibrillation
+    - @manual-defibrillator
+    - @stasis-bag
+
+    ##Effects:
+
+    - @coma
+    - @acidosis
+    - @hypotension (sets blood pressure to the minimum)
+    - @hypoxemia
+
+    ##Treatments:
+
+    - CPR
+    - @autopulse
+    - Treating the causes
+    - @adrenaline
+    - @manual-defibrillator or @aed
+    - @nitroglycerin pill (from NT pharmacy)
+  </Manual_Description_Cardiac_Arrest>
+
+  <Manual_Description_Heart_Attack>
+    A heart attack must be treated as soon as possible to reduce the risk of heart failure.
+
+    ---
+    ##Caused by:
+
+    - @hypertension (150% or more)
+    - Failing @antibiotic-glue skill check
+
+    ##Effects:
+
+    - @sweating
+    - @heart-damage
+    - @shortness-of-breath
+
+    ##Treatments:
+
+    - @streptokinase
+    - @nitroglycerin pill (from NT pharmacy)
+    - Treating the causes
+  </Manual_Description_Heart_Attack>
+
+  <Manual_Description_Heart_Damage>
+    Heart damage is not lethal, as long as it is below 100%. The heart will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging it and it's below 100% damage.
+
+    ---
+    ##Caused by:
+
+    - @heart-attack
+    - @broad-spectrum-antibiotics
+    - @liquid-oxygenite
+    - @hemotransfusion-shock (between 0-70%)
+    - @mannitol
+    - @radiation-sickness (29% or more, point at which it outpaces natural regeneration)
+    - @sepsis (3% or more, point at which it outpaces natural regeneration)
+    - @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+    ##Effects:
+
+    - @cough (at 80% or more)
+    - @shortness-of-breath (at 80% or more)
+    - @cardiac-arrest (at 100%)
+    - @leg-swelling (at 80% or more)
+
+    ##Treatments:
+
+    - Time
+    - @thiamine
+    - @organ-transplant-surgery
+  </Manual_Description_Heart_Damage>
+
+  <Manual_Description_Irregular_Heartbeat>
+    Irregular heartbeat is when the heart is not beating at its normal rate and can lead to @cardiac-arrest.
+
+    ---
+    ##Caused By:
+    - @fibrillation
+
+    ##Effects:
+    - @cardiac-arrest (at 20% or more)
+    - @hypotension
+
+    ##Treatment:
+    - @manual-defibrillator or @aed
+    - CPR
+    - @autopulse
+    - Treating underlying causes
+  </Manual_Description_Irregular_Heartbeat>
+
+  <Manual_Description_Fibrillation>
+    Fibrillation is a 3-step process. At first, it will begin as increased heartrate, which will increase slowly. Upon reaching 100% increased heartrate, it will become irregular heartbeat, which will also increase, and will become cardiac arrest upon hitting 100%. Additionally, there is a chance for irregular heartbeat to immediately skip to cardiac arrest, which scales depending on how much irregular heartrate you have. Fibrillation gain is halved when under the effects of @adrenaline.
+
+    ---
+
+    ## Caused by:
+
+    - @aortic-rupture
+    - @acidosis
+    - @hypotension
+    - @hypoxemia
+
+    ## Effects:
+
+    - @increased-heartrate.
+
+    ## Treatments:
+
+    - @manual-defibrillator
+    - @autopulse
+    - Treating the causes
+    - CPR
+  </Manual_Description_Fibrillation>
+
+  <Manual_Description_Aortic_Rupture>
+    Aortic ruptures are one of the most serious injuries one can experience. The victim of this requires immediate medical care, and will most likely lose a significant portion of their blood.
+
+    ---
+    ##Caused by:
+
+    - @wounds (bleeding, 80% or more, if in the torso)
+    - @foreign-bodies (20% or more, if in the torso)
+
+    ##Effects:
+
+    - 4% @blood-loss per second
+    - @unconsciousness
+    - 8% @internal-bleeding per second
+    - @fibrillation
+
+
+    ##Treatments:
+
+    - @aortic-rupture-surgery
+    - @open-close-surgery
+
+    ##First Aid:
+
+    - @stasis-bag
+  </Manual_Description_Aortic_Rupture>
+
+  <Manual_Description_Internal_Bleeding>
+    Internal bleeding will quickly drain the blood out of the patient, and must be dealt with quickly.
+
+    ---
+
+    ## Caused by:
+
+    - Trauma (gunshots, explosions, bite wounds, lacerations)
+    - @liver-damage
+    - @aortic-rupture
+
+    ## Effects:
+
+    - @blood-loss
+    - @vomiting-blood
+
+    ## Treatments:
+
+    - @open-close-surgery
+    - @combat-stimulant
+  </Manual_Description_Internal_Bleeding>
+
+  <Manual_Description_Radiation_Sickness>
+    Low levels of radiation sickness are easily treatable, but if radiation sickness gets high enough, it will quickly begin killing the organs. Lungs will take more damage from radiation than other organs.
+
+    ---
+    ##Caused by:
+
+    - @health-scanner (0.5% per second to person getting scanned, 0.3% per second to person scanning, 1% if used as a treatment, as you would a bandage)
+    - Radiotoxin
+    - Nuclear explosions
+    - Being near a Volatile Fulgurium Fuel Rod
+
+    ##Effects:
+
+    - @liver-damage (at 29% or more, point at which it outpaces natural regeneration)
+    - @heart-damage (at 29% or more, point at which it outpaces natural regeneration)
+    - @kidney-damage (at 33% or more, point at which it outpaces natural regeneration, 29% if one kidney is dead)
+    - @lung-damage (at 28% or more, point at which it outpaces natural regeneration)
+    - @bone-damage (at 31% or more, point at which it outpaces natural regeneration)
+    - @nausea (at 80% or more)
+    - @seizure (at 50% or more)
+
+    ##Treatments:
+
+    - Antirad
+    - Stabilozine
+  </Manual_Description_Radiation_Sickness>
+
+  <Manual_Description_Kidney_Damage>
+    Kidney damage is usually survivable, as even if it has progressed to kidney failure, it will still kill extremely slowly. Kidney damage will not heal below 50% damage if it passes the 50% threshold, as one of the kidneys has died. The kidneys will heal at a rate of 0.01% per second if one kidney is alive, and will heal at a rate of 0.02% per second if both kidneys are alive, assuming that the config is unchanged and nothing is damaging them.
+
+    ---
+    ##Caused by:
+
+    - @broad-spectrum-antibiotics
+    - @liquid-oxygenite
+    - @hemotransfusion-shock (between 0-70%)
+    - @mannitol
+    - @radiation-sickness (33% or more, point at which it outpaces natural regeneration, 29% if one kidney is dead)
+    - @hypertension (184% or more, point at which it outpaces natural regeneration, 152% if one kidney is dead)
+    - @sepsis (6% or more, point at which it outpaces natural regeneration, 3% if one kidney is dead)
+    - @hypoxemia (8% or more, point at which it outpaces natural regeneration, 4% if one kidney is dead)
+
+    ##Effects:
+
+    - @leg-swelling (at 60% or more)
+    - @acidosis (at 80% or more)
+    - @hypertension
+    - @bone-damage (at 72% or more, point at which it outpaces natural regeneration)
+    - @vomiting (at 60% or more)
+    - @neurotrauma (will neutralize natural regeneration completely at 100%)
+    - @nausea (at 60% or more)
+
+    ##Treatments:
+
+    - Time
+    - @thiamine
+    - @organ-transplant-surgery
+  </Manual_Description_Kidney_Damage>
+
+  <Manual_Description_Liver_Damage>
+    Liver damage, if progressed to liver failure, is fatal and can cause massive blood loss in the form of @internal-bleeding. The liver will heal at a rate of 0.01% per second, assuming that the config is unchanged, nothing is damaging it and it's below 100% damage.
+
+    ---
+    ##Caused by:
+
+    - @broad-spectrum-antibiotics
+    - @liquid-oxygenite
+    - @hemotransfusion-shock (between 0-70%)
+    - @radiation-sickness (29% or more, point at which it outpaces natural regeneration)
+    - @sepsis (3% or more, point at which it outpaces natural regeneration)
+    - @hypoxemia (4% or more, point at which it outpaces natural regeneration)
+
+    ##Effects:
+
+    - @leg-swelling (at 40% or more)
+    - @internal-bleeding (at 100%)
+    - @vomiting-blood (at 100%)
+    - @hypertension
+    - @neurotrauma (at 80% or more, point at which it outpaces natural regeneration)
+    - @abdominal-discomfort (at 65% or more)
+    - @jaundice (at 80% or more)
+    - @bloating (at 50% or more)
+    - Reduced ability to heal bleeding, bleeding will not heal at all at 100% damage
+
+    ##Treatments:
+
+    - Time
+    - @thiamine
+    - @organ-transplant-surgery
+  </Manual_Description_Liver_Damage>
+
+  <Manual_Description_Morbusine>
+    ##Caused by:
+    - Morbusine
+
+
+    ##Effects:
+    - Screen distortion
+    - 20% slower movement speed (at 20% or more)
+    - @coma (at 20% or more)
+
+    ##Treatments:
+
+    - Morbusine Antidote
+    - Stabilozine
+  </Manual_Description_Morbusine>
+
+  <Manual_Description_Cyanide_Poisoning>
+    ##Caused by:
+    - Cyanide
+
+
+    ##Effects:
+    - Oxygen low
+    - @hypoxemia
+    - @neurotrauma (at 70% or more)
+
+    ##Treatments:
+
+    - Cyanide Antidote
+    - Stabilozine
+  </Manual_Description_Cyanide_Poisoning>
+
+  <Manual_Description_Vanilla_Organ_Damage>
+    A side effect of some medicines. Additional organ damage is caused by failing the medical skill check of those medicines.
+
+    ---
+    ##Caused by:
+    - @alien-blood +3.75 or 7.5%
+    - @broad-spectrum-antibiotics +12 or 20% over antibiotics duration
+    - Chloral Hydrate +2.5%
+    - @liquid-oxygenite +6 or 10%
+    - @mannitol +5 or 10%
+    - @methamphetamine +15 or 30%
+
+    ##Treatments:
+    - Time
+    - @deusizine
+    - @organ-transplant-surgery will heal some vanilla organ damage with fresh organs
+  </Manual_Description_Vanilla_Organ_Damage>
+
+  <Manual_Description_Analgesia>
+    The first step in all surgical procedures. Analgesia is an affliction that prevents traumatic shock during surgery and relieves pain. Traumatic shock will still occur if surgery is performed without a table. Analgesia will also give you damage resistance, scaling up to a maximum of 50% resistance at 200%.
+
+    ---
+    ##Caused by:
+
+    - Opiates
+    - @adrenaline (doesn't give more than 4.5% analgesia)
+    - @spinal-cord-injury
+    - Being drunk (doesn't give more than 5% analgesia)
+    - @anesthesia (doesn't give more than 5% analgesia)
+
+    ##Effects:
+
+    - @hypoventilation (at 20% or more)
+
+    ##Treatments:
+
+    - @naloxone
+  </Manual_Description_Analgesia>
+
+  <Manual_Description_Anesthesia>
+    Anesthesia is an affliction that prevents traumatic shock during surgery, and unlike @analgesia, doesn't require a @surgery-table to perform safe surgery. Anesthesia will immediately wear off upon reaching 100% strength. Anesthesia will also slow your character down by 50%.
+
+    ---
+    ##Caused by:
+
+    - @propofol
+
+    ##Effects:
+
+    - @hypoventilation (at 40% or more)
+    - @unconsciousness (at 15% or more)
+    - @analgesia (doesn't give more than 5% analgesia)
+    - 50% slower movement speed
+
+    ##Treatments:
+
+    - @anaparalyzant
+    - Time
+  </Manual_Description_Anesthesia>
+
+  <Manual_Description_Abdominal_Pain>
+    Abdominal pain is not lethal, and will only halve speed for 1 second every 3-6 seconds.
+
+    ---
+    ##Caused by:
+
+    - @hemotransfusion-shock (between 0-80%)
+
+    ##Effects:
+
+    - Half speed for 1 second every 3-6 seconds
+
+    ##Treatments:
+
+    - Treating the causes
+    - Painkillers
+  </Manual_Description_Abdominal_Pain>
+
+  <Manual_Description_Vomiting>
+    Vomiting usually isn't harmful, and can sometimes be beneficial due to it causing alkalosis. Vomiting will also slow your character down by 20%.
+
+    ---
+    ##Caused by:
+
+    - @hemotransfusion-shock (between 0-40%)
+    - @withdrawal (alcohol withdrawal, 60% or more)
+    - Drunk (at 100%)
+    - @kidney-damage (60% or more)
+    - @raptor-bane-extract
+
+    ##Effects:
+
+    - @alkalosis
+
+    ##Treatments:
+
+    - Treating the causes
+  </Manual_Description_Vomiting>
+
+  <Manual_Description_Nausea>
+    Nausea can be ignored, as it doesn't do anything fatal on it's own.
+
+    ---
+    ##Caused by:
+
+    - @hemotransfusion-shock (between 0-90%)
+    - @withdrawal (40% or more)
+    - @radiation-sickness (80% or more)
+    - @kidney-damage (60% or more)
+    - @concussion
+    - Being near uncontained organs
+
+    ##Effects:
+
+    - Slows down character by 10%
+
+    ##Treatments:
+
+    - Treating the causes
+  </Manual_Description_Nausea>
+
+  <Manual_Description_Chest_Pain>
+    Chest pain is not lethal, and will only halve speed for 1 second every 3-6 seconds.
+
+    ---
+    ##Caused by:
+
+    - @hemotransfusion-shock (between 0-60%)
+    - @fractures (rib fractures)
+
+    ##Effects:
+
+    - Half speed for 1 second every 3-6 seconds
+
+    ##Treatments:
+
+    - Treating the causes
+    - Painkillers
+  </Manual_Description_Chest_Pain>
+
+  <Manual_Description_Traumatic_Amputation>
+    Traumatic amputation is the non-surgical amputation of an extremity. A traumatic amputation will act the exact same as a @surgical-amputation, besides from the fact that you will acquire @arterial-bleeding upon first getting amputated. A limb must be fractured in order to become traumatically amputated.
+
+    ---
+
+    ##Caused by:
+    - Trauma (gunshots, internal damage, blunt force, lacerations, bite wounds and explosions)
+    - @material-loss (99% or more)
+
+
+    ##Effects:
+
+    ###In all traumatic amputations:
+    - @arterial-bleeding
+    - @intense-pain
+
+    ###In leg amputations:
+    - 1 leg amputation will halve speed
+    - 2 leg amputations will ragdoll you and remove your ability to speak.
+
+    ###In arm amputations:
+    - 1 arm amputation will prevent you from using that arm (you cant hold 2-handed items anymore
+    - 2 arm amputations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+
+    ###In head amputations:
+    - Instant death
+
+    ##Treatments:
+
+    - @amputation-surgery
+    - Performing @amputation-surgery (use severed limb before applying @sutures)
+  </Manual_Description_Traumatic_Amputation>
+
+  <Manual_Description_Gangrene>
+    Gangrene is a rare occurrence, and only occurs due to neglecting an applied @tourniquet. Once gangrene hits 15%, it is irreversible and the limb must be amputated.
+
+    ---
+
+    ## Caused by:
+
+    - Leaving a @tourniquet on for too long
+    - Leaving a @endovascular-balloon in for too long
+    - @sepsis
+
+    ## Effects:
+
+    - @sepsis
+
+    ## Treatments:
+
+    - @amputation-surgery
+    - Time (below 15%)
+  </Manual_Description_Gangrene>
+
+  <Manual_Description_Surgical_Amputation>
+    Surgical amputation is the amputation of an extremity. Possible amputations include arms, legs, and the head. The head cannot be reattached after amputation. Unlike traumatic amputations, surgical amputations will not cause @arterial-bleeding upon first acquiring them.
+
+    ##Caused by:
+    - @amputation-surgery
+
+    ##Effects:
+
+    ###In leg amputations:
+    - 1 leg amputation will halve speed
+    - 2 leg amputation will ragdoll you and remove your ability to speak.
+
+    ###In arm amputations:
+    - 1 arm amputation will prevent you from using that arm (you cant hold 2-handed items anymore
+    - 2 arm amputations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+
+    ###In head amputations:
+    - Instant death
+
+    ##Treatment:
+    - Performing @amputation-surgery (use severed limb before applying @sutures)
+  </Manual_Description_Surgical_Amputation>
+
+  <Manual_Description_Intense_Pain>
+    Intense pain is not lethal, and only occurs when something has been dislocated, fractured or amputated. Intense pain will halve speed for 1 second every 3-6 seconds.
+
+    ---
+    ##Caused by:
+
+    - @dislocations
+    - @fractures
+    - @traumatic-amputation
+
+    ##Effects:
+
+    - Half speed for 1 second every 3-6 seconds
+
+    ##Treatments:
+
+    - Treating the causes
+    - Stabillizing the dislocation with a bandage or the fracture with a plaster cast
+    - Painkillers
+  </Manual_Description_Intense_Pain>
+
+  <Manual_Description_Bone_Death>
+    Bone death, while usually not lethal, can kill if you lack @osteosynthesis-implants. Due to the large amount of implants this affliction takes to cure, it can be rather expensive.
+
+    ---
+    ##Caused by:
+
+    - @bone-damage (90% or more)
+
+
+    ##Effects:
+
+    - @fractures
+
+    ##Treatments:
+
+    - @osteosynthetic-surgery on every bodypart
+  </Manual_Description_Bone_Death>
+
+  <Manual_Description_Bone_Damage>
+    Bone damage is not lethal, and can usually be ignored as long as it has not progressed to @bone-death.
+
+    ---
+    ##Caused by:
+
+    - @kidney-damage (72% or more, point at which it outpaces natural regeneration)
+    - @radiation-sickness (31% or more, point at which it outpaces natural regeneration)
+    - @sepsis (50% or more, point at which it outpaces natural regeneration)
+    - @hypoxemia (will neutralize natural regeneration completely at 100%)
+
+
+    ##Effects:
+
+    - @bone-death (at 90% or more)
+
+    ##Treatments:
+
+    - Time
+    - @osteosynthetic-surgery
+  </Manual_Description_Bone_Damage>
+
+  <Manual_Description_Fractures>
+    Fractures are common injuries, which most crewmembers will get often. Fractures will not kill, and should be treated last in an emergency. Having a fractured limb is required for it to become a @traumatic-amputation. Cyberlimbs cannot be fractured.
+
+    \---
+
+    ## Caused by:
+
+    - Trauma (gunshots, explosions, lacerations, bite wounds, etc)
+    - @bone-death
+    - Failing the @wrench
+
+    ## Effects:
+
+    ### In leg fractures:
+
+    - 1 leg fracture will halve speed
+    - 2 leg fractures will ragdoll you and remove your ability to speak.
+    - @intense-pain
+    - @internal-damage
+
+    ### In arm fractures:
+
+    - 1 arm fracture will prevent you from using that arm (you can't hold 2-handed items anymore)
+    - 2 arm fractures will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+    - @intense-pain
+    - @internal-damage
+
+    ### In skull fractures:
+
+    - 20% or 30% @neurotrauma
+    - @headache
+    - @internal-damage
+
+    ### In neck fractures:
+
+    - @spinal-cord-injury
+    - @internal-damage
+
+    ### In rib fractures:
+
+    - @pneumothorax
+    - @chest-pain
+    - @internal-damage
+
+    ## Treatments:
+
+    - @bandages
+    - @osteosynthetic-surgery
+
+    ## First Aid:
+
+    - @bandages
+  </Manual_Description_Fractures>
+
+  <Manual_Description_Dislocations>
+    Dislocations are common injuries, which most crewmembers will get often. Dislocations will not kill, and should be treated last in an emergency. A limb can be both dislocated and fractured. Cyberlimbs cannot be dislocated.
+
+    ---
+    ##Caused by:
+
+    - Trauma (explosions, blunt force, internal damage)
+
+    ##Effects:
+
+    ###In leg dislocations:
+    - 1 leg dislocation will halve speed
+    - 2 leg dislocations will ragdoll you and remove your ability to speak.
+    - @intense-pain
+    - @internal-damage
+
+    ###In arm dislocations:
+    - 1 arm dislocation will prevent you from using that arm (you cant hold 2-handed items anymore
+    - 2 arm dislocations will prevent you from interacting with anything, such as doors, ladders, buttons, etc.
+    - @intense-pain
+    - @internal-damage
+
+    ##Treatments:
+
+    - @wrench (use it in the health interface, like you would a bandage)
+    The skill check is 60 medical without and 30 medical with @analgesia
+
+    ##First Aid:
+    - @bandages or @plastiseal
+  </Manual_Description_Dislocations>
+
+  <Manual_Description_Arterial_Bleeding>
+    Arterial ruptures are extremely dangerous and require emergency care as soon as possible. Applying a @tourniquet to the afflicted limb can buy you time to treat it, but this should not be done on the head.
+
+    ---
+    ##Caused by:
+
+    - @wounds (bleeding, 80% or more)
+    - @traumatic-amputation
+    - @foreign-bodies (20% or more)
+
+    ##Effects:
+
+    - 1.5% @blood-loss per second
+
+
+    ##Treatments:
+
+    - @open-close-surgery
+
+    ##First Aid:
+    - @tourniquet
+  </Manual_Description_Arterial_Bleeding>
+
+  <Manual_Description_Internal_Damage>
+    Internal Damage is the result of various wounds. It decreases vitality and is caused alongside many other issues when enough internal damage is received in a single blow.
+
+    ---
+
+    ## Caused by:
+
+    - @dislocations
+    - @fractures
+    - Failing the skill check when using:
+    - @tweezers
+    - @sutures
+    - @retractors
+    - @surgical-drill
+    - @surgical-saw
+    - @spinal-cord-implants
+    - @osteosynthesis-implants
+
+    ## Effects:
+
+    - @concussion
+    - @pneumothorax
+    - @heart-damage
+    - @liver-damage
+    - @lung-damage
+    - @kidney-damage
+    - @fractures
+    - @vanilla-organ-damage
+    - Vitality damage
+
+    ## Treatments:
+
+    - @open-close-surgery
+    - Time
+  </Manual_Description_Internal_Damage>
+
+  <Manual_Description_Burns>
+    First degree burns are minor and can usually be ignored, but second degree burns and higher require medical intervention, lest the patient risk contracting an infection. Burns between 1-20% strength are first degree, 21-50% are second degree, and 51% and onwards are third degree.
+
+    ---
+
+    ##Effects:
+    - Direct damage to vitality
+    - Turns @bandages dirty (speed depends on how severe the burns are)
+    - @infected-wounds (scales depending on how severe the burns are)
+
+    ##Treatments:
+
+    - @bandages or @plastiseal (ONLY FOR FIRST AND SECOND DEGREE BURNS)
+    - @open-close-surgery (apply @plastiseal before  applying @sutures, works on any degree burns)
+    - @antibiotic-ointment (ONLY FOR FIRST AND SECOND DEGREE BURNS)
+    - @antibiotic-glue (works on any degree burns)
+    @combat-stimulant (works on any degree burns)
+  </Manual_Description_Burns>
+
+  <Manual_Description_Infected_Wounds>
+    Infected wounds are caused by letting wounds fester, and should be cleaned in order to prevent @sepsis.
+
+    ---
+    ##Caused by:
+
+    - Letting @wounds (lacerations, @burns, gunshot wounds, bite wounds, deep tissue injuries, bleeding) fester. This will be sped up dramatically if there is a dirty bandage on a wound.
+
+    ##Effects:
+
+    - @sepsis (at 50% or more)
+    - @inflammation (at 10% or more)
+    - Decreased immunity
+
+    ##Treatments:
+
+    - @antibiotic-ointment
+    - @antiseptic-sprayer
+
+    ##First Aid:
+
+    - @bandages or @plastiseal
+  </Manual_Description_Infected_Wounds>
+
+  <Manual_Description_Foreign_Bodies>
+    Foreign bodies are often acquired after firefights or being caught in an explosion. Foreign bodies should be removed as quickly as possible in order to avoid @arterial-bleeding or the patient contracting @sepsis. Each use of Tweezers will remove 5% Foreign Bodies.
+
+    ---
+    ##Caused by:
+
+    - Explosions
+    - Gunshots (gunshots that break a bone will always cause foreign bodies)
+
+    ##Effects:
+
+    - @arterial-bleeding (at 20% or more)
+    - @aortic-rupture (at 20% or more, if in the torso)
+    - @sepsis (at 20% or more)
+    - @inflammation (at 15% or more)
+
+    ##Treatments:
+
+    - @open-close-surgery (use @tweezers before applying @sutures)
+    - Using @tweezers on open gunshot wound or deep tissue injury
+  </Manual_Description_Foreign_Bodies>
+
+  <Manual_Description_Wounds>
+    ##Effects:
+
+    ###In blunt force trauma, lacerations, gunshot wounds and deep tissue injuries:
+    - Direct damage to vitality
+
+    ###In bleeding:
+    - @arterial-bleeding (at 80% or more)
+    - @aortic-rupture (at 80% or more, if in the torso)
+    - @blood-loss
+
+    ###In deep tissue injuries, lacerations and gunshot wounds, bleeding and bite wounds:
+    - @infected-wounds
+    - Turns bandages dirty (bleeding will turn bandages dirty much quicker than other wounds)
+
+    ##Treatments:
+
+    - @sutures (DOESN'T WORK FOR BLUNT FORCE TRAUMA)
+    - @open-close-surgery (use @tweezers before applying @sutures, (ONLY FOR BLUNT FORCE TRAUMA)
+    - @tourniquet or @endovascular-balloon (ONLY FOR BLEEDING)
+    - @antibiotic-glue (ONLY FOR BLEEDING)
+    - Time
+
+    ##First Aid:
+    - @bandages or @plastiseal
+  </Manual_Description_Wounds>
+
+  <Manual_Description_Ointmented>
+    Ointmented will help protect @wounds from infection and is very useful for patients suffering from @burns. Ointmented will also help prevent @surgical-infection if it is applied to the body part that surgery is being done on.
+
+    ---
+    ##Caused by:
+
+    - @antiseptic-sprayer
+    - @antibiotic-ointment
+
+    ##Effects:
+    - Passively fights and prevents @infected-wounds
+  </Manual_Description_Ointmented>
+
+  <Manual_Description_Bandaged>
+    Bandages are an extremely versatile first aid item. It is advised that every crewmember keeps atleast some bandages on them at all times. Bandages will be turned dirty if they are applied on @wounds.
+
+    \---
+
+    ## Caused by:
+
+    - @bandages
+
+    ## Effects:
+
+    - Stabillizes  @dislocations  from rib fractures.
+    - Removes slow down penalty from  @dislocations
+    - Slows you down by 10% for each bandage
+    - Accelerates natural healing of @wounds
+    - Protects against @infected-wounds
+  </Manual_Description_Bandaged>
+
+  <Manual_Description_Plaster_Cast>
+    Plaster casts are extremely important for treating limb @fractures.
+
+    \---
+
+    ## Caused by:
+
+    - Applying @gypsum
+
+    ## Effects:
+
+    - Slowly treats limb @fractures  by 0.33% per second
+    - Slows you down by 20% for each cast
+  </Manual_Description_Plaster_Cast>
+
+  <Manual_Description_Hypoxemia>
+    Hypoxemia is the absence of adequate oxygen in the bloodstream. Hypoxemia can quickly build up and cause the patient to spiral out of control. A patient suffering from this needs immediate medical care. @pneumothorax will prevent Hypoxemia from going down.
+
+    ---
+    ##Caused by:
+
+    - @cyanide-poisoning
+    - @hypotension (70% or less)
+    - @blood-loss (40% or more)
+    - @cardiac-arrest
+    - @oxygen-low
+
+    ##Effects:
+
+    - @cardiac-arrest (at 80% or more)
+    - @respiratory-arrest (at 70% or more)
+    - @headache (at 40% or more)
+    - @confusion (at 50% or more)
+    - @shortness-of-breath (at 20% or more)
+    - @hyperventilation (at 10% or more)
+    - @fibrillation
+    - @unconsciousness (at 80% or more)
+    - @neurotrauma (at 10% or more, point at which it outpaces natural regeneration)
+    - @liver-damage (at 4% or more, point at which it outpaces natural regeneration)
+    - @heart-damage (at 4% or more, point at which it outpaces natural regeneration)
+    - @kidney-damage (at 8% or more, point at which it outpaces natural regeneration, 4% if one kidney is dead)
+    - @lung-damage (at 4% or more, point at which it outpaces natural regeneration)
+    - @bone-damage (will neutralize natural regeneration completely at 100%)
+
+    ##Treatments:
+
+    - Treating the causes
+    - @liquid-oxygenite
+  </Manual_Description_Hypoxemia>
+
+  <Manual_Description_Sepsis>
+    Sepsis is a dangerous affliction caused by letting @infected-wounds.
+
+    ---
+
+    ## Caused by:
+
+    - @infected-wounds
+    - @foreign-bodies
+    - @gangrene
+    - @surgical-infection
+    - @blood-packs who's donor had sepsis
+    - Failing @azathioprine skill check
+
+    ## Effects:
+
+    - @liver-damage
+    - @heart-damage
+    - @kidney-damage
+    - @lung-damage
+    - @bone-damage
+    - @neurotrauma
+    - @increased-heartrate
+    - @hyperventilation
+    - @confusion
+    - @fever
+    - @gangrene
+
+    ## Treatments:
+
+    - @broad-spectrum-antibiotics
+  </Manual_Description_Sepsis>
+
+  <Manual_Description_Hemotransfusion_Shock>
+    Hemotransfusion shock is a condition that only occurs when administering an incompatible blood type to someone (example: giving a O+ person A+ blood)
+
+    ---
+    ##Caused by:
+
+    - Administering incompatible @blood-packs (gives 100% strength)
+
+    ##Effects:
+
+    - @vomiting (between 0-40%)
+    - @chest-pain (between 0-60%)
+    - @blood-loss (between 0-70%)
+    - @liver-damage (between 0-70%)
+    - @heart-damage (between 0-70%)
+    - @kidney-damage (between 0-70%)
+    - @lung-damage (between 0-70%)
+    - @shortness-of-breath (between 0-70%)
+    - @abdominal-discomfort (between 0-80%)
+    - @wheezing (between 0-90%)
+
+    ##Treatments:
+
+    - @streptokinase
+    - Time
+  </Manual_Description_Hemotransfusion_Shock>
+
+  <Manual_Description_Blood_Loss>
+    While blood loss can be extremely resource-intensive to cure if it's severe enough, when it's at or below 30%, it can usually be ignored.
+
+    ---
+    ##Caused by:
+
+    - @wounds (bleeding)
+    - @hemotransfusion-shock (between 0-70%)
+    - @internal-bleeding
+    - Using an @empty-blood-pack
+    - @arterial-bleeding
+    - @aortic-rupture
+    - @surgery-incision (unless they have @clamped-bleeding)
+    - @hematology-analyzer
+
+    ##Effects:
+
+    - @hypotension (scales depending on how much blood loss)
+    - @hypoxemia (at 40% or more)
+    - @increased-heartrate (at 40% or more)
+    - @pale-skin (at 40% or more)
+    - @headache (at 50% or more)
+    - @weakness (at 60% or more)
+
+    ##Treatments:
+
+    - Giving @blood-packs
+    - @deusizine
+    - Time
+    @combat-stimulant
+  </Manual_Description_Blood_Loss>
+
+  <Manual_Description_Hypotension>
+    Hypotension is blood pressure that has dropped below normal levels. Hypotension is lethal if it is severe enough. Lower percentages correspond to lower blood pressure.
+
+    ---
+    ##Caused by:
+
+    - @blood-loss (scales depending on how much blood loss)
+    - @traumatic-shock
+    - @cardiac-arrest (sets blood pressure to the minimum)
+    - @cardiac-tamponade (halves blood pressure)
+    - @sodium-nitroprusside (reduces blood pressure by 45%)
+    - @nitroglycerin (reduces blood pressure by 45%)
+    - @irregular-heartbeat
+
+    ##Effects:
+
+    - @hypoxemia (at 70% or less)
+    - @fibrillation
+    - @hyperventilation (at 80% or less)
+    - @confusion (at 30% or less)
+    - @lightheadedness (at 60% or less)
+    - @blurred-vision (at 55% or less)
+    - @pale-skin (at 50% or less)
+    - @headache (at 60% or less)
+
+    ##Treatments:
+
+    - Giving @blood-packs, @saline or @ringer-solution
+    - @autopulse
+    - @adrenaline
+    - CPR
+    - Treating the causes
+  </Manual_Description_Hypotension>
+
+  <Manual_Description_Hypertension>
+    Hypertension is blood pressure that has risen above normal levels. Hypertension is lethal if it is severe enough. Higher percentages correspond to higher blood pressure.
+
+    ---
+    ##Caused by:
+
+    - @kidney-damage
+    - @liver-damage
+    - Excessive blood volume caused by injecting @saline/@ringer-solution or @blood-packs
+    - @autopulse
+    - @withdrawal (alcohol withdrawal)
+    - @adrenaline
+    - CPR
+
+    ##Effects:
+
+    - @stroke (at 150% or more)
+    - @kidney-damage (184% or more, point at which it outpaces natural regeneration, 152% if one kidney is dead)
+    - @heart-attack (at 150% or more)
+
+    ##Treatments:
+
+    - Inducing @blood-loss (preferably with @surgery-incision or an @empty-blood-pack)
+    - @sodium-nitroprusside or @nitroglycerin
+    - Treating the causes
+  </Manual_Description_Hypertension>
+
+  <Manual_Description_Acidosis>
+    Acidosis is usually ignorable, and minimal action is required at low to medium severity. Acidosis and @alkalosis will cancel each other out.
+
+    ---
+    ##Caused by:
+
+    - @hypoventilation
+    - @respiratory-arrest
+    - @cardiac-arrest
+    - @kidney-damage (80% or more)
+    - @blood-packs who's donor had acidosis (acidosis gained will be the donor's acidosis level at time of extraction divided by 5)
+    - @saline
+
+    ##Effects:
+
+    - @seizure (at 60% or more)
+    - @coma (at 60% or more)
+    - @increased-heartrate (at 20% or more)
+    - @fibrillation
+    - @headache (at 20% or more)
+    - @confusion (at 15% or more)
+    - @weakness (at 35% or more)
+
+    ##Treatments:
+
+    - Treating the causes
+    - Inducing @alkalosis (preferably with @vomiting)
+    - Transfusing neutral @blood-packs (unless the patient has 0% blood loss)
+  </Manual_Description_Acidosis>
+
+  <Manual_Description_Alkalosis>
+    Alkalosis is usually ignorable, and minimal action is required at low to medium severity. Alkalosis and @acidosis will cancel each other out.
+
+    ---
+    ##Caused by:
+
+    - @hyperventilation
+    - @vomiting
+    - @blood-packs who's donor had alkalosis (alkalosis gained will be the donor's alkalosis level at time of extraction divided by 5)
+
+    ##Effects:
+
+    - @seizure (at 60% or more)
+    - @palpitations (at 20% or more)
+
+    ##Treatments:
+
+    - Treating the causes
+    - Inducing @acidosis (preferably with @saline)
+    - Transfusing neutral @blood-packs (unless the patient has 0% blood loss)
+  </Manual_Description_Alkalosis>
+
+  <Manual_Description_Adrenaline>
+    Adrenaline is used in the treatment of @cardiac-arrest. In return for curing the affliction, it raises the patient's blood pressure by 30%. Alongside these effects, it gives the patient @analgesia (but wont give more than 4.5%), @increased-heartrate, @hyperventilation, increases their melee damage by 20%. halves the gain of @fibrillation and decreases the potency of slowing effects.
+  </Manual_Description_Adrenaline>
+
+  <Manual_Description_AED>
+    An item used to correct the heartbeat of a patient.
+    When used on a patient and charged with batteries, the aed has a chance to either reset @fibrillation, or cure @cardiac-arrest.
+    At medical skill below 80, the AED is superior to the @manual-defibrillator in every way, except for taking one second longer than the manual defibrillator to use.
+    Between 80 and 100 medical skill, the manual defibrillator eclipses AED's chance to cure cardiac arrest, but still has a (vanishing) danger of causing cardiac arrest or failing to correct fibrillation, while the AED does not.
+    At 100 medical skill, the manual defibrillator is superior. Manual defibrillator becomes perfectly safe, and is guaranteed to cure cardiac arrest.
+  </Manual_Description_AED>
+
+  <Manual_Description_Alien_Blood>
+    ###Medical skill check: 40
+    Using Alien Blood in place of regular blood is extremely dangerous and should only be used in dire situations.
+
+    ###Application success:
+    -7.5% @blood-loss
+    +3.75% vanilla organ damage
+    +99% @hemotransfusion-shock
+
+    ###Application failure:
+    -7.5% @blood-loss
+    +7.5% vanilla organ damage
+    +99% @hemotransfusion-shock
+  </Manual_Description_Alien_Blood>
+
+  <Manual_Description_Ambubag>
+    An item used to provide supplementary oxygen if a patient isn't breathing enough or isn't breathing at all.
+
+    Using the ambubag with a regular oxygen tank in it will treat 90% oxygen low, and use 2% of the oxygen in the tank.
+
+    Using the ambubag with an oxygenite tank in it will treat 90% oxygen low, cure @respiratory-arrest, and use 2% of the oxygen in the tank.
+
+    Using the ambubag with a welding fuel tank in it will cause 110% oxygen low, cause 10% @lung-damage, and use 5% of the welding fuel in the tank.
+
+    Using the ambubag with a incendium fuel tank in it will cause 110% oxygen low, cause 20% lung damage, cause 10% @burns, and use 5% of the incendium in the tank.
+
+    Using the ambubag with paint in it will cause 50% oxygen low, cause 3% lung damage, cause 5% chemical addiction, treat 20% chemical withdrawal, and use 5% of the paint in the can.
+  </Manual_Description_Ambubag>
+
+  <Manual_Description_Anaparalyzant>
+    ###Medical skill check: 64
+
+    Alongside it's original use of providing paralysis resistance and treating paralysis, Anaparalyzant can be used to quickly decrease @anesthesia and wake a patient up much faster.
+
+    ###Application success:
+    Instantly cures @anesthesia
+    +5% Psychosis
+    +800% Paralysis Resistance.
+
+    ###Application failure:
+    -3% @anesthesia per second for 60 seconds
+    +6.5% paralysis resistance per second for 60 seconds
+    +0.75% psychosis per second for 60 seconds
+  </Manual_Description_Anaparalyzant>
+
+  <Manual_Description_Antibiotic_Glue>
+    ### Medical skill check: 55
+    A glue used to quickly seal bleeding wounds and treat @burns on a single limb.
+
+    ###Application success:
+    -100% bleeding
+    -30% burns
+
+    ###Application failure:
+    -75% bleeding
+    -15% burns
+    50% chance to cause @heart-attack
+  </Manual_Description_Antibiotic_Glue>
+
+  <Manual_Description_Antibiotic_Ointment>
+    ###Medical skill check: 10
+    Antibiotic ointment is an item used to heal @burns and treat @infected-wounds.
+
+    ###Application successful:
+    -12% @burns
+    -72% @infected-wounds
+    +100% @ointmented
+
+    ###Application failure:
+    -7% @burns
+    -24% @infected-wounds
+    +60% @ointmented
+  </Manual_Description_Antibiotic_Ointment>
+
+  <Manual_Description_Antiseptic>
+    Antiseptic is an item whose only use is to be loaded into the @antiseptic-sprayer. For each spray of the antiseptic sprayer, 10% condition will be used from the antiseptic.
+  </Manual_Description_Antiseptic>
+
+  <Manual_Description_Antiseptic_Sprayer>
+    A sprayer which sprays @antiseptic onto @infected-wounds. Using the antiseptic sprayer with antiseptic in it will treat 100% infected wounds, give 5% @ointmented and use up 10% of the antiseptic.
+  </Manual_Description_Antiseptic_Sprayer>
+
+  <Manual_Description_Autopulse>
+    A medic's best friend. To use the autopulse, simply wear it in your diving suit slot. While worn and equipped with batteries, the autopulse will cure @cardiac-arrest.
+  </Manual_Description_Autopulse>
+
+  <Manual_Description_Azathioprine>
+    ### Medical skill check: 10
+    Azathioprine is an immunosuppressant medication used during @organ-transplant-surgery if organ rejection is enabled in Neurotrauma's config. It will lower Immunity over time, making it safe to place an organ into the body when Immunity is below 10%.
+
+    ###Application success:
+    Lowers immunity over time
+
+    ###Application failure:
+    Lowers immunity over time
+    Causes @sepsis
+  </Manual_Description_Azathioprine>
+
+  <Manual_Description_Bandages>
+    ### Medical skill check: 10
+
+    Bandages used for covering wounds to prevent infection.
+
+    ### Application success:
+
+    \+50% @bandaged
+    \-24% bleeding
+
+    ### Application failure:
+
+    \+36% @bandaged
+    \-18% bleeding
+  </Manual_Description_Bandages>
+
+  <Manual_Description_Blood_Packs>
+    Blood packs are acquired from using an @empty-blood-pack on a human with less than 31% @blood-loss. Blood packs must be administered to the correct bloodtype, which is stated in the description of the item.
+
+    ###Compatible blood type application
+    -30% blood loss
+    +30% blood pressure
+
+    ###Incompatible blood type application
+    -20% blood loss
+    +30% blood pressure
+    +100% @hemotransfusion-shock
+
+    If the human that the blood pack came from was suffering from either @acidosis, @alkalosis or @sepsis, then those afflictions will also be given to whoever the blood is given to (affliction gained will be the donor's affliction level at time of extraction divided by 5). Additionally, if the recipient of the blood has either acidosis and alkalosis, the transfusion of neutral blood will move the blood pH closer to neutral, partially treating both alkalosis and acidosis, unless the patient has 0% blood loss.
+  </Manual_Description_Blood_Packs>
+
+  <Manual_Description_Blue_Shark>
+    ### Medical skill check: None
+    A funny little blue shark that might just cure your mental instability.
+
+    ###On application:
+    Treats 2% Psychosis and makes a squeaking noise
+  </Manual_Description_Blue_Shark>
+
+  <Manual_Description_Body_Bag>
+    The Body Bag is an item used to transport bodies much more quickly than simply dragging them. It is placed into the Diving Suit slot and will suffocate a living human if they are placed into it.
+  </Manual_Description_Body_Bag>
+
+  <Manual_Description_Combat_Stimulant>
+    Combat Stimulant is a stimulant that also doubles as a first aid item.
+    From 1% to 10% strength, the chemical treats @burns, @blood-loss, @wounds, @internal-bleeding and Chem @withdrawal by 1% a second until the affliction's strength decreases to 0% or progresses beyond 10% when another injection is received. The player is also given 45% Stun resistance at 10%. This bonus decreases with the affliction strength.
+
+    From 11% to 100% strength, the chemical treats the previous damage types at 2% a second and provides the player with 45% to 50% Stun resistance.
+  </Manual_Description_Combat_Stimulant>
+
+  <Manual_Description_Deusizine>
+    ### Medical skill check: 72
+    A special treatment used for treating @blood-loss, vanilla organ damage, @internal-damage and @hypoxemia over a 20 second time period.
+
+    ###Application success:
+    -40% @internal-damage
+    -40% @blood-loss
+    -100% @hypoxemia
+    -40% @vanilla-organ-damage
+    +4% @burns
+    +40% blood pressure
+
+    ###Application failure:
+    -20% @internal-damage
+    -20% @blood-loss
+    -40% @hypoxemia
+    -20% @vanilla-organ-damage
+    +12% @burns
+    +20% blood pressure
+  </Manual_Description_Deusizine>
+
+  <Manual_Description_Diving_Knife>
+    ###Medical skill check: 30
+    In addition to the normal uses of a knife, they can be used to remove @bandages.
+
+    ###Application success:
+    Removes @bandages on the limb the knife was used on.
+
+    ###Application failure:
+    +15% bleeding
+    +10% lacerations
+  </Manual_Description_Diving_Knife>
+
+  <Manual_Description_Drainage>
+    Drainage is a one time use item that is used to treat @pneumothorax. It is used after @retracted-skin.
+  </Manual_Description_Drainage>
+
+  <Manual_Description_Empty_Blood_Pack>
+    ###Medical skill check: 30
+    Empty blood packs are used for acquiring @blood-packs. Empty blood packs can only be used on humans with less than 31% @blood-loss, otherwise it does nothing.
+
+    ###Application success:
+    +30% blood loss
+
+    ###Application failure:
+    +40% blood loss
+
+    If the human that the empty blood pack is used on is suffering from either @acidosis, @alkalosis or @sepsis, then those afflictions will also be given to whoever the blood is given to (affliction gained will be the donor's affliction level at time of extraction divided by 5).
+  </Manual_Description_Empty_Blood_Pack>
+
+  <Manual_Description_Endovascular_Balloon>
+    The third step in @aortic-rupture-surgery.
+  </Manual_Description_Endovascular_Balloon>
+
+  <Manual_Description_Fentanyl>
+    ###Medical skill check: 72
+
+    A powerful analgesic used to induce @analgesia.
+
+    ###Application success:
+    +75% @analgesia
+    +15% Opiate Addiction
+    +22.5% @opiate-overdose
+    -100% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +150% @analgesia
+    +15% Opiate Addiction
+    +37.5% @opiate-overdose
+    -100% Opiate @withdrawal.
+
+    ###Application failure:
+    +50% @analgesia
+    +40% Opiate Addiction
+    +30% @opiate-overdose
+    -100% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +100% @analgesia
+    +40% Opiate Addiction
+    +60% @opiate-overdose
+    -100% Opiate @withdrawal.
+  </Manual_Description_Fentanyl>
+
+  <Manual_Description_Gypsum>
+    ###Medical skill check: 40
+    A fine powder that when used in conjunction with @bandages, will encase a limb in a cast, in order to heal @fractures. Gypsum will not work if you have not used bandages or @plastiseal beforehand, and will do nothing for skull, rib and neck fractures.
+
+    For each plaster cast applied to the player, they will get a 20% movement speed debuff. Plaster casts can be removed with @trauma-shears.
+
+    ###Application success:
+    Turns the applied bandage into a plaster cast, which will slowly heal arm and leg fractures encased in it.
+
+    ###Application failure:
+    Deletes the gypsum and does nothing.
+  </Manual_Description_Gypsum>
+
+  <Manual_Description_Health_Scanner>
+    An item which is extremely important for diagnosis. Upon use and charged with batteries, you will get the readout of all afflictions visible to the health scanner, and the patient you're scanning will gain 0.5% @radiation-sickness per second, and you (the person scanning) will gain 0.3% per second. Additionally, one can scan themselves and others by using the health scanner in the interface like a treatment, as you would a bandage. This gives 1% radiation sickness, and also allows you to scan individual limbs to find things such as @foreign-bodies.
+  </Manual_Description_Health_Scanner>
+
+  <Manual_Description_Hematology_Analyzer>
+    ###Medical skill check: 30
+
+    ###Application success:
+    +1% @blood-loss
+
+    ###Application failure:
+    +3% @blood-loss
+
+    Either failing or passing the skill check will also give you a readout of all the blood-related ailments your patient has, such as @sepsis, @acidosis or @alkalosis. The hematology analyzer can also be used to check the blood type of your patient, to avoid @hemotransfusion-shock. Putting a donor card in the analyzer and then using it will print their blood type onto the donor card, and put it in their id card slot, allowing you to check their blood type later without the analyzer.
+  </Manual_Description_Hematology_Analyzer>
+
+  <Manual_Description_Hemostat>
+    The third step in most surgical procedures. The hemostat will not work without 100% @surgery-incision. Using it requires no medical skill. Successfully using the hemostat will give the patient @clamped-bleeding on the limb the tool was used on.
+  </Manual_Description_Hemostat>
+
+  <Manual_Description_Hyperzine>
+    ###Medical skill check:50
+    A powerful stimulant
+
+    ###Application success:
+    -6% internal damage
+    +9% chem addition
+    +9% @neurotrauma
+    +15% psychosis
+
+    ###Application failure:
+    -3% internal  damage
+    +18% chem addiction
+    +30% psychosis
+
+    In both cases, the chemical provides 400% Haste and 400% Vigor and reduces Chem @withdrawal by 45%. The player also recovers from stuns 90% faster for 60 seconds.
+  </Manual_Description_Hyperzine>
+
+  <Manual_Description_Liquid_Oxygenite>
+    ###Medical skill check: 72
+    A liquified alien material used to inject oxygen directly into the bloodstream, treating @hypoxemia.
+
+    ###Application success:
+    Cures all @hypoxemia for 30 seconds, all other effects occur over 30 seconds:
+    +6% vanilla organ damage
+    +6% @lung-damage
+    +6% @liver-damage
+    +6% @heart-damage
+    +6% @kidney-damage.
+
+    ###Application failure:
+    All effects occur over 20 seconds:
+    -200% @hypoxemia
+    +10% vanilla organ damage
+    +10% @lung-damage
+    +10% @liver-damage
+    +10% @heart-damage
+    +10% @kidney-damage.
+  </Manual_Description_Liquid_Oxygenite>
+
+  <Manual_Description_Mannitol>
+    ###Medical skill check: 60
+    Mannitol is a medication used to treat @neurotrauma as long as blood pressure is above 70% and @hypoxemia is below 30%. In return for healing @neurotrauma, it causes vanilla organ damage, @heart-damage, and @kidney-damage. Mannitol will halve the gain of @neurotrauma regardless of whether the blood is stable or not.
+
+    Mannitol affliction  organ damage onset both occur over 10 seconds
+
+    ###Application success:
+    +50% mannitol affliction, which will cure 100% @neurotrauma over time
+    +5% vanilla organ damage
+    +10% @heart-damage
+    +10% @kidney-damage
+
+    ###Application failure:
+    +30% mannitol affliction, which will cure 60% @neurotrauma over time
+    +10% vanilla organ damage
+    +20% @heart-damage
+    +20% @kidney-damage
+  </Manual_Description_Mannitol>
+
+  <Manual_Description_Manual_Defibrillator>
+    An item used to correct the heartbeat of a patient. When used on a patient and charged with batteries, the defibrillator has a chance to either reset @fibrillation, or cure cardiac arrest.
+
+    The chance for these is depicted in the graph below, with cyan being the chance to reset fibrillation, pink being the chance to cause cardiac arrest and orange being the chance to cure it. The X axis is medical skill and the Y axis is the chance to do something (with 1 being 100%).
+
+    At medical skill below 80, the @aed danger of causing cardiac arrest or failing to correct fibrillation, while the AED does not. At 100 medical skill, the manual defibrillator is superior. Manual defibrillator becomes perfectly safe, and is guaranteed to cure cardiac arrest.
+  </Manual_Description_Manual_Defibrillator>
+
+  <Manual_Description_Medical_Stent>
+    The fourth step in @aortic-rupture-surgery. The stent will not work if you have not used the @endovascular-balloon beforehand. Using the medical stent will cure @aortic-rupture, and also remove the endovascular balloon from the patient.
+  </Manual_Description_Medical_Stent>
+
+  <Manual_Description_Methamphetamine>
+    ###Medical skill check: 35
+    A stimulant that takes effect over 30 seconds
+
+    ###Application success:
+    +15% vanilla organ damage
+    +15% @neurotrauma
+    +15% chem addiction
+    +30% psychosis
+
+    ###Application failure:
+    +30% vanilla organ damage
+    +30% @neurotrauma
+    +30% chem addiction
+    +45% psychosis
+
+    In both cases, the user recovers from stuns 75% faster for 30 seconds and the chemical will treat 90% Chem @withdrawal.
+  </Manual_Description_Methamphetamine>
+
+    <Manual_Description_Morphine>
+    ###Medical skill check: 30
+
+    A moderately powerful analgesic used to induce @analgesia.
+
+    ###Application success:
+    +50% @analgesia
+    +10% Opiate Addiction
+    +10% @opiate-overdose
+    -30% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +100% @analgesia
+    +10% Opiate Addiction
+    +20% @opiate-overdose
+    -30% Opiate @withdrawal.
+
+    ###Application failure:
+    +30% @analgesia
+    +25% Opiate Addiction
+    +20% @opiate-overdose
+    -30% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +60% @analgesia
+    +25% Opiate Addiction
+    +40% @opiate-overdose
+    -30% Opiate @withdrawal.
+  </Manual_Description_Morphine>
+
+  <Manual_Description_Naloxone>
+    ###Medical skill check: 39
+    Naloxone is used to treat Opiate @withdrawal, @opiate-overdose, and @analgesia. Effects occur over 30 seconds.
+
+    ###Application success:
+    -60% opiate @withdrawal
+    -60% @opiate-overdose
+    -60% @analgesia
+
+    ###Application failure:
+    -30% opiate @withdrawal
+    -30% @opiate-overdose
+    -60% @analgesia
+    50% chance to put a patient in a @coma
+  </Manual_Description_Naloxone>
+
+  <Manual_Description_Needle>
+    The needle is a one-time use item for reducing @pneumothorax to 5% strength, and prevents it from worsening. However, it does not fully treat pneumothorax. Using the needle on a patient without pneumothorax will give them pneumothorax instead.
+  </Manual_Description_Needle>
+
+  <Manual_Description_Nitroglycerin>
+    ###Medical skill check: 35
+    A jar containing a very volatile substance, liable to explode on impact or exposure to heat. Functions the exact same as @sodium-nitroprusside, besides the medical skill check of 35.
+
+    ###Application success:
+    400 seconds of reduced blood pressure
+
+    ###Application failure:
+    200 seconds of reduced blood pressure
+  </Manual_Description_Nitroglycerin>
+
+  <Manual_Description_Opium>
+    ###Medical skill check: 15
+
+    A weak analgesic used to induce @analgesia
+
+    ###Application success:
+    +20% @analgesia
+    +5% Opiate Addiction
+    +8.75% @opiate-overdose
+    -15% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +40% @analgesia
+    +5% Opiate Addiction
+    +18.75% @opiate-overdose
+    -15% Opiate @withdrawal.
+
+    ###Application failure:
+    +10% @analgesia
+    +20% Opiate Addiction
+    +15% @opiate-overdose
+    -15% Opiate @withdrawal.
+
+    ####While drunk (&gt;30% drunk) changes to:
+    +20% @analgesia
+    +20% Opiate Addiction
+    +30% @opiate-overdose
+    -15% Opiate @withdrawal.
+  </Manual_Description_Opium>
+
+  <Manual_Description_Organ_Procurement_Scalpels>
+    An Organ Procurement Scalpel is used to extract the organ it is named after in organ transplant surgery. There is one type for each organ as follows: brain, heart, lungs, liver, and kidneys.
+
+    - The scalpel for the brain has a Medical skill check of 100 to reliably remove the brain.
+
+    - The scalpel for the heart has a Medical skill check of 60 to reliably remove the heart.
+
+    - The scalpel for the lungs has a Medical skill check of 50 to reliably remove the lungs.
+
+    - The scalpel for the liver has a Medical skill check of 40 to reliably remove the liver.
+
+    - The scalpel for the kidneys has a Medical skill check of 30 to reliably remove the kidneys.
+  </Manual_Description_Organ_Procurement_Scalpels>
+
+  <Manual_Description_Osteosynthesis_Implants>
+    ### Medical skill check: 45
+
+    The sixth step in @osteosynthetic-surgery.
+
+    ### Application success:
+
+    Cures all fractures on the limb the implants were used on, and uses up 25% of the implants.
+
+    ### Application failure:
+
+    +5% bleeding
+    +5% @internal-damage
+  </Manual_Description_Osteosynthesis_Implants>
+
+  <Manual_Description_Plastiseal>
+    ### Medical skill check: 22
+
+    An improved version of @bandages, which can more effectively treat wounds.
+
+    ### Application success:
+
+    \+100% @bandaged
+    \-48% bleeding
+    \-24% @burns
+
+    ### Application failure:
+
+    \+50% @bandaged
+    \-24% bleeding
+    \-12% @burns
+
+    Applying plastiseal will also replace any dirty bandages on the limb the bandage is applied to. Plastiseal can also be used after @retracted-skin in order to treat third degree burns.
+  </Manual_Description_Plastiseal>
+
+  <Manual_Description_Propofol>
+    Propofol is no longer craftable
+
+    Propofol is a chemical used to knock a human unconscious. It's best used in surgery that has to be performed outside of the ship as it prevents the patient from getting @traumatic-shock. It has no Medical skill check.
+
+    Upon injection, the person on the receiving end will slowly gain @anesthesia at a rate of 0.3% per second. From 1% to 15% strength, the player will have 5% @analgesia.
+
+    Once the affliction progresses past 16%, the player will fall into @unconsciousness and will stay unconscious until the affliction progresses to 100% by waiting or is decreased to 0% by @anaparalyzant. During this time, the player will not feel @intense-pain / @abdominal-pain / @chest-pain and surgery can be performed on them.
+  </Manual_Description_Propofol>
+
+  <Manual_Description_Raptor_Bane_Extract>
+    Raptor Bane Extract is used in the treatment of @acidosis by inducing @vomiting in the patient to give them @alkalosis.
+  </Manual_Description_Raptor_Bane_Extract>
+
+  <Manual_Description_Retractors>
+    ### Medical skill check: 30
+
+    The fourth step in most surgical procedures. The retractors will not work without 100% @clamped-bleeding.
+
+    ### Application success:
+
+    Gives the patient @retracted-skin on the limb the tool was used on.
+
+    ### Application failure:
+
+    +10% @internal-damage
+  </Manual_Description_Retractors>
+
+  <Manual_Description_Ringer_Solution>
+    Ringer's solution is used to increase blood pressure. Unlike @saline, ringer's solution will not cause @acidosis, and will only increase blood pressure. Do be warned, as it may increase your blood pressure into unwanted levels.
+  </Manual_Description_Ringer_Solution>
+
+  <Manual_Description_Saline>
+    ###Medical skill check: 10
+    Saline is a liquid used to treat @alkalosis by inducing @acidosis
+
+    ###Application success:
+    Increases blood pressure
+    +20% @acidosis
+
+    ###Application failure:
+    Increases blood pressure
+    +12% @acidosis
+  </Manual_Description_Saline>
+
+  <Manual_Description_Scalpel>
+    ###Medical skill check: 30
+    The second step in all surgical procedures. The scalpel will not work without @analgesia.
+
+    ###Application success:
+    Gives @surgery-incision on the limb the tool was used on, and will remove any casts or @bandages.
+
+    ###Application failure:
+    +15% bleeding
+    +10%  lacerations
+  </Manual_Description_Scalpel>
+
+  <Manual_Description_Sodium_Nitroprusside>
+    ###Medical skill check: 10
+    A medication to reduce blood pressure. Taking sodium nitroprusside will bring your blood pressure down by 45%. While this drug is active, @fibrillation caused by @hypotension will be reduced.
+
+    ###Application success:
+    Gives 200 seconds of reduced blood pressure
+
+    ###Application failure:
+    Gives 120 seconds of reduced blood pressure
+  </Manual_Description_Sodium_Nitroprusside>
+
+  <Manual_Description_Spinal_Cord_Implants>
+    ### Medical skill check: 45
+
+    Implants used for treating @spinal-cord-injury.
+
+    ### Application success:
+
+    Successfully using the implants will cure the patient's spine. Do note that if the patient has a neck fracture, it will simply come back.
+
+    ### Application failure:
+
+    +5% bleeding
+    +5% @internal-damage
+  </Manual_Description_Spinal_Cord_Implants>
+
+  <Manual_Description_Stasis_Bag>
+    A special bag that keeps the body in stasis for transportation to proper treatment if injuries are severe. A stasis bag is worn in the diving suit slot, and wearing it will drain the condition of it by 0.25% per second, meaning a stasis bag will last for 400 seconds or roughly 6 and a half minutes. Wearing a stasis bag will protect the wearer from pressure down to 10,000 meters, will allow the wearer to be dragged at full speed, and will stop the negative effects of the following afflictions:
+
+    - @cardiac-arrest
+    - @respiratory-arrest
+    - @heart-attack
+    - @neurotrauma
+    - @kidney-damage
+    - @liver-damage
+    - @heart-damage
+    - @lung-damage
+    - @bone-damage
+    - @sepsis
+    - @hypoxemia
+    - @hypotension
+    - @hypertension
+    - @acidosis
+    - @alkalosis
+    - @internal-bleeding
+    - @stroke
+    - @seizure
+    - @coma
+    - @infected-wounds
+    - Bleeding
+
+    It should be noted that you cannot perform surgery on people while they are inside of a Stasis Bag. They will need to be removed from the bag prior to surgery. Patients removed from the Stasis Bag will have @cardiac-arrest and will need those afflictions treated.
+  </Manual_Description_Stasis_Bag>
+
+  <Manual_Description_Streptokinase>
+    ###Medical skill check: None
+    A blood thinner. Using streptokinase will prevent natural bleeding regeneration and will make @stroke worse while it is active.
+
+    ###On application:
+    - Fully treats @heart-attack and @hemotransfusion-shock
+  </Manual_Description_Streptokinase>
+
+  <Manual_Description_Surgery_Table>
+    The Surgery Table is an item that can be bought from a station or crafted and then placed down. The patient is not required to be on the table, they only need to be near it. The Surgery Table provides artificial ventilation to everyone near the table and prevents @traumatic-shock provided the patient is under @analgesia. Additionally, the table will decrease Oxygen Low and prevent @respiratory-arrest from increasing @acidosis.
+
+    The table also has wiring pins that can be used to output important information, such as blood pressure, @neurotrauma, heart rate, and breathing rate.
+
+    It should be noted that the Surgery Table is functionally identical to a Hospital Bed. The other beds prevent Traumatic Shock if you're laying on them, but they do not provide artificial ventilation.
+  </Manual_Description_Surgery_Table>
+
+  <Manual_Description_Surgical_Drill>
+    ### Medical skill check: 45
+
+    The fifth step in @osteosynthetic-surgery.
+
+    ### Application success:
+
+    Successfully using the surgical drill will give the patient @drilled-bones on the limb the tool was used on.
+
+    ### Application failure:
+
+    +15% bleeding
+    +10% @internal-damage
+  </Manual_Description_Surgical_Drill>
+
+  <Manual_Description_Surgical_Saw>
+    ### Medical skill check: 45
+
+    The fifth step in @amputation-surgery.
+
+    ### Application success:
+
+    Successfully using the surgical saw will give the patient @sawed-bones on the limb the tool was used on.
+
+    ### Application failure:
+
+    +15% bleeding
+    +6% @internal-damage
+    +4% lacerations
+  </Manual_Description_Surgical_Saw>
+
+  <Manual_Description_Sutures>
+    ### Medical skill check: 30
+
+    The final step in all surgical procedures. Also very useful for curing most @wounds  bleeding.
+
+    ### Application success:
+
+    Removes all surgery related afflictions (such as @surgery-incision
+    -20% gunshot wounds
+    -20% lacerations
+    -20% bite wounds
+    -20% deep tissue injuries
+    -40% bleeding
+
+    ### Application failure:
+
+    +6% @internal-damage
+  </Manual_Description_Sutures>
+
+  <Manual_Description_Thiamine>
+    ### Medical skill check: 10
+
+    A container of vitamin B1 pills used to assist in organ healing.
+
+    ### Application success:
+
+    200 seconds of organ healing time
+
+    ### Application failure:
+
+    120 seconds of organ healing time
+
+    ‌
+
+    200 seconds of organ healing time will heal around 8% organ damage (excluding @neurotrauma, and 120 seconds will heal 4.8%. This is in addition to natural organ healing at the same time. Thiamine cannot revive dead organs.
+  </Manual_Description_Thiamine>
+
+  <Manual_Description_Tourniquet>
+    ###Medical skill check: 30
+    An item used to restrict the blood flow to a specific limb to lessen regular and arterial bleeding.
+    The tourniquet will not work without @arterial-bleeding. Can be cut off using @trauma-shears.
+
+    ###Application success:
+    Temporarily stops the negative effects of arterial bleeding, and slowly treats regular bleeding, but will cause @gangrene if kept on for an extended period of time. Using a tourniquet on the head will give the victim 15% @neurotrauma and 200% oxygen low.
+
+
+    ###Application failure:
+    +6% blunt force trauma
+  </Manual_Description_Tourniquet>
+
+  <Manual_Description_Trauma_Shears>
+    ###Medical skill check: 10
+    A pair of scissors used to remove plaster casts and @bandages.
+
+    ###Application success:
+    Removes all plaster casts, bandages, and triage cards on the limb the shears were used on.
+
+    ###Application failure:
+    +15% bleeding
+    +10% lacerations
+  </Manual_Description_Trauma_Shears>
+
+  <Manual_Description_Tweezers>
+    ###Medical skill check: 30
+    A pair of tweezers used to remove damaged tissue or bullets.
+
+    ###Application success:
+    -5% @internal-damage
+    -5% blunt force trauma
+    -5% @foreign-bodies
+    +5% lacerations
+
+    ###Application failure:
+    +6% @internal-damage
+
+    The tweezers can work without @retracted-skin if the limb you are tweezing has gunshot wounds or deep tissue injuries, using the tweezer through gunshot wounds or deep tissue injuries will cause 5% @traumatic-shock. Tweezing out foreign bodies also has a 5% chance to yield scrap.
+  </Manual_Description_Tweezers>
+
+  <Manual_Description_Wrench>
+    ###Medical skill check: 60 (30 if the patient has @analgesia)
+    The wrench is used to treat @dislocations. To treat dislocations, drag it onto the dislocated limb in the health interface and use it as a treatment, like you would a bandage.
+
+    ###Application success:
+    Cures dislocation on that limb
+
+    ###Application failure:
+    Causes a fracture on that limb
+  </Manual_Description_Wrench>
+
+  <Manual_Description_Traumatic_Shock>
+    Traumatic shock is very fatal, and should your patient acquire this at any point, immediately terminate the surgery, bring them back into the proximity of a @surgery-table or administer sedation again. Traumatic shock will decrease in strength 4x as fast provided the victim is under the effects of @anesthesia or has @analgesia while being near a @surgery-table.
+
+    ---
+    ##Caused by:
+
+    - Performing unsafe surgery (without a table or without sedation)
+    - Using @tweezers through gunshot wounds or deep tissue injuries (causes very minor shock, can usually be ignored)
+
+    ##Effects:
+
+    - @hypotension (and lots of it)
+    - @cardiac-arrest (at 40% or more)
+    - @respiratory-arrest (at 30% or more)
+    - @neurotrauma (equal to strength divided by 100 per second, 10% or more is the point at which it outpaces natural regeneration)
+    - Psychosis (equal to strength divided by 100 per second)
+
+    ##Treatments:
+
+    - Terminating the surgery and waiting
+    - Bringing into proximity of a @surgery-table and making sure the patient is sedated
+
+    ##Prevention:
+
+    - Making sure that the surgery is safe before proceeding beyond the @retracted-skin step
+    - Making sure @analgesia doesnt run out in the middle of surgery
+  </Manual_Description_Traumatic_Shock>
+
+  <Manual_Description_Surgery_Incision>
+    The second step in all surgical procedures. Having an unclamped surgical incision will cause 0.7% @blood-loss per second for each incision, and having a surgical incision without @analgesia or another sedation method  will cause 2% @traumatic-shock per second for each incision. This affliction will not cause traumatic shock if done without a @surgery-table, therefore making it save to bloodlet without one.
+  </Manual_Description_Surgery_Incision>
+
+  <Manual_Description_Clamped_Bleeding>
+    The third step in most surgical procedures. Having clamped bleeding will prevent @blood-loss caused by @surgery-incision. This affliction is required for the next step, the @retractors
+  </Manual_Description_Clamped_Bleeding>
+
+  <Manual_Description_Retracted_Skin>
+    The fourth step in most surgical procedures. Having retracted skin without a @surgery-table nearby will cause 2% @traumatic-shock per second for each instance of retracted skin. Most surgical procedures, such as @osteosynthetic-surgery or @organ-transplant-surgery stem off from this step.
+  </Manual_Description_Retracted_Skin>
+
+  <Manual_Description_Drilled_Bones>
+    The fifth step in @osteosynthetic-surgery. Having drilled bones without a @surgery-table nearby will cause 1.5% @traumatic-shock per second for each instance of drilled bones.
+  </Manual_Description_Drilled_Bones>
+
+  <Manual_Description_Sawed_Bones>
+    The fifth step in @amputation-surgery. Having sawed bones without a @surgery-table nearby will cause 1.5% @traumatic-shock per second for each instance of sawed bones.
+  </Manual_Description_Sawed_Bones>
+
+  <Manual_Description_Open_Close_Surgery>
+    ##Steps:
+
+    1. Anesthetic of your choice
+    2. @scalpel
+    3. @hemostat
+    4. @retractors
+    5. @sutures
+  </Manual_Description_Open_Close_Surgery>
+
+  <Manual_Description_Osteosynthetic_Surgery>
+    ##Steps:
+
+    1. Anesthetic of your choice
+    2. @scalpel
+    3. @hemostat
+    4. @retractors
+    5. @surgical-drill
+    6. @osteosynthesis-implants
+    7. @sutures
+
+    Must be performed on every body part in order to treat @bone-death.
+  </Manual_Description_Osteosynthetic_Surgery>
+
+  <Manual_Description_Aortic_Rupture_Surgery>
+    ##Steps:
+
+    1. Anesthetic of your choice
+    2. @scalpel
+    3. @endovascular-balloon
+    4. @medical-stent
+    5. @sutures
+  </Manual_Description_Aortic_Rupture_Surgery>
+
+  <Manual_Description_Amputation_Surgery>
+    ## Steps:
+
+    1. Anesthetic of your choice (@analgesia)
+    2. @scalpel
+    3. @hemostat
+    4. @retractors
+    5. @surgical-saw
+    6. Replacing the amputated limb with bionics or human limbs. (Optional)
+    7. @sutures
+    8. Cybernetic limbs, (not bionic implants), can be placed on the limb if surgically amputated. Surgery does not need to be open to attach cyberlimbs. (Optional) (Requires NT Cybernetics addon)
+
+    Doing this procedure will not yield the limb if the limb has more than 15% @gangrene
+
+    This procedure causes @surgical-amputation)
+  </Manual_Description_Amputation_Surgery>
+
+  <Manual_Description_Organ_Transplant_Surgery>
+    Make sure to use @azathioprine before placing the organ in, and make sure their immunity is 10% or lower. If organ damage is 100% after placing it in, that means it got rejected. This does not apply if organ rejection is turned off in the config.
+
+    ##Steps:
+
+    1. Anesthetic of your choice
+    2. @scalpel
+    3. @hemostat
+    4. @retractors
+    5. The respective @organ-procurement-scalpels
+    6. The respective organ transplant item (This must be done twice for the kidneys)
+    7. @sutures
+  </Manual_Description_Organ_Transplant_Surgery>
+
+  <Manual_Description_Surgical_Drapes>
+    Surgical Drapes are a clothing item used to increase the wearer's sterility and thus decreasing the risk of @surgical-infection.
+
+    +100 Base sterility
+    -50% @traumatic-shock gain while worn
+  </Manual_Description_Surgical_Drapes>
+
+  <Manual_Description_Surgical_Mask>
+    The Surgical Mask is a wearable item that increases sterility when worn, decreasing risk of @surgical-infection.
+
+    -10% Lacerations
+    -20% Bleeding
+  </Manual_Description_Surgical_Mask>
+
+  <Manual_Description_Surgeon_Clothes>
+    The surgeon clothes is a wearable item that increases sterility when worn, decreasing risk of @surgical-infection.
+
+    -10% Blunt force trauma
+    -10% Lacerations
+    -10% Bite wounds
+  </Manual_Description_Surgeon_Clothes>
+
+  <Manual_Description_Surgical_Infection>
+    Surgical Infection is a mechanic that causes @sepsis based on how sterile the patient's environment is.
+
+    ---
+
+    The following will _increase_ sterility:
+
+    - Patient wearing @surgical-drapes
+    - Nearby characters wearing @surgical-mask
+    - Having surgery skill (sterility gained based off this equation: 10 + surgery skill / 5)
+    - Having @ointmented
+
+    ---
+
+    The following will _decrease_ sterility:
+
+    - Patient having no @surgical-drapes
+    - Nearby characters not wearing @surgical-mask
+
+    ---
+
+    At the minimum sterility, there is a 10% chance every two seconds for the patient to acquire @sepsis.
+  </Manual_Description_Surgical_Infection>
+
+  <Manual_Description_Mannitol_Plus>
+    Mannitol Plus is a talent item, meaning it requires a talent to craft. Upon being administered, it will treat 30% @neurotrauma over the course of 10 seconds even if the patient is unstable and apply @mannitol's effects without causing @liver-damage / @lung-damage / @heart-damage / @kidney-damage / Organ Damage
+  </Manual_Description_Mannitol_Plus>
+
+  <Manual_Description_Experimental_Treatment>
+    Experimental Treatment is a talent item unlockable by the Surgeon class. It can randomly give effects both negative and positive, though it tends to give positive effects more than negative ones.
+    Theres a theoretical chance to get infinite effects from one use of this item. Imagine flipping a coin, and only stopping when you get tails. Every time you get heads, you get an additional effect from this item.
+
+    The list of possible positive effects are as follows:
+
+    ---
+    - Vigor (randomly picks from 200-400% strength)
+    - Hyperactivity (randomly picks from 200-400% strength)
+    - Psychosis Resistance (randomly picks from 200-400% strength)
+    - Husk Infection Resistance(randomly picks from 200-400% strength)
+    - Paralysis Resistance (randomly picks from 300-600% strength)
+    - @analgesia (randomly picks from 20-100% strength)
+    - @anesthesia (randomly picks from 1-100% strength)
+    - @ointmented (randomly picks from 20-100% strength)
+    - Combat Stimulant (randomly picks from 30-100% strength)
+    - Pressure Stabilized (randomly picks from 30-100% strength)
+    - A full heal (treats 20-100% of @wounds, vanilla organ damage, @neurotrauma and @blood-loss, and fully cures @sepsis)
+
+    ---
+
+    The list of possible negative effects are as follows:
+
+    ---
+    - Any @wounds (randomly picks from 30-80% for bleeding, picks from 5-20% for everything else)
+    - Stuns for 2-15 seconds
+  </Manual_Description_Experimental_Treatment>
+
+  <Manual_Description_Triage_Card>
+    Triage Cards are used to mark patients based on severity of injury. There are two types of triage cards, those being manual and automatic. The manual triage card works as follows:
+
+    Attaching the triage card to the legs will mark it as green, meaning that the patient is minimally injured and will most likely survive.
+    Attaching the triage card to the arms will mark it as yellow, meaning that the patient is injured, and will most likely die if treatment is delayed for a long period of time.
+    Attaching the triage card to the torso will mark it as red, meaning that the patient is critically injured and needs immediate assistance.
+    Attaching the triage card to the head will mark it as black, meaning that the patient is either dead or extremely close to death.
+
+    The automatic triage cards will rate your victim's health based off of their afflictions and vitality, and will give a rating of green, yellow, red or black.
+  </Manual_Description_Triage_Card>
+
+  <Manual_Description_Brain_Jar>
+    The Brain Jar is a talent item unlockable by the Surgeon. Unlike refrigerated containers, which can only delay the decay of a brain and not entirely stop it, the Brain Jar can not only hold a brain indefinitely, but will slowly repair the brain at a rate of 1% per 10 seconds.
+  </Manual_Description_Brain_Jar>
+
+  <Manual_Description_Artificial_Brain>
+    Replaces a patients brain when used after removing it. Protects against gaining neurotrauma from not having a brain. Does nothing else.
+  </Manual_Description_Artificial_Brain>
+
+  <Manual_Description_Medical_Misconduct>
+    Gives skill levels when read
+
+    ### With surgical skill enabled:
+
+    +8 surgical skill
+    +2 medical skill
+
+    ### With surgical skill disabled:
+
+    +8 medical skill
+  </Manual_Description_Medical_Misconduct>
+
+  <Manual_Description_Cybernetic_Arm>
+    A cybernetic arm that can be attached to any surgically amputated arm socket. Can be removed with a crowbar. This results in traumatic amputation on the selected limb.
+
+    ### Advantages of cyberlimbs:
+
+    - Great at taking sustained gunfire without malfunctioning.
+    - Excellent at tanking attacks from creatures without malfunctioning or breaking.
+    - Ideal at sustaining attacks that would otherwise cause life-threatening bleeding.
+    - When well maintained, is much less likely to be forcefully amputated when attacked.
+    - Does not fracture or dislocate. Make sure you fix any dislocations or fractures BEFORE you add a cyber limb or else it will be permanent until you take off the limb.
+
+    #### Disadvantages of cyberlimbs:
+
+    - They do not mix well with water. Won’t shock you, but will break  overtime if you don’t wear a suit.
+    - Requires maintenance if damaged.
+    - Costly maintenance, especially if your sub doesn’t have an ample source of steel and FPGA circuits.
+    - Costly/expensive to make/buy.
+    - Violently detach if critically damaged through material loss.
+
+    ### Mechanical skill requirement: 70
+
+    ### Application Success:
+
+    Applies the cyberlimb on the selected limb and heals any internal damage caused by any previous failed attempts.
+
+    ### Application Failure:
+
+    Applies 20% @internal-damage on the limb. Does not delete the cyberlimb.
+
+    ### How to add:
+    First do amputation surgery on the selected limb, then use the cyberlimb on the chosen limb.
+  </Manual_Description_Cybernetic_Arm>
+
+  <Manual_Description_Cybernetic_Leg>
+    A cybernetic leg that can be attached to any surgically amputated leg socket. Can be removed with a crowbar. This results in traumatic amputation on the selected limb.
+
+    ### Advantages of cyberlimbs:
+
+    - Great at taking sustained gunfire without malfunctioning.
+    - Excellent at tanking attacks from creatures without malfunctioning or breaking.
+    - Ideal at sustaining attacks that would otherwise cause life-threatening bleeding.
+    - When well maintained, is much less likely to be forcefully amputated when attacked.
+    - Does not fracture or dislocate. Make sure you fix any dislocations or fractures BEFORE you add a cyber limb or else it will be permanent until you take off the limb.
+
+    #### Disadvantages of cyberlimbs:
+
+    - They do not mix well with water. Won’t shock you, but will break  overtime if you don’t wear a suit.
+    - Requires maintenance if damaged.
+    - Costly maintenance, especially if your sub doesn’t have an ample source of steel and FPGA circuits.
+    - Costly/expensive to make/buy.
+    - Violently detach if critically damaged through material loss.
+
+    ### Mechanical skill requirement: 70
+
+    ### Application Success:
+
+    Applies the cyberlimb on the selected limb and heals any internal damage caused by any previous failed attempts.
+
+    ### Application Failure:
+
+    Applies 20% @internal-damage on the limb. Does not delete the cyberlimb.
+
+    ### How to add:
+    First do amputation surgery on the selected limb, then use the cyberlimb on the chosen limb.
+  </Manual_Description_Cybernetic_Leg>
+
+  <Manual_Description_Cyberarm>
+    You have a @cybernetic-arm  in this socket.
+  </Manual_Description_Cyberarm>
+
+  <Manual_Description_Cyberleg>
+    You have a @cybernetic-leg in this socket.
+  </Manual_Description_Cyberleg>
+
+  <Manual_Description_Damaged_Electronics>
+    The primary detriment of using cyberlimbs, as their electronics are damaged when exposed to water.
+
+    When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+    The amount of damaged electronics gained scales with the amount of @material-loss
+
+    ## Caused by:
+
+    - Being in water without a diving suit on
+    - 75% chance for @burns to cause 200% of their damage as damaged electronics
+    - 85% chance for gunshot wounds to cause 75% of their damage as damaged electronics
+    - 50% chance for bite wounds to cause 25% of their damage as damaged electronics
+    - 50% chance for deep tissue damage to cause 50% of its damage as damaged electronics
+    - 50% chance for blunt force trauma to cause 100% of its damage as damaged electronics
+    - 75% chance for @internal-damage to cause 100% of its damage as damaged electronics
+    - 75% chance for @foreign-bodies to cause 75% of its damage as damaged electronics
+
+    ## Effects:
+
+    - Limb occassionally stops working temporarily, frequency scales with strength
+    - Limb becomes unusable (at 99% or more)
+
+    ## Treatments:
+
+    - @fpga-circuit
+  </Manual_Description_Damaged_Electronics>
+
+  <Manual_Description_Bent_Metal>
+    When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+    ## Caused by:
+
+    - 85% chance for @burns to cause 25% of their damage as bent metal
+    - 50% chance for lacerations to cause 25% of their damage as bent metal
+    - 50% chance for bite wounds to cause 50% of their damage as bent metal
+    - 85% chance for deep tissue injury to cause 100% of its damage as bent metal
+    - 75% chance for blunt force trauma to cause 200% of its damage as bent metal
+
+    ## Effects:
+
+    - Makes you slower if on a cyberleg, scales with strength
+    - Limb becomes unusable (at 99% or more)
+
+    ## Treatments:
+
+    - @welding-tool
+  </Manual_Description_Bent_Metal>
+
+  <Manual_Description_Loose_Screws>
+    ## Caused by:
+
+    - Loose screws while moving (30% or more)
+    - 75% chance for lacerations to cause 25% of their damage as loose screws
+    - 80% chance for deep tissue damage to cause 100% of its damage as loose screws
+    - 50% chance for blunt force trauma to cause 50% of its damage as loose screws
+    - 75% chance for @internal-damage to cause 100% of its damage as loose screws
+    - 50% chance for bite wounds to cause 50% of their damage as loose screws
+    - 75% chance for @foreign-bodies to cause 75% of its damage as loose screws
+
+    ## Effects:
+
+    - Loose screws and @material-loss
+
+    ## Treatments:
+
+    - @screwdriver
+  </Manual_Description_Loose_Screws>
+
+  <Manual_Description_Material_Loss>
+    When taking damage to a cyberlimb, each type of damage has a chance to cause various types and amounts of cyberlimb specific damage instead of the normal damage type.
+
+    The amount of material loss gained scales with the amount of @loose-screws
+
+    ## Caused by:
+
+    - @loose-screws
+    - 75% chance for lacerations to cause 25% of their damage as material loss
+    - 80% chance for gunshot wounds to cause 80% of their damage as material loss
+    - 75% chance for bite wounds to cause 60% of their damage as material loss
+    - 100% chance for deep tissue injury to cause 100% of its damage as material loss
+    - 80% chance for foreign bodies to cause 50% of their damage as material loss
+
+    ## Effects:
+
+    - Loss of cyberlimb and @traumatic-amputation
+
+    ## Treatments:
+
+    - @steel-bar
+  </Manual_Description_Material_Loss>
+
+  <Manual_Description_FPGA_Circuit>
+    ### Electrical skill check: 40
+
+    Used to repair @damaged-electronics on cyberlimbs.
+
+    ### Application success:
+
+    -50% @damaged-electronics
+
+    ### Application failure:
+
+    -20% @damaged-electronics
+  </Manual_Description_FPGA_Circuit>
+
+  <Manual_Description_Welding_Tool>
+    ### Mechanical skill check: 50
+
+    Used to repair @bent-metal on cyberlimbs.
+
+    ### Application success:
+
+    -20% @bent-metal
+
+    ### Application failure:
+
+    -5% @bent-metal
+  </Manual_Description_Welding_Tool>
+
+  <Manual_Description_Screwdriver>
+    ### Mechanical skill check: 40
+
+    Used to repair @loose-screws on cyberlimbs.
+
+    ### Application success:
+
+    -20% @loose-screws
+
+    ### Application failure:
+
+    -5% @loose-screws
+  </Manual_Description_Screwdriver>
+
+  <Manual_Description_Steel_Bar>
+    ### Mechanical skill check: 60
+
+    Used to repair @material-loss on cyberlimbs.
+
+    ### Application success:
+
+    -50% @material-loss
+
+    ### Application failure:
+
+    -20% @material-loss
+  </Manual_Description_Steel_Bar>
+
+  <Manual_Description_Start_Page>
+    Welcome to the Medical Manual, your comprehensive guide to understanding the neurotrauma mod systems and common medical conditions. This manual is designed to provide you with information on a range of medical topics:
+
+    - @information
+    - @symptoms
+    - @headbrain
+    - @lungs
+    - @heart
+    - @torso
+    - @extremities
+    - @bones
+    - @any-bodypart
+    - @blood
+    - @items-part-1
+    - @items-part-2
+    - @items-part-3
+    - @items-part-4
+    - @surgery
+    - @surgery
+    - @expansion
+  </Manual_Description_Start_Page>
+
+  <Manual_Description_Information>
+    Welcome to Information tab, here you can read about general information:
+
+    - @faq
+    - @med-kit-recommendations
+    - @how-to-diagnose
+    - @order-of-treatments
+    - @the-5-commandments-of-neurotrauma
+  </Manual_Description_Information>
+
+  <Manual_Description_Symptoms>
+    Welcome to Symptoms tab:
+
+    - @vomiting-blood
+    - @pale-skin
+    - @shortness-of-breath
+    - @cough
+    - @increased-heartrate
+    - @confusion
+    - @lightheadedness
+    - @blurred-vision
+    - @leg-swelling
+    - @wheezing
+    - @weakness
+    - @fever
+    - @sweating
+    - @bloating
+    - @inflammation
+    - @jaundice
+    - @abdominal-discomfort
+    - @headache
+    - @craving
+    - @palpitations
+    - @spasms
+  </Manual_Description_Symptoms>
+
+  <Manual_Description_HeadBrain>
+    Welcome to Head/Brain tab:
+
+    - @neurotrauma
+    - @stroke
+    - @withdrawal
+    - @opiate-overdose
+    - @seizure
+    - @unconsciousness
+    - @coma
+    - @spinal-cord-injury
+    - @concussion
+  </Manual_Description_HeadBrain>
+
+  <Manual_Description_Lungs>
+    Welcome to Lungs tab:
+
+    - @respiratory-arrest
+    - @lung-damage
+    - @pneumothorax
+    - @hyperventilation
+    - @hypoventilation
+    - @oxygen-low
+  </Manual_Description_Lungs>
+
+  <Manual_Description_Heart>
+    Welcome to Heart tab:
+
+    - @cardiac-tamponade
+    - @cardiac-arrest
+    - @heart-attack
+    - @heart-damage
+    - @irregular-heartbeat
+    - @fibrillation
+  </Manual_Description_Heart>
+
+  <Manual_Description_Torso>
+    Welcome to Torso tab:
+
+    - @aortic-rupture
+    - @internal-bleeding
+    - @radiation-sickness
+    - @kidney-damage
+    - @liver-damage
+    - @morbusine
+    - @cyanide-poisoning
+    - @vanilla-organ-damage
+    - @analgesia
+    - @anesthesia
+    - @abdominal-pain
+    - @vomiting
+    - @nausea
+    - @chest-pain
+  </Manual_Description_Torso>
+
+  <Manual_Description_Extremities>
+    Welcome to Extremities tab:
+
+    - @traumatic-amputation
+    - @gangrene
+    - @surgical-amputation
+    - @intense-pain
+  </Manual_Description_Extremities>
+
+  <Manual_Description_Bones>
+    Welcome to Bones tab:
+
+    - @bone-death
+    - @bone-damage
+    - @fractures
+    - @dislocations
+  </Manual_Description_Bones>
+
+  <Manual_Description_Any_Bodypart>
+    Welcome to Any Bodypart tab:
+
+    - @arterial-bleeding
+    - @internal-damage
+    - @burns
+    - @infected-wounds
+    - @foreign-bodies
+    - @wounds
+    - @ointmented
+    - @bandaged
+    - @plaster-cast
+  </Manual_Description_Any_Bodypart>
+
+  <Manual_Description_Blood>
+    Welcome to Blood tab:
+
+    - @hypoxemia
+    - @sepsis
+    - @hemotransfusion-shock
+    - @blood-loss
+    - @hypotension
+    - @hypertension
+    - @acidosis
+    - @alkalosis
+  </Manual_Description_Blood>
+
+  <Manual_Description_Items_Part_1>
+    Welcome to Items part 1 tab:
+
+    - @adrenaline
+    - @aed
+    - @alien-blood
+    - @ambubag
+    - @anaparalyzant
+    - @antibiotic-glue
+    - @antibiotic-ointment
+    - @antiseptic
+    - @antiseptic-sprayer
+    - @autopulse
+    - @azathioprine
+    - @bandages
+    - @blood-packs
+    - @blue-shark
+    - @body-bag
+    - @broad-spectrum-antibiotics
+    - @combat-stimulant
+    - @deusizine
+    - @diving-knife
+    - @drainage
+  </Manual_Description_Items_Part_1>
+
+  <Manual_Description_Items_Part_2>
+    Welcome to Items part 2 tab:
+
+    - @empty-blood-pack
+    - @endovascular-balloon
+    - @fentanyl
+    - @gypsum
+    - @health-scanner
+    - @hematology-analyzer
+    - @hemostat
+    - @hyperzine
+    - @liquid-oxygenite
+    - @mannitol
+    - @manual-defibrillator
+    - @medical-stent
+    - @methamphetamine
+    - @morphine
+    - @naloxone
+    - @needle
+    - @nitroglycerin
+    - @opium
+    - @organ-procurement-scalpels
+    - @osteosynthesis-implants
+  </Manual_Description_Items_Part_2>
+
+  <Manual_Description_Items_Part_3>
+    Welcome to Items part 3 tab:
+
+    - @plastiseal
+    - @propofol
+    - @raptor-bane-extract
+    - @retractors
+    - @ringer-solution
+    - @saline
+    - @scalpel
+    - @sodium-nitroprusside
+    - @spinal-cord-implants
+    - @stasis-bag
+    - @streptokinase
+    - @surgery-table
+    - @surgical-drill
+    - @surgical-saw
+    - @sutures
+    - @thiamine
+    - @tourniquet
+    - @trauma-shears
+    - @tweezers
+    - @wrench
+  </Manual_Description_Items_Part_3>
+
+  <Manual_Description_Items_Part_4>
+    Welcome to Items part 4 tab:
+
+    EMPTY
+  </Manual_Description_Items_Part_4>
+
+  <Manual_Description_Surgery>
+    Welcome to Surgery tab:
+
+    - @traumatic-shock
+    - @surgery-incision
+    - @clamped-bleeding
+    - @retracted-skin
+    - @drilled-bones
+    - @sawed-bones
+  </Manual_Description_Surgery>
+
+  <Manual_Description_Procedures>
+    Welcome to Procedures tab:
+
+    - @open-close-surgery
+    - @osteosynthetic-surgery
+    - @aortic-rupture-surgery
+    - @amputation-surgery
+    - @organ-transplant-surgery
+  </Manual_Description_Procedures>
+
+  <Manual_Description_Expansion>
+    Welcome to Expansion tab:
+
+    - @surgical-drapes
+    - @surgical-mask
+    - @surgeon-clothes
+    - @surgical-infection
+    - @mannitol-plus
+    - @experimental-treatment
+    - @triage-card
+    - @brain-jar
+    - @artificial-brain
+    - @medical-misconduct
+    - @cybernetic-arm
+    - @cybernetic-leg
+    - @cyberarm
+    - @cyberleg
+    - @damaged-electronics
+    - @bent-metal
+    - @loose-screws
+    - @material-loss
+    - @fpga-circuit
+    - @welding-tool
+    - @screwdriver
+    - @steel-bar
+  </Manual_Description_Expansion>
+
+</infotexts>
