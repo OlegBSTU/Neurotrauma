@@ -1961,11 +1961,7 @@ NT.CharStats = {
 function NT.UpdateHuman(character)
 	-- Doing this additional check here enables NT updates for 'important' people like players, crew and AI opponents from the get-go
 	-- instead of waiting on other interactions before updates start. - Lukako
-	if
-		character.IsHuman and
-		character.TeamID == 1 or 
-		character.TeamID == 2 and not 
-		character.IsDead then
+	if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
 	else
 		-- Original check
 		if not HF.HasAffliction(character, "luabotomy") then
@@ -2130,15 +2126,11 @@ end)
 
 -- Force all Team1 and Team2 humans that do not already have Luabotomy to get it, enabling health updates. - Lukako
 Hook.Add("characterCreated", "NT.forceluabotomy", function(character)
-    Timer.Wait(function()
-        if character.IsHuman and
-                   character.TeamID == 1 or 
-                   character.TeamID == 2 and not 
-                   character.IsDead then
-					
-				if not HF.HasAffliction(character, "luabotomy") then
-					return
-				end
-        end
-    end, 5000)
+	Timer.Wait(function()
+		if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
+			if not HF.HasAffliction(character, "luabotomy") then
+				return
+			end
+		end
+	end, 5000)
 end)
