@@ -957,16 +957,16 @@ function NTP.RefreshAllPills()
     -- every pill item every round to keep their descriptions (big oof)
 
     -- fetch pill items
-    local pillItems = {}
-    for item in Item.ItemList do
-        if HF.StartsWith(item.Prefab.Identifier.Value,"custompill") then
-            table.insert(pillItems,item)
-        end
-    end
-    -- refresh pill items
-    for pillItem in pillItems do
-        NTP.RefreshPillDescription(pillItem)
-    end
+    --local pillItems = {}
+    --for item in Item.ItemList do
+    --    if HF.StartsWith(item.Prefab.Identifier.Value,"custompill") then
+    --        table.insert(pillItems,item)
+    --    end
+    --end
+    ---- refresh pill items
+    --for pillItem in pillItems do
+    --    NTP.RefreshPillDescription(pillItem)
+    --end
 
     -- clear chem craft alls
     NTP.ActiveChemCraftalls = {}
