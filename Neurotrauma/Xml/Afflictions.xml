@@ -5308,23 +5308,6 @@ thats what the vomiting symptom is for -->
   <!-- Vanilla affliction override end -->
   <!-- Vanilla affliction override start -->
     <Affliction
-      identifier="implacable"
-      type="talentbuff"
-      isbuff="true"
-      limbspecific="false"
-      maxstrength="15"
-      treatmentthreshold="1000"
-      iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-      <Effect minstrength="0" maxstrength="15"
-        strengthchange="-0.25">
-        <StatValue stattype="AttackMultiplier" value="0.25" />
-        <AbilityFlag flagtype="AlwaysStayConscious" />
-      </Effect>
-      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
-    </Affliction>
-  <!-- Vanilla affliction override end -->
-  <!-- Vanilla affliction override start -->
-    <Affliction
     identifier="combatstimulant"
     type="talentbuff"
     isbuff="true"
