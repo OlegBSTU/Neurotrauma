@@ -117,6 +117,25 @@ local limbtypes = {
 
 -- define all the afflictions and their update functions
 NT.Afflictions = {
+	-- Unconsciousness
+	sym_unconsciousness = {
+	update = function(c, i)
+		local isUnconscious = not NTC.GetSymptomFalse(c.character, i)
+			and (
+				NTC.GetSymptom(c.character, i)
+				or c.stats.stasis
+				or c.afflictions.brainremoved.strength > 0
+				or c.afflictions.cerebralhypoxia.strength > 100
+				or c.afflictions.coma.strength > 15
+				or c.afflictions.t_arterialcut.strength > 0
+				or c.afflictions.seizure.strength > 0.1
+				or c.afflictions.opiateoverdose.strength > 60
+				or c.character.Vitality <= 0
+			)
+			and not c.character.HasAbilityFlag(AbilityFlags.AlwaysStayConscious)
+		c.afflictions[i].strength = HF.BoolToNum(isUnconscious, 2)
+	end,
+	},
 	-- Arterial cuts
 	t_arterialcut = {},
 	-- Fractures and amputations
@@ -946,24 +965,6 @@ NT.Afflictions = {
 
 	-- /// Symptoms ///
 	--==============================================================================
-	sym_unconsciousness = {
-		update = function(c, i)
-			local isUnconscious = not NTC.GetSymptomFalse(c.character, i)
-				and (
-					NTC.GetSymptom(c.character, i)
-					or c.stats.stasis
-					or c.afflictions.brainremoved.strength > 0
-					or c.afflictions.cerebralhypoxia.strength > 100
-					or c.afflictions.coma.strength > 15
-					or c.afflictions.t_arterialcut.strength > 0
-					or c.afflictions.seizure.strength > 0.1
-					or c.afflictions.opiateoverdose.strength > 60
-					or c.character.Vitality <= 0
-				)
-				and not c.character.HasAbilityFlag(AbilityFlags.AlwaysStayConscious)
-			c.afflictions[i].strength = HF.BoolToNum(isUnconscious, 2)
-		end,
-	},
 	tachycardia = {
 		update = function(c, i)
 			-- harmless symptom (doesnt lead to fibrillation)
