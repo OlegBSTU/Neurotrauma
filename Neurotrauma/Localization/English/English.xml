@@ -792,6 +792,8 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <!-- misc -->
 <roomname.surgical>Surgical</roomname.surgical>
+<ItemMsgPutInsideSelectKey>[[select]] Put inside</ItemMsgPutInsideSelectKey>
+<ItemMsgTakeOutSelectKey>[[select]] Take out</ItemMsgTakeOutSelectKey>
 
 <!-- Talents -->
 <talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Alien Blood‖end‖ gives [amount]% less ‖color:gui.orange‖Psychosis‖end‖ and ‖color:gui.green‖90%‖end‖ less ‖color:gui.orange‖Hemotransfusion Shock‖end‖.</talentdescription.itemgiveslessaffliction>
