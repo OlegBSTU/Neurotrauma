@@ -958,6 +958,7 @@ NT.Afflictions = {
 					or c.afflictions.t_arterialcut.strength > 0
 					or c.afflictions.seizure.strength > 0.1
 					or c.afflictions.opiateoverdose.strength > 60
+					or c.character.Vitality <= 0
 				)
 				and not c.character.HasAbilityFlag(AbilityFlags.AlwaysStayConscious)
 			c.afflictions[i].strength = HF.BoolToNum(isUnconscious, 2)
