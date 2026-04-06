@@ -69,7 +69,7 @@
                                 <Affliction identifier="implacable" amount="15.0"/>
                             </StatusEffect>
                             <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" delay="2.1">
-                                <ReduceAffliction identifier="stun" amount="15.0"/>
+                                <ReduceAffliction identifier="stun" amount="5.0"/>
                             </StatusEffect>
                         </StatusEffects>
                     </CharacterAbilityApplyStatusEffects>
