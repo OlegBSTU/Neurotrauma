@@ -204,51 +204,6 @@
         <SkillRequirementHint identifier="medical" level="10"/>
     </Item>
 
-    <!-- ??? / blood pressure reducer -->
-    <Item name="" identifier="pressuremeds" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-        <PreferredContainer primary="medcab" spawnprobability="0.2"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.1"/>
-        <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
-
-        <Price baseprice="100" soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
-        </Price>
-
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20" amount="3">
-            <RequiredSkill identifier="medical" level="30"/>
-            <RequiredItem identifier="sodium"/>
-            <RequiredItem identifier="nitroglycerin"/>
-        </Fabricate>
-
-        <Deconstruct time="5"/>
-
-        <InventoryIcon texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="812,512,50,126" origin="0.5,0.5"/>
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="812,512,50,126" depth="0.6" origin="0.5,0.5"/>
-        <Body width="35" height="70" density="20"/>
-
-        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
-            <RequiredSkill identifier="medical" level="10"/>
-            <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="10">
-                <Sound file="%ModDir%/Sound/pills1.ogg" range="500"/>
-                <Sound file="%ModDir%/Sound/pills2.ogg" range="500"/>
-                <Sound file="%ModDir%/Sound/pills3.ogg" range="500"/>
-                <Affliction identifier="afpressuredrug" amount="5"/>
-            </StatusEffect>
-            <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="10">
-                <Sound file="%ModDir%/Sound/pills1.ogg" range="500"/>
-                <Sound file="%ModDir%/Sound/pills2.ogg" range="500"/>
-                <Sound file="%ModDir%/Sound/pills3.ogg" range="500"/>
-                <Affliction identifier="afpressuredrug" amount="3"/>
-            </StatusEffect>
-            <StatusEffect type="OnBroken" target="This">
-                <Remove/>
-            </StatusEffect>
-        </MeleeWeapon>
-
-        <SkillRequirementHint identifier="medical" level="10"/>
-    </Item>
-
     <!-- Streptokinase / heals heart attack -->
     <Item name="" identifier="streptokinase" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
         <PreferredContainer primary="medcab" spawnprobability="0.2"/>
