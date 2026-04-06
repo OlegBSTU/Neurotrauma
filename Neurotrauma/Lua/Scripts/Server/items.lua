@@ -1875,52 +1875,6 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	end
 end
 
-NT.ItemMethods.endovascballoon = function(item, usingCharacter, targetCharacter, limb)
-	local limbtype = limb.type
-
-	-- don't work on stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-		return
-	end
-
-	if
-		limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
-		and HF.HasAffliction(targetCharacter, "t_arterialcut", 1)
-	then
-		HF.AddAffliction(targetCharacter, "balloonedaorta", 100, usingCharacter)
-		HF.SetAffliction(targetCharacter, "internalbleeding", 0, usingCharacter)
-
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 10000)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 5000)
-		end
-
-		if HF.Chance(NTC.GetMultiplier(usingCharacter, "balloonconsumechance")) then
-			HF.RemoveItem(item)
-		end
-	end
-end
-NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
-	local limbtype = limb.type
-
-	-- don't work on stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-		return
-	end
-
-	if limbtype == LimbType.Torso and HF.HasAffliction(targetCharacter, "balloonedaorta", 1) then
-		HF.SetAffliction(targetCharacter, "balloonedaorta", 0, usingCharacter)
-		HF.SetAffliction(targetCharacter, "t_arterialcut", 0, usingCharacter)
-
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 10000)
-		end
-	end
-end
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
