@@ -330,9 +330,6 @@ NTTut.scenarios = {
 				for i = 1, 8, 1 do
 					HF.GiveItem(character, "ointment")
 				end
-				HF.GiveItemPlusFunction("antisepticspray", function(params2)
-					HF.SpawnItemPlusFunction("antiseptic", nil, nil, params2.item.OwnInventory, 0)
-				end, nil, character)
 				data.character = character
 			end, 1)
 		end,
