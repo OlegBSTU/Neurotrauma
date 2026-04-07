@@ -51,9 +51,6 @@ Hook.Add(
 				HF.SpawnItemPlusFunction("opium", nil, nil, params.item.OwnInventory, 2)
 				HF.SpawnItemPlusFunction("antibiotics", nil, nil, params.item.OwnInventory, 3)
 				HF.SpawnItemPlusFunction("ointment", nil, nil, params.item.OwnInventory, 4)
-				HF.SpawnItemPlusFunction("antisepticspray", function(params2)
-					HF.SpawnItemPlusFunction("antiseptic", nil, nil, params2.item.OwnInventory, 0)
-				end, nil, params.item.OwnInventory, 5)
 			end, nil, item.OwnInventory, 1)
 
 			HF.SpawnItemPlusFunction("surgerytoolbox", function(params)
