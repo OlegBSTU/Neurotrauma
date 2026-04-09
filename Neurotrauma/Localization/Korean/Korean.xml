@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Korean" nowhitespace="false" translatedname="Korean">
-  <Override>
   <!-- ITEMS -->
   <!-- /// Gear /// -->
   <entityname.defibrillator>수동 제세동기</entityname.defibrillator>
@@ -553,5 +552,4 @@
 <roomname.surgical>Surgical</roomname.surgical>
 
 <!-- A1.8 -->
-</Override>
 </infotexts>

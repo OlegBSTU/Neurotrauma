@@ -2,7 +2,7 @@
 <Override>
 <Items>
     <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3"/>
 
         <Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -20,6 +20,7 @@
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="512,0,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body width="90" height="80" density="20"/>
         <SuitableTreatment identifier="oxygenlow" suitability="50"/>
+        <SuitableTreatment identifier="respiratoryarrest" suitability="0.0008"/>
 
         <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
             <RequiredItems identifier="weldingtoolfuel,oxygensource,paint,analgesictank,anesthetictank" type="Contained" msg="ItemMsgOxygenTankRequired"/>
@@ -102,7 +103,7 @@
 
     <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.9.3.0" scale="0.40"/>
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25"/>
 
         <Price baseprice="300" soldbydefault="false">
@@ -124,6 +125,8 @@
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,64,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="640,0,128,128" depth="0.55" origin="0.5,0.5"/>
         <Body radius="45" height="50" density="40"/>
+        <SuitableTreatment identifier="respiratoryarrest" suitability="0.0009"/>
+        <SuitableTreatment identifier="cardiacarrest" suitability="0.0009"/>
 
         <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnWearing" target="This" Condition="-100" disabledeltatime="true" delay="0.3" stackable="false">

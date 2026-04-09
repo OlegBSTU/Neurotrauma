@@ -2,12 +2,12 @@
 <Override>
 <Items>
     <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+        <PreferredContainer primary="medcab"/>
+        <PreferredContainer secondary="locker"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.15" />
         <Price baseprice="200" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
-
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
-        <PreferredContainer primary="locker"/>
 
         <Fabricate suitablefabricators="medicalfabricator">
             <RequiredSkill identifier="medical" level="35"/>
@@ -37,7 +37,9 @@
     </Item>
 
     <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+        <PreferredContainer primary="medcab"/>
+        <PreferredContainer secondary="locker"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.15" />
 
         <Price baseprice="200" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>

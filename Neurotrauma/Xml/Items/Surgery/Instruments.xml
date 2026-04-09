@@ -119,9 +119,15 @@
         <Deconstruct time="5"/>
 
         <Price baseprice="50" soldbydefault="true">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="3"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="8"/>
+            <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="8"/>
         </Price>
 
+        <Fabricate suitablefabricators="medicalfabricator" amount="1" requiredtime="10">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="steel" />
+        </Fabricate>
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" depth="0.55" origin="0.5,0.5"/>
         <Body width="60" height="55" density="50"/>

@@ -2,7 +2,7 @@
 <Override>
 <Items>
     <Item name="" identifier="suture" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="medcab" minamount="20" maxamount="32" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="48" maxamount="64" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="2" maxamount="6" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="10" maxamount="16" spawnprobability="0.25"/>
 
@@ -14,8 +14,10 @@
 
         <Deconstruct/>
 
-        <Price baseprice="30">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="25"/>
+        <Price baseprice="9">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="24"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="56"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="56"/>
         </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
@@ -42,71 +44,9 @@
 
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
-    
-    <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
-        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
-
-        <Fabricate suitablefabricators="medicalfabricator" amount="2">
-            <RequiredSkill identifier="medical" level="25"/>
-            <RequiredItem identifier="organicfiber" />
-            <RequiredItem identifier="plastic" />
-            <RequiredItem identifier="rubber" />
-        </Fabricate>
-
-        <Deconstruct/>
-
-        <Price baseprice="30" soldbydefault="true">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
-        </Price>
-
-        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
-        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5"/>
-        <Body width="100" height="100" density="50"/>
-        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
-            <StatusEffect type="OnUse" target="This">
-                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
-            </StatusEffect>
-            <StatusEffect type="OnBroken" target="This">
-                <Remove/>
-            </StatusEffect>
-        </MeleeWeapon>
-    </Item>
-
-    <Item name="" identifier="medstent" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="0.5"/>
-        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
-
-        <Fabricate suitablefabricators="medicalfabricator" amount="2">
-            <RequiredSkill identifier="medical" level="25"/>
-            <RequiredItem identifier="organicfiber" />
-            <RequiredItem identifier="plastic" />
-            <RequiredItem identifier="rubber" />
-        </Fabricate>
-
-        <Deconstruct/>
-
-        <Price baseprice="70" soldbydefault="true">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
-        </Price>
-
-        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" origin="0.5,0.5"/>
-        <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" depth="0.55" origin="0.5,0.5"/>
-        <Body width="100" height="100" density="50"/>
-        <SuitableTreatment identifier="arterialcut5" suitability="50"/>
-
-        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
-            <StatusEffect type="OnUse" target="This" condition="-100">
-                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
-            </StatusEffect>
-            <StatusEffect type="OnBroken" target="This">
-                <Remove/>
-            </StatusEffect>
-        </MeleeWeapon>
-    </Item>
 
     <Item name="" identifier="drainage" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="medcab" minamount="8" maxamount="12" spawnprobability="1"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
         <Fabricate suitablefabricators="medicalfabricator" amount="1">
@@ -137,12 +77,14 @@
 
 
     <Item name="" identifier="gypsum" category="Medical" Tags="smallitem,medical" maxstacksize="16" maxstacksizecharacterinventory="4" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.3" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="medcab" minamount="12" maxamount="16" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
-        <Price baseprice="100">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6"/>
+        <Price baseprice="40">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="6"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="12"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="12"/>
         </Price>
 
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="1">

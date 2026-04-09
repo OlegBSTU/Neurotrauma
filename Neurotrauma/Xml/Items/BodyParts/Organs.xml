@@ -20,7 +20,7 @@
                 <Remove />
             </StatusEffect>
             <!-- making the organ go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-2.5" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-2.5" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
@@ -30,8 +30,8 @@
             </StatusEffect>
             <StatusEffect type="OnFire" target="This" Condition="-25.0" />
             <!-- yuck! organs on the floor! -->
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-                <Affliction identifier="nausea" amount="0.2"/>
+            <StatusEffect type="OnNotContained" target="NearbyCharacters" delay="5" interval="5" disabledeltatime="true" range="300">
+                <Affliction identifier="nausea" amount="1"/>
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <LuaHook name="NT.RotOrgan" />
@@ -65,7 +65,7 @@
                 <Remove />
             </StatusEffect>
             <!-- making the organ go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-2.5" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-2.5" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
@@ -75,8 +75,8 @@
             </StatusEffect>
             <StatusEffect type="OnFire" target="This" Condition="-25.0" />
             <!-- yuck! organs on the floor! -->
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-                <Affliction identifier="nausea" amount="0.2"/>
+            <StatusEffect type="OnNotContained" target="NearbyCharacters" delay="5" interval="5" disabledeltatime="true" range="300">
+                <Affliction identifier="nausea" amount="1"/>
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <LuaHook name="NT.RotOrgan" />
@@ -110,7 +110,7 @@
                 <Remove />
             </StatusEffect>
             <!-- making the organ go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-2.5" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-2.5" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
@@ -120,8 +120,8 @@
             </StatusEffect>
             <StatusEffect type="OnFire" target="This" Condition="-25.0" />
             <!-- yuck! organs on the floor! -->
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-                <Affliction identifier="nausea" amount="0.1"/>
+            <StatusEffect type="OnNotContained" target="NearbyCharacters" delay="5" interval="5" disabledeltatime="true" range="300">
+                <Affliction identifier="nausea" amount="1"/>
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <LuaHook name="NT.RotOrgan" />
@@ -155,7 +155,7 @@
                 <Remove />
             </StatusEffect>
             <!-- making the organ go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-2.5" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-2.5" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
@@ -165,8 +165,8 @@
             </StatusEffect>
             <StatusEffect type="OnFire" target="This" Condition="-25.0" />
             <!-- yuck! organs on the floor! -->
-            <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-                <Affliction identifier="nausea" amount="0.2"/>
+            <StatusEffect type="OnNotContained" target="NearbyCharacters" delay="5" interval="5" disabledeltatime="true" range="300">
+                <Affliction identifier="nausea" amount="1"/>
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <LuaHook name="NT.RotOrgan" />
@@ -201,12 +201,12 @@
                 <Remove />
             </StatusEffect>
             <!-- making the organ go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-2" comparison="and" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-10" comparison="and" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq braincontainer" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="-0.2" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="-1" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
             <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">

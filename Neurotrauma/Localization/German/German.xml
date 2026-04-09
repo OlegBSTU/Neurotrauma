@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="German" nowhitespace="false" translatedname="Deutsch">
-<Override>
 <!-- Translation reworked, mistakes corrected, and new strings added by liatoast. -->
 <!-- Originally translated by Profole and Mannatu -->
 
@@ -753,5 +752,4 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 
 <!-- misc -->
 <roomname.surgical>OP-Raum</roomname.surgical>
-</Override>
 </infotexts>

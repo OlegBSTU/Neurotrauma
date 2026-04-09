@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
-<Override>
 <!-- Предметы -->
 
 <!-- /// Экипировка /// -->
@@ -153,7 +152,7 @@
 <entitydescription.ringerssolution>Водный раствор из нескольких солей, изотоничный крови человека. Предназначен для лечения низкого кровяного давления или потери крови.</entitydescription.ringerssolution>
 
 <entityname.antiseptic>Антисептик</entityname.antiseptic>
-<entitydescription.antiseptic>Жидкость для лечения зараженных ран. Наносится при помощи антисептического спрея.</entitydescription.antiseptic>
+<entitydescription.antiseptic>Жидкость для обеззараживания ран. Наносится при помощи антисептического спрея.</entitydescription.antiseptic>
 
 <entityname.antisepticspray>Антисептический спрей</entityname.antisepticspray>
 <entitydescription.antisepticspray>Используется для нанесения антисептика на зараженные раны.</entitydescription.antisepticspray>
@@ -164,7 +163,7 @@
 <entityname.gypsum>Гипс</entityname.gypsum>
 <entitydescription.gypsum>Мелкозернистый минеральный порошок, используемый для покрытия и фиксации переломов конечностей. Сначала наложите повязку.</entitydescription.gypsum>
 
-<entityname.gelipack>Гелевый охладительный пакет</entityname.gelipack>
+<entityname.gelipack>Гелевый хладоэлемент</entityname.gelipack>
 <entitydescription.gelipack>Многоразовый охлаждающий пакет с органическим гелем. Теряет эффективность охлаждающего действия вне холодильника.</entitydescription.gelipack>
 
 
@@ -853,7 +852,7 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вы можете без последствий собрать один пакет крови за раз из здоровых людей, и только в случае успешного применения.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Чтобы вылечить больше 15% гангрены, Вам надо трансплантировать конечность, если она отсутствует, далее зашить, ампутировать, транспланитровать новую конечность, зашить.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Чтобы вылечить больше 15% гангрены, Вам надо трансплантировать конечность, если она отсутствует, далее зашить, ампутировать, трансплантировать новую конечность, зашить.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Большинство шансов получения состояний и скорости прогрессирования могут быть настроены. Чтобы найти окно настроек, откройте меню Esc в лобби запущенной игры. Крики, поведение гипсовых слепков и отторжение органов тоже могут быть настроены.</loadingscreentip>
 
@@ -876,5 +875,4 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма - синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-</Override>
 </infotexts>

@@ -28,7 +28,7 @@
     </Item>
     
     <Item name="" identifier="organtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,refrigerated,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1"/>
+        <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
         <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
         <PreferredContainer secondary="locker"/>
         
@@ -79,7 +79,7 @@
     </Item>
    
     <Item name="" identifier="medtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
+        <PreferredContainer primary="medcab"/>
         <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
         <PreferredContainer secondary="locker"/>
         
@@ -157,7 +157,7 @@
     </Item>
     
     <Item name="" identifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
+        <PreferredContainer primary="medcab"/>
         <PreferredContainer secondary="locker"/>
        
         <Deconstruct time="10">
@@ -211,6 +211,52 @@
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     </Item>
 
+    <Item name="" identifier="surgerytoolboxsetstarter" nameidentifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="medcab" minamount="3" maxamount="3" spawnprobability="1"/>
+        <PreferredContainer secondary="locker"/>
+       
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="259,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="45" height="30" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,14" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="1" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+       
+        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="traumashears" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="spinalimplant" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
+       
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+
     <Item name="" identifier="medstartercrate" tags="crate" scale="0.4" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true" description="">
         <Price baseprice="600">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
@@ -256,7 +302,7 @@
         
         <Deconstruct time="10"/>
 
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.75" />
+        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.75" />-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
         <InventoryIcon texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" origin="0.5,0.5" />
         <Sprite texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" depth="0.55" origin="0.5,0.5" />
