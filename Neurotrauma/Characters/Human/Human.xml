@@ -90,6 +90,14 @@ DisableDistance="25000" SoundInterval="10">
     </Limb>
   </health>
   <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface"/>
+  
+  <StatusEffect type="OnDeconstructed" target="Character">
+    <SpawnItem identifiers="carbon" spawnposition="ThisInventory" count="2" probablity="1" />
+    <SpawnItem identifiers="poop" spawnposition="ThisInventory" count="1" probablity="1" />
+    <SpawnItem identifiers="calcium" spawnposition="ThisInventory" count="1" probablity="1" />
+    <!--<SpawnItem identifiers="antibloodloss2" spawnposition="ThisInventory" count="1" probablity="0.1" /> here should be based on blood loss and blood type-->
+  </StatusEffect>
+  
   <Heads>
     <Head id="1" sheetindex="0,0" gender="male"/>
     <Head id="2" sheetindex="1,0" gender="male"/>
