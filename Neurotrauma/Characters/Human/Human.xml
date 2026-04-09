@@ -97,6 +97,16 @@ DisableDistance="25000" SoundInterval="10">
     <SpawnItem identifiers="calcium" spawnposition="ThisInventory" count="1" probablity="1" />
     <!--<SpawnItem identifiers="antibloodloss2" spawnposition="ThisInventory" count="1" probablity="0.1" /> here should be based on blood loss and blood type-->
   </StatusEffect>
+
+  <StatusEffect type="OnDeconstructing" target="Character" disabledeltatime="true" interval="1">
+    <Affliction identifier="ra_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="la_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="h_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="t_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="ll_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="rl_fracture" amount="50" probability="0.3" />
+    <!-- <LuaHook name="IsDeconstructingHuman" /> -->
+  </StatusEffect>
   
   <Heads>
     <Head id="1" sheetindex="0,0" gender="male"/>
