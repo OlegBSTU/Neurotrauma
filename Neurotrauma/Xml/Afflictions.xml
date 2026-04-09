@@ -464,7 +464,12 @@
     indicatorlimb="Torso"
     showiconthreshold="1"
     showinhealthscannerthreshold="100"
-    maxstrength="2">
+    maxstrength="2"
+    causespeechimpediment="true">
+
+    <Effect minstrength="0" maxstrength="2">
+            <StatusEffect target="Character" speechimpediment="100"/>
+    </Effect>
 
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,0" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
