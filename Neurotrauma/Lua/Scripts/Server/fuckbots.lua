@@ -27,7 +27,6 @@ end
 -- allows npcs to talk about their neuro afflictions
 
 Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance)
-
 	local character = instance.Character
 
 	local message = ""
@@ -78,8 +77,7 @@ Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance
 		if HF.HasAffliction(character, identifier, 1) then
 			message = TextManager.Get("npcdialogsym." .. identifier)
 			print(message)
-			character.Speak(message, chatType, math.random(0,5), Identifier(identifier .. "DialogSym"), 600.0)
+			character.Speak(message, chatType, math.random(0, 5), Identifier(identifier .. "DialogSym"), 600.0)
 		end
 	end
-
 end, Hook.HookMethodType.After)
