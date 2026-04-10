@@ -880,5 +880,42 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
+
+<!--  //  NPC Dialogs for symptoms-->
+
+<npcdialogsym.n_fracture>My neck is broken!</npcdialogsym.n_fracture>
+<npcdialogsym.h_arterialcut>I'm bleeding out from my head!</npcdialogsym.h_arterialcut>
+<npcdialogsym.ll_arterialcut>My left leg artery is cut!</npcdialogsym.ll_arterialcut>
+<npcdialogsym.rl_arterialcut>My right leg artery is cut!</npcdialogsym.rl_arterialcut>
+<npcdialogsym.ra_arterialcut>My right arm artery is cut!</npcdialogsym.ra_arterialcut>
+<npcdialogsym.la_arterialcut>My left arm artery is cut!</npcdialogsym.la_arterialcut>
+<npcdialogsym.sym_hematemesis>I'm vomiting blood!</npcdialogsym.sym_hematemesis>
+<npcdialogsym.sym_paleskin>My skin is turning pale!</npcdialogsym.sym_paleskin>
+<npcdialogsym.sym_confusion>I feel confused...</npcdialogsym.sym_confusion>
+<npcdialogsym.sym_lightheadedness>I'm feeling lightheaded...</npcdialogsym.sym_lightheadedness>
+<npcdialogsym.pain_abdominal>My stomach hurts badly!</npcdialogsym.pain_abdominal>
+<npcdialogsym.inflammation>I'm burning up with inflammation!</npcdialogsym.inflammation>
+<npcdialogsym.gangrene>Something is rotting on my body!</npcdialogsym.gangrene>
+<npcdialogsym.fever>I have a high fever!</npcdialogsym.fever>
+<npcdialogsym.sym_headache>My head is pounding!</npcdialogsym.sym_headache>
+<npcdialogsym.sym_blurredvision>Everything looks blurry!</npcdialogsym.sym_blurredvision>
+<npcdialogsym.t_fracture>My ribs are fractured!</npcdialogsym.t_fracture>
+<npcdialogsym.h_fracture>My skull is broken!</npcdialogsym.h_fracture>
+<npcdialogsym.ra_fracture>My right arm is broken!</npcdialogsym.ra_fracture>
+<npcdialogsym.la_fracture>My left arm is broken!</npcdialogsym.la_fracture>
+<npcdialogsym.rl_fracture>My right leg is broken!</npcdialogsym.rl_fracture>
+<npcdialogsym.ll_fracture>My left leg is broken!</npcdialogsym.ll_fracture>
+<npcdialogsym.dislocation1>My right leg is dislocated!</npcdialogsym.dislocation1>
+<npcdialogsym.dislocation2>My left leg is dislocated!</npcdialogsym.dislocation2>
+<npcdialogsym.dislocation3>My right arm is dislocated!</npcdialogsym.dislocation3>
+<npcdialogsym.dislocation4>My left arm is dislocated!</npcdialogsym.dislocation4>
+<npcdialogsym.pain_chest>My chest hurts!</npcdialogsym.pain_chest>
+<npcdialogsym.sym_weakness>I feel so weak...</npcdialogsym.sym_weakness>
+<npcdialogsym.sym_sweating>I'm sweating profusely!</npcdialogsym.sym_sweating>
+<npcdialogsym.dyspnea>I can't breathe properly!</npcdialogsym.dyspnea>
+<npcdialogsym.sym_bloating>My stomach feels bloated!</npcdialogsym.sym_bloating>
+<npcdialogsym.sym_legswelling>My leg is swelling up!</npcdialogsym.sym_legswelling>
+<npcdialogsym.sym_craving>I have an intense craving!</npcdialogsym.sym_craving>
+<npcdialogsym.sym_palpitations>My heart is racing!</npcdialogsym.sym_palpitations>
 </Override>
 </infotexts>

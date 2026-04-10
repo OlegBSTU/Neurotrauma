@@ -33,18 +33,53 @@ Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance
 	local message = ""
 
 	local chatType = ChatMessageType.Default
-	if character.Inventory.GetItemInLimbSlot(InvSlotType.Headset) then
+	if ChatMessage.CanUseRadio(character) then
 		chatType = ChatMessageType.Radio
 	end
 
-	if HF.HasAffliction(character, "sym_palpitations", 1) then
-		message = "I can hear my heart beating."
-		character.Speak(message, chatType, math.random(0,5), Identifier("DialogPalpitations"), 600.0)
-	end
+	local afflictions = {
+		"n_fracture", -- urgent perceivable afflictions
+		"h_arterialcut",
+		"ll_arterialcut",
+		"rl_arterialcut",
+		"ra_arterialcut",
+		"la_arterialcut",
+		"sym_hematemesis", -- urgent causes
+		"sym_paleskin",
+		"sym_confusion",
+		"sym_lightheadedness",
+		"pain_abdominal",
+		"inflammation",
+		"gangrene",
+		"fever",
+		"sym_headache",
+		"sym_blurredvision",
+		"t_fracture", -- not urgent afflictions
+		"h_fracture",
+		"ra_fracture",
+		"la_fracture",
+		"rl_fracture",
+		"ll_fracture",
+		"dislocation1",
+		"dislocation2",
+		"dislocation3",
+		"dislocation4",
+		"pain_chest", -- not urgent causes
+		"sym_weakness",
+		"sym_sweating",
+		"dyspnea",
+		"sym_bloating",
+		"sym_legswelling",
+		"sym_craving",
+		"sym_palpitations",
+	}
 
-	if HF.HasAffliction(character, "inflammation", 1) then
-		message = "My wound feels warm and swollen."
-		character.Speak(message, chatType, math.random(0,5), Identifier("DialogueInflammation"), 120.0)
+	for identifier in afflictions do
+		if HF.HasAffliction(character, identifier, 1) then
+			message = TextManager.Get("npcdialogsym." .. identifier)
+			print(message)
+			character.Speak(message, chatType, math.random(0,5), Identifier(identifier .. "DialogSym"), 600.0)
+		end
 	end
 
 end, Hook.HookMethodType.After)

@@ -876,5 +876,39 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма - синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
+<npcdialogsym.n_fracture>У меня сломана шея!</npcdialogsym.n_fracture>
+<npcdialogsym.h_arterialcut>Я истекаю кровью из головы!</npcdialogsym.h_arterialcut>
+<npcdialogsym.ll_arterialcut>У меня перерезана артерия на левой ноге!</npcdialogsym.ll_arterialcut>
+<npcdialogsym.rl_arterialcut>У меня перерезана артерия на правой ноге!</npcdialogsym.rl_arterialcut>
+<npcdialogsym.ra_arterialcut>У меня перерезана артерия на правой руке!</npcdialogsym.ra_arterialcut>
+<npcdialogsym.la_arterialcut>У меня перерезана артерия на левой руке!</npcdialogsym.la_arterialcut>
+<npcdialogsym.sym_hematemesis>Я рву кровью!</npcdialogsym.sym_hematemesis>
+<npcdialogsym.sym_paleskin>Моя кожа бледнеет!</npcdialogsym.sym_paleskin>
+<npcdialogsym.sym_confusion>Я чувствую себя растерянным...</npcdialogsym.sym_confusion>
+<npcdialogsym.sym_lightheadedness>У меня кружится голова...</npcdialogsym.sym_lightheadedness>
+<npcdialogsym.pain_abdominal>У меня сильно болит живот!</npcdialogsym.pain_abdominal>
+<npcdialogsym.inflammation>Я горю от воспаления!</npcdialogsym.inflammation>
+<npcdialogsym.gangrene>Что-то гниёт на моём теле!</npcdialogsym.gangrene>
+<npcdialogsym.fever>У меня высокая температура!</npcdialogsym.fever>
+<npcdialogsym.sym_headache>У меня раскалывается голова!</npcdialogsym.sym_headache>
+<npcdialogsym.sym_blurredvision>Всё выглядит размыто!</npcdialogsym.sym_blurredvision>
+<npcdialogsym.t_fracture>У меня сломаны рёбра!</npcdialogsym.t_fracture>
+<npcdialogsym.h_fracture>У меня сломан череп!</npcdialogsym.h_fracture>
+<npcdialogsym.ra_fracture>У меня сломана правая рука!</npcdialogsym.ra_fracture>
+<npcdialogsym.la_fracture>У меня сломана левая рука!</npcdialogsym.la_fracture>
+<npcdialogsym.rl_fracture>У меня сломана правая нога!</npcdialogsym.rl_fracture>
+<npcdialogsym.ll_fracture>У меня сломана левая нога!</npcdialogsym.ll_fracture>
+<npcdialogsym.dislocation1>У меня вывихнута правая нога!</npcdialogsym.dislocation1>
+<npcdialogsym.dislocation2>У меня вывихнута левая нога!</npcdialogsym.dislocation2>
+<npcdialogsym.dislocation3>У меня вывихнута правая рука!</npcdialogsym.dislocation3>
+<npcdialogsym.dislocation4>У меня вывихнута левая рука!</npcdialogsym.dislocation4>
+<npcdialogsym.pain_chest>У меня болит грудь!</npcdialogsym.pain_chest>
+<npcdialogsym.sym_weakness>Я чувствую себя слабым...</npcdialogsym.sym_weakness>
+<npcdialogsym.sym_sweating>Я сильно потею!</npcdialogsym.sym_sweating>
+<npcdialogsym.dyspnea>Я не могу нормально дышать!</npcdialogsym.dyspnea>
+<npcdialogsym.sym_bloating>У меня вздут живот!</npcdialogsym.sym_bloating>
+<npcdialogsym.sym_legswelling>Моя нога распухает!</npcdialogsym.sym_legswelling>
+<npcdialogsym.sym_craving>У меня сильная ломка!</npcdialogsym.sym_craving>
+<npcdialogsym.sym_palpitations>Моё сердце колотится!</npcdialogsym.sym_palpitations>
 </Override>
 </infotexts>
