@@ -49,7 +49,7 @@
     </Item>
 
     <Item name="" identifier="bloodcollector" category="Equipment" description="" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial,medical,bloodscannercard" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1"/>
+        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1"/>-->
 
         <Price baseprice="5">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>

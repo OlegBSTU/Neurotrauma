@@ -57,6 +57,86 @@ Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, i
 	end
 end)
 
+Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon, target)
+	if meleeWeapon == nil or target == nil then
+		return
+	end
+	local itemUser = meleeWeapon.picker
+	if itemUser == nil then
+		return
+	end
+	local item = meleeWeapon.Item
+	if item == nil then
+		return
+	end
+	Timer.Wait(function()
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 2)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "ra_fracture", 100)
+			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation3", 100)
+		end
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 4)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "la_fracture", 100)
+			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation4", 100)
+		end
+	end, 1)
+end)
+
+Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
+	Timer.Wait(function()
+		if item == nil or item.GetComponentString("RangedWeapon") == nil or itemUser == nil then
+			return
+		end
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 2)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "ra_fracture", 100)
+			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation3", 100)
+		end
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 4)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "la_fracture", 100)
+			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation4", 100)
+		end
+	end, 1)
+end)
+
 -- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
 -- storing all of the item-specific functions in a table
 NT.ItemMethods = {} -- with the identifier as the key
@@ -897,6 +977,21 @@ end
 local function limbHasThirdDegreeBurns(char, limbtype)
 	return HF.GetAfflictionStrengthLimb(char, limbtype, "burn", 0) > 50
 end
+NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb)
+	local limbtype = limb.type
+
+	local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter, "medical", 10), 1)
+
+	HF.AddAfflictionLimb(targetCharacter, "ointmented", limbtype, 60 * (success + 1), usingCharacter)
+	if not limbHasThirdDegreeBurns(targetCharacter, limbtype) then
+		HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, -7.2 - success * 4.8, usingCharacter)
+	end
+	HF.AddAfflictionLimb(targetCharacter, "infectedwound", limbtype, -24 - success * 48, usingCharacter)
+
+	-- HF.RemoveItem(item)
+	item.Condition = item.Condition - 12.5
+	HF.GiveItem(targetCharacter, "ntsfx_ointment")
+end
 NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 	local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter, "medical", 10), 1)
@@ -1366,7 +1461,7 @@ NT.ItemMethods.organscalpel_liver = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1454,7 +1549,7 @@ NT.ItemMethods.organscalpel_lungs = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1541,7 +1636,7 @@ NT.ItemMethods.organscalpel_heart = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1622,7 +1717,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1672,7 +1767,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1733,7 +1828,7 @@ NT.ItemMethods.organscalpel_brain = function(item, usingCharacter, targetCharact
 					end
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if SERVER then
@@ -1875,52 +1970,6 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	end
 end
 
-NT.ItemMethods.endovascballoon = function(item, usingCharacter, targetCharacter, limb)
-	local limbtype = limb.type
-
-	-- don't work on stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-		return
-	end
-
-	if
-		limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
-		and HF.HasAffliction(targetCharacter, "t_arterialcut", 1)
-	then
-		HF.AddAffliction(targetCharacter, "balloonedaorta", 100, usingCharacter)
-		HF.SetAffliction(targetCharacter, "internalbleeding", 0, usingCharacter)
-
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 10000)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 5000)
-		end
-
-		if HF.Chance(NTC.GetMultiplier(usingCharacter, "balloonconsumechance")) then
-			HF.RemoveItem(item)
-		end
-	end
-end
-NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
-	local limbtype = limb.type
-
-	-- don't work on stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-		return
-	end
-
-	if limbtype == LimbType.Torso and HF.HasAffliction(targetCharacter, "balloonedaorta", 1) then
-		HF.SetAffliction(targetCharacter, "balloonedaorta", 0, usingCharacter)
-		HF.SetAffliction(targetCharacter, "t_arterialcut", 0, usingCharacter)
-
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 10000)
-		end
-	end
-end
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
@@ -2095,12 +2144,12 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 		if HF.StartsWith(tag, "acid") then
 			local split = HF.SplitString(tag, ":")
 			if split[2] ~= nil then
-				HF.AddAffliction(targetCharacter, "acidosis", tonumber(split[2]) / 5 * usefulFraction, usingCharacter)
+				HF.AddAffliction(targetCharacter, "acidosis", tonumber(split[2]) / 10 * usefulFraction, usingCharacter)
 			end
 		elseif HF.StartsWith(tag, "alkal") then
 			local split = HF.SplitString(tag, ":")
 			if split[2] ~= nil then
-				HF.AddAffliction(targetCharacter, "alkalosis", tonumber(split[2]) / 5 * usefulFraction, usingCharacter)
+				HF.AddAffliction(targetCharacter, "alkalosis", tonumber(split[2]) / 10 * usefulFraction, usingCharacter)
 			end
 		end
 	end
@@ -2693,7 +2742,6 @@ NT.FixCondition = {
 	"healthscanner",
 	"bloodanalyzer",
 	"defibrillator",
-	"antisepticspray",
 	"bvm",
 	"autocpr",
 }

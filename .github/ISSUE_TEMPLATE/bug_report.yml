@@ -19,6 +19,9 @@ body:
     attributes:
       label: LuaForBarotrauma version
       options:
+        - 1.0.109
+        - 1.0.108
+        - 1.0.107
         - 1.0.106
         - 1.0.105
         - 1.0.104
@@ -29,9 +32,6 @@ body:
         - 1.0.99
         - 1.0.98
         - 1.0.97
-        - 1.0.96
-        - 1.0.95
-        - 1.0.94
     validations:
       required: true
   - type: dropdown
@@ -55,7 +55,7 @@ body:
     id: version
     attributes:
       label: Neurotrauma Version
-      placeholder: "A1.15.2"
+      placeholder: "A1.15.4"
     validations:
       required: true
   - type: textarea

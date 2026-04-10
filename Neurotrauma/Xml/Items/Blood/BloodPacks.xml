@@ -7,6 +7,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="194,325,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="128,171,64,85" />
         <Price baseprice="200">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -18,6 +20,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="396,328,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="192,171,64,85" />
         <Price baseprice="200">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -29,6 +33,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="260,260,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="64,0,64,85" />
         <Price baseprice="150">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -40,6 +46,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="331,261,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="128,0,64,85" />
         <Price baseprice="200">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -51,6 +59,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="260,326,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="64,171,64,85" />
         <Price baseprice="150">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -62,6 +72,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="396,263,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="64,85,64,85" />
         <Price baseprice="150">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -73,6 +85,8 @@
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="193,260,64,64" origin="0.5,0.5"/>
+        <Sprite sourcerect="0,0,64,85" />
         <Price baseprice="100">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
@@ -80,7 +94,7 @@
 
     <!-- Maybe it's worth moving to Consumables.xml. By: TheManyFacedDemon -->
     <Item name="" identifier="emptybloodpack" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="16" maxamount="24" spawnprobability="1"/>
 
         <Price baseprice="25">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>

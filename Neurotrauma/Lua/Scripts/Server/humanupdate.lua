@@ -32,11 +32,7 @@ function NT.Update()
 	-- fetchcharacters to update
 	for key, character in pairs(Character.CharacterList) do
 		if not character.IsDead then
-			local client = HF.CharacterToClient(character)
-			if
-				character.IsHuman
-				and (not Game.IsMultiplayer or character.IsPlayer == false or (client ~= nil and client.HasSpawned))
-			then
+			if character.IsHuman and character.Enabled then
 				table.insert(updateHumans, character)
 				amountHumans = amountHumans + 1
 			else
@@ -82,10 +78,18 @@ local function limbLockedInitial(c, limbtype, key)
 				limbtype,
 				"dirtybandage",
 				0
-			) <= 0 and NT.LimbIsDislocated(c.character, limbtype))
+			) <= 0 and NT.LimbIsDislocated(
+				c.character,
+				limbtype,
+				limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm
+			))
 			or (
 				HF.GetAfflictionStrengthLimb(c.character, limbtype, "gypsumcast", 0) <= 0
-				and NT.LimbIsBroken(c.character, limbtype)
+				and NT.LimbIsBroken(
+					c.character,
+					limbtype,
+					limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm
+				)
 			)
 		)
 end
@@ -147,6 +151,14 @@ NT.Afflictions = {
 	la_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
+				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
+					if
+						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.LeftArm)
+						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.LeftArm)
+					then
+						return
+					end
+				end
 				c.afflictions[i].strength = c.afflictions[i].strength
 					+ 2
 						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftArm))
@@ -157,6 +169,14 @@ NT.Afflictions = {
 	ra_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
+				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
+					if
+						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.RightArm)
+						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.RightArm)
+					then
+						return
+					end
+				end
 				c.afflictions[i].strength = c.afflictions[i].strength
 					+ 2
 						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightArm))
@@ -1959,8 +1979,14 @@ NT.CharStats = {
 }
 
 function NT.UpdateHuman(character)
-	if not HF.HasAffliction(character, "luabotomy") then
-		return
+	-- Doing this additional check here enables NT updates for 'important' people like players, crew and AI opponents from the get-go
+	-- instead of waiting on other interactions before updates start. - Lukako
+	if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
+	else
+		-- Original check
+		if not HF.HasAffliction(character, "luabotomy") then
+			return
+		end
 	end
 
 	-- pre humanupdate hooks
@@ -2116,4 +2142,15 @@ Hook.Add("character.created", "NT.cleanbotomy", function(character)
 			HF.SetAffliction(character, "luabotomy", 0.1)
 		end, 8000)
 	end
+end)
+
+-- Force all Team1 and Team2 humans that do not already have Luabotomy to get it, enabling health updates. - Lukako
+Hook.Add("characterCreated", "NT.forceluabotomy", function(character)
+	Timer.Wait(function()
+		if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
+			if not HF.HasAffliction(character, "luabotomy") then
+				return
+			end
+		end
+	end, 5000)
 end)

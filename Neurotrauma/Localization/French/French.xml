@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="French" nowhitespace="false" translatedname="Français">
-<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -740,5 +739,4 @@ Peut donner du sang à: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Coffret de débutant en médecine</entityname.medstartercrate>
 <entitydescription.medstartercrate>Un coffret contenant tous les essentiels, pragmatiquement emballés dans une seule recette.</entitydescription.medstartercrate>
-</Override>
 </infotexts>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Latinamerican Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
-<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -740,5 +739,4 @@ Puede dar sangre a: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Caja de inicio médica</entityname.medstartercrate>
 <entitydescription.medstartercrate>Una caja que contiene todos los elementos esenciales, convenientemente empaquetados en una sola receta de elaboración.</entitydescription.medstartercrate>
-</Override>
 </infotexts>

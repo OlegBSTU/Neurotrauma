@@ -3,9 +3,9 @@
 <Items>
     <!-- Courtesy of Grass's Pill bottles mod -->
     <Item name="" identifier="custompill" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,pill" description="" useinhealthinterface="true" scale="0.1" impactsoundtag="impact_pill" maxstacksize="16">
-      <PreferredContainer primary="medcab" spawnprobability="0" />
+      <!-- <PreferredContainer primary="medcab" spawnprobability="0" />
       <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="8" spawnprobability="0.9" />
-      <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.1" />
+      <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.1" /> -->
       <Price baseprice="50" soldbydefault="false">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="16" />
       </Price>

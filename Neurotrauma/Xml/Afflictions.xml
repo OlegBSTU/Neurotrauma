@@ -1385,7 +1385,9 @@
 
     <PeriodicEffect mininterval="20" maxinterval="50">
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
-        <Affliction identifier="t_paralysis" amount="5" probability="0.6" />
+        <Conditional bandaged="lte 1"/>
+        <Conditional n_fracture="gte 100"/>
+        <Affliction identifier="t_paralysis" amount="5" />
       </StatusEffect>
     </PeriodicEffect>
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,3" sheetelementsize="128,128" origin="0,0"/>
@@ -1886,7 +1888,12 @@
     showiconthreshold="200"
     showinhealthscannerthreshold="1"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25"/>
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <Conditional ishuman="true" />
+        <Affliction identifier="alkalosis" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,3" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 

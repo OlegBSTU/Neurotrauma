@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Polish" nowhitespace="false" translatedname="Polski">
-<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -742,5 +741,4 @@ Biorcy: AB+</entitydescription.abpluscard>
 
 <entityname.medstartercrate>Medyczna skrzynia startowa</entityname.medstartercrate>
 <entitydescription.medstartercrate>Skrzynia, która zawiera wszystkie niezbędne rzeczy, wygodnie zamknięte w jednym przepisie craftingowym.</entitydescription.medstartercrate>
-</Override>
 </infotexts>

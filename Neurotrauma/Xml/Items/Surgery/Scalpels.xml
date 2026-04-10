@@ -26,7 +26,7 @@
 
 
     <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
 
         <Fabricate suitablefabricators="fabricator">

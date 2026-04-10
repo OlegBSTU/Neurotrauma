@@ -1,5 +1,25 @@
 -- This file contains a bunch of useful functions that see heavy use in the other scripts.
 
+LuaUserData.RegisterType('Barotrauma.ModUtils+Logging') 
+local Logging = LuaUserData.CreateStatic('Barotrauma.ModUtils+Logging')
+
+local function TraceError(errorMessage)
+	if errorMessage then
+		errorMessage = "Neurotrauma Error: " .. errorMessage
+	else
+		errorMessage = "Neurotrauma Error"
+	end
+	--second argument means traceback level, 2 means we exclude topmoost aka this function
+	Logging.PrintError(debug.traceback(errorMessage, 2))
+end
+
+local LimbNames = {}
+for key, value in pairs(LimbType) do
+	LimbNames[value] = key
+end
+
+
+
 -- Neurotrauma functions
 
 function NT.DislocateLimb(character, limbtype, strength)
@@ -99,7 +119,7 @@ function NT.TraumamputateLimb(character, limbtype, attacker)
 	limbtoitem[LimbType.Head] = "headta"
 	-- (optional parameter) if attacker is a monster with free inventory slot, give them the limb instead
 	if limbtoitem[limbtype] ~= nil then
-		if attacker ~= nil and not attacker.IsHuman and attacker.Inventory.IsFull() == false then
+		if attacker ~= nil and not attacker.IsHuman and not attacker.Inventory.IsFull() then
 			HF.GiveItem(attacker, limbtoitem[limbtype])
 			HF.AddAfflictionLimb(character, limbtoaffliction[limbtype] .. "_2", limbtype, 10)
 		else
@@ -135,7 +155,7 @@ function NT.ArteryCutLimb(character, limbtype, strength)
 	HF.AddAffliction(character, limbtoaffliction[limbtype], strength)
 end
 
-function NT.LimbIsDislocated(character, limbtype)
+function NT.LimbIsDislocated(character, limbtype, isarm)
 	local limbtoaffliction = {}
 	limbtoaffliction[LimbType.RightLeg] = "dislocation1"
 	limbtoaffliction[LimbType.LeftLeg] = "dislocation2"
@@ -144,9 +164,13 @@ function NT.LimbIsDislocated(character, limbtype)
 	if limbtoaffliction[limbtype] == nil then
 		return false
 	end
-	return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	if isarm then
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
+	else
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	end
 end
-function NT.LimbIsBroken(character, limbtype)
+function NT.LimbIsBroken(character, limbtype, isarm)
 	local limbtoaffliction = {}
 	limbtoaffliction[LimbType.RightLeg] = "rl_fracture"
 	limbtoaffliction[LimbType.LeftLeg] = "ll_fracture"
@@ -155,7 +179,11 @@ function NT.LimbIsBroken(character, limbtype)
 	if limbtoaffliction[limbtype] == nil then
 		return false
 	end
-	return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	if isarm then
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
+	else
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	end
 end
 function NT.LimbIsArterialCut(character, limbtype)
 	local limbtoaffliction = {}
@@ -414,7 +442,21 @@ end
 
 -- the main "mess with afflictions" function
 function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggressor, prevstrength)
-	local prefab = AfflictionPrefab.Prefabs[identifier]
+	local _, prefab = AfflictionPrefab.Prefabs.TryGet(identifier)
+	if	not character or
+		not limbtype or
+		not prefab
+	then
+		TraceError(string.format("Can't apply affliction to character limb\ncharacter = %s, limbtype = %s, affliction = %s, strength = %s",
+			character and  tostring(character.Name) or "nil",
+			limbtype and LimbNames[limbtype] or limbtype or "nil",
+			prefab and string.format("%s (%s)", tostring(prefab.Name), tostring(prefab.Identifier)) or tostring(identifier) or "nil",
+			strength and string.format("%.3f", strength) or "nil"
+		))
+		return
+	end
+
+	
 	local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
 	if resistance >= 1 then
 		return
