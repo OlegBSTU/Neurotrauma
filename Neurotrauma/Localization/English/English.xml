@@ -881,7 +881,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
-<!--  //  NPC Dialogs for symptoms-->
+<!--  //  NPC Dialogs for symptoms  // -->
 
 <npcdialogsym.n_fracture>My neck is broken!</npcdialogsym.n_fracture>
 <npcdialogsym.h_arterialcut>I'm bleeding out from my head!</npcdialogsym.h_arterialcut>

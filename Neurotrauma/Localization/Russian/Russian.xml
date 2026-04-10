@@ -876,6 +876,9 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма - синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
+
+<!--  //  NPC Dialogs for symptoms  // -->
+
 <npcdialogsym.n_fracture>У меня сломана шея!</npcdialogsym.n_fracture>
 <npcdialogsym.h_arterialcut>Я истекаю кровью из головы!</npcdialogsym.h_arterialcut>
 <npcdialogsym.ll_arterialcut>У меня перерезана артерия на левой ноге!</npcdialogsym.ll_arterialcut>
