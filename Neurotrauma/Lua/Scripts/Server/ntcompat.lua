@@ -174,7 +174,6 @@ function NTC.AddSuturedAffliction(identifier, surgeryskillgain, requiredafflicti
 	end, 1)
 end
 
--- NT.DrainageAfflictions
 -- use this function to register an affliction to be healed by drainage
 -- identifier: the identifier of the affliction to be healed
 function NTC.AddDrainageAffliction(identifier)
