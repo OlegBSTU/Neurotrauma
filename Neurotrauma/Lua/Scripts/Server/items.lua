@@ -1974,13 +1974,22 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 end
 
 -- This makes it so we don't have to override the item to add a new affliction.
+-- needlec doesn't go in here, since in prior versions it alone, wouldn't allow drainage.
 NT.DrainageAfflictions = {
-	"pneumothorax",
-	"needlec",
+	"pneumothorax"
 }
 
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
+
+	local canUse = function () -- This is why we keep needlec out, so we can check the afflictions.
+		for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
+			if HF.HasAffliction(targetCharacter, affliction) then
+				return true
+			end
+		end
+		return false
+	end
 
 	-- don't work on stasis
 	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
@@ -1990,11 +1999,12 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	if
 		limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
-		and HF.HasAffliction(targetCharacter, "pneumothorax")
+		and canUse()
 	then
 		for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
 			HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
 		end
+		HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter) -- This is seperate, since it shouldnt allow a drainage.
 
 		if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then
 			HF.RemoveItem(item)
@@ -2007,6 +2017,7 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 		end
 	end
 end
+
 NT.ItemMethods.needle = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 	-- don't work on stasis
