@@ -1973,6 +1973,12 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	end
 end
 
+-- This makes it so we don't have to override the item to add a new affliction.
+NT.DrainageAfflictions = {
+	"pneumothorax",
+	"needlec",
+}
+
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
@@ -1986,8 +1992,9 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
 		and HF.HasAffliction(targetCharacter, "pneumothorax")
 	then
-		HF.SetAffliction(targetCharacter, "pneumothorax", 0, usingCharacter)
-		HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter)
+		for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
+			HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
+		end
 
 		if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then
 			HF.RemoveItem(item)
