@@ -837,8 +837,7 @@
                     <ReduceAffliction identifier="opiatewithdrawal" amount="2.0" />
                     <ReduceAffliction identifier="opiateoverdose" amount="2.0" />
                     <ReduceAffliction identifier="opiateaddiction" amount="2.0" />
-                    <ReduceAffliction identifier="analgesia" amount="2.0" />
-                    <Affliction identifier="afopioid" amount="2.0"/>
+                    <ReduceAffliction identifier="afopioid" amount="2.0" />
                 </StatusEffect>
                 <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="30.0">
                     <ReduceAffliction identifier="opiatewithdrawal" amount="1.0" />
