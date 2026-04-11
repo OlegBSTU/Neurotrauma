@@ -44,6 +44,7 @@
                 <Conditional condition="gt 0" />
                 <Conditional analgesia="lte 11" />
                 <Affliction identifier="analgesia" amount="3" />
+                <Affliction identifier="afopioid" amount="3" />
             </StatusEffect>
             <!-- reduce oxygen and disable "alv" for the user if welding fuel is present -->
             <StatusEffect type="OnActive" target="Contained,Character" targettags="weldingfuel,Human" Condition="-0.5" OxygenAvailable="-100.0" Oxygen="-15.0" conditionalComparison="And">
