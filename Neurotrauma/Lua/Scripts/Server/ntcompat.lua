@@ -174,6 +174,17 @@ function NTC.AddSuturedAffliction(identifier, surgeryskillgain, requiredafflicti
 	end, 1)
 end
 
+-- NT.DrainageAfflictions
+-- use this function to register an affliction to be healed by drainage
+-- identifier: the identifier of the affliction to be healed
+function NTC.AddDrainageAffliction(identifier)
+	Timer.Wait(function()
+		if not HF.TableContains(NT.DrainageAfflictions, identifier) then
+			table.insert(NT.DrainageAfflictions,identifier)
+		end
+	end, 1)
+end
+
 NTC.AfflictionsAffectingVitality = {
 	bleeding = true,
 	bleedingnonstop = true,
