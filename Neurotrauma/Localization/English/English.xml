@@ -760,7 +760,6 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.burn_deg3>Third-degree burn</afflictionname.burn_deg3>
 <afflictiondescription.burn_deg3>The patient doesn't feel pain in the now leathery, stiff area.</afflictiondescription.burn_deg3>
 
-
 <!-- /// Surgery /// -->
 
 <afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
@@ -810,9 +809,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ On fire? You may be closer to a diving suit than the ballast or fire extinguisher.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you cannot safely treat a dislocation, a bandage will restore the limb's function.</loadingscreentip>
-
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Analgesia isn't limited to surgical use. Painlessness increases damage and stun resistance.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Morphine isn't limited to surgical use. Sufficient analgesia increases damage and stun resistance.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The AED will always reset fibrillation regardless of medical training.</loadingscreentip>
 
@@ -822,7 +819,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Remember to pick up your limb after it is traumatically amputated.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Kidney and liver damage will cause neurotrauma.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Kidney and liver damage will cause neurotrauma. Good doctors keep spare organs around.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ For a full range of diagnosis, remember to check the Health UI, health scanner, and hematology analyzer.</loadingscreentip>
 
@@ -830,19 +827,17 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you have taken too much damage on one limb, it may no longer naturally regenerate. Bandages and ice packs speed up natural regeneration, instead of treating wounds.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can administer an AutoPulse in the Health UI to immediately equip it on the individual. Wrench on torso will unequip it.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can administer an AutoPulse in the Health UI to immediately equip it on the patient. Wrenching the torso will put it back in your inventory.</loadingscreentip> 
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Keep an eye on your visual effects. An early diagnosis can be made based on the situation.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bandaging a neck fracture prevents it from causing spinal cord injury.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neck fractures can cause spinal cord injury before becoming visible in the Health UI.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The AutoPulse is always better than CPR, and they do not stack.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The AutoPulse is always better than CPR, and their effects do not stack.</loadingscreentip>
-
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Hypoxemia refers to insufficient oxygen in the blood. Not to be confused with hypoxia, also known as oxygen low (insufficient oxygen in the lungs).</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Hypoxemia refers to insufficient oxygen in the blood. Not to be confused with hypoxia, also known as oxygen low.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Mannitol only treats neurotrauma if blood pressure is greater than 70% and hypoxemia is less than 30%. If conditions aren't met, it will slow down the progression of neurotrauma.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bots will not alert you of their health status. Check on them often.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bots will sometimes complain about their symptoms. Remember to give them regular check-ups.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can use a tweezer through open gunshot or deep tissue wounds, but this will always cause minor traumatic shock.</loadingscreentip>
 
@@ -860,11 +855,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Sepsis can only be treated with broad-spectrum antibiotics. Make sure to keep some around.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Any bed other than a surgical or hospital one only prevent traumatic shock if the patient is laying on them.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Non-medical beds only prevent traumatic shock if the patient is laying on them.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can collect one blood pack at a time from healthy humans, assuming the application is successful.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ To treat gangrene past 15%, you must attach a limb if none exists, stitch, remove it, stitch, attach a new limb, stitch.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ To treat gangrene past 15%, you must remove the limb and attach a new one.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Most affliction chances and gain rates can be configured. To find the config, open the Esc menu after loading into a game. Screams, gypsum cast behavior, and organ rejection may also be configured.</loadingscreentip>
 
@@ -872,11 +867,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Dislocations are extremely common after being caught in an explosion.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The chance of gaining most afflictions, such as fractures and cardiac tamponade, depends on damage taken. If you take less damage, you will require less treatment.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The chance of gaining afflictions on hit, such as fractures and cardiac tamponade, depends on damage taken. If you take less damage, you will require less treatment.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Low on gypsum? Limbs can be deconstructed into calcium.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Chemical and opiate withdrawal are never lethal, but severe alcohol withdrawal can be.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Drug withdrawal is never lethal, but severe alcohol withdrawal can be dangerous.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Heart and lung damage are non-lethal until they reach 100%.</loadingscreentip>
 
@@ -884,7 +879,41 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Some symptoms override each other. You can't hear palpitations if your heart isn't beating.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ In Neurotrauma, your head takes more damage, but your arms and legs will take less.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If you want to remove an organ instead of replacing it, use the Multipurpose Scalpel twice.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Try not to accidentally saw your patient's head. In case you do, outpost doctors can undo sawed bones.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bandaging an arm dislocation prevents it from locking your hand, and bandaging a leg dislocation restores movement speed.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Avoid using weapons if you have an arm dislocation or fracture.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bandaging an arm fracture prevents it from locking your hand over time.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can force an unconscious patient onto a surgery table to make use of its tank and filter.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Remember to treat underlying conditions, and not symptoms. Symptoms serve as a method of diagnosis.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Submarine doesn't start with enough medical supplies? Make sure there is a tagged medcab and the sub is not 'manually outfitted'.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Surgery speed is affected by the relevant skill. Better doctors or surgeons do surgery faster.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bionic limbs don't rot outside of a fridge, but are otherwise identical to biological ones.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Blood goes around and around. Make sure the patient has enough blood and their heart is working.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Air goes in and out. Make sure the patient has enough oxygen.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ The only cure to coma is time.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ An oblivious crewmember may get third-degree burns before you notice. Make sure to stock up on plastiseal or antibiotic glue.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Try not to scan the patient too often. They may get a lot of radiation.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Stasis Bags protect against pressure, and can be used for EVA.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If the patient is dying too fast, buy some time with a Stasis Bag.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
