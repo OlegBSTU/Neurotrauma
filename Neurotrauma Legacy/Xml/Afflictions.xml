@@ -1199,7 +1199,7 @@
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="6" strengthchange="10">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+      <StatusEffect target="Character">
         <sound file="%ModDir%/Sound/bonebreak4.ogg"  selectionmode="random"/>
         <sound file="%ModDir%/Sound/bonebreak3.ogg"/>
         <sound file="%ModDir%/Sound/bonebreak2.ogg"/>
@@ -2323,7 +2323,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect  target="Character" targetlimb="RightLeg" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect  target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightLeg" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="trl_amputation" amount="9999"/>
         <Affliction identifier="rl_fracture" amount="99999"/>
@@ -2750,9 +2750,12 @@
         <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
         <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
       </StatusEffect>
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Affliction identifier="stun" strength="0.1"/>
         <LuaHook name="NT.vomit" />
+      </StatusEffect>
+      <StatusEffect target="Character" duration="2">
+        <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
       </StatusEffect>
       <StatusEffect target="Character" targetlimbs="Head" duration="1">
         <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
@@ -2799,9 +2802,12 @@
         <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
         <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
       </StatusEffect>
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Affliction identifier="stun" strength="0.1"/>
         <LuaHook name="NT.vomitblood" />
+      </StatusEffect>
+      <StatusEffect target="Character" duration="2">
+        <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
       </StatusEffect>
       <StatusEffect target="Character" targetlimbs="Head" duration="1">
         <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="100" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
@@ -3068,7 +3074,7 @@ thats what the vomiting symptom is for -->
         <ReduceAffliction identifier="onfire" amount="-0.2" />
       </StatusEffect>
 
-      <StatusEffect target="limb,character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
+      <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
         <Conditional ishuman="true" onfire="gt 1" />
         <Affliction identifier="severepainlite" amount="10" />
         <sound file="Content/Sounds/FireSmall.ogg" range="500.0" loop="true" />
@@ -3180,7 +3186,7 @@ thats what the vomiting symptom is for -->
         <Conditional analgesia="lte 0" anesthesia="lte 0" sym_unconsciousness="lte 0"/>
         <LuaHook name="NT.causeScreams" />
       </StatusEffect>
-      <StatusEffect target="Character" comparison="and" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and" disabledeltatime="true" stackable="false" checkconditionalalways="true">
         <Conditional ishuman="true" analgesia="lte 0" anesthesia="lte 0" stun="lte 1"/>
         <Affliction identifier="stun" amount="3" />
       </StatusEffect>
@@ -3345,7 +3351,7 @@ thats what the vomiting symptom is for -->
     <Effect minstrength="1" maxstrength="10"/>
 
     <PeriodicEffect mininterval="4" maxinterval="4">
-      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
         <Affliction identifier="pain" amount="4"/>
       </StatusEffect>
     </PeriodicEffect>
@@ -3366,7 +3372,7 @@ thats what the vomiting symptom is for -->
     showiconthreshold="1"
     iconcolors="255,90,0,255;255,90,0,255">
     <PeriodicEffect mininterval="4" maxinterval="4">
-      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
+      <StatusEffect target="Character"  multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
         <Affliction identifier="pain" amount="4"/>
       </StatusEffect>
     </PeriodicEffect>
@@ -3396,7 +3402,7 @@ thats what the vomiting symptom is for -->
         <Conditional clampedbleeders="lte 0.5"/>
         <Affliction identifier="bloodloss" strength="0.7" />
       </StatusEffect>
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional analgesia="lte 0.5" anesthesia="lte 0.5" sym_unconsciousness="lte 0.1"/>
         <Affliction identifier="traumaticshock" amount="2"/>
       </StatusEffect>
@@ -3435,7 +3441,7 @@ thats what the vomiting symptom is for -->
     showiconthreshold="1"
     iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character"  multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
         <Affliction identifier="traumaticshock" amount="1.5"/>
       </StatusEffect>
@@ -3457,7 +3463,7 @@ thats what the vomiting symptom is for -->
     showiconthreshold="1"
     iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
         <Affliction identifier="traumaticshock" amount="2"/>
       </StatusEffect>
@@ -3512,7 +3518,7 @@ thats what the vomiting symptom is for -->
     showiconthreshold="1"
     iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional table="eq 0" sym_unconsciousness="lte 0.1"/>
         <Affliction identifier="traumaticshock" amount="1.5"/>
       </StatusEffect>
@@ -3596,18 +3602,18 @@ thats what the vomiting symptom is for -->
     maxstrength="100">
     <Effect minstrength="0" maxstrength="15"
       strengthchange="0.3">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Conditional analgesia="lt 5"/>
         <Affliction identifier="analgesia" amount="5"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="15" maxstrength="99"
       strengthchange="0.3">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Affliction identifier="table" amount="3"/>
         <ReduceAffliction type="pain" amount="100" />
       </StatusEffect>
-      <StatusEffect target="Character">
+      <StatusEffect target="Character"  multiplyafflictionsbymaxvitality="true">
         <Conditional analgesia="lt 5"/>
         <Affliction identifier="analgesia" amount="5"/>
       </StatusEffect>
@@ -3680,23 +3686,21 @@ thats what the vomiting symptom is for -->
     <Effect minstrength="0" maxstrength="20" strengthchange="-0.02"/>
 
     <Effect minstrength="20" maxstrength="40" strengthchange="-0.03">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <conditional ishuman="true"/>
         <Affliction identifier="alcoholwithdrawal" strength="0.1"/>
       </StatusEffect>
     </Effect>
 
     <Effect minstrength="40" maxstrength="80" strengthchange="-0.04">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <conditional ishuman="true"/>
         <Affliction identifier="alcoholwithdrawal" strength="0.25"/>
       </StatusEffect>
     </Effect>
 
-    <Effect minstrength="80" maxstrength="100" strengthchange="-0.05"
-      minvitalitydecrease="0"
-      maxvitalitydecrease="20">
-      <StatusEffect target="Character">
+    <Effect minstrength="80" maxstrength="100" strengthchange="-0.05">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <conditional ishuman="true"/>
         <Affliction identifier="alcoholwithdrawal" strength="0.5"/>
       </StatusEffect>
@@ -3829,7 +3833,7 @@ thats what the vomiting symptom is for -->
         minspeedmultiplier="0.9"
         maxspeedmultiplier="0.7"
         tag="poisoned">
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="oxygenlow" amount="12" />
         </StatusEffect>
       </Effect>
