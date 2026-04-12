@@ -815,16 +815,16 @@
     </Effect>
 
     <PeriodicEffect mininterval="1" maxinterval="3">
-      <StatusEffect target="Character" targetlimb="LeftArm" disabledeltatime="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftArm" disabledeltatime="true">
         <Affliction identifier="gangrene" strength="2" probability="0.5" />
       </StatusEffect>
-      <StatusEffect target="Character" targetlimb="RightArm" disabledeltatime="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightArm" disabledeltatime="true">
         <Affliction identifier="gangrene" strength="2" probability="0.5"/>
       </StatusEffect>
-      <StatusEffect target="Character" targetlimb="LeftLeg" disabledeltatime="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftLeg" disabledeltatime="true">
         <Affliction identifier="gangrene" strength="2" probability="0.5"/>
       </StatusEffect>
-      <StatusEffect target="Character" targetlimb="RightLeg" disabledeltatime="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightLeg" disabledeltatime="true">
         <Affliction identifier="gangrene" strength="2" probability="0.5"/>
       </StatusEffect>
     </PeriodicEffect>
@@ -1009,7 +1009,7 @@
     maxstrength="100">
     
     <Effect minstrength="0" maxstrength="6">
-      <StatusEffect target="Character" targetlimb="RightLeg">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightLeg">
         <Conditional gypsumcast="eq 0"/>
         <sound file="%ModDir%/Sound/bonebreak4.ogg"  selectionmode="random"/>
         <sound file="%ModDir%/Sound/bonebreak3.ogg"/>
@@ -1036,7 +1036,7 @@
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="6">
-      <StatusEffect target="Character" targetlimb="LeftLeg">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftLeg">
         <Conditional gypsumcast="eq 0"/>
         <sound file="%ModDir%/Sound/bonebreak4.ogg"  selectionmode="random"/>
         <sound file="%ModDir%/Sound/bonebreak3.ogg"/>
@@ -1074,7 +1074,7 @@
     <Effect minstrength="6" maxstrength="100"/>
 
     <PeriodicEffect mininterval="60" maxinterval="120">
-      <StatusEffect target="Character" comparison="And">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
         <Conditional bandaged="eq 0" pneumothorax="eq 0"/>
         <Affliction identifier="pneumothorax" amount="5" probability="0.3" />
       </StatusEffect>
@@ -1106,7 +1106,7 @@
     <Effect minstrength="6" maxstrength="100"/>
 
     <PeriodicEffect mininterval="1" maxinterval="1">
-      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="Head" disabledeltatime="true">
         <Conditional bandaged="lte 1"/>
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
       </StatusEffect>
@@ -1199,7 +1199,7 @@
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="6" strengthchange="10">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <sound file="%ModDir%/Sound/bonebreak4.ogg"  selectionmode="random"/>
         <sound file="%ModDir%/Sound/bonebreak3.ogg"/>
         <sound file="%ModDir%/Sound/bonebreak2.ogg"/>
@@ -1323,7 +1323,7 @@
     indicatorlimb="RightLeg"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
-      <StatusEffect target="Character" targetlimb="RightLeg" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true"  targetlimb="RightLeg" comparison="and">
         <Conditional arteriesclamp="lte 1"/>
         <Conditional bloodloss="lte 99.5"/>
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
@@ -1423,7 +1423,7 @@
         <Conditional ishuman="false" />
         <ReduceAffliction identifier="t_arterialcut" amount="1000"/>
       </StatusEffect>
-      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="1" checkconditionalalways="false">
         <Conditional balloonedaorta="lte 1"/>
         <Affliction identifier="internalbleeding" strength="8" />
         <Affliction identifier="bloodloss" strength="4" />
@@ -1443,7 +1443,7 @@
     indicatorlimb="Head"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="100" >
-      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true"  targetlimb="Head" comparison="and">
         <Conditional bloodloss="lte 99.5"/>
         <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
@@ -1561,7 +1561,7 @@
       <StatusEffect target="Character">
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.2" />
       </StatusEffect>
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional analgesia="lte 4.5" />
         <Conditional ishuman="true" />
         <Affliction identifier="analgesia" amount="1" />
@@ -1586,7 +1586,7 @@
     showinhealthscannerthreshold="1"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Conditional ishuman="true" />
         <Affliction identifier="acidosis" amount="0.1"/>
       </StatusEffect>
@@ -1732,8 +1732,10 @@
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.5">
       <StatusEffect target="Character" comparison="and">
-        <Conditional ishuman="true"/>
+        <Conditional huskinfection="lt 75.0"/>
         <ReduceAffliction identifier="huskinfection" amount="0.5"/>
+      </StatusEffect>
+      <StatusEffect target="Character">
         <Affliction identifier="organdamage" amount="0.2"/>
         <Affliction identifier="kidneydamage" amount="0.175"/>
         <Affliction identifier="liverdamage" amount="0.175"/>
@@ -1924,7 +1926,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.5"/>
 
     <PeriodicEffect mininterval="1" maxinterval="3">
-      <StatusEffect target="character" disabledeltatime="true" comparison="and" checkconditionalalways="false">
+      <StatusEffect target="character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and" checkconditionalalways="false">
         <Conditional hemotransfusionshock="lt 70"/>
         <Conditional hemotransfusionshock="gte 15"/>
         <Affliction identifier="bloodloss" amount="1"/>
@@ -1934,7 +1936,7 @@
         <Affliction identifier="heartdamage" amount="0.25"/>
         <Affliction identifier="lungdamage" amount="0.25"/>
       </StatusEffect>
-      <StatusEffect target="character" disabledeltatime="true" comparison="and" checkconditionalalways="false">
+      <StatusEffect target="character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and" checkconditionalalways="false">
         <Conditional hemotransfusionshock="lt 15"/>
         <Affliction identifier="bloodloss" amount="1"/>
         <Affliction identifier="organdamage" amount="0.5"/>
@@ -2301,7 +2303,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect target="Character" targetlimb="LeftLeg" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftLeg" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tll_amputation" amount="9999"/>
         <Affliction identifier="ll_fracture" amount="99999"/>
@@ -2341,7 +2343,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect  target="Character" targetlimb="LeftArm" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect  target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftArm" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tla_amputation" amount="99999"/>
         <Affliction identifier="la_fracture" amount="99999"/>
@@ -2361,7 +2363,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect  target="Character" targetlimb="RightArm" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect  target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightArm" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tra_amputation" amount="99999"/>
         <Affliction identifier="ra_fracture" amount="99999"/>
@@ -2381,7 +2383,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect  target="Character" targetlimb="Head" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect  target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="Head" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="th_amputation" amount="99999"/>
       </StatusEffect>
   	</Effect>
@@ -2399,7 +2401,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect target="Character" targetlimb="LeftLeg" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftLeg" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tll_amputation" amount="9999"/>
         <Affliction identifier="ll_fracture" amount="99999"/>
@@ -2418,7 +2420,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect target="Character" targetlimb="RightLeg" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightLeg" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="trl_amputation" amount="9999"/>
         <Affliction identifier="rl_fracture" amount="99999"/>
@@ -2437,7 +2439,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect target="Character" targetlimb="LeftArm" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="LeftArm" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tla_amputation" amount="99999"/>
         <Affliction identifier="la_fracture" amount="99999"/>
@@ -2456,7 +2458,7 @@
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
-      <StatusEffect target="Character" targetlimb="RightArm" disabledeltatime="True" stackable="false" delay="0.2">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="RightArm" disabledeltatime="True" stackable="false" delay="0.2">
         <Affliction identifier="severepain" amount="100"/>
         <Affliction identifier="tra_amputation" amount="99999"/>
         <Affliction identifier="ra_fracture" amount="99999"/>
