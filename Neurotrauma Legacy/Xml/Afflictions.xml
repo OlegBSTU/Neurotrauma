@@ -289,11 +289,11 @@
     iconcolors="84,211,211,255;84,211,211,255"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="2">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <conditional ishuman="true"/>
         <Affliction identifier="cerebralhypoxia" amount="1.2" />
       </StatusEffect>
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="and">
         <conditional ishuman="true" afmannitol="lte 0.5"/>
         <Affliction identifier="cerebralhypoxia" amount="0.8" />
       </StatusEffect>
@@ -688,12 +688,12 @@
 
     <Effect minstrength="0" maxstrength="2"
       strengthchange="-0.5">
-      <StatusEffect tags="medical" target="Character">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
         <ReduceAffliction identifier="cardiacarrest"  amount="2" />
         <ReduceAffliction identifier="fibrillation"  amount="1" />
         <Affliction identifier="bloodpressure" amount="4"/>
       </StatusEffect>
-      <StatusEffect tags="medical" target="Character" disabledeltatime="true" comparison="and">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
         <Conditional cardiacarrest="lte 0.5"/>
         <Conditional cardiacarrest="gte 0.1"/>
         <ReduceAffliction identifier="cardiacarrest"  amount="100" />
@@ -720,13 +720,13 @@
 
     <Effect minstrength="0" maxstrength="2"
       strengthchange="-0.5">
-      <StatusEffect tags="medical" target="Character">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true">
         <ReduceAffliction identifier="cardiacarrest"  amount="1.5" />
         <ReduceAffliction identifier="fibrillation"  amount="1" />
         <Affliction identifier="bloodpressure" amount="5"/>
         <ReduceAffliction identifier="oxygenlow" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical" target="Character" disabledeltatime="true" comparison="and">
+      <StatusEffect statuseffecttags="medical" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
         <Conditional cardiacarrest="lte 0.5"/>
         <Conditional cardiacarrest="gte 0.1"/>
         <ReduceAffliction identifier="cardiacarrest"  amount="100" />
@@ -777,7 +777,7 @@
     iconcolors="127,127,127,255;127,127,127,255">
     <Effect minstrength="0" maxstrength="100" strengthchange="0">
       <StatusEffect target="limb">
-        <ReduceAffliction identifier="bleeding" strength="0.5"/>
+        <ReduceAffliction type="bleeding" strength="0.5"/>
       </StatusEffect>
     </Effect>
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,4" sheetelementsize="128,128" origin="0,0"/>
@@ -796,18 +796,18 @@
     iconcolors="127,127,127,255;127,127,127,255">
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" targetlimb="LeftArm">
-        <ReduceAffliction identifier="bleeding" strength="2"/>
+        <ReduceAffliction type="bleeding" strength="2"/>
       </StatusEffect>
       <StatusEffect target="Character" targetlimb="RightArm">
-        <ReduceAffliction identifier="bleeding" strength="2"/>
+        <ReduceAffliction type="bleeding" strength="2"/>
       </StatusEffect>
       <StatusEffect target="Character" targetlimb="LeftLeg">
-        <ReduceAffliction identifier="bleeding" strength="2"/>
+        <ReduceAffliction type="bleeding" strength="2"/>
       </StatusEffect>
       <StatusEffect target="Character" targetlimb="RightLeg">
-        <ReduceAffliction identifier="bleeding" strength="2"/>
+        <ReduceAffliction type="bleeding" strength="2"/>
       </StatusEffect>
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
         <Affliction identifier="organdamage" strength="0.5"/>
         <Affliction identifier="liverdamage" strength="0.5"/>
         <Affliction identifier="kidneydamage" strength="0.5"/>
