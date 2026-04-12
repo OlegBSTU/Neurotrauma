@@ -3,7 +3,11 @@
 -- about bots is what is causing them to eat frames is correct.
 
 if NTConfig.Get("NT_disableBotAlgorithms", true) then
-	Hook.Patch("Barotrauma.AIObjectiveRescueAll", "IsValidTarget", function(instance, ptable)
+	Hook.Patch("Barotrauma.AIObjectiveRescueAll", "IsValidTarget", {
+		"Barotrauma.Character",
+		"Barotrauma.Character",
+		"out System.Boolean",
+	}, function(instance, ptable)
 		ptable.PreventExecution = true
 		return false
 	end, Hook.HookMethodType.Before)

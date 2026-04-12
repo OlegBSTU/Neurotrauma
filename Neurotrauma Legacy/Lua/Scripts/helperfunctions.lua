@@ -1,5 +1,25 @@
 -- This file contains a bunch of useful functions that see heavy use in the other scripts.
 
+LuaUserData.RegisterType('Barotrauma.ModUtils+Logging') 
+local Logging = LuaUserData.CreateStatic('Barotrauma.ModUtils+Logging')
+
+local function TraceError(errorMessage)
+	if errorMessage then
+		errorMessage = "Neurotrauma Error: " .. errorMessage
+	else
+		errorMessage = "Neurotrauma Error"
+	end
+	--second argument means traceback level, 2 means we exclude topmoost aka this function
+	Logging.PrintError(debug.traceback(errorMessage, 2))
+end
+
+local LimbNames = {}
+for key, value in pairs(LimbType) do
+	LimbNames[value] = key
+end
+
+
+
 -- Neurotrauma functions
 
 function NT.DislocateLimb(character, limbtype, strength)
@@ -32,6 +52,30 @@ function NT.BreakLimb(character, limbtype, strength)
 		HF.SetAfflictionLimb(character, "gypsumcast", limbtype, 0)
 	end
 end
+function NT.SurgicallyAmputateLimbAndGenerateItem(usingCharacter, targetCharacter, limbtype)
+	-- drop previously worn headgear item
+	local previtem = HF.GetHeadWear(targetCharacter)
+	if previtem ~= nil and limbtype == LimbType.Head then
+		previtem.Drop(usingCharacter, true)
+	end
+
+	local droplimb = not NT.LimbIsAmputated(targetCharacter, limbtype)
+		and not HF.HasAfflictionLimb(targetCharacter, "gangrene", limbtype, 15)
+
+	NT.SurgicallyAmputateLimb(targetCharacter, limbtype)
+	if droplimb then
+		local limbtoitem = {}
+		limbtoitem[LimbType.RightLeg] = "rleg"
+		limbtoitem[LimbType.LeftLeg] = "lleg"
+		limbtoitem[LimbType.RightArm] = "rarm"
+		limbtoitem[LimbType.LeftArm] = "larm"
+		limbtoitem[LimbType.Head] = "headsa"
+		if limbtoitem[limbtype] ~= nil then
+			HF.GiveItem(usingCharacter, limbtoitem[limbtype])
+			HF.GiveSurgerySkill(usingCharacter, 0.5)
+		end
+	end
+end
 function NT.SurgicallyAmputateLimb(character, limbtype, strength, traumampstrength)
 	strength = strength or 100
 	traumampstrength = traumampstrength or 0
@@ -54,6 +98,7 @@ function NT.SurgicallyAmputateLimb(character, limbtype, strength, traumampstreng
 	limbtoaffliction[LimbType.LeftArm] = "tla_amputation"
 	limbtoaffliction[LimbType.Head] = "th_amputation"
 	HF.SetAffliction(character, limbtoaffliction[limbtype], traumampstrength)
+	HF.SetAfflictionLimb(character, "gangrene", limbtype, 0)
 end
 function NT.TraumamputateLimb(character, limbtype)
 	local limbtoaffliction = {}
@@ -359,16 +404,37 @@ end
 
 -- the main "mess with afflictions" function
 function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggressor, prevstrength)
-	local prefab = AfflictionPrefab.Prefabs[identifier]
-	local resistance = character.CharacterHealth.GetResistance(prefab)
-	if resistance >= 1 then
+	local _, prefab = AfflictionPrefab.Prefabs.TryGet(identifier)
+	if	not character or
+		not limbtype or
+		not prefab
+	then
+		TraceError(string.format("Can't apply affliction to character limb\ncharacter = %s, limbtype = %s, affliction = %s, strength = %s",
+			character and  tostring(character.Name) or "nil",
+			limbtype and LimbNames[limbtype] or limbtype or "nil",
+			prefab and string.format("%s (%s)", tostring(prefab.Name), tostring(prefab.Identifier)) or tostring(identifier) or "nil",
+			strength and string.format("%.3f", strength) or "nil"
+		))
 		return
 	end
 
+	
+	local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
+	if resistance >= 1 then
+		return
+	end
+	-- We need to reverse the resistance effect so that proper values are given in our CharacterHealth.ApplyAffliction, as we are using this command for our internal affliction updates and functions, that do not account for resistance in the first place.
 	local strength = strength * character.CharacterHealth.MaxVitality / 100 / (1 - resistance)
 	local affliction = prefab.Instantiate(strength, aggressor)
+	local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
 
-	character.CharacterHealth.ApplyAffliction(character.AnimController.GetLimb(limbtype), affliction, false)
+	character.CharacterHealth.ApplyAffliction(
+		character.AnimController.GetLimb(limbtype),
+		affliction,
+		false,
+		false,
+		recalculateVitality
+	)
 
 	-- turn target aggressive if damaging
 	--    if(aggressor ~= nil and character~=aggressor) then
@@ -429,6 +495,16 @@ function HF.ApplySymptomLimb(character, limbtype, identifier, hassymptom, remove
 end
 
 function HF.AddAfflictionLimb(character, identifier, limbtype, strength, aggressor)
+	if strength < 0 then
+		character.CharacterHealth.ReduceAfflictionOnLimb(
+			character.AnimController.GetLimb(limbtype),
+			identifier,
+			-strength,
+			nil,
+			aggressor
+		)
+		return
+	end
 	local prevstrength = HF.GetAfflictionStrengthLimb(character, limbtype, identifier, 0)
 	HF.SetAfflictionLimb(character, identifier, limbtype, strength + prevstrength, aggressor, prevstrength)
 end
@@ -444,12 +520,13 @@ function HF.AddAfflictionResisted(character, identifier, strength, aggressor)
 	HF.SetAffliction(character, identifier, strength + prevstrength, aggressor, prevstrength)
 end
 
-function HF.GetResistance(character, identifier)
+function HF.GetResistance(character, identifier, limbtype)
+	local limbtype = limbtype or LimbType.None
 	local prefab = AfflictionPrefab.Prefabs[identifier]
 	if character == nil or character.CharacterHealth == nil or prefab == nil then
 		return 0
 	end
-	return character.CharacterHealth.GetResistance(prefab)
+	return character.CharacterHealth.GetResistance(prefab, limbtype)
 end
 
 -- /// misc ///
@@ -532,6 +609,14 @@ function HF.GiveSkill(character, skilltype, amount)
 	end
 end
 
+function HF.GiveSurgerySkill(character, amount)
+	if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+		HF.GiveSkill(character, "surgery", amount)
+	else
+		HF.GiveSkill(character, "medical", amount / 4)
+	end
+end
+
 -- amount = vitality healed
 function HF.GiveSkillScaled(character, skilltype, amount)
 	if character ~= nil and character.Info ~= nil then
@@ -553,24 +638,15 @@ function HF.GiveItem(character, identifier)
 		end, 35)
 		return
 	end
-
-	-- HF.GiveItem is used in items that spawn sound FX items
-	-- we will call a different overload of AddItemToSpawnQueue function
-	-- with a character.WorldPosition argument instead of Inventory
-	if HF.StartsWith(identifier, "ntsfx_") then
-		-- This needs to be done on the next tick because Barotrauma processes
-		-- the spawn queue before the remove queue, which could result in the
-		-- item container overflowing.
-		Timer.Wait(function()
-			local prefab = ItemPrefab.GetItemPrefab(identifier)
-			Entity.Spawner.AddItemToSpawnQueue(prefab, character.WorldPosition, nil, nil, nil)
-		end, 35)
-	else
-		Timer.Wait(function()
-			local prefab = ItemPrefab.GetItemPrefab(identifier)
-			Entity.Spawner.AddItemToSpawnQueue(prefab, character.Inventory, nil, nil, nil, true, true, InvSlotType.Any)
-		end, 35)
-	end
+	-- This needs to be done on the next tick because Barotrauma processes
+	-- the spawn queue before the remove queue, which could result in the
+	-- item container overflowing.
+	Timer.Wait(function()
+		local prefab = ItemPrefab.GetItemPrefab(identifier)
+		Entity.Spawner.AddItemToSpawnQueue(prefab, character.WorldPosition, nil, nil, function(item)
+			character.Inventory.TryPutItem(item, nil, { InvSlotType.Any })
+		end)
+	end, 35)
 end
 
 function HF.GiveItemAtCondition(character, identifier, condition)
@@ -615,21 +691,43 @@ function HF.SpawnItemPlusFunction(identifier, func, params, inventory, targetslo
 	-- use server spawn method
 	Timer.Wait(function()
 		local prefab = ItemPrefab.GetItemPrefab(identifier)
-		Entity.Spawner.AddItemToSpawnQueue(
-			prefab,
-			position or inventory.Container.Item.WorldPosition,
-			nil,
-			nil,
-			function(newitem)
-				if inventory ~= nil then
-					inventory.TryPutItem(newitem, targetslot, true, true, nil)
+		if tostring(inventory) == "Barotrauma.CharacterInventory" then
+			Entity.Spawner.AddItemToSpawnQueue(
+				prefab,
+				position or inventory.Owner.AnimController.WorldPosition,
+				nil,
+				nil,
+				function(newitem)
+					if inventory ~= nil then
+						inventory.TryPutItem(newitem, targetslot, true, true, nil)
+					end
+					params["item"] = newitem
+					if func ~= nil then
+						func(params)
+					end
 				end
-				params["item"] = newitem
-				if func ~= nil then
-					func(params)
+			)
+		else
+			Entity.Spawner.AddItemToSpawnQueue(
+				prefab,
+				position or inventory.Container.Item.WorldPosition,
+				nil,
+				nil,
+				function(newitem)
+					if inventory ~= nil then
+						if targetslot ~= nil then
+							inventory.TryPutItem(newitem, targetslot, true, true, nil)
+						else
+							inventory.TryPutItem(newitem, nil, { 0 }, true, true)
+						end
+					end
+					params["item"] = newitem
+					if func ~= nil then
+						func(params)
+					end
 				end
-			end
-		)
+			)
+		end
 	end, 35)
 end
 
@@ -660,7 +758,9 @@ function HF.GiveItemPlusFunction(identifier, func, params, character)
 				character.Inventory.TryPutItem(newitem, nil, { InvSlotType.Any })
 			end
 			params["item"] = newitem
-			func(params)
+			if func ~= nil then
+				func(params)
+			end
 		end)
 	end, 35)
 end

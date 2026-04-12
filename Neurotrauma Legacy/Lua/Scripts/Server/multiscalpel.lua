@@ -1,3 +1,6 @@
+-- NT functions for multiscalpel mode setting
+-- Hooks XML Lua events defined in the multiscalpel item.xml
+-- Hooks Lua event "roundStart" to RefreshAllMultiscalpels descriptions
 function NT.SetMultiscalpelFunction(item, func)
 	if func ~= "" then
 		item.Tags = "multiscalpel_" .. func
@@ -36,12 +39,7 @@ function NT.RefreshScalpelDescription(item)
 
 	local functiontag = GetMultiscalpelMode(item)
 
-	local description = ""
-	if functiontag ~= "" then
-		description = HF.GetText("multiscalpel." .. functiontag)
-	end
-
-	if description == "" then
+	if functiontag == "" then
 		return
 	end
 
@@ -55,7 +53,7 @@ function NT.RefreshScalpelDescription(item)
 		if targetinventory ~= nil then
 			targetinventory.TryPutItem(newscalpelitem, targetslot, true, true, nil)
 		end
-		newscalpelitem.Description = description
+		newscalpelitem.DescriptionTag = "multiscalpel." .. functiontag
 		newscalpelitem.Tags = "multiscalpel_" .. functiontag
 	end
 	HF.RemoveItem(item)

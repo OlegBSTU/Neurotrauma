@@ -765,7 +765,11 @@ NT.Afflictions = {
 	stun = {
 		max = 30,
 		update = function(c, i)
-			if c.afflictions.t_paralysis.strength > 0 or c.afflictions.anesthesia.strength > 15 then
+			if
+				c.afflictions.t_paralysis.strength > 0
+				or c.afflictions.anesthesia.strength > 15
+				or c.afflictions.sym_unconsciousness.strength > 0
+			then
 				c.afflictions[i].strength = math.max(5, c.afflictions[i].strength)
 			end
 		end,
@@ -1605,6 +1609,10 @@ NT.LimbAfflictions = {
 	pain_extremity = {
 		max = 10,
 		update = function(c, limbaff, i, type)
+			if c.afflictions.sym_unconsciousness.strength > 0 then
+				limbaff[i].strength = 0
+				return
+			end
 			limbaff[i].strength = limbaff[i].strength
 				+ (
 						-0.5
@@ -1960,9 +1968,13 @@ end
 function NT.UpdateMonster(character)
 	-- trade bloodloss on this creature for organ damage so that creatures can still bleed out
 	local bloodloss = HF.GetAfflictionStrength(character, "bloodloss", 0)
+	local oxygenlow = HF.GetAfflictionStrength(character, "oxygenlow", 0)
 	if bloodloss > 0 then
 		HF.AddAffliction(character, "organdamage", bloodloss * 2)
 		HF.SetAffliction(character, "bloodloss", 0)
+	elseif oxygenlow > 50 then
+		HF.AddAffliction(character, "organdamage", (oxygenlow - 50) * 2)
+		HF.SetAffliction(character, "oxygenlow", 50)
 	end
 end
 

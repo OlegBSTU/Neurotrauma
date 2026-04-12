@@ -1,11 +1,8 @@
--- I'm sorry for the eyes of anyone looking at the GUI code.
-
+--easysettings by Evil Factory
+local easySettings = dofile(NT.Path .. "/Lua/Scripts/Client/easysettings.lua")
 local MultiLineTextBox = dofile(NT.Path .. "/Lua/Scripts/Client/MultiLineTextBox.lua")
 local GUIComponent = LuaUserData.CreateStatic("Barotrauma.GUIComponent")
-
-Game.AddCommand("neuro", "opens neurotrauma config", function()
-	NT.ToggleGUI()
-end)
+local configUI
 
 local function CommaStringToTable(str)
 	local tbl = {}
@@ -16,29 +13,8 @@ local function CommaStringToTable(str)
 
 	return tbl
 end
-local function ClearElements(guicomponent, removeItself)
-	local toRemove = {}
 
-	for value in guicomponent.GetAllChildren() do
-		table.insert(toRemove, value)
-	end
-
-	for index, value in pairs(toRemove) do
-		value.RemoveChild(value)
-	end
-
-	if guicomponent.Parent and removeItself then
-		guicomponent.Parent.RemoveChild(guicomponent)
-	end
-end
-local function GetAmountOfPrefab(prefabs)
-	local amount = 0
-	for key, value in prefabs do
-		amount = amount + 1
-	end
-
-	return amount
-end
+--calculate difficulty
 local function DetermineDifficulty()
 	local difficulty = 0
 	local defaultDifficulty = 0
@@ -87,79 +63,73 @@ local function DetermineDifficulty()
 	return res
 end
 
-Hook.Add("stop", "NT.CleanupGUI", function()
-	if selectedGUIText then
-		selectedGUIText.Parent.RemoveChild(selectedGUIText)
-	end
+--bulk of the GUI code
+local function ConstructUI(parent)
+	local list = easySettings.BasicList(parent)
 
-	if NT.GUIFrame then
-		ClearElements(NT.GUIFrame, true)
-	end
-end)
-
-NT.ShowGUI = function()
-	local frame =
-		GUI.Frame(GUI.RectTransform(Vector2(0.3, 0.6), GUI.Screen.Selected.Frame.RectTransform, GUI.Anchor.Center))
-	NT.GUIFrame = frame
-	frame.CanBeFocused = true
-	local config = GUI.ListBox(GUI.RectTransform(Vector2(1, 1), frame.RectTransform, GUI.Anchor.BottomCenter))
-	local closebtn = GUI.Button(
-		GUI.RectTransform(Vector2(0.1, 0.3), frame.RectTransform, GUI.Anchor.TopRight),
-		"X",
-		GUI.Alignment.Center,
-		"GUIButtonSmall"
-	)
-	closebtn.OnClicked = function()
-		NT.ToggleGUI()
-	end
-
-	GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.1), config.Content.RectTransform),
-		"Neurotrauma Config",
-		nil,
-		nil,
-		GUI.Alignment.Center
-	)
-	GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.2), config.Content.RectTransform),
-		'Note: Only the host can edit the servers config. Enter "reloadlua" in console to apply changes. For dedicated servers you need to edit the file config.json, this GUI wont work.',
-		nil,
+	--info text
+	local userBlock = GUI.TextBlock(
+		GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform),
+		"Server config can be changed by owner or a client with manage settings permission. If the server doesn't allow writing into the config folder, then it must be edited manually.",
+		Color(200, 255, 255),
 		nil,
 		GUI.Alignment.Center,
-		true
+		true,
+		nil,
+		Color(0, 0, 0)
 	)
-	local difficultyText = GUI.TextBlock(
-		GUI.RectTransform(Vector2(1, 0.1), config.Content.RectTransform),
-		"Calculated difficulty rating: " .. DetermineDifficulty(),
+	local difficultyBlock = GUI.TextBlock(
+		GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform),
+		"",
+		Color(200, 255, 255),
 		nil,
+		GUI.Alignment.Center,
+		true,
 		nil,
-		GUI.Alignment.Center
+		Color(0, 0, 0)
 	)
 
+	--set difficulty text (why does this even exist in the first place)
 	local function OnChanged()
-		difficultyText.Text = "Calculated difficulty rating: " .. DetermineDifficulty()
+		difficultyRate = "Calculated difficulty rating: " .. DetermineDifficulty()
+		difficultyBlock.Text = difficultyRate
 	end
 	OnChanged()
-
-	local savebtn = GUI.Button(
-		GUI.RectTransform(Vector2(1, 0.2), config.Content.RectTransform),
-		"Save Config",
-		GUI.Alignment.Center,
-		"GUIButtonSmall"
-	)
-	savebtn.OnClicked = NTConfig.SaveConfig
 
 	-- procedurally construct config UI
 	for key, entry in pairs(NTConfig.Entries) do
 		if entry.type == "float" then
 			-- scalar value
-			local rect = GUI.RectTransform(Vector2(1, 0.05), config.Content.RectTransform)
-			local textBlock = GUI.TextBlock(rect, entry.name, nil, nil, GUI.Alignment.Center, true)
+			--grab range
+			local minrange = ""
+			local maxrange = ""
+			local count = 0
+			for _, rangegrab in pairs(entry.range) do
+				if count == 0 then
+					minrange = rangegrab
+				end
+				if count == 1 then
+					maxrange = rangegrab
+				end
+				count = count + 1
+			end
+
+			local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
+			local textBlock = GUI.TextBlock(
+				rect,
+				entry.name .. " (" .. minrange .. "-" .. maxrange .. ")",
+				Color(230, 230, 170),
+				nil,
+				GUI.Alignment.Center,
+				true,
+				nil,
+				Color(0, 0, 0)
+			)
 			if entry.description then
 				textBlock.ToolTip = entry.description
 			end
 			local scalar =
-				GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.1), config.Content.RectTransform), NumberType.Float)
+				GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), NumberType.Float)
 			local key2 = key
 			scalar.valueStep = 0.1
 			scalar.MinValueFloat = 0
@@ -173,9 +143,39 @@ NT.ShowGUI = function()
 				NTConfig.Set(key2, scalar.FloatValue)
 				OnChanged()
 			end
+		elseif entry.type == "string" then
+			--user string input
+			local style = ""
+			--get custom style
+			if entry.style ~= nil then
+				style = " (" .. entry.style .. ")"
+			end
+
+			local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
+			local textBlock = GUI.TextBlock(
+				rect,
+				entry.name .. style,
+				Color(230, 230, 170),
+				nil,
+				GUI.Alignment.Center,
+				true,
+				nil,
+				Color(0, 0, 0)
+			)
+			if entry.description then
+				textBlock.ToolTip = entry.description
+			end
+
+			local stringinput = MultiLineTextBox(list.Content.RectTransform, "", entry.boxsize)
+
+			stringinput.Text = table.concat(entry.value, ",")
+
+			stringinput.OnTextChangedDelegate = function(textBox)
+				entry.value = CommaStringToTable(textBox.Text)
+			end
 		elseif entry.type == "bool" then
 			-- toggle
-			local rect = GUI.RectTransform(Vector2(1, 0.2), config.Content.RectTransform)
+			local rect = GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform)
 			local toggle = GUI.TickBox(rect, entry.name)
 			if entry.description then
 				toggle.ToolTip = entry.description
@@ -187,48 +187,41 @@ NT.ShowGUI = function()
 				OnChanged()
 			end
 		elseif entry.type == "category" then
-			-- visual separation
+			-- Change visual separation to subheader
 			GUI.TextBlock(
-				GUI.RectTransform(Vector2(1, 0.1), config.Content.RectTransform),
+				GUI.RectTransform(Vector2(1, 0.10), list.Content.RectTransform),
 				entry.name,
-				nil,
-				nil,
+				Color(255, 255, 237),
+				GUI.GUIStyle.SubHeadingFont,
 				GUI.Alignment.Center,
-				true
+				true,
+				nil,
+				Color(0, 0, 0)
 			)
 		end
 	end
-end
 
---[[
-
--- Multilines
-
-    GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.05), config.Content.RectTransform), "Client High Priority Items", nil, nil, GUI.Alignment.Center, true)
-
-    local clientHighPriorityItems = MultiLineTextBox(config.Content.RectTransform, "", 0.2)
-
-    clientHighPriorityItems.Text = table.concat(NT.Config.clientItemHighPriority, ",")
-
-    clientHighPriorityItems.OnTextChangedDelegate = function (textBox)
-        NT.Config.clientItemHighPriority = CommaStringToTable(textBox.Text)
-    end
-
-    ]]
-
-NT.HideGUI = function()
-	if NT.GUIFrame then
-		ClearElements(NT.GUIFrame, true)
+	if Game.IsMultiplayer and not Game.Client.HasPermission(ClientPermissions.ManageSettings) then
+		for guicomponent in list.GetAllChildren() do
+			guicomponent.enabled = false
+		end
 	end
+
+	return list
 end
 
-NT.GUIOpen = false
-NT.ToggleGUI = function()
-	NT.GUIOpen = not NT.GUIOpen
+Networking.Receive("NT.ConfigUpdate", function(msg)
+	NTConfig.ReceiveConfig(msg)
+	local parent = configUI.Parent.Parent.Parent.Parent.Parent
+	configUI.RectTransform.Parent.Parent.Parent.Parent = nil
+	configUI = nil
+	configUI = ConstructUI(parent)
+end)
 
-	if NT.GUIOpen then
-		NT.ShowGUI()
-	else
-		NT.HideGUI()
+easySettings.AddMenu("Neurotrauma", function(parent)
+	if Game.IsMultiplayer then
+		local msg = Networking.Start("NT.ConfigRequest")
+		Networking.Send(msg)
 	end
-end
+	configUI = ConstructUI(parent)
+end)
