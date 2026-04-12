@@ -52,7 +52,6 @@ Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, i
 		UseItemMethod(item, effect.user, target, target.AnimController.MainLimb, true)
 	end
 end)
-end)
 
 -- storing all of the item-specific functions in a table
 NT.ItemMethods = {} -- with the identifier as the key
@@ -608,20 +607,21 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 			containedItem.Condition = containedItem.Condition - 10
 		end
 
-	local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
-	local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
-	local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
+		local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
+		local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
+		local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
 
-	Timer.Wait(function()
-		HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
-		if HF.Chance(successChance) then
-			HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
-			HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
-		end
-		if HF.Chance(arrestSuccessChance) then
-			HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
-		end
-	end, 2000)
+		Timer.Wait(function()
+			HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
+			if HF.Chance(successChance) then
+				HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
+				HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
+			end
+			if HF.Chance(arrestSuccessChance) then
+				HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
+			end
+		end, 2000)
+	end
 end
 NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
 	if item.Condition <= 0 then
@@ -1228,7 +1228,8 @@ NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCha
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	if
-		HF.CanPerformSurgeryOn(targetCharacter) and HF.HasAfflictionLimb(targetCharacter, "drilledbones", limbtype, 99)
+		HF.CanPerformSurgeryOn(targetCharacter)
+		and HF.HasAfflictionLimb(targetCharacter, "drilledbones", limbtype, 99)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 45) then
 			-- the other stuff
@@ -1338,18 +1339,36 @@ NT.ItemMethods.endovascballoon = function(item, usingCharacter, targetCharacter,
 		else
 			HF.GiveSkillScaled(usingCharacter, "medical", 200)
 		end
--- This makes it so we don't have to override the item to add a new affliction.
--- needlec doesn't go in here, since in prior versions it alone, wouldn't allow drainage.
-NT.DrainageAfflictions = {
-	"pneumothorax"
-}
-
 		if HF.Chance(NTC.GetMultiplier(usingCharacter, "balloonconsumechance")) then
 			HF.RemoveItem(item)
 		end
 	end
 end
+
 NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
+	local limbtype = limb.type
+
+	-- don't work on stasis
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
+
+	if limbtype == LimbType.Torso and HF.HasAffliction(targetCharacter, "balloonedaorta", 1) then
+		HF.SetAffliction(targetCharacter, "balloonedaorta", 0, usingCharacter)
+		HF.SetAffliction(targetCharacter, "t_arterialcut", 0, usingCharacter)
+
+		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+			HF.GiveSkillScaled(usingCharacter, "surgery", 800)
+		else
+			HF.GiveSkillScaled(usingCharacter, "medical", 400)
+		end
+	end
+end
+-- This makes it so we don't have to override the item to add a new affliction.
+-- needlec doesn't go in here, since in prior versions it alone, wouldn't allow drainage.
+NT.DrainageAfflictions = {
+	"pneumothorax",
+}
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
@@ -1366,38 +1385,40 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 			HF.GiveSkillScaled(usingCharacter, "surgery", 800)
 		else
 			HF.GiveSkillScaled(usingCharacter, "medical", 400)
-	local canUse = function () -- This is why we keep needlec out, so we can check the afflictions.
-		for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
-			if HF.HasAffliction(targetCharacter, affliction) then
-				return true
+		end
+		local canUse = function() -- This is why we keep needlec out, so we can check the afflictions.
+			for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
+				if HF.HasAffliction(targetCharacter, affliction) then
+					return true
+				end
 			end
-		end
-		return false
-	end
-
-	-- don't work on stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
-		return
-	end
-
-	if
-		limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
-		and canUse()
-	then
-		for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
-			HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
-		end
-		HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter) -- This is seperate, since it shouldnt allow a drainage.
-
-		if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then
-			HF.RemoveItem(item)
+			return false
 		end
 
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 400)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 200)
+		-- don't work on stasis
+		if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+			return
+		end
+
+		if
+			limbtype == LimbType.Torso
+			and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
+			and canUse()
+		then
+			for index, affliction in pairs(NT.DrainageAfflictions) do -- We cycle through all the afflictions.
+				HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
+			end
+			HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter) -- This is seperate, since it shouldnt allow a drainage.
+
+			if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then
+				HF.RemoveItem(item)
+			end
+
+			if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+				HF.GiveSkillScaled(usingCharacter, "surgery", 400)
+			else
+				HF.GiveSkillScaled(usingCharacter, "medical", 200)
+			end
 		end
 	end
 end
