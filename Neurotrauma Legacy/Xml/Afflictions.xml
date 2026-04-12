@@ -4305,7 +4305,7 @@ thats what the vomiting symptom is for -->
       name=""
       identifier="opiateaddiction"
       description=""
-      type="poison"
+      type="debuff"
       limbspecific="false"
       indicatorlimb="Head"
       showiconthreshold="700"
@@ -4438,7 +4438,7 @@ thats what the vomiting symptom is for -->
     name=""
     identifier="chemaddiction"
     description=""
-    type="chemaddiction"
+    type="debuff"
     limbspecific="false"
     indicatorlimb="Head"
     showiconthreshold="700"
@@ -4479,7 +4479,7 @@ thats what the vomiting symptom is for -->
       name=""
       identifier="chemwithdrawal"
       description=""
-      type="poison"
+      type="debuff"
       causeofdeathdescription="Died of chem withdrawal"
       selfcauseofdeathdescription="You have died of chem withdrawal."
       limbspecific="false"
@@ -4555,7 +4555,7 @@ thats what the vomiting symptom is for -->
     <Affliction
     identifier="drunk"
     description=""
-    type="poison"
+    type="debuff"
     causeofdeathdescription="Alcohol poisoning"
     selfcauseofdeathdescription="You have died of alcohol poisoning."
     limbspecific="false"
@@ -4591,8 +4591,8 @@ thats what the vomiting symptom is for -->
       target="OtherCharacter"
       minstrength="80"
       maxstrength="100"/>
-
-    <Effect minstrength="0" maxstrength="20" strengthchange="-0.1"/>
+      <!-- no effects at this point -->
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.1"/>
 
       <!-- Low level of drunkenness decreases speed slightly -->
       <Effect minstrength="20" maxstrength="40"
@@ -4601,14 +4601,17 @@ thats what the vomiting symptom is for -->
         strengthchange="-0.1"
         minfacetint="255,0,0,0"
         maxfacetint="255,0,0,50">
-        <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
           <Conditional ishuman="true" analgesia="lte 5"/>
           <Affliction identifier="analgesia" amount="1"/>
         </StatusEffect>
-        <StatusEffect target="Character">
-          <conditional ishuman="true"/>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="1" disabledeltatime="true">
           <Affliction identifier="alcoholaddiction" amount="0.05" />
           <ReduceAffliction identifier="alcoholwithdrawal" amount="1" />
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
 
@@ -4624,15 +4627,19 @@ thats what the vomiting symptom is for -->
         dialogflag="DrunkMedium"
         minfacetint="255,0,0,50"
         maxfacetint="255,0,0,100">
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <conditional ishuman="true"/>
           <Affliction identifier="liverdamage" amount="0.1" />
           <Affliction identifier="alcoholaddiction" amount="0.1" />
           <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
         </StatusEffect>
-        <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
           <Conditional ishuman="true" analgesia="lte 5"/>
           <Affliction identifier="analgesia" amount="1"/>
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
 
@@ -4648,15 +4655,19 @@ thats what the vomiting symptom is for -->
         dialogflag="DrunkHigh"
         minfacetint="255,0,0,150"
         maxfacetint="255,0,0,150">
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <conditional ishuman="true"/>
           <Affliction identifier="liverdamage" amount="0.2" />
           <Affliction identifier="alcoholaddiction" amount="0.1" />
           <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
         </StatusEffect>
-        <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
           <Conditional ishuman="true" analgesia="lte 5"/>
           <Affliction identifier="analgesia" amount="1"/>
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
 
@@ -4671,15 +4682,19 @@ thats what the vomiting symptom is for -->
         dialogflag="DrunkHigh"
         minfacetint="255,0,0,150"
         maxfacetint="255,0,0,150">
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <conditional ishuman="true"/>
           <Affliction identifier="liverdamage" amount="0.2" />
           <Affliction identifier="alcoholaddiction" amount="0.1" />
           <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
         </StatusEffect>
-        <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
           <Conditional ishuman="true" analgesia="lte 5"/>
           <Affliction identifier="analgesia" amount="1"/>
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
 
@@ -4687,11 +4702,97 @@ thats what the vomiting symptom is for -->
     </Affliction>
   <!-- Vanilla affliction override end -->
   <!-- Vanilla affliction override start -->
+  <Affliction
+    identifier="drunknodebuffs"
+    type="debuff"
+    translationoverride="drunk"
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="20"
+    maxstrength="100"
+    affectmachines="false">
+
+    <!-- no effects at this point -->
+    <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" />
+
+    <Effect minstrength="20" maxstrength="40"
+      minscreendistort="0"
+      maxscreendistort="0.1"
+      strengthchange="-0.1"
+      minfacetint="255,0,0,0"
+      maxfacetint="255,0,0,50">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="40" maxstrength="80"
+      minscreendistort="0.1"
+      maxscreendistort="1.0"
+      minscreenblur="0.1"
+      maxscreenblur="0.5"
+      strengthchange="-0.2"
+      minradialdistort="0.0"
+      maxradialdistort="2.0"
+      dialogflag="DrunkMedium"
+      minfacetint="255,0,0,50"
+      maxfacetint="255,0,0,100">
+      <StatusEffect target="Character">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="80" maxstrength="100"
+      minscreendistort="1.0"
+      maxscreendistort="3.0"
+      minscreenblur="0.5"
+      maxscreenblur="1.0"
+      strengthchange="-0.2"
+      minradialdistort="2.0"
+      maxradialdistort="3.0"
+      dialogflag="DrunkHigh"
+      minfacetint="255,0,0,150"
+      maxfacetint="255,0,0,150">
+      <StatusEffect target="Character">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
     <Affliction
       name=""
       identifier="radiationsickness"
       description=""
-      type="poison"
       causeofdeathdescription="Died of radiation sickness."
       selfcauseofdeathdescription="You have died of radiation sickness."
       limbspecific="false"
@@ -4790,25 +4891,13 @@ thats what the vomiting symptom is for -->
         maxscreendistort="0.1"
         minscreenblur="0.1"
         maxscreenblur="2.0"
-        screeneffectfluctuationfrequency="0.05"/>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
-    </Affliction>
-  <!-- Vanilla affliction override end -->
-  <!-- Vanilla affliction override start -->
-    <Affliction
-      identifier="implacable"
-      type="talentbuff"
-      isbuff="true"
-      limbspecific="false"
-      maxstrength="15"
-      treatmentthreshold="1000"
-      iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-      <Effect minstrength="0" maxstrength="15"
-        strengthchange="-0.25">
-        <StatValue stattype="AttackMultiplier" value="0.25" />
-        <AbilityFlag flagtype="AlwaysStayConscious" />
+        screeneffectfluctuationfrequency="0.05">
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
+        </StatusEffect>
       </Effect>
-      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
     </Affliction>
   <!-- Vanilla affliction override end -->
 
@@ -4827,13 +4916,13 @@ thats what the vomiting symptom is for -->
       resistancefor="stun"
       minresistance="0"
       maxresistance="0.45">
-      <StatusEffect target="Character" >
-        <ReduceAffliction type="damage" strength="1.0"/>
-        <ReduceAffliction type="burn" strength="1.0"/>
-        <ReduceAffliction identifier="bloodloss" strength="1.0"/>
-        <ReduceAffliction identifier="bleeding" strength="1.0"/>
-        <ReduceAffliction identifier="internalbleeding" strength="1.0"/>
-        <ReduceAffliction identifier="chemwithdrawal" strength="1.0"/>
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" strength="0.1"/>
+        <ReduceAffliction type="burn" strength="0.1"/>
+        <ReduceAffliction identifier="bloodloss" strength="0.1"/>
+        <ReduceAffliction type="bleeding" strength="0.1"/>
+        <ReduceAffliction identifier="internalbleeding" strength="0.1"/>
+        <ReduceAffliction identifier="chemwithdrawal" strength="0.1"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="100"
@@ -4841,13 +4930,13 @@ thats what the vomiting symptom is for -->
       resistancefor="stun"
       minresistance="0.45"
       maxresistance="0.5">
-      <StatusEffect target="Character">
-        <ReduceAffliction type="damage" strength="2.0"/>
-        <ReduceAffliction type="burn" strength="2.0"/>
-        <ReduceAffliction identifier="bloodloss" strength="2.0"/>
-        <ReduceAffliction identifier="bleeding" strength="2.0"/>
-        <ReduceAffliction identifier="internalbleeding" strength="2.0"/>
-        <ReduceAffliction identifier="chemwithdrawal" strength="2.0"/>
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" strength="0.2"/>
+        <ReduceAffliction type="burn" strength="0.2"/>
+        <ReduceAffliction identifier="bloodloss" strength="0.2"/>
+        <ReduceAffliction identifier="bleeding" strength="0.2"/>
+        <ReduceAffliction identifier="internalbleeding" strength="0.2"/>
+        <ReduceAffliction identifier="chemwithdrawal" strength="0.2"/>
       </StatusEffect>
     </Effect>
     <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
@@ -4895,7 +4984,7 @@ thats what the vomiting symptom is for -->
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.6">
       </Effect>
-      <PeriodicEffect mininterval="12" maxinterval="16">
+      <PeriodicEffect mininterval="12" maxinterval="16" minstrength="50" maxstrength="100">
         <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
         <StatusEffect target="Character" comparison="and">
           <Conditional ishuman="true" />
@@ -4911,7 +5000,10 @@ thats what the vomiting symptom is for -->
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
-        <StatusEffect target="Character">
+        <StatusEffect target="Character" duration="2">
+          <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="stun" strength="0.1"/>
           <Affliction identifier="organdamage" strength="0.5"/>
           <LuaHook name="NT.vomit" />
@@ -4925,6 +5017,116 @@ thats what the vomiting symptom is for -->
 
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0"/>
     </Affliction>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Affliction
+    identifier="adrenalinerush"
+    type="adrenaline"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="8"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Description
+      textidentifier="afflictiondescription.adrenalinerush.self"
+      target="Self" />
+    <Description
+      textidentifier="afflictiondescription.adrenalinerush"
+      target="OtherCharacter " />
+    <Effect minstrength="0" maxstrength="8" strengthchange="-1"
+      resistancefor="stun" minresistance="0" maxresistance="0.5">
+      <StatusEffect target="Character" interval="8" disabledeltatime="true">
+        <ReduceAffliction type="stun" amount="30" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="VigorousWalk" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+<!--       <AbilityFlag flagtype="AlwaysStayConscious" /> -->
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sourcerect="768,256,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Affliction
+    identifier="infection"
+    type="infection"
+    limbspecific="true"
+    treatmentthreshold="1000"
+    showinhealthscannerthreshold="1000"
+    showiconthreshold="1000"
+    maxstrength="200"
+    healcostmultiplier="2.5">
+    <Effect minstrength="0" maxstrength="200" strengthchange="-0.001"/>
+    <icon texture="Content/UI/TalentsIcons4.png" sourcerect="0,384,128,128" color="84,171,90,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Burning name="Burning" identifier="burning" description="The target is burning." type="burn" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true" activationthreshold="1.0" showiconthreshold="1000" maxstrength="15">
+    <!-- A buildup for burning, you don't burn yet until reaching 5 -->
+    <Effect minstrength="0" maxstrength="5" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1.0">
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- You actively start burning here -->
+    <Effect minstrength="5" maxstrength="10" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1.0">
+      <StatusEffect target="Limb">
+        <Conditional InWater="false" />
+        <ParticleEmitter particle="flameburningcharacter" DistanceMin="0" DistanceMax="30" ParticlesPerSecond="200" AngleMin="60" AngleMax="120" VelocityMax="20"/>
+        <ParticleEmitter particle="smoke" particlespersecond="6" scalemin="4" scalemax="3" distancemin="10" distancemax="50" />
+        <Affliction identifier="burn" amount="1.2" />
+      </StatusEffect>
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional InWater="false" />
+        <sound file="Content/Sounds/FireSmall.ogg" range="200.0" volume="0.5" />
+      </StatusEffect>
+      <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
+        <Conditional ishuman="true" burning="gte 5" />
+        <Affliction identifier="severepainlite" amount="10" />
+      </StatusEffect>
+    </Effect>
+    <!-- Past 10, you've fully caught on fire and burning reduces at a much slower rate -->
+    <Effect minstrength="10" maxstrength="15" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-0.2">
+      <StatusEffect target="Limb">
+        <Conditional InWater="false" />
+        <ParticleEmitter particle="flameburningcharacter" DistanceMin="0" DistanceMax="30" ParticlesPerSecond="200" AngleMin="60" AngleMax="120" VelocityMax="20"/>
+        <ParticleEmitter particle="smoke" particlespersecond="6" scalemin="4" scalemax="3" distancemin="10" distancemax="50" />
+        <Affliction identifier="burn" amount="1.6" />
+      </StatusEffect>
+      <StatusEffect target="Limb" disabledeltatime="true">
+        <Conditional InWater="true" />
+        <ReduceAffliction identifier="burning" amount="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
+        <Conditional pressureProtection="gte 1000"/>
+        <Conditional ishuman="true"/>
+        <ReduceAffliction identifier="burning" amount="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional InWater="false" />
+        <sound file="Content/Sounds/FireSmall.ogg" range="200.0" />
+      </StatusEffect>
+      <StatusEffect target="limb,character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
+        <Conditional ishuman="true" burning="gte 10" />
+        <Affliction identifier="severepainlite" amount="10" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,0,0,255" origin="0,0" />
+  </Burning>
   <!-- Vanilla affliction override end -->
   <!-- /// Override section ends /// -->
 
