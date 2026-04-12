@@ -850,14 +850,14 @@
     </MeleeWeapon>  
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
       <GuiFrame relativesize="0.14,0.25" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,0" style="ItemUI" />
-      <Button text="multiscalpel.btn.incision"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.incision"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.incision"><StatusEffect type="OnUse" target="This" stackable="true"><LuaHook name="NT.multiscalpel.incision"/></StatusEffect></Button>
       <!--<Button text="multiscalpel.btn.kidneys"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.kidneys"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.liver"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.liver"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.lungs"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.lungs"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.heart"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.heart"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.brain"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.brain"/></StatusEffect></Button>-->
-      <Button text="multiscalpel.btn.bandage"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.bandage"/></StatusEffect></Button>
-      <Button text="multiscalpel.btn.speedflex"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.speedflex"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.bandage"><StatusEffect type="OnUse" target="This" stackable="true"><LuaHook name="NT.multiscalpel.bandage"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.speedflex"><StatusEffect type="OnUse" target="This" stackable="true"><LuaHook name="NT.multiscalpel.speedflex"/></StatusEffect></Button>
     </CustomInterface>
 
   </Item>
@@ -4015,7 +4015,7 @@
         <RequiredSkill identifier="medical" level="50" />
         <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
 	      <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="60.0">
+        <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" duration="60.0">
           <ReduceAffliction identifier="internaldamage" amount="0.2" />
           <ReduceAffliction identifier="stun" amount="0.9" />
           <Affliction identifier="chemaddiction" amount="0.3" />
@@ -4023,11 +4023,11 @@
           <Affliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="chemwithdrawal" amount="1.5" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
+        <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true">
           <Affliction identifier="haste" amount="400" />
           <Affliction identifier="strengthen" amount="400" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">
+        <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget" duration="60.0">
           <!-- TODO: should this be any affliction of type damage?-->
           <ReduceAffliction identifier="internaldamage" amount="0.1" />
           <ReduceAffliction identifier="stun" amount="0.25" />
