@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sounds>
+	<Override>
 	<ecg1 file="%ModDir%/Sound/BHUI/ecg1.ogg"/>
 	<ecg2 file="%ModDir%/Sound/BHUI/ecg2.ogg"/>
 	<flatline1 file="%ModDir%/Sound/BHUI/flatline1.ogg"/>
@@ -9,4 +10,15 @@
 	<impact_squeak file="%ModDir%/Sound/squeak3.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak4.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak5.ogg" range="500"/>
+	
+	<!-- override to remove oxygenlow heartbeat sound -->
+
+	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+	</Override>	
+	
 </sounds>
