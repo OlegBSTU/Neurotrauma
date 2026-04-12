@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+
+<!-- ITEMS -->
+
+<!-- /// Gear /// -->
+<entityname.defibrillator>Defibrylator ręczny</entityname.defibrillator>
+<entitydescription.defibrillator>Urządzenie medyczne dostarczające wstrząs elektryczny do serca w celu stabilizacji arytmii serca. Wymaga intensywnego przeszkolenia medycznego. Stosować u pacjenta z zatrzymaniem akcji serca.</entitydescription.defibrillator>
+
+<entityname.aed>Automatyczny defibrylator zewnętrzny</entityname.aed>
+<entitydescription.aed>Urządzenie medyczne dostarczające wstrząs elektryczny do serca w celu stabilizacji arytmii serca. Nie wymaga szkolenia medycznego. Stosować u pacjenta z zatrzymaniem akcji serca.</entitydescription.aed>
+
+<entityname.bvm>Resuscytator</entityname.bvm>
+<entitydescription.bvm>Ten worek samorozprężalny (BVM) jest ręcznym urządzeniem powszechnie używanym do zapewniania wentylacji dodatnim ciśnieniem pacjentom, którzy nie oddychają lub oddychają niewystarczająco.</entitydescription.bvm>
+
+<entityname.autocpr>Auto-puls</entityname.autocpr>
+<entitydescription.autocpr>Zautomatyzowane, przenośne, zasilane bateryjnie urządzenie do resuscytacji krążeniowo-oddechowej, zakładane jak kamizelka.</entitydescription.autocpr>
+
+<entityname.bloodanalyzer>Analizator hematologiczny</entityname.bloodanalyzer>
+<entitydescription.bloodanalyzer>Automatyczny analizator krwi. Może drukować grupy krwi na czystych kartach dawców lub analizować ciśnienie i skład krwi.</entitydescription.bloodanalyzer>
+
+<entityname.bloodcollector>Pusta karta dawcy</entityname.bloodcollector>
+<entitydescription.bloodcollector>Używana przez analizator hematologiczny.</entitydescription.bloodcollector>
+
+<entityname.traumashears>Nożyczki ratownicze</entityname.traumashears>
+<entitydescription.traumashears>Narzędzie do usuwania opatrunków i gipsów.</entitydescription.traumashears>
+
+
+<entityname.wheelchair>Wózek inwalidzki</entityname.wheelchair>
+<entitydescription.wheelchair>Sprawia, że ruch jest zależny od ramion, a nie nóg.</entitydescription.wheelchair>
+
+<entityname.blahaj>Żarłacz błękitny</entityname.blahaj>
+
+<Override>
+<entityname.healthscanner>Skaner zdrowia</entityname.healthscanner>
+<entitydescription.healthscanner>Podobnie jak analizator krwi, służy do diagnozowania przyczyn objawów. UWAGA: promieniowanie rentgenowskie.</entitydescription.healthscanner>
+</Override>
+
+<stasisbagequipconfirmation>Założenie spowoduje utratę przytomności. Czy na pewno chcesz to założyć?</stasisbagequipconfirmation>
+
+<!-- /// Surgery /// -->
+<entityname.advscalpel>Skalpel</entityname.advscalpel>
+<entitydescription.advscalpel>Narzędzie służące do wykonywania nacięć podczas operacji.</entitydescription.advscalpel>
+
+<entityname.advhemostat>Kleszcze hemostatyczne</entityname.advhemostat>
+<entitydescription.advhemostat>Narzędzie służące do zaciskania naczyń krwionośnych podczas operacji.</entitydescription.advhemostat>
+
+<entityname.advretractors>Retraktor</entityname.advretractors>
+<entitydescription.advretractors>Narzędzie służące do otwierania nacięć podczas operacji.</entitydescription.advretractors>
+
+<entityname.tweezers>Pęseta</entityname.tweezers>
+<entitydescription.tweezers>Narzędzie, które umożliwia usuwanie odłamków oraz martwych tkanek.</entitydescription.tweezers>
+
+<entityname.surgerysaw>Piła chirurgiczna</entityname.surgerysaw>
+<entitydescription.surgerysaw>Narzędzie używane do przecinania kości.</entitydescription.surgerysaw>		
+
+<entityname.suture>Szew</entityname.suture>
+<entitydescription.suture>Biodegradowalne szwy do zszywania ran i nacięć chirurgicznych.</entitydescription.suture>
+
+<entityname.surgicaldrill>Wiertarka chirurgiczna</entityname.surgicaldrill>
+<entitydescription.surgicaldrill>Narzędzie do wiercenia kości.</entitydescription.surgicaldrill>
+
+<entityname.osteosynthesisimplants>Implanty osteosyntetyczne</entityname.osteosynthesisimplants>
+<entitydescription.osteosynthesisimplants>Implanty tytanowe stosowane w chirurgii osteosyntezy do naprawy złamań.</entitydescription.osteosynthesisimplants>
+
+<entityname.spinalimplant>Implanty rdzenia kręgowego</entityname.spinalimplant>
+<entitydescription.spinalimplant>Implanty tytanowe stosowane do leczenia paraliżu spowodowanego złamaniami szyi.</entitydescription.spinalimplant>
+
+<entityname.operatingtable>Stół chirurgiczny</entityname.operatingtable>
+<entitydescription.operatingtable>Stół operacyjny z wbudowaną podstawową sztuczną wentylacją.</entitydescription.operatingtable>
+
+<entityname.organscalpel_liver>Skalpel do pobierania narządów: Wątroba</entityname.organscalpel_liver>
+<entitydescription.organscalpel_liver>Specjalistyczny skalpel do usuwania wątroby.</entitydescription.organscalpel_liver>
+
+<entityname.organscalpel_kidneys>Skalpel do pobierania narządów: Nerki</entityname.organscalpel_kidneys>
+<entitydescription.organscalpel_kidneys>Specjalistyczny skalpel do usuwania nerek.</entitydescription.organscalpel_kidneys>
+
+<entityname.organscalpel_lungs>Skalpel do pobierania narządów: Płuca</entityname.organscalpel_lungs>
+<entitydescription.organscalpel_lungs>Specjalistyczny skalpel do usuwania płuc.</entitydescription.organscalpel_lungs>
+
+<entityname.organscalpel_heart>Skalpel do pobierania narządów: Serce</entityname.organscalpel_heart>
+<entitydescription.organscalpel_heart>Specjalistyczny skalpel do usuwania serca.</entitydescription.organscalpel_heart>
+
+<entityname.organscalpel_brain>Skalpel do pobierania narządów: Mózgu</entityname.organscalpel_brain>
+<entitydescription.organscalpel_brain>Specjalistyczny skalpel do usuwania mózgu.</entitydescription.organscalpel_brain>
+
+
+
+<!-- /// Treatments /// -->
+<entityname.mannitol>Mannitol</entityname.mannitol>
+<entitydescription.mannitol>Rodzaj alkoholu cukrowego. Służy do wspomagania powrotu do zdrowia po neurotraumie. Może powodować uszkodzenie narządów.</entitydescription.mannitol>
+
+<entityname.streptokinase>Streptokinaza</entityname.streptokinase>
+<entitydescription.streptokinase>Enzym trombolityczny, który rozkłada skrzepy krwi i zmniejsza jej krzepliwość. Służy do leczenia zawałów serca.</entitydescription.streptokinase>
+
+<entityname.immunosuppressant>Azatiopryna</entityname.immunosuppressant>
+<entitydescription.immunosuppressant>Środek immunosupresyjny do zapobiegania odrzuceniu narządu.</entitydescription.immunosuppressant>
+
+<entityname.thiamine>Tiamina</entityname.thiamine>
+<entitydescription.thiamine>Znane również jako witamina B1, tabletki te pomogą w gojeniu się narządów.</entitydescription.thiamine>
+
+<entityname.ointment>Maść antybiotykowa</entityname.ointment>
+<entitydescription.ointment>Silnie antyseptyczny żel, który wspomaga regenerację po oparzeniach, a także po drobnych infekcjach.</entitydescription.ointment>
+
+<entityname.endovascballoon>Balon wewnątrznaczyniowy</entityname.endovascballoon>
+<entitydescription.endovascballoon>Balon stosowany w wypadku pęknięcia głównej tęntnicy. Odcina przepływ krwi, ale zatrzymuje krwawienie.</entitydescription.endovascballoon>
+
+<entityname.medstent>Stent medyczny</entityname.medstent>
+<entitydescription.medstent>Plastikowa rurka wprowadzona do aorty po balonie wewnątrznaczyniowym, w wypadku pęknięciu aorty.</entitydescription.medstent>
+
+<entityname.tourniquet>Opaska uciskowa</entityname.tourniquet>
+<entitydescription.tourniquet>Wywiera nacisk na kończynę, a tym samym zmniejsza przepływ krwi. Zwykle stosuje się go w przypadku dużych krwawień na kończynach. Nie należy stosować na głowę.</entitydescription.tourniquet>
+
+<entityname.drainage>Drenaż</entityname.drainage>
+<entitydescription.drainage>Odprowadza powietrze z jamy opłucnej podczas operacji korekcyjnej odmy opłucnowej.</entitydescription.drainage>
+
+<entityname.needle>Igła</entityname.needle>
+<entitydescription.needle>Igła z zaworem dekompresyjnym umożliwiająca odpływ powietrza lub płynu z jamy opłucnej lub osierdzia.</entitydescription.needle>
+
+<entityname.ringerssolution>Roztwór Ringera</entityname.ringerssolution>
+<entitydescription.ringerssolution>Roztwór kilku soli rozpuszczonych w wodzie w celu leczenia niskiego ciśnienia krwi lub utraty płynów. Izotoniczny do krwi.</entitydescription.ringerssolution>
+
+<entityname.antiseptic>Atomizator antyseptyczny</entityname.antiseptic>
+<entitydescription.antiseptic>Urządzenie służące do rozpylania płynu antyseptycznego.</entitydescription.antiseptic>
+
+<entityname.antisepticspray>Spray antyseptyczny</entityname.antisepticspray>
+<entitydescription.antisepticspray>Spray do atomizatora, rozpylany na rany w celu odkażenia.</entitydescription.antisepticspray>
+
+<entityname.propofol>Propofol</entityname.propofol>
+<entitydescription.propofol>Środek znieczulenia ogólnego (narkozy) o krótkim działaniu. Powoduje obniżony poziom świadomości i brak pamięci zdarzeń.</entitydescription.propofol>
+
+<entityname.gypsum>Gips</entityname.gypsum>
+<entitydescription.gypsum>Drobny proszek mineralny stosowany do zamykania złamań kończyn w opatrunku gipsowym. Najpierw nałóż bandaż.</entitydescription.gypsum>
+
+
+<!-- /// Blood stuff /// -->
+
+<!--<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>-->
+<!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
+
+<entityname.emptybloodpack>Pusty worek na krew</entityname.emptybloodpack>
+<entitydescription.emptybloodpack>Służy do upustu i transfuzji krwi.</entitydescription.emptybloodpack>
+
+<entityname.bloodpackoplus>Worek krwi O+</entityname.bloodpackoplus>
+<entitydescription.bloodpackoplus>Biorcy: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
+
+<entityname.bloodpackominus>Worek krwi O-</entityname.bloodpackominus>
+<entitydescription.bloodpackominus>Biorcy: wszyscy.</entitydescription.bloodpackominus>
+
+<entityname.bloodpackaplus>Worek krwi A+</entityname.bloodpackaplus>
+<entitydescription.bloodpackaplus>Biorcy: A+, AB+</entitydescription.bloodpackaplus>
+
+<entityname.bloodpackbplus>Worek krwi B+</entityname.bloodpackbplus>
+<entitydescription.bloodpackbplus>Biorcy: B+, AB+</entitydescription.bloodpackbplus> -->
+
+<entityname.bloodpackabplus>Worek Krwi AB+</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>Biorcy: AB+</entitydescription.bloodpackabplus> -->
+
+<entityname.bloodpackaminus>Worek krwi A-</entityname.bloodpackaminus>
+<entitydescription.bloodpackaminus>Biorcy: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+
+<entityname.bloodpackbminus>Worek krwi B-</entityname.bloodpackbminus>
+<entitydescription.bloodpackbminus>Biorcy: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
+
+<entityname.bloodpackabminus>Worek krwi AB-</entityname.bloodpackabminus>
+<entitydescription.bloodpackabminus>Biorcy: AB-, AB+</entitydescription.bloodpackabminus>
+
+<Override>
+<entityname.antibloodloss2>Worek krwi O-</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>Biorcy: wszyscy.</entitydescription.antibloodloss2>
+</Override>
+
+<entityname.ominuscard>Karta dawcy O-</entityname.ominuscard>
+<entitydescription.ominuscard>Może pobrać krew od: O-
+Biorcy: wszyscy.</entitydescription.ominuscard>
+
+<entityname.opluscard>Karta dawcy O+</entityname.opluscard>
+<entitydescription.opluscard>Może pobrać krew od: O-, O+
+Biorcy: O+, A+, B+, AB+</entitydescription.opluscard>
+
+<entityname.aminuscard>Karta dawcy A-</entityname.aminuscard>
+<entitydescription.aminuscard>Może pobrać krew od: O-, A-
+Biorcy: A-, A+, AB-, AB+</entitydescription.aminuscard>
+
+<entityname.apluscard>Karta dawcy A+</entityname.apluscard>
+<entitydescription.apluscard>Może pobrać krew od: O-, O+, A-, A+
+Biorcy: A+, AB+</entitydescription.apluscard>
+
+<entityname.bminuscard>Karta dawcy B-</entityname.bminuscard>
+<entitydescription.bminuscard>Może pobrać krew od: O-, B-
+Biorcy: B-, B+, AB-, AB+</entitydescription.bminuscard>
+
+<entityname.bpluscard>Karta dawcy B+</entityname.bpluscard>
+<entitydescription.bpluscard>Może pobrać krew od: O-, O+, B-, B+
+Biorcy: B+, AB+</entitydescription.bpluscard>
+
+<entityname.abminuscard>Karta dawcy AB-</entityname.abminuscard>
+<entitydescription.abminuscard>Może pobrać krew od: O-, A-, B-, AB-
+Biorcy: AB-, AB+</entitydescription.abminuscard>
+
+<entityname.abpluscard>Karta dawcy AB+</entityname.abpluscard>
+<entitydescription.abpluscard>Może pobrać krew od: wszyscy.
+Biorcy: AB+</entitydescription.abpluscard>
+
+
+
+<!-- /// New containers /// -->
+<entityname.medtoolbox>Pojemnik medyczny</entityname.medtoolbox> 
+<entitydescription.medtoolbox>Może przechowywać lekarstwa i instrumenty medyczne</entitydescription.medtoolbox>
+
+<entityname.surgerytoolbox>Przybornik chirurgiczny</entityname.surgerytoolbox> 
+<entitydescription.surgerytoolbox>Pomieści wiele małych narzędzi chirurgicznych.</entitydescription.surgerytoolbox>
+
+<entityname.organcrate>Skrzynia chłodnicza</entityname.organcrate> 
+<entitydescription.organcrate>Miejsce do przechowywania cennych narządów gotowych do przeszczepu.</entitydescription.organcrate>
+
+<entityname.organtoolbox>Pojemnik chłodniczy</entityname.organtoolbox> 
+<entitydescription.organtoolbox>Miejsce do przechowywania cennych narządów gotowych do przeszczepu.</entitydescription.organtoolbox>
+
+<entityname.bodybag>Worek na ciało</entityname.bodybag>
+<entitydescription.bodybag>Pozwala szybciej przeciągać ludzi.</entitydescription.bodybag>
+
+<entityname.stasisbag>Worek stazy medycznej</entityname.stasisbag>
+<entitydescription.stasisbag>Zatrzymuje większość procesów biologicznych.</entitydescription.stasisbag>
+
+
+
+<!-- /// Limbs and organs /// -->
+<entityname.rarm>Prawe ramię</entityname.rarm>
+<entitydescription.rarm>Może być ponownie przymocowane chirurgicznie.</entitydescription.rarm>
+
+<entityname.larm>Lewe ramię</entityname.larm>
+<entitydescription.larm>Może być ponownie przymocowane chirurgicznie.</entitydescription.larm>
+
+<entityname.rleg>Prawa noga</entityname.rleg>
+<entitydescription.rleg>Może być ponownie przymocowana chirurgicznie.</entitydescription.rleg>
+
+<entityname.lleg>Lewa noga</entityname.lleg>
+<entitydescription.lleg>Może być ponownie przymocowana chirurgicznie.</entitydescription.lleg>
+
+<entityname.rarmp>Proteza bioniczna prawego ramienia</entityname.rarmp>
+<entitydescription.rarmp>Bioniczne prawe ramię. Może być stosowana w leczeniu amputacji chirurgicznej.</entitydescription.rarmp>
+
+<entityname.larmp>Proteza bioniczna lewego ramienia</entityname.larmp>
+<entitydescription.larmp>Bioniczne lewe ramię. Może być stosowana w leczeniu amputacji chirurgicznej.</entitydescription.larmp>
+
+<entityname.rlegp>Proteza bioniczna prawej nogi</entityname.rlegp>
+<entitydescription.rlegp>Bioniczna prawa noga. Może być stosowana w leczeniu amputacji chirurgicznej.</entitydescription.rlegp>
+
+<entityname.llegp>Proteza bioniczna lewej nogi</entityname.llegp>
+<entitydescription.llegp>Bioniczna lewa noga. Może być stosowana w leczeniu amputacji chirurgicznej.</entitydescription.llegp>
+
+<entityname.livertransplant>Przeszczep wątroby</entityname.livertransplant>
+<entityname.livertransplant_q1>Przeszczep wątroby</entityname.livertransplant_q1>
+<entityname.livertransplant_q2>Przeszczep wątroby</entityname.livertransplant_q2>
+<entityname.livertransplant_q3>Przeszczep wątroby</entityname.livertransplant_q3>
+<entityname.livertransplant_q4>Przeszczep wątroby</entityname.livertransplant_q4>
+<entityname.livertransplant_q5>Przeszczep wątroby</entityname.livertransplant_q5>
+
+<entityname.lungtransplant>Przeszczep płuc</entityname.lungtransplant>
+<entityname.lungtransplant_q1>Przeszczep płuc</entityname.lungtransplant_q1>
+<entityname.lungtransplant_q2>Przeszczep płuc</entityname.lungtransplant_q2>
+<entityname.lungtransplant_q3>Przeszczep płuc</entityname.lungtransplant_q3>
+<entityname.lungtransplant_q4>Przeszczep płuc</entityname.lungtransplant_q4>
+<entityname.lungtransplant_q5>Przeszczep płuc</entityname.lungtransplant_q5>
+
+<entityname.kidneytransplant>Przeszczep nerki</entityname.kidneytransplant>
+<entityname.kidneytransplant_q1>Przeszczep nerki</entityname.kidneytransplant_q1>
+<entityname.kidneytransplant_q2>Przeszczep nerki</entityname.kidneytransplant_q2>
+<entityname.kidneytransplant_q3>Przeszczep nerki</entityname.kidneytransplant_q3>
+<entityname.kidneytransplant_q4>Przeszczep nerki</entityname.kidneytransplant_q4>
+<entityname.kidneytransplant_q5>Przeszczep nerki</entityname.kidneytransplant_q5>
+
+<entityname.hearttransplant>Transplantacja serca</entityname.hearttransplant>
+<entityname.hearttransplant_q1>Transplantacja serca</entityname.hearttransplant_q1>
+<entityname.hearttransplant_q2>Transplantacja serca</entityname.hearttransplant_q2>
+<entityname.hearttransplant_q3>Transplantacja serca</entityname.hearttransplant_q3>
+<entityname.hearttransplant_q4>Transplantacja serca</entityname.hearttransplant_q4>
+<entityname.hearttransplant_q5>Transplantacja serca</entityname.hearttransplant_q5>
+
+<entityname.braintransplant>Przeszczep mózgu</entityname.braintransplant>
+
+<entityname.armlock1>Niesprawna prawa ręka</entityname.armlock1>
+<entityname.armlock2>Niesprawna lewa ręka</entityname.armlock2>
+
+
+<!-- AFFLICTIONS -->
+
+
+<!-- TEMPLATE -->
+
+<!-- <afflictionname.organdamage></afflictionname.organdamage> -->
+<!-- <afflictiondescription.organdamage></afflictiondescription.organdamage> -->
+<!-- <afflictioncauseofdeath.organdamage></afflictioncauseofdeath.organdamage> -->
+<!-- <afflictioncauseofdeathself.organdamage></afflictioncauseofdeathself.organdamage> -->
+
+<!-- /// Heart /// -->
+
+<afflictionname.tachycardia>Zwiększone tętno</afflictionname.tachycardia>
+<afflictiondescription.tachycardia>Serce bije w niepokojąco szybkim tempie.</afflictiondescription.tachycardia>
+
+<afflictionname.fibrillation>Arytmia</afflictionname.fibrillation>
+<afflictiondescription.fibrillation>Skurcze mięśnia sercowego są nieregularne, występuje odczucie trzepotania.</afflictiondescription.fibrillation>
+
+<afflictionname.cardiacarrest>Zatrzymanie akcji serca</afflictionname.cardiacarrest>
+<afflictiondescription.cardiacarrest>Brak pulsu.</afflictiondescription.cardiacarrest>
+
+<afflictionname.heartattack>Zawał mięśnia sercowego</afflictionname.heartattack>
+<afflictiondescription.heartattack>Atak serca.</afflictiondescription.heartattack>
+
+<afflictionname.heartdamage>Uszkodzenie serca</afflictionname.heartdamage>
+<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+
+<afflictionname.heartfailure>Niewydolność serca</afflictionname.heartfailure>
+<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+
+<afflictionname.heartremoved>Usunięte serce</afflictionname.heartremoved>
+<afflictiondescription.heartremoved>Serce zostało usunięte chirurgicznie.</afflictiondescription.heartremoved>
+
+<!-- /// Brain /// -->
+
+<afflictionname.cerebralhypoxia>Niedotlenienie mózgu</afflictionname.cerebralhypoxia>
+<afflictiondescription.cerebralhypoxia>Poważny uraz mózgu (Neurotrauma)</afflictiondescription.cerebralhypoxia>
+<afflictioncauseofdeath.cerebralhypoxia>Śmierć przez niedotlenienie mózgu.</afflictioncauseofdeath.cerebralhypoxia>
+<afflictioncauseofdeathself.cerebralhypoxia>Umarłeś z powodu niedotlenienia mózgu.</afflictioncauseofdeathself.cerebralhypoxia>
+
+<afflictionname.stroke>Udar mózgu</afflictionname.stroke>
+<afflictiondescription.stroke></afflictiondescription.stroke>
+
+<afflictionname.seizure>Drgawki</afflictionname.seizure>
+<afflictiondescription.seizure></afflictiondescription.seizure>
+
+<afflictionname.coma>Śpiączka</afflictionname.coma>
+<afflictiondescription.coma></afflictiondescription.coma>
+
+<afflictionname.brainremoved>Usunięty mózg</afflictionname.brainremoved>
+<afflictiondescription.brainremoved>Mózg został usunięty chirurgicznie.</afflictiondescription.brainremoved>
+
+<!-- /// Blood /// -->
+
+<afflictionname.bloodpressure>Ciśnienie krwi</afflictionname.bloodpressure>
+<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+
+<afflictionname.hypoxemia>Niedotlenienie</afflictionname.hypoxemia>
+<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+
+<!-- /// Lungs /// -->
+
+<afflictionname.respiratoryarrest>Zarzymanie oddechu</afflictionname.respiratoryarrest>
+<afflictiondescription.respiratoryarrest>Pacjent nie oddycha.</afflictiondescription.respiratoryarrest>
+
+<afflictionname.hyperventilation>Hiperwentylacja</afflictionname.hyperventilation>
+<afflictiondescription.hyperventilation>Pacjent oddycha w niepokojąco szybkim tempie.</afflictiondescription.hyperventilation>
+
+<afflictionname.hypoventilation>Hipowentylacja</afflictionname.hypoventilation>
+<afflictiondescription.hypoventilation>Pacjent oddycha w niepokojąco wolnym tempie.</afflictiondescription.hypoventilation>
+
+<afflictionname.dyspnea>Duszność</afflictionname.dyspnea>
+<afflictiondescription.dyspnea>Oddech pacjenta jest ciężki i płytki.</afflictiondescription.dyspnea>
+
+<afflictionname.alkalosis>Alkaloza</afflictionname.alkalosis>
+<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
+
+<afflictionname.acidosis>Kwasica</afflictionname.acidosis>
+<afflictiondescription.acidosis></afflictiondescription.acidosis>
+
+<afflictionname.rili>Uraz płuc wywołany promieniowaniem</afflictionname.rili>
+<afflictiondescription.rili></afflictiondescription.rili>
+
+<afflictionname.pneumothorax>Odma płucna</afflictionname.pneumothorax>
+<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+
+<afflictionname.lungdamage>Uszkodzenie płuc</afflictionname.lungdamage>
+<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
+
+<afflictionname.lungfailure>Niewydolność płuc</afflictionname.lungfailure>
+<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+
+<afflictionname.lungremoved>Usunięte płuca</afflictionname.lungremoved>
+<afflictiondescription.lungremoved>Płuca zostały usunięte chirurgicznie.</afflictiondescription.lungremoved>
+
+<!-- /// kidneys /// -->
+
+<afflictionname.kidneydamage>Uszkodzenie nerek</afflictionname.kidneydamage>
+<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+
+<afflictionname.kidneyfailure>Niewydolność nerek</afflictionname.kidneyfailure>
+<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+
+<afflictionname.kidneyremoved>Usunięte nerki</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>Nerki zostały usunięte chirurgicznie.</afflictiondescription.kidneyremoved>
+
+<!-- /// bones /// -->
+
+<afflictionname.bonedamage>Uszkodzenie kości</afflictionname.bonedamage>
+<afflictiondescription.bone></afflictiondescription.bone>
+
+<afflictionname.bonedeath>Martwica kości</afflictionname.bonedeath>
+<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+
+<afflictionname.bonegrowth>Stymulowany odrost kości</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>Stymulowano naprawę kości tej części ciała. Aby wyleczyć martwicę, należy stymulować każdą część ciała jednocześnie.</afflictiondescription.bonegrowth>
+
+<!-- /// liver /// -->
+
+<afflictionname.liverdamage>Uszkodzenie wątroby</afflictionname.liverdamage>
+<afflictiondescription.liverdamage></afflictiondescription.liverdamage>
+
+<afflictionname.liverfailure>Niewydolność wątroby</afflictionname.liverfailure>
+<afflictiondescription.liverfailure></afflictiondescription.liverfailure>
+
+<afflictionname.liverremoved>Usunięta wątroba</afflictionname.liverremoved>
+<afflictiondescription.liverremoved>Wątroba została usunięta chirurgicznie.</afflictiondescription.liverremoved>
+
+<!-- /// surgery and related /// -->
+
+<afflictionname.surgeryincision>Nacięcie chirurgiczne</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Nacięcie zostało wykonane skalpelem.</afflictiondescription.surgeryincision>
+  
+<afflictionname.clampedbleeders>Zaciśnięte krwawienie</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Krwawienia operacyjne zostały zatamowane.</afflictiondescription.clampedbleeders>
+
+<afflictionname.arteriesclamp>Zaciśnięte tętnice</afflictionname.arteriesclamp>
+<afflictiondescription.arteriesclamp>Krwawienie z tętnicy zostało zatrzymane, ale dopływ krwi do kończyny jest znacznie zmniejszony.</afflictiondescription.arteriesclamp>
+
+<afflictionname.balloonedaorta>Balonikowanie aorty</afflictionname.balloonedaorta>
+<afflictiondescription.balloonedaorta>Krwawienie aorty zostało zatamowane, ale ustał dopływ krwi do kończyn i narządów.</afflictiondescription.balloonedaorta>
+
+<afflictionname.boneclamp>Szyna</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>Złamanie zostało zabezpieczone szynami.</afflictiondescription.boneclamp>
+
+<afflictionname.bandaged>Bandaż</afflictionname.bandaged>
+<afflictiondescription.bandaged>Chroni przed infekcją, stabilizuje zwichnięcia. Ruch jest nieco spowolniony.</afflictiondescription.bandaged>
+
+<afflictionname.dirtybandage>Brudny bandaż</afflictionname.dirtybandage>
+<afflictiondescription.dirtybandage>Używany do ochrony przed infekcjami, ale teraz działa odwrotnie. Usuń za pomocą nożyc ratowniczych.</afflictiondescription.dirtybandage>
+
+<afflictionname.gypsumcast>Kończyna w gipsie</afflictionname.gypsumcast>
+<afflictiondescription.gypsumcast>Leczy i chroni przed złamaniami. Ruch jest spowolniony. Usuń za pomocą nożyc ratowniczych.</afflictiondescription.gypsumcast>
+
+<afflictionname.ointmented>Maść</afflictionname.ointmented>
+<afflictiondescription.ointmented>Warstwa żelu antybiotykowego chroni i oczyszcza ranę z wszelkich zarazków.</afflictiondescription.ointmented>
+
+<afflictionname.needlec>Igła</afflictionname.needlec>
+<afflictiondescription.needlec>Normalizuje ciśnienie w jamie opłucnej.</afflictiondescription.needlec>
+
+<!-- fractures, amputations, dislocations and bleeding arteries-->
+<afflictionname.ra_fracture>Złamanie prawej kości ramiennej</afflictionname.ra_fracture>
+<afflictiondescription.ra_fracture>Twoja prawa ręka jest złamana.</afflictiondescription.ra_fracture>
+<afflictionname.la_fracture>Złamanie lewej kości ramiennej</afflictionname.la_fracture>
+<afflictiondescription.la_fracture>Twoja lewa ręka jest złamana.</afflictiondescription.la_fracture>
+<afflictionname.rl_fracture>Złamanie prawej kości udowej</afflictionname.rl_fracture>
+<afflictiondescription.rl_fracture>Twoja prawa noga jest złamana.</afflictiondescription.rl_fracture>
+<afflictionname.ll_fracture>Złamanie lewej kości udowej</afflictionname.ll_fracture>
+<afflictiondescription.ll_fracture>Twoja lewa noga jest złamana.</afflictiondescription.ll_fracture>
+<afflictionname.t_fracture>Złamane żebra</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>Jedno lub więcej twoich żeber jest złamane.</afflictiondescription.t_fracture>
+<afflictionname.h_fracture>Pęknięta czaszka</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>Twoja czaszka jest pęknięta.</afflictiondescription.h_fracture>
+<afflictionname.n_fracture>Złamana szyja</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>Twoja szyja jest złamana.</afflictiondescription.n_fracture>
+
+<afflictionname.tra_amputation>Amputacja urazowa</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>Większość tkanki prawej ręki została oderwana.</afflictiondescription.tra_amputation>
+<afflictionname.tla_amputation>Amputacja urazowa</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>Większość tkanki lewej ręki została oderwana.</afflictiondescription.tla_amputation>
+<afflictionname.trl_amputation>Amputacja urazowa</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>Większość tkanki prawej nogi została oderwana.</afflictiondescription.trl_amputation>
+<afflictionname.tll_amputation>Amputacja urazowa</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>Większość tkanki lewej nogi została oderwana.</afflictiondescription.tll_amputation>
+<afflictionname.th_amputation>Amputacja urazowa</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>Większość tkanki głowy została oderwana.</afflictiondescription.th_amputation>
+
+<afflictionname.sra_amputation>Amputacja</afflictionname.sra_amputation>
+<afflictiondescription.sra_amputation>Amputowano chirurgicznie prawą rękę.</afflictiondescription.sra_amputation>
+<afflictionname.sla_amputation>Amputacja</afflictionname.sla_amputation>
+<afflictiondescription.sla_amputation>Amputowano chirurgicznie lewą rękę.</afflictiondescription.sla_amputation>
+<afflictionname.srl_amputation>Amputacja</afflictionname.srl_amputation>
+<afflictiondescription.srl_amputation>Amputowano chirurgicznie prawą nogę.</afflictiondescription.srl_amputation>
+<afflictionname.sll_amputation>Amputacja</afflictionname.sll_amputation>
+<afflictiondescription.sll_amputation>Amputowano chirurgicznie lewą nogę.</afflictiondescription.sll_amputation>
+<afflictionname.sh_amputation>Amputacja</afflictionname.sh_amputation>
+<afflictiondescription.sh_amputation>Amputowano chirurgicznie głowę.</afflictiondescription.sh_amputation>
+
+<afflictionname.t_paralysis>Uraz rdzenia kręgowego</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>Pacjent jest sparaliżowany i nie czuje ciała.</afflictiondescription.t_paralysis>
+<afflictioncauseofdeath.t_paralysis>Zmarł z powodu paraliżu</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>Umarłeś z powodu paraliżu.</afflictioncauseofdeathself.t_paralysis>
+
+
+
+<afflictionname.dislocation1>Zwichnięcie</afflictionname.dislocation1>
+<afflictiondescription.dislocation1>Wymaga nastawienia.</afflictiondescription.dislocation1>
+<afflictionname.dislocation2>Zwichnięcie</afflictionname.dislocation2>
+<afflictiondescription.dislocation2>Wymaga nastawienia.</afflictiondescription.dislocation2>
+<afflictionname.dislocation3>Zwichnięcie</afflictionname.dislocation3>
+<afflictiondescription.dislocation3>Wymaga nastawienia.</afflictiondescription.dislocation3>
+<afflictionname.dislocation4>Zwichnięcie</afflictionname.dislocation4>
+<afflictiondescription.dislocation4>Wymaga nastawienia.</afflictiondescription.dislocation4>
+
+<afflictionname.ll_arterialcut>Krwawienie z tętnicy udowej</afflictionname.ll_arterialcut>
+<afflictiondescription.ll_arterialcut>Tętnica została uszkodzona i powoduje poważną utratę krwi.</afflictiondescription.ll_arterialcut>
+<afflictionname.rl_arterialcut>Krwawienie z tętnicy udowej</afflictionname.rl_arterialcut>
+<afflictiondescription.rl_arterialcut>Tętnica została uszkodzona i powoduje poważną utratę krwi.</afflictiondescription.rl_arterialcut>
+<afflictionname.la_arterialcut>Krwawienie z tętnicy ramiennej</afflictionname.la_arterialcut>
+<afflictiondescription.la_arterialcut>Tętnica została uszkodzona i powoduje poważną utratę krwi.</afflictiondescription.la_arterialcut>
+<afflictionname.ra_arterialcut>Krwawienie z tętnicy ramiennej</afflictionname.ra_arterialcut>
+<afflictiondescription.ra_arterialcut>Tętnica została uszkodzona i powoduje poważną utratę krwi.</afflictiondescription.ra_arterialcut>
+<afflictionname.t_arterialcut>Pęknięcie aorty</afflictionname.t_arterialcut>
+<afflictionname.h_arterialcut>Krwawienie z tętnicy szyjnej</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>Tętnica została uszkodzona i powoduje poważną utratę krwi.</afflictiondescription.h_arterialcut>
+
+<afflictionname.suturedw>Zszywana rana</afflictionname.suturedw>
+<afflictiondescription.suturedw>Rana została zszyta.</afflictiondescription.suturedw>
+
+<afflictionname.immunity>Odporność</afflictionname.immunity>
+<afflictiondescription.immunity></afflictiondescription.immunity>
+
+<afflictionname.infectedwound>Zainfekowana rana</afflictionname.infectedwound>
+<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+
+<afflictionname.sepsis>Posocznica (Sepsa)</afflictionname.sepsis>
+<afflictiondescription.sepsis></afflictiondescription.sepsis>
+
+<afflictionname.necrosis>Martwica</afflictionname.necrosis>
+<afflictiondescription.necrosis></afflictiondescription.necrosis>
+<afflictioncauseofdeath.necrosis>Zmarł z rany martwiczej.</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>Umarłeś na martwicę.</afflictioncauseofdeathself.necrosis>
+
+<afflictionname.gangrene>Zgorzel (Gangrena)</afflictionname.gangrene>
+<afflictiondescription.gangrene>Kończyna skurczyła się i zrobiła się czarna.</afflictiondescription.gangrene>
+
+<afflictionname.afadrenaline>Adrenalina</afflictionname.afadrenaline>
+<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+
+<afflictionname.afstreptokinase>Lek przeciwzakrzepowy</afflictionname.afstreptokinase>
+<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+
+<afflictionname.afthiamine>Tiamina</afflictionname.afthiamine>
+<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+
+<afflictionname.afsaline>Sól fizjologiczna</afflictionname.afsaline>
+<afflictiondescription.afsaline></afflictiondescription.afsaline>
+
+<afflictionname.afringerssolution>Roztwór Ringera</afflictionname.afringerssolution>
+<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+
+<afflictionname.afmannitol>Mannitol</afflictionname.afmannitol>
+<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+
+<afflictionname.afantibiotics>Antybiotyki</afflictionname.afantibiotics>
+<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+
+<afflictionname.afimmunosuppressant>Leki immunosupresyjne</afflictionname.afimmunosuppressant>
+<afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
+
+<afflictionname.hemotransfusionshock>Wstrząs hemotransfuzyjny</afflictionname.hemotransfusionshock>
+<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+
+<afflictionname.foreignbody>Ciało obce</afflictionname.foreignbody>
+<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
+
+<afflictionname.tamponade>Tamponada serca</afflictionname.tamponade>
+<afflictiondescription.tamponade></afflictiondescription.tamponade>
+
+<afflictionname.internalbleeding>Krwotok wewnętrzny</afflictionname.internalbleeding>
+<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
+
+<!-- /// symptoms /// -->
+
+<afflictionname.sym_cough>Kaszel</afflictionname.sym_cough>
+<afflictiondescription.sym_cough>Pacjent okresowo kaszle.</afflictiondescription.sym_cough>
+
+<afflictionname.sym_paleskin>Blada skóra</afflictionname.sym_paleskin>
+<afflictiondescription.sym_paleskin>Skóra pacjenta jest blada.</afflictiondescription.sym_paleskin>
+
+<afflictionname.sym_lightheadedness>Zawroty</afflictionname.sym_lightheadedness>
+<afflictiondescription.sym_lightheadedness>Pacjent odczuwa zawroty głowy.</afflictiondescription.sym_lightheadedness>
+
+<afflictionname.sym_blurredvision>Rozmazany obraz</afflictionname.sym_blurredvision>
+<afflictiondescription.sym_blurredvision>Pacjent odczuwa niewyraźne widzenie.</afflictiondescription.sym_blurredvision>
+
+<afflictionname.sym_confusion>Dezorientacja</afflictionname.sym_confusion>
+<afflictiondescription.sym_confusion>Pacjent wydaje się zagubiony.</afflictiondescription.sym_confusion>
+
+<afflictionname.sym_headache>Bół głowy</afflictionname.sym_headache>
+<afflictiondescription.sym_headache>Pacjent odczuwa ból głowy.</afflictiondescription.sym_headache>
+
+<afflictionname.sym_legswelling>Obrzęk nóg</afflictionname.sym_legswelling>
+<afflictiondescription.sym_legswelling>Nogi pacjenta są spuchnięte.</afflictiondescription.sym_legswelling>
+
+<afflictionname.sym_weakness>Osłabienie</afflictionname.sym_weakness>
+<afflictiondescription.sym_weakness>Pacjent odczuwa słabość kończyn.</afflictiondescription.sym_weakness>
+
+<afflictionname.sym_wheezing>Świszczący oddech</afflictionname.sym_wheezing>
+<afflictiondescription.sym_wheezing>Podczas oddychania pacjenta słychać wysoki dźwięk.</afflictiondescription.sym_wheezing>
+
+<afflictionname.sym_vomiting>Wymioty</afflictionname.sym_vomiting>
+<afflictiondescription.sym_vomiting>Pacjent okresowo wymiotuje.</afflictiondescription.sym_vomiting>
+
+<afflictionname.sym_hematemesis>Wymioty krwi</afflictionname.sym_hematemesis>
+<afflictiondescription.sym_hematemesis>Pacjent okresowo wymiotuje krwią.</afflictiondescription.sym_hematemesis>
+
+<afflictionname.fever>Gorączka</afflictionname.fever>
+<afflictiondescription.fever>Temperatura ciała pacjenta jest podwyższona.</afflictiondescription.fever>
+
+<afflictionname.sym_abdomdiscomfort>Dyskomfort w jamie brzusznej</afflictionname.sym_abdomdiscomfort>
+<afflictiondescription.sym_abdomdiscomfort>Pacjent odczuwa dyskomfort w jamie brzusznej.</afflictiondescription.sym_abdomdiscomfort>
+
+<afflictionname.sym_bloating>Nabrzęknięcie</afflictionname.sym_bloating>
+<afflictiondescription.sym_bloating>Brzuch pacjenta jest wzdęty.</afflictiondescription.sym_bloating>
+
+<afflictionname.sym_jaundice>Żółtaczka</afflictionname.sym_jaundice>
+<afflictiondescription.sym_jaundice>Skóra pacjenta przybrała chorowity odcień żółtego.</afflictiondescription.sym_jaundice>
+
+<afflictionname.sym_sweating>Potliwość</afflictionname.sym_sweating>
+<afflictiondescription.sym_sweating>Pacjent nadmiernie się poci.</afflictiondescription.sym_sweating>
+
+<afflictionname.sym_palpitations>Kołatanie serca</afflictionname.sym_palpitations>
+<afflictiondescription.sym_palpitations>Pacjent odczuwa kołatanie serca.</afflictiondescription.sym_palpitations>
+
+<afflictionname.sym_unconsciousness>Nieprzytomność</afflictionname.sym_unconsciousness>
+<afflictiondescription.sym_unconsciousness>Pacjent jest nieprzytomny.</afflictiondescription.sym_unconsciousness>
+
+<afflictionname.inflammation>Zapalenie</afflictionname.inflammation>
+<afflictiondescription.inflammation>Okolica jest czerwona, spuchnięta i ciepła.</afflictiondescription.inflammation>
+
+<afflictionname.spasm>Skurcz</afflictionname.spasm>
+<afflictiondescription.spasm>Pacjent nie jest w stanie kontrolować nieregularnego zachowania kończyny.</afflictiondescription.spasm>
+
+<afflictionname.sym_craving>Głód narkotykowy</afflictionname.sym_craving>
+<afflictiondescription.sym_craving>Pacjent jest wystarczająco szczęśliwy... dopóki dostaje to, czego potrzebuje.</afflictiondescription.sym_craving>
+
+<afflictionname.onfire>W ogniu!</afflictionname.onfire>
+<afflictiondescription.onfire>Pacjent płonie żywcem! Chwyć gaśnicę!</afflictiondescription.onfire>
+
+<afflictionname.pain_chest>Ból w klatce piersiowej</afflictionname.pain_chest>
+<afflictiondescription.pain_chest>Pacjent odczuwa ostry, przeszywający ból w klatce piersiowej.</afflictiondescription.pain_chest>
+
+<afflictionname.pain_abdominal>Ból brzucha</afflictionname.pain_abdominal>
+<afflictiondescription.pain_abdominal>Pacjent odczuwa uporczywy ból brzucha.</afflictiondescription.pain_abdominal>
+
+<afflictionname.pain_extremity>Intensywny ból</afflictionname.pain_extremity>
+<afflictiondescription.pain_extremity>Pacjent odczuwa silny ból w dotkniętym obszarze.</afflictiondescription.pain_extremity>
+
+<afflictionname.sym_nausea>Mdłości</afflictionname.sym_nausea>
+<afflictiondescription.sym_nausea>Skóra jest wilgotna, a pacjent ma mdłości.</afflictiondescription.sym_nausea>
+
+<afflictionname.luabotomy>Lualess</afflictionname.luabotomy>
+<afflictiondescription.luabotomy>Lua nie działa. Oznacza to, że Neurotrauma i inne mody, które jej używają, nie będą działać. Prosimy o zapoznanie się ze stronami warsztatów modów, których planujecie użyć.</afflictiondescription.luabotomy>
+
+
+<afflictionname.traumaticshock>Szok traumatyczny</afflictionname.traumaticshock>
+<afflictiondescription.traumaticshock>Pacjent odczuwa silny ból i stres.</afflictiondescription.traumaticshock>
+  
+<afflictionname.analgesia>Znieczulenie</afflictionname.analgesia>
+<afflictiondescription.analgesia>Niewrażliwość na ból.</afflictiondescription.analgesia>
+
+<afflictionname.anesthesia>Znieczulenie</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>U pacjenta występuje amnezja i uspokojenie wywołane lekami.</afflictiondescription.anesthesia>
+
+
+<afflictionname.burn_deg1>Oparzenie pierwszego stopnia</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>Miejsce oparzenia jest czerwone i bolesne w dotyku.</afflictiondescription.burn_deg1>
+
+<afflictionname.burn_deg2>Oparzenie drugiego stopnia</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>W miejscu oparzenia znajdują się bardzo bolesne pęcherze.</afflictiondescription.burn_deg2>
+
+<afflictionname.burn_deg3>Oparzenie trzeciego stopnia</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>Miejsce oparzenia jest ciemnobrunatne i pozbawione pęcherzy, a pacjent prawie nie czuje bólu.</afflictiondescription.burn_deg3>
+
+<!-- /// Surgery /// -->
+
+<afflictionname.surgeryincision>Nacięcie chirurgiczne</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Pacjent został rozcięty.</afflictiondescription.surgeryincision>
+
+<afflictionname.clampedbleeders>Zaciśnięte krwawienie</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Krwawienie spowodowane nacięciem zostało zatrzymane.</afflictiondescription.clampedbleeders>
+
+<afflictionname.retractedskin>Otwarta skóra</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>Skóra jest utrzymywana przez retraktor.</afflictiondescription.retractedskin>
+
+<afflictionname.drilledbones>Przewiercona kość</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>Kości zostały przygotowane do zabiegów ortopedycznych.</afflictiondescription.drilledbones>
+
+<afflictionname.suturedi>Szyte nacięcie</afflictionname.suturedi>
+<afflictiondescription.suturedi>Nacięcie zostało zamknięte za pomocą szwów.</afflictiondescription.suturedi>
+
+<afflictionname.bonecut>Przepiłowanie kości</afflictionname.bonecut>
+<afflictiondescription.bonecut>Kość została odcięta.</afflictiondescription.bonecut>
+
+<!-- /// SIGNALS /// -->
+<connection.aliveout>Żywy</connection.aliveout>
+<connection.consciousout>Przytomny</connection.consciousout>
+<connection.nameout>Imię_pacjenta</connection.nameout>
+<connection.vitalityout>Witalność</connection.vitalityout>
+<connection.heartrateout>Tętno</connection.heartrateout>
+<connection.breathingrateout>Częstość_oddechów</connection.breathingrateout>
+<connection.bloodpressureout>Ciśnienie_krwi</connection.bloodpressureout>
+<connection.bloodoxygenout>Tlen_we_krwi</connection.bloodoxygenout>
+<connection.neurotraumaout>Neurotrauma</connection.neurotraumaout>
+<connection.organdamageout>Uszkodzenie_narządów</connection.organdamageout>
+<connection.insurgeryout>Podczas_operacji</connection.insurgeryout>
+<connection.causeofdeathout>Przyczyna_śmierci</connection.causeofdeathout>
+<connection.bloodphout>pH_krwi</connection.bloodphout>
+
+<!-- misc -->
+<roomname.surgical>Chirurgiczny</roomname.surgical>
+
+<!-- A1.8 -->
+<afflictionname.afpressuredrug>Obniżacze ciśnienia krwi</afflictionname.afpressuredrug>
+
+<entityname.pressuremeds>Nitroprusydek sodu</entityname.pressuremeds>
+<entitydescription.pressuremeds>Lek stosowany w doraźnym obniżaniu ciśnienia tętniczego.</entitydescription.pressuremeds>
+
+<entityname.medstartercrate>Medyczna skrzynia startowa</entityname.medstartercrate> 
+<entitydescription.medstartercrate>Skrzynia, która zawiera wszystkie niezbędne rzeczy, wygodnie zamknięte w jednym przepisie craftingowym.</entitydescription.medstartercrate>
+
+</infotexts>

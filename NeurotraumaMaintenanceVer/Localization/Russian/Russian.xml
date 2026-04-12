@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+
+<!-- Предметы -->
+
+<!-- /// Экипировка /// -->
+<entityname.defibrillator>Ручной дефибриллятор</entityname.defibrillator>
+<entitydescription.defibrillator>Медицинское устройство, доставляющее к сердцу электрический разряд для стабилизации сердечной аритмии. Для использования необходима серьёзная медицинская подготовка. Используйте на пациентах с остановкой сердца</entitydescription.defibrillator>
+
+<entityname.aed>Автоматизированый внешний дефибрилятор</entityname.aed>
+<entitydescription.aed>Медицинское устройство, автоматически доставляющее к сердцу электрический разряд для стабилизации сердечной аритмии. Не требует подготовки. Используйте на пациентах с остановкой сердца</entitydescription.aed>
+
+<entityname.bvm>Мешок амбу</entityname.bvm>
+<entitydescription.bvm>Маска с мешковым клапаном, ручное устройство, обычно используемое для создания положительного лёгочного давления у пациентов, которые не дышат или дышат недостаточно.</entitydescription.bvm>
+
+<entityname.autocpr>АвтоПульс</entityname.autocpr>
+<entitydescription.autocpr>Автоматизированный портативный питаемый от батарейки аппарат сердечно-легочной реанимации.</entitydescription.autocpr>
+
+<entityname.bloodanalyzer>Гематологический анализатор</entityname.bloodanalyzer>
+<entitydescription.bloodanalyzer>Анализатор крови. Полностью автоматический. Может использоваться для печати групп крови на пустых донорских картах</entitydescription.bloodanalyzer>
+
+<entityname.bloodcollector>Пустая карта донора</entityname.bloodcollector>
+<entitydescription.bloodcollector>Пустая карта донора. Используется гематологическим анализатором</entitydescription.bloodcollector>
+
+<entityname.traumashears>Медицинские ножницы</entityname.traumashears>
+<entitydescription.traumashears>Инструмент для снятия перевязок и гипса</entitydescription.traumashears>
+
+<entityname.wheelchair>Инвалидная коляска</entityname.wheelchair>
+<entitydescription.wheelchair>Позволяет полагаться на свои руки, а не на ноги во время движения.</entitydescription.wheelchair>
+
+<entityname.blahaj>Синяя акула</entityname.blahaj>
+
+<Override>
+<entityname.healthscanner>Сканер здоровья</entityname.healthscanner>
+<entitydescription.healthscanner>Используется для выявления скрытых причин симптомов</entitydescription.healthscanner>
+</Override>
+
+<stasisbagequipconfirmation>После надевания вы потеряете сознание. Вы уверены?</stasisbagequipconfirmation>
+
+<!-- /// Хирургия /// -->
+
+<entityname.advscalpel>Скальпель</entityname.advscalpel>
+<entitydescription.advscalpel>Операционный инструмент, используемый для создания надрезов.</entitydescription.advscalpel>
+
+<entityname.advhemostat>Зажим</entityname.advhemostat>
+<entitydescription.advhemostat>Операционный инструмент, используемый для зажатия кровотечения.</entitydescription.advhemostat>
+
+<entityname.advretractors>Расширитель</entityname.advretractors>
+<entitydescription.advretractors>Операционный инструмент для оттягивания рассечённой кожи.</entitydescription.advretractors>
+
+<entityname.tweezers>Полустерильный пинцет</entityname.tweezers>
+<entitydescription.tweezers>Небольшой инструмент, позволяющий удалять как пули, так и затронутую некрозом ткань.</entitydescription.tweezers>
+
+<entityname.surgerysaw>Хирургическая пила</entityname.surgerysaw>
+<entitydescription.surgerysaw>Пила для распиливания костей.</entitydescription.surgerysaw>
+
+<entityname.suture>Медицинские швы</entityname.suture>
+<entitydescription.suture>Синтетические рассасывающиеся нити со встроенной иглой для зашивания как ран, так и хирургических надрезов.</entitydescription.suture>
+
+<entityname.surgicaldrill>Хирургическая дрель</entityname.surgicaldrill>
+<entitydescription.surgicaldrill>Инструмент для просверливания кости.</entitydescription.surgicaldrill>
+
+<entityname.osteosynthesisimplants>Импланты для остеосинтеза</entityname.osteosynthesisimplants>
+<entitydescription.osteosynthesisimplants>Титановые импланты для лечения переломов при остеосинтетических операциях.</entitydescription.osteosynthesisimplants>
+
+<entityname.spinalimplant>Импланты позвоночного столба</entityname.spinalimplant>
+<entitydescription.spinalimplant>Титановые импланты для лечения паралича, вызванного переломом шеи.</entitydescription.spinalimplant>
+
+<entityname.operatingtable>Операционный стол</entityname.operatingtable>
+<entitydescription.operatingtable>Операционный стол со встроенным аппаратом искусственной вентиляции.</entitydescription.operatingtable>
+
+<entityname.organscalpel_liver>Скальпель для извлечения органов: Печень</entityname.organscalpel_liver>
+<entitydescription.organscalpel_liver>Специализированный скальпель для удаления печени.</entitydescription.organscalpel_liver>
+
+<entityname.organscalpel_kidneys>Скальпель для извлечения органов: Почки</entityname.organscalpel_kidneys>
+<entitydescription.organscalpel_kidneys>Специализированный скальпель для удаления почек.</entitydescription.organscalpel_kidneys>
+
+<entityname.organscalpel_lungs>Скальпель для извлечения органов: Лёгкие</entityname.organscalpel_lungs>
+<entitydescription.organscalpel_lungs>Специализированный скальпель для удаления лёгких.</entitydescription.organscalpel_lungs>
+
+<entityname.organscalpel_heart>Скальпель для извлечения органов: Сердце</entityname.organscalpel_heart>
+<entitydescription.organscalpel_heart>Специализированный скальпель для удаления сердца.</entitydescription.organscalpel_heart>
+
+<entityname.organscalpel_brain>Скальпель для извлечения: мозг</entityname.organscalpel_brain>
+<entitydescription.organscalpel_brain>Специализированный скальпель для удаления мозга.</entitydescription.organscalpel_brain>
+
+
+<!-- /// Средства /// -->
+<entityname.mannitol>Маннитол</entityname.mannitol>
+<entitydescription.mannitol>Тип сахарного спирта. Используется для облегчения восстановления от нейротравм. Может нанести урон органам.</entitydescription.mannitol>
+
+<entityname.immunosuppressant>Азатиоприн</entityname.immunosuppressant>
+<entitydescription.immunosuppressant>Иммунодепрессант для профилактики отторжения органов.</entitydescription.immunosuppressant>
+
+<entityname.ointment>Антибиотическая мазь</entityname.ointment>
+<entitydescription.ointment>Гель с мощными антисептическими свойствами, помогает в восстановлении после ожогов так же хорошо, как и от инфицирования.</entitydescription.ointment>
+
+<entityname.endovascballoon>Эндоваскулярный баллон</entityname.endovascballoon>
+<entitydescription.endovascballoon>Баллон, вставляемый в крупные артерии при их разрыве. Это остановит как кровоток, так и кровотечение.</entitydescription.endovascballoon>
+
+<entityname.medstent>Медицинский стент</entityname.medstent>
+<entitydescription.medstent>Пластиковая трубка, вставляемая после эндоваскулярного баллона при разрыве аорты.</entitydescription.medstent>
+
+<entityname.tourniquet>Жгут</entityname.tourniquet>
+<entitydescription.tourniquet>Устройство, сдавливающее часть тела, ограничивая кровоток. Обычно используется при обильных кровотечениях из конечностей. Не рекомендуется применять к голове.</entitydescription.tourniquet>
+
+<entityname.drainage>Дренаж</entityname.drainage>
+<entitydescription.drainage>Удаляет воздух из плевральной полости во время корректирующей операции при пневмотораксе.</entitydescription.drainage>
+
+<entityname.needle>Игла</entityname.needle>
+<entitydescription.needle>Игла с декомпрессионным клапаном для удаления жидкости или воздуха из плевральной полости или перикарда</entitydescription.needle>
+
+<entityname.ringerssolution>Раствор Рингера</entityname.ringerssolution>
+<entitydescription.ringerssolution>Водный раствор нескольких солей, предназначенный для лечения низкого кровяного давления или потери жидкости. Изотоничен крови.</entitydescription.ringerssolution>
+
+<entityname.antiseptic>Антисептик</entityname.antiseptic>
+<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+
+<entityname.antisepticspray>Антисептический спрей</entityname.antisepticspray>
+<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+
+<entityname.propofol>Пропофол</entityname.propofol>
+<entitydescription.propofol>Препарат кратковременного действия, приводящий к депривации сознания и вызывающий потерю памяти о произошедших событиях. Использования включают в себя введение в общую анестезию и её поддержание.</entitydescription.propofol>
+
+<entityname.gypsum>Гипс</entityname.gypsum>
+<entitydescription.gypsum>Мелкозернистый минеральный порошок, используемый для покрытия и фиксации переломов конечностей. Сначала наложите бинт.</entitydescription.gypsum>
+
+
+<!-- /// Кровь /// -->
+
+<!--<entityname.bloodrefinery>Очиститель крови</entityname.bloodrefinery>-->
+<!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
+
+<entityname.emptybloodpack>Пустой пакет для крови</entityname.emptybloodpack>
+<entitydescription.emptybloodpack>Пустой пакет для забора крови.</entitydescription.emptybloodpack>
+
+<entityname.bloodpackoplus>Пакет с кровью O+</entityname.bloodpackoplus>
+<entitydescription.bloodpackoplus>Можно переливать: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
+
+<entityname.bloodpackominus>Пакет с кровью O-</entityname.bloodpackominus>
+<entitydescription.bloodpackominus>Пакет с кровью, подходящей любому пациенту.</entitydescription.bloodpackominus>
+
+<entityname.bloodpackaplus>Пакет с кровью A+</entityname.bloodpackaplus>
+<entitydescription.bloodpackaplus>Можно переливать: A+, AB+</entitydescription.bloodpackaplus>
+
+<entityname.bloodpackbplus>Пакет с кровью B+</entityname.bloodpackbplus>
+<entitydescription.bloodpackbplus>Можно переливать: B+, AB+</entitydescription.bloodpackbplus> -->
+
+<entityname.bloodpackabplus>Пакет с кровью AB+</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>Можно переливать: AB+</entitydescription.bloodpackabplus> -->
+
+<entityname.bloodpackaminus>Пакет с кровью A-</entityname.bloodpackaminus>
+<entitydescription.bloodpackaminus>Можно переливать: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+
+<entityname.bloodpackbminus>Пакет с кровью B-</entityname.bloodpackbminus>
+<entitydescription.bloodpackbminus>Можно переливать: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
+
+<entityname.bloodpackabminus>Пакет с кровью AB-</entityname.bloodpackabminus>
+<entitydescription.bloodpackabminus>Можно переливать: AB-, AB+</entitydescription.bloodpackabminus>
+
+<Override>
+<entityname.antibloodloss2>Пакет с кровью O-</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>Пакет с кровью, подходящей любому пациенту.</entitydescription.antibloodloss2>
+</Override>
+
+<entityname.ominuscard>Карточка донора O-</entityname.ominuscard>
+<entitydescription.ominuscard>Может получать кровь типов: O-
+Может быть донором для любого типа</entitydescription.ominuscard>
+
+<entityname.opluscard>Карточка донора O+</entityname.opluscard>
+<entitydescription.opluscard>Может получать кровь типов: O-, O+
+Может быть донором для: O+, A+, B+, AB+</entitydescription.opluscard>
+
+<entityname.aminuscard>Карточка донора A-</entityname.aminuscard>
+<entitydescription.aminuscard>Может получать кровь типов: O-, A-
+Может быть донором для: A-, A+, AB-, AB+</entitydescription.aminuscard>
+
+<entityname.apluscard>Карточка донора A+</entityname.apluscard>
+<entitydescription.apluscard>Может получать кровь типов: O-, O+, A-, A+
+Может быть донором для: A+, AB+</entitydescription.apluscard>
+
+<entityname.bminuscard>Карточка донора B-</entityname.bminuscard>
+<entitydescription.bminuscard>Может получать кровь типов: O-, B-
+Может быть донором для: B-, B+, AB-, AB+</entitydescription.bminuscard>
+
+<entityname.bpluscard>Карточка донора B+</entityname.bpluscard>
+<entitydescription.bpluscard>Может получать кровь типов: O-, O+, B-, B+
+Может быть донором для: B+, AB+</entitydescription.bpluscard>
+
+<entityname.abminuscard>Карточка донора AB-</entityname.abminuscard>
+<entitydescription.abminuscard>Может получать кровь типов: O-, A-, B-, AB-
+Может быть донором для: AB-, AB+</entitydescription.abminuscard>
+
+<entityname.abpluscard>Карточка донора AB+</entityname.abpluscard>
+<entitydescription.abpluscard>Может получать кровь любого типа
+Может быть донором для: AB+</entitydescription.abpluscard>
+
+
+
+<!-- /// Новые контейнеры /// -->
+<entityname.medtoolbox>Медицинский контейнер</entityname.medtoolbox>
+<entitydescription.medtoolbox>Может хранить препараты и медицинские инструменты</entitydescription.medtoolbox>
+
+<entityname.surgerytoolbox>Ящик для хирургических инструментов</entityname.surgerytoolbox> 
+<entitydescription.surgerytoolbox>Может вмещать в себя маленькие предметы для хирургии</entitydescription.surgerytoolbox> 
+
+<entityname.organcrate>Холодильный ящик</entityname.organcrate>
+<entitydescription.organcrate>Место для хранения ваших драгоценных готовых к трансплантации органов</entitydescription.organcrate>
+
+<entityname.organtoolbox>Холодильный контейнер</entityname.organtoolbox>
+<entitydescription.organtoolbox>Место для хранения ваших драгоценных готовых к трансплантации органов</entitydescription.organtoolbox>
+
+<entityname.bodybag>Мешок для трупа</entityname.bodybag>
+<entitydescription.bodybag>Позволяет перемещать тела быстрее.</entitydescription.bodybag>
+
+<entityname.stasisbag>Стазис-мешок</entityname.stasisbag>
+<entitydescription.stasisbag>Приостанавливает большинство биохимических процессов.</entitydescription.stasisbag>
+
+
+
+<!-- /// Конечности и органы /// -->
+<entityname.rarm>Правая рука</entityname.rarm>
+<entitydescription.rarm>Отсечённая правая рука. Может быть пришита обратно посредством операции.</entitydescription.rarm>
+
+<entityname.larm>Левая рука</entityname.larm>
+<entitydescription.larm>Отсечённая левая рука. Может быть пришита обратно посредством операции.</entitydescription.larm>
+
+<entityname.rleg>Правая нога</entityname.rleg>
+<entitydescription.rleg>Отсечённая правая нога. Может быть пришита обратно посредством операции.</entitydescription.rleg>
+
+<entityname.lleg>Левая нога</entityname.lleg>
+<entitydescription.lleg>Отсечённая левая нога. Может быть пришита обратно посредством операции.</entitydescription.lleg>
+
+<entityname.rarmp>Бионический протез правой руки</entityname.rarmp>
+<entitydescription.rarmp>Бионическая правая рука. Устанавливается взамен ампутированной</entitydescription.rarmp>
+
+<entityname.larmp>Бионический протез левой руки</entityname.larmp>
+<entitydescription.larmp>Бионическая левая рука. Устанавливается взамен ампутированной.</entitydescription.larmp>
+
+<entityname.rlegp>Бионический протез правой ноги</entityname.rlegp>
+<entitydescription.rlegp>Бионическая правая нога. Устанавливается взамен ампутированной.</entitydescription.rlegp>
+
+<entityname.llegp>Бионический протез левой ноги</entityname.llegp>
+<entitydescription.llegp>Бионическая левая нога. Устанавливается взамен ампутированной.</entitydescription.llegp>
+
+<entityname.livertransplant>Печень</entityname.livertransplant>
+<entityname.livertransplant_q1>Печень</entityname.livertransplant_q1>
+<entityname.livertransplant_q2>Печень</entityname.livertransplant_q2>
+<entityname.livertransplant_q3>Печень</entityname.livertransplant_q3>
+<entityname.livertransplant_q4>Печень</entityname.livertransplant_q4>
+<entityname.livertransplant_q5>Печень</entityname.livertransplant_q5>
+
+<entityname.lungtransplant>Лёгкое</entityname.lungtransplant>
+<entityname.lungtransplant_q1>Лёгкое</entityname.lungtransplant_q1>
+<entityname.lungtransplant_q2>Лёгкое</entityname.lungtransplant_q2>
+<entityname.lungtransplant_q3>Лёгкое</entityname.lungtransplant_q3>
+<entityname.lungtransplant_q4>Лёгкое</entityname.lungtransplant_q4>
+<entityname.lungtransplant_q5>Лёгкое</entityname.lungtransplant_q5>
+
+<entityname.kidneytransplant>Почка</entityname.kidneytransplant>
+<entityname.kidneytransplant_q1>Почка</entityname.kidneytransplant_q1>
+<entityname.kidneytransplant_q2>Почка</entityname.kidneytransplant_q2>
+<entityname.kidneytransplant_q3>Почка</entityname.kidneytransplant_q3>
+<entityname.kidneytransplant_q4>Почка</entityname.kidneytransplant_q4>
+<entityname.kidneytransplant_q5>Почка</entityname.kidneytransplant_q5>
+
+<entityname.hearttransplant>Сердце</entityname.hearttransplant>
+<entityname.hearttransplant_q1>Сердце</entityname.hearttransplant_q1>
+<entityname.hearttransplant_q2>Сердце</entityname.hearttransplant_q2>
+<entityname.hearttransplant_q3>Сердце</entityname.hearttransplant_q3>
+<entityname.hearttransplant_q4>Сердце</entityname.hearttransplant_q4>
+<entityname.hearttransplant_q5>Сердце</entityname.hearttransplant_q5>
+
+<entityname.braintransplant>Мозг</entityname.braintransplant>
+
+<entityname.armlock1>Нерабочая правая рука</entityname.armlock1>
+<entityname.armlock2>Нерабочая левая рукаd</entityname.armlock2>
+
+
+<!-- AFFLICTIONS -->
+
+
+<!-- TEMPLATE -->
+
+<!-- <afflictionname.organdamage></afflictionname.organdamage> -->
+<!-- <afflictiondescription.organdamage></afflictiondescription.organdamage> -->
+<!-- <afflictioncauseofdeath.organdamage></afflictioncauseofdeath.organdamage> -->
+<!-- <afflictioncauseofdeathself.organdamage></afflictioncauseofdeathself.organdamage> -->
+
+<!-- /// Heart /// -->
+
+<afflictionname.tachycardia>Ускоренное сердцебиение</afflictionname.tachycardia>
+<afflictiondescription.tachycardia>Сердце бьётся с тревожно высокой скоростью.</afflictiondescription.tachycardia>
+
+<afflictionname.fibrillation>Фибрилляция</afflictionname.fibrillation>
+<afflictiondescription.fibrillation>Сердце сокращается быстро, слабо и обрывисто.</afflictiondescription.fibrillation>
+
+<afflictionname.cardiacarrest>Остановка сердца</afflictionname.cardiacarrest>
+<afflictiondescription.cardiacarrest>Нет пульса.</afflictiondescription.cardiacarrest>
+
+<afflictionname.heartattack>Сердечный приступ</afflictionname.heartattack>
+<afflictiondescription.heartattack></afflictiondescription.heartattack>
+
+<afflictionname.heartdamage>Повреждение сердца</afflictionname.heartdamage>
+<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+
+<afflictionname.heartfailure>Отказ сердца</afflictionname.heartfailure>
+<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+
+<afflictionname.heartremoved>Сердце удалено</afflictionname.heartremoved>
+<afflictiondescription.heartremoved>Сердце хирургически удалено.</afflictiondescription.heartremoved>
+
+<!-- /// Мозг /// -->
+
+<afflictionname.cerebralhypoxia>Нейротравмa</afflictionname.cerebralhypoxia>
+<afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
+<afflictioncauseofdeath.cerebralhypoxia>Смерть от нейротравмы</afflictioncauseofdeath.cerebralhypoxia>
+<afflictioncauseofdeathself.cerebralhypoxia>Вы умерли от нейротравмы.</afflictioncauseofdeathself.cerebralhypoxia>
+
+<afflictionname.stroke>Инсульт</afflictionname.stroke>
+<afflictiondescription.stroke></afflictiondescription.stroke>
+
+<afflictionname.seizure>Припадок</afflictionname.seizure>
+<afflictiondescription.seizure></afflictiondescription.seizure>
+
+<afflictionname.coma>Кома</afflictionname.coma>
+<afflictiondescription.coma></afflictiondescription.coma>
+
+<afflictionname.brainremoved>Мозг удалён</afflictionname.brainremoved>
+<afflictiondescription.brainremoved>Мозг хирургически удалён</afflictiondescription.brainremoved>
+
+<afflictionname.traumaticshock>Травматический шок</afflictionname.traumaticshock>
+<afflictiondescription.traumaticshock>Операции проводятся не так! Совсем  не так!</afflictiondescription.traumaticshock>
+
+<!-- /// Кровь /// -->
+
+<afflictionname.bloodpressure>Кровяное давление</afflictionname.bloodpressure>
+<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+
+<afflictionname.hypoxemia>Гипоксемия</afflictionname.hypoxemia>
+<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+
+<!-- /// Лёгкие /// -->
+
+<afflictionname.respiratoryarrest>Остановка дыхания</afflictionname.respiratoryarrest>
+<afflictiondescription.respiratoryarrest>Пациент не дышит.</afflictiondescription.respiratoryarrest>
+
+<afflictionname.hyperventilation>Гипервентиляция</afflictionname.hyperventilation>
+<afflictiondescription.hyperventilation>Пациент дышит в тревожно быстром темпе.</afflictiondescription.hyperventilation>
+
+<afflictionname.hypoventilation>Гиповентиляция</afflictionname.hypoventilation>
+<afflictiondescription.hypoventilation>Пациент дышит в тревожно медленном темпе.</afflictiondescription.hypoventilation>
+
+<afflictionname.dyspnea>Сбивчивое дыхание</afflictionname.dyspnea>
+<afflictiondescription.dyspnea>Дыхание пациента затруднено и поверхностно</afflictiondescription.dyspnea>
+
+<afflictionname.alkalosis>Алкалоз</afflictionname.alkalosis>
+<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
+
+<afflictionname.acidosis>Ацидоз</afflictionname.acidosis>
+<afflictiondescription.acidosis></afflictiondescription.acidosis>
+
+<afflictionname.rili>Радиационное поражение легких</afflictionname.rili>
+<afflictiondescription.rili></afflictiondescription.rili>
+
+<afflictionname.pneumothorax>Пневмоторакс</afflictionname.pneumothorax>
+<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+
+<afflictionname.lungdamage>Повреждение лёгких</afflictionname.lungdamage>
+<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
+
+<afflictionname.lungfailure>Отказ лёгких</afflictionname.lungfailure>
+<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+
+<afflictionname.lungremoved>Удалённые лёгкие</afflictionname.lungremoved>
+<afflictiondescription.lungremoved>Лёгкие хирургически удалены.</afflictiondescription.lungremoved>
+
+<!-- /// Почки /// -->
+
+<afflictionname.kidneydamage>Повреждение почек</afflictionname.kidneydamage>
+<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+
+<afflictionname.kidneyfailure>Отказ почек</afflictionname.kidneyfailure>
+<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+
+<afflictionname.kidneyremoved>Удалённые почки</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>Почки хирургически удалены.</afflictiondescription.kidneyremoved>
+
+<!-- /// Кости /// -->
+
+<afflictionname.bonedamage>Повреждённая кость</afflictionname.bonedamage>
+<afflictiondescription.bone></afflictiondescription.bone>
+
+<afflictionname.bonedeath>Костная смерть</afflictionname.bonedeath>
+<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+
+<afflictionname.bonegrowth>Стимулированный рост костей</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>Простимулированное отрастание костей. Для лечения умерших костей, этот эффект должен быть на каждой части тела.</afflictiondescription.bonegrowth>
+
+<!-- /// Печень /// -->
+
+<afflictionname.liverdamage>Повреждение печени</afflictionname.liverdamage>
+<afflictiondescription.liverdamage></afflictiondescription.liverdamage>
+
+<afflictionname.liverfailure>Отказ печени</afflictionname.liverfailure>
+<afflictiondescription.liverfailure></afflictiondescription.liverfailure>
+
+<afflictionname.liverremoved>Печень удалена</afflictionname.liverremoved>
+<afflictiondescription.liverremoved>Печень хирургически удалена.</afflictiondescription.liverremoved>
+
+<!-- /// Хирургия и связанное /// -->
+
+<afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Сделанный скальпелем разрез.</afflictiondescription.surgeryincision>
+
+<afflictionname.clampedbleeders>Прижатое кровотечение</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Хирургическое кровотечение сдержано.</afflictiondescription.clampedbleeders>
+
+<afflictionname.arteriesclamp>Сжатые артерии</afflictionname.arteriesclamp>
+<afflictiondescription.arteriesclamp>Артериальное кровотечение остановлено, приток крови к конечности значительно снизился</afflictiondescription.arteriesclamp>
+
+<afflictionname.balloonedaorta>Закупореная баллоном аорта</afflictionname.balloonedaorta>
+<afflictiondescription.balloonedaorta>Аортальное кровотечение остановлено, нет притока к конечностям и органам.</afflictiondescription.balloonedaorta>
+
+<afflictionname.boneclamp>Шина</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>На перелом наложена шина.</afflictiondescription.boneclamp>
+
+<afflictionname.bandaged>Перевязка</afflictionname.bandaged>
+<afflictiondescription.bandaged>Защищает от инфицирования, стабилизирует вывихи и переломы</afflictiondescription.bandaged>
+
+<afflictionname.dirtybandage>Грязный бинт</afflictionname.dirtybandage>
+<afflictiondescription.dirtybandage>Ранее защищавший от инфекций, теперь бинт может послужить их причиной</afflictiondescription.dirtybandage>
+
+<afflictionname.gypsumcast>Гипсовый слепок</afflictionname.gypsumcast>
+<afflictiondescription.gypsumcast>Лечит и защищает от переломов. Замедляет движение. Удалять с помощью медицинских ножниц.</afflictiondescription.gypsumcast>
+
+<afflictionname.ointmented>Мазь</afflictionname.ointmented>
+<afflictiondescription.ointmented>Слой антибиотической мази защищает от заражения и сохраняет рану стерильной.</afflictiondescription.ointmented>
+
+<afflictionname.needlec>Игла</afflictionname.needlec>
+<afflictiondescription.needlec>Нормализует давление в плевральной полости</afflictiondescription.needlec>
+
+<!-- Переломы, ампутации, вывихи и кровоточащие артерии-->
+<afflictionname.ra_fracture>Перелом правой плечевой кости</afflictionname.ra_fracture>
+<afflictiondescription.ra_fracture>Ваша правая рука сломана.</afflictiondescription.ra_fracture>
+<afflictionname.la_fracture>Перелом левой плечевой кости</afflictionname.la_fracture>
+<afflictiondescription.la_fracture>Ваша левая рука сломана.</afflictiondescription.la_fracture>
+<afflictionname.rl_fracture>Перелом правой бедренной кости</afflictionname.rl_fracture>
+<afflictiondescription.rl_fracture>Ваша правая нога сломана.</afflictiondescription.rl_fracture>
+<afflictionname.ll_fracture>Перелом правой бедренной кости</afflictionname.ll_fracture>
+<afflictiondescription.ll_fracture>Ваша левая нога сломана.</afflictiondescription.ll_fracture>
+<afflictionname.t_fracture>Сломанные рёбра</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>Одно или более рёбер сломаны.</afflictiondescription.t_fracture>
+<afflictionname.h_fracture>Перелом черепа</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>Ваш череп сломан.</afflictiondescription.h_fracture>
+<afflictionname.n_fracture>Перелом шеи</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>Ваша шея сломана.</afflictiondescription.n_fracture>
+
+<afflictionname.tra_amputation>Травматическая ампутация</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>Большая часть тканей правой руки была оторвана</afflictiondescription.tra_amputation>
+<afflictionname.tla_amputation>Травматическая ампутация</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>Большая часть тканей левой руки была оторвана</afflictiondescription.tla_amputation>
+<afflictionname.trl_amputation>Травматическая ампутация</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>Большая часть тканей правой ноги была оторвана</afflictiondescription.trl_amputation>
+<afflictionname.tll_amputation>Травматическая ампутация</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>Большая часть тканей левой ноги была оторвана</afflictiondescription.tll_amputation>
+<afflictionname.th_amputation>Травматическая ампутация</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>Большая часть тканей головы была оторвана</afflictiondescription.th_amputation>
+
+<afflictionname.sra_amputation>Ампутация</afflictionname.sra_amputation>
+<afflictiondescription.sra_amputation>Правая рука хирургически ампутирована.</afflictiondescription.sra_amputation>
+<afflictionname.sla_amputation>Ампутация</afflictionname.sla_amputation>
+<afflictiondescription.sla_amputation>Левая рука хирургически ампутирована.</afflictiondescription.sla_amputation>
+<afflictionname.srl_amputation>Ампутация</afflictionname.srl_amputation>
+<afflictiondescription.srl_amputation>Правая нога хирургически ампутирована.</afflictiondescription.srl_amputation>
+<afflictionname.sll_amputation>Ампутация</afflictionname.sll_amputation>
+<afflictiondescription.sll_amputation>Левая нога хирургически ампутирована.</afflictiondescription.sll_amputation>
+<afflictionname.sh_amputation>Ампутация</afflictionname.sh_amputation>
+<afflictiondescription.sh_amputation>Голова хирургически ампутирована.</afflictiondescription.sh_amputation>
+
+<afflictionname.t_paralysis>Травма позвоночного столба</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>Пациент парализован и не чувствует своё тело.</afflictiondescription.t_paralysis>
+<afflictioncauseofdeath.t_paralysis>Умер от паралича</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>Вы умерли от паралича.</afflictioncauseofdeathself.t_paralysis>
+
+
+
+<afflictionname.dislocation1>Вывих</afflictionname.dislocation1>
+<afflictiondescription.dislocation1>Сустав должен гнуться в другую сторону...</afflictiondescription.dislocation1>
+<afflictionname.dislocation2>Вывих</afflictionname.dislocation2>
+<afflictiondescription.dislocation2>Сустав должен гнуться в другую сторону...</afflictiondescription.dislocation2>
+<afflictionname.dislocation3>Вывих</afflictionname.dislocation3>
+<afflictiondescription.dislocation3>Сустав должен гнуться в другую сторону...</afflictiondescription.dislocation3>
+<afflictionname.dislocation4>Вывих</afflictionname.dislocation4>
+<afflictiondescription.dislocation4>Сустав должен гнуться в другую сторону...</afflictiondescription.dislocation4>
+
+<afflictionname.ll_arterialcut>Кровотечение из бедренной артерии</afflictionname.ll_arterialcut>
+<afflictiondescription.ll_arterialcut>Артерия повреждена и вызывает серьёзное кровотечение.</afflictiondescription.ll_arterialcut>
+<afflictionname.rl_arterialcut>Кровотечение из бедренной артерии</afflictionname.rl_arterialcut>
+<afflictiondescription.rl_arterialcut>Артерия повреждена и вызывает серьёзное кровотечение.</afflictiondescription.rl_arterialcut>
+<afflictionname.la_arterialcut>Кровотечение из плечевой артерии</afflictionname.la_arterialcut>
+<afflictiondescription.la_arterialcut>Артерия повреждена и вызывает серьёзное кровотечение.</afflictiondescription.la_arterialcut>
+<afflictionname.ra_arterialcut>Кровотечение из плечевой артерии</afflictionname.ra_arterialcut>
+<afflictiondescription.ra_arterialcut>Артерия повреждена и вызывает серьёзное кровотечение.</afflictiondescription.ra_arterialcut>
+<afflictionname.t_arterialcut>Аортальное кровотечение</afflictionname.t_arterialcut>
+<afflictionname.h_arterialcut>Кровотечение из сонной артерии</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>Артерия повреждена и вызывает серьёзное кровотечение.</afflictiondescription.h_arterialcut>
+
+<afflictionname.suturedw>Зашитая рана</afflictionname.suturedw>
+<afflictiondescription.suturedw>Рана была зашита.</afflictiondescription.suturedw>
+
+<afflictionname.immunity>Иммунитет</afflictionname.immunity>
+<afflictiondescription.immunity></afflictiondescription.immunity>
+
+<afflictionname.infectedwound>Заражённая рана</afflictionname.infectedwound>
+<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+
+<afflictionname.sepsis>Сепсис</afflictionname.sepsis>
+<afflictiondescription.sepsis></afflictiondescription.sepsis>
+
+<afflictionname.necrosis>Некроз</afflictionname.necrosis>
+<afflictiondescription.necrosis></afflictiondescription.necrosis>
+<afflictioncauseofdeath.necrosis>Вы умерли от некроза раны.</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>Вы умерли от некроза раны.</afflictioncauseofdeathself.necrosis>
+
+<afflictionname.gangrene>Гангрена</afflictionname.gangrene>
+<afflictiondescription.gangrene>Конечность усохла и почернела.</afflictiondescription.gangrene>
+
+<afflictionname.afadrenaline>Адреналин</afflictionname.afadrenaline>
+<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+
+<afflictionname.afsaline>Физраствор</afflictionname.afsaline>
+<afflictiondescription.afsaline></afflictiondescription.afsaline>
+
+<afflictionname.afringerssolution>Раствор Рингера</afflictionname.afringerssolution>
+<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+
+<afflictionname.afmannitol>Маннитол</afflictionname.afmannitol>
+<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+
+<afflictionname.afantibiotics>Антибиотики</afflictionname.afantibiotics>
+<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+
+<afflictionname.afimmunosuppressant>Иммунодепрессанты</afflictionname.afimmunosuppressant>
+<afflictiondescription.afimmunosuppressant>Иммунитет подавляется иммунодепресантами</afflictiondescription.afimmunosuppressant>
+
+<afflictionname.hemotransfusionshock>Гемотрансфузионный шок</afflictionname.hemotransfusionshock>
+<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+
+<afflictionname.foreignbody>Инородное тело</afflictionname.foreignbody>
+<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
+
+<afflictionname.tamponade>Сердечная тампонада</afflictionname.tamponade>
+<afflictiondescription.tamponade></afflictiondescription.tamponade>
+
+<afflictionname.internalbleeding>Внутреннее кровотечение</afflictionname.internalbleeding>
+<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
+
+<!-- /// Симптомы /// -->
+
+<afflictionname.sym_cough>Кашель</afflictionname.sym_cough>
+<afflictiondescription.sym_cough>Пациент периодически кашляет.</afflictiondescription.sym_cough>
+
+<afflictionname.sym_paleskin>Бледная кожа</afflictionname.sym_paleskin>
+<afflictiondescription.sym_paleskin>Кожа пациента неестественно бледна.</afflictiondescription.sym_paleskin>
+
+<afflictionname.sym_lightheadedness>Головокружение</afflictionname.sym_lightheadedness>
+<afflictiondescription.sym_lightheadedness>Пациент испытывает головокружение.</afflictiondescription.sym_lightheadedness>
+
+<afflictionname.sym_blurredvision>Размытое зрение</afflictionname.sym_blurredvision>
+<afflictiondescription.sym_blurredvision>Зрение пациента размыто.</afflictiondescription.sym_blurredvision>
+
+<afflictionname.sym_confusion>Спутанность сознания</afflictionname.sym_confusion>
+<afflictiondescription.sym_confusion>Пациент дизориентирован, сознание спутанно.</afflictiondescription.sym_confusion>
+
+<afflictionname.sym_headache>Головная боль</afflictionname.sym_headache>
+<afflictiondescription.sym_headache>Пациент испытывает головную боль.</afflictiondescription.sym_headache>
+
+<afflictionname.sym_legswelling>Отёк ног</afflictionname.sym_legswelling>
+<afflictiondescription.sym_legswelling></afflictiondescription.sym_legswelling>
+
+<afflictionname.sym_weakness>Слабость</afflictionname.sym_weakness>
+<afflictiondescription.sym_weakness>Пациент отмечает слабость в конечностях.</afflictiondescription.sym_weakness>
+
+<afflictionname.sym_wheezing>Свистящие хрипы</afflictionname.sym_wheezing>
+<afflictiondescription.sym_wheezing>Пациентом при дыхании издаётся громкий шум</afflictiondescription.sym_wheezing>
+
+<afflictionname.sym_vomiting>Рвота</afflictionname.sym_vomiting>
+<afflictiondescription.sym_vomiting>Пациента периодически рвёт.</afflictiondescription.sym_vomiting>
+
+<afflictionname.sym_hematemesis>Рвота с кровью</afflictionname.sym_hematemesis>
+<afflictiondescription.sym_hematemesis>Пациента периодически рвёт кровью.</afflictiondescription.sym_hematemesis>
+
+<afflictionname.fever>Лихорадка</afflictionname.fever>
+<afflictiondescription.fever>У пациента высокая температура тела.</afflictiondescription.fever>
+
+<afflictionname.sym_abdomdiscomfort>Дискомфорт в животе</afflictionname.sym_abdomdiscomfort>
+<afflictiondescription.sym_abdomdiscomfort>Пациент отмечает дискомфорт в животе.</afflictiondescription.sym_abdomdiscomfort>
+
+<afflictionname.sym_bloating>Вздутие</afflictionname.sym_bloating>
+<afflictiondescription.sym_bloating>Живот пациента вздут.</afflictiondescription.sym_bloating>
+
+<afflictionname.sym_jaundice>Желтуха</afflictionname.sym_jaundice>
+<afflictiondescription.sym_jaundice>Кожа пациента окрасилась в болезненно жёлтый цвет.</afflictiondescription.sym_jaundice>
+
+<afflictionname.sym_sweating>Потеет</afflictionname.sym_sweating>
+<afflictiondescription.sym_sweating>Пациент усиленно потеет.</afflictiondescription.sym_sweating>
+
+<afflictionname.sym_palpitations>Тремор</afflictionname.sym_palpitations>
+<afflictiondescription.sym_palpitations>Пациент отмечает дрожь.</afflictiondescription.sym_palpitations>
+
+<afflictionname.sym_unconsciousness>Без сознания</afflictionname.sym_unconsciousness>
+<afflictiondescription.sym_unconsciousness>Пациент без сознания.</afflictiondescription.sym_unconsciousness>
+
+<afflictionname.inflammation>Воспаление</afflictionname.inflammation>
+<afflictiondescription.inflammation>Область покрасневшая, тёплая и отёкшая.</afflictiondescription.inflammation>
+
+<afflictionname.spasm>Спазм</afflictionname.spasm>
+<afflictiondescription.spasm>Пациент не контроллирует поведение конечности.</afflictiondescription.spasm>
+
+<afflictionname.sym_craving>Ломка</afflictionname.sym_craving>
+<afflictiondescription.sym_craving>Пациент вполне счастлив... пока получает то, что хочет.</afflictiondescription.sym_craving>
+
+<afflictionname.onfire>Горит!</afflictionname.onfire>
+<afflictiondescription.onfire>Пациент горит заживо! Тащите огнетушитель!</afflictiondescription.onfire>
+
+<afflictionname.pain_chest>Боль в груди</afflictionname.pain_chest>
+<afflictiondescription.pain_chest>Пациент испытывает острую, пронзительную боль в груди.</afflictiondescription.pain_chest>
+
+<afflictionname.pain_abdominal>Боль в животе</afflictionname.pain_abdominal>
+<afflictiondescription.pain_abdominal>Пациент отмечает сохраняющуюся боль в животе.</afflictiondescription.pain_abdominal>
+
+<afflictionname.pain_extremity>Сильная боль</afflictionname.pain_extremity>
+<afflictiondescription.pain_extremity>Пациент отмечает сильную боль в этой области.</afflictiondescription.pain_extremity>
+
+<afflictionname.sym_nausea>Тошнота</afflictionname.sym_nausea>
+<afflictiondescription.sym_nausea>Кожа липкая, пациента тошнит.</afflictiondescription.sym_nausea>
+
+<afflictionname.luabotomy>Без Lua</afflictionname.luabotomy>
+<afflictiondescription.luabotomy>Lua не работает. Это значит, что Нейротравма и прочие модификации, использующие Lua не будут функционировать. Для инструкции по установке прочитайте страницу в Мастерской для Lua for Barotrauma.</afflictiondescription.luabotomy>
+
+<afflictionname.analgesia>Анальгезия</afflictionname.analgesia>
+<afflictiondescription.analgesia>Нечувствительность к боли</afflictiondescription.analgesia>
+
+<afflictionname.anesthesia>Анестезия</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>У пациента медикаментозная амнезия.</afflictiondescription.anesthesia>
+
+
+<afflictionname.burn_deg1>Ожог первой степени</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>Область покраснела и болит при нажатии.</afflictiondescription.burn_deg1>
+
+<afflictionname.burn_deg2>Ожог второй степени</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>На пораженном участке появляются очень болезненные волдыри.</afflictiondescription.burn_deg2>
+
+<afflictionname.burn_deg3>Ожог третьей степени</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>Кожа погрубела и потеряла чувствительность</afflictiondescription.burn_deg3>
+
+<!-- /// Хирургия /// -->
+
+<afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Пациент вскрыт.</afflictiondescription.surgeryincision>
+
+<afflictionname.clampedbleeders>Прижатое кровотечение</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Хирургическое кровотечение сдержано.</afflictiondescription.clampedbleeders>
+
+<afflictionname.retractedskin>Расширитель</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>Кожа удерживается открытой при помощи расширителя.</afflictiondescription.retractedskin>
+
+<afflictionname.drilledbones>Просверленные кости</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>Кости подготовлены к ортопедическим операциям.</afflictiondescription.drilledbones>
+
+<afflictionname.suturedi>Зашитый надрез</afflictionname.suturedi>
+<afflictiondescription.suturedi>Надрез закрыт швами.</afflictiondescription.suturedi>
+
+<afflictionname.bonecut>Кость распилена</afflictionname.bonecut>
+<afflictiondescription.bonecut>Кость отделена.</afflictiondescription.bonecut>
+
+<!-- connections -->
+
+<connection.aliveout>Жив</connection.aliveout>
+<connection.consciousout>В сознании</connection.consciousout>
+<connection.nameout>Имя_пациента</connection.nameout>
+<connection.vitalityout>Здоровье</connection.vitalityout>
+<connection.heartrateout>Частота_сердцебиения</connection.heartrateout>
+<connection.breathingrateout>Скорость_дыхания</connection.breathingrateout>
+<connection.bloodpressureout>Кровяное_давление</connection.bloodpressureout>
+<connection.bloodoxygenout>Насыщенность_крови_кислородом</connection.bloodoxygenout>
+<connection.neurotraumaout>Нейротравма</connection.neurotraumaout>
+<connection.organdamageout>Урон_органам</connection.organdamageout>
+<connection.insurgeryout>Оперируется</connection.insurgeryout>
+<connection.causeofdeathout>Причина_смерти</connection.causeofdeathout>
+<connection.bloodphout>pH_Крови</connection.bloodphout>
+
+<!-- misc -->
+<roomname.surgical>Операционная</roomname.surgical>
+
+
+<!-- A1.7h1 -->
+
+<entityname.streptokinase>Стрептокиназа</entityname.streptokinase>
+<entitydescription.streptokinase>Тромболитический фермент, разжижающий сгустки крови. Применяется для лечения сердечных приступов. Ухудшает свёртываемость крови</entitydescription.streptokinase>
+
+<entityname.thiamine>Тиамин</entityname.thiamine>
+<entitydescription.thiamine>Также известный как витамин B1, этот препарат способствуют восстановлению органов</entitydescription.thiamine>
+
+<afflictionname.afstreptokinase>Разжижение тромбов</afflictionname.afstreptokinase>
+<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+
+<afflictionname.afthiamine>Тиамин</afflictionname.afthiamine>
+<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+
+<!-- A1.8 -->
+<entityname.pressuremeds>Нитропруссид натрия</entityname.pressuremeds>
+<entitydescription.pressuremeds>Препарат, применяющийся для снижения артериального давления.</entitydescription.pressuremeds>
+
+<entityname.medstartercrate>Стартовый медицинский набор</entityname.medstartercrate> 
+<entitydescription.medstartercrate>Ящик, в котором есть всё необходимое, и легко собираемый единственным крафтом</entitydescription.medstartercrate>
+
+</infotexts>

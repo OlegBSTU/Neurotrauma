@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+<Character specifiertags="true"
+skincolors="(#fce1c6, 100); (#f3c696, 100); (#f3c696, 100); (#aa7744, 100); (#f4be98, 100); (#d69a70, 100); (#ab7046, 100); (#774929, 100); (#c8a583, 100); (#a57c53, 100); (#7a5026, 100); (#4a3219, 100); (#957966, 100); (#714d34, 100); (#532d12, 100); (#26190e, 100)"
+haircolors="(#ded7cc, 100); (#d2a36f, 100); (#c77d52, 100); (#ac4934, 100); (#d8ba85, 100); (#cd975a, 100); (#a15837, 100); (#6a3b37, 100); (#bba981, 100); (#8b7e6c, 100); (#594349, 100); (#473637, 100); (#7b8478, 100); (#494e55, 100); (#3a3a3c, 100); (#343030, 100)"
+facialhaircolors="(#ded7cc, 100); (#d2a36f, 100); (#c77d52, 100); (#ac4934, 100); (#d8ba85, 100); (#cd975a, 100); (#a15837, 100); (#6a3b37, 100); (#bba981, 100); (#8b7e6c, 100); (#594349, 100); (#473637, 100); (#7b8478, 100); (#494e55, 100); (#3a3a3c, 100); (#343030, 100)"
+SpeciesName="Human" SpeciesTranslationOverride="" DisplayName="" Group="human" Humanoid="True" HasInfo="True"
+CanInteract="True" Husk="False" UseHuskAppendage="True" NeedsAir="True" NeedsWater="False" CanSpeak="True"
+UseBossHealthBar="False" Noise="150" Visibility="150" BloodDecal="blood" BleedParticleAir="blooddrop"
+BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True"
+PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0"
+DisableDistance="25000" SoundInterval="10">
+  <name firstname="Content/Characters/Human/firstnames_[GENDER].txt" lastname="Content/Characters/Human/lastnames.txt" />
+  <ragdolls folder="%ModDir%\Characters\Human\Ragdolls"/>
+  <animations folder="Content\Characters\Human\Animations"/>
+
+  <StatusEffect type="always" target="This" delay="1" stackable="false" disabledeltatime="true">
+    <Conditional IsDead="false"/>
+    <Affliction identifier="luabotomy" amount="1" />
+  </StatusEffect>
+    <!--
+  <StatusEffect type="always" target="This" comparison="And">
+    <Conditional InPressure="true"/>
+    <Conditional pressureProtection="lt 1000"/>
+    <Affliction identifier="barotest" amount="10" />
+  </StatusEffect>-->
+  <damageemitter particle="gib" drawontop="True" particleamount="10" velocitymin="50" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.25" scalemax="0.5" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blood" particleamount="10" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="waterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="gib" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <sound file="Content/Characters/Human/female_damage1.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage2.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage3.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage4.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage5.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage6.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage7.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage8.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage9.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/female_damage10.ogg" gender="Female" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage1.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage2.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage3.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage4.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage5.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage6.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage7.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage8.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage9.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage10.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <sound file="Content/Characters/Human/male_damage11.ogg" gender="Male" state="Damage" range="500" volume="1" />
+  <health usehealthwindow="True" vitality="100" crushdepth="6000" doesbleed="True" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" applyafflictioncolors="true">
+    <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+    <Limb name="Head">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="1.0" />
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+      <VitalityMultiplier type="bleeding" multiplier="1.0" />
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
+    </Limb>
+  </health>
+  <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface"/>
+  <Heads>
+    <Head id="1" sheetindex="0,0" gender="male"/>
+    <Head id="2" sheetindex="1,0" gender="male"/>
+    <Head id="3" sheetindex="2,0" gender="male"/>
+    <Head id="4" sheetindex="3,0" gender="male"/>
+    <Head id="5" sheetindex="0,1" gender="male"/>
+    <Head id="6" sheetindex="1,1" gender="male"/>
+    <Head id="7" sheetindex="2,1" gender="male"/>
+    <Head id="8" sheetindex="3,1" gender="male"/>
+    <Head id="9" sheetindex="0,2" gender="male"/>
+    <Head id="10" sheetindex="1,2" gender="male"/>
+    <Head id="11" sheetindex="2,2" gender="male"/>
+    <Head id="12" sheetindex="3,2" gender="male"/>
+    <Head id="13" sheetindex="0,3" gender="male"/>
+    <Head id="14" sheetindex="1,3" gender="male"/>
+    <Head id="15" sheetindex="2,3" gender="male"/>
+    <Head id="16" sheetindex="3,3" gender="male"/>
+    <Head id="1" sheetindex="0,0" gender="female"/>
+    <Head id="2" sheetindex="1,0" gender="female"/>
+    <Head id="3" sheetindex="2,0" gender="female"/>
+    <Head id="4" sheetindex="3,0" gender="female"/>
+    <Head id="5" sheetindex="0,1" gender="female"/>
+    <Head id="6" sheetindex="1,1" gender="female"/>
+    <Head id="7" sheetindex="2,1" gender="female"/>
+    <Head id="8" sheetindex="3,1" gender="female"/>
+    <Head id="9" sheetindex="0,2" gender="female"/>
+    <Head id="10" sheetindex="1,2" gender="female"/>
+    <Head id="11" sheetindex="2,2" gender="female"/>
+    <Head id="12" sheetindex="3,2" gender="female"/>
+    <Head id="13" sheetindex="0,3" gender="female"/>
+    <Head id="14" sheetindex="1,3" gender="female"/>
+    <Head id="15" sheetindex="2,3" gender="female"/>
+    <Head id="16" sheetindex="3,3" gender="female"/>
+  </Heads>
+
+  <HeadAttachments>
+    <Wearable type="Hair" gender="male">
+      <sprite name="Hair 1" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="0,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male">
+      <sprite name="Hair 2" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="1,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male">
+      <sprite name="Hair 3" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="2,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 4" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="3,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 5" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="0,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 6" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="1,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 7" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="2,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 8" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="3,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 9" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="0,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 10" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="1,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 11" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="2,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 12" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="3,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 13" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="0,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 14" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="1,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 15" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="2,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="male" replacewhenwearinghat="1">
+      <sprite name="Hair 16" texture="Content/Characters/Human/Human_male_hair.png" sheetindex="3,3"/>
+    </Wearable>
+
+    <Wearable type="Hair" gender="female">
+      <sprite name="Hair 1" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="0,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female">
+      <sprite name="Hair 2" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="1,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female">
+      <sprite name="Hair 3" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="2,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 4" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="3,0"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 5" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="0,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 6" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="1,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 7" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="2,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 8" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="3,1"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 9" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="0,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 10" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="1,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 11" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="2,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 12" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="3,2"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 13" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="0,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 14" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="1,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 15" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="2,3"/>
+    </Wearable>
+    <Wearable type="Hair" gender="female" replacewhenwearinghat="1">
+      <sprite name="Hair 16" texture="Content/Characters/Human/Human_female_hair.png" sheetindex="3,3"/>
+    </Wearable>
+
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 1" texture="Content/Characters/Human/Human_beards.png" sheetindex="0,0"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 2" texture="Content/Characters/Human/Human_beards.png" sheetindex="1,0"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 3" texture="Content/Characters/Human/Human_beards.png" sheetindex="2,0"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 4" texture="Content/Characters/Human/Human_beards.png" sheetindex="3,0"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 5" texture="Content/Characters/Human/Human_beards.png" sheetindex="0,1"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 6" texture="Content/Characters/Human/Human_beards.png" sheetindex="1,1"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 7" texture="Content/Characters/Human/Human_beards.png" sheetindex="2,1"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 8" texture="Content/Characters/Human/Human_beards.png" sheetindex="3,1"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 9" texture="Content/Characters/Human/Human_beards.png" sheetindex="0,2"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 10" texture="Content/Characters/Human/Human_beards.png" sheetindex="1,2"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 11" texture="Content/Characters/Human/Human_beards.png" sheetindex="2,2"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 12" texture="Content/Characters/Human/Human_beards.png" sheetindex="3,2"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 13" texture="Content/Characters/Human/Human_beards.png" sheetindex="0,3"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 14" texture="Content/Characters/Human/Human_beards.png" sheetindex="1,3"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 15" texture="Content/Characters/Human/Human_beards.png" sheetindex="2,3"/>
+    </Wearable>
+    <Wearable type="Beard" gender="male">
+      <sprite name="Beard 16" texture="Content/Characters/Human/Human_beards.png" sheetindex="3,3"/>
+    </Wearable>
+
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 1" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="0,0"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 2" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="1,0"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 3" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="2,0"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 4" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="3,0"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.02">
+      <sprite name="FaceAttachment 5" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="0,1"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.02">
+      <sprite name="FaceAttachment 6" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="1,1"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.02">
+      <sprite name="FaceAttachment 7" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="2,1"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.02">
+      <sprite name="FaceAttachment 8" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="3,1"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.05">
+      <sprite name="FaceAttachment 9" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="0,2"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 10" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="1,2"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.03">
+      <sprite name="FaceAttachment 11" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="2,2"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.02">
+      <sprite name="FaceAttachment 12" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="3,2"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 13" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="0,3"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 14" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="1,3"/>
+    </Wearable>
+    <Wearable type="FaceAttachment" commonness="0.01">
+      <sprite name="FaceAttachment 15" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="2,3"/>
+    </Wearable>
+    <!--
+    <Wearable type="FaceAttachment" commonness="1.0">
+      <sprite name="FaceAttachment 16" texture="Content/Characters/Human/Human_head_accessories.png" sheetindex="3,3"/>
+    </Wearable>
+    -->
+
+    <Wearable type="Husk">
+      <sprite name="Husk" texture="Content/Characters/Human/Human_husk.png" hidewearablesoftype="Beard" sheetindex="0,0"/>
+    </Wearable>
+
+    <Wearable type="Herpes">
+      <sprite name="Herpes" texture="Content/Characters/Human/Human_karma.png" sheetindex="0,0"/>
+    </Wearable>
+
+  </HeadAttachments>
+  
+</Character>
+</Override>

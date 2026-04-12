@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Korean" nowhitespace="false" translatedname="Korean">
+  <!-- ITEMS -->
+  <!-- /// Gear /// -->
+  <entityname.defibrillator>수동 제세동기</entityname.defibrillator>
+  <entitydescription.defibrillator>심장에 전기충격을 가하여 부정맥을 안정화시키는 의료기기. 광범위한 의료 훈련이 필요합니다. 심정지 환자에게 사용하십시오.</entitydescription.defibrillator>
+  <entityname.aed>자동 제세동기</entityname.aed>
+  <entitydescription.aed>심장에 전기충격을 가하여 부정맥을 안정화시키는 의료기기. 의료 교육이 거의 또는 전혀 필요하지 않습니다. 심정지 환자에게 사용하십시오.</entitydescription.aed>
+  <entityname.bvm>앰부 백</entityname.bvm>
+  <entitydescription.bvm>백 밸브 마스크는 호흡을 하지 않거나 적절하게 호흡하지 않는 환자에게 양압 환기를 제공하기 위해 일반적으로 사용되는 휴대용 장치입니다.</entitydescription.bvm>
+  <entityname.autocpr>오토펄스</entityname.autocpr>
+  <entitydescription.autocpr>배터리로 구동되는 자동화된 휴대용 심폐 소생 장치.</entitydescription.autocpr>
+  <entityname.bloodanalyzer>혈액학 분석기</entityname.bloodanalyzer>
+  <entitydescription.bloodanalyzer>혈액 분석기. 완전 자동화. 빈 기증자 카드에 혈액형을 인쇄할 수 있습니다.</entitydescription.bloodanalyzer>
+  <entityname.bloodcollector>빈 기증자 카드</entityname.bloodcollector>
+  <entitydescription.bloodcollector>빈 기증자 카드입니다. 혈액학 분석기에서 사용합니다.</entitydescription.bloodcollector>
+  <entityname.traumashears>외상 가위</entityname.traumashears>
+  <entitydescription.traumashears>붕대와 깁스를 제거하는 데 사용되는 도구입니다.</entitydescription.traumashears>
+  <entityname.wheelchair>휠체어</entityname.wheelchair>
+  <entitydescription.wheelchair>움직임을 위해 다리 대신 팔에 의존하게 만듭니다.</entitydescription.wheelchair>
+  <entityname.blahaj>청상어</entityname.blahaj>
+  <Override>
+    <entityname.healthscanner>건강 진단기</entityname.healthscanner>
+    <entitydescription.healthscanner>증상의 근본 원인을 진단하는 데 사용됩니다.</entitydescription.healthscanner>
+  </Override>
+  <stasisbagequipconfirmation>이것을 장착하면 의식을 잃게 됩니다. 확실합니까?</stasisbagequipconfirmation>
+  <!-- /// Surgery /// -->
+  <entityname.advscalpel>메스</entityname.advscalpel>
+  <entitydescription.advscalpel>수술을 시작하기 위해 환부를 절개할 때 사용하는 도구입니다.</entitydescription.advscalpel>
+  <entityname.advhemostat>지혈겸자</entityname.advhemostat>
+  <entitydescription.advhemostat>수술 중 혈관을 조일 때 사용하는 도구입니다.</entitydescription.advhemostat>
+  <entityname.advretractors>스킨 리트렉터</entityname.advretractors>
+  <entitydescription.advretractors>수술 중 피부를 절개 된 상태로 고정시키는 데 사용되는 도구입니다.</entitydescription.advretractors>
+  <entityname.tweezers>집게</entityname.tweezers>
+  <entitydescription.tweezers>총알 또는 손상되고 괴사된 조직을 제거할 수 있는 작은 도구입니다.</entitydescription.tweezers>
+  <entityname.surgerysaw>외과용 톱</entityname.surgerysaw>
+  <entitydescription.surgerysaw>뼈를 절단하는 데 사용하는 도구.</entitydescription.surgerysaw>
+  <entityname.suture>봉합용 실</entityname.suture>
+  <entitydescription.suture>상처와 수술 절개 부위를 봉합하기 위한 생분해성 봉합용 실.</entitydescription.suture>
+  <entityname.surgicaldrill>수술용 드릴</entityname.surgicaldrill>
+  <entitydescription.surgicaldrill>뼈를 뚫는 데 사용하는 도구입니다.</entitydescription.surgicaldrill>
+  <entityname.osteosynthesisimplants>골접합 임플란트</entityname.osteosynthesisimplants>
+  <entitydescription.osteosynthesisimplants>골절을 치료하기 위해 골접합 수술에 사용되는 티타늄 임플란트.</entitydescription.osteosynthesisimplants>
+  <entityname.spinalimplant>척추 임플란트</entityname.spinalimplant>
+  <entitydescription.spinalimplant>목 골절로 인한 마비를 치료하는 데 사용되는 티타늄 임플란트.</entitydescription.spinalimplant>
+  <entityname.operatingtable>수술대</entityname.operatingtable>
+  <entitydescription.operatingtable>기본적인 인공호흡기가 내장된 수술대입니다.</entitydescription.operatingtable>
+  <entityname.organscalpel_liver>장기 적출용 메스: 간</entityname.organscalpel_liver>
+  <entitydescription.organscalpel_liver>간 적출을 위한 특수 메스.</entitydescription.organscalpel_liver>
+  <entityname.organscalpel_kidneys>장기 적출용 메스: 신장</entityname.organscalpel_kidneys>
+  <entitydescription.organscalpel_kidneys>신장 적출용 특수 메스.</entitydescription.organscalpel_kidneys>
+  <entityname.organscalpel_lungs>장기 적출용 메스: 폐</entityname.organscalpel_lungs>
+  <entitydescription.organscalpel_lungs>폐를 적출하기 위한 특수 메스.</entitydescription.organscalpel_lungs>
+  <entityname.organscalpel_heart>장기 적출용 메스: 심장</entityname.organscalpel_heart>
+  <entitydescription.organscalpel_heart>심장 적출을 위한 특수 메스.</entitydescription.organscalpel_heart>
+  <entityname.organscalpel_brain>장기 적출용 메스: 뇌</entityname.organscalpel_brain>
+  <entitydescription.organscalpel_brain>뇌를 적출하기 위한 특수 메스.</entitydescription.organscalpel_brain>
+  <!-- /// Treatments /// -->
+  <entityname.mannitol>만니톨</entityname.mannitol>
+  <entitydescription.mannitol>당 환원 알코올의 일종. 신경 외상으로부터 회복을 돕기 위해 사용됩니다. 장기 손상을 일으킬 수 있습니다.</entitydescription.mannitol>
+  <entityname.streptokinase>스트렙토키나제</entityname.streptokinase>
+  <entitydescription.streptokinase>혈전을 분해하는 혈전 용해 효소. 심장 마비를 치료하는 데 사용됩니다. 혈액 응고를 감소시킵니다.</entitydescription.streptokinase>
+  <entityname.immunosuppressant>아자티오프린</entityname.immunosuppressant>
+  <entitydescription.immunosuppressant>장기 거부반응 예방용 면역억제제.</entitydescription.immunosuppressant>
+  <entityname.thiamine>티아민</entityname.thiamine>
+  <entitydescription.thiamine>비타민 B1으로 알려진 이 알약은 장기 치유에 도움이 됩니다.</entitydescription.thiamine>
+  <entityname.pressuremeds>나이트로프루사이드 나트륨</entityname.pressuremeds>
+  <entitydescription.pressuremeds>혈압을 낮추는 데 사용되는 약물.</entitydescription.pressuremeds>
+  <entityname.ointment>항생제 연고</entityname.ointment>
+  <entitydescription.ointment>화상 및 경미한 감염으로부터 회복을 촉진하는 살균력이 뛰어난 젤.</entitydescription.ointment>
+  <entityname.endovascballoon>혈관 내 풍선</entityname.endovascballoon>
+  <entitydescription.endovascballoon>파열된 주요 동맥에 풍선을 삽입합니다. 그것은 혈류를 차단하지만 출혈을 멈추는 효과가 있습니다.</entitydescription.endovascballoon>
+  <entityname.medstent>의료용 스텐트</entityname.medstent>
+  <entitydescription.medstent>파열된 대동맥에 혈관 내 풍선을 삽입한 이후 삽입하는 플라스틱 튜브.</entitydescription.medstent>
+  <entityname.tourniquet>지혈대</entityname.tourniquet>
+  <entitydescription.tourniquet>사지에 압력을 가하여 혈류를 감소시키는 장치. 일반적으로 사지에 큰 출혈이 있는 경우에 사용됩니다. 머리에 사용하면 안됩니다.</entitydescription.tourniquet>
+  <entityname.drainage>배액관</entityname.drainage>
+  <entitydescription.drainage>기흉 교정 수술 시 흉강에서 공기를 빼냅니다.</entitydescription.drainage>
+  <entityname.needle>바늘</entityname.needle>
+  <entitydescription.needle>흉막강이나 심낭에서 공기나 액체를 밖으로 배출시키는 감압 밸브가 있는 바늘</entitydescription.needle>
+  <entityname.ringerssolution>링거 액</entityname.ringerssolution>
+  <entitydescription.ringerssolution>저혈압이나 체액 손실을 치료하기 위해 물에 녹인 여러 염류 용액. 혈액과 삼투압이 같습니다.</entitydescription.ringerssolution>
+  <entityname.antiseptic>소독제</entityname.antiseptic>
+  <!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+  <entityname.antisepticspray>소독제 스프레이</entityname.antisepticspray>
+  <!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+  <entityname.propofol>프로포폴</entityname.propofol>
+  <entitydescription.propofol>의식 수준을 감소시키고 사건에 대한 기억력 부족을 초래하는 속효성 약물입니다. 그 용도에는 전신 마취의 시작과 유지가 포함됩니다.</entitydescription.propofol>
+  <entityname.gypsum>석고</entityname.gypsum>
+  <entitydescription.gypsum>사지의 골절을 깁스로 둘러싸는 데 사용되는 미세한 미네랄 분말입니다. 붕대를 먼저 감아야 합니다.</entitydescription.gypsum>
+  
+  <!-- /// Blood stuff /// -->
+  <!--<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>-->
+  <!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
+  <entityname.emptybloodpack>빈 혈액 팩</entityname.emptybloodpack>
+  <entitydescription.emptybloodpack>채혈을 위한 빈 혈액 팩.</entitydescription.emptybloodpack>
+  <entityname.bloodpackoplus>O+ 혈액 팩</entityname.bloodpackoplus>
+  <entitydescription.bloodpackoplus>수혈 가능한 환자의 혈액형: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
+  <entityname.bloodpackominus>O- 혈액 팩</entityname.bloodpackominus>
+  <entitydescription.bloodpackominus>모든 환자에게 사용할 수 있는 혈액 팩.</entitydescription.bloodpackominus>
+  <entityname.bloodpackaplus>A+ 혈액 팩</entityname.bloodpackaplus>
+  <entitydescription.bloodpackaplus>수혈 가능한 환자의 혈액형: A+, AB+</entitydescription.bloodpackaplus>
+  <entityname.bloodpackbplus>B+ 혈액 팩</entityname.bloodpackbplus>
+  <entitydescription.bloodpackbplus>수혈 가능한 환자의 혈액형: B+, AB+</entitydescription.bloodpackbplus> --&gt;
+
+<entityname.bloodpackabplus>AB+ 혈액 팩</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>수혈 가능한 환자의 혈액형: AB+</entitydescription.bloodpackabplus> --&gt;
+
+<entityname.bloodpackaminus>A- 혈액 팩</entityname.bloodpackaminus>
+<entitydescription.bloodpackaminus>수혈 가능한 환자의 혈액형: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> --&gt;
+
+<entityname.bloodpackbminus>B- 혈액 팩</entityname.bloodpackbminus>
+<entitydescription.bloodpackbminus>수혈 가능한 환자의 혈액형: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
+
+<entityname.bloodpackabminus>AB- 혈액 팩</entityname.bloodpackabminus>
+<entitydescription.bloodpackabminus>수혈 가능한 환자의 혈액형: AB-, AB+</entitydescription.bloodpackabminus>
+
+<Override>
+<entityname.antibloodloss2>O- 혈액 팩</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>모든 환자에게 사용할 수 있는 혈액 팩.</entitydescription.antibloodloss2>
+</Override>
+
+<entityname.ominuscard>O- 혈액 기증자 카드</entityname.ominuscard>
+<entitydescription.ominuscard>이 혈액형으로부터 수혈받을 수 있음: O-
+이 혈액형에게 공혈할 수 있음: 모든 혈액형</entitydescription.ominuscard>
+
+<entityname.opluscard>O+ 혈액 기증자 카드</entityname.opluscard>
+<entitydescription.opluscard>이 혈액형으로부터 수혈받을 수 있음: O-, O+
+이 혈액형에게 공혈할 수 있음: O+, A+, B+, AB+</entitydescription.opluscard>
+
+<entityname.aminuscard>A- 혈액 기증자 카드</entityname.aminuscard>
+<entitydescription.aminuscard>이 혈액형으로부터 수혈받을 수 있음: O-, A-
+이 혈액형에게 공혈할 수 있음: A-, A+, AB-, AB+</entitydescription.aminuscard>
+
+<entityname.apluscard>A+ 혈액 기증자 카드</entityname.apluscard>
+<entitydescription.apluscard>이 혈액형으로부터 수혈받을 수 있음: O-, O+, A-, A+
+이 혈액형에게 공혈할 수 있음: A+, AB+</entitydescription.apluscard>
+
+<entityname.bminuscard>B- 혈액 기증자 카드</entityname.bminuscard>
+<entitydescription.bminuscard>이 혈액형으로부터 수혈받을 수 있음: O-, B-
+이 혈액형에게 공혈할 수 있음: B-, B+, AB-, AB+</entitydescription.bminuscard>
+
+<entityname.bpluscard>B+ 혈액 기증자 카드</entityname.bpluscard>
+<entitydescription.bpluscard>이 혈액형으로부터 수혈받을 수 있음: O-, O+, B-, B+
+이 혈액형에게 공혈할 수 있음: B+, AB+</entitydescription.bpluscard>
+
+<entityname.abminuscard>AB- 혈액 기증자 카드</entityname.abminuscard>
+<entitydescription.abminuscard>이 혈액형으로부터 수혈받을 수 있음: O-, A-, B-, AB-
+이 혈액형에게 공혈할 수 있음: AB-, AB+</entitydescription.abminuscard>
+
+<entityname.abpluscard>AB+ 혈액 기증자 카드</entityname.abpluscard>
+<entitydescription.abpluscard>이 혈액형으로부터 수혈받을 수 있음: all of them
+이 혈액형에게 공혈할 수 있음: AB+</entitydescription.abpluscard>
+
+<!-- /// New containers /// -->
+<entityname.medtoolbox>의료품 보관함</entityname.medtoolbox>
+<entitydescription.medtoolbox>약 및 의료기구를 보관할 수 있습니다.</entitydescription.medtoolbox>
+<entityname.surgerytoolbox>수술도구 보관함</entityname.surgerytoolbox>
+<entitydescription.surgerytoolbox>수술 중 사용하는 많은 작은 물건을 보관할 수 있습니다.</entitydescription.surgerytoolbox>
+<entityname.organcrate>저온 상자</entityname.organcrate>
+<entitydescription.organcrate>소중한 이식용 장기를 보관하는 곳</entitydescription.organcrate>
+<entityname.medstartercrate>의료용 스타터 상자</entityname.medstartercrate>
+<entitydescription.medstartercrate>모든 필수품을 담은 상자로, 하나의 제작 레시피로 편리하게 포장되어 있습니다.</entitydescription.medstartercrate>
+<entityname.organtoolbox>저온 보관함</entityname.organtoolbox>
+<entitydescription.organtoolbox>소중한 이식용 장기를 보관하는 곳</entitydescription.organtoolbox>
+<entityname.bodybag>바디 백</entityname.bodybag>
+<entitydescription.bodybag>사람을 더 빨리 옮길 수 있습니다.</entitydescription.bodybag>
+<entityname.stasisbag>스테이시스 백</entityname.stasisbag>
+<entitydescription.stasisbag>대부분의 생물학적 과정이 일어나는 것을 막습니다.</entitydescription.stasisbag>
+
+<!-- /// Limbs and organs /// -->
+<entityname.rarm>오른쪽 팔</entityname.rarm>
+<entitydescription.rarm>잘린 오른팔. 외과적으로 다시 부착할 수 있습니다.</entitydescription.rarm>
+<entityname.larm>왼쪽 팔</entityname.larm>
+<entitydescription.larm>잘린 왼팔. 외과적으로 다시 부착할 수 있습니다.</entitydescription.larm>
+<entityname.rleg>오른쪽 다리</entityname.rleg>
+<entitydescription.rleg>잘린 오른쪽 다리. 외과적으로 다시 부착할 수 있습니다.</entitydescription.rleg>
+<entityname.lleg>왼쪽 다리</entityname.lleg>
+<entitydescription.lleg>잘린 왼쪽 다리. 외과적으로 다시 부착할 수 있습니다.</entitydescription.lleg>
+<entityname.rarmp>오른팔 바이오닉 의수</entityname.rarmp>
+<entitydescription.rarmp>바이오닉 오른팔. 절단 치료에 사용할 수 있습니다.</entitydescription.rarmp>
+<entityname.larmp>왼팔 바이오닉 의수</entityname.larmp>
+<entitydescription.larmp>바이오닉 왼팔. 절단 치료에 사용할 수 있습니다.</entitydescription.larmp>
+<entityname.rlegp>오른쪽 다리 바이오닉 의족</entityname.rlegp>
+<entitydescription.rlegp>바이오닉 오른쪽 다리. 절단 치료에 사용할 수 있습니다.</entitydescription.rlegp>
+<entityname.llegp>왼쪽 다리 바이오닉 의족</entityname.llegp>
+<entitydescription.llegp>바이오닉 왼쪽 다리. 절단 치료에 사용할 수 있습니다.</entitydescription.llegp>
+<entityname.livertransplant>이식용 간</entityname.livertransplant>
+<entityname.livertransplant_q1>이식용 간</entityname.livertransplant_q1>
+<entityname.livertransplant_q2>이식용 간</entityname.livertransplant_q2>
+<entityname.livertransplant_q3>이식용 간</entityname.livertransplant_q3>
+<entityname.livertransplant_q4>이식용 간</entityname.livertransplant_q4>
+<entityname.livertransplant_q5>이식용 간</entityname.livertransplant_q5>
+<entityname.lungtransplant>이식용 폐</entityname.lungtransplant>
+<entityname.lungtransplant_q1>이식용 폐</entityname.lungtransplant_q1>
+<entityname.lungtransplant_q2>이식용 폐</entityname.lungtransplant_q2>
+<entityname.lungtransplant_q3>이식용 폐</entityname.lungtransplant_q3>
+<entityname.lungtransplant_q4>이식용 폐</entityname.lungtransplant_q4>
+<entityname.lungtransplant_q5>이식용 폐</entityname.lungtransplant_q5>
+<entityname.kidneytransplant>이식용 신장</entityname.kidneytransplant>
+<entityname.kidneytransplant_q1>이식용 신장</entityname.kidneytransplant_q1>
+<entityname.kidneytransplant_q2>이식용 신장</entityname.kidneytransplant_q2>
+<entityname.kidneytransplant_q3>이식용 신장</entityname.kidneytransplant_q3>
+<entityname.kidneytransplant_q4>이식용 신장</entityname.kidneytransplant_q4>
+<entityname.kidneytransplant_q5>이식용 신장</entityname.kidneytransplant_q5>
+<entityname.hearttransplant>이식용 심장</entityname.hearttransplant>
+<entityname.hearttransplant_q1>이식용 심장</entityname.hearttransplant_q1>
+<entityname.hearttransplant_q2>이식용 심장</entityname.hearttransplant_q2>
+<entityname.hearttransplant_q3>이식용 심장</entityname.hearttransplant_q3>
+<entityname.hearttransplant_q4>이식용 심장</entityname.hearttransplant_q4>
+<entityname.hearttransplant_q5>이식용 심장</entityname.hearttransplant_q5>
+<entityname.braintransplant>이식용 뇌</entityname.braintransplant>
+<entityname.armlock1>작동하지 않는 오른손</entityname.armlock1>
+<entityname.armlock2>작동하지 않는 왼손</entityname.armlock2>
+
+<!-- AFFLICTIONS -->
+<!-- TEMPLATE -->
+<!-- <afflictionname.organdamage></afflictionname.organdamage> -->
+<!-- <afflictiondescription.organdamage></afflictiondescription.organdamage> -->
+<!-- <afflictioncauseofdeath.organdamage></afflictioncauseofdeath.organdamage> -->
+<!-- <afflictioncauseofdeathself.organdamage></afflictioncauseofdeathself.organdamage> -->
+
+<!-- /// Heart /// -->
+<afflictionname.tachycardia>심박수 증가</afflictionname.tachycardia>
+<afflictiondescription.tachycardia>심장이 놀라울 정도로 빠르게 뛰고 있습니다.</afflictiondescription.tachycardia>
+<afflictionname.fibrillation>불규칙한 심장박동</afflictionname.fibrillation>
+<afflictiondescription.fibrillation>심장이 펄럭이며 떨리는 방식으로 뛰고 있습니다.</afflictiondescription.fibrillation>
+<afflictionname.cardiacarrest>심정지</afflictionname.cardiacarrest>
+<afflictiondescription.cardiacarrest>박동이 없습니다.</afflictiondescription.cardiacarrest>
+<afflictionname.heartattack>심장 마비</afflictionname.heartattack>
+<afflictiondescription.heartattack></afflictiondescription.heartattack>
+<afflictionname.heartdamage>심장 손상</afflictionname.heartdamage>
+<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+<afflictionname.heartfailure>심부전</afflictionname.heartfailure>
+<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+<afflictionname.heartremoved>심장이 제거됨</afflictionname.heartremoved>
+<afflictiondescription.heartremoved>심장은 수술로 제거되었습니다.</afflictiondescription.heartremoved>
+
+<!-- /// Brain /// -->
+<afflictionname.cerebralhypoxia>신경 외상</afflictionname.cerebralhypoxia>
+<afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
+<afflictioncauseofdeath.cerebralhypoxia>신경 외상으로 인한 사망</afflictioncauseofdeath.cerebralhypoxia>
+<afflictioncauseofdeathself.cerebralhypoxia>당신은 신경 외상으로 사망했습니다.</afflictioncauseofdeathself.cerebralhypoxia>
+<afflictionname.stroke>뇌졸중</afflictionname.stroke>
+<afflictiondescription.stroke></afflictiondescription.stroke>
+<afflictionname.seizure>발작</afflictionname.seizure>
+<afflictiondescription.seizure></afflictiondescription.seizure>
+<afflictionname.coma>코마</afflictionname.coma>
+<afflictiondescription.coma></afflictiondescription.coma>
+<afflictionname.brainremoved>뇌가 제거됨</afflictionname.brainremoved>
+<afflictiondescription.brainremoved>뇌는 수술로 제거되었습니다.</afflictiondescription.brainremoved>
+<afflictionname.traumaticshock>외상성 쇼크</afflictionname.traumaticshock>
+<afflictiondescription.traumaticshock>이렇게 파고들면 안 돼! 이건 아주 잘못된 거야!</afflictiondescription.traumaticshock>
+
+<!-- /// Blood /// -->
+<afflictionname.bloodpressure>혈압</afflictionname.bloodpressure>
+<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+<afflictionname.hypoxemia>저산소혈증</afflictionname.hypoxemia>
+<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+
+<!-- /// Lungs /// -->
+<afflictionname.respiratoryarrest>호흡 정지</afflictionname.respiratoryarrest>
+<afflictiondescription.respiratoryarrest>환자가 숨을 쉬지 않습니다.</afflictiondescription.respiratoryarrest>
+<afflictionname.hyperventilation>과호흡</afflictionname.hyperventilation>
+<afflictiondescription.hyperventilation>환자는 놀라울 정도로 빠른 속도로 호흡하고 있습니다.</afflictiondescription.hyperventilation>
+<afflictionname.hypoventilation>저호흡</afflictionname.hypoventilation>
+<afflictiondescription.hypoventilation>환자는 놀라울 정도로 느린 속도로 호흡하고 있습니다.</afflictiondescription.hypoventilation>
+<afflictionname.dyspnea>호흡 곤란</afflictionname.dyspnea>
+<afflictiondescription.dyspnea>환자의 호흡은 힘들고 얕습니다.</afflictiondescription.dyspnea>
+<afflictionname.alkalosis>알칼리증</afflictionname.alkalosis>
+<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
+<afflictionname.acidosis>산증</afflictionname.acidosis>
+<afflictiondescription.acidosis></afflictiondescription.acidosis>
+<afflictionname.rili>방사선으로 인한 폐 손상</afflictionname.rili>
+<afflictiondescription.rili></afflictiondescription.rili>
+<afflictionname.pneumothorax>기흉</afflictionname.pneumothorax>
+<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+<afflictionname.lungdamage>폐 손상</afflictionname.lungdamage>
+<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
+<afflictionname.lungfailure>폐부전</afflictionname.lungfailure>
+<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+<afflictionname.lungremoved>폐가 제거됨</afflictionname.lungremoved>
+<afflictiondescription.lungremoved>폐는 외과적으로 제거되었습니다.</afflictiondescription.lungremoved>
+
+<!-- /// kidneys /// -->
+<afflictionname.kidneydamage>신장 손상</afflictionname.kidneydamage>
+<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+<afflictionname.kidneyfailure>신부전</afflictionname.kidneyfailure>
+<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+<afflictionname.kidneyremoved>신장이 제거됨</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>신장은 수술로 제거되었습니다.</afflictiondescription.kidneyremoved>
+
+<!-- /// bones /// -->
+<afflictionname.bonedamage>뼈 손상</afflictionname.bonedamage>
+<afflictiondescription.bone></afflictiondescription.bone>
+<afflictionname.bonedeath>뼈 괴사</afflictionname.bonedeath>
+<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+<afflictionname.bonegrowth>뼈 재생 촉진</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>뼈 재생이 촉진되었습니다. 괴사된 뼈가 치유되기 위해서는 모든 팔과 다리에 이 증상이 나타나도록 해야 합니다.</afflictiondescription.bonegrowth>
+
+<!-- /// liver /// -->
+<afflictionname.liverdamage>간 손상</afflictionname.liverdamage>
+<afflictiondescription.liverdamage></afflictiondescription.liverdamage>
+<afflictionname.liverfailure>간부전</afflictionname.liverfailure>
+<afflictiondescription.liverfailure></afflictiondescription.liverfailure>
+<afflictionname.liverremoved>간이 제거됨</afflictionname.liverremoved>
+<afflictiondescription.liverremoved>간은 수술로 제거되었습니다.</afflictiondescription.liverremoved>
+
+<!-- /// surgery and related /// -->
+<afflictionname.surgeryincision>수술 절개</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>메스로 절개가 이루어졌습니다.</afflictiondescription.surgeryincision>
+<afflictionname.clampedbleeders>혈관 조임</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>절개로 유발된 출혈이 멈췄습니다.</afflictiondescription.clampedbleeders>
+<afflictionname.arteriesclamp>동맥 조임</afflictionname.arteriesclamp>
+<afflictiondescription.arteriesclamp>동맥으로부터의 출혈은 멈췄지만 사지로 가는 혈류가 심각하게 감소합니다.</afflictiondescription.arteriesclamp>
+<afflictionname.balloonedaorta>풍선이 삽입된 대동맥</afflictionname.balloonedaorta>
+<afflictiondescription.balloonedaorta>대동맥은 출혈을 멈췄지만 사지와 장기로 가는 혈류가 사라졌습니다.</afflictiondescription.balloonedaorta>
+<afflictionname.boneclamp>뼈 클램프</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>골절부위가 뼈 클램프로 고정되었습니다.</afflictiondescription.boneclamp>
+<afflictionname.bandaged>붕대</afflictionname.bandaged>
+<afflictiondescription.bandaged>감염으로부터 보호하고 탈구된 뼈를 안정화시킵니다. 움직임이 약간 느려집니다.</afflictiondescription.bandaged>
+<afflictionname.dirtybandage>더러운 붕대</afflictionname.dirtybandage>
+<afflictiondescription.dirtybandage>감염으로부터 보호하는 데 사용되었지만 지금은 그 반대입니다.</afflictiondescription.dirtybandage>
+<afflictionname.gypsumcast>깁스로 고정됨</afflictionname.gypsumcast>
+<afflictiondescription.gypsumcast>골절을 치료하고 보호합니다. 움직임이 느려집니다. 외상 가위를 사용하여 제거하십시오.</afflictiondescription.gypsumcast>
+<afflictionname.ointmented>연고</afflictionname.ointmented>
+<afflictiondescription.ointmented>항생제 젤 층은 모든 세균으로부터 상처를 보호하고 청소합니다.</afflictiondescription.ointmented>
+<afflictionname.needlec>바늘</afflictionname.needlec>
+<afflictiondescription.needlec>흉막강의 압력을 정상화합니다.</afflictiondescription.needlec>
+
+<!-- fractures, amputations, dislocations and bleeding arteries-->
+<afflictionname.ra_fracture>오른쪽 상완골 골절</afflictionname.ra_fracture>
+<afflictiondescription.ra_fracture>오른팔이 부러졌습니다.</afflictiondescription.ra_fracture>
+<afflictionname.la_fracture>왼쪽 상완골 골절</afflictionname.la_fracture>
+<afflictiondescription.la_fracture>왼쪽 팔이 부러졌습니다.</afflictiondescription.la_fracture>
+<afflictionname.rl_fracture>오른쪽 대퇴골 골절</afflictionname.rl_fracture>
+<afflictiondescription.rl_fracture>오른쪽 다리가 부러졌습니다.</afflictiondescription.rl_fracture>
+<afflictionname.ll_fracture>왼쪽 대퇴골 골절</afflictionname.ll_fracture>
+<afflictiondescription.ll_fracture>왼쪽 다리가 부러졌습니다.</afflictiondescription.ll_fracture>
+<afflictionname.t_fracture>갈비뼈 골절</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>하나 이상의 갈비뼈가 부러졌습니다.</afflictiondescription.t_fracture>
+<afflictionname.h_fracture>두개골 골절</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>두개골이 부러졌습니다.</afflictiondescription.h_fracture>
+<afflictionname.n_fracture>목 골절</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>목이 부러졌습니다.</afflictiondescription.n_fracture>
+<afflictionname.tra_amputation>외상성 절단</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>오른팔의 대부분의 조직이 찢어졌습니다.</afflictiondescription.tra_amputation>
+<afflictionname.tla_amputation>외상성 절단</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>왼팔의 대부분의 조직이 찢어졌습니다.</afflictiondescription.tla_amputation>
+<afflictionname.trl_amputation>외상성 절단</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>오른쪽 다리의 조직이 대부분 찢어졌습니다.</afflictiondescription.trl_amputation>
+<afflictionname.tll_amputation>외상성 절단</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>왼쪽 다리 조직의 대부분이 찢어졌습니다.</afflictiondescription.tll_amputation>
+<afflictionname.th_amputation>외상성 절단</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>머리 조직의 대부분이 찢어졌습니다.</afflictiondescription.th_amputation>
+<afflictionname.sra_amputation>절단</afflictionname.sra_amputation>
+<afflictiondescription.sra_amputation>오른쪽 팔은 수술로 절단되었습니다.</afflictiondescription.sra_amputation>
+<afflictionname.sla_amputation>절단</afflictionname.sla_amputation>
+<afflictiondescription.sla_amputation>왼쪽 팔은 수술로 절단되었습니다.</afflictiondescription.sla_amputation>
+<afflictionname.srl_amputation>절단</afflictionname.srl_amputation>
+<afflictiondescription.srl_amputation>오른쪽 다리는 수술로 절단되었습니다.</afflictiondescription.srl_amputation>
+<afflictionname.sll_amputation>절단</afflictionname.sll_amputation>
+<afflictiondescription.sll_amputation>왼쪽 다리는 수술로 절단되었습니다.</afflictiondescription.sll_amputation>
+<afflictionname.sh_amputation>절단</afflictionname.sh_amputation>
+<afflictiondescription.sh_amputation>머리는 수술로 절단되었습니다.</afflictiondescription.sh_amputation>
+<afflictionname.t_paralysis>척수 손상</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>환자는 마비되어 몸을 느끼지 못합니다.</afflictiondescription.t_paralysis>
+<afflictioncauseofdeath.t_paralysis>마비로 사망</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>당신은 마비로 사망했습니다.</afflictioncauseofdeathself.t_paralysis>
+<afflictionname.dislocation1>탈구</afflictionname.dislocation1>
+<afflictiondescription.dislocation1>관절이 이렇게 휘어지면 안되는데...</afflictiondescription.dislocation1>
+<afflictionname.dislocation2>탈구</afflictionname.dislocation2>
+<afflictiondescription.dislocation2>관절이 이렇게 휘어지면 안되는데...</afflictiondescription.dislocation2>
+<afflictionname.dislocation3>탈구</afflictionname.dislocation3>
+<afflictiondescription.dislocation3>관절이 이렇게 휘어지면 안되는데...</afflictiondescription.dislocation3>
+<afflictionname.dislocation4>탈구</afflictionname.dislocation4>
+<afflictiondescription.dislocation4>관절이 이렇게 휘어지면 안되는데...</afflictiondescription.dislocation4>
+<afflictionname.ll_arterialcut>대퇴동맥 출혈</afflictionname.ll_arterialcut>
+<afflictiondescription.ll_arterialcut>동맥이 손상되어 심각한 출혈을 유발합니다.</afflictiondescription.ll_arterialcut>
+<afflictionname.rl_arterialcut>대퇴동맥 출혈</afflictionname.rl_arterialcut>
+<afflictiondescription.rl_arterialcut>동맥이 손상되어 심각한 출혈을 유발합니다.</afflictiondescription.rl_arterialcut>
+<afflictionname.la_arterialcut>상완 동맥 출혈</afflictionname.la_arterialcut>
+<afflictiondescription.la_arterialcut>동맥이 손상되어 심각한 출혈을 유발합니다.</afflictiondescription.la_arterialcut>
+<afflictionname.ra_arterialcut>상완 동맥 출혈</afflictionname.ra_arterialcut>
+<afflictiondescription.ra_arterialcut>동맥이 손상되어 심각한 출혈을 유발합니다.</afflictiondescription.ra_arterialcut>
+<afflictionname.t_arterialcut>대동맥 파열</afflictionname.t_arterialcut>
+<afflictionname.h_arterialcut>경동맥 출혈</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>동맥이 손상되어 심각한 출혈을 유발합니다.</afflictiondescription.h_arterialcut>
+<afflictionname.suturedw>꿰매어진 상처</afflictionname.suturedw>
+<afflictiondescription.suturedw>상처를 봉합했습니다.</afflictiondescription.suturedw>
+<afflictionname.immunity>면역</afflictionname.immunity>
+<afflictiondescription.immunity></afflictiondescription.immunity>
+<afflictionname.infectedwound>감염된 상처</afflictionname.infectedwound>
+<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+<afflictionname.sepsis>패혈</afflictionname.sepsis>
+<afflictiondescription.sepsis></afflictiondescription.sepsis>
+<afflictionname.necrosis>괴사</afflictionname.necrosis>
+<afflictiondescription.necrosis></afflictiondescription.necrosis>
+<afflictioncauseofdeath.necrosis>괴사된 상처로 인해 사망했습니다.</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>당신은 괴사된 상처로 인해 사망했습니다.</afflictioncauseofdeathself.necrosis>
+<afflictionname.gangrene>괴저</afflictionname.gangrene>
+<afflictiondescription.gangrene>부위가 쪼그라들어 검게 변했습니다.</afflictiondescription.gangrene>
+<afflictionname.afadrenaline>아드레날린</afflictionname.afadrenaline>
+<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+<afflictionname.afstreptokinase>응고 방지</afflictionname.afstreptokinase>
+<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+<afflictionname.afthiamine>티아민</afflictionname.afthiamine>
+<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+<afflictionname.afpressuredrug>혈압 강하제</afflictionname.afpressuredrug>
+<afflictiondescription.afpressuredrug></afflictiondescription.afpressuredrug>
+<afflictionname.afsaline>식염수</afflictionname.afsaline>
+<afflictiondescription.afsaline></afflictiondescription.afsaline>
+<afflictionname.afringerssolution>링거액</afflictionname.afringerssolution>
+<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+<afflictionname.afmannitol>만니톨</afflictionname.afmannitol>
+<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+<afflictionname.afantibiotics>항생제</afflictionname.afantibiotics>
+<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+<afflictionname.afimmunosuppressant>면역억제제</afflictionname.afimmunosuppressant>
+<afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
+<afflictionname.hemotransfusionshock>수혈 쇼크</afflictionname.hemotransfusionshock>
+<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+<afflictionname.foreignbody>이물질</afflictionname.foreignbody>
+<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
+<afflictionname.tamponade>심장눌림증</afflictionname.tamponade>
+<afflictiondescription.tamponade></afflictiondescription.tamponade>
+<afflictionname.internalbleeding>내부 출혈</afflictionname.internalbleeding>
+<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
+
+<!-- /// symptoms /// -->
+<afflictionname.sym_cough>기침</afflictionname.sym_cough>
+<afflictiondescription.sym_cough>환자는 주기적으로 기침을 합니다.</afflictiondescription.sym_cough>
+<afflictionname.sym_paleskin>창백한 피부</afflictionname.sym_paleskin>
+<afflictiondescription.sym_paleskin>환자의 피부는 창백합니다.</afflictiondescription.sym_paleskin>
+<afflictionname.sym_lightheadedness>현기증</afflictionname.sym_lightheadedness>
+<afflictiondescription.sym_lightheadedness>환자는 현기증을 겪고 있습니다.</afflictiondescription.sym_lightheadedness>
+<afflictionname.sym_blurredvision>흐린 시야</afflictionname.sym_blurredvision>
+<afflictiondescription.sym_blurredvision>환자는 시야가 흐려졌다고 호소하고 있습니다.</afflictiondescription.sym_blurredvision>
+<afflictionname.sym_confusion>착란</afflictionname.sym_confusion>
+<afflictiondescription.sym_confusion>환자는 방향 감각을 잃고 혼란스러워 보입니다.</afflictiondescription.sym_confusion>
+<afflictionname.sym_headache>두통</afflictionname.sym_headache>
+<afflictiondescription.sym_headache>환자는 두통을 호소하고 있습니다.</afflictiondescription.sym_headache>
+<afflictionname.sym_legswelling>다리 붓기</afflictionname.sym_legswelling>
+<afflictiondescription.sym_legswelling>환자의 다리가 부어 있습니다.</afflictiondescription.sym_legswelling>
+<afflictionname.sym_weakness>힘이 없음</afflictionname.sym_weakness>
+<afflictiondescription.sym_weakness>환자의 해당 부위에 힘이 없습니다.</afflictiondescription.sym_weakness>
+<afflictionname.sym_wheezing>쌕쌕거림</afflictionname.sym_wheezing>
+<afflictiondescription.sym_wheezing>환자의 호흡에서 높은 음의 소음이 발생합니다.</afflictiondescription.sym_wheezing>
+<afflictionname.sym_vomiting>구토</afflictionname.sym_vomiting>
+<afflictiondescription.sym_vomiting>환자는 주기적으로 구토를 합니다.</afflictiondescription.sym_vomiting>
+<afflictionname.sym_hematemesis>피를 토함</afflictionname.sym_hematemesis>
+<afflictiondescription.sym_hematemesis>환자는 주기적으로 피를 토합니다.</afflictiondescription.sym_hematemesis>
+<afflictionname.fever>고열</afflictionname.fever>
+<afflictiondescription.fever>환자의 체온이 상승합니다.</afflictiondescription.fever>
+<afflictionname.sym_abdomdiscomfort>복부 불편</afflictionname.sym_abdomdiscomfort>
+<afflictiondescription.sym_abdomdiscomfort>환자는 복부가 불편하다고 호소하고 있습니다.</afflictiondescription.sym_abdomdiscomfort>
+<afflictionname.sym_bloating>팽만감</afflictionname.sym_bloating>
+<afflictiondescription.sym_bloating>환자의 복부가 부풀어 올랐습니다.</afflictiondescription.sym_bloating>
+<afflictionname.sym_jaundice>황달</afflictionname.sym_jaundice>
+<afflictiondescription.sym_jaundice>환자의 피부는 병약한 노란색으로 변했습니다.</afflictiondescription.sym_jaundice>
+<afflictionname.sym_sweating>땀흘림</afflictionname.sym_sweating>
+<afflictiondescription.sym_sweating>환자가 과도하게 땀을 흘리고 있습니다.</afflictiondescription.sym_sweating>
+<afflictionname.sym_palpitations>심장이 두근거림</afflictionname.sym_palpitations>
+<afflictiondescription.sym_palpitations>환자는 심장이 두근거림을 호소하고 있습니다.</afflictiondescription.sym_palpitations>
+<afflictionname.sym_unconsciousness>무의식</afflictionname.sym_unconsciousness>
+<afflictiondescription.sym_unconsciousness>환자는 의식이 없습니다.</afflictiondescription.sym_unconsciousness>
+<afflictionname.inflammation>염증</afflictionname.inflammation>
+<afflictiondescription.inflammation>부위가 붉게 부어 오르며 따뜻합니다.</afflictiondescription.inflammation>
+<afflictionname.spasm>경련</afflictionname.spasm>
+<afflictiondescription.spasm>환자는 해당 부위의 불규칙한 움직임을 제어할 수 없습니다.</afflictiondescription.spasm>
+<afflictionname.sym_craving>갈망</afflictionname.sym_craving>
+<afflictiondescription.sym_craving>환자는 충분히 행복합니다... 필요한 것을 얻는 한.</afflictiondescription.sym_craving>
+<afflictionname.onfire>불이야!</afflictionname.onfire>
+<afflictiondescription.onfire>환자가 산 채로 불타고 있습니다! 소화기를 잡아라!</afflictiondescription.onfire>
+<afflictionname.pain_chest>가슴 통증</afflictionname.pain_chest>
+<afflictiondescription.pain_chest>환자는 가슴에 날카롭고 찌르는 듯한 통증을 호소하고 있습니다.</afflictiondescription.pain_chest>
+<afflictionname.pain_abdominal>복통</afflictionname.pain_abdominal>
+<afflictiondescription.pain_abdominal>환자는 복부에 지속적인 통증을 호소하고 있습니다.</afflictiondescription.pain_abdominal>
+<afflictionname.pain_extremity>심한 통증</afflictionname.pain_extremity>
+<afflictiondescription.pain_extremity>환자는 환부에 심한 통증을 호소하고 있습니다.</afflictiondescription.pain_extremity>
+<afflictionname.sym_nausea>메스꺼움</afflictionname.sym_nausea>
+<afflictiondescription.sym_nausea>환자는 메스꺼움을 느끼며 피부가 축축합니다.</afflictiondescription.sym_nausea>
+<afflictionname.luabotomy>Lua 없음</afflictionname.luabotomy>
+<afflictiondescription.luabotomy>Lua가 실행되지 않습니다. 즉, Neurotrauma 및 이를 사용하는 다른 모드가 작동하지 않습니다. 사용하려는 모드의 워크샵 페이지를 읽으십시오.</afflictiondescription.luabotomy>
+<afflictionname.analgesia>무통</afflictionname.analgesia>
+<afflictiondescription.analgesia>통증을 느끼지 않습니다.</afflictiondescription.analgesia>
+<afflictionname.anesthesia>마취</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>환자는 약물로 인한 진정효과를 보이고 있습니다.</afflictiondescription.anesthesia>
+<afflictionname.burn_deg1>1도 화상</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>부위가 붉고 만지면 통증이 있습니다.</afflictiondescription.burn_deg1>
+<afflictionname.burn_deg2>2도 화상</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>감염된 부위에 매우 고통스러운 물집이 흩어져 있습니다.</afflictiondescription.burn_deg2>
+<afflictionname.burn_deg3>3도 화상</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>환자는 이제 가죽 같은 딱딱한 부위에서 통증을 느끼지 않습니다.</afflictiondescription.burn_deg3>
+
+<!-- /// Surgery /// -->
+<afflictionname.surgeryincision>수술 절개</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>부위가 절개되었습니다.</afflictiondescription.surgeryincision>
+<afflictionname.clampedbleeders>혈관 조임</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>절개로 인한 출혈이 멈췄습니다.</afflictiondescription.clampedbleeders>
+<afflictionname.retractedskin>피부 견인</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>절개된 피부는 스킨 리트렉터로 고정되어 있습니다.</afflictiondescription.retractedskin>
+<afflictionname.drilledbones>뚫린 뼈</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>뼈는 정형 외과 절차를 위해 준비되었습니다.</afflictiondescription.drilledbones>
+<afflictionname.suturedi>봉합된 절개</afflictionname.suturedi>
+<afflictiondescription.suturedi>봉합용 실을 사용하여 절개되었던 부위를 봉합했습니다.</afflictiondescription.suturedi>
+<afflictionname.bonecut>톱질된 뼈</afflictionname.bonecut>
+<afflictiondescription.bonecut>뼈가 절단되었습니다.</afflictiondescription.bonecut>
+
+<!-- /// SIGNALS /// -->
+<connection.aliveout>살아있음_여부</connection.aliveout>
+<connection.consciousout>의식있음_여부</connection.consciousout>
+<connection.nameout>환자이름</connection.nameout>
+<connection.vitalityout>활력</connection.vitalityout>
+<connection.heartrateout>심박수</connection.heartrateout>
+<connection.breathingrateout>호흡율</connection.breathingrateout>
+<connection.bloodpressureout>혈압</connection.bloodpressureout>
+<connection.bloodoxygenout>혈중산소농도</connection.bloodoxygenout>
+<connection.neurotraumaout>신경외상</connection.neurotraumaout>
+<connection.organdamageout>장기손상</connection.organdamageout>
+<connection.insurgeryout>수술중_여부</connection.insurgeryout>
+<connection.causeofdeathout>사망원인</connection.causeofdeathout>
+<connection.bloodphout>혈액pH</connection.bloodphout>
+
+<!-- misc -->
+<roomname.surgical>Surgical</roomname.surgical>
+
+<!-- A1.8 -->
+
+</infotexts>

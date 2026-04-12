@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+
+<!-- ITEMS -->
+
+<!-- /// Gear /// -->
+<entityname.defibrillator>Manuel Defibrilatör</entityname.defibrillator>
+<entitydescription.defibrillator>Kardiyak aritmileri stabilize etmek için kalbe elektrik şoku veren tıbbi bir cihaz. Kapsamlı tıp eğitimi gerektirir.</entitydescription.defibrillator>
+
+<entityname.aed>Otomatik Harici Defibrilatör</entityname.aed>
+<entitydescription.aed>Kardiyak aritmileri stabilize etmek için kalbe elektrik şoku veren tıbbi bir cihaz. Kullanımı için herhangi bir eğitime ihtiyaç yoktur.</entitydescription.aed>
+
+<entityname.bvm>Ambu Torbası</entityname.bvm>
+<entitydescription.bvm>Balon Valf Maskesi (BVM), nefes almayan veya yeterince nefes almayan hastalara pozitif basınçlı ventilasyon sağlamak için yaygın olarak kullanılan bir cihazdır.</entitydescription.bvm>
+
+<entityname.autocpr>Otopulse</entityname.autocpr>
+<entitydescription.autocpr>Otomatik, taşınabilir, pille çalışan bir kardiyopulmoner canlandırma cihazı.</entitydescription.autocpr>
+
+<entityname.bloodanalyzer>Hematoloji Analizörü</entityname.bloodanalyzer>
+<entitydescription.bloodanalyzer>Kan analizcisi. Tam otomatik. Boş bağış kartlarına kan gruplarını yazdırabilir.</entitydescription.bloodanalyzer>
+
+<entityname.bloodcollector>Boş Bağış Kartı</entityname.bloodcollector>
+<entitydescription.bloodcollector>Boş bağışçı kartı. Hematoloji analizörü tarafından kullanılır.</entitydescription.bloodcollector>
+
+<entityname.traumashears>Travma Makası</entityname.traumashears>
+<entitydescription.traumashears>Bandaj ve alçıları kesmek için kullanılan bir alet.</entitydescription.traumashears>
+
+
+<entityname.wheelchair>Tekerlekli Sandalye</entityname.wheelchair>
+<entitydescription.wheelchair>Hareket için bacaklarınız yerine kollarınıza bağımlı olmanızı sağlar.</entitydescription.wheelchair>
+
+<entityname.blahaj>Mavi köpek balığı</entityname.blahaj>
+
+<Override>
+<entityname.healthscanner>Sağlık Tarayıcısı</entityname.healthscanner>
+<entitydescription.healthscanner>Semptomların altında yatan nedenleri teşhis etmek için kullanılır.</entitydescription.healthscanner>
+</Override>
+
+<stasisbagequipconfirmation>Bunu kuşanmak bilincini kaybetmene neden olacak. Emin misin?</stasisbagequipconfirmation>
+
+<!-- /// Surgery /// -->
+<entityname.advscalpel>Neşter</entityname.advscalpel>
+<entitydescription.advscalpel>Ameliyat sırasında kesi yapmak için kullanılan bir alet.</entitydescription.advscalpel>
+
+<entityname.advhemostat>Hemostat</entityname.advhemostat>
+<entitydescription.advhemostat>Ameliyat sırasında kan damarlarını sıkıştırmak için kullanılan bir alet.</entitydescription.advhemostat>
+
+<entityname.advretractors>Deri retraktörü</entityname.advretractors>
+<entitydescription.advretractors>Ameliyat sırasında deriyi açmak kullanılan bir alet.</entitydescription.advretractors>
+
+<entityname.tweezers>Cımbız</entityname.tweezers>
+<entitydescription.tweezers>Mermilerin yanı sıra hasarlı ve nekrotik dokuların çıkarılmasını sağlayan küçük bir alet.</entitydescription.tweezers>
+
+<entityname.surgerysaw>Cerrahi testere</entityname.surgerysaw>
+<entitydescription.surgerysaw>Kemikleri kesmek için kullanılan bir alet.</entitydescription.surgerysaw>		
+
+<entityname.suture>Sütür</entityname.suture>
+<entitydescription.suture>Yaraları ve cerrahi insizyonları dikmek için biyolojik olarak parçalanabilen sütürler.</entitydescription.suture>
+
+<entityname.surgicaldrill>Cerrahi Matkap</entityname.surgicaldrill>
+<entitydescription.surgicaldrill>Kemikleri delmeye yarayan alet.</entitydescription.surgicaldrill>
+
+<entityname.osteosynthesisimplants>Osteosentez implantları</entityname.osteosynthesisimplants>
+<entitydescription.osteosynthesisimplants>Osteosentetik cerrahide kırıkları onarmak için kullanılan titanyum implantlar.</entitydescription.osteosynthesisimplants>
+
+<entityname.spinalimplant>Omurilik implantları</entityname.spinalimplant>
+<entitydescription.spinalimplant>Boyun kırıklarının neden olduğu felçleri iyileştirmek için kullanılan titanyum implantlar.</entitydescription.spinalimplant>
+
+<entityname.operatingtable>Ameliyat Masası</entityname.operatingtable>
+<entitydescription.operatingtable>Yerleşik temel yapay havalandırmaya sahip bir ameliyat masası.</entitydescription.operatingtable>
+
+<entityname.organscalpel_liver>Organ tedarik neşteri: Karaciğer</entityname.organscalpel_liver>
+<entitydescription.organscalpel_liver>Karaciğer dokusunu kesmek için özel üretilen neşter.</entitydescription.organscalpel_liver>
+
+<entityname.organscalpel_kidneys>Organ tedarik neşteri:Böbrek</entityname.organscalpel_kidneys>
+<entitydescription.organscalpel_kidneys>Böbrek dokusunu kesmek için özel üretilen neşter..</entitydescription.organscalpel_kidneys>
+
+<entityname.organscalpel_lungs>Organ Tedarik Neşteri:Akciğer</entityname.organscalpel_lungs>
+<entitydescription.organscalpel_lungs>Akciğer dokusunu kesmek için özel üretilen neşter.</entitydescription.organscalpel_lungs>
+
+<entityname.organscalpel_heart>Organ Tedarik Neşteri: Kalp</entityname.organscalpel_heart>
+<entitydescription.organscalpel_heart>Kalp dokusunu kesmek için özel üretilen neşter.</entitydescription.organscalpel_heart>
+
+<entityname.organscalpel_brain>Organ Tedarik Neşteri: Beyin</entityname.organscalpel_brain>
+<entitydescription.organscalpel_brain>Beyin dokusunu kesmek için özel üretilen neşter.</entitydescription.organscalpel_brain>
+
+
+
+<!-- /// Treatments /// -->
+<entityname.mannitol>Mannitol</entityname.mannitol>
+<entitydescription.mannitol>Bir çeşit şeker alkolü. Nörotravmadan iyileşmeye yardımcı olmak için kullanılır. Organ hasarına neden olabilir.</entitydescription.mannitol>
+
+<entityname.streptokinase>Streptokinaz</entityname.streptokinase>
+<entitydescription.streptokinase>Kan pıhtılarını parçalayan trombolitik bir enzim. Kalp krizlerini tedavi etmek için kullanılır. Kan pıhtılaşmasını azaltır.</entitydescription.streptokinase>
+
+<entityname.immunosuppressant>Azatioprin</entityname.immunosuppressant>
+<entitydescription.immunosuppressant>Organ reddinin önlenmesi için bir immünosupresif ajan.</entitydescription.immunosuppressant>
+
+<entityname.thiamine>Tiyamin</entityname.thiamine>
+<entitydescription.thiamine>Aksi halde B1 vitamini olarak bilinen bu haplar organ iyileşmesine yardımcı olacaktır.</entitydescription.thiamine>
+
+<entityname.ointment>Antibiyotik Merhem</entityname.ointment>
+<entitydescription.ointment>Yanıkların yanı sıra küçük enfeksiyonlardan iyileşmeyi destekleyen oldukça antiseptik bir jel.</entitydescription.ointment>
+
+<entityname.endovascballoon>Endovasküler</entityname.endovascballoon>
+<entitydescription.endovascballoon>Yırtılmalarının ardından büyük arterlere yerleştirilen bir balon. Kan akışını kesecek, ancak kanamayı durduracaktır.</entitydescription.endovascballoon>
+
+<entityname.medstent>Medikal stent</entityname.medstent>
+<entitydescription.medstent>Aort yırtılmasını takiben endovasküler balondan sonra aorta yerleştirilen plastik bir tüp.</entitydescription.medstent>
+
+<entityname.tourniquet>Turnike</entityname.tourniquet>
+<entitydescription.tourniquet>Bir uzva basınç uygulayan ve böylece kan akışını azaltan bir cihaz. Genellikle ekstremitelerde majör kanamalarda kullanılır. Baş bölgesinde kullanılmamalıdır.</entitydescription.tourniquet>
+
+<entityname.drainage>Drainage</entityname.drainage>
+<entitydescription.drainage>Pnömotoraks için düzeltici cerrahi sırasında plevral boşluktan havayı boşaltır.</entitydescription.drainage>
+
+<entityname.needle>Dekompresyon İğnesi</entityname.needle>
+<entitydescription.needle>Plevral boşluktan veya perikarddan hava veya sıvının boşalmasını sağlamak için dekompresyon valfli bir iğne</entitydescription.needle>
+
+<entityname.ringerssolution>Ringer Çözeltisi</entityname.ringerssolution>
+<entitydescription.ringerssolution>Düşük kan basıncını veya sıvı kaybını tedavi etmek amacıyla suda çözülmüş birkaç tuzun bir çözeltisi. Kan için izotonik.</entitydescription.ringerssolution>
+
+<entityname.antiseptic>Antiseptik</entityname.antiseptic>
+<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+
+<entityname.antisepticspray>Antiseptik Sprey</entityname.antisepticspray>
+<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+
+<entityname.propofol>Propofol</entityname.propofol>
+<entitydescription.propofol>Bilinç düzeyinde azalmaya ve olaylar için hafıza eksikliğine neden olan kısa etkili bir ilaç. Kullanımları genel anestezinin başlatılması ve sürdürülmesini içerir.</entitydescription.propofol>
+
+<entityname.gypsum>Alçıtaşı</entityname.gypsum>
+<entitydescription.gypsum>Bir alçıda uç kısımlardaki kırıkları kapatmak için kullanılan ince bir mineral tozu. Önce bir bandaj uygulayın.</entitydescription.gypsum>
+
+
+<!-- /// Blood stuff /// -->
+
+<!--<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>-->
+<!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
+
+<entityname.emptybloodpack>Empty Blood Pack</entityname.emptybloodpack>
+<entitydescription.emptybloodpack>An empty blood pack for the drawing of blood.</entitydescription.emptybloodpack>
+
+<entityname.bloodpackoplus>Blood Pack O+</entityname.bloodpackoplus>
+<entitydescription.bloodpackoplus>Administerable to: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
+
+<entityname.bloodpackominus>Blood Pack O-</entityname.bloodpackominus>
+<entitydescription.bloodpackominus>A blood pack that can be used on any patient.</entitydescription.bloodpackominus>
+
+<entityname.bloodpackaplus>Blood Pack A+</entityname.bloodpackaplus>
+<entitydescription.bloodpackaplus>Administerable to: A+, AB+</entitydescription.bloodpackaplus>
+
+<entityname.bloodpackbplus>Blood Pack B+</entityname.bloodpackbplus>
+<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus> -->
+
+<entityname.bloodpackabplus>Blood Pack AB+</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus> -->
+
+<entityname.bloodpackaminus>Blood Pack A-</entityname.bloodpackaminus>
+<entitydescription.bloodpackaminus>Administerable to: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+
+<entityname.bloodpackbminus>Blood Pack B-</entityname.bloodpackbminus>
+<entitydescription.bloodpackbminus>Administerable to: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
+
+<entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
+<entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
+
+<Override>
+<entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
+</Override>
+
+<entityname.ominuscard>Donor card O-</entityname.ominuscard>
+<entitydescription.ominuscard>Can take blood from: O-
+Can give blood to: all of them</entitydescription.ominuscard>
+
+<entityname.opluscard>Donor card O+</entityname.opluscard>
+<entitydescription.opluscard>Can take blood from: O-, O+
+Can give blood to: O+, A+, B+, AB+</entitydescription.opluscard>
+
+<entityname.aminuscard>Donor card A-</entityname.aminuscard>
+<entitydescription.aminuscard>Can take blood from: O-, A-
+Can give blood to: A-, A+, AB-, AB+</entitydescription.aminuscard>
+
+<entityname.apluscard>Donor card A+</entityname.apluscard>
+<entitydescription.apluscard>Can take blood from: O-, O+, A-, A+
+Can give blood to: A+, AB+</entitydescription.apluscard>
+
+<entityname.bminuscard>Donor card B-</entityname.bminuscard>
+<entitydescription.bminuscard>Can take blood from: O-, B-
+Can give blood to: B-, B+, AB-, AB+</entitydescription.bminuscard>
+
+<entityname.bpluscard>Donor card B+</entityname.bpluscard>
+<entitydescription.bpluscard>Can take blood from: O-, O+, B-, B+
+Can give blood to: B+, AB+</entitydescription.bpluscard>
+
+<entityname.abminuscard>Donor card AB-</entityname.abminuscard>
+<entitydescription.abminuscard>Can take blood from: O-, A-, B-, AB-
+Can give blood to: AB-, AB+</entitydescription.abminuscard>
+
+<entityname.abpluscard>Donor card AB+</entityname.abpluscard>
+<entitydescription.abpluscard>Can take blood from: all of them
+Can give blood to: AB+</entitydescription.abpluscard>
+
+
+
+<!-- /// New containers /// -->
+<entityname.medtoolbox>Medical Container</entityname.medtoolbox> 
+<entitydescription.medtoolbox>Can store medicine and medical instruments</entitydescription.medtoolbox>
+
+<entityname.surgerytoolbox>Surgery Toolbox</entityname.surgerytoolbox> 
+<entitydescription.surgerytoolbox>Can store many small items that are used during surgery</entitydescription.surgerytoolbox>
+
+<entityname.organcrate>Refrigerated Crate</entityname.organcrate> 
+<entitydescription.organcrate>A place to store your precious transplant-ready organs</entitydescription.organcrate>
+
+<entityname.organtoolbox>Refrigerated container</entityname.organtoolbox> 
+<entitydescription.organtoolbox>A place to store your precious transplant-ready organs</entitydescription.organtoolbox>
+
+<entityname.bodybag>Body bag</entityname.bodybag>
+<entitydescription.bodybag>Lets you drag people faster.</entitydescription.bodybag>
+
+<entityname.stasisbag>Stasis Bag</entityname.stasisbag>
+<entitydescription.stasisbag>Çoğu biyolojik sürecin gerçekleşmesini durdurur.</entitydescription.stasisbag>
+
+
+
+<!-- /// Limbs and organs /// -->
+<entityname.rarm>Right arm</entityname.rarm>
+<entitydescription.rarm>A severed right arm. Can be surgically reattached.</entitydescription.rarm>
+
+<entityname.larm>Left arm</entityname.larm>
+<entitydescription.larm>A severed left arm. Can be surgically reattached.</entitydescription.larm>
+
+<entityname.rleg>Right leg</entityname.rleg>
+<entitydescription.rleg>A severed right leg. Can be surgically reattached.</entitydescription.rleg>
+
+<entityname.lleg>Left leg</entityname.lleg>
+<entitydescription.lleg>A severed left leg. Can be surgically reattached.</entitydescription.lleg>
+
+<entityname.rarmp>Right arm bionic prosthesis</entityname.rarmp>
+<entitydescription.rarmp>A bionic right arm. Can be used to treat amputation.</entitydescription.rarmp>
+
+<entityname.larmp>Left arm bionic prosthesis</entityname.larmp>
+<entitydescription.larmp>A bionic left arm. Can be used to treat amputation.</entitydescription.larmp>
+
+<entityname.rlegp>Right leg bionic prosthesis</entityname.rlegp>
+<entitydescription.rlegp>A bionic right leg. Can be used to treat amputation.</entitydescription.rlegp>
+
+<entityname.llegp>Left leg bionic prosthesis</entityname.llegp>
+<entitydescription.llegp>A bionic left leg. Can be used to treat amputation.</entitydescription.llegp>
+
+<entityname.livertransplant>Liver transplant</entityname.livertransplant>
+<entityname.livertransplant_q1>Liver transplant</entityname.livertransplant_q1>
+<entityname.livertransplant_q2>Liver transplant</entityname.livertransplant_q2>
+<entityname.livertransplant_q3>Liver transplant</entityname.livertransplant_q3>
+<entityname.livertransplant_q4>Liver transplant</entityname.livertransplant_q4>
+<entityname.livertransplant_q5>Liver transplant</entityname.livertransplant_q5>
+
+<entityname.lungtransplant>Lung transplant</entityname.lungtransplant>
+<entityname.lungtransplant_q1>Lung transplant</entityname.lungtransplant_q1>
+<entityname.lungtransplant_q2>Lung transplant</entityname.lungtransplant_q2>
+<entityname.lungtransplant_q3>Lung transplant</entityname.lungtransplant_q3>
+<entityname.lungtransplant_q4>Lung transplant</entityname.lungtransplant_q4>
+<entityname.lungtransplant_q5>Lung transplant</entityname.lungtransplant_q5>
+
+<entityname.kidneytransplant>Kidney transplant</entityname.kidneytransplant>
+<entityname.kidneytransplant_q1>Kidney transplant</entityname.kidneytransplant_q1>
+<entityname.kidneytransplant_q2>Kidney transplant</entityname.kidneytransplant_q2>
+<entityname.kidneytransplant_q3>Kidney transplant</entityname.kidneytransplant_q3>
+<entityname.kidneytransplant_q4>Kidney transplant</entityname.kidneytransplant_q4>
+<entityname.kidneytransplant_q5>Kidney transplant</entityname.kidneytransplant_q5>
+
+<entityname.hearttransplant>Heart transplant</entityname.hearttransplant>
+<entityname.hearttransplant_q1>Heart transplant</entityname.hearttransplant_q1>
+<entityname.hearttransplant_q2>Heart transplant</entityname.hearttransplant_q2>
+<entityname.hearttransplant_q3>Heart transplant</entityname.hearttransplant_q3>
+<entityname.hearttransplant_q4>Heart transplant</entityname.hearttransplant_q4>
+<entityname.hearttransplant_q5>Heart transplant</entityname.hearttransplant_q5>
+
+<entityname.braintransplant>Brain transplant</entityname.braintransplant>
+
+<entityname.armlock1>Non-working right hand</entityname.armlock1>
+<entityname.armlock2>Non-working left hand</entityname.armlock2>
+
+
+<!-- AFFLICTIONS -->
+
+
+<!-- TEMPLATE -->
+
+<!-- <afflictionname.organdamage></afflictionname.organdamage> -->
+<!-- <afflictiondescription.organdamage></afflictiondescription.organdamage> -->
+<!-- <afflictioncauseofdeath.organdamage></afflictioncauseofdeath.organdamage> -->
+<!-- <afflictioncauseofdeathself.organdamage></afflictioncauseofdeathself.organdamage> -->
+
+<!-- /// Heart /// -->
+
+<afflictionname.tachycardia>Artan Kalp Atış Hızı</afflictionname.tachycardia>
+<afflictiondescription.tachycardia>Kalp, ürkütücü bir hızla atıyor.</afflictiondescription.tachycardia>
+
+<afflictionname.fibrillation>Düzensiz kalp atışı</afflictionname.fibrillation>
+<afflictiondescription.fibrillation>Kalp çarpıntılı, titrek bir şekilde atıyor.</afflictiondescription.fibrillation>
+
+<afflictionname.cardiacarrest>Kalp Durması</afflictionname.cardiacarrest>
+<afflictiondescription.cardiacarrest></afflictiondescription.cardiacarrest>
+
+<afflictionname.heartattack>Kalp Krizi</afflictionname.heartattack>
+<afflictiondescription.heartattack></afflictiondescription.heartattack>
+
+<afflictionname.heartdamage>Kalp Hasarı</afflictionname.heartdamage>
+<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+
+<afflictionname.heartfailure>Kalp İflası</afflictionname.heartfailure>
+<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+
+<afflictionname.heartremoved>Kalpsiz</afflictionname.heartremoved>
+<afflictiondescription.heartremoved>Kalp cerrahi olarak çıkarıldı.</afflictiondescription.heartremoved>
+
+<!-- /// Brain /// -->
+
+<afflictionname.cerebralhypoxia>Nörotravma</afflictionname.cerebralhypoxia>
+<afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
+<afflictioncauseofdeath.cerebralhypoxia>Nörotravmadan öldü</afflictioncauseofdeath.cerebralhypoxia>
+<afflictioncauseofdeathself.cerebralhypoxia>Nörotravmadan öldün.</afflictioncauseofdeathself.cerebralhypoxia>
+
+<afflictionname.stroke>İnme</afflictionname.stroke>
+<afflictiondescription.stroke></afflictiondescription.stroke>
+
+<afflictionname.seizure>Nöbet</afflictionname.seizure>
+<afflictiondescription.seizure></afflictiondescription.seizure>
+
+<afflictionname.coma>Koma</afflictionname.coma>
+<afflictiondescription.coma></afflictiondescription.coma>
+
+<afflictionname.brainremoved>Beyinsiz</afflictionname.brainremoved>
+<afflictiondescription.brainremoved>Beyin cerrahi olarak çıkarıldı.</afflictiondescription.brainremoved>
+
+<afflictionname.traumaticshock>Travmatic şok</afflictionname.traumaticshock>
+<afflictiondescription.traumaticshock>Ameliyat böyle yapılmamalı, Bir şeyler kesinlikle yanlış!</afflictiondescription.traumaticshock>
+
+<!-- /// Blood /// -->
+
+<afflictionname.bloodpressure>Tansiyon</afflictionname.bloodpressure>
+<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+
+<afflictionname.hypoxemia>hipoksemi</afflictionname.hypoxemia>
+<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+
+<!-- /// Lungs /// -->
+
+<afflictionname.respiratoryarrest>Solunum durması</afflictionname.respiratoryarrest>
+<afflictiondescription.respiratoryarrest>Hasta nefes almıyor.</afflictiondescription.respiratoryarrest>
+
+<afflictionname.hyperventilation>Hiperventilasyon</afflictionname.hyperventilation>
+<afflictiondescription.hyperventilation>Hasta ürkütücü bir hızla nefes alıyor.</afflictiondescription.hyperventilation>
+
+<afflictionname.hypoventilation>Hipoventilasyon</afflictionname.hypoventilation>
+<afflictiondescription.hypoventilation>Hasta endişe verici derecede yavaş bir hızda nefes alıyor.</afflictiondescription.hypoventilation>
+
+<afflictionname.dyspnea>Nefes Darlığı</afflictionname.dyspnea>
+<afflictiondescription.dyspnea>Hastanın nefes alması zor ve sığ.</afflictiondescription.dyspnea>
+
+<afflictionname.alkalosis>Alkaloz</afflictionname.alkalosis>
+<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
+
+<afflictionname.acidosis>Asidoz</afflictionname.acidosis>
+<afflictiondescription.acidosis></afflictiondescription.acidosis>
+
+<afflictionname.rili>Radyasyona bağlı akciğer hasarı</afflictionname.rili>
+<afflictiondescription.rili></afflictiondescription.rili>
+
+<afflictionname.pneumothorax>Pnömotoraks</afflictionname.pneumothorax>
+<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+
+<afflictionname.lungdamage>Akciğer Hasarı</afflictionname.lungdamage>
+<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
+
+<afflictionname.lungfailure>Akciğer İflası</afflictionname.lungfailure>
+<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+
+<afflictionname.lungremoved>Akciğersiz</afflictionname.lungremoved>
+<afflictiondescription.lungremoved>Akciğerler cerrahi olarak çıkarıldı.</afflictiondescription.lungremoved>
+
+<!-- /// kidneys /// -->
+
+<afflictionname.kidneydamage>Böbrek Hasarı</afflictionname.kidneydamage>
+<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+
+<afflictionname.kidneyfailure>Böbrek İflası</afflictionname.kidneyfailure>
+<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+
+<afflictionname.kidneyremoved>Böbreksiz</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>Böbrekler cerrahi olarak çıkarıldı.</afflictiondescription.kidneyremoved>
+
+<!-- /// bones /// -->
+
+<afflictionname.bonedamage>Kemik Hasarı</afflictionname.bonedamage>
+<afflictiondescription.bone></afflictiondescription.bone>
+
+<afflictionname.bonedeath>Kemik Ölümü</afflictionname.bonedeath>
+<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+
+<afflictionname.bonegrowth>Uyarılmış kemik büyümesi</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>Kemik büyümesi uyarıldı. Kemik ölümünü iyileştirmek için bu rahatsızlığın her vücut parçasında olması gerekir.</afflictiondescription.bonegrowth>
+
+<!-- /// liver /// -->
+
+<afflictionname.liverdamage>Karaciğer Hasarı</afflictionname.liverdamage>
+<afflictiondescription.liverdamage></afflictiondescription.liverdamage>
+
+<afflictionname.liverfailure>Karaciğer İflası</afflictionname.liverfailure>
+<afflictiondescription.liverfailure></afflictiondescription.liverfailure>
+
+<afflictionname.liverremoved>Karaciğersiz</afflictionname.liverremoved>
+<afflictiondescription.liverremoved>Karaciğer cerrahi olarak çıkarıldı.</afflictiondescription.liverremoved>
+
+<!-- /// surgery and related /// -->
+
+<afflictionname.surgeryincision>Cerrahi insizyon</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Bir neşter ile bir kesi yapıldı.</afflictiondescription.surgeryincision>
+  
+<afflictionname.clampedbleeders>Klemplenmiş Kanama</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Cerrahi kanamalar durduruldu.</afflictiondescription.clampedbleeders>
+
+<afflictionname.arteriesclamp>Klemplenmiş Arter</afflictionname.arteriesclamp>
+<afflictiondescription.arteriesclamp>Arter kanaması durduruldu, ancak ekstremiteye giden kan akışı ciddi şekilde azaldı.</afflictiondescription.arteriesclamp>
+
+<afflictionname.balloonedaorta>Balonlu Aort</afflictionname.balloonedaorta>
+<afflictiondescription.balloonedaorta>Aort kanamayı durdurdu, ancak ekstremitelerinize ve organlarınıza giden kan akışı kesildi.</afflictiondescription.balloonedaorta>
+
+<afflictionname.boneclamp>Atel</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>Kırık atellendi.</afflictiondescription.boneclamp>
+
+<afflictionname.bandaged>Bandaj</afflictionname.bandaged>
+<afflictiondescription.bandaged>Enfeksiyondan korur, çıkıkları stabilize eder. Hareket biraz yavaşlar.</afflictiondescription.bandaged>
+
+<afflictionname.dirtybandage>Kirli Bandaj</afflictionname.dirtybandage>
+<afflictiondescription.dirtybandage>Enfeksiyonlardan korumak için kullanılırken şimdi tam tersini yapıyor.</afflictiondescription.dirtybandage>
+
+<afflictionname.gypsumcast>Alçı</afflictionname.gypsumcast>
+<afflictiondescription.gypsumcast>Kırıkları iyileştirir ve korur. Hareket yavaşlar. Travma makası kullanarak çıkarın.</afflictiondescription.gypsumcast>
+
+<afflictionname.ointmented>Merhem</afflictionname.ointmented>
+<afflictiondescription.ointmented>Bir antibiyotik jel tabakası, yarayı herhangi bir mikroptan korur ve temizler.</afflictiondescription.ointmented>
+
+<afflictionname.needlec>İğne</afflictionname.needlec>
+<afflictiondescription.needlec>Plevral boşluktaki basıncı normalleştirir</afflictiondescription.needlec>
+
+<!-- fractures, amputations, dislocations and bleeding arteries-->
+<afflictionname.ra_fracture>Kırık sağ humerus</afflictionname.ra_fracture>
+<afflictiondescription.ra_fracture>Sağ kolun kırık.</afflictiondescription.ra_fracture>
+<afflictionname.la_fracture>Kırık sol humerus</afflictionname.la_fracture>
+<afflictiondescription.la_fracture>Sol Kolun kırık.</afflictiondescription.la_fracture>
+<afflictionname.rl_fracture>Kırık sağ Uyluk</afflictionname.rl_fracture>
+<afflictiondescription.rl_fracture>Sağ bacağın kırık.</afflictiondescription.rl_fracture>
+<afflictionname.ll_fracture>Kırık sol Uyluk</afflictionname.ll_fracture>
+<afflictiondescription.ll_fracture>Sol bacağın kırık.</afflictiondescription.ll_fracture>
+<afflictionname.t_fracture>Kırık Kaburga</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>Bir veya daha fazla kaburgan kırık.</afflictiondescription.t_fracture>
+<afflictionname.h_fracture>Kırık Kafatası</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>Kafatasın kırık.</afflictiondescription.h_fracture>
+<afflictionname.n_fracture>Kırık Boyun</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>Boynun kırık.</afflictiondescription.n_fracture>
+
+<afflictionname.tra_amputation>Travmatik Amputasyon</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>Most of the tissue of the right arm was torn off.</afflictiondescription.tra_amputation>
+<afflictionname.tla_amputation>Travmatik Amputasyon</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>Most of the tissue of the left arm was torn off.</afflictiondescription.tla_amputation>
+<afflictionname.trl_amputation>Travmatik Amputasyon</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>Most of the tissue of the right leg was torn off.</afflictiondescription.trl_amputation>
+<afflictionname.tll_amputation>Travmatik Amputasyon</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>Most of the tissue of the left leg was torn off.</afflictiondescription.tll_amputation>
+<afflictionname.th_amputation>Travmatik Amputasyon</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>Most of the tissue of the head was torn off.</afflictiondescription.th_amputation>
+
+<afflictionname.sra_amputation>Amputasyon</afflictionname.sra_amputation>
+<afflictiondescription.sra_amputation>The right arm was surgically amputated.</afflictiondescription.sra_amputation>
+<afflictionname.sla_amputation>Amputasyon</afflictionname.sla_amputation>
+<afflictiondescription.sla_amputation>The left arm was surgically amputated.</afflictiondescription.sla_amputation>
+<afflictionname.srl_amputation>Amputasyon</afflictionname.srl_amputation>
+<afflictiondescription.srl_amputation>The right leg was surgically amputated.</afflictiondescription.srl_amputation>
+<afflictionname.sll_amputation>Amputasyon</afflictionname.sll_amputation>
+<afflictiondescription.sll_amputation>The left leg was surgically amputated.</afflictiondescription.sll_amputation>
+<afflictionname.sh_amputation>Amputasyon</afflictionname.sh_amputation>
+<afflictiondescription.sh_amputation>The head was surgically amputated.</afflictiondescription.sh_amputation>
+
+<afflictionname.t_paralysis>Omurilik Hasarı</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>Hasta felç ve vücudunu hissetmiyor.</afflictiondescription.t_paralysis>
+<afflictioncauseofdeath.t_paralysis>Felçten Öldü</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>Felç sebebiyle öldün.</afflictioncauseofdeathself.t_paralysis>
+
+
+
+<afflictionname.dislocation1>Çıkık</afflictionname.dislocation1>
+<afflictiondescription.dislocation1>Eklemin bu şekilde bükülmemesi gerekiyor...</afflictiondescription.dislocation1>
+<afflictionname.dislocation2>Çıkık</afflictionname.dislocation2>
+<afflictiondescription.dislocation2>Eklemin bu şekilde bükülmemesi gerekiyor...</afflictiondescription.dislocation2>
+<afflictionname.dislocation3>Çıkık</afflictionname.dislocation3>
+<afflictiondescription.dislocation3>Eklemin bu şekilde bükülmemesi gerekiyor...</afflictiondescription.dislocation3>
+<afflictionname.dislocation4>Çıkık</afflictionname.dislocation4>
+<afflictiondescription.dislocation4>Eklemin bu şekilde bükülmemesi gerekiyor...</afflictiondescription.dislocation4>
+
+<afflictionname.ll_arterialcut>Femoral arter kanaması</afflictionname.ll_arterialcut>
+<afflictiondescription.ll_arterialcut>Bir arter hasar görmüş ve ciddi kan kaybına neden oluyor.</afflictiondescription.ll_arterialcut>
+<afflictionname.rl_arterialcut>Femoral arter kanaması</afflictionname.rl_arterialcut>
+<afflictiondescription.rl_arterialcut>Bir arter hasar görmüş ve ciddi kan kaybına neden oluyor.</afflictiondescription.rl_arterialcut>
+<afflictionname.la_arterialcut>Brakiyal arter kanaması</afflictionname.la_arterialcut>
+<afflictiondescription.la_arterialcut>Bir arter hasar görmüş ve ciddi kan kaybına neden oluyor.</afflictiondescription.la_arterialcut>
+<afflictionname.ra_arterialcut>Brakiyal arter kanaması</afflictionname.ra_arterialcut>
+<afflictiondescription.ra_arterialcut>Bir arter hasar görmüş ve ciddi kan kaybına neden oluyor.</afflictiondescription.ra_arterialcut>
+<afflictionname.t_arterialcut>Aort Yırtılması</afflictionname.t_arterialcut>
+<afflictionname.h_arterialcut>Karotis arter kanaması</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>Bir arter hasar görmüş ve ciddi kan kaybına neden oluyor.</afflictiondescription.h_arterialcut>
+
+<afflictionname.suturedw>Dikişli Yara</afflictionname.suturedw>
+<afflictiondescription.suturedw>Yaralar dikilerek kapatıldı.</afflictiondescription.suturedw>
+
+<afflictionname.immunity>Bağışıklık</afflictionname.immunity>
+<afflictiondescription.immunity></afflictiondescription.immunity>
+
+<afflictionname.infectedwound>Enfekte Yara</afflictionname.infectedwound>
+<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+
+<afflictionname.sepsis>Septisemi</afflictionname.sepsis>
+<afflictiondescription.sepsis></afflictiondescription.sepsis>
+
+<afflictionname.necrosis>Necroz</afflictionname.necrosis>
+<afflictiondescription.necrosis></afflictiondescription.necrosis>
+<afflictioncauseofdeath.necrosis>Nekrotik Yaradan öldü.</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>Nekrozdan öldün.</afflictioncauseofdeathself.necrosis>
+
+<afflictionname.gangrene>Gangren</afflictionname.gangrene>
+<afflictiondescription.gangrene>Ekstremite küçüldü ve siyaha döndü.</afflictiondescription.gangrene>
+
+<afflictionname.afadrenaline>Adrenalin</afflictionname.afadrenaline>
+<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+
+<afflictionname.afstreptokinase>Pıhtı Önleyici</afflictionname.afstreptokinase>
+<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+
+<afflictionname.afthiamine>Tiyamin</afflictionname.afthiamine>
+<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+
+<afflictionname.afsaline>Salin</afflictionname.afsaline>
+<afflictiondescription.afsaline></afflictiondescription.afsaline>
+
+<afflictionname.afringerssolution>Ringer Çözeltisi</afflictionname.afringerssolution>
+<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+
+<afflictionname.afmannitol>Mannitol</afflictionname.afmannitol>
+<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+
+<afflictionname.afantibiotics>Antibiyotik</afflictionname.afantibiotics>
+<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+
+<afflictionname.afimmunosuppressant>İmmünosupresanlar</afflictionname.afimmunosuppressant>
+<afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
+
+<afflictionname.hemotransfusionshock>Hemotransfüzyon şoku</afflictionname.hemotransfusionshock>
+<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+
+<afflictionname.foreignbody>Yabancı cisim</afflictionname.foreignbody>
+<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
+
+<afflictionname.tamponade>kardiyak tamponad</afflictionname.tamponade>
+<afflictiondescription.tamponade></afflictiondescription.tamponade>
+
+<afflictionname.internalbleeding>İç Kanama</afflictionname.internalbleeding>
+<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
+
+<!-- /// symptoms /// -->
+
+<afflictionname.sym_cough>Öksürük</afflictionname.sym_cough>
+<afflictiondescription.sym_cough>The patient is coughing periodically.</afflictiondescription.sym_cough>
+
+<afflictionname.sym_paleskin>Soluk Ten</afflictionname.sym_paleskin>
+<afflictiondescription.sym_paleskin>The patients skin is pale.</afflictiondescription.sym_paleskin>
+
+<afflictionname.sym_lightheadedness>Baş Dönmesi</afflictionname.sym_lightheadedness>
+<afflictiondescription.sym_lightheadedness>The patient is expressing lightheadedness.</afflictiondescription.sym_lightheadedness>
+
+<afflictionname.sym_blurredvision>Bulanık Görme</afflictionname.sym_blurredvision>
+<afflictiondescription.sym_blurredvision>The patient is expressing blurred vision.</afflictiondescription.sym_blurredvision>
+
+<afflictionname.sym_confusion>Bilinç Bulanıklığı</afflictionname.sym_confusion>
+<afflictiondescription.sym_confusion>The patient seems disoriented and confused.</afflictiondescription.sym_confusion>
+
+<afflictionname.sym_headache>Baş Ağrısı</afflictionname.sym_headache>
+<afflictiondescription.sym_headache>The patient is expressing a headache.</afflictiondescription.sym_headache>
+
+<afflictionname.sym_legswelling>Bacak Şişmesi</afflictionname.sym_legswelling>
+<afflictiondescription.sym_legswelling>The patients legs are swollen.</afflictiondescription.sym_legswelling>
+
+<afflictionname.sym_weakness>Zayıflık</afflictionname.sym_weakness>
+<afflictiondescription.sym_weakness>The patient is expressing weakness in the extremities.</afflictiondescription.sym_weakness>
+
+<afflictionname.sym_wheezing>Hırıltı</afflictionname.sym_wheezing>
+<afflictiondescription.sym_wheezing>The patients breathing is producing a high-pitched noise.</afflictiondescription.sym_wheezing>
+
+<afflictionname.sym_vomiting>Kusma</afflictionname.sym_vomiting>
+<afflictiondescription.sym_vomiting>The patient is vomiting periodically.</afflictiondescription.sym_vomiting>
+
+<afflictionname.sym_hematemesis>Kan Kusma</afflictionname.sym_hematemesis>
+<afflictiondescription.sym_hematemesis>The patient is vomiting blood periodically.</afflictiondescription.sym_hematemesis>
+
+<afflictionname.fever>Yüksek Ateş</afflictionname.fever>
+<afflictiondescription.fever>The patients body temperature is elevated.</afflictiondescription.fever>
+
+<afflictionname.sym_abdomdiscomfort>Karın Rahatsızlığı</afflictionname.sym_abdomdiscomfort>
+<afflictiondescription.sym_abdomdiscomfort>The patient is expressing abdominal discomfort.</afflictiondescription.sym_abdomdiscomfort>
+
+<afflictionname.sym_bloating>Şişkinlik</afflictionname.sym_bloating>
+<afflictiondescription.sym_bloating>The patients abdomen is bloated.</afflictiondescription.sym_bloating>
+
+<afflictionname.sym_jaundice>Sarılık</afflictionname.sym_jaundice>
+<afflictiondescription.sym_jaundice>The patients skin has turned a sickly shade of yellow.</afflictiondescription.sym_jaundice>
+
+<afflictionname.sym_sweating>Terleme</afflictionname.sym_sweating>
+<afflictiondescription.sym_sweating>The patient is sweating excessively.</afflictiondescription.sym_sweating>
+
+<afflictionname.sym_palpitations>Çarpıntı</afflictionname.sym_palpitations>
+<afflictiondescription.sym_palpitations>The patient is expressing palpitations.</afflictiondescription.sym_palpitations>
+
+<afflictionname.sym_unconsciousness>Bilinç Kaybı</afflictionname.sym_unconsciousness>
+<afflictiondescription.sym_unconsciousness>The patient is unconscious.</afflictiondescription.sym_unconsciousness>
+
+<afflictionname.inflammation>İltihaplanma</afflictionname.inflammation>
+<afflictiondescription.inflammation>The area is red, swollen and warm.</afflictiondescription.inflammation>
+
+<afflictionname.spasm>Spazm</afflictionname.spasm>
+<afflictiondescription.spasm>The patient can't control the erratic behaviour of the limb.</afflictiondescription.spasm>
+
+<afflictionname.sym_craving>Arzu</afflictionname.sym_craving>
+<afflictiondescription.sym_craving>The patient is happy enough... so long as they get what they need.</afflictiondescription.sym_craving>
+
+<afflictionname.onfire>Yanıyor!</afflictionname.onfire>
+<afflictiondescription.onfire>The patient is burning alive! Grab an extinguisher!</afflictiondescription.onfire>
+
+<afflictionname.pain_chest>Göğüs Ağrısı</afflictionname.pain_chest>
+<afflictiondescription.pain_chest>The patient is expressing sharp, piercing pain in their chest.</afflictiondescription.pain_chest>
+
+<afflictionname.pain_abdominal>Karın Ağrısı</afflictionname.pain_abdominal>
+<afflictiondescription.pain_abdominal>The patient is expressing persistent pain in their abdomen.</afflictiondescription.pain_abdominal>
+
+<afflictionname.pain_extremity>Şiddetli Ağrı</afflictionname.pain_extremity>
+<afflictiondescription.pain_extremity>The patient is expressing intense pain in the affected area.</afflictiondescription.pain_extremity>
+
+<afflictionname.sym_nausea>Mide bulantısı</afflictionname.sym_nausea>
+<afflictiondescription.sym_nausea>The skin is clammy and the patient is nauseous.</afflictiondescription.sym_nausea>
+
+<afflictionname.luabotomy>Lualess</afflictionname.luabotomy>
+<afflictiondescription.luabotomy>Lua isn't running. That means neurotrauma and any other mods that use it won't work. Please read the workshop pages of mods you plan to use.</afflictiondescription.luabotomy>
+
+<afflictionname.analgesia>Analjezi</afflictionname.analgesia>
+<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
+
+<afflictionname.anesthesia>Anestezi</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
+
+
+<afflictionname.burn_deg1>Birinci Derece Yanık</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>The area is red and painful to the touch.</afflictiondescription.burn_deg1>
+
+<afflictionname.burn_deg2>İkinci Derece Yanık</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>There are very painful blisters littering the affected area.</afflictiondescription.burn_deg2>
+
+<afflictionname.burn_deg3>Üçüncü Derece Yanık</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>The patient doesn't feel pain in the now leathery, stiff area.</afflictiondescription.burn_deg3>
+
+
+<!-- /// Surgery /// -->
+
+<afflictionname.surgeryincision>Cerrahi İnsizyon</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Hastaya kesi yapıldı.</afflictiondescription.surgeryincision>
+
+<afflictionname.clampedbleeders>Klemplenmiş Kanama</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>İnsizyondan kaynaklanan kanama durduruldu.</afflictiondescription.clampedbleeders>
+
+<afflictionname.retractedskin>Sıyrılmış Deri</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>Deri retraktörler tarafından sıyrıldı.</afflictiondescription.retractedskin>
+
+<afflictionname.drilledbones>Delinmiş Kemik</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>Kemikler ortopedik işlemler için hazırlanmıştır.</afflictiondescription.drilledbones>
+
+<afflictionname.suturedi>Dikişlenmiş İnsizyon</afflictionname.suturedi>
+<afflictiondescription.suturedi>Bir kesi dikişlerle kapatılmıştır.</afflictiondescription.suturedi>
+
+<afflictionname.bonecut>Kemik Kesildi</afflictionname.bonecut>
+<afflictiondescription.bonecut>Kemik testere yardımıyla kesildi.</afflictiondescription.bonecut>
+
+<!-- /// SIGNALS /// -->
+<connection.aliveout>Alive</connection.aliveout>
+<connection.consciousout>Conscious</connection.consciousout>
+<connection.nameout>Patient_name</connection.nameout>
+<connection.vitalityout>Vitality</connection.vitalityout>
+<connection.heartrateout>Heartrate</connection.heartrateout>
+<connection.breathingrateout>Breathingrate</connection.breathingrateout>
+<connection.bloodpressureout>Bloodpressure</connection.bloodpressureout>
+<connection.bloodoxygenout>Bloodoxygen</connection.bloodoxygenout>
+<connection.neurotraumaout>Neurotrauma</connection.neurotraumaout>
+<connection.organdamageout>Organdamage</connection.organdamageout>
+<connection.insurgeryout>In_surgery</connection.insurgeryout>
+<connection.causeofdeathout>Cause_of_death</connection.causeofdeathout>
+<connection.bloodphout>Kan_pH</connection.bloodphout>
+
+<!-- misc -->
+<roomname.surgical>Cerrahi</roomname.surgical>
+
+<!-- A1.8 -->
+<afflictionname.afpressuredrug>Tansiyon Düşürücü</afflictionname.afpressuredrug>
+
+<entityname.pressuremeds>Sodyum Nitroprussid</entityname.pressuremeds>
+<entitydescription.pressuremeds>Tansiyonu düşürmek için kullanılan bir ilaç.</entitydescription.pressuremeds>
+
+<entityname.medstartercrate>Tıbbi Başlangıç Sandığı</entityname.medstartercrate> 
+<entitydescription.medstartercrate>Tüm temel unsurları içeren, tek bir üretim tarifine uygun şekilde paketlenmiş bir sandık.</entitydescription.medstartercrate> 
+
+</infotexts>
