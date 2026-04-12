@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Neurotrauma" modversion="1.0.1" corepackage="False" steamworkshopid="2776270649" gameversion="0.18.15.0">
+<contentpackage name="Neurotrauma" modversion="1.0.1" corepackage="False" gameversion="0.18.15.0">
 
   <Other file="%ModDir%/Images/InGameItemIconAtlas.png" />
   <Other file="%ModDir%/Images/InventoryItemIconAtlas.png" />
