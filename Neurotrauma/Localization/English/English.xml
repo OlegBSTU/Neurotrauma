@@ -891,7 +891,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bandaging an arm fracture prevents it from locking your hand over time.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can force an unconscious patient onto a surgery table to make use of its tank and filter.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ You can force an unconscious patient onto a surgery table to make use of its installed filter.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Remember to treat underlying conditions, and not symptoms. Symptoms serve as a method of diagnosis.</loadingscreentip>
 
