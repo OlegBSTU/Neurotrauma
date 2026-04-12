@@ -1,0 +1,30 @@
+<Talents>
+    <Override>
+        <!-- Vanilla talents override -->
+        <Talent identifier="implacable">
+            <Description tag="talentdescription.cannotfallunconsciousforseconds">
+                <Replace tag="[powerincrease]" value="25" color="gui.green"/>
+                <Replace tag="[seconds]" value="15" color="gui.green"/>
+            </Description>
+            <Description tag="talentdescription.maxtriggeruntildeath"/>
+            <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="2,3" sheetelementsize="128,128"/>
+            <AbilityGroupInterval maxtriggercount="1" >
+                <Conditions>
+                    <AbilityConditionHasAffliction afflictionidentifier="sym_unconsciousness"/>
+                </Conditions>
+                <Abilities>
+                    <CharacterAbilityApplyStatusEffects>
+                        <StatusEffects>
+                            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" >
+                                <Affliction identifier="implacable" amount="15.0"/>
+                            </StatusEffect>
+                            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" delay="2.1">
+                                <ReduceAffliction identifier="stun" amount="5.0"/>
+                            </StatusEffect>
+                        </StatusEffects>
+                    </CharacterAbilityApplyStatusEffects>
+                </Abilities>
+            </AbilityGroupInterval>
+        </Talent>
+    </Override>
+</Talents>
