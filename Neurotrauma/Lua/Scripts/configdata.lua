@@ -3,13 +3,15 @@ NTConfig = { Entries = {}, Expansions = {} } -- contains all config options, the
 local configDirectoryPath = Game.SaveFolder .. "/ModConfigs"
 local configFilePath = configDirectoryPath .. "/Neurotrauma.json"
 
--- this is the function that gets used in other mods to add their own settings to the config
+-- This is the function that gets used in other mods to add their own settings to the config
 function NTConfig.AddConfigOptions(expansion)
 	table.insert(NTConfig.Expansions, expansion)
 
 	for key, entry in pairs(expansion.ConfigData) do
 		NTConfig.Entries[key] = entry
 		NTConfig.Entries[key].value = entry.default
+		-- Inject the Expansion of origin into config entries 
+		entry.expansion = expansion.Name
 	end
 end
 
@@ -91,7 +93,10 @@ function NTConfig.ReceiveConfig(msg)
 end
 
 NT.ConfigData = {
-	NT_header1 = { name = "Neurotrauma", type = "category" },
+	NT_header1 = { 
+		name = "Neurotrauma", 
+		type = "category" 
+	},
 
 	NT_dislocationChance = {
 		name = "Dislocation chance",
@@ -99,91 +104,130 @@ NT.ConfigData = {
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_fractureChance = {
 		name = "Fracture chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 2, max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_pneumothoraxChance = {
 		name = "Pneumothorax chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_tamponadeChance = {
 		name = "Tamponade chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { max = 3 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_heartattackChance = {
 		name = "Heart attack chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_strokeChance = {
 		name = "Stroke chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_infectionRate = {
 		name = "Infection rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 1.5, max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_CPRFractureChance = {
 		name = "CPR fracture chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 1 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_traumaticAmputationChance = {
 		name = "Traumatic amputation chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { max = 3 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_neurotraumaGain = {
 		name = "Neurotrauma gain",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 3, max = 10 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_organDamageGain = {
 		name = "Organ damage gain",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 2, max = 8 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_fibrillationSpeed = {
 		name = "Fibrillation rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 1.5, max = 8 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_gangrenespeed = {
 		name = "Gangrene rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	--NT_velocityWeight = {
 	--	name = "Velocity weight",
 	--	default = 1,
@@ -192,52 +236,72 @@ NT.ConfigData = {
 	--	difficultyCharacteristics = { multiplier = 0.5, max = 5 },
 	--	description = "How much fall velocity is allowed for sharing damage into other limbs.",
 	--},
+
 	NT_falldamageCeiling = {
 		name = "Maximum fall damage",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_falldamage = {
 		name = "Falldamage",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+		group = true,
+		resettable = true,
 	},
+
 	NT_falldamageSeriousInjuryChance = {
 		name = "Falldamage serious injury chance",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
 		difficultyCharacteristics = { multiplier = 0.5, max = 5 },
+		group = true,
+		resettable = true,
 	},
+	
 	NT_Calculations = {
 		name = "Enable character calculations",
 		default = true,
 		type = "bool",
 		description = "Runs various calculations necessary for the functionality of the mod. Shouldn't be disabled unless the server is dying.",
 	},
+
 	NT_vanillaSkillCheck = {
 		name = "Vanilla skill check formula",
 		default = false,
 		type = "bool",
 		description = "Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100 .",
 	},
+
 	NT_disableBotAlgorithms = {
 		name = "Disable bot treatment algorithms",
 		default = true,
 		type = "bool",
 		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely.",
 	},
-	NT_screams = { name = "Screams", default = true, type = "bool", description = "Characters scream when in pain." },
+
+	NT_screams = { 
+		name = "Screams", 
+		default = true, 
+		type = "bool", 
+		description = "Characters scream when in pain." 
+	},
+
 	NT_ignoreModConflicts = {
 		name = "Ignore mod conflicts",
 		default = false,
 		type = "bool",
 		description = "Prevent the mod conflict affliction from showing up.",
 	},
+
 	NT_organRejection = {
 		name = "Organ rejection",
 		default = false,
@@ -245,6 +309,7 @@ NT.ConfigData = {
 		difficultyCharacteristics = { multiplier = 0.5 },
 		description = "When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance.",
 	},
+
 	NT_fracturesRemoveCasts = {
 		name = "Fractures remove casts",
 		default = true,
@@ -252,6 +317,7 @@ NT.ConfigData = {
 		difficultyCharacteristics = { multiplier = 0.5 },
 		description = "When receiving damage that would cause a fracture, remove plaster casts on the limb",
 	},
+
 	NT_creatureNoFallDamage = {
 		name = "Excluded creatures that abuse the fall damage mechanic",
 		default = {
@@ -266,7 +332,11 @@ NT.ConfigData = {
 		description = "You can add or remove creatures to customize this list to your liking. Use debug command `nt_listcreatures` to list the SpeciesName of the creature you are patching in your game. Report creatures that abuse fall damage to the discord server to improve this default list.",
 	},
 
-	NTCRE_header1 = { name = "Consent Required", type = "category" },
+	NTCRE_header1 = { 
+		name = "Consent Required", 
+		type = "category" 
+	},
+
 	NTCRE_ConsentRequiredExtra = {
 		name = "Consent Required",
 		default = false,
@@ -289,6 +359,7 @@ NT.ConfigData = {
 		range = { 0, 100 },
 		type = "float",
 		description = "Where the Low progress color ends and Medium progress color begins.",
+		group = true
 	},
 
 	NT_medhighThreshold = {
@@ -297,6 +368,7 @@ NT.ConfigData = {
 		range = { 0, 100 },
 		type = "float",
 		description = "Where the Medium progress color ends and High progress color begins.",
+		group = true
 	},
 
 	NTSCAN_basecolor = {
@@ -306,6 +378,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 
 	NTSCAN_namecolor = {
@@ -315,6 +390,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for player names.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 
 	NTSCAN_lowcolor = {
@@ -324,6 +402,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for afflictions that have low progress.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 
 	NTSCAN_medcolor = {
@@ -333,6 +414,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for afflictions that have medium progress.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 
 	NTSCAN_highcolor = {
@@ -342,6 +426,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for afflictions that have high progress.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 	NTSCAN_vitalcolor = {
 		name = "Vital Priority Color",
@@ -350,6 +437,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for vital afflictions (Arterial bleed, Traumatic amputation).",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 	NTSCAN_removalcolor = {
 		name = "Removed Organ Color",
@@ -358,6 +448,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for removed organs (Heart removed, leg amputation).",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 	NTSCAN_customcolor = {
 		name = "Custom Category Color",
@@ -366,6 +459,9 @@ NT.ConfigData = {
 		type = "string",
 		boxsize = 0.05,
 		description = "Scanner text color for the custom category.",
+		noMLTB = true,
+		group = true,
+		resettable = true,
 	},
 
 	NTSCAN_VitalCategory = {
@@ -428,6 +524,7 @@ NT.ConfigData = {
 		description = "Afflictions added to this category will be ignored by the health scanner.",
 	},
 }
+
 NTConfig.AddConfigOptions(NT)
 
 -- wait a bit before loading the config so all options have had time to be added
