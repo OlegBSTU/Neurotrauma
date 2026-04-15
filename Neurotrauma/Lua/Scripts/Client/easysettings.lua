@@ -1,5 +1,5 @@
---original code by Evil Factory,
---adapted to NT
+-- Original code by Evil Factory,
+-- Adapted for Neurotrauma
 local easySettings = {}
 
 easySettings.Settings = {}
@@ -14,30 +14,10 @@ local function GetChildren(comp)
 	return tbl
 end
 
-Hook.Patch("Barotrauma.GUI", "TogglePauseMenu", {}, function()
-	if GUI.GUI.PauseMenuOpen then
-		local frame = GUI.GUI.PauseMenu
-
-		local list = GetChildren(GetChildren(frame)[2])[1]
-
-		for key, value in pairs(easySettings.Settings) do
-			local button = GUI.Button(
-				GUI.RectTransform(Vector2(1, 0.1), list.RectTransform),
-				value.Name,
-				GUI.Alignment.Center,
-				"GUIButtonSmall"
-			)
-
-			button.OnClicked = function()
-				value.OnOpen(frame)
-			end
-		end
-	end
-end, Hook.HookMethodType.After)
-
 easySettings.SaveTable = function(path, tbl)
 	File.Write(path, json.serialize(tbl))
 end
+
 easySettings.LoadTable = function(path)
 	if not File.Exists(path) then
 		return {}
@@ -53,7 +33,7 @@ end
 -- Overhauled Config GUI
 easySettings.BasicList = function(parent, size)
     -- Menu Frame
-    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.4, 0.7), parent.RectTransform, GUI.Anchor.Center), "GUIFrame")
+    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.5, 0.8), parent.RectTransform, GUI.Anchor.Center), "GUIFrame")
 
     -- Main Layout
     local mainLayout = GUI.LayoutGroup(GUI.RectTransform(Vector2(0.95, 0.95), menuContent.RectTransform, GUI.Anchor.Center, GUI.Pivot.Center), false)
@@ -83,6 +63,7 @@ easySettings.BasicList = function(parent, size)
     return menuList
 end
 
+-- Function for a Tickbox
 easySettings.TickBox = function(parent, text, onSelected, state)
 	if state == nil then
 		state = true
@@ -97,6 +78,7 @@ easySettings.TickBox = function(parent, text, onSelected, state)
 	return tickBox
 end
 
+-- Function for a Slider
 easySettings.Slider = function(parent, min, max, onSelected, value)
 	local scrollBar = GUI.ScrollBar(GUI.RectTransform(Vector2(1, 0.1), parent.RectTransform), 0.1, nil, "GUISlider")
 	scrollBar.Range = Vector2(min, max)
@@ -108,14 +90,9 @@ easySettings.Slider = function(parent, min, max, onSelected, value)
 	return scrollBar
 end
 
---save and exit
+-- Function for the Save and Exit button
 easySettings.SaveButton = function(parent)
-	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft),
-		"Save and Exit",
-		GUI.Alignment.Center,
-		"GUIButton"
-	)
+	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft), "Save and Exit", GUI.Alignment.Center, "GUIButton")
 
 	button.OnClicked = function()
 		if Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings) then
@@ -129,14 +106,9 @@ easySettings.SaveButton = function(parent)
 	return button
 end
 
---discard and exit
+-- Function for the Discard and Exit button
 easySettings.CloseButton = function(parent)
-	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter),
-		"Discard and Exit",
-		GUI.Alignment.Center,
-		"GUIButton"
-	)
+	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter), "Discard and Exit", GUI.Alignment.Center, "GUIButton")
 
 	button.OnClicked = function()
 		GUI.GUI.TogglePauseMenu()
@@ -146,14 +118,9 @@ easySettings.CloseButton = function(parent)
 	return button
 end
 
---reset and exit
+-- Function for the Reset and Exit button
 easySettings.ResetButton = function(parent)
-	local button = GUI.Button(
-		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomRight),
-		"Reset Config",
-		GUI.Alignment.Center,
-		"GUIButton"
-	)
+	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomRight), "Reset Config", GUI.Alignment.Center, "GUIButton")
 
 	button.OnClicked = function()
 		if
@@ -162,9 +129,11 @@ easySettings.ResetButton = function(parent)
 			easySettings.ResetMessage(parent)
 		end
 	end
+
 	return button
 end
 
+-- Confirmation popup for config reset
 easySettings.ResetMessage = function(parent)
 	local ResetMessage = GUI.MessageBox(
 		"Reset neurotrauma settings",
@@ -173,6 +142,7 @@ easySettings.ResetMessage = function(parent)
 	)
 	ResetMessage.DrawOnTop = true
 	ResetMessage.Text.TextAlignment = GUI.Alignment.Center
+
 	ResetMessage.Buttons[1].OnClicked = function()
 		NTConfig.ResetConfig()
 		if Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings) then
@@ -183,10 +153,29 @@ easySettings.ResetMessage = function(parent)
 		GUI.GUI.TogglePauseMenu()
 		ResetMessage.Close()
 	end
+
 	ResetMessage.Buttons[2].OnClicked = function()
 		ResetMessage.Close()
 	end
+
 	return ResetMessage
 end
+
+-- Add button on pause menu for NT Settings
+Hook.Patch("Barotrauma.GUI", "TogglePauseMenu", {}, function()
+	if GUI.GUI.PauseMenuOpen then
+		local frame = GUI.GUI.PauseMenu
+
+		local list = GetChildren(GetChildren(frame)[2])[1]
+
+		for key, value in pairs(easySettings.Settings) do
+			local PauseMenuButton = GUI.Button(GUI.RectTransform(Vector2(1, 0.1), list.RectTransform), value.Name, GUI.Alignment.Center, "GUIButtonSmall")
+
+			PauseMenuButton.OnClicked = function()
+				value.OnOpen(frame)
+			end
+		end
+	end
+end, Hook.HookMethodType.After)
 
 return easySettings
