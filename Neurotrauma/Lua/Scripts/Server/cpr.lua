@@ -1,6 +1,8 @@
 -- Hooks Lua event "human.CPRSuccess" to prevent fractures from ragdoll jank, and
 -- apply NT affliction cpr_buff or cause rib fractures in Hooked Lua event "human.CPRFailed"
-Hook.Add("human.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
+-- human.CPRSuccess was changed to character.CPRSuccess? Way above my paygrade - Lukako
+
+Hook.Add("character.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
 	if
 		animcontroller == nil
 		or animcontroller.Character == nil
@@ -8,6 +10,7 @@ Hook.Add("human.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
 	then
 		return
 	end
+		
 	local character = animcontroller.Character.SelectedCharacter
 
 	if not HF.HasAffliction(character, "luabotomy") then
@@ -17,10 +20,11 @@ Hook.Add("human.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
 	if not HF.HasAffliction(character, "cpr_buff_auto") then
 		HF.AddAffliction(character, "cpr_buff", 2)
 	end
+		
 	HF.AddAffliction(character, "cpr_fracturebuff", 2) -- prevent fractures during CPR (fuck baro physics)
 end)
 
-Hook.Add("human.CPRFailed", "NT.CPRFailed", function(animcontroller)
+Hook.Add("character.CPRFailed", "NT.CPRFailed", function(animcontroller)
 	if
 		animcontroller == nil
 		or animcontroller.Character == nil
@@ -28,6 +32,7 @@ Hook.Add("human.CPRFailed", "NT.CPRFailed", function(animcontroller)
 	then
 		return
 	end
+		
 	local character = animcontroller.Character.SelectedCharacter
 
 	if not HF.HasAffliction(character, "luabotomy") then
@@ -36,6 +41,7 @@ Hook.Add("human.CPRFailed", "NT.CPRFailed", function(animcontroller)
 
 	HF.AddAffliction(character, "cpr_fracturebuff", 2) -- prevent fractures during CPR (fuck baro physics)
 	HF.AddAfflictionLimb(character, "blunttrauma", LimbType.Torso, 0.3)
+		
 	if
 		HF.Chance(
 			NTConfig.Get("NT_fractureChance", 1)
