@@ -3,7 +3,7 @@
 <Items>
     <Item name="" identifier="suture" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
         <PreferredContainer primary="medcab" minamount="48" maxamount="64" spawnprobability="1"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="2" maxamount="6" spawnprobability="0.5"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="2" maxamount="6" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="10" maxamount="16" spawnprobability="0.25"/>
 
         <Fabricate suitablefabricators="medicalfabricator" amount="16" requiredtime="10">
@@ -78,7 +78,7 @@
 
     <Item name="" identifier="gypsum" category="Medical" Tags="smallitem,medical" maxstacksize="16" maxstacksizecharacterinventory="4" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.3" impactsoundtag="impact_soft">
         <PreferredContainer primary="medcab" minamount="12" maxamount="16" spawnprobability="1"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
         <Price baseprice="40">
