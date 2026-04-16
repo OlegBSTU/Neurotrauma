@@ -3,8 +3,6 @@
 <Items>
     <Item name="" identifier="bloodpackoplus" nameidentifier="bloodpackoplus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
-        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="194,325,64,64" origin="0.5,0.5"/>
@@ -29,8 +27,6 @@
 
     <Item name="" identifier="bloodpackaplus" nameidentifier="bloodpackaplus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
-        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="260,260,64,64" origin="0.5,0.5"/>
@@ -43,7 +39,6 @@
     <Item name="" identifier="bloodpackbminus" nameidentifier="bloodpackbminus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
         <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="331,261,64,64" origin="0.5,0.5"/>
@@ -55,8 +50,6 @@
 
     <Item name="" identifier="bloodpackbplus" nameidentifier="bloodpackbplus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
-        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="260,326,64,64" origin="0.5,0.5"/>
@@ -69,7 +62,6 @@
     <Item name="" identifier="bloodpackabminus" nameidentifier="bloodpackabminus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
         <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="396,263,64,64" origin="0.5,0.5"/>
@@ -81,8 +73,6 @@
 
     <Item name="" identifier="bloodpackabplus" nameidentifier="bloodpackabplus" variantof="antibloodloss2">
         <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
-        <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="193,260,64,64" origin="0.5,0.5"/>
