@@ -29,7 +29,6 @@
     
     <Item name="" identifier="organtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,refrigerated,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
         <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
-        <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
         <PreferredContainer secondary="locker"/>
         
         <Price baseprice="100">
@@ -80,7 +79,6 @@
    
     <Item name="" identifier="medtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
         <PreferredContainer primary="medcab"/>
-        <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
         <PreferredContainer secondary="locker"/>
         
         <Deconstruct time="10">
@@ -302,8 +300,8 @@
         
         <Deconstruct time="10"/>
 
-        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.75" />-->
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" spawnprobability="0" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.10" />
         <InventoryIcon texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" origin="0.5,0.5" />
         <Sprite texture="%ModDir%\Images\Suits\blackbag.png" sourcerect="0,0,67,45" depth="0.55" origin="0.5,0.5" />
         <Body radius="20" width="67" density="15" />
@@ -381,7 +379,7 @@
         </Deconstruct>
        
         <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.1" />
         <InventoryIcon texture="%ModDir%\Images\Suits\bag.png" sourcerect="0,0,67,46" origin="0.5,0.5" />
         <Sprite texture="%ModDir%\Images\Suits\bag.png" sourcerect="0,0,68,46" depth="0.55" origin="0.5,0.5" />
         <Body radius="20" width="67" density="15" />
