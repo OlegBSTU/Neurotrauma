@@ -38,8 +38,8 @@
 
     <!-- Needle / prevents pneuomothorax from worsening -->
     <Item name="" identifier="needle" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="4">
-        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>-->
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
 
         <Price baseprice="80" soldbydefault="false">
@@ -86,7 +86,7 @@
     <Item name="" identifier="gelipack" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical,canexpire" useinhealthinterface="true" description="" scale="0.275" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.10.0.0" scale="0.5"/>
         <PreferredContainer primary="medcab" minamount="2" maxamount="3"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.35"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.35"/>
         <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
         <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
 
