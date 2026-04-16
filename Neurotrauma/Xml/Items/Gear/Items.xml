@@ -2,8 +2,7 @@
 <Override>
 <Items>
     <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
-        <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>-->
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3"/>
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0" spawnprobability="0"/>
 
         <Fabricate suitablefabricators="fabricator" requiredtime="10">
             <RequiredSkill identifier="medical" level="30"/>
@@ -105,7 +104,6 @@
     <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.9.3.0" scale="0.40"/>
         <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25"/>
 
         <Price baseprice="300" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
