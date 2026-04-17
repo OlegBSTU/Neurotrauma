@@ -351,4 +351,3 @@ function NTC.GetSpeedMultiplier(character)
 	end
 	return 1
 end
-end
