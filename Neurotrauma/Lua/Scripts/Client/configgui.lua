@@ -23,12 +23,12 @@ end
 -- Function that autofills the addon dropdown
 -- We also automatically make the UI display the names as "NT [mod]" to match their Content Package / Steam Workhop name to minimise confusion.
 local function PopulateDropdown(dropdown)
-    ExpansionNameForUI = {}
+	ExpansionNameForUI = {}
 
-    for _, expansion in ipairs(NTConfig.Expansions) do
-        local name = tostring(expansion.Name)
+	for _, expansion in ipairs(NTConfig.Expansions) do
+		local name = tostring(expansion.Name)
 		-- First, we make the UI Name the same as their expansion name
-        local uiName = name
+		local uiName = name
 		-- Excluding Neurotrauma itself, add NT at the front if it does not already have that
 		if expansion.Name ~= "Neurotrauma" then
 			if not string.find(uiName, "^NT%s") then
@@ -36,17 +36,16 @@ local function PopulateDropdown(dropdown)
 			end
 		end
 		-- Add them to a lookup table for later
-        table.insert(ExpansionNameForUI, {uiName, name})
+		table.insert(ExpansionNameForUI, { uiName, name })
 		-- Finally, add it to the dropdown menu
-        dropdown.AddItem(uiName)
-    end
+		dropdown.AddItem(uiName)
+	end
 end
 
 -- TODO: Readd the difficulty calculation I kinda dont care about it right now so it can fuck off
 
 -- Function to determine how the layout should be structured
 local function PrebuildConfigLayout(entries, selectedExpansion)
-
 	-- This table will contain subtables that determine how the ConstructUI function actually 'constructs' the UI.
 	-- These chunks can be gone over using Ipairs to ensure the order is correct (a previous test made unrelated settings render together)
 	local LayoutChunks = {}
@@ -54,7 +53,6 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 	local lastType = nil
 
 	for key, entry in pairs(entries) do
-
 		-- Grab actual expansion name based on their UIName
 		for _, entry in ipairs(ExpansionNameForUI) do
 			if entry[1] == selectedExpansion then
@@ -69,7 +67,7 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 
 		-- Automatically add some white space between unique item types to prevent bleeding
 		if entry.type ~= lastType and lastType ~= nil then
-			table.insert(LayoutChunks, {type = "spacer"})
+			table.insert(LayoutChunks, { type = "spacer" })
 		end
 
 		lastType = entry.type
@@ -78,35 +76,31 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 		-- Interrupt a group if it exists
 		if entry.type == "category" then
 			CurrentGroup = nil
-			table.insert(LayoutChunks, {type = "category", entry = entry})
+			table.insert(LayoutChunks, { type = "category", entry = entry })
 
 		-- Floats / Strings until now were just using up way too much screen space. We want to put these into a LayoutGroup together to maximise screen usage.
 		-- If entries have 'group=true', then all entries of the same type that follow one another will be grouped together. If there are other entry types (like categories) in-between, they will not.
 		-- This prevents unrelated settings from merging together + adds reverse-compat
 		elseif entry.type == "float" and entry.group then
-			
 			-- Make a group and keep adding config entries that come after this as long as the criteria stands
 			if not CurrentGroup or CurrentGroup.type ~= "float_group" then
-				CurrentGroup = {type = "float_group", items = {}}
+				CurrentGroup = { type = "float_group", items = {} }
 				table.insert(LayoutChunks, CurrentGroup)
 			end
 
-			table.insert(CurrentGroup.items, {key = key, entry = entry})
-
+			table.insert(CurrentGroup.items, { key = key, entry = entry })
 		elseif entry.type == "string" and entry.group then
-			
 			if not CurrentGroup or CurrentGroup.type ~= "string_group" then
-				CurrentGroup = {type = "string_group", items = {}}
+				CurrentGroup = { type = "string_group", items = {} }
 				table.insert(LayoutChunks, CurrentGroup)
 			end
 
-			table.insert(CurrentGroup.items, {key = key, entry = entry})
-
+			table.insert(CurrentGroup.items, { key = key, entry = entry })
 
 		-- Anything else is anything that shouldn't be grouped. Interrupt a group if it exists and add the setting as standalone.
 		else
 			CurrentGroup = nil
-			table.insert(LayoutChunks, {type = "standalone", key = key, entry = entry})
+			table.insert(LayoutChunks, { type = "standalone", key = key, entry = entry })
 		end
 
 		::continue::
@@ -116,7 +110,6 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 end
 
 local function PopulateSettingsIntoUI(list, selectedExpansion)
-
 	list.Content:ClearChildren()
 
 	-- Infotext (should always be shown)
@@ -137,7 +130,6 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 	local LayoutChunks = PrebuildConfigLayout(NTConfig.Entries, selectedExpansion)
 	-- Go over the pre-generated Layout table and construct settings procedurally
 	for _, chunk in ipairs(LayoutChunks) do
-
 		-- Categories
 		if chunk.type == "category" then
 			local tb_ProceduralCategoryHeader = GUI.TextBlock(
@@ -160,7 +152,6 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 			-- Ungrouped float
 			if entry.type == "float" then
-
 				local minrange = (entry.range and entry.range[1]) or ""
 				local maxrange = (entry.range and entry.range[2]) or ""
 
@@ -183,7 +174,8 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 					tb_EntryInformation.ToolTip = entry.description
 				end
 
-				local scalar = GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), NumberType.Float)
+				local scalar =
+					GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), NumberType.Float)
 
 				scalar.valueStep = 0.1
 				scalar.MinValueFloat = entry.range and entry.range[1] or 0
@@ -196,7 +188,6 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 			-- Bool
 			elseif entry.type == "bool" then
-
 				local rect = GUI.RectTransform(Vector2(0.5, 1), list.Content.RectTransform)
 				local toggle = GUI.TickBox(rect, entry.name)
 
@@ -212,7 +203,6 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 			-- String (a textblock to input)
 			elseif entry.type == "string" then
-
 				local style = ""
 				if entry.style ~= nil then
 					style = " (" .. entry.style .. ")"
@@ -244,7 +234,14 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 				-- Make MultiLineTextBox the default, but now allow normal ones too. A single line entry does not need a multi-line textblock.
 				if entry.noMLTB == true then
-					stringinput = GUI.TextBox(GUI.RectTransform(Vector2(1, entry.boxsize), list.Content.RectTransform), "", nil, nil, nil, true)
+					stringinput = GUI.TextBox(
+						GUI.RectTransform(Vector2(1, entry.boxsize), list.Content.RectTransform),
+						"",
+						nil,
+						nil,
+						nil,
+						true
+					)
 				else
 					stringinput = MultiLineTextBox(list.Content.RectTransform, "", entry.boxsize)
 				end
@@ -271,12 +268,12 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				if not row or (count % MaxPerRow == 0) then
 					row = GUI.LayoutGroup(GUI.RectTransform(Vector2(1, 0.09), list.Content.RectTransform), true)
 				end
-				
+
 				-- Safety check!
-				if not row then 
-					return 
+				if not row then
+					return
 				end
-				
+
 				-- This determines how the space in the UI is used, tied together to make fucking around a bit easier
 				row.RelativeSpacing = 0.01
 
@@ -286,9 +283,9 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 				local baseWidth = 1 / MaxPerRow
 
-				local textcellwidth   = baseWidth * Text_space
+				local textcellwidth = baseWidth * Text_space
 				local scalarcellwidth = baseWidth * Scalar_space
-				local resetcellwidth  = baseWidth * Reset_space
+				local resetcellwidth = baseWidth * Reset_space
 
 				local key = item.key
 				local entry = item.entry
@@ -298,11 +295,14 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				-- Part of the group that holds text
 				local textcell = GUI.LayoutGroup(GUI.RectTransform(Vector2(textcellwidth, 1), row.RectTransform), false)
 				-- Part of the group that holds the numberinput box
-				local scalarcell = GUI.LayoutGroup(GUI.RectTransform(Vector2(scalarcellwidth, 1), row.RectTransform), false)
+				local scalarcell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(scalarcellwidth, 1), row.RectTransform), false)
 				-- In case a reset button is set
-				local resetbuttoncell = GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
+				local resetbuttoncell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
 				-- Relativespacing but larger space for the center instead of everywhere
-				local additionalspacecell = GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
+				local additionalspacecell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
 
 				local minrange = entry.range and entry.range[1] or ""
 				local maxrange = entry.range and entry.range[2] or ""
@@ -320,7 +320,8 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 				tb_EntryInformation.CanBeFocused = false
 
-				local scalar = GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.6), scalarcell.RectTransform), NumberType.Float)
+				local scalar =
+					GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.6), scalarcell.RectTransform), NumberType.Float)
 				scalar.PlusButton.RectTransform.RelativeSize = Vector2(1, 0.5)
 				scalar.MinusButton.RectTransform.RelativeSize = Vector2(1, 0.5)
 
@@ -334,12 +335,18 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				end
 
 				-- Leftover space in the Row goes to the reset button if enabled
-				if entry.resettable then 
-					resetButton = GUI.Button(GUI.RectTransform(Vector2(1, 1), resetbuttoncell.RectTransform, GUI.Anchor.BottomLeft), GUI.Alignment.BottomLeft, nil, Transparent)
+				if entry.resettable then
+					resetButton = GUI.Button(
+						GUI.RectTransform(Vector2(1, 1), resetbuttoncell.RectTransform, GUI.Anchor.BottomLeft),
+						GUI.Alignment.BottomLeft,
+						nil,
+						Transparent
+					)
 					-- Give the reset button a sprite that matches its function (yoinked from basegame)
-					local resetButtonStyle = GUI.Image(GUI.RectTransform(Vector2(1, 1), resetButton.RectTransform), "GUIButtonRefresh")
+					local resetButtonStyle =
+						GUI.Image(GUI.RectTransform(Vector2(1, 1), resetButton.RectTransform), "GUIButtonRefresh")
 					resetButtonStyle.ToolTip = "Reset to default"
-					
+
 					-- On button press, fetch default value.
 					resetButton.OnClicked = function()
 						local defaultValue = entry.default
@@ -364,37 +371,39 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				end
 
 				-- Safety check!
-				if not row then 
-					return 
+				if not row then
+					return
 				end
-				
+
 				row.RelativeSpacing = 0.01
 
 				local Text_space = 0.50
 				-- Any less than 0.33 per string and the max value (255,255,255) or 3 digits per value will bleed (at 1920 * 1080 default)
 				local String_space = 0.33
-				local Reset_space = 0.07 
+				local Reset_space = 0.07
 
 				local baseWidth = 1 / MaxPerRow
 
-				local textcellwidth   = baseWidth * Text_space
+				local textcellwidth = baseWidth * Text_space
 				local scalarcellwidth = baseWidth * String_space
-				local resetcellwidth  = baseWidth * Reset_space
+				local resetcellwidth = baseWidth * Reset_space
 
 				local key = item.key
 				local entry = item.entry
 				local resetButton
 
-
 				-- Make each subdivided part of the group their own
 				-- Part of the group that holds text
 				local textcell = GUI.LayoutGroup(GUI.RectTransform(Vector2(textcellwidth, 1), row.RectTransform), false)
 				-- Part of the group that holds the input box
-				local stringinputcell = GUI.LayoutGroup(GUI.RectTransform(Vector2(scalarcellwidth, 1), row.RectTransform), false)
+				local stringinputcell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(scalarcellwidth, 1), row.RectTransform), false)
 				-- In case a reset button is set
-				local resetbuttoncell = GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.45), row.RectTransform), false)
+				local resetbuttoncell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.45), row.RectTransform), false)
 				-- Relativespacing but larger space for the center instead of everywhere
-				local additionalspacecell = GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
+				local additionalspacecell =
+					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
 
 				local style = ""
 				if entry.style ~= nil then
@@ -424,9 +433,20 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				-- Not all strings need a MultiLineTextBox, especially since they can just yoink the mouse cursor while scrolling.
 				-- Make MLTB's a toggleable option
 				if entry.noMLTB == true then
-					stringinput = GUI.TextBox(GUI.RectTransform(Vector2(1, entry.boxsize), stringinputcell.RectTransform, GUI.Anchor.CenterLeft), "", nil, nil, nil, true)
+					stringinput = GUI.TextBox(
+						GUI.RectTransform(
+							Vector2(1, entry.boxsize),
+							stringinputcell.RectTransform,
+							GUI.Anchor.CenterLeft
+						),
+						"",
+						nil,
+						nil,
+						nil,
+						true
+					)
 				else
-					stringinput = MultiLineTextBox(stringinputcell.RectTransform, "", (entry.boxsize))
+					stringinput = MultiLineTextBox(stringinputcell.RectTransform, "", entry.boxsize)
 				end
 
 				stringinput.Text = table.concat(entry.value, ",")
@@ -436,12 +456,18 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				end
 
 				-- Leftover space in the Row goes to the reset button if enabled
-				if entry.resettable then 
-					resetButton = GUI.Button(GUI.RectTransform(Vector2(1, 1), resetbuttoncell.RectTransform), GUI.Alignment.CenterRight, nil, Transparent)
+				if entry.resettable then
+					resetButton = GUI.Button(
+						GUI.RectTransform(Vector2(1, 1), resetbuttoncell.RectTransform),
+						GUI.Alignment.CenterRight,
+						nil,
+						Transparent
+					)
 					-- Give the reset button a sprite that matches its function (yoinked from basegame)
-					local resetButtonStyle = GUI.Image(GUI.RectTransform(Vector2(1, 1), resetButton.RectTransform), "GUIButtonRefresh")
+					local resetButtonStyle =
+						GUI.Image(GUI.RectTransform(Vector2(1, 1), resetButton.RectTransform), "GUIButtonRefresh")
 					resetButtonStyle.ToolTip = "Reset to default"
-					
+
 					-- On button press, fetch default value.
 					resetButton.OnClicked = function()
 						entry.value = entry.default
@@ -479,7 +505,15 @@ local function ConstructUI(parent)
 
 	-- Don't show the dropdown if we only have Neurotrauma or no other addons that have settings to show
 	if dropdownheight > 1 then
-		local dropdown_AddonSelection = GUI.DropDown(GUI.RectTransform(Vector2(0.18, 1), title.RectTransform), "", dropdownheight - 2, nil, false, false, GUI.Alignment.CenterLeft)
+		local dropdown_AddonSelection = GUI.DropDown(
+			GUI.RectTransform(Vector2(0.18, 1), title.RectTransform),
+			"",
+			dropdownheight - 2,
+			nil,
+			false,
+			false,
+			GUI.Alignment.CenterLeft
+		)
 		dropdown_AddonSelection.ListBox.RectTransform.RelativeOffset = (Vector2(0, 0.5))
 		PopulateDropdown(dropdown_AddonSelection)
 		dropdown_AddonSelection.Select(0)
@@ -494,7 +528,7 @@ local function ConstructUI(parent)
 				return
 			end
 
-			selectedExpansion  = newSelection
+			selectedExpansion = newSelection
 
 			-- Redo content based on new selection
 			PopulateSettingsIntoUI(list, selectedExpansion)
@@ -508,14 +542,18 @@ end
 Networking.Receive("NT.ConfigUpdate", function(msg)
 	NTConfig.ReceiveConfig(msg)
 
-    if configUI == nil then return end
-    if configUI.RectTransform == nil then return end
+	if configUI == nil then
+		return
+	end
+	if configUI.RectTransform == nil then
+		return
+	end
 
-    local parent = configUI.RectTransform.Parent
+	local parent = configUI.RectTransform.Parent
 
-    configUI = nil
+	configUI = nil
 
-    configUI = ConstructUI(parent)
+	configUI = ConstructUI(parent)
 end)
 
 easySettings.AddMenu("Neurotrauma", function(parent)

@@ -10,7 +10,7 @@ function NTConfig.AddConfigOptions(expansion)
 	for key, entry in pairs(expansion.ConfigData) do
 		NTConfig.Entries[key] = entry
 		NTConfig.Entries[key].value = entry.default
-		-- Inject the Expansion of origin into config entries 
+		-- Inject the Expansion of origin into config entries
 		entry.expansion = expansion.Name
 	end
 end
@@ -93,9 +93,9 @@ function NTConfig.ReceiveConfig(msg)
 end
 
 NT.ConfigData = {
-	NT_header1 = { 
-		name = "Neurotrauma", 
-		type = "category" 
+	NT_header1 = {
+		name = "Neurotrauma",
+		type = "category",
 	},
 
 	NT_dislocationChance = {
@@ -266,7 +266,7 @@ NT.ConfigData = {
 		group = true,
 		resettable = true,
 	},
-	
+
 	NT_Calculations = {
 		name = "Character calculations",
 		default = true,
@@ -288,11 +288,11 @@ NT.ConfigData = {
 		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things for the current moment.",
 	},
 
-	NT_screams = { 
-		name = "Screams", 
-		default = true, 
-		type = "bool", 
-		description = "Characters scream when in pain." 
+	NT_screams = {
+		name = "Screams",
+		default = true,
+		type = "bool",
+		description = "Characters scream when in pain.",
 	},
 
 	NT_ignoreModConflicts = {
@@ -317,7 +317,7 @@ NT.ConfigData = {
 		difficultyCharacteristics = { multiplier = 0.5 },
 		description = "When receiving damage that would cause a fracture, remove plaster casts on the limb",
 	},
-	
+
 	NTCRE_ConsentRequiredExtra = {
 		name = "NPCs consent requirement to medical interactions",
 		default = false,
@@ -354,7 +354,7 @@ NT.ConfigData = {
 		range = { 0, 100 },
 		type = "float",
 		description = "Where the Low progress color ends and Medium progress color begins.",
-		group = true
+		group = true,
 	},
 
 	NT_medhighThreshold = {
@@ -363,7 +363,7 @@ NT.ConfigData = {
 		range = { 0, 100 },
 		type = "float",
 		description = "Where the Medium progress color ends and High progress color begins.",
-		group = true
+		group = true,
 	},
 
 	NTSCAN_basecolor = {

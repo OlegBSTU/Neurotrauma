@@ -32,35 +32,47 @@ end
 
 -- Overhauled Config GUI
 easySettings.BasicList = function(parent, size)
-    -- Menu Frame
-    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.5, 0.8), parent.RectTransform, GUI.Anchor.Center), "GUIFrame")
+	-- Menu Frame
+	local menuContent =
+		GUI.Frame(GUI.RectTransform(size or Vector2(0.5, 0.8), parent.RectTransform, GUI.Anchor.Center), "GUIFrame")
 
-    -- Main Layout
-    local mainLayout = GUI.LayoutGroup(GUI.RectTransform(Vector2(0.95, 0.95), menuContent.RectTransform, GUI.Anchor.Center, GUI.Pivot.Center), false)
+	-- Main Layout
+	local mainLayout = GUI.LayoutGroup(
+		GUI.RectTransform(Vector2(0.95, 0.95), menuContent.RectTransform, GUI.Anchor.Center, GUI.Pivot.Center),
+		false
+	)
 
-    -- Background 
-    local configBackground = GUI.Frame(GUI.RectTransform(Vector2(1, 0.95), mainLayout.RectTransform), "InnerFrame")
+	-- Background
+	local configBackground = GUI.Frame(GUI.RectTransform(Vector2(1, 0.95), mainLayout.RectTransform), "InnerFrame")
 
-    -- Shrink Inner layout 
-    local innerLayout = GUI.LayoutGroup(GUI.RectTransform(Vector2(0.95, 0.95), configBackground.RectTransform, GUI.Anchor.TopCenter), false)
+	-- Shrink Inner layout
+	local innerLayout = GUI.LayoutGroup(
+		GUI.RectTransform(Vector2(0.95, 0.95), configBackground.RectTransform, GUI.Anchor.TopCenter),
+		false
+	)
 
-    -- Title block
-    local title = GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.07), innerLayout.RectTransform), "Neurotrauma Config Settings", nil, GUI.GUIStyle.LargeFont)
-    title.TextAlignment = GUI.Alignment.TopCenter
+	-- Title block
+	local title = GUI.TextBlock(
+		GUI.RectTransform(Vector2(1, 0.07), innerLayout.RectTransform),
+		"Neurotrauma Config Settings",
+		nil,
+		GUI.GUIStyle.LargeFont
+	)
+	title.TextAlignment = GUI.Alignment.TopCenter
 
-    -- Setting list
-    local menuList = GUI.ListBox(GUI.RectTransform(Vector2(1, 0.97), innerLayout.RectTransform))
-    menuList.Padding = Vector4(10, 15, 10, 10)
-    menuList.UpdateDimensions()
+	-- Setting list
+	local menuList = GUI.ListBox(GUI.RectTransform(Vector2(1, 0.97), innerLayout.RectTransform))
+	menuList.Padding = Vector4(10, 15, 10, 10)
+	menuList.UpdateDimensions()
 
-    -- Button row
-    local buttonRow = GUI.LayoutGroup(GUI.RectTransform(Vector2(1, 0.1), mainLayout.RectTransform), true)
-    buttonRow.RelativeSpacing = 0.02
-    easySettings.SaveButton(buttonRow)
-    easySettings.CloseButton(buttonRow)
-    easySettings.ResetButton(buttonRow)
+	-- Button row
+	local buttonRow = GUI.LayoutGroup(GUI.RectTransform(Vector2(1, 0.1), mainLayout.RectTransform), true)
+	buttonRow.RelativeSpacing = 0.02
+	easySettings.SaveButton(buttonRow)
+	easySettings.CloseButton(buttonRow)
+	easySettings.ResetButton(buttonRow)
 
-    return menuList
+	return menuList
 end
 
 -- Function for a Tickbox
@@ -92,7 +104,12 @@ end
 
 -- Function for the Save and Exit button
 easySettings.SaveButton = function(parent)
-	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft), "Save and Exit", GUI.Alignment.Center, "GUIButton")
+	local button = GUI.Button(
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomLeft),
+		"Save and Exit",
+		GUI.Alignment.Center,
+		"GUIButton"
+	)
 
 	button.OnClicked = function()
 		if Game.IsMultiplayer and Game.Client.HasPermission(ClientPermissions.ManageSettings) then
@@ -108,7 +125,12 @@ end
 
 -- Function for the Discard and Exit button
 easySettings.CloseButton = function(parent)
-	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter), "Discard and Exit", GUI.Alignment.Center, "GUIButton")
+	local button = GUI.Button(
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomCenter),
+		"Discard and Exit",
+		GUI.Alignment.Center,
+		"GUIButton"
+	)
 
 	button.OnClicked = function()
 		GUI.GUI.TogglePauseMenu()
@@ -120,7 +142,12 @@ end
 
 -- Function for the Reset and Exit button
 easySettings.ResetButton = function(parent)
-	local button = GUI.Button(GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomRight), "Reset Config", GUI.Alignment.Center, "GUIButton")
+	local button = GUI.Button(
+		GUI.RectTransform(Vector2(0.32, 0.05), parent.RectTransform, GUI.Anchor.BottomRight),
+		"Reset Config",
+		GUI.Alignment.Center,
+		"GUIButton"
+	)
 
 	button.OnClicked = function()
 		if
@@ -169,7 +196,12 @@ Hook.Patch("Barotrauma.GUI", "TogglePauseMenu", {}, function()
 		local list = GetChildren(GetChildren(frame)[2])[1]
 
 		for key, value in pairs(easySettings.Settings) do
-			local PauseMenuButton = GUI.Button(GUI.RectTransform(Vector2(1, 0.1), list.RectTransform), value.Name, GUI.Alignment.Center, "GUIButtonSmall")
+			local PauseMenuButton = GUI.Button(
+				GUI.RectTransform(Vector2(1, 0.1), list.RectTransform),
+				value.Name,
+				GUI.Alignment.Center,
+				"GUIButtonSmall"
+			)
 
 			PauseMenuButton.OnClicked = function()
 				value.OnOpen(frame)
