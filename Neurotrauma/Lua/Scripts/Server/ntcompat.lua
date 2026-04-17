@@ -15,6 +15,8 @@ NTC = {} -- a class containing compatibility functions for other mods to make us
 -- Timer.Wait(function() if NT ~= nil then NTC.RegisterExpansion(MyExp) end end,1)
 
 NTC.RegisteredExpansions = {}
+-- The function to add your addon to NT, see above for more info.
+---@param expansionMainObject table The table of the addon.
 function NTC.RegisterExpansion(expansionMainObject)
 	table.insert(NTC.RegisteredExpansions, expansionMainObject)
 end
@@ -24,6 +26,9 @@ NTC.CharacterData = {}
 
 -- use this function to induce symptoms temporarily
 -- duration is in humanupdates (~2 seconds), should at least be 2 to prevent symptom flickering
+---@param character Character The character to set the symptom on.
+---@param symptomidentifer string The identifier of the symptom.
+---@param duration integer The number of human updates it lasts for.
 function NTC.SetSymptomTrue(character, symptomidentifer, duration)
 	if duration == nil then
 		duration = 2
@@ -38,6 +43,9 @@ end
 
 -- use this function to suppress symptoms temporarily. this takes precedence over NTC.SetSymptomTrue.
 -- duration is in humanupdates (~2 seconds), should at least be 2 to prevent symptom flickering
+---@param character Character The character to set the symptom on.
+---@param symptomidentifer string The identifier of the symptom.
+---@param duration integer The number of human updates it lasts for.
 function NTC.SetSymptomFalse(character, symptomidentifer, duration)
 	if duration == nil then
 		duration = 2
@@ -112,12 +120,14 @@ end
 
 NTC.PreHumanUpdateHooks = {}
 -- use this function to add a function to be executed before humanupdate with a character parameter
+---@param func function The actual function to be called before a human update.
 function NTC.AddPreHumanUpdateHook(func)
 	NTC.PreHumanUpdateHooks[#NTC.PreHumanUpdateHooks + 1] = func
 end
 
 NTC.HumanUpdateHooks = {}
 -- use this function to add a function to be executed after humanupdate with a character parameter
+---@param func function The actual function to be called after a human update.
 function NTC.AddHumanUpdateHook(func)
 	NTC.HumanUpdateHooks[#NTC.HumanUpdateHooks + 1] = func
 end
@@ -125,6 +135,7 @@ end
 NTC.OnDamagedHooks = {}
 -- use this function to add a function to be executed after ondamaged
 -- with a characterhealth, attack result and limb parameter
+---@param func function The actual function to be called on damaged.
 function NTC.AddOnDamagedHook(func)
 	NTC.OnDamagedHooks[#NTC.OnDamagedHooks + 1] = func
 end
@@ -132,6 +143,7 @@ end
 NTC.ModifyingOnDamagedHooks = {}
 -- use this function to add a function to be executed before ondamaged
 -- with a characterhealth, afflictions and limb parameter, and afflictions return type
+---@param func function The actual function to be called on damaged. Modifying
 function NTC.AddModifyingOnDamagedHook(func)
 	NTC.ModifyingOnDamagedHooks[#NTC.ModifyingOnDamagedHooks + 1] = func
 end
@@ -139,6 +151,8 @@ end
 NTC.CharacterSpeedMultipliers = {}
 -- use this function to multiply a characters speed for one human update.
 -- should always be called from within a prehumanupdate hook
+---@param character Character The character to set the speed multiplier to.
+---@param multiplier number The value of the multiplier.
 function NTC.MultiplySpeed(character, multiplier)
 	if NTC.CharacterSpeedMultipliers[character] == nil then
 		NTC.CharacterSpeedMultipliers[character] = multiplier
@@ -148,6 +162,7 @@ function NTC.MultiplySpeed(character, multiplier)
 end
 
 -- use this function to register an affliction to be detected by the hematology analyzer
+---@param identifier string The identifier of the affliction to be visible on hematology.
 function NTC.AddHematologyAffliction(identifier)
 	Timer.Wait(function()
 		if not HF.TableContains(NT.HematologyDetectable, identifier) then
@@ -162,6 +177,10 @@ end
 -- requiredaffliction: what affliction has to be present alongside the healed affliction for it to get healed (optional, default: none)
 -- func: a function that gets run if the affliction is present. if provided, doesnt heal the affliction automatically (optional, default: none)
 -- func(item, usingCharacter, targetCharacter, limb)
+---@param identifier string The identifier of the affliction to be cured by sutures.
+---@param surgeryskillgain number The surgeryskill increase from sutured affliction.
+---@param requiredaffliction string The identifier of the requiredaffliction (Might need more documentation!)
+---@param func function The function to be called when the affliction is cured with sutures.
 function NTC.AddSuturedAffliction(identifier, surgeryskillgain, requiredaffliction, func)
 	Timer.Wait(function()
 		if not HF.TableContains(NT.SutureAfflictions, identifier) then
@@ -175,7 +194,7 @@ function NTC.AddSuturedAffliction(identifier, surgeryskillgain, requiredafflicti
 end
 
 -- use this function to register an affliction to be healed by drainage
--- identifier: the identifier of the affliction to be healed
+---@param identifier string The identifier of the affliction to be healed.
 function NTC.AddDrainageAffliction(identifier)
 	Timer.Wait(function()
 		if not HF.TableContains(NT.DrainageAfflictions, identifier) then
@@ -204,11 +223,16 @@ NTC.AfflictionsAffectingVitality = {
 	alcoholaddiction = true,
 	opiateaddiction = true,
 }
+-- use this function to register an affliction that will cause vitality damage. (Might need more documentation!)
+---@param identifier string The identifier of the affliction to cause damage.
 function NTC.AddAfflictionAffectingVitality(identifier)
 	NTC.AfflictionsAffectingVitality[identifier] = true
 end
 
 -- these functions are used by neurotrauma to check for symptom overrides
+---@param character Character The character to check the symptom on.
+---@param symptomidentifer string The identifier of the symptom.
+---@return boolean
 function NTC.GetSymptom(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -223,6 +247,8 @@ function NTC.GetSymptom(character, symptomidentifer)
 
 	return true
 end
+
+-- Gotta add more documentation.
 function NTC.GetSymptomFalse(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -239,12 +265,15 @@ function NTC.GetSymptomFalse(character, symptomidentifer)
 end
 
 -- sets multiplier data for one humanupdate, should be called from within a humanupdate hook
+-- Gotta add more documentation.
 function NTC.SetMultiplier(character, multiplieridentifier, multiplier)
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
 	data["mult_" .. multiplieridentifier] = NTC.GetMultiplier(character, multiplieridentifier) * multiplier
 	NTC.CharacterData[character.ID] = data
 end
+
+-- Gotta add more documentation.
 function NTC.GetMultiplier(character, multiplieridentifier)
 	local data = NTC.GetCharacterData(character)
 	if data == nil or data["mult_" .. multiplieridentifier] == nil then
@@ -254,6 +283,7 @@ function NTC.GetMultiplier(character, multiplieridentifier)
 end
 
 -- sets tag data for one humanupdate, should be called from within a humanupdate hook
+-- Gotta add more documentation.
 function NTC.SetTag(character, tagidentifier)
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
@@ -267,6 +297,8 @@ function NTC.HasTag(character, tagidentifier)
 	return true
 end
 
+
+-- I aint gonna add more documentation past.
 -- don't concern yourself with these
 function NTC.AddEmptyCharacterData(character)
 	if NTC.GetCharacterData(character) ~= nil then
@@ -318,4 +350,5 @@ function NTC.GetSpeedMultiplier(character)
 		return NTC.CharacterSpeedMultipliers[character]
 	end
 	return 1
+end
 end
