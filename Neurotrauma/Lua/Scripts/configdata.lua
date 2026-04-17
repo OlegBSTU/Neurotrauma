@@ -99,7 +99,7 @@ NT.ConfigData = {
 	},
 
 	NT_dislocationChance = {
-		name = "Dislocation chance",
+		name = "Dislocation chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -109,7 +109,7 @@ NT.ConfigData = {
 	},
 
 	NT_fractureChance = {
-		name = "Fracture chance",
+		name = "Fracture chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -119,7 +119,7 @@ NT.ConfigData = {
 	},
 
 	NT_pneumothoraxChance = {
-		name = "Pneumothorax chance",
+		name = "Pneumothorax chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -129,7 +129,7 @@ NT.ConfigData = {
 	},
 
 	NT_tamponadeChance = {
-		name = "Tamponade chance",
+		name = "Tamponade chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -139,7 +139,7 @@ NT.ConfigData = {
 	},
 
 	NT_heartattackChance = {
-		name = "Heart attack chance",
+		name = "Heart attack chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -149,7 +149,7 @@ NT.ConfigData = {
 	},
 
 	NT_strokeChance = {
-		name = "Stroke chance",
+		name = "Stroke chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -159,7 +159,7 @@ NT.ConfigData = {
 	},
 
 	NT_infectionRate = {
-		name = "Infection rate",
+		name = "Infection rate multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -169,7 +169,7 @@ NT.ConfigData = {
 	},
 
 	NT_CPRFractureChance = {
-		name = "CPR fracture chance",
+		name = "CPR fracture chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -179,7 +179,7 @@ NT.ConfigData = {
 	},
 
 	NT_traumaticAmputationChance = {
-		name = "Traumatic amputation chance",
+		name = "Traumatic amputation chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -189,7 +189,7 @@ NT.ConfigData = {
 	},
 
 	NT_neurotraumaGain = {
-		name = "Neurotrauma gain",
+		name = "Neurotrauma gain rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -199,7 +199,7 @@ NT.ConfigData = {
 	},
 
 	NT_organDamageGain = {
-		name = "Organ damage gain",
+		name = "Organ damage gain rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -209,7 +209,7 @@ NT.ConfigData = {
 	},
 
 	NT_fibrillationSpeed = {
-		name = "Fibrillation rate",
+		name = "Fibrillation gain rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -219,7 +219,7 @@ NT.ConfigData = {
 	},
 
 	NT_gangrenespeed = {
-		name = "Gangrene rate",
+		name = "Gangrene gain rate",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -238,7 +238,7 @@ NT.ConfigData = {
 	--},
 
 	NT_falldamageCeiling = {
-		name = "Maximum fall damage",
+		name = "Maximum fall damage multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -248,7 +248,7 @@ NT.ConfigData = {
 	},
 
 	NT_falldamage = {
-		name = "Falldamage",
+		name = "Falldamage multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -258,7 +258,7 @@ NT.ConfigData = {
 	},
 
 	NT_falldamageSeriousInjuryChance = {
-		name = "Falldamage serious injury chance",
+		name = "Falldamage serious injury chance multiplier",
 		default = 1,
 		range = { 0, 100 },
 		type = "float",
@@ -268,10 +268,10 @@ NT.ConfigData = {
 	},
 	
 	NT_Calculations = {
-		name = "Enable character calculations",
+		name = "Character calculations",
 		default = true,
 		type = "bool",
-		description = "Runs various calculations necessary for the functionality of the mod. Shouldn't be disabled unless the server is dying.",
+		description = "Runs calculations that are necessary for the functionality of the mod. Shouldn't be disabled unless there is borderline unplayable desynchronisation and lag, in which case it might help with a bit.",
 	},
 
 	NT_vanillaSkillCheck = {
@@ -285,7 +285,7 @@ NT.ConfigData = {
 		name = "Disable bot treatment algorithms",
 		default = true,
 		type = "bool",
-		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely.",
+		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things for the current moment.",
 	},
 
 	NT_screams = { 
@@ -317,6 +317,13 @@ NT.ConfigData = {
 		difficultyCharacteristics = { multiplier = 0.5 },
 		description = "When receiving damage that would cause a fracture, remove plaster casts on the limb",
 	},
+	
+	NTCRE_ConsentRequiredExtra = {
+		name = "NPCs consent requirement to medical interactions",
+		default = false,
+		type = "bool",
+		description = "Integrated consent required mod.\nIf enabled, NPCs outside of your team or submarine mission will get aggravated by medical interactions.",
+	},
 
 	NT_creatureNoFallDamage = {
 		name = "Excluded creatures that abuse the fall damage mechanic",
@@ -329,25 +336,13 @@ NT.ConfigData = {
 		style = "SpeciesName,SpeciesName",
 		type = "string",
 		boxsize = 0.1,
-		description = "You can add or remove creatures to customize this list to your liking. Use debug command `nt_listcreatures` to list the SpeciesName of the creature you are patching in your game. Report creatures that abuse fall damage to the discord server to improve this default list.",
-	},
-
-	NTCRE_header1 = { 
-		name = "Consent Required", 
-		type = "category" 
-	},
-
-	NTCRE_ConsentRequiredExtra = {
-		name = "Consent Required",
-		default = false,
-		type = "bool",
-		description = "Integrated consent required mod.\nIf enabled, NPCs will get aggravated by medical interactions.",
+		description = "An abuse of fall damage is commonly shown by creatures with heavy or ridicilous knockback, that at worst will instakill or stunlock you.\nYou can add or remove creatures to customize this list to your liking. Use debug command `nt_listcreatures` to list the SpeciesName of the creature you are patching in your game.\nReport other creatures that abuse fall damage to the discord server to improve this default list.",
 	},
 
 	NTSCAN_header1 = { name = "Scanner Settings", type = "category" },
 
 	NTSCAN_enablecoloredscanner = {
-		name = "Enable Colored Scanner",
+		name = "Colored Scanner",
 		default = true,
 		type = "bool",
 		description = "Enable colored health scanner text messages.",
