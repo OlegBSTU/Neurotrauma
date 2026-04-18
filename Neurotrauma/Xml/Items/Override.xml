@@ -1709,65 +1709,6 @@
                 </StatusEffect>
             </Holdable>
         </Item>
-
-        <!-- Nitroglycerin | change: now acts as blood pressure reducing medicine.-->
-        <Item name="" identifier="nitroglycerin" category="Medical,Material,Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" description="" spritecolor="1.0,1.0,1.0,1.0" containercolor="1.0,1.0,1.0,1.0" cargocontaineridentifier="explosivecrate" Tags="smallitem,chem,medical" impacttolerance="6" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
-            <PreferredContainer primary="secarmcab" secondary="armcab"/>
-            <PreferredContainer secondary="medcab"/>
-            <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
-
-            <Price baseprice="150">
-                <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.4" />
-                <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false"/>
-                <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
-                <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="4" />
-                <Price storeidentifier="merchantmine" sold="false" />
-                <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="4" />
-                <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="4" />
-            </Price>
-
-            <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,768,64,64" origin="0.5,0.5" />
-            <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="110,414,31,62" depth="0.6" origin="0.5,0.5" />
-            <Body width="35" height="60" density="20" />
-
-
-            <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-                <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
-                <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-                <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-                    <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="3000" />
-                    <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="3000" />
-                    <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="3000" />
-                    <Explosion range="300.0" ballastfloradamage="60" structuredamage="90" itemdamage="300" force="8" severlimbsprobability="0.3" debris="true" decal="explosion" decalsize="0.3">
-                        <Affliction identifier="explosiondamage" strength="75" dividebylimbcount="true"/>
-                        <Affliction identifier="burn" strength="10" probability="0.2" dividebylimbcount="false"/>
-                        <Affliction identifier="bleeding" strength="20" probability="0.05" dividebylimbcount="false"/>
-                        <Affliction identifier="stun" strength="5" />
-                    </Explosion>
-                    <Remove />
-                </StatusEffect>
-                <StatusEffect type="OnBroken" target="This">
-                    <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
-                    <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="2000" />
-                </StatusEffect>
-                <RequiredSkill identifier="medical" level="35" />
-                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" disabledeltatime="true">
-                    <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-                    <Affliction identifier="afpressuredrug" amount="100" />
-                </StatusEffect>
-                <StatusEffect statuseffecttags="medical" type="OnSuccess" target="This" disabledeltatime="true">
-                    <Remove/>
-                </StatusEffect>
-                <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" disabledeltatime="true">
-                    <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-                    <Affliction identifier="afpressuredrug" amount="50" />
-                </StatusEffect>
-                <StatusEffect statuseffecttags="medical" type="OnFailure" target="This" disabledeltatime="true">
-                    <Remove/>
-                </StatusEffect>
-            </Throwable>
-            <SkillRequirementHint identifier="medical" level="35" />
-        </Item>
         <Item name="" identifier="repairpack" category="Equipment" Tags="smallitem,tool,electricalrepairtool,mechanicalrepairtool,wrench,wrenchitem,screwdriver,multitool" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="0.2" useinhealthinterface="True">
             <PreferredContainer primary="engcab"/>
             <Price baseprice="43" sold="false">
