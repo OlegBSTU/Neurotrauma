@@ -728,7 +728,7 @@ NT.ItemMethods.emptybloodpack = function(item, usingCharacter, targetCharacter, 
 
 		HF.GiveItemPlusFunction(bloodpackIdentifier, postSpawnFunc, params, usingCharacter)
 		item.Condition = 0
-		HF.GiveItem(targetCharacter, "ntsfx_syringe") -- TOXML
+		HF.GiveItem(targetCharacter, "ntsfx_syringe") 
 	end
 end
 
@@ -750,8 +750,8 @@ NT.ItemMethods.propofol = function(item, usingCharacter, targetCharacter, limb)
 	end
 
 	HF.AddAffliction(targetCharacter, "afanaesthetic", 100, usingCharacter)
-	HF.RemoveItem(item) -- TOXML
-	HF.GiveItem(targetCharacter, "ntsfx_syringe") -- TOXML
+	HF.RemoveItem(item) 
+	HF.GiveItem(targetCharacter, "ntsfx_syringe") 
 end
 
 -- Streptokinase
@@ -769,8 +769,8 @@ NT.ItemMethods.streptokinase = function(item, usingCharacter, targetCharacter, l
 		HF.AddAffliction(targetCharacter, "cerebralhypoxia", 10, usingCharacter)
 	end
 
-	HF.RemoveItem(item) -- TOXML
-	HF.GiveItem(targetCharacter, "ntsfx_syringe") -- TOXML
+	HF.RemoveItem(item) 
+	HF.GiveItem(targetCharacter, "ntsfx_syringe") 
 end
 
 -- Adrenaline
@@ -783,8 +783,8 @@ NT.ItemMethods.adrenaline = function(item, usingCharacter, targetCharacter, limb
 		HF.AddAffliction(targetCharacter, "fibrillation", 20, usingCharacter)
 	end
 
-	HF.RemoveItem(item)  -- TOXML
-	HF.GiveItem(targetCharacter, "ntsfx_syringe") -- TOXML
+	HF.RemoveItem(item)  
+	HF.GiveItem(targetCharacter, "ntsfx_syringe") 
 end
 
 local function limbHasThirdDegreeBurns(char, limbtype)
@@ -804,7 +804,7 @@ NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb)
 		HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, -7.2 - success * 4.8, usingCharacter)
 	end
 
-	HF.GiveItem(targetCharacter, "ntsfx_ointment") -- TOXML
+	HF.GiveItem(targetCharacter, "ntsfx_ointment") 
 end
 
 -- Bandages
@@ -817,8 +817,8 @@ NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, l
 	HF.AddAfflictionLimb(targetCharacter, "bandaged", limbtype, 36 + success * 12 + hasmedexp * 12, usingCharacter)
 	HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -18 - success * 6 - hasmedexp * 6, usingCharacter)
 
-	HF.RemoveItem(item) -- TOXML
-	HF.GiveItem(targetCharacter, "ntsfx_bandage") -- TOXML
+	HF.RemoveItem(item) 
+	HF.GiveItem(targetCharacter, "ntsfx_bandage") 
 end
 
 -- Plastiseal
@@ -847,8 +847,8 @@ NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, l
 		HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, -12 - success * 12, usingCharacter)
 	end
 
-	HF.RemoveItem(item)  -- TOXML
-	HF.GiveItem(targetCharacter, "ntsfx_bandage") -- TOXML
+	HF.RemoveItem(item)  
+	HF.GiveItem(targetCharacter, "ntsfx_bandage") 
 end
 
 -- Manual Defibrillator
@@ -862,7 +862,7 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 	-- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
 	if not hasVoltage then return end
 
-	HF.GiveItem(targetCharacter, "ntsfx_manualdefib") -- TOXML?
+	HF.GiveItem(targetCharacter, "ntsfx_manualdefib") ?
 	-- about to get deepfried if underwater (TODO)
 	--local unsafe = HF.GetOuterWearIdentifier(targetCharacter) ~= "emergencysuit" and targetCharacter.InWater
 	--local unsafeArrestRoll = unsafe
@@ -1766,7 +1766,7 @@ NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCha
 			item.Condition = item.Condition - 25
 
 			if item.Condition <= 0 then
-				HF.RemoveItem(item)  -- TOXML
+				HF.RemoveItem(item)  
 			end
 		else
 			HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 5, usingCharacter)
@@ -1785,7 +1785,7 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 45) then
 			HF.SetAffliction(targetCharacter, "t_paralysis", 0, usingCharacter)
-			HF.RemoveItem(item)  -- TOXML
+			HF.RemoveItem(item)  
 
 			if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
 				HF.GiveSkillScaled(usingCharacter, "surgery", 12000)
@@ -1989,7 +1989,7 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 
 	item.Condition = 0
 	HF.GiveItem(usingCharacter, "emptybloodpack")
-	HF.GiveItem(targetCharacter, "ntsfx_syringe") -- TOXML
+	HF.GiveItem(targetCharacter, "ntsfx_syringe") 
 end
 
 NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, limb)
