@@ -5,18 +5,14 @@ local NormalHeartrate = 60
 local MaxTachycardiaHeartrate = 180
 local MaxFibrillationHeartrate = 300
 local function GetHeartrate(character)
-	if character == nil or character.CharacterHealth == nil or character.IsDead then
-		return 0
-	end
+	if character == nil or character.CharacterHealth == nil or character.IsDead then return 0 end
 
 	local rate = NormalHeartrate
 
 	local cardiacarrest = character.CharacterHealth.GetAffliction("cardiacarrest")
 
 	-- return 0 rate if in cardiac arrest
-	if cardiacarrest ~= nil and cardiacarrest.Strength >= 0.5 then
-		return 0
-	end
+	if cardiacarrest ~= nil and cardiacarrest.Strength >= 0.5 then return 0 end
 
 	local tachycardia = character.CharacterHealth.GetAffliction("tachycardia")
 	local fibrillation = character.CharacterHealth.GetAffliction("fibrillation")
@@ -35,9 +31,7 @@ local function GetHeartrate(character)
 end
 
 local function GetPH(character)
-	if character == nil or character.CharacterHealth == nil then
-		return 0
-	end
+	if character == nil or character.CharacterHealth == nil then return 0 end
 
 	local acidosis = HF.GetAfflictionStrength(character, "acidosis", 0)
 	local alkalosis = HF.GetAfflictionStrength(character, "alkalosis", 0)
