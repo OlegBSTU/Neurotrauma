@@ -110,5 +110,68 @@
 
         <SkillRequirementHint identifier="medical" level="40"/>
     </Item>
+
+    <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="toxcontainer" minamount="0" maxamount="1" spawnprobability="0.5"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="2">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="organicfiber" />
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="rubber" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="30" soldbydefault="true" CanBeSpecial="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+            
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+
+    <Item name="" identifier="medstent" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="2">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="organicfiber" />
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="rubber" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="70" soldbydefault="true" CanBeSpecial="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="384,128,64,64" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+        <SuitableTreatment identifier="arterialcut5" suitability="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
 </Items>
 </Override>

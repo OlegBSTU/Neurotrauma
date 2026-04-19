@@ -535,7 +535,16 @@ NT.SutureAfflictions = {
 	la_arterialcut = { xpgain = 3, case = "retractedskin" },
 	ra_arterialcut = { xpgain = 3, case = "retractedskin" },
 	h_arterialcut = { xpgain = 3, case = "retractedskin" },
-	t_arterialcut = { xpgain = 6, case = "retractedskin" },
+
+	t_arterialcut = {
+		xpgain = 6,
+		case = "retractedskin",
+		-- If Hardmode is turned on, disable open/close fixing it
+		condition = function()
+			return not NTConfig.Get("NT_HardmodeAorticRupture", false)
+		end,
+	},
+
 	arteriesclamp = { xpgain = 0, case = "retractedskin" },
 	tamponade = { xpgain = 3, case = "retractedskin" },
 	internalbleeding = { xpgain = 3, case = "retractedskin" },
@@ -603,7 +612,12 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 		for key, value in pairs(NT.SutureAfflictions) do
 			local prefab = AfflictionPrefab.Prefabs[key]
 
-			if prefab ~= nil and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype)) then
+			if
+				prefab ~= nil
+				and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype))
+				-- Additional check for config
+				and (value.condition == nil or value.condition(item, usingCharacter, targetCharacter, limb))
+			then
 				if value.func ~= nil then
 					value.func(item, usingCharacter, targetCharacter, limb)
 				else
@@ -1718,9 +1732,12 @@ NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCha
 			end
 
 			HF.SetAfflictionLimb(targetCharacter, "bonegrowth", limbtype, 100, usingCharacter)
-			item.Condition = item.Condition - 25
 
-			if item.Condition <= 0 then HF.RemoveItem(item) end
+			-- Make it possible to increase / decrease the amount of uses of this item
+			local ItemUses = (1 / NTConfig.Get("NTIT_OsteoImplants_uses", 4)) * 100
+			item.Condition = item.Condition - ItemUses
+
+			if item.Condition <= 1 then HF.RemoveItem(item) end
 		else
 			HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 5, usingCharacter)
 			HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 5, usingCharacter)
@@ -1739,7 +1756,12 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 45) then
 			HF.SetAffliction(targetCharacter, "t_paralysis", 0, usingCharacter)
-			HF.RemoveItem(item)
+
+			-- Make it possible to increase / decrease the amount of uses of this item
+			local ItemUses = (1 / NTConfig.Get("NTIT_SpinalImplants_uses", 1)) * 100
+			item.Condition = item.Condition - ItemUses
+
+			if item.Condition <= 1 then HF.RemoveItem(item) end
 
 			if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
 				HF.GiveSkillScaled(usingCharacter, "surgery", 12000)
@@ -2489,6 +2511,51 @@ NT.ItemStartsWithMethods.bloodpack = function(item, usingCharacter, targetCharac
 	local identifier = item.Prefab.Identifier.Value
 	local packtype = string.sub(identifier, string.len("bloodpack") + 1)
 	InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, limb)
+end
+
+-- Dynamic Items
+-- Endovascular Balloon
+NT.ItemMethods.endovascballoon = function(item, usingCharacter, targetCharacter, limb)
+	local limbtype = limb.type
+
+	-- don't work on stasis
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+
+	if
+		limbtype == LimbType.Torso
+		and HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
+		and HF.HasAffliction(targetCharacter, "t_arterialcut", 1)
+	then
+		HF.AddAffliction(targetCharacter, "balloonedaorta", 100, usingCharacter)
+		HF.SetAffliction(targetCharacter, "internalbleeding", 0, usingCharacter)
+
+		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+			HF.GiveSkillScaled(usingCharacter, "surgery", 10000)
+		else
+			HF.GiveSkillScaled(usingCharacter, "medical", 5000)
+		end
+
+		if HF.Chance(NTC.GetMultiplier(usingCharacter, "balloonconsumechance")) then HF.RemoveItem(item) end
+	end
+end
+
+-- Medical Stent
+NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
+	local limbtype = limb.type
+
+	-- don't work on stasis
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+
+	if limbtype == LimbType.Torso and HF.HasAffliction(targetCharacter, "balloonedaorta", 1) then
+		HF.SetAffliction(targetCharacter, "balloonedaorta", 0, usingCharacter)
+		HF.SetAffliction(targetCharacter, "t_arterialcut", 0, usingCharacter)
+
+		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+			HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
+		else
+			HF.GiveSkillScaled(usingCharacter, "medical", 10000)
+		end
+	end
 end
 
 -- ============================ HOOKS ===========================
