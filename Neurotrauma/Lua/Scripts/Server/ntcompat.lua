@@ -30,9 +30,7 @@ NTC.CharacterData = {}
 ---@param symptomidentifer string The identifier of the symptom.
 ---@param duration integer The number of human updates it lasts for.
 function NTC.SetSymptomTrue(character, symptomidentifer, duration)
-	if duration == nil then
-		duration = 2
-	end
+	if duration == nil then duration = 2 end
 
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
@@ -47,9 +45,7 @@ end
 ---@param symptomidentifer string The identifier of the symptom.
 ---@param duration integer The number of human updates it lasts for.
 function NTC.SetSymptomFalse(character, symptomidentifer, duration)
-	if duration == nil then
-		duration = 2
-	end
+	if duration == nil then duration = 2 end
 
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
@@ -235,15 +231,11 @@ end
 ---@return boolean
 function NTC.GetSymptom(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
-	if chardata == nil then
-		return false
-	end
+	if chardata == nil then return false end
 
 	local durationleft = chardata[symptomidentifer]
 
-	if durationleft == nil then
-		return false
-	end
+	if durationleft == nil then return false end
 
 	return true
 end
@@ -253,15 +245,11 @@ end
 ---@return boolean
 function NTC.GetSymptomFalse(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
-	if chardata == nil then
-		return false
-	end
+	if chardata == nil then return false end
 
 	local durationleft = chardata["!" .. symptomidentifer]
 
-	if durationleft == nil then
-		return false
-	end
+	if durationleft == nil then return false end
 
 	return true
 end
@@ -281,9 +269,7 @@ end
 ---@param multiplieridentifier string The identifier of the multiplier.
 function NTC.GetMultiplier(character, multiplieridentifier)
 	local data = NTC.GetCharacterData(character)
-	if data == nil or data["mult_" .. multiplieridentifier] == nil then
-		return 1
-	end
+	if data == nil or data["mult_" .. multiplieridentifier] == nil then return 1 end
 	return data["mult_" .. multiplieridentifier]
 end
 
@@ -297,27 +283,21 @@ function NTC.SetTag(character, tagidentifier)
 end
 function NTC.HasTag(character, tagidentifier)
 	local data = NTC.GetCharacterData(character)
-	if data == nil or data["tag_" .. tagidentifier] == nil then
-		return false
-	end
+	if data == nil or data["tag_" .. tagidentifier] == nil then return false end
 	return true
 end
 
 -- // Utility functions //
 -- don't concern yourself with these
 function NTC.AddEmptyCharacterData(character)
-	if NTC.GetCharacterData(character) ~= nil then
-		return
-	end
+	if NTC.GetCharacterData(character) ~= nil then return end
 	local newdat = {}
 	newdat["character"] = character
 	NTC.CharacterData[character.ID] = newdat
 end
 function NTC.CheckChardataEmpty(character)
 	local chardat = NTC.GetCharacterData(character)
-	if chardat == nil or HF.TableSize(chardat) > 1 then
-		return
-	end
+	if chardat == nil or HF.TableSize(chardat) > 1 then return end
 
 	-- remove entry from data
 	NTC.CharacterData[character.ID] = nil
@@ -327,9 +307,7 @@ function NTC.GetCharacterData(character)
 end
 function NTC.TickCharacter(character)
 	local chardata = NTC.GetCharacterData(character)
-	if chardata == nil then
-		return
-	end
+	if chardata == nil then return end
 
 	for key, value in pairs(chardata) do
 		if key ~= "character" then
@@ -351,8 +329,6 @@ function NTC.TickCharacter(character)
 	NTC.CharacterData[character.ID] = chardata
 end
 function NTC.GetSpeedMultiplier(character)
-	if NTC.CharacterSpeedMultipliers[character] ~= nil then
-		return NTC.CharacterSpeedMultipliers[character]
-	end
+	if NTC.CharacterSpeedMultipliers[character] ~= nil then return NTC.CharacterSpeedMultipliers[character] end
 	return 1
 end

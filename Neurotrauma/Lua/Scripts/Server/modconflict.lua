@@ -8,9 +8,7 @@
 NT.modconflict = false
 function NT.CheckModConflicts()
 	NT.modconflict = false
-	if NTConfig.Get("NT_ignoreModConflicts", false) then
-		return
-	end
+	if NTConfig.Get("NT_ignoreModConflicts", false) then return end
 
 	local itemsToCheck = { "antidama2", "opdeco_hospitalbed" }
 

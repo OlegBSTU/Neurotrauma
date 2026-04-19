@@ -10,17 +10,13 @@ Hook.Add("character.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
 	then
 		return
 	end
-		
+
 	local character = animcontroller.Character.SelectedCharacter
 
-	if not HF.HasAffliction(character, "luabotomy") then
-		HF.SetAffliction(character, "luabotomy", 1)
-	end
+	if not HF.HasAffliction(character, "luabotomy") then HF.SetAffliction(character, "luabotomy", 1) end
 
-	if not HF.HasAffliction(character, "cpr_buff_auto") then
-		HF.AddAffliction(character, "cpr_buff", 2)
-	end
-		
+	if not HF.HasAffliction(character, "cpr_buff_auto") then HF.AddAffliction(character, "cpr_buff", 2) end
+
 	HF.AddAffliction(character, "cpr_fracturebuff", 2) -- prevent fractures during CPR (fuck baro physics)
 end)
 
@@ -32,16 +28,14 @@ Hook.Add("character.CPRFailed", "NT.CPRFailed", function(animcontroller)
 	then
 		return
 	end
-		
+
 	local character = animcontroller.Character.SelectedCharacter
 
-	if not HF.HasAffliction(character, "luabotomy") then
-		HF.SetAffliction(character, "luabotomy", 1)
-	end
+	if not HF.HasAffliction(character, "luabotomy") then HF.SetAffliction(character, "luabotomy", 1) end
 
 	HF.AddAffliction(character, "cpr_fracturebuff", 2) -- prevent fractures during CPR (fuck baro physics)
 	HF.AddAfflictionLimb(character, "blunttrauma", LimbType.Torso, 0.3)
-		
+
 	if
 		HF.Chance(
 			NTConfig.Get("NT_fractureChance", 1)

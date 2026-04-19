@@ -26,9 +26,7 @@ end
 function NT.RefreshScalpelDescription(item)
 	-- if not HF.ItemHasTag(item,"init") then return end
 	-- hostside only
-	if Game.IsMultiplayer and CLIENT then
-		return
-	end
+	if Game.IsMultiplayer and CLIENT then return end
 
 	if not Entity.Spawner then
 		Timer.Wait(function()
@@ -39,20 +37,14 @@ function NT.RefreshScalpelDescription(item)
 
 	local functiontag = GetMultiscalpelMode(item)
 
-	if functiontag == "" then
-		return
-	end
+	if functiontag == "" then return end
 
 	local targetinventory = item.ParentInventory
 	local targetslot = 0
-	if targetinventory ~= nil then
-		targetslot = targetinventory.FindIndex(item)
-	end
+	if targetinventory ~= nil then targetslot = targetinventory.FindIndex(item) end
 
 	local function SpawnFunc(newscalpelitem, targetinventory)
-		if targetinventory ~= nil then
-			targetinventory.TryPutItem(newscalpelitem, targetslot, true, true, nil)
-		end
+		if targetinventory ~= nil then targetinventory.TryPutItem(newscalpelitem, targetslot, true, true, nil) end
 		newscalpelitem.DescriptionTag = "multiscalpel." .. functiontag
 		newscalpelitem.Tags = "multiscalpel_" .. functiontag
 	end
@@ -78,9 +70,7 @@ function NT.RefreshAllMultiscalpels()
 	-- fetch scalpel items
 	local scalpelItems = {}
 	for item in Item.ItemList do
-		if item.Prefab.Identifier.Value == "multiscalpel" then
-			table.insert(scalpelItems, item)
-		end
+		if item.Prefab.Identifier.Value == "multiscalpel" then table.insert(scalpelItems, item) end
 	end
 	-- refresh items
 	for scalpel in scalpelItems do
@@ -128,9 +118,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	local mode = GetMultiscalpelMode(item)
-	if mode == "" then
-		mode = "none"
-	end
+	if mode == "" then mode = "none" end
 
 	local modeFunctions = {
 		none = function(item, usingCharacter, targetCharacter, limb) end,
@@ -255,9 +243,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
 							4 + math.random() * 6,
 							usingCharacter
 						)
-						if HF.Chance(0.1) then
-							NT.BreakLimb(targetCharacter, limbtype)
-						end
+						if HF.Chance(0.1) then NT.BreakLimb(targetCharacter, limbtype) end
 					end
 
 					HF.GiveItem(targetCharacter, "ntsfx_slash")
@@ -267,9 +253,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
 		speedflex = function(item, usingCharacter, targetCharacter, limb)
 			local animcontroller = targetCharacter.AnimController
 			local torsoLimb = limb
-			if animcontroller ~= nil then
-				torsoLimb = animcontroller.MainLimb
-			end
+			if animcontroller ~= nil then torsoLimb = animcontroller.MainLimb end
 
 			if limbtype == LimbType.Head then
 				NT.ItemMethods.organscalpel_brain(item, usingCharacter, targetCharacter, limb)
@@ -285,13 +269,9 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
 		end,
 	}
 
-	if modeFunctions[mode] ~= nil then
-		modeFunctions[mode](item, usingCharacter, targetCharacter, limb)
-	end
+	if modeFunctions[mode] ~= nil then modeFunctions[mode](item, usingCharacter, targetCharacter, limb) end
 
-	if mode ~= "none" then
-		Timer.Wait(function()
-			item.Tags = "multiscalpel_" .. mode
-		end, 50)
-	end
+	if mode ~= "none" then Timer.Wait(function()
+		item.Tags = "multiscalpel_" .. mode
+	end, 50) end
 end

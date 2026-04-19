@@ -5,9 +5,7 @@ Hook.Add(
 	"NT.medstartercrate.spawn",
 	function(effect, deltaTime, item, targets, worldPosition)
 		Timer.Wait(function()
-			if item == nil then
-				return
-			end
+			if item == nil then return end
 
 			-- check if the item already got populated before
 			-- got broken somehow and is no longer needed, handled with oneshot="true" for the StatusEffect inside the medstartercrate item that calls this hook on spawn
@@ -28,9 +26,7 @@ Hook.Add(
 
 			-- populate with goodies!!
 
-			if item.Scale == 0.5 then
-				return
-			end
+			if item.Scale == 0.5 then return end
 			item.Scale = 0.5
 			HF.SpawnItemPlusFunction("medtoolbox", function(params)
 				HF.SpawnItemPlusFunction("defibrillator", nil, nil, params.item.OwnInventory, 0)

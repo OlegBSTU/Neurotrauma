@@ -191,24 +191,21 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		-- Add a message in case there is nothing to display
 		if afflictionsdisplayed <= 0 then LowStrengthReadout = LowStrengthReadout .. "\nNo afflictions! Good work!" end
 
-		Timer.Wait(
-			function()
-				HF.DMClient(
-					HF.CharacterToClient(usingCharacter),
+		Timer.Wait(function()
+			HF.DMClient(
+				HF.CharacterToClient(usingCharacter),
 
-					startReadout
-						.. formatLine(LowPressureReadout, LowColor)
-						.. formatLine(HighPressureReadout, HighColor)
-						.. formatLine(LowStrengthReadout, LowColor)
-						.. formatLine(MediumStrengthReadout, MedColor)
-						.. formatLine(HighStrengthReadout, HighColor)
-						.. formatLine(VitalReadout, VitalColor)
-						.. formatLine(RemovalReadout, RemovalColor)
-						.. formatLine(CustomReadout, CustomColor)
-				)
-			end,
-			2000
-		)
+				startReadout
+					.. formatLine(LowPressureReadout, LowColor)
+					.. formatLine(HighPressureReadout, HighColor)
+					.. formatLine(LowStrengthReadout, LowColor)
+					.. formatLine(MediumStrengthReadout, MedColor)
+					.. formatLine(HighStrengthReadout, HighColor)
+					.. formatLine(VitalReadout, VitalColor)
+					.. formatLine(RemovalReadout, RemovalColor)
+					.. formatLine(CustomReadout, CustomColor)
+			)
+		end, 2000)
 	end
 end
 
@@ -2514,7 +2511,9 @@ Hook.Add("bodybag.dragfast", "bodybag.dragfast", function(effect, deltaTime, ite
 end)
 
 -- This exists purely for NT metabolism
-function NT.RotOrgan(item) HF.RemoveItem(item) end
+function NT.RotOrgan(item)
+	HF.RemoveItem(item)
+end
 
 Hook.Add("NT.RotOrgan", "NT.RotOrgan", function(effect, deltaTime, item, targets, worldPosition)
 	if item then NT.RotOrgan(item) end
@@ -2534,17 +2533,19 @@ function NT.RefreshCondition()
 	end
 end
 
-Timer.Wait(function() NT.RefreshCondition() end, 1000)
+Timer.Wait(function()
+	NT.RefreshCondition()
+end, 1000)
 
 Hook.Add("roundStart", "NT.RoundStart.ConditionItems", function()
-	Timer.Wait(function() NT.RefreshCondition() end, 10000)
+	Timer.Wait(function()
+		NT.RefreshCondition()
+	end, 10000)
 end)
 
-Hook.Add(
-	"item.applyTreatment",
-	"NT.itemused",
-	function(item, usingCharacter, targetCharacter, limb) UseItemMethod(item, usingCharacter, targetCharacter, limb) end
-)
+Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, targetCharacter, limb)
+	UseItemMethod(item, usingCharacter, targetCharacter, limb)
+end)
 
 Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, item, targets, worldPosition, element)
 	local target = targets[1]

@@ -17,9 +17,7 @@ end
 
 function NTConfig.SaveConfig()
 	--prevent both owner client and server saving config at the same time and potentially erroring from file access
-	if Game.IsMultiplayer and CLIENT and Game.Client.MyClient.IsOwner then
-		return
-	end
+	if Game.IsMultiplayer and CLIENT and Game.Client.MyClient.IsOwner then return end
 
 	local tableToSave = {}
 	for key, entry in pairs(NTConfig.Entries) do
@@ -43,30 +41,22 @@ function NTConfig.ResetConfig()
 end
 
 function NTConfig.LoadConfig()
-	if not File.Exists(configFilePath) then
-		return
-	end
+	if not File.Exists(configFilePath) then return end
 
 	local readConfig = json.parse(File.Read(configFilePath))
 
 	for key, value in pairs(readConfig) do
-		if NTConfig.Entries[key] then
-			NTConfig.Entries[key].value = value
-		end
+		if NTConfig.Entries[key] then NTConfig.Entries[key].value = value end
 	end
 end
 
 function NTConfig.Get(key, default)
-	if NTConfig.Entries[key] then
-		return NTConfig.Entries[key].value
-	end
+	if NTConfig.Entries[key] then return NTConfig.Entries[key].value end
 	return default
 end
 
 function NTConfig.Set(key, value)
-	if NTConfig.Entries[key] then
-		NTConfig.Entries[key].value = value
-	end
+	if NTConfig.Entries[key] then NTConfig.Entries[key].value = value end
 end
 
 function NTConfig.SendConfig(reciverClient)

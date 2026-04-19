@@ -6,9 +6,7 @@ Hook.HookMethod("Barotrauma.Character", "ApplyStatusEffects", function(instance,
 		end
 
 		if instance.IsHuman then
-			if not HF.HasAffliction(instance, "luabotomy") then
-				HF.SetAffliction(instance, "luabotomy", 1)
-			end
+			if not HF.HasAffliction(instance, "luabotomy") then HF.SetAffliction(instance, "luabotomy", 1) end
 			ApplyBurn(instance, LimbType.Torso)
 			ApplyBurn(instance, LimbType.Head)
 			ApplyBurn(instance, LimbType.LeftArm)

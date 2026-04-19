@@ -6,16 +6,12 @@ NT.UpdateInterval = 120
 NT.Deltatime = NT.UpdateInterval / 60 -- Time in seconds that transpires between updates
 
 Hook.Add("think", "NT.update", function()
-	if HF.GameIsPaused() then
-		return
-	end
+	if HF.GameIsPaused() then return end
 
 	NT.UpdateCooldown = NT.UpdateCooldown - 1
 	if NT.UpdateCooldown <= 0 then
 		NT.UpdateCooldown = NT.UpdateInterval
-		if NTConfig.Get("NT_Calculations", true) then
-			NT.Update()
-		end
+		if NTConfig.Get("NT_Calculations", true) then NT.Update() end
 	end
 
 	-- I'm not entirely sure this should even exist, but lets keep it for reference
@@ -59,9 +55,7 @@ function NT.Update()
 		-- make sure theyre still alive
 		if value ~= nil and not value.Removed and not value.IsDead then
 			Timer.Wait(function()
-				if value ~= nil and not value.Removed and not value.IsDead then
-					NT.UpdateMonster(value)
-				end
+				if value ~= nil and not value.Removed and not value.IsDead then NT.UpdateMonster(value) end
 			end, ((key + 1) / amountMonsters) * NT.Deltatime * 1000)
 		end
 	end
@@ -94,19 +88,13 @@ local function limbLockedInitial(c, limbtype, key)
 		)
 end
 NT.organDamageCalc = function(c, damagevalue, nomaxstrength)
-	if damagevalue >= 99 and (nomaxstrength == nil or nomaxstrength == false) then
-		return 100
-	end
+	if damagevalue >= 99 and (nomaxstrength == nil or nomaxstrength == false) then return 100 end
 	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
 end
 local function kidneyDamageCalc(c, damagevalue)
-	if damagevalue >= 99 then
-		return 100
-	end
+	if damagevalue >= 99 then return 100 end
 	if damagevalue >= 50 then
-		if damagevalue <= 51 then
-			return damagevalue
-		end
+		if damagevalue <= 51 then return damagevalue end
 		return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
 	end
 	return damagevalue - 0.02 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
@@ -127,24 +115,12 @@ local limbtypes = {
 NT.Afflictions = {
 	-- Unconsciousness
 	sym_unconsciousness = {
-	update = function(c, i)
-		local isUnconscious = not NTC.GetSymptomFalse(c.character, i)
-			and (
-				NTC.GetSymptom(c.character, i)
-				or c.stats.stasis
-				or c.afflictions.brainremoved.strength > 0
-				or c.afflictions.cerebralhypoxia.strength > 100
-				or c.afflictions.coma.strength > 15
-				or c.character.Vitality <= 0
-				or c.afflictions.hypoxemia.strength > 80
-				or c.afflictions.t_arterialcut.strength > 0
-				or c.afflictions.seizure.strength > 0.1
-				or c.afflictions.opiateoverdose.strength > 60
-				or c.character.Vitality <= 0
-			)
-			and not c.character.HasAbilityFlag(AbilityFlags.AlwaysStayConscious)
-		c.afflictions[i].strength = HF.BoolToNum(isUnconscious, 2)
-	end,
+		update = function(c, i)
+			local isUnconscious = not NTC.GetSymptomFalse(c.character, i)
+				and (NTC.GetSymptom(c.character, i) or c.stats.stasis or c.afflictions.brainremoved.strength > 0 or c.afflictions.cerebralhypoxia.strength > 100 or c.afflictions.coma.strength > 15 or c.character.Vitality <= 0 or c.afflictions.hypoxemia.strength > 80 or c.afflictions.t_arterialcut.strength > 0 or c.afflictions.seizure.strength > 0.1 or c.afflictions.opiateoverdose.strength > 60 or c.character.Vitality <= 0)
+				and not c.character.HasAbilityFlag(AbilityFlags.AlwaysStayConscious)
+			c.afflictions[i].strength = HF.BoolToNum(isUnconscious, 2)
+		end,
 	},
 	-- Arterial cuts
 	t_arterialcut = {},
@@ -349,9 +325,7 @@ NT.Afflictions = {
 				c.afflictions[i].strength = c.afflictions[i].strength + NT.Deltatime * 0.5
 			end
 
-			if c.afflictions.heartremoved.strength > 0 then
-				c.afflictions[i].strength = 0
-			end
+			if c.afflictions.heartremoved.strength > 0 then c.afflictions[i].strength = 0 end
 		end,
 	},
 	heartattack = {
@@ -378,9 +352,7 @@ NT.Afflictions = {
 				c.afflictions[i].strength = c.afflictions[i].strength + 50
 			end
 
-			if c.afflictions.heartremoved.strength > 0 then
-				c.afflictions[i].strength = 0
-			end
+			if c.afflictions.heartremoved.strength > 0 then c.afflictions[i].strength = 0 end
 		end,
 	},
 	-- Organs removed
@@ -428,9 +400,7 @@ NT.Afflictions = {
 	cerebralhypoxia = {
 		max = 200,
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			-- calculate new neurotrauma
 			local skull = HF.HasAffliction(c.character, "h_fracture", 1) -- check for skullfracture
 			local skullmod = skull and 0 or 1 -- invert bool
@@ -460,9 +430,7 @@ NT.Afflictions = {
 	},
 	heartdamage = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = NT.organDamageCalc(
 				c,
 				c.afflictions[i].strength
@@ -473,9 +441,7 @@ NT.Afflictions = {
 	},
 	lungdamage = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = NT.organDamageCalc(
 				c,
 				c.afflictions.lungdamage.strength
@@ -486,9 +452,7 @@ NT.Afflictions = {
 	},
 	liverdamage = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = NT.organDamageCalc(
 				c,
 				c.afflictions.liverdamage.strength
@@ -507,9 +471,7 @@ NT.Afflictions = {
 	},
 	kidneydamage = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = kidneyDamageCalc(
 				c,
 				c.afflictions.kidneydamage.strength
@@ -529,9 +491,7 @@ NT.Afflictions = {
 	},
 	bonedamage = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = NT.organDamageCalc(
 				c,
 				c.afflictions.bonedamage.strength
@@ -556,9 +516,7 @@ NT.Afflictions = {
 	organdamage = {
 		max = 200,
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength =
 				NT.organDamageCalc(c, c.afflictions.organdamage.strength + c.stats.neworgandamage, true)
 		end,
@@ -569,9 +527,7 @@ NT.Afflictions = {
 			if c.afflictions.afantibiotics.strength > 0.1 then
 				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime
 			end
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			if c.afflictions[i].strength > 0.1 then
 				c.afflictions[i].strength = c.afflictions[i].strength + 0.05 * NT.Deltatime
 			end
@@ -593,9 +549,7 @@ NT.Afflictions = {
 					NT.TryRandomizeBlood(c.character)
 				end
 			end
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 
 			-- immunity regeneration
 			c.afflictions[i].strength =
@@ -609,13 +563,9 @@ NT.Afflictions = {
 		default = 100,
 		update = function(c, i)
 			-- fix people not having a blood pressure
-			if not HF.HasAffliction(c.character, i) then
-				HF.SetAffliction(c.character, i, 100)
-			end
+			if not HF.HasAffliction(c.character, i) then HF.SetAffliction(c.character, i, 100) end
 
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			-- calculate new blood pressure
 			local desiredbloodpressure = (
 				c.stats.bloodamount
@@ -648,9 +598,7 @@ NT.Afflictions = {
 	},
 	hypoxemia = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			-- completely cancel out hypoxemia regeneration if penumothorax is full
 			c.stats.availableoxygen = math.min(c.stats.availableoxygen, 100 - c.afflictions.pneumothorax.strength / 2)
 
@@ -699,9 +647,7 @@ NT.Afflictions = {
 	table = {},
 	internalbleeding = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.02 * c.stats.clottingrate
 			if c.afflictions[i].strength > 0 then
 				c.afflictions.bloodloss.strength = c.afflictions.bloodloss.strength
@@ -711,9 +657,7 @@ NT.Afflictions = {
 	},
 	acidosis = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = c.afflictions[i].strength
 				+ HF.BoolToNum(c.afflictions.hypoventilation.strength > 0 and c.afflictions.alv.strength <= 0.1) * 0.09 * NT.Deltatime
 				+ HF.BoolToNum(
@@ -771,18 +715,14 @@ NT.Afflictions = {
 			-- check for spasm trigger
 			if c.afflictions[i].strength > 0.1 then
 				for type in limbtypes do
-					if HF.Chance(0.5) then
-						HF.AddAfflictionLimb(c.character, "spasm", type, 10)
-					end
+					if HF.Chance(0.5) then HF.AddAfflictionLimb(c.character, "spasm", type, 10) end
 				end
 			end
 		end,
 	},
 	stroke = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			c.afflictions[i].strength = c.afflictions[i].strength - (1 / 20) * c.stats.clottingrate * NT.Deltatime
 
 			-- triggers
@@ -809,9 +749,7 @@ NT.Afflictions = {
 	},
 	coma = {
 		update = function(c, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			if
 				c.afflictions.acidosis.strength < 20
 				and c.afflictions.alkalosis.strength < 20
@@ -892,19 +830,11 @@ NT.Afflictions = {
 			local leftarmlocked = leftlockitem ~= nil and not handcuffed
 			local rightarmlocked = rightlockitem ~= nil and not handcuffed
 
-			if leftarmlocked and not c.stats.lockleftarm then
-				HF.RemoveItem(leftlockitem)
-			end
-			if rightarmlocked and not c.stats.lockrightarm then
-				HF.RemoveItem(rightlockitem)
-			end
+			if leftarmlocked and not c.stats.lockleftarm then HF.RemoveItem(leftlockitem) end
+			if rightarmlocked and not c.stats.lockrightarm then HF.RemoveItem(rightlockitem) end
 
-			if not leftarmlocked and c.stats.lockleftarm then
-				HF.ForceArmLock(c.character, "armlock2")
-			end
-			if not rightarmlocked and c.stats.lockrightarm then
-				HF.ForceArmLock(c.character, "armlock1")
-			end
+			if not leftarmlocked and c.stats.lockleftarm then HF.ForceArmLock(c.character, "armlock2") end
+			if not rightarmlocked and c.stats.lockrightarm then HF.ForceArmLock(c.character, "armlock1") end
 
 			c.afflictions[i].strength = HF.BoolToNum((c.stats.lockleftarm and c.stats.lockrightarm) or handcuffed, 100)
 		end,
@@ -936,9 +866,7 @@ NT.Afflictions = {
 	-- propofol (i hate it)
 	anesthesia = {
 		update = function(c, i)
-			if c.afflictions[i].strength <= 0 then
-				return
-			end
+			if c.afflictions[i].strength <= 0 then return end
 			-- cause bloody vomiting or hallucinations sometimes (real sideeffects of propofol!)
 			if HF.Chance(0.06) then
 				local case = math.random()
@@ -980,9 +908,7 @@ NT.Afflictions = {
 	concussion = {
 		update = function(c, i)
 			c.afflictions[i].strength = c.afflictions[i].strength - 0.01 * NT.Deltatime
-			if c.afflictions[i].strength <= 0 then
-				return
-			end
+			if c.afflictions[i].strength <= 0 then return end
 
 			-- cause headaches, blurred vision, nausea, confusion
 			if HF.Chance(HF.Clamp(c.afflictions[i].strength / 10 * 0.08, 0.02, 0.08)) then
@@ -1467,9 +1393,7 @@ NT.LimbAfflictions = {
 	iced = {
 		update = function(c, limbaff, i, type)
 			-- over time skin temperature goes up again
-			if limbaff[i].strength > 0 then
-				limbaff[i].strength = limbaff[i].strength - 1.7 * NT.Deltatime
-			end
+			if limbaff[i].strength > 0 then limbaff[i].strength = limbaff[i].strength - 1.7 * NT.Deltatime end
 			-- iced effects
 			if limbaff[i].strength > 0 then
 				c.stats.speedmultiplier = c.stats.speedmultiplier * 0.95 -- 5% slow per limb
@@ -1482,9 +1406,7 @@ NT.LimbAfflictions = {
 	},
 	skinointmented = {
 		update = function(c, limbaff, i, type)
-			if limbaff[i].strength > 0 then
-				limbaff[i].strength = limbaff[i].strength - 0.2 * NT.Deltatime
-			end
+			if limbaff[i].strength > 0 then limbaff[i].strength = limbaff[i].strength - 0.2 * NT.Deltatime end
 		end,
 	},
 	gypsumcast = {
@@ -1503,9 +1425,7 @@ NT.LimbAfflictions = {
 		update = function(c, limbaff, i, type)
 			if limbaff[i].strength <= 0 then
 				-- check for bone death fracture triggers
-				if c.afflictions.bonedamage.strength > 90 and HF.Chance(0.01) then
-					NT.BreakLimb(c.character, type)
-				end
+				if c.afflictions.bonedamage.strength > 90 and HF.Chance(0.01) then NT.BreakLimb(c.character, type) end
 			end
 		end,
 	},
@@ -1651,9 +1571,7 @@ NT.LimbAfflictions = {
 	-- other
 	infectedwound = {
 		update = function(c, limbaff, i)
-			if c.stats.stasis then
-				return
-			end
+			if c.stats.stasis then return end
 			local infectindex = (
 				-c.afflictions.immunity.prev / 200
 				- HF.Clamp(limbaff.bandaged.strength, 0, 1) * 1.5
@@ -1871,31 +1789,19 @@ NT.CharStats = {
 			-- heart isnt pumping blood? no new oxygen is getting into the bloodstream, no matter how oxygen rich the air in the lungs
 			res = res * (1 - c.afflictions.fibrillation.strength / 100)
 			-- and uuuh, maybe also dont let people without lungs use the oxygen where their lungs should be
-			if c.afflictions.cardiacarrest.strength > 1 or c.afflictions.lungremoved.strength > 0.1 then
-				res = 0
-			end
+			if c.afflictions.cardiacarrest.strength > 1 or c.afflictions.lungremoved.strength > 0.1 then res = 0 end
 			return res
 		end,
 	},
 	speedmultiplier = {
 		getter = function(c)
 			local res = 1
-			if c.afflictions.t_paralysis.strength > 0 then
-				res = -9001
-			end
+			if c.afflictions.t_paralysis.strength > 0 then res = -9001 end
 
-			if c.afflictions.sym_vomiting.strength > 0 then
-				res = res * 0.8
-			end
-			if c.afflictions.sym_nausea.strength > 0 then
-				res = res * 0.9
-			end
-			if c.afflictions.anesthesia.strength > 0 then
-				res = res * 0.5
-			end
-			if c.afflictions.opiateoverdose.strength > 50 then
-				res = res * 0.5
-			end
+			if c.afflictions.sym_vomiting.strength > 0 then res = res * 0.8 end
+			if c.afflictions.sym_nausea.strength > 0 then res = res * 0.9 end
+			if c.afflictions.anesthesia.strength > 0 then res = res * 0.5 end
+			if c.afflictions.opiateoverdose.strength > 50 then res = res * 0.5 end
 
 			if c.stats.withdrawal > 80 then
 				res = res * 0.5
@@ -1956,9 +1862,7 @@ NT.CharStats = {
 			end
 			local isProne = c.stats.lockleftleg and c.stats.lockrightleg
 			-- okay climbing ability
-			if isProne and c.character.IsClimbing then
-				c.stats.speedmultiplier = c.stats.speedmultiplier * 0.5
-			end
+			if isProne and c.character.IsClimbing then c.stats.speedmultiplier = c.stats.speedmultiplier * 0.5 end
 			-- moving prone with one arm or stop movement when no arms
 			if (isProne or res) and c.stats.lockleftarm and c.stats.lockrightarm then
 				c.stats.speedmultiplier = -9001
@@ -1976,9 +1880,7 @@ NT.CharStats = {
 		getter = function(c)
 			local res = 0
 			for type in limbtypes do
-				if HF.GetAfflictionStrengthLimb(c.character, type, "bonegrowth", 0) > 0 then
-					res = res + 1
-				end
+				if HF.GetAfflictionStrengthLimb(c.character, type, "bonegrowth", 0) > 0 then res = res + 1 end
 			end
 			return res
 		end,
@@ -2000,9 +1902,7 @@ function NT.UpdateHuman(character)
 	if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
 	else
 		-- Original check
-		if not HF.HasAffliction(character, "luabotomy") then
-			return
-		end
+		if not HF.HasAffliction(character, "luabotomy") then return end
 	end
 
 	-- pre humanupdate hooks
@@ -2027,9 +1927,7 @@ function NT.UpdateHuman(character)
 	end
 	-- update non-limb-specific afflictions
 	for identifier, data in pairs(NT.Afflictions) do
-		if data.update ~= nil then
-			data.update(charData, identifier)
-		end
+		if data.update ~= nil then data.update(charData, identifier) end
 	end
 
 	-- update and apply limb specific stuff
@@ -2044,9 +1942,7 @@ function NT.UpdateHuman(character)
 	local function UpdateLimb(type)
 		local keystring = tostring(type) .. "afflictions"
 		for identifier, data in pairs(NT.LimbAfflictions) do
-			if data.update ~= nil then
-				data.update(charData, charData[keystring], identifier, type)
-			end
+			if data.update ~= nil then data.update(charData, charData[keystring], identifier, type) end
 		end
 	end
 	local function ApplyLimb(type)
@@ -2082,9 +1978,7 @@ function NT.UpdateHuman(character)
 
 	-- non-limb-specific late update (useful for things that use stats that are altered by limb specifics)
 	for identifier, data in pairs(NT.Afflictions) do
-		if data.lateupdate ~= nil then
-			data.lateupdate(charData, identifier)
-		end
+		if data.lateupdate ~= nil then data.lateupdate(charData, identifier) end
 	end
 
 	-- apply non-limb-specific changes
@@ -2128,9 +2022,7 @@ end
 function NT.TickUpdate()
 	for key, value in pairs(NT.tickTasks) do
 		value.duration = value.duration - 1
-		if value.duration <= 0 then
-			NT.tickTasks[key] = nil
-		end
+		if value.duration <= 0 then NT.tickTasks[key] = nil end
 	end
 end
 
@@ -2148,9 +2040,7 @@ end
 -- optimization stuff
 Hook.Add("character.created", "NT.cleanbotomy", function(character)
 	-- Apply 5 minute traumatic shock immunity to those who happen to be in surgery after a starting the round
-	if HF.HasAffliction(character, "surgeryincision") then
-		HF.SetAffliction(character, "tshocktimeout", 15)
-	end
+	if HF.HasAffliction(character, "surgeryincision") then HF.SetAffliction(character, "tshocktimeout", 15) end
 	-- unfuck shit in the crewmate and add our ""update/debug flag""
 	if character.TeamID == 1 or character.TeamID == 2 then
 		HF.SetAffliction(character, "luabotomypurger", 2)
@@ -2164,9 +2054,7 @@ end)
 Hook.Add("characterCreated", "NT.forceluabotomy", function(character)
 	Timer.Wait(function()
 		if character.IsHuman and character.TeamID == 1 or character.TeamID == 2 and not character.IsDead then
-			if not HF.HasAffliction(character, "luabotomy") then
-				return
-			end
+			if not HF.HasAffliction(character, "luabotomy") then return end
 		end
 	end, 5000)
 end)

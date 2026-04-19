@@ -41,9 +41,7 @@ Hook.Add("characterCreated", "NT.BloodAndImmunity", function(createdCharacter)
 
 			-- add immunity
 			local conditional2 = createdCharacter.CharacterHealth.GetAffliction("immunity")
-			if conditional2 == nil then
-				HF.SetAffliction(createdCharacter, "immunity", 100)
-			end
+			if conditional2 == nil then HF.SetAffliction(createdCharacter, "immunity", 100) end
 		end
 	end, 1000)
 end)
@@ -71,9 +69,7 @@ function NT.HasBloodtype(character)
 	for index, affliction in ipairs(NT.BLOODTYPE) do
 		local conditional = character.CharacterHealth.GetAffliction(affliction[1])
 
-		if conditional ~= nil and conditional.Strength > 0 then
-			return true
-		end
+		if conditional ~= nil and conditional.Strength > 0 then return true end
 	end
 
 	return false
@@ -107,15 +103,11 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 	if contained ~= nil and (contained.HasTag("bloodbag") or contained.HasTag("allblood")) then
 		HF.GiveItem(character, "ntsfx_syringe")
 		Timer.Wait(function()
-			if item == nil or character == nil or item.OwnInventory.GetItemAt(0) ~= contained then
-				return
-			end
+			if item == nil or character == nil or item.OwnInventory.GetItemAt(0) ~= contained then return end
 
 			local identifier = contained.Prefab.Identifier.Value
 			local packtype = "o-"
-			if identifier ~= "antibloodloss2" then
-				packtype = string.sub(identifier, string.len("bloodpack") + 1)
-			end
+			if identifier ~= "antibloodloss2" then packtype = string.sub(identifier, string.len("bloodpack") + 1) end
 			local bloodTypeDisplay = string.gsub(packtype, "abc", "c")
 			bloodTypeDisplay = string.gsub(bloodTypeDisplay, "plus", "+")
 			bloodTypeDisplay = string.gsub(bloodTypeDisplay, "minus", "-")

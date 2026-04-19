@@ -74,9 +74,7 @@ Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance
 	local message = ""
 
 	local chatType = ChatMessageType.Default
-	if ChatMessage.CanUseRadio(character) then
-		chatType = ChatMessageType.Radio
-	end
+	if ChatMessage.CanUseRadio(character) then chatType = ChatMessageType.Radio end
 
 	for identifier in NT.SymsForNPC.ntaffs do
 		if HF.HasAffliction(character, identifier, 1) then

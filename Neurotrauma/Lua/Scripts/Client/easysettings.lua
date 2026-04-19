@@ -19,9 +19,7 @@ easySettings.SaveTable = function(path, tbl)
 end
 
 easySettings.LoadTable = function(path)
-	if not File.Exists(path) then
-		return {}
-	end
+	if not File.Exists(path) then return {} end
 
 	return json.parse(File.Read(path))
 end
@@ -77,9 +75,7 @@ end
 
 -- Function for a Tickbox
 easySettings.TickBox = function(parent, text, onSelected, state)
-	if state == nil then
-		state = true
-	end
+	if state == nil then state = true end
 
 	local tickBox = GUI.TickBox(GUI.RectTransform(Vector2(1, 0.2), parent.RectTransform), text)
 	tickBox.Selected = state

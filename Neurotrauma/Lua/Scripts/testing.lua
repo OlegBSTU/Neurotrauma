@@ -3,9 +3,7 @@ NT.TestingEnabled = false
 
 Hook.Add("chatMessage", "NT.testing", function(msg, client)
 	if msg == "nt test" then -- a glorified suicide button
-		if client.Character == nil then
-			return true
-		end
+		if client.Character == nil then return true end
 
 		HF.SetAfflictionLimb(client.Character, "gate_ta_ra", LimbType.RightArm, 100)
 		HF.SetAfflictionLimb(client.Character, "gate_ta_la", LimbType.LeftArm, 100)
@@ -14,9 +12,7 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 
 		return true -- hide message
 	elseif msg == "nt unfuck" then -- a command to remove non-sensical stuff
-		if client.Character == nil then
-			return true
-		end
+		if client.Character == nil then return true end
 
 		HF.SetAfflictionLimb(client.Character, "tll_amputation", LimbType.Head, 0)
 		HF.SetAfflictionLimb(client.Character, "trl_amputation", LimbType.Head, 0)
@@ -43,9 +39,7 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 
 		return true -- hide message
 	elseif msg == "nt1" then
-		if not NT.TestingEnabled then
-			return
-		end
+		if not NT.TestingEnabled then return end
 		-- insert testing stuff here
 
 		local test = { val = "true" }
@@ -60,9 +54,7 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 
 		return true
 	elseif msg == "nt2" then
-		if not NT.TestingEnabled then
-			return
-		end
+		if not NT.TestingEnabled then return end
 		-- insert other testing stuff here
 		local crewenum = Character.GetFriendlyCrew(client.Character)
 		local targetchar = nil
@@ -71,9 +63,7 @@ Hook.Add("chatMessage", "NT.testing", function(msg, client)
 			print(char.Name)
 			targetchar = char
 			i = i + 1
-			if i == 2 then
-				break
-			end
+			if i == 2 then break end
 		end
 
 		client.SetClientCharacter(nil)
@@ -132,17 +122,13 @@ local function registerDebugCommands()
 			end
 
 			local target = findCharacter(args[1])
-			if not target then
-				return
-			end
+			if not target then return end
 
 			print(target.Name, " vitality: ", target.Vitality, "/", target.MaxVitality, " Mass: ", target.Mass)
 			local genericafflictions, limbafflictions = {}, {}
 			for kvp in target.CharacterHealth.afflictions do
 				if kvp.Value then
-					if not limbafflictions[kvp.Value] then
-						limbafflictions[kvp.Value] = {}
-					end
+					if not limbafflictions[kvp.Value] then limbafflictions[kvp.Value] = {} end
 					table.insert(limbafflictions[kvp.Value], kvp.Key)
 				else
 					table.insert(genericafflictions, kvp.Key)
@@ -195,9 +181,7 @@ local function registerDebugCommands()
 				local genericafflictions, limbafflictions = {}, {}
 				for kvp in target.CharacterHealth.afflictions do
 					if kvp.Value then
-						if not limbafflictions[kvp.Value] then
-							limbafflictions[kvp.Value] = {}
-						end
+						if not limbafflictions[kvp.Value] then limbafflictions[kvp.Value] = {} end
 						table.insert(limbafflictions[kvp.Value], kvp.Key)
 					else
 						table.insert(genericafflictions, kvp.Key)
@@ -273,9 +257,7 @@ local function registerDebugCommands()
 			end
 
 			local target = findCharacter(args[1])
-			if not target then
-				return
-			end
+			if not target then return end
 
 			HF.SetAfflictionLimb(target, "gate_ta_ra", LimbType.RightArm, 100)
 			HF.SetAfflictionLimb(target, "gate_ta_la", LimbType.LeftArm, 100)
@@ -302,9 +284,7 @@ local function registerDebugCommands()
 			end
 
 			local target = findCharacter(args[1])
-			if not target then
-				return
-			end
+			if not target then return end
 
 			HF.SetAfflictionLimb(target, "tll_amputation", LimbType.Head, 0)
 			HF.SetAfflictionLimb(target, "trl_amputation", LimbType.Head, 0)
@@ -335,12 +315,8 @@ Game.AddCommand("nt_debug", "nt_debug : Enables debug neurotrauma commands", fun
 	end
 end, nil, true)
 
-if CLIENT and Game.IsMultiplayer then
-	Networking.Receive("NT_debug", function(msg)
-		registerDebugCommands()
-	end)
-end
-
-if NT.TestingEnabled then
+if CLIENT and Game.IsMultiplayer then Networking.Receive("NT_debug", function(msg)
 	registerDebugCommands()
-end
+end) end
+
+if NT.TestingEnabled then registerDebugCommands() end

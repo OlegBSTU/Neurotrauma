@@ -12,9 +12,7 @@ local function HasLungs(c)
 end
 
 local function getCalculatedReductionSuit(armor, strength, limbtype)
-	if armor == nil then
-		return 0
-	end
+	if armor == nil then return 0 end
 	local reduction = 0
 
 	if armor.HasTag("deepdivinglarge") or armor.HasTag("deepdiving") then
@@ -35,9 +33,7 @@ local function getCalculatedReductionSuit(armor, strength, limbtype)
 	return reduction
 end
 local function getCalculatedReductionClothes(armor, strength, limbtype)
-	if armor == nil then
-		return 0
-	end
+	if armor == nil then return 0 end
 	local reduction = 0
 	if armor.HasTag("deepdiving") or armor.HasTag("diving") then
 		local modifiers = armor.GetComponentString("Wearable").DamageModifiers
@@ -57,9 +53,7 @@ local function getCalculatedReductionClothes(armor, strength, limbtype)
 	return reduction
 end
 local function getCalculatedReductionHelmet(armor, strength)
-	if armor == nil then
-		return 0
-	end
+	if armor == nil then return 0 end
 	local reduction = 0
 
 	if armor.HasTag("smallitem") then
@@ -73,9 +67,7 @@ local function getCalculatedReductionHelmet(armor, strength)
 	return reduction
 end
 local function getCalculatedConcussionReduction(armor, strength)
-	if armor == nil then
-		return 0
-	end
+	if armor == nil then return 0 end
 	local reduction = 0
 
 	if armor.HasTag("deepdiving") or armor.HasTag("deepdivinglarge") then
@@ -97,33 +89,23 @@ local function getCalculatedConcussionReduction(armor, strength)
 end
 Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, impactPos, velocity)
 	-- don't run the code if we ignore the code
-	if not NTConfig.Get("NT_Calculations", true) then
-		return 0
-	end
+	if not NTConfig.Get("NT_Calculations", true) then return 0 end
 
 	-- dont bother with creatures
-	if not character.IsHuman then
-		return 0
-	end
+	if not character.IsHuman then return 0 end
 
 	-- dont apply fall damage in water
-	if character.InWater then
-		return 0
-	end
+	if character.InWater then return 0 end
 
 	-- dont apply fall damage when dragged by someone
-	if character.SelectedBy ~= nil then
-		return 0
-	end
+	if character.SelectedBy ~= nil then return 0 end
 
 	-- don't apply fall damage if were specifically immune to it
 	if HF.HasAffliction(character, "cpr_fracturebuff") or HF.HasAffliction(character, "stopcreatureabuse") then
 		return 0
 	end
 
-	if not HF.HasAffliction(character, "luabotomy") then
-		HF.SetAffliction(character, "luabotomy", 1)
-	end
+	if not HF.HasAffliction(character, "luabotomy") then HF.SetAffliction(character, "luabotomy", 1) end
 
 	local velocityMagnitude = HF.Magnitude(velocity)
 	velocityMagnitude = velocityMagnitude ^ 1.3
@@ -143,9 +125,7 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 				posDif.X = posDif.X / 100
 				posDif.Y = posDif.Y / 100
 				local posDifMagnitude = HF.Magnitude(posDif)
-				if posDifMagnitude > 1 then
-					posDif.Normalize()
-				end
+				if posDifMagnitude > 1 then posDif.Normalize() end
 
 				local normalizedVelocity = Vector2(velocity.X, velocity.Y)
 				normalizedVelocity.Normalize()
@@ -154,9 +134,7 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 				-- this will later be used to hurt the limbs facing impact more than the others
 				local limbDot = Vector2.Dot(posDif, normalizedVelocity)
 				limbDotResults[type] = limbDot
-				if minDotRes > limbDot then
-					minDotRes = limbDot
-				end
+				if minDotRes > limbDot then minDotRes = limbDot end
 				break
 			end
 		end
@@ -212,16 +190,12 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 	-- additionally calculate the affliction reduced damage
 	local prefab = AfflictionPrefab.Prefabs["blunttrauma"]
 	local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
-	if resistance >= 1 then
-		return
-	end
+	if resistance >= 1 then return end
 	strength = strength * (1 - resistance)
 	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
 
 	-- return earlier if the strength value is not high enough for damage checks
-	if strength < 1 then
-		return
-	end
+	if strength < 1 then return end
 
 	local fractureImmune = false
 

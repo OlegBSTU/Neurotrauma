@@ -31,9 +31,7 @@ local function PopulateDropdown(dropdown)
 		local uiName = name
 		-- Excluding Neurotrauma itself, add NT at the front if it does not already have that
 		if expansion.Name ~= "Neurotrauma" then
-			if not string.find(uiName, "^NT%s") then
-				uiName = "NT " .. uiName
-			end
+			if not string.find(uiName, "^NT%s") then uiName = "NT " .. uiName end
 		end
 		-- Add them to a lookup table for later
 		table.insert(ExpansionNameForUI, { uiName, name })
@@ -55,20 +53,14 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 	for key, entry in pairs(entries) do
 		-- Grab actual expansion name based on their UIName
 		for _, entry in ipairs(ExpansionNameForUI) do
-			if entry[1] == selectedExpansion then
-				selectedExpansion = entry[2]
-			end
+			if entry[1] == selectedExpansion then selectedExpansion = entry[2] end
 		end
 
 		-- Only determine layout for entries from the expansion we've selected
-		if entry.expansion ~= selectedExpansion then
-			goto continue
-		end
+		if entry.expansion ~= selectedExpansion then goto continue end
 
 		-- Automatically add some white space between unique item types to prevent bleeding
-		if entry.type ~= lastType and lastType ~= nil then
-			table.insert(LayoutChunks, { type = "spacer" })
-		end
+		if entry.type ~= lastType and lastType ~= nil then table.insert(LayoutChunks, { type = "spacer" }) end
 
 		lastType = entry.type
 
@@ -170,9 +162,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 
 				tb_EntryInformation.CanBeFocused = false
 
-				if entry.description then
-					tb_EntryInformation.ToolTip = entry.description
-				end
+				if entry.description then tb_EntryInformation.ToolTip = entry.description end
 
 				local scalar =
 					GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), NumberType.Float)
@@ -191,9 +181,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				local rect = GUI.RectTransform(Vector2(0.5, 1), list.Content.RectTransform)
 				local toggle = GUI.TickBox(rect, entry.name)
 
-				if entry.description then
-					toggle.ToolTip = entry.description
-				end
+				if entry.description then toggle.ToolTip = entry.description end
 
 				toggle.Selected = NTConfig.Get(key, false)
 
@@ -204,9 +192,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 			-- String (a textblock to input)
 			elseif entry.type == "string" then
 				local style = ""
-				if entry.style ~= nil then
-					style = " (" .. entry.style .. ")"
-				end
+				if entry.style ~= nil then style = " (" .. entry.style .. ")" end
 
 				local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
 
@@ -270,9 +256,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				end
 
 				-- Safety check!
-				if not row then
-					return
-				end
+				if not row then return end
 
 				-- This determines how the space in the UI is used, tied together to make fucking around a bit easier
 				row.RelativeSpacing = 0.01
@@ -371,9 +355,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 				end
 
 				-- Safety check!
-				if not row then
-					return
-				end
+				if not row then return end
 
 				row.RelativeSpacing = 0.01
 
@@ -406,9 +388,7 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
 
 				local style = ""
-				if entry.style ~= nil then
-					style = " (" .. entry.style .. ")"
-				end
+				if entry.style ~= nil then style = " (" .. entry.style .. ")" end
 
 				local tb_StringInformation = GUI.TextBlock(
 					GUI.RectTransform(Vector2(1, 0.4), textcell.RectTransform),
@@ -524,9 +504,7 @@ local function ConstructUI(parent)
 			local newSelection = tostring(guiComponent.Text)
 
 			-- Check if changed
-			if newSelection == selectedExpansion then
-				return
-			end
+			if newSelection == selectedExpansion then return end
 
 			selectedExpansion = newSelection
 
@@ -542,12 +520,8 @@ end
 Networking.Receive("NT.ConfigUpdate", function(msg)
 	NTConfig.ReceiveConfig(msg)
 
-	if configUI == nil then
-		return
-	end
-	if configUI.RectTransform == nil then
-		return
-	end
+	if configUI == nil then return end
+	if configUI.RectTransform == nil then return end
 
 	local parent = configUI.RectTransform.Parent
 

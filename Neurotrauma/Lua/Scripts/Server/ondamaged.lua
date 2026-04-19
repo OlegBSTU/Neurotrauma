@@ -1,8 +1,6 @@
 -- Hooks Lua event "character.applyDamage" to cause NT afflictions after attacks depending on the damaging affliction defined here in NT.OnDamagedMethods
 local function getCalculatedConcussionReduction(armor, strength)
-	if armor == nil then
-		return 0
-	end
+	if armor == nil then return 0 end
 	local reduction = 0
 
 	if armor.HasTag("deepdiving") or armor.HasTag("deepdivinglarge") then
@@ -165,9 +163,7 @@ NT.OnDamagedMethods.gunshotwound = function(character, strength, limbtype)
 			HF.AddAffliction(character, "organdamage", strength / 4)
 			hitOrgan = true
 		end
-		if strength >= 5 then
-			HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.3, 0.6))
-		end
+		if strength >= 5 then HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.3, 0.6)) end
 
 		-- liver and kidney damage
 		if hitOrgan == false and strength >= 2 and HF.Chance(0.5) then
@@ -274,9 +270,7 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 		then
 			HF.AddAffliction(character, "pneumothorax", 5)
 		end
-		if strength >= 5 then
-			HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5))
-		end
+		if strength >= 5 then HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5)) end
 	end
 
 	-- head
@@ -315,9 +309,7 @@ NT.OnDamagedMethods.explosiondamage = function(character, strength, limbtype)
 		if strength >= 75 and HF.Chance(0.25) then
 			-- drop previously held item
 			local previtem = HF.GetHeadWear(character)
-			if previtem ~= nil then
-				previtem.Drop(character, true)
-			end
+			if previtem ~= nil then previtem.Drop(character, true) end
 			NT.TraumamputateLimb(character, limbtype)
 		end
 	end
@@ -382,9 +374,7 @@ NT.OnDamagedMethods.bitewounds = function(character, strength, limbtype)
 		then
 			HF.AddAffliction(character, "pneumothorax", 5)
 		end
-		if strength >= 5 then
-			HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5))
-		end
+		if strength >= 5 then HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5)) end
 	end
 
 	-- head
@@ -480,9 +470,7 @@ NT.OnDamagedMethods.lacerations = function(character, strength, limbtype)
 		then
 			HF.AddAffliction(character, "tamponade", 5)
 		end
-		if strength >= 5 then
-			HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5))
-		end
+		if strength >= 5 then HF.AddAffliction(character, "internalbleeding", strength * HF.RandomRange(0.2, 0.5)) end
 	end
 
 	-- head
