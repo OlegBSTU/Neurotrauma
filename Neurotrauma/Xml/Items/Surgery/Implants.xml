@@ -60,7 +60,8 @@
 
         <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
             <StatusEffect type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
-                <Conditional retractedskin="gt 50"/>
+              <Conditional retractedskin="gt 50" />
+              <Sound file="%ModDir%/Sound/drill.ogg" range="500" />
             </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>

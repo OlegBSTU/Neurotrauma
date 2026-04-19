@@ -1,5 +1,4 @@
--- DONE: All 'If' statements follow same notation (first condition on same line, rest as a list below)
--- DONE: Add spaces for reading clarity where useful
+-- TODO: fix line wrapping
 -- DONE: All hooks moved together to the bottom
 
 -- Items for which we call ItemMethod via LuaHook in its xml so they shouldnt be called again by applytreatment
