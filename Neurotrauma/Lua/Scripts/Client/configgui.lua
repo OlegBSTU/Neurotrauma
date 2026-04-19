@@ -145,6 +145,10 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 			-- Ungrouped float
 			if entry.type == "float" then
 				local minrange = (entry.range and entry.range[1]) or ""
+				-- This is fucking stupid. If the default value is the same as the minimum value of a scalar, it bugs and displays 0.
+				-- So, we set the minimum to 0.99 and just render it like it were 1
+				if minrange == 0.99 then minrange = 1 end
+
 				local maxrange = (entry.range and entry.range[2]) or ""
 
 				local rect = GUI.RectTransform(Vector2(1, 0.04), list.Content.RectTransform)
@@ -289,6 +293,8 @@ local function PopulateSettingsIntoUI(list, selectedExpansion)
 					GUI.LayoutGroup(GUI.RectTransform(Vector2(resetcellwidth, 0.59), row.RectTransform), false)
 
 				local minrange = entry.range and entry.range[1] or ""
+				if minrange == 0.99 then minrange = 1 end
+
 				local maxrange = entry.range and entry.range[2] or ""
 
 				local tb_EntryInformation = GUI.TextBlock(

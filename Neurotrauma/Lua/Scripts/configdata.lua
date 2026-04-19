@@ -508,6 +508,675 @@ NT.ConfigData = {
 		boxsize = 0.1,
 		description = "Afflictions added to this category will be ignored by the health scanner.",
 	},
+
+	-- ================================= COMMON ITEMS ========================================
+	NT_ItemPriceHeaderFirstAid = {
+		name = "Common Item Price Multipliers",
+		type = "category",
+	},
+
+	NT_ItemPrice_antidama1 = {
+		name = "Morphine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_gypsum = {
+		name = "Gypsum",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_suture = {
+		name = "Suture",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_tourniquet = {
+		name = "Tourniquet",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_needle = {
+		name = "Needle",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_drainage = {
+		name = "Drainage",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_gelipack = {
+		name = "Gel Coolant Pack",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_ointment = {
+		name = "Antibiotic Ointment",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antibleeding1 = {
+		name = "Bandage",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antibleeding2 = {
+		name = "Plastiseal",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bloodpacks = {
+		name = "Blood Packs",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_emptybloodpack = {
+		name = "Empty Blood Pack",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_osteosynthesisimplants = {
+		name = "Osteosynthesis Implants",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_spinalimplant = {
+		name = "Spinal Cord Implants",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	-- ================================= BODY PARTS ========================================
+	NT_ItemPriceHeaderBodyParts = {
+		name = "Bodypart Price Multipliers",
+		type = "category",
+	},
+
+	NT_ItemPrice_arms = {
+		name = "Arms",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_legs = {
+		name = "Legs",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bionicarms = {
+		name = "Bionic Arms",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bioniclegs = {
+		name = "Bionic Legs",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_livertransplant = {
+		name = "Liver Transplant",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_lungtransplant = {
+		name = "Lung Transplant",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_kidneytransplant = {
+		name = "Kidney Transplant",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_hearttransplant = {
+		name = "Heart Transplant",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	-- ================================= GEAR ========================================
+	NT_ItemPriceHeaderGear = {
+		name = "Gear Price Multipliers",
+		type = "category",
+	},
+
+	NT_ItemPrice_healthscanner = {
+		name = "Health Scanner",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bloodanalyzer = {
+		name = "Hematology Analyzer",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_defibrillator = {
+		name = "Manual Defibrillator",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_aed = {
+		name = "Automated External Defibrillator",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bvm = {
+		name = "BVM",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_autocpr = {
+		name = "AutoPulse",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_organcrate = {
+		name = "Refrigerated Crate",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_organtoolbox = {
+		name = "Refrigerated Container",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_medtoolbox = {
+		name = "Medical Container",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_surgerytoolbox = {
+		name = "Surgery Toolbox",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_surgerytoolboxset = {
+		name = "Surgery Toolbox (Kit)",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_medstartercrate = {
+		name = "Medical Starter Crate",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_bodybag = {
+		name = "Bodybag",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_stasisbag = {
+		name = "Stasis Bag",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_wheelchair = {
+		name = "Wheelchair",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_analgesictank = {
+		name = "Analgesic Tank",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_toxfilter = {
+		name = "Toxin Filter",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_dialyzer = {
+		name = "Dialyzer",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	-- ================================= OTHER MEDICINES ========================================
+	NT_ItemPriceHeaderMedicines = {
+		name = "Other Medicine Items Price Multipliers",
+		type = "category",
+	},
+
+	NT_ItemPrice_antibloodloss1 = {
+		name = "Saline",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_opium = {
+		name = "Opium",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antidama2 = {
+		name = "Fentanyl",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_ringerssolution = {
+		name = "Ringer's Solution",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_mannitol = {
+		name = "Mannitol",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_immunosuppressant = {
+		name = "Azathioprine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_thiamine = {
+		name = "Thiamine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_streptokinase = {
+		name = "Streptokinase",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antinarc = {
+		name = "Naloxone",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antibiotics = {
+		name = "Broad-Spectrum Antibiotics",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_adrenaline = {
+		name = "Adrenaline",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_liquidoxygenite = {
+		name = "Liquid Oxygenite",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_deusizine = {
+		name = "Deusizine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antibleeding3 = {
+		name = "Antibiotic Glue",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_meth = {
+		name = "Methamphetamine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_hyperzine = {
+		name = "Hyperzine",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antipsychosis = {
+		name = "Haloperidol",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_antiparalysis = {
+		name = "Anaparalyzant",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_nitroglycerin = {
+		name = "Nitroglycerin",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	-- ================================= SURGERY TOOLS ========================================
+	NT_ItemPriceHeaderSurgeryTools = {
+		name = "Surgical Tools Price Multipliers",
+		type = "category",
+	},
+
+	NT_ItemPrice_advhemostat = {
+		name = "Hemostat",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_advretractors = {
+		name = "Retractors",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_surgicaldrill = {
+		name = "Surgical Drill",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_surgerysaw = {
+		name = "Surgical Saw",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_tweezers = {
+		name = "Tweezers",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_traumashears = {
+		name = "Trauma Shears",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemPrice_advscalpel = {
+		name = "Multipurpose Scalpel ",
+		default = 1,
+		range = { 0, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_ItemDurabilityHeader = {
+		name = "Change Item Use Amounts",
+		type = "category",
+	},
+
+	NT_OsteoImplants_uses = {
+		name = "Osteosynthesis Implant Uses",
+		default = 4,
+		range = { 1, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	NT_SpinalImplants_uses = {
+		name = "Spinal Cord Implant Uses",
+		default = 1,
+		range = { 0.99, 10 },
+		type = "float",
+		group = true,
+		resettable = true,
+	},
+
+	-- ================================= DYNAMIC ITEM AVAILABILITY =================================
+	NT_HardmodeAorticRupture = {
+		name = "Hardmode Aortic Rupture",
+		default = false,
+		type = "bool",
+		description = "Enable the Medical Stent and Aortic Balloon as the only method to fix Aortic Rupture.",
+	},
+
+	NT_DoNitroprusside = {
+		name = "Enable Sodium Nitroprusside",
+		default = false,
+		type = "bool",
+		description = "Allow Sodium Nitroprusside to be fabricated, bought and found.",
+	},
+
+	NT_DoAntisepticSprayer = {
+		name = "Enable Antiseptic Sprayer",
+		default = false,
+		type = "bool",
+		description = "Allow Antiseptic and the Antiseptic Sprayer to be fabricated, bought and found.",
+	},
 }
 
 NTConfig.AddConfigOptions(NT)
