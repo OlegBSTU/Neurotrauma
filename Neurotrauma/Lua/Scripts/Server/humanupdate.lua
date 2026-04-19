@@ -72,13 +72,14 @@ local function limbLockedInitial(c, limbtype, key)
 				limbtype,
 				"dirtybandage",
 				0
-			) <= 0 and NT.LimbIsDislocated(
+			) <= 0 and HF.GetAfflictionStrength(c.character, "afadrenaline", 0) <= 0 and NT.LimbIsDislocated(
 				c.character,
 				limbtype,
 				limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm
 			))
 			or (
 				HF.GetAfflictionStrengthLimb(c.character, limbtype, "gypsumcast", 0) <= 0
+				and HF.GetAfflictionStrength(c.character, "afadrenaline", 0) <= 0
 				and NT.LimbIsBroken(
 					c.character,
 					limbtype,
@@ -199,20 +200,26 @@ NT.Afflictions = {
 	ll_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
-				c.afflictions[i].strength = c.afflictions[i].strength
-					+ 2
-						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftLeg))
-						* NT.Deltatime
+				local hascast = HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftLeg)
+
+				c.afflictions[i].strength = c.afflictions[i].strength + 2 * HF.BoolToNum(not hascast) * NT.Deltatime
+
+				if not hascast and HF.HasAffliction(c.character, "afadrenaline", 1) and not c.character.IsRagdolled then
+					HF.AddAfflictionLimb(c.character, "bleeding", LimbType.LeftLeg, 15)
+				end
 			end
 		end,
 	},
 	rl_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
-				c.afflictions[i].strength = c.afflictions[i].strength
-					+ 2
-						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightLeg))
-						* NT.Deltatime
+				local hascast = HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightLeg)
+
+				c.afflictions[i].strength = c.afflictions[i].strength + 2 * HF.BoolToNum(not hascast) * NT.Deltatime
+
+				if not hascast and HF.HasAffliction(c.character, "afadrenaline", 1) and not c.character.IsRagdolled then
+					HF.AddAfflictionLimb(c.character, "bleeding", LimbType.RightLeg, 15)
+				end
 			end
 		end,
 	},
@@ -1872,8 +1879,10 @@ NT.CharStats = {
 				c.stats.lockrightleg = c.stats.lockrightarm
 			end
 			-- leg and wheelchair slowdown
-			if c.stats.lockleftleg or c.stats.lockrightleg or res then
-				c.stats.speedmultiplier = c.stats.speedmultiplier * 0.5
+			if c.stats.lockleftleg or c.stats.lockrightleg then
+				if c.afflictions.afadrenaline.strength < 0.1 or res then
+					c.stats.speedmultiplier = c.stats.speedmultiplier * 0.5
+				end
 			end
 			local isProne = c.stats.lockleftleg and c.stats.lockrightleg
 			-- okay climbing ability

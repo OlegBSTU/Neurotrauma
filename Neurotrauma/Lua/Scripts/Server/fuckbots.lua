@@ -71,9 +71,11 @@ NT.SymsForNPC = { ntaffs = afflictions }
 Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance)
 	local character = instance.Character
 
-	local message = ""
+	if not HF.HasAffliction(character, "luabotomy", 1) then return end
 
+	local message = ""
 	local chatType = ChatMessageType.Default
+
 	if ChatMessage.CanUseRadio(character) then chatType = ChatMessageType.Radio end
 
 	for identifier in NT.SymsForNPC.ntaffs do

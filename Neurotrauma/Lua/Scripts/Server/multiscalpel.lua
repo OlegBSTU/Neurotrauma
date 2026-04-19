@@ -57,11 +57,12 @@ function NT.RefreshScalpelDescription(item)
 	end, 35)
 end
 
-Hook.Add("roundStart", "NT.RoundStart.Multiscalpels", function()
-	Timer.Wait(function()
-		NT.RefreshAllMultiscalpels()
-	end, 10000) -- maybe 10 seconds is enough?
-end)
+-- Let's faithfully believe Ydrec that said the item descriptions are already serialized by base game
+--Hook.Add("roundStart", "NT.RoundStart.Multiscalpels", function()
+--	Timer.Wait(function()
+--		NT.RefreshAllMultiscalpels()
+--	end, 10000) -- maybe 10 seconds is enough?
+--end)
 
 function NT.RefreshAllMultiscalpels()
 	-- descriptions dont get serialized, so i have to respawn
@@ -77,9 +78,9 @@ function NT.RefreshAllMultiscalpels()
 		NT.RefreshScalpelDescription(scalpel)
 	end
 end
-Timer.Wait(function()
-	NT.RefreshAllMultiscalpels()
-end, 50)
+--Timer.Wait(function()
+--	NT.RefreshAllMultiscalpels()
+--end, 50)
 
 Hook.Add(
 	"NT.multiscalpel.incision",

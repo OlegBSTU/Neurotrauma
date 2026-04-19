@@ -134,6 +134,7 @@
         <SuitableTreatment identifier="dirtybandage" suitability="100"/>
         <SuitableTreatment identifier="bandaged" suitability="100"/>
         <SuitableTreatment identifier="gypsumcast" suitability="100"/>
+        <SuitableTreatment identifier="arteriesclamp" suitability="100"/>
         <SuitableTreatment identifier="triagetag_green" suitability="100"/>
         <SuitableTreatment identifier="triagetag_yellow" suitability="100"/>
         <SuitableTreatment identifier="triagetag_red" suitability="100"/>

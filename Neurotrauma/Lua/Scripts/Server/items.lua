@@ -380,6 +380,7 @@ end
 NT.CuttableAfflictions = {
 	"bandaged",
 	"dirtybandage",
+	"arteriesclamp",
 }
 
 NT.TraumashearsAfflictions = {
@@ -644,17 +645,14 @@ NT.ItemMethods.tourniquet = function(item, usingCharacter, targetCharacter, limb
 		HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
 		and not HF.HasAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 1)
 	then
-		if NT.LimbIsArterialCut(targetCharacter, limbtype) then
-			if HF.LimbIsExtremity(limbtype) then
-				HF.SetAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 100, usingCharacter)
-				HF.GiveSkillScaled(usingCharacter, "medical", 6000)
-			elseif limbtype == LimbType.Head then
-				HF.SetAffliction(targetCharacter, "oxygenlow", 200, usingCharacter)
-				HF.AddAffliction(targetCharacter, "cerebralhypoxia", 15, usingCharacter)
-			end
-
-			HF.RemoveItem(item)
+		if HF.LimbIsExtremity(limbtype) then
+			HF.SetAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 100, usingCharacter)
+		elseif limbtype == LimbType.Head then
+			HF.SetAffliction(targetCharacter, "oxygenlow", 200, usingCharacter)
+			HF.AddAffliction(targetCharacter, "cerebralhypoxia", 15, usingCharacter)
 		end
+
+		HF.RemoveItem(item)
 	else
 		HF.AddAfflictionLimb(targetCharacter, "blunttrauma", limbtype, 6, usingCharacter)
 	end
@@ -2636,40 +2634,48 @@ Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon
 	if item == nil then return end
 
 	Timer.Wait(function()
+		local adrenaline = HF.HasAffliction(itemUser, "afadrenaline", 1)
 		-- Right Arm Fracture
-		if
-			HF.HasAffliction(itemUser, "ra_fracture", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 2)
-			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
-		then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "ra_fracture", 100)
-			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
-
-		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "dislocation3", 100)
+		if itemUser.Inventory.IsInLimbSlot(item, 2) then
+			if
+				HF.HasAffliction(itemUser, "ra_fracture", 1)
+				and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+			then
+				if adrenaline then
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 15)
+				else
+					itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+					item.Drop(itemUser, true)
+					HF.SetAffliction(itemUser, "ra_fracture", 100)
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 40)
+				end
+			-- Dislocation
+			elseif HF.HasAffliction(itemUser, "dislocation3", 1) and not adrenaline then
+				itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+				item.Drop(itemUser, true)
+				HF.SetAffliction(itemUser, "dislocation3", 100)
+			end
 		end
-
 		-- Left Arm Fracture
-		if
-			HF.HasAffliction(itemUser, "la_fracture", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 4)
-			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
-		then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "la_fracture", 100)
-			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
-
-		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "dislocation4", 100)
+		if itemUser.Inventory.IsInLimbSlot(item, 4) then
+			if
+				HF.HasAffliction(itemUser, "la_fracture", 1)
+				and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+			then
+				if adrenaline then
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 15)
+				else
+					itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+					item.Drop(itemUser, true)
+					HF.SetAffliction(itemUser, "la_fracture", 100)
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 40)
+				end
+			-- Dislocation
+			elseif HF.HasAffliction(itemUser, "dislocation4", 1) and not adrenaline then
+				itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+				item.Drop(itemUser, true)
+				HF.SetAffliction(itemUser, "dislocation4", 100)
+			end
 		end
 	end, 1)
 end)
@@ -2677,41 +2683,49 @@ end)
 Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
 	Timer.Wait(function()
 		if item == nil or item.GetComponentString("RangedWeapon") == nil or itemUser == nil then return end
+		local adrenaline = HF.HasAffliction(itemUser, "afadrenaline", 1)
 
 		-- Right Arm Fracture
-		if
-			HF.HasAffliction(itemUser, "ra_fracture", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 2)
-			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
-		then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "ra_fracture", 100)
-			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
-
-		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "dislocation3", 100)
+		if itemUser.Inventory.IsInLimbSlot(item, 2) then
+			if
+				HF.HasAffliction(itemUser, "ra_fracture", 1)
+				and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+			then
+				if adrenaline then
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 15)
+				else
+					itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+					item.Drop(itemUser, true)
+					HF.SetAffliction(itemUser, "ra_fracture", 100)
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 40)
+				end
+			-- Dislocation
+			elseif HF.HasAffliction(itemUser, "dislocation3", 1) and not adrenaline then
+				itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+				item.Drop(itemUser, true)
+				HF.SetAffliction(itemUser, "dislocation3", 100)
+			end
 		end
-
 		-- Left Arm Fracture
-		if
-			HF.HasAffliction(itemUser, "la_fracture", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 4)
-			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
-		then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "la_fracture", 100)
-			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
-
-		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
-			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
-			item.Drop(itemUser, true)
-			HF.SetAffliction(itemUser, "dislocation4", 100)
+		if itemUser.Inventory.IsInLimbSlot(item, 4) then
+			if
+				HF.HasAffliction(itemUser, "la_fracture", 1)
+				and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+			then
+				if adrenaline then
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 15)
+				else
+					itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+					item.Drop(itemUser, true)
+					HF.SetAffliction(itemUser, "la_fracture", 100)
+					HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 40)
+				end
+			-- Dislocation
+			elseif HF.HasAffliction(itemUser, "dislocation4", 1) and not adrenaline then
+				itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+				item.Drop(itemUser, true)
+				HF.SetAffliction(itemUser, "dislocation4", 100)
+			end
 		end
 	end, 1)
 end)
