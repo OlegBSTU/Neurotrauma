@@ -143,7 +143,7 @@ end
 NTC.ModifyingOnDamagedHooks = {}
 -- use this function to add a function to be executed before ondamaged
 -- with a characterhealth, afflictions and limb parameter, and afflictions return type
----@param func function The actual function to be called on damaged. Modifying
+---@param func function The actual function to be called on damaged. Modifying.
 function NTC.AddModifyingOnDamagedHook(func)
 	NTC.ModifyingOnDamagedHooks[#NTC.ModifyingOnDamagedHooks + 1] = func
 end
@@ -198,7 +198,7 @@ end
 function NTC.AddDrainageAffliction(identifier)
 	Timer.Wait(function()
 		if not HF.TableContains(NT.DrainageAfflictions, identifier) then
-			table.insert(NT.DrainageAfflictions,identifier)
+			table.insert(NT.DrainageAfflictions, identifier)
 		end
 	end, 1)
 end
@@ -248,7 +248,9 @@ function NTC.GetSymptom(character, symptomidentifer)
 	return true
 end
 
--- Gotta add more documentation.
+---@param character Character The character to check the symptom false on.
+---@param symptomidentifer string The identifier of the symptom false.
+---@return boolean
 function NTC.GetSymptomFalse(character, symptomidentifer)
 	local chardata = NTC.GetCharacterData(character)
 	if chardata == nil then
@@ -265,7 +267,9 @@ function NTC.GetSymptomFalse(character, symptomidentifer)
 end
 
 -- sets multiplier data for one humanupdate, should be called from within a humanupdate hook
--- Gotta add more documentation.
+---@param character Character The character to set the multiplier on.
+---@param multiplieridentifier string The identifier of the multiplier.
+---@param multiplier number The multiplier number.
 function NTC.SetMultiplier(character, multiplieridentifier, multiplier)
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
@@ -273,7 +277,8 @@ function NTC.SetMultiplier(character, multiplieridentifier, multiplier)
 	NTC.CharacterData[character.ID] = data
 end
 
--- Gotta add more documentation.
+---@param character Character The character to set the multiplier on.
+---@param multiplieridentifier string The identifier of the multiplier.
 function NTC.GetMultiplier(character, multiplieridentifier)
 	local data = NTC.GetCharacterData(character)
 	if data == nil or data["mult_" .. multiplieridentifier] == nil then
@@ -283,7 +288,8 @@ function NTC.GetMultiplier(character, multiplieridentifier)
 end
 
 -- sets tag data for one humanupdate, should be called from within a humanupdate hook
--- Gotta add more documentation.
+---@param character Character The character to set the tag on.
+---@param multiplieridentifier string The identifier of the tag.
 function NTC.SetTag(character, tagidentifier)
 	NTC.AddEmptyCharacterData(character)
 	local data = NTC.GetCharacterData(character)
@@ -297,8 +303,7 @@ function NTC.HasTag(character, tagidentifier)
 	return true
 end
 
-
--- I aint gonna add more documentation past.
+-- // Utility functions //
 -- don't concern yourself with these
 function NTC.AddEmptyCharacterData(character)
 	if NTC.GetCharacterData(character) ~= nil then
