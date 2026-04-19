@@ -12,11 +12,7 @@ local manuallyCalledItems = {
 
 local function UseItemMethod(item, usingCharacter, targetCharacter, limb, manualCall)
 	-- Invalid use; don't do anything
-	if item == nil
-		or usingCharacter == nil
-		or targetCharacter == nil
-		or limb == nil
-	then
+	if item == nil or usingCharacter == nil or targetCharacter == nil or limb == nil then
 		return
 	end
 
@@ -29,9 +25,7 @@ local function UseItemMethod(item, usingCharacter, targetCharacter, limb, manual
 	local methodtorun = NT.ItemMethods[identifier]
 
 	if methodtorun ~= nil then
-		if manuallyCalledItems[identifier]
-			and not manualCall
-		then
+		if manuallyCalledItems[identifier] and not manualCall then
 			return
 		end
 		-- Run said function
@@ -67,7 +61,9 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	local containedItem = item.OwnInventory.GetItemAt(0)
-	if containedItem == nil then return end
+	if containedItem == nil then
+		return
+	end
 	local hasVoltage = containedItem.Condition > 0
 
 	if hasVoltage then
@@ -103,7 +99,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		end
 
 		-- Not changeable
-		local PressureCategory = {"bloodpressure"}
+		local PressureCategory = { "bloodpressure" }
 
 		-- Readout Strings
 		local LowPressureReadout = ""
@@ -122,10 +118,23 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 		HF.AddAffliction(usingCharacter, "radiationsickness", 0.6)
 
 		-- Print readout of afflictions
-		local startReadout =
-			"‖color:" .. BaseColor .. "‖" .. "Affliction readout for " .. "‖color:end‖"
-			.. "‖color:" .. NameColor .. "‖" .. targetCharacter.Name .. "‖color:end‖"
-			.. "‖color:" .. BaseColor .. "‖" .. " on limb " .. HF.LimbTypeToString(limbtype) .. ":\n" .. "‖color:end‖"
+		local startReadout = "‖color:"
+			.. BaseColor
+			.. "‖"
+			.. "Affliction readout for "
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. NameColor
+			.. "‖"
+			.. targetCharacter.Name
+			.. "‖color:end‖"
+			.. "‖color:"
+			.. BaseColor
+			.. "‖"
+			.. " on limb "
+			.. HF.LimbTypeToString(limbtype)
+			.. ":\n"
+			.. "‖color:end‖"
 
 		local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 		local afflictionsdisplayed = 0
@@ -144,10 +153,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 
 			afflimbtype = HF.NormalizeLimbType(afflimbtype)
 
-			if strength >= prefab.ShowInHealthScannerThreshold
-				and afflimbtype == limbtype
-			then
-
+			if strength >= prefab.ShowInHealthScannerThreshold and afflimbtype == limbtype then
 				local id = value.Identifier
 				local isIgnored = HF.TableContains(IgnoredCategory, id)
 
@@ -164,17 +170,12 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					-- Add it to the respective readout
 					if isVital then
 						VitalReadout = VitalReadout .. entry
-
 					elseif isRemoval then
 						RemovalReadout = RemovalReadout .. entry
-
 					elseif isCustom then
 						CustomReadout = CustomReadout .. entry
-
 					elseif isPressure then
-						if strength > 130
-							or strength < 70
-						then
+						if strength > 130 or strength < 70 then
 							HighPressureReadout = HighPressureReadout .. entry
 						else
 							LowPressureReadout = LowPressureReadout .. entry
@@ -184,10 +185,8 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 					else
 						if strength < LowMedThreshold then
 							LowStrengthReadout = LowStrengthReadout .. entry
-
 						elseif strength < MedHighThreshold then
 							MediumStrengthReadout = MediumStrengthReadout .. entry
-
 						else
 							HighStrengthReadout = HighStrengthReadout .. entry
 						end
@@ -208,14 +207,14 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
 				HF.CharacterToClient(usingCharacter),
 
 				startReadout
-				.. formatLine(LowPressureReadout, LowColor)
-				..	formatLine(HighPressureReadout, HighColor)
-				..	formatLine(LowStrengthReadout, LowColor)
-				..	formatLine(MediumStrengthReadout, MedColor)
-				..	formatLine(HighStrengthReadout, HighColor)
-				..	formatLine(VitalReadout, VitalColor)
-				..	formatLine(RemovalReadout, RemovalColor)
-				..	formatLine(CustomReadout, CustomColor)
+					.. formatLine(LowPressureReadout, LowColor)
+					.. formatLine(HighPressureReadout, HighColor)
+					.. formatLine(LowStrengthReadout, LowColor)
+					.. formatLine(MediumStrengthReadout, MedColor)
+					.. formatLine(HighStrengthReadout, HighColor)
+					.. formatLine(VitalReadout, VitalColor)
+					.. formatLine(RemovalReadout, RemovalColor)
+					.. formatLine(CustomReadout, CustomColor)
 			)
 		end, 2000)
 	end
@@ -243,7 +242,9 @@ NT.HematologyDetectable = {
 -- Updated likewise to the Health Scanner
 NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, limb)
 	-- Only work if not on cooldown
-	if item.Condition < 50 then return end
+	if item.Condition < 50 then
+		return
+	end
 
 	local limbtype = limb.type
 
@@ -254,17 +255,14 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 	-- Spawn donor card
 	local containedItem = item.OwnInventory.GetItemAt(0)
 	local hasCartridge = containedItem ~= nil
-		and (containedItem.Prefab.Identifier.Value == "bloodcollector"
-		or containedItem.HasTag("donorCard"))
+		and (containedItem.Prefab.Identifier.Value == "bloodcollector" or containedItem.HasTag("donorCard"))
 
 	if hasCartridge then
 		HF.RemoveItem(containedItem)
 		local bloodtype = NT.GetBloodtype(targetCharacter)
 		local targetIDCard = targetCharacter.Inventory.GetItemAt(0)
 
-		if targetIDCard ~= nil
-			and targetIDCard.OwnInventory.GetItemAt(0) == nil
-		then
+		if targetIDCard ~= nil and targetIDCard.OwnInventory.GetItemAt(0) == nil then
 			-- Put the donor card into the ID card
 			HF.PutItemInsideItem(targetIDCard, bloodtype .. "card")
 		else
@@ -305,7 +303,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 	end
 
 	-- Not changeable
-	local PressureCategory = {"bloodpressure"}
+	local PressureCategory = { "bloodpressure" }
 
 	-- Readout Strings
 	local LowPressureReadout = ""
@@ -319,9 +317,16 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 	local bloodtype = AfflictionPrefab.Prefabs[NT.GetBloodtype(targetCharacter)].Name.Value
 
-	local startReadout =
-		"‖color:" .. NameColor .. "‖Bloodtype: " .. bloodtype .. "‖color:end‖"
-		.. "\n‖color:" .. BaseColor .. "‖Affliction readout for " .. targetCharacter.Name .. ":‖color:end‖\n"
+	local startReadout = "‖color:"
+		.. NameColor
+		.. "‖Bloodtype: "
+		.. bloodtype
+		.. "‖color:end‖"
+		.. "\n‖color:"
+		.. BaseColor
+		.. "‖Affliction readout for "
+		.. targetCharacter.Name
+		.. ":‖color:end‖\n"
 
 	local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 	local afflictionsdisplayed = 0
@@ -330,13 +335,9 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 		local strength = HF.Round(value.Strength)
 		local prefab = value.Prefab
 
-		if strength > 2
-			and HF.TableContains(NT.HematologyDetectable, prefab.Identifier.Value)
-		then
-
+		if strength > 2 and HF.TableContains(NT.HematologyDetectable, prefab.Identifier.Value) then
 			local id = value.Identifier
 			if not HF.TableContains(IgnoredCategory, id) then
-
 				local entry = "\n" .. prefab.Name.Value .. ": " .. strength .. "%"
 
 				local isVital = HF.TableContains(VitalCategory, id)
@@ -346,29 +347,21 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 				if isVital then
 					VitalReadout = VitalReadout .. entry
-
 				elseif isRemoval then
 					RemovalReadout = RemovalReadout .. entry
-
 				elseif isCustom then
 					CustomReadout = CustomReadout .. entry
-
 				elseif isPressure then
-					if strength > 130
-						or strength < 70
-					then
+					if strength > 130 or strength < 70 then
 						HighPressureReadout = HighPressureReadout .. entry
 					else
 						LowPressureReadout = LowPressureReadout .. entry
 					end
-
 				else
 					if strength < LowMedThreshold then
 						LowStrengthReadout = LowStrengthReadout .. entry
-
 					elseif strength < MedHighThreshold then
 						MediumStrengthReadout = MediumStrengthReadout .. entry
-
 					else
 						HighStrengthReadout = HighStrengthReadout .. entry
 					end
@@ -388,24 +381,24 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 		HF.CharacterToClient(usingCharacter),
 
 		startReadout
-		.. formatLine(LowPressureReadout, LowColor)
-		.. formatLine(HighPressureReadout, HighColor)
-		.. formatLine(LowStrengthReadout, LowColor)
-		.. formatLine(MediumStrengthReadout, MedColor)
-		.. formatLine(HighStrengthReadout, HighColor)
-		.. formatLine(VitalReadout, VitalColor)
-		.. formatLine(RemovalReadout, RemovalColor)
-		.. formatLine(CustomReadout, CustomColor)
+			.. formatLine(LowPressureReadout, LowColor)
+			.. formatLine(HighPressureReadout, HighColor)
+			.. formatLine(LowStrengthReadout, LowColor)
+			.. formatLine(MediumStrengthReadout, MedColor)
+			.. formatLine(HighStrengthReadout, HighColor)
+			.. formatLine(VitalReadout, VitalColor)
+			.. formatLine(RemovalReadout, RemovalColor)
+			.. formatLine(CustomReadout, CustomColor)
 	)
 end
 
 NT.CuttableAfflictions = {
 	"bandaged",
-	"dirtybandage"
+	"dirtybandage",
 }
 
 NT.TraumashearsAfflictions = {
-	"gypsumcast"
+	"gypsumcast",
 }
 
 -- Trauma Shears
@@ -413,7 +406,9 @@ NT.ItemMethods.traumashears = function(item, usingCharacter, targetCharacter, li
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	-- Will not work on someone in Stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
 	-- Does the target have any cuttable afflictions?
 	local cuttables = HF.CombineArrays(NT.CuttableAfflictions, NT.TraumashearsAfflictions)
@@ -427,7 +422,6 @@ NT.ItemMethods.traumashears = function(item, usingCharacter, targetCharacter, li
 					canCut = true
 					break
 				end
-
 			elseif limbtype == prefab.IndicatorLimb then
 				if HF.HasAffliction(targetCharacter, val, 0.1) then
 					canCut = true
@@ -442,7 +436,8 @@ NT.ItemMethods.traumashears = function(item, usingCharacter, targetCharacter, li
 			HF.GiveItem(targetCharacter, "ntsfx_scissors")
 
 			-- Remove 8% fracture so that they dont scream again
-			if NT.LimbIsBroken(targetCharacter, limbtype)
+			if
+				NT.LimbIsBroken(targetCharacter, limbtype)
 				and HF.HasAfflictionLimb(targetCharacter, "gypsumcast", limbtype, 0.1)
 			then
 				NT.BreakLimb(targetCharacter, limbtype, -8)
@@ -455,7 +450,6 @@ NT.ItemMethods.traumashears = function(item, usingCharacter, targetCharacter, li
 				if prefab ~= nil then
 					if prefab.LimbSpecific then
 						HF.SetAfflictionLimb(targetCharacter, val, limbtype, 0, usingCharacter)
-
 					elseif limbtype == prefab.IndicatorLimb then
 						HF.SetAffliction(targetCharacter, val, 0, usingCharacter)
 					end
@@ -473,7 +467,9 @@ NT.ItemStartsWithMethods.divingknife = function(item, usingCharacter, targetChar
 	local limbtype = limb.type
 
 	--- Will not work on someone in Stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
 	-- Does the target have any cuttable afflictions?
 	local canCut = false
@@ -487,7 +483,6 @@ NT.ItemStartsWithMethods.divingknife = function(item, usingCharacter, targetChar
 					canCut = true
 					break
 				end
-
 			elseif HF.NormalizeLimbType(limbtype) == prefab.IndicatorLimb then
 				if HF.HasAffliction(targetCharacter, val, 0.1) then
 					canCut = true
@@ -507,7 +502,6 @@ NT.ItemStartsWithMethods.divingknife = function(item, usingCharacter, targetChar
 				if prefab ~= nil then
 					if prefab.LimbSpecific then
 						HF.SetAfflictionLimb(targetCharacter, val, limbtype, 0, usingCharacter)
-
 					elseif HF.NormalizeLimbType(limbtype) == prefab.IndicatorLimb then
 						HF.SetAffliction(targetCharacter, val, 0, usingCharacter)
 					end
@@ -525,9 +519,12 @@ NT.ItemMethods.gypsum = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	-- Will not work on someone in Stasis
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.HasAfflictionLimb(targetCharacter, "bandaged", limbtype, 0.1)
+	if
+		HF.HasAfflictionLimb(targetCharacter, "bandaged", limbtype, 0.1)
 		and not HF.HasAfflictionLimb(targetCharacter, "gypsumcast", limbtype, 0.1)
 		and not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
 		and HF.LimbIsExtremity(limbtype)
@@ -577,12 +574,18 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 	if HF.GetSkillRequirementMet(usingCharacter, "medical", 30) then
 		-- In field use
 		local healeddamage = 0
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "lacerations", 0), 0, 20)
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bitewounds", 0), 0, 20)
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "explosiondamage", 0), 0, 20)
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "gunshotwound", 0), 0, 20)
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleeding", 0) / 10, 0, 40)
-		healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleedingnonstop", 0) / 10, 0, 40)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "lacerations", 0), 0, 20)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bitewounds", 0), 0, 20)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "explosiondamage", 0), 0, 20)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "gunshotwound", 0), 0, 20)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleeding", 0) / 10, 0, 40)
+		healeddamage = healeddamage
+			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleedingnonstop", 0) / 10, 0, 40)
 
 		HF.AddAfflictionLimb(targetCharacter, "lacerations", limbtype, -20, usingCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "bitewounds", limbtype, -20, usingCharacter)
@@ -621,10 +624,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 		for key, value in pairs(NT.SutureAfflictions) do
 			local prefab = AfflictionPrefab.Prefabs[key]
 
-			if prefab ~= nil
-				and (value.case == nil
-				or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype))
-			then
+			if prefab ~= nil and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype)) then
 				if value.func ~= nil then
 					value.func(item, usingCharacter, targetCharacter, limb)
 				else
@@ -632,7 +632,6 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 
 					if prefab.LimbSpecific then
 						removeAfflictionPlusGainSkill(key, skillgain)
-
 					elseif prefab.IndicatorLimb == limbtype then
 						removeAfflictionNonLimbSpecificPlusGainSkill(key, skillgain)
 					end
@@ -648,14 +647,14 @@ end
 NT.ItemMethods.tourniquet = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
-	if HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
+	if
+		HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
 		and not HF.HasAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 1)
 	then
 		if NT.LimbIsArterialCut(targetCharacter, limbtype) then
 			if HF.LimbIsExtremity(limbtype) then
 				HF.SetAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 100, usingCharacter)
 				HF.GiveSkillScaled(usingCharacter, "medical", 6000)
-
 			elseif limbtype == LimbType.Head then
 				HF.SetAffliction(targetCharacter, "oxygenlow", 200, usingCharacter)
 				HF.AddAffliction(targetCharacter, "cerebralhypoxia", 15, usingCharacter)
@@ -670,7 +669,9 @@ end
 
 -- Empty Blood Packs
 NT.ItemMethods.emptybloodpack = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 0 then return end
+	if item.Condition <= 0 then
+		return
+	end
 
 	if targetCharacter.Bloodloss <= 31 then
 		local success = HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
@@ -688,7 +689,6 @@ NT.ItemMethods.emptybloodpack = function(item, usingCharacter, targetCharacter, 
 
 			if args.acidosis > 0 then
 				table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
-
 			elseif args.alkalosis > 0 then
 				table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
 			end
@@ -853,16 +853,22 @@ end
 
 -- Manual Defibrillator
 NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 0 then return end
+	if item.Condition <= 0 then
+		return
+	end
 
 	local containedItem = item.OwnInventory.GetItemAt(0)
-	if containedItem == nil then return end
+	if containedItem == nil then
+		return
+	end
 
 	local hasVoltage = containedItem.Condition > 0
 	-- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
-	if not hasVoltage then return end
+	if not hasVoltage then
+		return
+	end
 
-	HF.GiveItem(targetCharacter, "ntsfx_manualdefib") ?
+	HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
 	-- about to get deepfried if underwater (TODO)
 	--local unsafe = HF.GetOuterWearIdentifier(targetCharacter) ~= "emergencysuit" and targetCharacter.InWater
 	--local unsafeArrestRoll = unsafe
@@ -927,10 +933,14 @@ end
 
 -- Automated External Defibrillator (AED)
 NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 0 then return end
+	if item.Condition <= 0 then
+		return
+	end
 
 	local containedItem = item.OwnInventory.GetItemAt(0)
-	if containedItem == nil then return end
+	if containedItem == nil then
+		return
+	end
 
 	local hasVoltage = containedItem.Condition > 0
 
@@ -1013,13 +1023,22 @@ NT.ItemMethods.advscalpel = function(item, usingCharacter, targetCharacter, limb
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 30) then
-			HF.AddAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1 + HF.GetSurgerySkill(usingCharacter) / 2, usingCharacter)
+			HF.AddAfflictionLimb(
+				targetCharacter,
+				"surgeryincision",
+				limbtype,
+				1 + HF.GetSurgerySkill(usingCharacter) / 2,
+				usingCharacter
+			)
 			HF.SetAfflictionLimb(targetCharacter, "suturedi", limbtype, 0, usingCharacter)
 			HF.SetAfflictionLimb(targetCharacter, "gypsumcast", limbtype, 0, usingCharacter)
 			HF.SetAfflictionLimb(targetCharacter, "bandaged", limbtype, 0, usingCharacter)
@@ -1037,13 +1056,22 @@ NT.ItemMethods.advhemostat = function(item, usingCharacter, targetCharacter, lim
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 99)
 		and not HF.HasAfflictionLimb(targetCharacter, "clampedbleeders", limbtype, 1)
 	then
-		HF.AddAfflictionLimb(targetCharacter, "clampedbleeders", limbtype, 1 + HF.GetSurgerySkill(usingCharacter) / 2, usingCharacter)
+		HF.AddAfflictionLimb(
+			targetCharacter,
+			"clampedbleeders",
+			limbtype,
+			1 + HF.GetSurgerySkill(usingCharacter) / 2,
+			usingCharacter
+		)
 	end
 end
 
@@ -1052,14 +1080,23 @@ NT.ItemMethods.advretractors = function(item, usingCharacter, targetCharacter, l
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "clampedbleeders", limbtype, 99)
 		and not HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 30) then
-			HF.AddAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1 + HF.GetSurgerySkill(usingCharacter) / 2,usingCharacter)
+			HF.AddAfflictionLimb(
+				targetCharacter,
+				"retractedskin",
+				limbtype,
+				1 + HF.GetSurgerySkill(usingCharacter) / 2,
+				usingCharacter
+			)
 		else
 			HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 10, usingCharacter)
 		end
@@ -1071,14 +1108,23 @@ NT.ItemMethods.surgicaldrill = function(item, usingCharacter, targetCharacter, l
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 		and not HF.HasAfflictionLimb(targetCharacter, "drilledbones", limbtype, 1)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 45) then
-			HF.AddAfflictionLimb(targetCharacter, "drilledbones", limbtype, 1 + HF.GetSurgerySkill(usingCharacter) / 2, usingCharacter)
+			HF.AddAfflictionLimb(
+				targetCharacter,
+				"drilledbones",
+				limbtype,
+				1 + HF.GetSurgerySkill(usingCharacter) / 2,
+				usingCharacter
+			)
 		else
 			HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, 12, usingCharacter)
 			HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 10, usingCharacter)
@@ -1091,15 +1137,24 @@ NT.ItemMethods.surgerysaw = function(item, usingCharacter, targetCharacter, limb
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 		and not HF.HasAfflictionLimb(targetCharacter, "bonecut", limbtype, 1)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 50) then
 			if limbtype ~= LimbType.Torso then
-				HF.AddAfflictionLimb(targetCharacter, "bonecut", limbtype, 1 + HF.GetSurgerySkill(usingCharacter) / 2, usingCharacter)
+				HF.AddAfflictionLimb(
+					targetCharacter,
+					"bonecut",
+					limbtype,
+					1 + HF.GetSurgerySkill(usingCharacter) / 2,
+					usingCharacter
+				)
 			end
 		else
 			HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
@@ -1114,11 +1169,14 @@ NT.ItemMethods.tweezers = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
 	local usecase = ""
 	-- Through a surgical wound
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
 		usecase = "surgery"
@@ -1200,9 +1258,7 @@ NT.ItemMethods.organscalpel_liver = function(item, usingCharacter, targetCharact
 	local procureready = HF.GetAfflictionStrength(targetCharacter, "liverremoved", 0) <= 0
 		and HF.GetAfflictionStrength(targetCharacter, "liverswap", 0) >= 0.1
 
-	if limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
-	then
+	if limbtype == LimbType.Torso and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 		if not procureready then
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, 40) then
 				if HF.GetAfflictionStrength(targetCharacter, "liverdamage", 0) >= 100 then
@@ -1219,8 +1275,8 @@ NT.ItemMethods.organscalpel_liver = function(item, usingCharacter, targetCharact
 			HF.GiveItem(targetCharacter, "ntsfx_slash")
 		else -- organ extraction
 			local damage = HF.GetAfflictionStrength(targetCharacter, "liverdamage", 0)
-			if damage == 100 then return
-
+			if damage == 100 then
+				return
 			elseif HF.GetSurgerySkillRequirementMet(usingCharacter, 50) then
 				HF.SetAffliction(targetCharacter, "liverremoved", 100, usingCharacter)
 				HF.SetAffliction(targetCharacter, "liverswap", 0, usingCharacter)
@@ -1290,9 +1346,7 @@ NT.ItemMethods.organscalpel_lungs = function(item, usingCharacter, targetCharact
 	local procureready = HF.GetAfflictionStrength(targetCharacter, "lungremoved", 0) <= 0
 		and HF.GetAfflictionStrength(targetCharacter, "lungswap", 0) >= 0.1
 
-	if limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
-	then
+	if limbtype == LimbType.Torso and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 		if not procureready then
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, 40) then
 				if HF.GetAfflictionStrength(targetCharacter, "lungdamage", 0) >= 100 then
@@ -1383,9 +1437,7 @@ NT.ItemMethods.organscalpel_heart = function(item, usingCharacter, targetCharact
 	local procureready = HF.GetAfflictionStrength(targetCharacter, "heartremoved", 0) <= 0
 		and HF.GetAfflictionStrength(targetCharacter, "heartswap", 0) >= 0.1
 
-	if limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
-	then
+	if limbtype == LimbType.Torso and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 		if not procureready then
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, 40) then
 				if HF.GetAfflictionStrength(targetCharacter, "heartdamage", 0) >= 100 then
@@ -1475,9 +1527,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 	local procureready = HF.GetAfflictionStrength(targetCharacter, "kidneyremoved", 0) <= 0
 		and HF.GetAfflictionStrength(targetCharacter, "kidneyswap", 0) >= 0.1
 
-	if limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
-	then
+	if limbtype == LimbType.Torso and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 		if not procureready then
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, 40) then
 				if HF.GetAfflictionStrength(targetCharacter, "kidneydamage", 0) >= 100 then
@@ -1611,9 +1661,7 @@ NT.ItemMethods.organscalpel_brain = function(item, usingCharacter, targetCharact
 	local procureready = HF.GetAfflictionStrength(targetCharacter, "brainremoved", 0) <= 0
 		and HF.GetAfflictionStrength(targetCharacter, "brainswap", 0) >= 0.1
 
-	if limbtype == LimbType.Head
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1)
-	then
+	if limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 		if not procureready then
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, 40) then
 				if HF.GetAfflictionStrength(targetCharacter, "cerebralhypoxia", 0) >= 100 then
@@ -1705,7 +1753,8 @@ end
 NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "drilledbones", limbtype, 99)
 	then
 		if HF.GetSurgerySkillRequirementMet(usingCharacter, 45) then
@@ -1749,7 +1798,8 @@ NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCha
 			for key, value in pairs(implantafflictions) do
 				local prefab = AfflictionPrefab.Prefabs[key]
 
-				if prefab ~= nil
+				if
+					prefab ~= nil
 					and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype))
 				then
 					local skillgain = value.xpgain or 0
@@ -1779,7 +1829,8 @@ end
 NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
-	if HF.CanPerformSurgeryOn(targetCharacter)
+	if
+		HF.CanPerformSurgeryOn(targetCharacter)
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 50)
 		and HF.HasAffliction(targetCharacter, "t_paralysis", 0.1)
 	then
@@ -1804,10 +1855,12 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-
-	if limbtype == LimbType.Torso
+	if
+		limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
 		and HF.HasAffliction(targetCharacter, "pneumothorax")
 	then
@@ -1831,13 +1884,14 @@ NT.ItemMethods.needle = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
 	-- Stasis check
-	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then
+		return
+	end
 
-	if limbtype == LimbType.Torso
-		and not HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
-	then
+	if limbtype == LimbType.Torso and not HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype) then
 		if HF.GetSkillRequirementMet(usingCharacter, "medical", 20) then
-			if HF.HasAffliction(targetCharacter, "pneumothorax")
+			if
+				HF.HasAffliction(targetCharacter, "pneumothorax")
 				and not HF.HasAffliction(targetCharacter, "needlec", 0.1)
 			then
 				HF.GiveSkillScaled(usingCharacter, "medical", 4000)
@@ -1867,7 +1921,8 @@ NT.ItemMethods.braintransplant = function(item, usingCharacter, targetCharacter,
 
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 
-	if HF.HasAffliction(targetCharacter, "brainremoved", 1)
+	if
+		HF.HasAffliction(targetCharacter, "brainremoved", 1)
 		and limbtype == LimbType.Head
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
 	then
@@ -1891,7 +1946,9 @@ end
 local function reattachLimb(item, user, target, limb, itemlimbtype)
 	local limbtype = HF.NormalizeLimbType(limb.type)
 
-	if limbtype ~= itemlimbtype then return end
+	if limbtype ~= itemlimbtype then
+		return
+	end
 
 	if HF.HasAfflictionLimb(target, "bonecut", limbtype, 99) then
 		if not NT.LimbIsAmputated(target, limbtype) then
@@ -1962,8 +2019,15 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 	end
 
 	-- move towards isotonic
-	HF.SetAffliction(targetCharacter, "acidosis", HF.GetAfflictionStrength(targetCharacter, "acidosis", 0) * HF.Lerp(1, 0.9, usefulFraction))
-	HF.SetAffliction(targetCharacter, "alkalosis", HF.GetAfflictionStrength(targetCharacter, "alkalosis", 0) * HF.Lerp(1, 0.9, usefulFraction)
+	HF.SetAffliction(
+		targetCharacter,
+		"acidosis",
+		HF.GetAfflictionStrength(targetCharacter, "acidosis", 0) * HF.Lerp(1, 0.9, usefulFraction)
+	)
+	HF.SetAffliction(
+		targetCharacter,
+		"alkalosis",
+		HF.GetAfflictionStrength(targetCharacter, "alkalosis", 0) * HF.Lerp(1, 0.9, usefulFraction)
 	)
 
 	-- check if acidosis, alkalosis or sepsis
@@ -1978,7 +2042,6 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 			if split[2] ~= nil then
 				HF.AddAffliction(targetCharacter, "acidosis", tonumber(split[2]) / 10 * usefulFraction, usingCharacter)
 			end
-
 		elseif HF.StartsWith(tag, "alkal") then
 			local split = HF.SplitString(tag, ":")
 			if split[2] ~= nil then
@@ -1993,7 +2056,9 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 end
 
 NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 0 then return end
+	if item.Condition <= 0 then
+		return
+	end
 
 	InfuseBloodpack(item, "ominus", usingCharacter, targetCharacter, limb)
 end
@@ -2058,7 +2123,9 @@ end
 -- AutoPulse
 NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
 	local condition = item.Condition
-	if targetCharacter.InWater then return end
+	if targetCharacter.InWater then
+		return
+	end
 
 	local targetInventory = targetCharacter.Inventory
 
@@ -2094,7 +2161,9 @@ end
 
 -- Gel Coolant Pack
 NT.ItemMethods.gelipack = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 25 then return end
+	if item.Condition <= 25 then
+		return
+	end
 
 	local limbtype = limb.type
 	local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter, "medical", 40), 1)
@@ -2119,8 +2188,8 @@ NT.ItemStartsWithMethods.livertransplant = function(item, usingCharacter, target
 	local damage = HF.GetAfflictionStrength(targetCharacter, "liverdamage", 0)
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 
-	if (HF.HasAffliction(targetCharacter, "liverremoved", 1)
-		or HF.HasAffliction(targetCharacter, "liverswap", 1))
+	if
+		(HF.HasAffliction(targetCharacter, "liverremoved", 1) or HF.HasAffliction(targetCharacter, "liverswap", 1))
 		and limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
@@ -2210,8 +2279,8 @@ NT.ItemStartsWithMethods.hearttransplant = function(item, usingCharacter, target
 	local damage = HF.GetAfflictionStrength(targetCharacter, "heartdamage", 0)
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 
-	if (HF.HasAffliction(targetCharacter, "heartremoved", 1)
-		or HF.HasAffliction(targetCharacter, "heartswap", 1))
+	if
+		(HF.HasAffliction(targetCharacter, "heartremoved", 1) or HF.HasAffliction(targetCharacter, "heartswap", 1))
 		and limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
@@ -2302,7 +2371,8 @@ NT.ItemStartsWithMethods.lungtransplant = function(item, usingCharacter, targetC
 
 	local damage = HF.GetAfflictionStrength(targetCharacter, "lungdamage", 0)
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
-	if (HF.HasAffliction(targetCharacter, "lungremoved", 1) or HF.HasAffliction(targetCharacter, "lungswap", 1))
+	if
+		(HF.HasAffliction(targetCharacter, "lungremoved", 1) or HF.HasAffliction(targetCharacter, "lungswap", 1))
 		and limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
@@ -2395,13 +2465,18 @@ NT.ItemStartsWithMethods.kidneytransplant = function(item, usingCharacter, targe
 	local damage = HF.GetAfflictionStrength(targetCharacter, "kidneydamage", 0) -- floating point number really fucks the logic I made here so I just floor it
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 
-	if (HF.HasAffliction(targetCharacter, "kidneyremoved", 1)
-		or HF.HasAffliction(targetCharacter, "kidneyswap", 1))
+	if
+		(HF.HasAffliction(targetCharacter, "kidneyremoved", 1) or HF.HasAffliction(targetCharacter, "kidneyswap", 1))
 		and limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
 		local rejectionchance = HF.Clamp(
-			(HF.GetAfflictionStrength(targetCharacter, "immunity", 0) - 10) / 150 * NTC.GetMultiplier(usingCharacter, "organrejectionchance"), 0, 1)
+			(HF.GetAfflictionStrength(targetCharacter, "immunity", 0) - 10)
+				/ 150
+				* NTC.GetMultiplier(usingCharacter, "organrejectionchance"),
+			0,
+			1
+		)
 
 		if HF.Chance(rejectionchance) and NTConfig.Get("NT_organRejection", false) then
 			HF.RemoveItem(item)
@@ -2531,7 +2606,8 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
 
 	if NT.LimbIsDislocated(targetCharacter, limbtype) then
 		local skillrequired = 60
-		if HF.HasAffliction(targetCharacter, "analgesia", 0.5)
+		if
+			HF.HasAffliction(targetCharacter, "analgesia", 0.5)
 			or HF.HasAffliction(targetCharacter, "afadrenaline", 0.5)
 		then
 			skillrequired = skillrequired - 30
@@ -2547,7 +2623,6 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
 		if not HF.HasAffliction(targetCharacter, "analgesia", 0.5) then
 			HF.AddAffliction(targetCharacter, "severepain", 5, usingCharacter)
 		end
-
 	elseif not HF.HasAffliction(targetCharacter, "sym_unconsciousness", 0.1) then
 		local outerWearId = HF.GetOuterWearIdentifier(targetCharacter)
 
@@ -2568,7 +2643,9 @@ NT.ItemMethods.repairpack = NT.ItemStartsWithMethods.wrench
 
 -- Blood Packs
 NT.ItemStartsWithMethods.bloodpack = function(item, usingCharacter, targetCharacter, limb)
-	if item.Condition <= 0 then return end
+	if item.Condition <= 0 then
+		return
+	end
 
 	local identifier = item.Prefab.Identifier.Value
 	local packtype = string.sub(identifier, string.len("bloodpack") + 1)
@@ -2597,7 +2674,6 @@ Hook.Add("bodybag.dragfast", "bodybag.dragfast", function(effect, deltaTime, ite
 
 	HF.SetAffliction(dragger, "stretchers", 100)
 end)
-
 
 -- This exists purely for NT metabolism
 function NT.RotOrgan(item)
@@ -2643,7 +2719,9 @@ end)
 Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, item, targets, worldPosition, element)
 	local target = targets[1]
 
-	if not target then return end
+	if not target then
+		return
+	end
 
 	if LuaUserData.IsTargetType(target, "Barotrauma.Limb") then
 		UseItemMethod(item, effect.user, target.character, target, true)
@@ -2653,21 +2731,24 @@ Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, i
 end)
 
 Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon, target)
-	if meleeWeapon == nil
-		or target == nil
-	then
+	if meleeWeapon == nil or target == nil then
 		return
 	end
 
 	local itemUser = meleeWeapon.picker
-	if itemUser == nil then return end
+	if itemUser == nil then
+		return
+	end
 
 	local item = meleeWeapon.Item
-	if item == nil then return end
+	if item == nil then
+		return
+	end
 
 	Timer.Wait(function()
 		-- Right Arm Fracture
-		if HF.HasAffliction(itemUser, "ra_fracture", 1)
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
 			and itemUser.Inventory.IsInLimbSlot(item, 2)
 			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
 		then
@@ -2677,16 +2758,15 @@ Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon
 			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
 
 		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation3", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 2)
-		then
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
 			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
 			item.Drop(itemUser, true)
 			HF.SetAffliction(itemUser, "dislocation3", 100)
 		end
 
 		-- Left Arm Fracture
-		if HF.HasAffliction(itemUser, "la_fracture", 1)
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
 			and itemUser.Inventory.IsInLimbSlot(item, 4)
 			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
 		then
@@ -2696,9 +2776,7 @@ Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon
 			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
 
 		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation4", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 4)
-		then
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
 			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
 			item.Drop(itemUser, true)
 			HF.SetAffliction(itemUser, "dislocation4", 100)
@@ -2708,14 +2786,13 @@ end)
 
 Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
 	Timer.Wait(function()
-		if item == nil
-			or item.GetComponentString("RangedWeapon") == nil
-			or itemUser == nil then
+		if item == nil or item.GetComponentString("RangedWeapon") == nil or itemUser == nil then
 			return
 		end
 
 		-- Right Arm Fracture
-		if HF.HasAffliction(itemUser, "ra_fracture", 1)
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
 			and itemUser.Inventory.IsInLimbSlot(item, 2)
 			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
 		then
@@ -2725,16 +2802,15 @@ Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
 			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
 
 		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation3", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 2)
-		then
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
 			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
 			item.Drop(itemUser, true)
 			HF.SetAffliction(itemUser, "dislocation3", 100)
 		end
 
 		-- Left Arm Fracture
-		if HF.HasAffliction(itemUser, "la_fracture", 1)
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
 			and itemUser.Inventory.IsInLimbSlot(item, 4)
 			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
 		then
@@ -2744,9 +2820,7 @@ Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
 			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
 
 		-- Dislocation
-		elseif HF.HasAffliction(itemUser, "dislocation4", 1)
-			and itemUser.Inventory.IsInLimbSlot(item, 4)
-		then
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
 			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
 			item.Drop(itemUser, true)
 			HF.SetAffliction(itemUser, "dislocation4", 100)
