@@ -13,7 +13,7 @@
 
         <Deconstruct time="2"/>
 
-        <Price baseprice="60" soldbydefault="true">
+        <Price baseprice="50" soldbydefault="true">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
 
@@ -42,11 +42,11 @@
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
 
-        <Price baseprice="80" soldbydefault="false">
+        <Price baseprice="60" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="40" amount="4">
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="40" amount="2">
             <RequiredSkill identifier="medical" level="20"/>
             <RequiredItem identifier="plastic" />
             <RequiredItem identifier="aluminium" />
