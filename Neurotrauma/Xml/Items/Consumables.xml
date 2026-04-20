@@ -56,7 +56,7 @@
 
         <Deconstruct/>
 
-        <Price baseprice="25" soldbydefault="true">
+        <Price baseprice="70" soldbydefault="true">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
 
@@ -81,7 +81,7 @@
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
-        <Price baseprice="40">
+        <Price baseprice="50">
             <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="6"/>
             <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="12"/>
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="12"/>
@@ -123,7 +123,7 @@
 
         <Deconstruct/>
 
-        <Price baseprice="30" soldbydefault="true" CanBeSpecial="false">
+        <Price baseprice="80" soldbydefault="true" CanBeSpecial="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
 
@@ -154,7 +154,7 @@
 
         <Deconstruct/>
 
-        <Price baseprice="70" soldbydefault="true" CanBeSpecial="false">
+        <Price baseprice="80" soldbydefault="true" CanBeSpecial="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
 
