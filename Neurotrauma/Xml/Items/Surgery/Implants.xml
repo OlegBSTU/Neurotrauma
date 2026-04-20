@@ -5,7 +5,7 @@
         <PreferredContainer primary="medcab"/>
         <PreferredContainer secondary="locker"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.05" />
-        <Price baseprice="200" soldbydefault="false">
+        <Price baseprice="350" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
 
@@ -41,7 +41,7 @@
         <PreferredContainer secondary="locker"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.05" />
 
-        <Price baseprice="200" soldbydefault="false">
+        <Price baseprice="350" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
 
