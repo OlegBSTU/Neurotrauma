@@ -4,6 +4,11 @@ local MultiLineTextBox = dofile(NT.Path .. "/Lua/Scripts/Client/MultiLineTextBox
 local GUIComponent = LuaUserData.CreateStatic("Barotrauma.GUIComponent")
 local configUI
 
+local BaseConfigPages = {
+	{ name = "Item Prices", key = "prices" },
+	{ name = "Item Availability", key = "availability" },
+}
+
 -- Did you know the default background colour is not true black?
 local Transparent = Color(2, 2, 2)
 -- Barotrauma beige
@@ -24,19 +29,37 @@ end
 -- We also automatically make the UI display the names as "NT [mod]" to match their Content Package / Steam Workhop name to minimise confusion.
 local function PopulateDropdown(dropdown)
 	ExpansionNameForUI = {}
-
+	-- Goofy but it works!
+	-- Ensure Neurotrauma is on top by just loading it first
 	for _, expansion in ipairs(NTConfig.Expansions) do
-		local name = tostring(expansion.Name)
-		-- First, we make the UI Name the same as their expansion name
-		local uiName = name
-		-- Excluding Neurotrauma itself, add NT at the front if it does not already have that
-		if expansion.Name ~= "Neurotrauma" then
-			if not string.find(uiName, "^NT%s") then uiName = "NT " .. uiName end
+		if expansion.Name == "Neurotrauma" then
+			local name = tostring(expansion.Name)
+			local uiName = name
+
+			table.insert(ExpansionNameForUI, { uiName, name, type = "expansion" })
+			dropdown.AddItem(uiName)
 		end
-		-- Add them to a lookup table for later
-		table.insert(ExpansionNameForUI, { uiName, name })
-		-- Finally, add it to the dropdown menu
-		dropdown.AddItem(uiName)
+	end
+
+	-- Then get all the base pages (expansion proof!)
+	for _, page in ipairs(BaseConfigPages) do
+		table.insert(ExpansionNameForUI, { page.name, page.key, type = "page" })
+		dropdown.AddItem(page.name)
+	end
+
+	-- Then dump all other expansions in there
+	for _, expansion in ipairs(NTConfig.Expansions) do
+		if expansion.Name ~= "Neurotrauma" then
+			local name = tostring(expansion.Name)
+			-- First, we make the UI Name the same as their expansion name
+			local uiName = name
+			-- Add NT at the front if it does not already have that
+			if not string.find(uiName, "^NT%s") then uiName = "NT " .. uiName end
+			-- Add them to a lookup table for later
+			table.insert(ExpansionNameForUI, { uiName, name, type = "expansion" })
+			-- Finally, add it to the dropdown menu
+			dropdown.AddItem(uiName)
+		end
 	end
 end
 
@@ -49,15 +72,26 @@ local function PrebuildConfigLayout(entries, selectedExpansion)
 	local LayoutChunks = {}
 	local CurrentGroup = nil
 	local lastType = nil
+	local selectedKey = nil
+	local selectedType = nil
+
+	-- Grab actual expansion name based on their UIName
+	for _, uiEntry in ipairs(ExpansionNameForUI) do
+		if uiEntry[1] == selectedExpansion then
+			selectedKey = uiEntry[2]
+			selectedType = uiEntry.type
+			break
+		end
+	end
 
 	for key, entry in pairs(entries) do
-		-- Grab actual expansion name based on their UIName
-		for _, entry in ipairs(ExpansionNameForUI) do
-			if entry[1] == selectedExpansion then selectedExpansion = entry[2] end
+		if selectedType == "page" then
+			-- Get entries with this page set
+			if not entry.page or entry.page ~= selectedKey then goto continue end
+		elseif selectedType == "expansion" then
+			-- Get expansion entries that do NOT have a page set (so other expansion can force their price changes into the combined page, for example)
+			if entry.expansion ~= selectedKey or entry.page ~= nil then goto continue end
 		end
-
-		-- Only determine layout for entries from the expansion we've selected
-		if entry.expansion ~= selectedExpansion then goto continue end
 
 		-- Automatically add some white space between unique item types to prevent bleeding
 		if entry.type ~= lastType and lastType ~= nil then table.insert(LayoutChunks, { type = "spacer" }) end
@@ -478,7 +512,7 @@ end
 -- Base UI construction
 local function ConstructUI(parent)
 	-- Set the default to display (Neurotrauma, duh)
-	local selectedExpansion = "Neurotrauma"
+	local selectedExpansion = BaseConfigPages[1].name
 	local list = easySettings.BasicList(parent)
 
 	-- Get the Title block to put the drop down menu into (could be moved tbh)
@@ -486,8 +520,8 @@ local function ConstructUI(parent)
 	local children = innerLayout.RectTransform.Children
 	local title = children[1].GUIComponent
 
-	-- Get the amount of loaded expansions
-	local dropdownheight = #NTConfig.Expansions
+	-- Get the amount of loaded expansions + seperate pages
+	local dropdownheight = #NTConfig.Expansions + #BaseConfigPages
 
 	-- Don't show the dropdown if we only have Neurotrauma or no other addons that have settings to show
 	if dropdownheight > 1 then
@@ -503,6 +537,7 @@ local function ConstructUI(parent)
 		dropdown_AddonSelection.ListBox.RectTransform.RelativeOffset = (Vector2(0, 0.5))
 		PopulateDropdown(dropdown_AddonSelection)
 		dropdown_AddonSelection.Select(0)
+		selectedExpansion = dropdown_AddonSelection.Text
 		dropdown_AddonSelection.ToolTip = "Choose which mod's settings to display."
 
 		-- Using the dropdown changes a variable so we can change the page accordingly; only do so if we're not already on that page

@@ -511,11 +511,13 @@ NT.ConfigData = {
 
 	-- ================================= COMMON ITEMS ========================================
 	NT_ItemPriceHeaderFirstAid = {
+		page = "prices",
 		name = "Common Item Price Multipliers",
 		type = "category",
 	},
 
 	NT_ItemPrice_antidama1 = {
+		page = "prices",
 		name = "Morphine",
 		default = 1,
 		range = { 0, 10 },
@@ -525,6 +527,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_gypsum = {
+		page = "prices",
 		name = "Gypsum",
 		default = 1,
 		range = { 0, 10 },
@@ -534,6 +537,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_suture = {
+		page = "prices",
 		name = "Suture",
 		default = 1,
 		range = { 0, 10 },
@@ -543,6 +547,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_tourniquet = {
+		page = "prices",
 		name = "Tourniquet",
 		default = 1,
 		range = { 0, 10 },
@@ -552,6 +557,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_needle = {
+		page = "prices",
 		name = "Needle",
 		default = 1,
 		range = { 0, 10 },
@@ -561,6 +567,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_drainage = {
+		page = "prices",
 		name = "Drainage",
 		default = 1,
 		range = { 0, 10 },
@@ -570,6 +577,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_gelipack = {
+		page = "prices",
 		name = "Gel Coolant Pack",
 		default = 1,
 		range = { 0, 10 },
@@ -579,6 +587,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_ointment = {
+		page = "prices",
 		name = "Antibiotic Ointment",
 		default = 1,
 		range = { 0, 10 },
@@ -588,6 +597,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antibleeding1 = {
+		page = "prices",
 		name = "Bandage",
 		default = 1,
 		range = { 0, 10 },
@@ -597,6 +607,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antibleeding2 = {
+		page = "prices",
 		name = "Plastiseal",
 		default = 1,
 		range = { 0, 10 },
@@ -606,6 +617,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bloodpacks = {
+		page = "prices",
 		name = "Blood Packs",
 		default = 1,
 		range = { 0, 10 },
@@ -615,6 +627,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_emptybloodpack = {
+		page = "prices",
 		name = "Empty Blood Pack",
 		default = 1,
 		range = { 0, 10 },
@@ -624,6 +637,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_osteosynthesisimplants = {
+		page = "prices",
 		name = "Osteosynthesis Implants",
 		default = 1,
 		range = { 0, 10 },
@@ -633,6 +647,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_spinalimplant = {
+		page = "prices",
 		name = "Spinal Cord Implants",
 		default = 1,
 		range = { 0, 10 },
@@ -643,11 +658,13 @@ NT.ConfigData = {
 
 	-- ================================= BODY PARTS ========================================
 	NT_ItemPriceHeaderBodyParts = {
+		page = "prices",
 		name = "Bodypart Price Multipliers",
 		type = "category",
 	},
 
 	NT_ItemPrice_arms = {
+		page = "prices",
 		name = "Arms",
 		default = 1,
 		range = { 0, 10 },
@@ -657,6 +674,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_legs = {
+		page = "prices",
 		name = "Legs",
 		default = 1,
 		range = { 0, 10 },
@@ -666,6 +684,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bionicarms = {
+		page = "prices",
 		name = "Bionic Arms",
 		default = 1,
 		range = { 0, 10 },
@@ -675,6 +694,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bioniclegs = {
+		page = "prices",
 		name = "Bionic Legs",
 		default = 1,
 		range = { 0, 10 },
@@ -684,6 +704,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_livertransplant = {
+		page = "prices",
 		name = "Liver Transplant",
 		default = 1,
 		range = { 0, 10 },
@@ -693,6 +714,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_lungtransplant = {
+		page = "prices",
 		name = "Lung Transplant",
 		default = 1,
 		range = { 0, 10 },
@@ -702,6 +724,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_kidneytransplant = {
+		page = "prices",
 		name = "Kidney Transplant",
 		default = 1,
 		range = { 0, 10 },
@@ -711,6 +734,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_hearttransplant = {
+		page = "prices",
 		name = "Heart Transplant",
 		default = 1,
 		range = { 0, 10 },
@@ -721,11 +745,13 @@ NT.ConfigData = {
 
 	-- ================================= GEAR ========================================
 	NT_ItemPriceHeaderGear = {
+		page = "prices",
 		name = "Gear Price Multipliers",
 		type = "category",
 	},
 
 	NT_ItemPrice_healthscanner = {
+		page = "prices",
 		name = "Health Scanner",
 		default = 1,
 		range = { 0, 10 },
@@ -735,6 +761,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bloodanalyzer = {
+		page = "prices",
 		name = "Hematology Analyzer",
 		default = 1,
 		range = { 0, 10 },
@@ -744,6 +771,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_defibrillator = {
+		page = "prices",
 		name = "Manual Defibrillator",
 		default = 1,
 		range = { 0, 10 },
@@ -753,6 +781,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_aed = {
+		page = "prices",
 		name = "Automated External Defibrillator",
 		default = 1,
 		range = { 0, 10 },
@@ -762,6 +791,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bvm = {
+		page = "prices",
 		name = "BVM",
 		default = 1,
 		range = { 0, 10 },
@@ -771,6 +801,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_autocpr = {
+		page = "prices",
 		name = "AutoPulse",
 		default = 1,
 		range = { 0, 10 },
@@ -780,6 +811,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_organcrate = {
+		page = "prices",
 		name = "Refrigerated Crate",
 		default = 1,
 		range = { 0, 10 },
@@ -789,6 +821,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_organtoolbox = {
+		page = "prices",
 		name = "Refrigerated Container",
 		default = 1,
 		range = { 0, 10 },
@@ -798,6 +831,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_medtoolbox = {
+		page = "prices",
 		name = "Medical Container",
 		default = 1,
 		range = { 0, 10 },
@@ -807,6 +841,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_surgerytoolbox = {
+		page = "prices",
 		name = "Surgery Toolbox",
 		default = 1,
 		range = { 0, 10 },
@@ -816,6 +851,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_surgerytoolboxset = {
+		page = "prices",
 		name = "Surgery Toolbox (Kit)",
 		default = 1,
 		range = { 0, 10 },
@@ -825,6 +861,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_medstartercrate = {
+		page = "prices",
 		name = "Medical Starter Crate",
 		default = 1,
 		range = { 0, 10 },
@@ -834,6 +871,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_bodybag = {
+		page = "prices",
 		name = "Bodybag",
 		default = 1,
 		range = { 0, 10 },
@@ -843,6 +881,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_stasisbag = {
+		page = "prices",
 		name = "Stasis Bag",
 		default = 1,
 		range = { 0, 10 },
@@ -852,6 +891,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_wheelchair = {
+		page = "prices",
 		name = "Wheelchair",
 		default = 1,
 		range = { 0, 10 },
@@ -861,6 +901,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_analgesictank = {
+		page = "prices",
 		name = "Analgesic Tank",
 		default = 1,
 		range = { 0, 10 },
@@ -870,6 +911,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_toxfilter = {
+		page = "prices",
 		name = "Toxin Filter",
 		default = 1,
 		range = { 0, 10 },
@@ -879,6 +921,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_dialyzer = {
+		page = "prices",
 		name = "Dialyzer",
 		default = 1,
 		range = { 0, 10 },
@@ -889,11 +932,13 @@ NT.ConfigData = {
 
 	-- ================================= OTHER MEDICINES ========================================
 	NT_ItemPriceHeaderMedicines = {
+		page = "prices",
 		name = "Other Medicine Items Price Multipliers",
 		type = "category",
 	},
 
 	NT_ItemPrice_antibloodloss1 = {
+		page = "prices",
 		name = "Saline",
 		default = 1,
 		range = { 0, 10 },
@@ -903,6 +948,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_opium = {
+		page = "prices",
 		name = "Opium",
 		default = 1,
 		range = { 0, 10 },
@@ -912,6 +958,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antidama2 = {
+		page = "prices",
 		name = "Fentanyl",
 		default = 1,
 		range = { 0, 10 },
@@ -921,6 +968,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_ringerssolution = {
+		page = "prices",
 		name = "Ringer's Solution",
 		default = 1,
 		range = { 0, 10 },
@@ -930,6 +978,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_mannitol = {
+		page = "prices",
 		name = "Mannitol",
 		default = 1,
 		range = { 0, 10 },
@@ -939,6 +988,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_immunosuppressant = {
+		page = "prices",
 		name = "Azathioprine",
 		default = 1,
 		range = { 0, 10 },
@@ -948,6 +998,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_thiamine = {
+		page = "prices",
 		name = "Thiamine",
 		default = 1,
 		range = { 0, 10 },
@@ -957,6 +1008,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_streptokinase = {
+		page = "prices",
 		name = "Streptokinase",
 		default = 1,
 		range = { 0, 10 },
@@ -966,6 +1018,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antinarc = {
+		page = "prices",
 		name = "Naloxone",
 		default = 1,
 		range = { 0, 10 },
@@ -975,6 +1028,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antibiotics = {
+		page = "prices",
 		name = "Broad-Spectrum Antibiotics",
 		default = 1,
 		range = { 0, 10 },
@@ -984,6 +1038,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_adrenaline = {
+		page = "prices",
 		name = "Adrenaline",
 		default = 1,
 		range = { 0, 10 },
@@ -993,6 +1048,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_liquidoxygenite = {
+		page = "prices",
 		name = "Liquid Oxygenite",
 		default = 1,
 		range = { 0, 10 },
@@ -1002,6 +1058,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_deusizine = {
+		page = "prices",
 		name = "Deusizine",
 		default = 1,
 		range = { 0, 10 },
@@ -1011,6 +1068,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antibleeding3 = {
+		page = "prices",
 		name = "Antibiotic Glue",
 		default = 1,
 		range = { 0, 10 },
@@ -1020,6 +1078,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_meth = {
+		page = "prices",
 		name = "Methamphetamine",
 		default = 1,
 		range = { 0, 10 },
@@ -1029,6 +1088,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_hyperzine = {
+		page = "prices",
 		name = "Hyperzine",
 		default = 1,
 		range = { 0, 10 },
@@ -1038,6 +1098,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antipsychosis = {
+		page = "prices",
 		name = "Haloperidol",
 		default = 1,
 		range = { 0, 10 },
@@ -1047,6 +1108,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_antiparalysis = {
+		page = "prices",
 		name = "Anaparalyzant",
 		default = 1,
 		range = { 0, 10 },
@@ -1056,6 +1118,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_nitroglycerin = {
+		page = "prices",
 		name = "Nitroglycerin",
 		default = 1,
 		range = { 0, 10 },
@@ -1066,11 +1129,13 @@ NT.ConfigData = {
 
 	-- ================================= SURGERY TOOLS ========================================
 	NT_ItemPriceHeaderSurgeryTools = {
+		page = "prices",
 		name = "Surgical Tools Price Multipliers",
 		type = "category",
 	},
 
 	NT_ItemPrice_advhemostat = {
+		page = "prices",
 		name = "Hemostat",
 		default = 1,
 		range = { 0, 10 },
@@ -1080,6 +1145,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_advretractors = {
+		page = "prices",
 		name = "Retractors",
 		default = 1,
 		range = { 0, 10 },
@@ -1089,6 +1155,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_surgicaldrill = {
+		page = "prices",
 		name = "Surgical Drill",
 		default = 1,
 		range = { 0, 10 },
@@ -1098,6 +1165,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_surgerysaw = {
+		page = "prices",
 		name = "Surgical Saw",
 		default = 1,
 		range = { 0, 10 },
@@ -1107,6 +1175,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_tweezers = {
+		page = "prices",
 		name = "Tweezers",
 		default = 1,
 		range = { 0, 10 },
@@ -1116,6 +1185,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_traumashears = {
+		page = "prices",
 		name = "Trauma Shears",
 		default = 1,
 		range = { 0, 10 },
@@ -1125,6 +1195,7 @@ NT.ConfigData = {
 	},
 
 	NT_ItemPrice_advscalpel = {
+		page = "prices",
 		name = "Multipurpose Scalpel ",
 		default = 1,
 		range = { 0, 10 },
@@ -1133,13 +1204,16 @@ NT.ConfigData = {
 		resettable = true,
 	},
 
+	-- ================================= DYNAMIC ITEM AVAILABILITY =================================
 	NT_ItemDurabilityHeader = {
+		page = "availability",
 		name = "Change Item Use Amounts",
 		type = "category",
 	},
 
 	NT_OsteoImplants_uses = {
 		name = "Osteosynthesis Implant Uses",
+		page = "availability",
 		default = 4,
 		range = { 1, 10 },
 		type = "float",
@@ -1148,6 +1222,7 @@ NT.ConfigData = {
 	},
 
 	NT_SpinalImplants_uses = {
+		page = "availability",
 		name = "Spinal Cord Implant Uses",
 		default = 1,
 		range = { 0.99, 10 },
@@ -1156,8 +1231,8 @@ NT.ConfigData = {
 		resettable = true,
 	},
 
-	-- ================================= DYNAMIC ITEM AVAILABILITY =================================
 	NT_HardmodeAorticRupture = {
+		page = "availability",
 		name = "Hardmode Aortic Rupture",
 		default = false,
 		type = "bool",
@@ -1165,6 +1240,7 @@ NT.ConfigData = {
 	},
 
 	NT_DoNitroprusside = {
+		page = "availability",
 		name = "Enable Sodium Nitroprusside",
 		default = false,
 		type = "bool",
@@ -1172,6 +1248,7 @@ NT.ConfigData = {
 	},
 
 	NT_DoAntisepticSprayer = {
+		page = "availability",
 		name = "Enable Antiseptic Sprayer",
 		default = false,
 		type = "bool",
