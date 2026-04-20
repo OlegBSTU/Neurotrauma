@@ -217,7 +217,6 @@
             <RequiredSkill identifier="medical" level="20" />
             <RequiredSkill identifier="mechanical" level="30" />
             <RequiredItem identifier="steel" />
-            <RequiredItem identifier="titaniumaluminiumalloy" />
         </Fabricate>
 
         <Deconstruct time="10">
