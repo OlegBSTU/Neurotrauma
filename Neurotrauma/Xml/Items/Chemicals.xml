@@ -7,7 +7,7 @@
         <PreferredContainer primary="medcab" minamount="0" maxamount="0"/>
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.25"/>
 
-        <Price baseprice="50">
+        <Price baseprice="100">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="15"/>
         </Price>
 
@@ -122,7 +122,7 @@
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
         </Price>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20" amount="3">
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20" amount="2">
             <RequiredSkill identifier="medical" level="50"/>
             <RequiredItem identifier="ethanol"/>
             <RequiredItem identifier="phosphorus"/>
@@ -165,11 +165,11 @@
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.05"/>
         <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
 
-        <Price baseprice="100" soldbydefault="false">
+        <Price baseprice="70" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
         </Price>
 
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="25" amount="5">
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="25" amount="3">
             <RequiredSkill identifier="medical" level="40"/>
             <RequiredItem identifier="carbon" amount="2"/>
             <RequiredItem identifier="sulphuricacid"/>
@@ -209,7 +209,7 @@
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.10"/>
         <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
 
-        <Price baseprice="100" soldbydefault="false">
+        <Price baseprice="120" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
 
@@ -594,7 +594,7 @@
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.25"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.15"/>
 
-        <Price baseprice="60" CanBeSpecial="false">
+        <Price baseprice="100" CanBeSpecial="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
         </Price>
 
