@@ -128,7 +128,7 @@
             <Item identifier="steel" amount="2"/>
         </Fabricate>
        
-        <Price baseprice="25">
+        <Price baseprice="80">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
         </Price>
         
@@ -256,7 +256,7 @@
     </Item>
 
     <Item name="" identifier="medstartercrate" tags="crate" scale="0.4" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true" description="">
-        <Price baseprice="600">
+        <Price baseprice="700">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
         </Price>
        
@@ -264,11 +264,11 @@
         
         <Fabricate suitablefabricators="fabricator" requiredtime="10">
             <RequiredSkill identifier="mechanical" level="20" />
-            <Item identifier="steel" amount="8"/>
+            <Item identifier="steel" amount="6"/>
             <Item identifier="copper" amount="2"/>
             <Item identifier="zinc" amount="3"/>
             <Item identifier="organicfiber" amount="6"/>
-            <Item identifier="plastic" amount="8"/>
+            <Item identifier="plastic" amount="6"/>
         </Fabricate>
         
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" depth="0.54" sourcerect="158,578,146,82" origin="0.5,0.5" />
@@ -361,7 +361,7 @@
     </Item>
     
     <Item name="" identifier="stasisbag" category="Equipment" useinhealthinterface="True" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbagequipconfirmation">
-        <Price baseprice="1500" soldbydefault="false">
+        <Price baseprice="700" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
         </Price>
        
