@@ -15,7 +15,11 @@ end)
 
 -- Recreate stores command to make sure newly added items are actually in stores
 Game.AddCommand("nt_recreatestores", "Recreate all stores.", function()
-	for location in Game.GameSession.Map.Locations do
-		location.CreateStores(true)
+	if Game.GameSession.Map ~= nil then
+		for location in Game.GameSession.Map.Locations do
+			location.CreateStores(true)
+		end
+	else
+		print("nt_recreatestores: Tried to recreate stores in the campaign map, but there is none!")
 	end
 end)
