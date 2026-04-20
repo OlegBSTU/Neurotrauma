@@ -6,7 +6,7 @@ NT.UpdateInterval = 120
 NT.Deltatime = NT.UpdateInterval / 60 -- Time in seconds that transpires between updates
 
 Hook.Add("think", "NT.update", function()
-	if HF.GameIsPaused() then return end
+	if HF.GameIsPaused() or not Game.RoundStarted then return end
 
 	NT.UpdateCooldown = NT.UpdateCooldown - 1
 	if NT.UpdateCooldown <= 0 then
@@ -52,10 +52,12 @@ function NT.Update()
 
 	-- we spread the monsters out over the duration of an update so that the load isnt done all at once
 	for key, value in pairs(updateMonsters) do
-		-- make sure theyre still alive
+		-- make sure theyre still alive and not human
 		if value ~= nil and not value.Removed and not value.IsDead then
 			Timer.Wait(function()
-				if value ~= nil and not value.Removed and not value.IsDead then NT.UpdateMonster(value) end
+				if value ~= nil and not value.Removed and not value.IsDead and not value.IsHuman then
+					NT.UpdateMonster(value)
+				end
 			end, ((key + 1) / amountMonsters) * NT.Deltatime * 1000)
 		end
 	end

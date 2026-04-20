@@ -547,7 +547,6 @@ NT.SutureAfflictions = {
 	},
 
 	arteriesclamp = { xpgain = 0, case = "retractedskin" },
-	tamponade = { xpgain = 3, case = "retractedskin" },
 	internalbleeding = { xpgain = 3, case = "retractedskin" },
 	stroke = { xpgain = 6, case = "retractedskin" },
 
@@ -1773,6 +1772,12 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 	end
 end
 
+-- This makes it so we don't have to override the item to add a new affliction.
+-- needlec doesn't go in here, since in prior versions it alone, wouldn't allow drainage.
+NT.DrainageAfflictions = {
+	pneumothorax = { xpgain = 3, case = "retractedskin" },
+	tamponade = { xpgain = 3, case = "retractedskin" },
+}
 -- Drainage
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
@@ -1780,22 +1785,42 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	-- Stasis check
 	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
 
-	if
-		limbtype == LimbType.Torso
-		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype)
-		and HF.HasAffliction(targetCharacter, "pneumothorax")
-	then
-		HF.SetAffliction(targetCharacter, "pneumothorax", 0, usingCharacter)
-		HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter)
+	local function removeAfflictionPlusGainSkill(affidentifier, skillgain)
+		if HF.HasAfflictionLimb(targetCharacter, affidentifier, limbtype) then
+			HF.SetAfflictionLimb(targetCharacter, affidentifier, limbtype, 0, usingCharacter)
 
-		if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then HF.RemoveItem(item) end
-
-		if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-			HF.GiveSkillScaled(usingCharacter, "surgery", 12000)
-		else
-			HF.GiveSkillScaled(usingCharacter, "medical", 6000)
+			HF.GiveSurgerySkill(usingCharacter, skillgain)
 		end
 	end
+
+	local function removeAfflictionNonLimbSpecificPlusGainSkill(affidentifier, skillgain)
+		if HF.HasAffliction(targetCharacter, affidentifier) then
+			HF.SetAffliction(targetCharacter, affidentifier, 0, usingCharacter)
+
+			HF.GiveSurgerySkill(usingCharacter, skillgain)
+		end
+	end
+
+	for key, value in pairs(NT.DrainageAfflictions) do
+		local prefab = AfflictionPrefab.Prefabs[key]
+
+		if prefab ~= nil and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype)) then
+			if value.func ~= nil then
+				value.func(item, usingCharacter, targetCharacter, limb)
+			else
+				local skillgain = value.xpgain or 0
+
+				if prefab.LimbSpecific then
+					removeAfflictionPlusGainSkill(key, skillgain)
+				elseif prefab.IndicatorLimb == limbtype then
+					removeAfflictionNonLimbSpecificPlusGainSkill(key, skillgain)
+				end
+			end
+		end
+	end
+	HF.SetAffliction(targetCharacter, "needlec", 0, usingCharacter) -- This is seperate, since it shouldnt allow a drainage.
+
+	if HF.Chance(NTC.GetMultiplier(usingCharacter, "drainageconsumechance")) then HF.RemoveItem(item) end
 end
 
 -- Needle

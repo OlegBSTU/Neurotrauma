@@ -28,7 +28,7 @@
     </Item>
     
     <Item name="" identifier="organtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,refrigerated,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1"/>
         <PreferredContainer secondary="locker"/>
         
         <Price baseprice="100">
@@ -78,7 +78,7 @@
     </Item>
    
     <Item name="" identifier="medtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab"/>
+        <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
         <PreferredContainer secondary="locker"/>
         
         <Deconstruct time="10">
@@ -210,7 +210,7 @@
     </Item>
 
     <Item name="" identifier="surgerytoolboxsetstarter" nameidentifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab" minamount="3" maxamount="3" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
         <PreferredContainer secondary="locker"/>
        
         <Deconstruct time="10">
