@@ -1832,15 +1832,23 @@ NT.ItemMethods.needle = function(item, usingCharacter, targetCharacter, limb)
 
 	if limbtype == LimbType.Torso and not HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype) then
 		if HF.GetSkillRequirementMet(usingCharacter, "medical", 20) then
+			-- If Pneumothorax OR!! Cardiac Tamponade is present, give skill!
 			if
-				HF.HasAffliction(targetCharacter, "pneumothorax")
+				(HF.HasAffliction(targetCharacter, "pneumothorax") or HF.HasAffliction(targetCharacter, "tamponade"))
 				and not HF.HasAffliction(targetCharacter, "needlec", 0.1)
 			then
 				HF.GiveSkillScaled(usingCharacter, "medical", 4000)
 			end
 
 			HF.SetAffliction(targetCharacter, "needlec", 100, usingCharacter)
-			HF.AddAffliction(targetCharacter, "pneumothorax", 1, usingCharacter)
+
+			-- If no Pneumothorax OR!!! Cardiac Tamponade is present, give Pneumothorax.
+			if
+				not HF.HasAffliction(targetCharacter, "pneumothorax")
+				and not HF.HasAffliction(targetCharacter, "tamponade")
+			then
+				HF.AddAffliction(targetCharacter, "pneumothorax", 1, usingCharacter)
+			end
 
 			if HF.Chance(NTC.GetMultiplier(usingCharacter, "needleconsumechance")) then HF.RemoveItem(item) end
 		else
