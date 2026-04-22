@@ -1204,5 +1204,15 @@ function HF.DynamicUnavailableItems()
 		blockedItems["antiseptic"] = true
 	end
 
+	-- Organ scalpels
+	if NTConfig.Get("NT_DoOrganScalpels", false) == false then
+		blockedItems["organscalpel_liver"] = true
+		blockedItems["organscalpel_kidneys"] = true
+		blockedItems["organscalpel_heart"] = true
+		blockedItems["organscalpel_lungs"] = true
+		blockedItems["organscalpel_brain"] = true
+		blockedItems["surgerytoolboxsetscalpel"] = true
+	end
+
 	return blockedItems
 end

@@ -209,6 +209,62 @@
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     </Item>
 
+    <Item name="" identifier="surgerytoolboxsetscalpel" nameidentifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
+        <PreferredContainer secondary="locker"/>
+       
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+        </Deconstruct>
+       
+        <Fabricate suitablefabricators="fabricator" displayname="surgerysetscalpel" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="30" />
+            <Item identifier="steel" amount="2"/>
+            <Item identifier="zinc" amount="2"/>
+            <Item identifier="fpgacircuit" amount="1"/>
+            <Item identifier="titaniumaluminiumalloy" amount="1"/>
+        </Fabricate>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="259,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="45" height="30" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,14" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="1" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+       
+        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="organscalpel_liver" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="organscalpel_kidneys" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="organscalpel_heart" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="organscalpel_lungs" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="organscalpel_brain" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
+       
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
+
     <Item name="" identifier="surgerytoolboxsetstarter" nameidentifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
         <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
         <PreferredContainer secondary="locker"/>

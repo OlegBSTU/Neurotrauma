@@ -1254,6 +1254,14 @@ NT.ConfigData = {
 		type = "bool",
 		description = "Allow Antiseptic and the Antiseptic Sprayer to be fabricated, bought and found.",
 	},
+
+	NT_DoOrganScalpels = {
+		page = "availability",
+		name = "Enable Organ Scalpels",
+		default = false,
+		type = "bool",
+		description = "Allow Organ scalpels and Surgery Box Scalpel set to be fabricated, bought and found.",
+	},
 }
 
 NTConfig.AddConfigOptions(NT)

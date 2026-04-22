@@ -24,7 +24,6 @@
         <SkillRequirementHint identifier="medical" level="30"/>
     </Item>
 
-
     <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer primary="locker"/>
@@ -81,6 +80,121 @@
                 </StatusEffect>
             </Button>
         </CustomInterface>
+    </Item>
+
+    <Item name="" identifier="organscalpel_liver" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <Price baseprice="35" soldbydefault="true">
+        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
+      </Price>
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+        <!-- extracting organ -->
+        <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+          <Conditional retractedskin="gte 1" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="surgery" level="40" />
+    </Item>
+
+    <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <Price baseprice="35" soldbydefault="true">
+        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
+      </Price>
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+        <!-- extracting organ -->
+        <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+          <Conditional retractedskin="gte 1" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="surgery" level="30" />
+    </Item>
+
+    <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <Price baseprice="35" soldbydefault="true">
+        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
+      </Price>
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+        <!-- extracting organ -->
+        <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+          <Conditional retractedskin="gte 1" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="surgery" level="50" />
+    </Item>
+
+    <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <Price baseprice="35" soldbydefault="true">
+        <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
+      </Price>
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+        <!-- extracting organ -->
+        <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+          <Conditional retractedskin="gte 1" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="surgery" level="60" />
+    </Item>
+
+    <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1"/>
+      <Price baseprice="200" soldbydefault="true">
+        <Price locationtype="research" multiplier="1" sold="true" minavailable="6" />
+      </Price>
+      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="50" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
+        <!-- extracting organ -->
+        <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+          <Conditional retractedskin="gte 1" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="surgery" level="100" />
     </Item>
 </Items>
 </Override>
