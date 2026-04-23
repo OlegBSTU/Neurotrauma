@@ -21,7 +21,6 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
         dofile(NTS.Path.."/Lua/Scripts/humanupdate.lua")
         dofile(NTS.Path.."/Lua/Scripts/items.lua")
-        dofile(NTS.Path.."/Lua/Scripts/testing.lua")
 
     end,1)
 
