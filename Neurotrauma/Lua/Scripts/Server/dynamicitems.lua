@@ -9,7 +9,7 @@ local function DynamicRemoveItems()
 end
 
 -- On level swap, remove any items that shouldn't be there
-Hook.Add("roundStart", "nt_dynamicremoveitems", function()
+Hook.Add("roundEnd", "nt_dynamicremoveitems", function()
 	DynamicRemoveItems()
 end)
 
