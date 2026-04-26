@@ -545,6 +545,14 @@ NT.SutureAfflictions = {
 			return not NTConfig.Get("NT_HardmodeAorticRupture", false)
 		end,
 	},
+	tamponade = {
+		xpgain = 3,
+		case = "retractedskin",
+		-- If Open Close Tamponade is turned on, enable open/close fixing it
+		condition = function()
+			return NTConfig.Get("NT_OpenCloseTamponade", false)
+		end,
+	},
 
 	arteriesclamp = { xpgain = 0, case = "retractedskin" },
 	internalbleeding = { xpgain = 3, case = "retractedskin" },
@@ -1776,7 +1784,14 @@ end
 -- needlec doesn't go in here, since in prior versions it alone, wouldn't allow drainage.
 NT.DrainageAfflictions = {
 	pneumothorax = { xpgain = 3, case = "retractedskin" },
-	tamponade = { xpgain = 3, case = "retractedskin" },
+	tamponade = {
+		xpgain = 3,
+		case = "retractedskin",
+		-- If Open Close Tamponade is turned on, disable drainage fixing it
+		condition = function()
+			return not NTConfig.Get("NT_OpenCloseTamponade", false)
+		end,
+	},
 }
 -- Drainage
 NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
@@ -1804,7 +1819,12 @@ NT.ItemMethods.drainage = function(item, usingCharacter, targetCharacter, limb)
 	for key, value in pairs(NT.DrainageAfflictions) do
 		local prefab = AfflictionPrefab.Prefabs[key]
 
-		if prefab ~= nil and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype)) then
+		if
+			prefab ~= nil
+			and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype))
+			-- Additional check for config
+			and (value.condition == nil or value.condition(item, usingCharacter, targetCharacter, limb))
+		then
 			if value.func ~= nil then
 				value.func(item, usingCharacter, targetCharacter, limb)
 			else

@@ -1239,6 +1239,14 @@ NT.ConfigData = {
 		description = "Enable the Medical Stent and Aortic Balloon as the only method to fix Aortic Rupture.",
 	},
 
+	NT_OpenCloseTamponade = {
+		page = "availability",
+		name = "Open Close Tamponade",
+		default = false,
+		type = "bool",
+		description = "Enable the closing with sutures as the only method to fix Cardiac Tamponade.",
+	},
+
 	NT_DoNitroprusside = {
 		page = "availability",
 		name = "Enable Sodium Nitroprusside",
