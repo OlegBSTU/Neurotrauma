@@ -1467,8 +1467,8 @@ NT.LimbAfflictions = {
 	-- damage
 	bleeding = {
 		update = function(c, limbaff, i)
-			if limbaff[i].strength > 0 and math.abs(c.stats.clottingrate - 1) > 0.05 then
-				limbaff[i].strength = limbaff[i].strength - (c.stats.clottingrate - 1) * 0.1 * NT.Deltatime
+			if limbaff[i].strength > 0 then
+				limbaff[i].strength = limbaff[i].strength - c.stats.clottingrate * 0.1 * NT.Deltatime
 			end
 		end,
 	},
