@@ -102,7 +102,7 @@ Hook.Patch("Barotrauma.Store", "FilterStoreItems", {
 				end
 			end
 		end
-	end, 0)
+	end, 10)
 end, Hook.HookMethodType.After)
 
 -- Force config sync on level swap to ensure things go properly
