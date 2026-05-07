@@ -415,8 +415,14 @@ function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggress
 	local affliction = prefab.Instantiate(strength, aggressor)
 	local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
 
+    local limb = character.AnimController.GetLimb(limbtype)
+  
+    if limb == nil then
+        return
+    end
+
 	character.CharacterHealth.ApplyAffliction(
-		character.AnimController.GetLimb(limbtype),
+		limb,
 		affliction,
 		false,
 		false,
