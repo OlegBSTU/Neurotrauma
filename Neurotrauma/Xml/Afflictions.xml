@@ -1352,7 +1352,7 @@
 
     <PeriodicEffect mininterval="60" maxinterval="120">
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
-        <Conditional bandage="lte 0" />
+        <Conditional bandaged="eq 0" dirtybandage="eq 0" />
         <Conditional pneumothorax="eq 0"/>
         <Affliction identifier="pneumothorax" amount="5" probability="0.3" />
       </StatusEffect>
@@ -1385,14 +1385,14 @@
 
     <PeriodicEffect mininterval="1" maxinterval="1">
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" targetlimb="Head" disabledeltatime="true">
-        <Conditional bandage="lte 0"/>
+        <Conditional bandaged="eq 0" dirtybandage="eq 0" />
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
       </StatusEffect>
     </PeriodicEffect>
 
     <PeriodicEffect mininterval="20" maxinterval="50">
       <StatusEffect target="Character" targetlimbs="Head" multiplyafflictionsbymaxvitality="true" comparison="And">
-        <Conditional bandage="lte 0" />
+        <Conditional bandaged="eq 0" dirtybandage="eq 0" />
         <Conditional n_fracture="gte 100"/>
         <Affliction identifier="t_paralysis" amount="5" />
       </StatusEffect>
