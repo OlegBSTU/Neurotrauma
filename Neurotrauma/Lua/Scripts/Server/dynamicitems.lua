@@ -4,7 +4,7 @@ local function DynamicRemoveItems()
 
 	for _, item in pairs(Item.ItemList) do
 		local id = item.Prefab.Identifier.Value
-		if blockedItems[id] then Entity.Spawner.AddEntityToRemoveQueue(item) end
+		if blockedItems[id] then item.Remove() end
 	end
 end
 
