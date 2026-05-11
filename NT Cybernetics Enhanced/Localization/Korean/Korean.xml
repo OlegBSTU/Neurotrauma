@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Korean" nowhitespace="false" translatedname="Korean">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>사이버 팔</entityname.cyberarm>
+<entitydescription.cyberarm>금속과 전자부품으로 만들어진 팔. 피가 나지 않습니다. 해당 부위를 절단한 후 설치하십시오.</entitydescription.cyberarm>
+
+<entityname.cyberleg>사이버 다리</entityname.cyberleg>
+<entitydescription.cyberleg>금속과 전자부품으로 만든 다리. 피가 나지 않습니다. 해당 부위를 절단한 후 설치하십시오.</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>사이버 팔</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>팔이 금속과 전자부품으로 만들어졌습니다.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>사이버 다리</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>다리가 금속과 전자부품으로 만들어졌습니다.</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>나사가 느슨함</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>일부 나사는 떨어질 위험이 있습니다. 팔다리를 움직일 때 덜그럭거리는 소리가 들립니다.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>전자부품 손상</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>팔다리에서 때때로 전기 스파크가 튑니다. 일부 하위 시스템이 중단을 보고합니다.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>금속이 구부러짐</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>팔다리가 의도하지 않은 방향으로 구부러져 있습니다.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>부품 소실</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>팔다리의 일부 부품이 보이지 않습니다.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Turkish" nowhitespace="false" translatedname="Türkçe">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Siber Kol</entityname.cyberarm>
+<entitydescription.cyberarm>Metal ve elektronikten yapılmış bir kol. Kanamıyor. Yüklemek için ampütasyondan sonra kullanın.</entitydescription.cyberarm>
+
+<entityname.cyberleg>siber bacak</entityname.cyberleg>
+<entitydescription.cyberleg>Metal ve elektronikten yapılmış bir bacak. Kanamıyor. Yüklemek için ampütasyondan sonra kullanın.</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Siber Kol</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>Kol metal ve elektronikten yapılmıştır</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Siber Bacak</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>Bacak metal ve elektronikten yapılmıştır</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>Gevşek Vidalar</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Bazı vidalar düşmeye tehlikeli derecede yakın görünüyor. Uzuv hareket ettirilirken tıkırtı duyulabilir.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Hasarlı elektronikler</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>Uzuv bazen elektrik kıvılcımları yayar. Bazı alt sistemler kesintiler bildiriyor.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Bükülmüş Metal</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>Uzuv istenmeyen bir yönde bükülüyor.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Materyal Kaybı</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Uzuvun parçaları gitti.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

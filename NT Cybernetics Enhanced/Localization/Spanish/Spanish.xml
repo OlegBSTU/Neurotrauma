@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Brazo cibernético</entityname.cyberarm>
+<entitydescription.cyberarm>Un brazo hecho de metal y electrónicos. No sangra. Usar después de una amputación para instalar.</entitydescription.cyberarm>
+
+<entityname.cyberleg>Pierna cibernética</entityname.cyberleg>
+<entitydescription.cyberleg>Una pierna fabricada en metal y electrónicos. No sangra. Usar después de una amputación para instalar.</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Brazo cibernético</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>El brazo está hecho de metal y electrónicos.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Pierna cibernética</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>La pierna está hecha de metal y electrónicos.</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>Tornillos sueltos</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Algunos tornillos parecen estar peligrosamente cerca de caerse. Se puede escuchar traqueteo al mover la extremidad.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Electrónica dañada</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>La extremidad ocasionalmente emite chispas de electricidad. Algunos subsistemas están informando interrupciones.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Metal doblado</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>La extremidad se dobla en una dirección no deseada.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Pérdida material</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Partes de la extremidad se han ido.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

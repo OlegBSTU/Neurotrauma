@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Кибернетическая рука</entityname.cyberarm>
+<entitydescription.cyberarm>Рука из сплавов и электроники. Быстрее оригинала и не кровоточит. Используйте после ампутации для установки.</entitydescription.cyberarm>
+
+<entityname.cyberleg>Кибернетическая нога</entityname.cyberleg>
+<entitydescription.cyberleg>Нога из сплавов и электроники. Быстрее оригинала и не кровоточит. Используйте после ампутации для установки.</entitydescription.cyberleg>
+
+<entityname.waterproofcyberarm>Водонепроницаемая кибернетическая рука</entityname.waterproofcyberarm>
+<entitydescription.waterproofcyberarm>Водонепроницаемая рука из сплавов и электроники. Быстрее оригинала и не кровоточит. Используйте после ампутации для установки.</entitydescription.waterproofcyberarm>
+
+<entityname.waterproofcyberleg>Водонепроницаемая кибернетическая нога</entityname.waterproofcyberleg>
+<entitydescription.waterproofcyberleg>Водонепроницаемая нога из сплавов и электроники. Быстрее оригинала и не кровоточит. Используйте после ампутации для установки.</entitydescription.waterproofcyberleg>
+
+
+<entityname.augmentedliver>Кибер-аугментированая печень</entityname.augmentedliver>
+<entitydescription.augmentedliver>Частично синтетическая печень. Улучшенная система фильтрации крови, эффективно выводящая токсины и усиливающая иммунную защиту. Устанавливается после удаления оригинального органа.</entitydescription.augmentedliver>
+<entityname.augmentedkidney>Кибер-аугментированая почка</entityname.augmentedkidney>
+<entitydescription.augmentedkidney>Частично синтетическая почка. Улучшает кроветворение, свёртываемость и изменяет группу крови на С+ для полной совместимости с киберимплантами. Устанавливается после удаления оригинального органа.</entitydescription.augmentedkidney>
+<entityname.augmentedheart>Кибер-аугментированое сердце</entityname.augmentedheart>
+<entitydescription.augmentedheart>Частично синтетическое сердце. Ускоряет работу мышц и нормализует кровяное давление. Устанавливается после удаления оригинального органа.</entitydescription.augmentedheart>
+<entityname.augmentedlung>Кибер-аугментированые легкие</entityname.augmentedlung>
+<entitydescription.augmentedlung>Частично синтетические легкие. Повышающают кислородную ёмкость, ускоряют мышцы и имеют устойчивость к перепадам давления. Устанавливается после удаления оригинального органа.</entitydescription.augmentedlung>
+<entityname.augmentedbrain>Кибер-аугментированый мозговой имплант</entityname.augmentedbrain>
+<entitydescription.augmentedbrain>Чип нейронного дополнения для мозга. Повышает навыки и устраняющий необходимость в анестезии при операциях. Встраивается напрямую в мозг пациента.</entitydescription.augmentedbrain>
+
+<entityname.cyberliver>Кибернетическая печень</entityname.cyberliver>
+<entitydescription.cyberliver>Полностью синтетическая печень. Первоклассная система фильтрации крови, эффективно выводящая токсины и усиливающая иммунную защиту. Устанавливается после удаления оригинального органа.</entitydescription.cyberliver>
+<entityname.cyberkidney>Кибернетическая почка</entityname.cyberkidney>
+<entitydescription.cyberkidney>Полностью синтетическая почка. Передовая нанотехнология улучшает кроветворение, свёртываемость и изменяет группу крови на С+ для полной совместимости с киберимплантами. Устанавливается после удаления оригинального органа.</entitydescription.cyberkidney>
+<entityname.cyberheart>Кибернетическое сердце</entityname.cyberheart>
+<entitydescription.cyberheart>Полностью синтетическое сердце. Высокотехнологичная система кровообращения, ускоряющая работу мышц и нормализующая кровяное давление. Устанавливается после удаления оригинального органа.</entitydescription.cyberheart>
+<entityname.cyberlung>Кибернетические легкие</entityname.cyberlung>
+<entitydescription.cyberlung>Полностью синтетические легкие. Продвинутая дыхательная система, повышающая кислородную ёмкость, ускоряют мышцы и имеют устойчивость к перепадам давления. Устанавливается после удаления оригинального органа.</entitydescription.cyberlung>
+<entityname.cyberbrain>Кибернетический позитронный имплант</entityname.cyberbrain>
+<entitydescription.cyberbrain>Позитронный имплантат кибермозга. Высокотехнологичный чипсет, повышает навыки и устраняющий необходимость в анестезии при операциях. Встраивается напрямую в мозг пациента.</entitydescription.cyberbrain>
+
+
+<entityname.bloodpackabcplus>Пакет с кровью C+</entityname.bloodpackabcplus>
+<entitydescription.bloodpackabcplus>Можно переливать: C+</entitydescription.bloodpackabcplus>
+<entityname.abcpluscard>Карточка донора C+</entityname.abcpluscard>
+<entitydescription.abcpluscard>Может получать кровь любого типа
+Может быть донором для: C+</entitydescription.abcpluscard>
+
+<entityname.immunosuppressantinhaler>Ингалятор с иммунодепрессантами</entityname.immunosuppressantinhaler>
+<entitydescription.immunosuppressantinhaler>Угнетает иммунную систему, чтобы уменьшить симптомы киберпсихоза, вызванного избытком кибернетических имплантатов.</entitydescription.immunosuppressantinhaler>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Кибернетическая рука</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>Рука сделана из металла и электроники.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Кибернетическая нога</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>Нога сделана из металла и электроники.</afflictiondescription.ntc_cyberleg>
+
+<afflictionname.ntc_waterproof>Водонепроницаемая</afflictionname.ntc_waterproof>
+<afflictiondescription.ntc_waterproof>Конечность не подвержена пагубному воздействию воды.</afflictiondescription.ntc_waterproof>
+
+<afflictionname.ntc_cyberlung_pressure_recovery>Кибернетические легкие под давлением</afflictionname.ntc_cyberlung_pressure_recovery>
+<afflictiondescription.ntc_cyberlung_pressure_recovery>Кибернетические легкие сопротивляются сильному давлению, ненадолго предотвращая имплозию.</afflictiondescription.ntc_cyberlung_pressure_recovery>
+<afflictiondescription.ntc_cyberlung_pressure_recovery.low>Кибернетические легкие выдержали сильное давление и приступили к самовосстановлению.</afflictiondescription.ntc_cyberlung_pressure_recovery.low>
+
+
+<afflictionname.ntc_loosescrews>Незатянутый болт</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Некоторые болты волнительно близки к выпаданию. При движении конечностью можно услышать дребезжание.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Повреждённая электроника</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>Конечность время от времени искрит. Некоторые подсистемы выведены из строя.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Погнутый металл</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>Конечность гнётся не туда куда нужно.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Потеря материала</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Части конечности отсутствуют.</afflictiondescription.ntc_materialloss>
+
+<afflictionname.immunosuppressantinhaler>Иммунодепрессант от ингалятора</afflictionname.immunosuppressantinhaler>
+<afflictiondescription.immunosuppressantinhaler></afflictiondescription.immunosuppressantinhaler>
+
+</infotexts>

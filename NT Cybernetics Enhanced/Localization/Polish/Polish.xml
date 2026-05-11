@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Cyber-ramię</entityname.cyberarm>
+<entitydescription.cyberarm>Wstawaj samuraju. Mamy miasto do spalenia.</entitydescription.cyberarm>
+
+<entityname.cyberleg>Cyber-noga</entityname.cyberleg>
+<entitydescription.cyberleg>Noga wykonana z metalu i elektroniki. Nie krwawi. Użyj po amputacji aby zainstalować.</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Cyber-ramię</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>Ramię jest wykonane z metalu i elektroniki.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Cyber-noga</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>Noga jest wykonana z metalu i elektroniki.</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>Poluzowane śruby</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Niektóre śruby są bliskie wypadnięcia. Podczas poruszania kończyną słychać stukanie.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Uszkodzona elektronika</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>Kończyna od czasu do czasu emituje iskry elektryczne. Niektóre podsystemy zgłaszają awarie.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Zgięty metal</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>Kończyna zgina się w niezamierzonym kierunku.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Utrata materiału</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Brakuje pewnej części cyber-kończyny.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

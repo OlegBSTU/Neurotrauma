@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="French" nowhitespace="false" translatedname="Français">
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Cyberbras</entityname.cyberarm>
+<entitydescription.cyberarm>Un bras électronique en métal. Ne saigne pas. À utiliser après amputation pour l'installer.</entitydescription.cyberarm>
+
+<entityname.cyberleg>Cyberjambe</entityname.cyberleg>
+<entitydescription.cyberleg>Une jambe électronique en métal. Ne saigne pas. À utiliser après amputation pour l'installer.</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Cyberbras</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>Le bras est fait de métal et de parties électroniques.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Cyberjambe</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>La jambe est faite de métal et de parties électroniques.</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>Vis desserrées</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Certaines vis semblent être dangereusement proches de tomber. Des cliquetis peuvent être entendus quand le membre bouge.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Électronique endommagée</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>Le membre émet occasionnellement des étincelles. Certains sous-systèmes signalent des pannes.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Métal tordu</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>Le membre se plie dans une direction inhabituelle.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Perte matérielle</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Des parties du membre ont disparu.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

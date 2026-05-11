@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+  <Item name="" identifier="cyberarm" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" />
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+    <PreferredContainer primary="locker"/>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70"/>
+      <RequiredSkill identifier="medical" level="20"/>
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
+      <RequiredItem identifier="steel" amount="4"/>
+      <RequiredItem identifier="fpgacircuit" amount="4"/>
+      <RequiredItem identifier="fulgurium"/>
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy"/>
+      <Item identifier="steel" amount="3"/>
+      <Item identifier="fpgacircuit" amount="3"/>
+      <Item identifier="fulgurium"/>
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5"/>
+    <Body width="114" height="23" density="50"/>
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
+  <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
+      <Price storeidentifier="merchantmedical" sold="true" />
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
+    <PreferredContainer primary="locker" />
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="cyberarm" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="plastic" amount="3"/>
+      <RequiredItem identifier="rubber" amount="4" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" amount="3" />
+      <Item identifier="fpgacircuit" amount="3" />
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="plastic" amount="2"/>
+      <Item identifier="rubber" amount="2"/>
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Body width="114" height="23" density="50" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
+  <Item name="" identifier="cyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" />
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+    <PreferredContainer primary="locker"/>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70"/>
+      <RequiredSkill identifier="medical" level="20"/>
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
+      <RequiredItem identifier="steel" amount="4"/>
+      <RequiredItem identifier="fpgacircuit" amount="4"/>
+      <RequiredItem identifier="fulgurium"/>
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy"/>
+      <Item identifier="steel" amount="3"/>
+      <Item identifier="fpgacircuit" amount="3"/>
+      <Item identifier="fulgurium"/>
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5"/>
+    <Body width="30" height="115" density="50"/>
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
+  <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
+          Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
+      <Price storeidentifier="merchantmedical" sold="true" />
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.1"/>
+    <PreferredContainer primary="locker"/>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="cyberleg" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="plastic" amount="3" />
+      <RequiredItem identifier="rubber" amount="4" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy"/>
+      <Item identifier="steel" amount="3"/>
+      <Item identifier="fpgacircuit" amount="3"/>
+      <Item identifier="fulgurium" amount="2"/>
+      <Item identifier="plastic" amount="2"/>
+      <Item identifier="rubber" amount="2"/>
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5"/>
+    <Body width="30" height="115" density="50"/>
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+
+  <Item name="" identifier="augmentedliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
+    <Body width="39" height="18" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem tag="liver" mincondition="0.50" usecondition="false" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="fpgacircuit" amount="1" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="1" />
+      <Item identifier="fpgacircuit" amount="1" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.125">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.05" comparison="and">
+        <Conditional condition="gte 80" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <LuaHook name="NT.RotOrgan" />
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="liverremoved" suitability="90"/>
+  </Item>
+  <Item name="" identifier="cyberliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
+    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
+    <Body width="39" height="18" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="90" />
+      <RequiredSkill identifier="medical" level="80" />
+      <RequiredItem identifier="fulgurium" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="3" />
+      <RequiredItem identifier="stabilozine" amount="3" />
+      <RequiredItem identifier="plastic" amount="3" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="3" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="plastic" amount="3" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="liverremoved" suitability="100"/>
+  </Item>
+
+  <Item name="" identifier="augmentedkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="20" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem tag="kidney" mincondition="0.30" usecondition="false" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="fpgacircuit" amount="1" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="1" />
+      <Item identifier="fpgacircuit" amount="1" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.125">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.05" comparison="and">
+        <Conditional condition="gte 80" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <LuaHook name="NT.RotOrgan" />
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="kidneyremoved" suitability="90"/>
+  </Item>
+  <Item name="" identifier="cyberkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
+    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="20" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="90" />
+      <RequiredSkill identifier="medical" level="80" />
+      <RequiredItem identifier="fulgurium" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="3" />
+      <RequiredItem identifier="stabilozine" amount="3" />
+      <RequiredItem identifier="plastic" amount="3" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="3" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="plastic" amount="3" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="kidneyremoved" suitability="100"/>
+  </Item>
+
+  <Item name="" identifier="augmentedlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
+    <Body width="30" height="30" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem tag="lung" mincondition="0.50" usecondition="false" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="fpgacircuit" amount="1" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="1" />
+      <Item identifier="fpgacircuit" amount="1" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.125">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.05" comparison="and">
+        <Conditional condition="gte 80" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <LuaHook name="NT.RotOrgan" />
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="lungremoved" suitability="90"/>
+  </Item>
+  <Item name="" identifier="cyberlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
+    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
+    <Body width="30" height="30" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="90" />
+      <RequiredSkill identifier="medical" level="80" />
+      <RequiredItem identifier="fulgurium" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="3" />
+      <RequiredItem identifier="stabilozine" amount="3" />
+      <RequiredItem identifier="plastic" amount="5" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="3" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="plastic" amount="3" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="lungremoved" suitability="100"/>
+  </Item>
+
+  <Item name="" identifier="augmentedheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="22" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem tag="heart" mincondition="0.50" usecondition="false" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="fpgacircuit" amount="1" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="1" />
+      <Item identifier="fpgacircuit" amount="1" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.125">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.05" comparison="and">
+        <Conditional condition="gte 80" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <LuaHook name="NT.RotOrgan" />
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="heartremoved" suitability="90"/>
+  </Item>
+  <Item name="" identifier="cyberheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
+    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
+    <Body width="14" height="22" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="90" />
+      <RequiredSkill identifier="medical" level="80" />
+      <RequiredItem identifier="fulgurium" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="3" />
+      <RequiredItem identifier="stabilozine" amount="3" />
+      <RequiredItem identifier="plastic" amount="4" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="3" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="plastic" amount="3" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="70"/>
+    <SkillRequirementHint identifier="mechanical" level="60" />
+    <SuitableTreatment identifier="heartremoved" suitability="100"/>
+  </Item>
+
+  <Item name="" identifier="augmentedbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
+    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="22" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60">
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredSkill identifier="electrical" level="80" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="3" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="80"/>
+    <SkillRequirementHint identifier="electrical" level="60" />
+  </Item>
+  <Item name="" identifier="cyberbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
+    <Price baseprice="4000" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+      <Price storeidentifier="merchantresearch" sold="true" />
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="22" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="medical" level="100" />
+      <RequiredSkill identifier="electrical" level="100" />
+      <RequiredItem identifier="augmentedbrain" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="stabilozine" amount="1" />
+    </Fabricate>
+    <Deconstruct time="45">
+      <Item identifier="fulgurium" amount="3" />
+      <Item identifier="fpgacircuit" amount="4" />
+    </Deconstruct>
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="80"/>
+    <SkillRequirementHint identifier="electrical" level="60" />
+  </Item>
+
+
+  <Item name="" identifier="bloodpackabcplus" nameidentifier="bloodpackabcplus" variantof="antibloodloss2">
+    <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
+    <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
+    <PreferredContainer secondary="medcontainer"/>
+    <Price baseprice="80">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+    </Price>
+    <Sprite texture="%ModDir:3190189044%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5"/>
+  </Item>
+  <Item name="" identifier="abcpluscard" category="Equipment" description=""
+        Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16"/>
+    <Body width="16" height="12" density="20"/>
+    <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
+    <Deconstruct/>
+  </Item>
+  
+  <Item name="" identifier="immunosuppressantinhaler" description="" impactsoundtag="impact_soft"
+    useinhealthinterface="True" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical"
+    maxstacksize="32" maxstacksizecharacterinventory="3"
+    scale="0.2"
+  >
+    <Price baseprice="60" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
+    </Price>
+    <PreferredContainer primary="medcab" spawnprobability="0.2"/>
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.1"/>
+    <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.03"/>
+    <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,84,128" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="22" density="10"/>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="3">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="immunosuppressant" amount="1" />
+      <RequiredItem identifier="plastic" amount="3" />
+      <RequiredItem identifier="stabilozine" amount="2" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="plastic" amount="1" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" canBeCombined="true" removeOnCombined="true" aimable="false" aimpos="23,23" handle1="5,-2" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This">
+        <Conditional InWater="false" />
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="1" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10"/>
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="This">
+        <Conditional InWater="true" />
+        <ParticleEmitter particle="bubbles" particlespersecond="3" scalemin="0.3" scalemax="0.5" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10"/>
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-5.0" disabledeltatime="false">
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="false">
+        <Affliction identifier="immunosuppressantinhaler" amount="20"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <SkillRequirementHint identifier="medical" level="15"/>
+  </Item>
+
+  <!-- SFX items -->
+
+  <Item name="." identifier="ntcsfx_screwdriver" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="%ModDir%/Sound/screwdriver1.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/screwdriver2.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntcsfx_cyberblunt" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="%ModDir%/Sound/cyberblunt1.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt2.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt3.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt4.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt5.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt6.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt7.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt8.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt9.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt10.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberblunt11.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntcsfx_cyberbite" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="%ModDir%/Sound/cyberbite1.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberbite2.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberbite3.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntcsfx_cyberdeath" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="%ModDir%/Sound/cyberdeath1.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberdeath2.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/cyberdeath3.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntcsfx_welding" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="%ModDir%/Sound/welding1.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/welding2.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/welding3.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/welding4.ogg" type="OnUse" range="500"/>
+        <Sound file="%ModDir%/Sound/welding5.ogg" type="OnUse" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <!-- VFX items -->
+  <Item name="." identifier="ntcvfx_malfunction" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="always" target="This" disabledeltatime="true" duration="1" stackable="false">
+        <Sound file="Content/Items/Electricity/Zap1.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Items/Electricity/Zap2.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Items/Electricity/Zap3.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Items/Electricity/Zap4.ogg" type="OnUse" range="500"/>
+        <Sound file="Content/Items/Electricity/Zap5.ogg" type="OnUse" range="500"/>
+        <Explosion range="50.0" stun="0" force="5.0" smoke="false" flash="true" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <ParticleEmitter particle="spark" particleburstamount="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <!-- overrides -->
+
+  <!-- screwdrivers -->
+  <Override>
+    <Item name="" identifier="screwdriver" category="Equipment" Tags="smallitem,simpletool,tool,electricalrepairtool,screwdriveritem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
+      <PreferredContainer primary="engcab" secondary="reactorcab"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2"/>  
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.5"/>
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.5"/>   
+      <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.3"/>
+      <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
+      <Price baseprice="10" minavailable="10">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" minavailable="5"  />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
+      </Price>
+      <Deconstruct time="20">
+        <Item identifier="iron" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <RequiredItem identifier="iron" amount="2" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,189,64,14" depth="0.55" origin="0.5,0.5" />
+      <Body width="60" height="12" density="25" />
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50"/>
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,0" holdangle="60" reload="1.0" range="50" combatpriority="7" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="0" itemdamage="2" targetimpulse="2">
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="bleeding" strength="2" />
+          <Affliction identifier="stun" strength="0.05" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character"/>
+            <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+      <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="RepairSpeed" value="0.1"/>
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <SkillRequirementHint identifier="mechanical" level="40" />
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="screwdriverhardened" variantof="screwdriver" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25" useinhealthinterface="True">
+      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
+      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab"  spawnprobability="0"/>
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
+      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+      <Price baseprice="200" sold="false" />
+      <Deconstruct>
+        <Item identifier="iron" />
+        <Item identifier="depletedfuel" />
+      </Deconstruct>
+      <Fabricate requiresrecipe="true">
+        <RequiredItem identifier="depletedfuel" amount="2" />
+        <RequiredItem identifier="screwdriver" amount="1" />
+      </Fabricate>
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50"/>
+      <MeleeWeapon>
+        <Attack targetimpulse="8" penetration="0.25">
+          <Affliction identifier="lacerations" strength="7" />
+          <Affliction identifier="radiationsickness" strength="1" />
+          <Affliction identifier="stun" strength="0.08" />
+          <Affliction identifier="bleeding" strength="2" />
+        </Attack>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="40" />
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4" useinhealthinterface="True">
+      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
+      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab"  spawnprobability="0"/>
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
+      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+      <Price baseprice="450" sold="false" />
+      <Deconstruct>
+        <Item identifier="iron" />
+        <Item identifier="dementonite" />
+      </Deconstruct>
+      <Fabricate />
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50"/>
+      <MeleeWeapon reload="*0.9">
+        <Attack targetimpulse="8">
+          <Affliction identifier="lacerations" strength="7.5" />
+          <Affliction identifier="psychosis" strength="5" />
+          <Affliction identifier="stun" strength="0.05" />
+        </Attack>
+        <StatusEffect type="OnFailure" target="Character">
+          <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
+          <Affliction identifier="psychosis" strength="10" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <SkillRequirementHint identifier="mechanical" level="40" />
+    </Item>
+  </Override>
+  <!-- fpga circuit -->
+  <Override>
+    <Item name="" identifier="fpgacircuit" category="Electrical" Tags="smallitem,signal" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+      <Price baseprice="80">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" sold="false"/>
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantengineering" multiplier="0.9" />
+      </Price>
+      <PreferredContainer primary="engcab"/>
+      <PreferredContainer secondary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
+      <Deconstruct time="5">
+        <Item identifier="copper" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5">
+        <RequiredSkill identifier="electrical" level="15" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="copper" amount="2" />
+        <RequiredItem identifier="tin" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="true" amount="2">
+        <RequiredSkill identifier="electrical" level="15" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="copper" amount="2" />
+        <RequiredItem identifier="tin" />
+      </Fabricate>
+      <SuitableTreatment identifier="ntc_damagedelectronics" suitability="50"/>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="225,33,36,36" origin="0.5,0.5" />
+      <Body width="36" height="36" density="15" />
+      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" canBeCombined="true" removeOnCombined="true">
+        <!-- Remove the item when fully used (not used by the vanilla game) -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <SkillRequirementHint identifier="electrical" level="40" />
+    </Item>
+  </Override>
+  <!-- welding tool -->
+  <Override>
+    <Item name="" identifier="weldingtool" category="Equipment" Tags="smallitem,weldingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+      <PreferredContainer primary="engcab" amount="1" spawnprobability="1" notcampaign="true"/>
+      <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.2" notcampaign="true"/>
+      <PreferredContainer primary="outpostsupplycab" amount="1" spawnprobability="0.5"/>
+      <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+      <PreferredContainer primary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.1"/>
+      <Price baseprice="150">
+        <Price storeidentifier="merchantoutpost" minavailable="3" />
+        <Price storeidentifier="merchantcity" minavailable="2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="2" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="2" />
+        <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
+        <Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9"/>
+      </Price>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" />
+      <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" amount="2" />
+        <RequiredItem identifier="plastic" amount="2" />
+      </Fabricate>
+      <!-- physics body -->
+      <Body width="150" height="60" density="25" />
+      <!-- the character will hold the item 50 pixels in front of him, with his hands at the handle1 and handle2 positions -->
+      <SuitableTreatment identifier="ntc_bentmetal" suitability="50"/>
+      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-62,-16" handle2="-10,-6" msg="ItemMsgPickUpSelect" />
+      <RepairTool firedamage="10.0" structurefixamount="2.0" range="150" barrelpos="35,12" particles="weld" repairmultiple="true" repairthroughwalls="false" combatpriority="10" levelwallfixamount="-0.425" targetforce="10">
+        <!-- the item must contain a welding fuel tank for it to work -->
+        <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        <RequiredSkill identifier="mechanical" level="50" />
+        <ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true"/>
+        <ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitStructure particle="GlowDot" particlespersecond="60" emitinterval="0.7" particleamount="10" scalemin="0.9" scalemax="1.0" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" />
+        <ParticleEmitterHitStructure particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="10" velocitymax="100" />
+        <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
+        <sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
+        <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-1.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-0.6" />
+        <!-- welding a door, it will get stuck after a while -->
+        <StatusEffect type="OnSuccess" targettype="UseTarget" targets="weldable" Stuck="5.0" />
+        <StatusEffect type="OnSuccess" targettype="UseTarget" targets="item" Condition="-3.0">
+          <Conditional HasTag="neq weldable"/>
+        </StatusEffect>
+        <!-- do burn damage to characters -->
+        <StatusEffect type="OnSuccess" targettype="Limb">
+          <Affliction identifier="burn" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+          <Explosion range="150.0" force="3" applyfireeffects="false" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+          <Explosion range="150.0" force="6" applyfireeffects="false" >
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="10" />
+          </Explosion>
+        </StatusEffect>
+        <!-- the tool can fix structures, i.e. walls and windows -->
+        <Fixable identifier="structure" />
+        <NonFixable identifier="thalamus,ice" />
+        <LightComponent LightColor="255,229,178,100" Range="150" Flicker="0.5">
+          <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+        </LightComponent>
+      </RepairTool>
+      <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="8,-35" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <Containable items="weldingtoolfuel,oxygensource" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+      <Quality>
+        <QualityStat stattype="RepairToolStructureRepairMultiplier" value="0.1"/>
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Upgrade gameversion="0.14.0.0">
+        <RepairTool>
+          <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        </RepairTool>
+      </Upgrade>
+      <Upgrade gameversion="0.15.4.0">
+        <ItemContainer itempos="8,-35"/>
+      </Upgrade>
+      <SkillRequirementHint identifier="mechanical" level="50" />
+    </Item>
+  </Override>
+  <!-- steel -->
+  <Override>
+    <Item name="" identifier="steel" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,petfood3,munition_core,advmunition_core,advmunition_tip" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+    <PreferredContainer primary="storagecab" />
+    <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
+    <Price baseprice="28">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="7" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="10" />
+      <Price storeidentifier="merchantresearch" minavailable="6" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15" />
+      <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="20" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="iron" amount="2" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="carbon" copycondition="true" />
+      <Item identifier="iron" copycondition="true" />
+    </Deconstruct>
+    <SuitableTreatment identifier="ntc_materialloss" suitability="50"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,128,64,64" />
+    <Sprite texture="Content/Items/Materials/Minerals.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
+    <Body width="50" height="25" density="30" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <!-- for scrap cannon -->
+    <Projectile characterusable="false" hitscan="true" hitscancount="16" removeonhit="true" spread="25">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+      <Attack structuredamage="2" targetforce="4" itemdamage="2" severlimbsprobability="0.5">
+        <Affliction identifier="lacerations" strength="6" />
+        <Affliction identifier="bleeding" strength="6" />
+        <Affliction identifier="stun" strength="0.1" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <AiTarget sightrange="1000" static="true" />
+    <SkillRequirementHint identifier="mechanical" level="60" />
+  </Item>
+  </Override>
+  <!-- crowbar -->
+  <Override>
+    <Item name="" identifier="crowbar" category="Equipment" Tags="smallitem,tool,simpletool,dooropeningtool,crowbaritem,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
+      <PreferredContainer primary="engcab"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1"/>
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.2"/>
+      <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.2"/>
+      <Price baseprice="20" minavailable="10">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="iron" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="iron" amount="2" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,225,130,30" depth="0.55" origin="0.5,0.5" />
+      <Body width="120" height="20" density="30" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="8" itemdamage="8" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character"/>
+            <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+            <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+      <aitarget sightrange="1000" soundrange="500" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <SkillRequirementHint identifier="weapons" level="50" />
+    </Item>
+
+  </Override>
+ 
+</Items>

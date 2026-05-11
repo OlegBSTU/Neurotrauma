@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+  <!-- Artifical limb
+  invisible
+  converts all regular damage types to cybernetic specific ones -->
+  <Affliction
+    name=""
+    identifier="ntc_cyberlimb"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="gaze"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Cyberarm
+  converts the arm into a cyberarm -->
+  <Affliction
+    name=""
+    identifier="ntc_cyberarm"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Arm Speed"
+    identifier="ntc_armspeed"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="200"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="200" strengthchange="0">
+      <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.5" />
+      <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="1" />
+    </Effect>
+  </Affliction>
+
+  <Affliction
+    name="WaterProof"
+    identifier="ntc_waterproof"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,4" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+
+  <!-- Cyberleg
+  converts the leg into a cyberleg -->
+  <Affliction
+    name=""
+    identifier="ntc_cyberleg"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="6,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Leg
+    Speed"
+    identifier="ntc_legspeed"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="200"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="200">
+      <Statvalue stattype="WalkingSpeed" minvalue="0" maxvalue="0.5" />
+    </Effect>
+  </Affliction>
+
+  <!--
+    Cyberorgans
+  -->
+  <Affliction
+    name="Cyberliver"
+    identifier="ntc_cyberliver"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <!-- in humanupdate.lua, also applies faster recovery rate for most poisons/debuffs/nausea, and resists liver damage-->
+    <!-- Overdose / Nausea resistance -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="opiateoverdose,nausea" minresistance="0" maxresistance="0.5"></Effect>
+    <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Conditional ntc_cyberliver="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <Affliction
+    name="Cyberkidney"
+    identifier="ntc_cyberkidney"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <!-- Bleeding & Bloodloss resistance -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="bleeding,bloodloss" minresistance="0" maxresistance="0.6">
+      <StatusEffect target="Character" disabledeltatime="true" setvalue="true">
+        <Affliction identifier="abcplus" amount="100"/> <!-- Cyberblood, fun for selfish compatibility, and prevents Cyberorgan rejection -->
+        <Affliction identifier="ominus" amount="0"/>
+        <Affliction identifier="oplus" amount="0"/>
+        <Affliction identifier="aminus" amount="0"/>
+        <Affliction identifier="aplus" amount="0"/>
+        <Affliction identifier="bminus" amount="0"/>
+        <Affliction identifier="bplus" amount="0"/>
+        <Affliction identifier="abminus" amount="0"/>
+        <Affliction identifier="abplus" amount="0"/>
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Conditional ntc_cyberkidney="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <Affliction
+    name="Cyberlungs"
+    identifier="ntc_cyberlung"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <!-- in humanupdate.lua lungs also grant reduced pneumothoraxchance and hypoxemia, and hypo/hyperventilates to balance PH -->
+    <!-- Oxygen low resistance -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="oxygenlow" minresistance="0" maxresistance="0.6">
+      <!-- Faster movement/attack. Raises Vigor up to 75/150/225/300 if Tier 2/3 Lung + if Tier 2/3 Heart active -->
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 150.3"/>
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 75.3"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 300.3"/>
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Conditional ntc_cyberheart="gte 90"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 225.3"/>
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Conditional ntc_cyberheart="gte 40"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 150.3"/>
+        <Conditional ntc_cyberlung="gte 40"/>
+        <Conditional ntc_cyberheart="gte 40"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 225.3"/>
+        <Conditional ntc_cyberlung="gte 40"/>
+        <Conditional ntc_cyberheart="gte 90"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+
+      <StatValue stattype="HoldBreathMultiplier" minvalue="1" maxvalue="0.5" />
+      <!-- Partial Pressure Protection: at most once every 30 seconds, if you're in pressure, give 5-10 seconds of Pressure Stabilization.
+        ntc_cyberlung_pressure_recovery being > 0 means its been triggered recently, and is a countdown until its next allowed to trigger.
+       -->
+      <StatusEffect target="Character" setvalue="true" interval="1" comparison="And">
+        <Conditional InPressure="true"/>
+        <Conditional pressureProtection="lt 1000"/>
+        <Conditional ntc_cyberlung_pressure_recovery="lte 0.1"/>
+        <Affliction identifier="ntc_cyberlung_pressure_recovery" amount="31" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <Affliction
+    name="Pressurized Cyberlung"
+    identifier="ntc_cyberlung_pressure_recovery"
+    description=""
+    healableinmedicalclinic="false"
+    type="gaze"
+    isbuff="false"
+    targets="human"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    showiconthreshold="1"
+    showinhealthscannerthreshold="1"
+    maxstrength="100"
+  >
+    <Description
+      textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery.low"
+      minstrength="0"
+      maxstrength="20"/>
+    <Description
+      textidentifier="afflictiondescription.ntc_cyberlung_pressure_recovery"
+      minstrength="20"
+      maxstrength="100"/>
+    <!-- Restore partial loss from the Pressure Protection triggering  -->
+    <Effect minstrength="0" maxstrength="19.5" strengthchange="-1"></Effect>
+    <Effect minstrength="19.5" maxstrength="20" strengthchange="-1">
+      <StatusEffect type="always" target="Character" comparison="And">
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Affliction identifier="pressurestabilized" strength="3" />
+        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="20" maxstrength="23.5" strengthchange="-1"></Effect>
+    <Effect minstrength="23.5" maxstrength="24" strengthchange="-1">
+      <StatusEffect type="always" target="Character">
+        <Affliction identifier="pressurestabilized" strength="3" />
+        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="24" maxstrength="27.5" strengthchange="-1"></Effect>
+    <Effect minstrength="27.5" maxstrength="28" strengthchange="-1">
+      <StatusEffect type="always" target="Character">
+        <Affliction identifier="pressurestabilized" strength="3" />
+        <ReduceAffliction identifier="ntc_cyberlung_pressure_recovery" strength="0.5"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="28" maxstrength="100" strengthchange="-1"></Effect>
+  </Affliction>
+  <Affliction
+    name="Cyberheart"
+    identifier="ntc_cyberheart"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <!-- in humanupdate.lua heart also grants better bloodpressurerate -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0">
+      <!-- Faster movement/attack -->
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 150.3"/>
+        <Conditional ntc_cyberlung="gte 90"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="Character" interval="1" comparison="And">
+        <Conditional haste="lt 75.3"/>
+        <Affliction identifier="haste" amount="0.125"/>
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true">
+        <StatValue stattype="MaximumHealthMultiplier" minvalue="0" maxvalue="0.2" /> <!-- More Vitality -->
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Conditional ntc_cyberheart="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.1" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <Affliction
+    name="Cyberbrain"
+    identifier="ntc_cyberbrain"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="1"
+    iconcolors="76,102,145,255;76,102,145,255">
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+    <!-- in humanupdate: Neurotrauma (cerebralhypoxia) resistance, improved Neurotrauma/Coma recovery rate, and improved withdrawal/addiction recovery rates -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0">
+      <!-- Stat buffs -->
+      <StatValue stattype="ElectricalSkillBonus" minvalue="0" maxvalue="10" />
+      <StatValue stattype="HelmSkillBonus" minvalue="0" maxvalue="10" />
+      <StatValue stattype="MechanicalSkillBonus" minvalue="0" maxvalue="10" />
+      <StatValue stattype="MedicalSkillBonus" minvalue="0" maxvalue="10" />
+      <StatValue stattype="WeaponsSkillBonus" minvalue="0" maxvalue="10" />
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 3"/>
+        <Affliction identifier="analgesia" amount="1"/> <!-- Little bit of anaesthetic for easier surgery -->
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
+      </StatusEffect>
+      <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
+        <Conditional immunity="gte 90"/>
+        <Conditional ntc_cyberbrain="gte 90"/>
+        <Affliction identifier="ntc_cyberpsychosis" strength="40" probability="0.15" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+
+
+  <Affliction
+    name="C+"
+    identifier="abcplus"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- Immunosuppressant Inhaler / mildly decreases immunity to prevent Cyberpsychosis -->
+  <Affliction
+    name=""
+    identifier="immunosuppressantinhaler"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="10"
+    showinhealthscannerthreshold="300"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.125">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" immunity="gte 85"/>
+        <ReduceAffliction identifier="immunity" amount="2.5"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,4" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Hidden, immediately causes equivalent vanilla psychosis. Separate to allow configurable resistance -->
+  <Affliction
+    name=""
+    identifier="ntc_cyberpsychosis"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="false"
+    indicatorlimb="Head"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255">
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0"/>
+    <Effect minstrength="0" maxstrength="100" strengthchange="-100">
+      <StatusEffect target="Character" comparison="and" disabledeltatime="true">
+        <Conditional ishuman="true" immunity="gte 85"/>
+        <Affliction identifier="psychosis" minamount="0" maxamount="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction
+    name=""
+    identifier="ntc_cyberpsychosis_resistance"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="false"
+    indicatorlimb="Head"
+    maxstrength="100"
+    showiconthreshold="500"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255">
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0"/>
+    <Effect
+      minstrength="0"
+      maxstrength="100"
+      resistancefor="ntc_cyberpsychosis"
+      minresistance="0"
+      maxresistance="1"
+      strengthchange="0">
+    </Effect>
+  </Affliction>
+
+  <!-- /// cyberlimb damage types /// -->
+
+  <!-- Loose screws
+  a cyber damage type, caused by trauma, movement
+  increases susceptibility to material loss -->
+  <Affliction
+    name=""
+    identifier="ntc_loosescrews"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="5"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255"> <!-- 191,171,57,255;191,57,57,255 -->
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Damaged electronics
+  a cyber damage type, caused by water and trauma
+  increases susceptibility to material loss -->
+  <Affliction
+    name=""
+    identifier="ntc_damagedelectronics"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="5"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="2,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Bent metal
+  a cyber damage type, caused by trauma
+  increases susceptibility to material loss, decreases movement speed -->
+  <Affliction
+    name=""
+    identifier="ntc_bentmetal"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="3"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+  <!-- Material loss
+  a cyber damage type, caused by trauma
+  if too high, the limb is lost -->
+  <Affliction
+    name=""
+    identifier="ntc_materialloss"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    isbuff="false"
+    limbspecific="true"
+    maxstrength="100"
+    showiconthreshold="5"
+    showinhealthscannerthreshold="500"
+    iconcolors="191,171,57,255;191,57,57,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,0" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
+</Afflictions>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+<!-- Translated by profole / Übersetzt von profole -->
+
+<!-- ITEMS -->
+
+<entityname.cyberarm>Cyberarm</entityname.cyberarm>
+<entitydescription.cyberarm>Ein Arm aus Metal und Elektronik. Blutet nicht. Zum installieren nach einer Amputation benutzen.</entitydescription.cyberarm>
+
+<entityname.cyberleg>Cyberbein</entityname.cyberleg>
+<entitydescription.cyberleg>Ein Bein aus Metal und Elektronik. Blutet nicht. Zum installieren nach einer Amputation benutzen</entitydescription.cyberleg>
+
+<!-- AFFLICTIONS -->
+
+<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+
+<afflictionname.ntc_cyberarm>Cyberarm</afflictionname.ntc_cyberarm>
+<afflictiondescription.ntc_cyberarm>Dieser Arm ist aus Metal und Elektronik.</afflictiondescription.ntc_cyberarm>
+
+<afflictionname.ntc_cyberleg>Cyberbein</afflictionname.ntc_cyberleg>
+<afflictiondescription.ntc_cyberleg>Dieses Bein ist aus Metal und Elektronik</afflictiondescription.ntc_cyberleg>
+
+
+<afflictionname.ntc_loosescrews>Lockere Schrauben</afflictionname.ntc_loosescrews>
+<afflictiondescription.ntc_loosescrews>Einige Scharuben fallen fast heraus. Ein Klappern ertönt wenn die Gliedmaße sich bewegt.</afflictiondescription.ntc_loosescrews>
+
+<afflictionname.ntc_damagedelectronics>Beschädigte Elektronik</afflictionname.ntc_damagedelectronics>
+<afflictiondescription.ntc_damagedelectronics>Die Gliedmaße funkt ab und zu. Manche Systeme melden eine Fehlfunktion.</afflictiondescription.ntc_damagedelectronics>
+
+<afflictionname.ntc_bentmetal>Verbogenes Metal</afflictionname.ntc_bentmetal>
+<afflictiondescription.ntc_bentmetal>Die Gliedmaße ist in die falsche Richtung gebogen.</afflictiondescription.ntc_bentmetal>
+
+<afflictionname.ntc_materialloss>Materialverlust</afflictionname.ntc_materialloss>
+<afflictiondescription.ntc_materialloss>Ein Teil der Gliedmaße fehlt.</afflictiondescription.ntc_materialloss>
+
+
+<afflictionname.></afflictionname.>
+<afflictiondescription.></afflictiondescription.>
+
+</infotexts>

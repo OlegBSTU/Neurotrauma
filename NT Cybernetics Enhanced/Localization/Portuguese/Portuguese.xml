@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
+	<!-- ITEMS -->
+	<entityname.cyberarm>Braço Cibernético</entityname.cyberarm>
+	<entitydescription.cyberarm>Um braço feito de metal e componentes eletrônicos que não sangra. Use depois de uma amputação para instalar.</entitydescription.cyberarm>
+	<entityname.cyberleg>Perna Cibernética</entityname.cyberleg>
+	<entitydescription.cyberleg>Um perna feito de metal e componentes eletrônicos que não sangra. Use depois de uma amputação para instalar.</entitydescription.cyberleg>
+	<!-- AFFLICTIONS -->
+	<afflictionname.ntc_cyberlimb></afflictionname.ntc_cyberlimb>
+	<afflictiondescription.ntc_cyberlimb></afflictiondescription.ntc_cyberlimb>
+	<afflictionname.ntc_cyberarm>Braço Cibernético</afflictionname.ntc_cyberarm>
+	<afflictiondescription.ntc_cyberarm>Um braço feito de metal e componentes eletrônicos.</afflictiondescription.ntc_cyberarm>
+	<afflictionname.ntc_cyberleg>Perna Cibernética</afflictionname.ntc_cyberleg>
+	<afflictiondescription.ntc_cyberleg>Uma perna feita de metal e componentes eletrônicos.</afflictiondescription.ntc_cyberleg>
+	<afflictionname.ntc_loosescrews>Parafusos Soltos</afflictionname.ntc_loosescrews>
+	<afflictiondescription.ntc_loosescrews>Alguns parafusos estão meios soltos. Seu membro está fazendo um pouco de barulho.</afflictiondescription.ntc_loosescrews>
+	<afflictionname.ntc_damagedelectronics>Eletrônicos Danificados</afflictionname.ntc_damagedelectronics>
+	<afflictiondescription.ntc_damagedelectronics>Você consegue ouvir barulhos de curto do seu membro. Alguns subsistemas estão falhando.</afflictiondescription.ntc_damagedelectronics>
+	<afflictionname.ntc_bentmetal>Metal Torto</afflictionname.ntc_bentmetal>
+	<afflictiondescription.ntc_bentmetal>Seu membro esta dobrado para uma direção não intecional.</afflictiondescription.ntc_bentmetal>
+	<afflictionname.ntc_materialloss>Perca de Material</afflictionname.ntc_materialloss>
+	<afflictiondescription.ntc_materialloss>Pedaços do seu membro foram embora.</afflictiondescription.ntc_materialloss>
+	<afflictionname.></afflictionname.>
+	<afflictiondescription.></afflictiondescription.>
+</infotexts>
