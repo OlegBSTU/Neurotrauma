@@ -470,7 +470,7 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 		conditionmodifier = conditionmodifier - 20
 	end
 
-	local damage = HF.GetAfflictionStrength(targetCharacter, "lungdamage", 0)
+	local damage = HF.GetAfflictionStrength(targetCharacter, NTCyb.OrganConfigDatas[organName].damageAffliction, 0)
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 	if
 		HF.HasAffliction(targetCharacter, organName .. "removed", 1)
