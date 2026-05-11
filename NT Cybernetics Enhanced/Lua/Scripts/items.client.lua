@@ -31,33 +31,31 @@ local function itemAllowsNecromancy(item)
 	if NTCyb.AllowedNecromancyItems[identifier] ~= nil then
 		return true
 	else
-		for key,_ in pairs(NTCyb.AllowedNecromancyItemsStartsWith) do
-			if HF.StartsWith(identifier,key) then
-				return true
-			end
+		for key, _ in pairs(NTCyb.AllowedNecromancyItemsStartsWith) do
+			if HF.StartsWith(identifier, key) then return true end
 		end
 	end
 	return false
 end
 
-LuaUserData.RegisterType('Barotrauma.Item+TreatmentEventData')
-local TreatmentEventData = LuaUserData.CreateStatic('Barotrauma.Item+TreatmentEventData', true)
-LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.CharacterHealth'], "selectedLimbIndex")
+LuaUserData.RegisterType("Barotrauma.Item+TreatmentEventData")
+local TreatmentEventData = LuaUserData.CreateStatic("Barotrauma.Item+TreatmentEventData", true)
+LuaUserData.MakeFieldAccessible(Descriptors["Barotrauma.CharacterHealth"], "selectedLimbIndex")
 
 -- In vanilla, Dead characters cannot be interacted with in the Health UI.
 -- This patch re-implements OnItemDropped() and its resulting call to item.ApplyTreatment(), which ultimately sends a TreatmentEventData to the server.
-Hook.Patch("Barotrauma.CharacterHealth", "OnItemDropped", function (instance, ptable)
+Hook.Patch("Barotrauma.CharacterHealth", "OnItemDropped", function(instance, ptable)
 	if not instance.Character.IsDead then return end -- no necromancy required
 	if ptable.ReturnValue == false then return end -- dropped outside of the health UI
 
 	if not itemAllowsNecromancy(ptable["item"]) then return end
 
 	local targetLimb = instance.Character.AnimController.MainLimb
-	for _,v in pairs (instance.Character.AnimController.Limbs) do
+	for _, v in pairs(instance.Character.AnimController.Limbs) do
 		if v.HealthIndex == instance.selectedLimbIndex then
 			targetLimb = v
 			break
 		end
 	end
-	Networking.CreateEntityEvent(ptable['item'], TreatmentEventData.__new(instance.Character, targetLimb))
+	Networking.CreateEntityEvent(ptable["item"], TreatmentEventData.__new(instance.Character, targetLimb))
 end, Hook.HookMethodType.After)
