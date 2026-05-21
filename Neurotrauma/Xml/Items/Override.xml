@@ -309,7 +309,7 @@
             <SkillRequirementHint identifier="medical" level="10"/>
         </Item>
 
-        <Item name="" identifier="antibleeding2" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" RequireAimToUse="True">
+        <Item name="" identifier="antibleeding2" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" RequireAimToUse="True" CanFlipX="false">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer primary="medcab" secondary="medcontainer"/>
             <PreferredContainer secondary="abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.4" />
