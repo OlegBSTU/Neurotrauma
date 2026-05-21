@@ -6,7 +6,7 @@
         <PreferredContainer secondary="medcontainer"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="194,325,64,64" origin="0.5,0.5"/>
-        <Sprite sourcerect="128,171,64,85" />
+        <Sprite sourcerect="128,85,64,85" />
         <Price baseprice="200">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
         </Price>
