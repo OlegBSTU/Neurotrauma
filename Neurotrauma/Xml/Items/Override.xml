@@ -351,11 +351,11 @@
             <sprite texture="%ModDir%/Images/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5"/>
 
             <ItemComponent>
-                <StatusEffect type="OnNotContained" target="NearbyCharacters" range="200" stackable="true">
-                    <Affliction identifier="table" amount="2"/>
-                    <Affliction identifier="alv" amount="10"/>
+                <StatusEffect type="OnNotContained" target="NearbyCharacters" range="200" interval="1" stackable="true" disabledeltatime="true" >
+                  <Affliction identifier="table" amount="2" />
+                  <Affliction identifier="alv" amount="100" />
                 </StatusEffect>
-                <StatusEffect type="Always" target="NearbyCharacters" range="200" delay="1" stackable="false">
+                <StatusEffect type="Always" target="NearbyCharacters" range="200" interval="1" stackable="false">
                     <LuaHook name="surgerytable.update" />
                 </StatusEffect>
             </ItemComponent>
