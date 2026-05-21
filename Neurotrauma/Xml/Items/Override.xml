@@ -259,7 +259,7 @@
             </Deconstruct>
             <SuitableTreatment identifier="bloodloss" suitability="100"/>
             <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="326,327,64,64" origin="0.5,0.5"/>
-            <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,85,64,85" />
+            <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,171,64,85" />
             <Body width="80" height="42" density="11"/>
             <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="OnBroken" target="This">
