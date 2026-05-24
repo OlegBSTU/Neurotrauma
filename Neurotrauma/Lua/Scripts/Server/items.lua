@@ -2643,6 +2643,7 @@ NT.FixCondition = {
 	"defibrillator",
 	"bvm",
 	"autocpr",
+	"aed",
 }
 
 function NT.RefreshCondition()
