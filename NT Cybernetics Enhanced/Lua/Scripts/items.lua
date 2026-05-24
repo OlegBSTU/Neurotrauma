@@ -604,34 +604,34 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 						}
 						HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
 						damage = damage + 50
-						if damage < 95 then
-							local function postSpawnFunc(args)
-								local tags = {}
+					end
+					if damage < 95 then
+						local function postSpawnFunc(args)
+							local tags = {}
 
-								if args.acidosis > 0 then
-									table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
-								elseif args.alkalosis > 0 then
-									table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
-								end
-								if args.sepsis > 10 then table.insert(tags, "sepsis") end
-
-								local tagstring = ""
-								for index, value in ipairs(tags) do
-									tagstring = tagstring .. value
-									if index < #tags then tagstring = tagstring .. "," end
-								end
-
-								args.item.Tags = tagstring
-								args.item.Condition = args.condition
+							if args.acidosis > 0 then
+								table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
+							elseif args.alkalosis > 0 then
+								table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
 							end
-							local params = {
-								acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
-								alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
-								sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
-								condition = HF.Clamp(100 - damage, 1, 100),
-							}
-							HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
+							if args.sepsis > 10 then table.insert(tags, "sepsis") end
+
+							local tagstring = ""
+							for index, value in ipairs(tags) do
+								tagstring = tagstring .. value
+								if index < #tags then tagstring = tagstring .. "," end
+							end
+
+							args.item.Tags = tagstring
+							args.item.Condition = args.condition
 						end
+						local params = {
+							acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
+							alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
+							sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
+							condition = HF.Clamp(100 - damage, 1, 100),
+						}
+						HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
 					end
 				else
 					-- return other organs
