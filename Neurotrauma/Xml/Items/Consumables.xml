@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Override>
 <Items>
-    <Item name="" identifier="suture" category="Medical" maxstacksize="64" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+    <Item name="" identifier="suture" category="Medical" maxstacksize="48" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
         <PreferredContainer primary="medcab" minamount="24" maxamount="32" spawnprobability="1"/>
         <PreferredContainer primary="abandonedmedcab" minamount="2" maxamount="6" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="10" maxamount="16" spawnprobability="0.25"/>
@@ -134,7 +134,7 @@
             <StatusEffect type="OnUse" target="This">
                 <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
             </StatusEffect>
-            
+
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
