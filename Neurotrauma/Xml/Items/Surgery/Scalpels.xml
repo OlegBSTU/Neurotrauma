@@ -83,7 +83,7 @@
     </Item>
 
     <Item name="" identifier="organscalpel_liver" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <PreferredContainer primary="toxcontainer" spawnprobability="0" />
       <Price baseprice="35" soldbydefault="true">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
       </Price>
@@ -106,7 +106,7 @@
     </Item>
 
     <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <PreferredContainer primary="toxcontainer" spawnprobability="0" />
       <Price baseprice="35" soldbydefault="true">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
       </Price>
@@ -129,7 +129,7 @@
     </Item>
 
     <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <PreferredContainer primary="toxcontainer" spawnprobability="0" />
       <Price baseprice="35" soldbydefault="true">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
       </Price>
@@ -152,7 +152,7 @@
     </Item>
 
     <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1" />
+      <PreferredContainer primary="toxcontainer" spawnprobability="0" />
       <Price baseprice="35" soldbydefault="true">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6" />
       </Price>
@@ -175,7 +175,7 @@
     </Item>
 
     <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-      <PreferredContainer primary="toxcontainer" minamount="1" maxamount="1" spawnprobability="1"/>
+      <PreferredContainer primary="toxcontainer" spawnprobability="0"/>
       <Price baseprice="200" soldbydefault="true">
         <Price locationtype="research" multiplier="1" sold="true" minavailable="6" />
       </Price>

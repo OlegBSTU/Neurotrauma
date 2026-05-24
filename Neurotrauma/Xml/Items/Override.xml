@@ -60,7 +60,7 @@
 
         <!-- Scanner, ID card -->
         <Item name="" identifier="healthscanner" scale="0.27" category="Equipment" tags="smallitem,tool,medical" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" requireaimtouse="True" useinhealthinterface="True">
-            <PreferredContainer primary="medcab" amount="1" spawnprobability="1"/>
+            <PreferredContainer primary="medcab" spawnprobability="0"/>
 
             <Price baseprice="150" minavailable="1">
                 <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
