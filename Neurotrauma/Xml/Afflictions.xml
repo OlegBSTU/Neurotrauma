@@ -4721,7 +4721,6 @@ thats what the vomiting symptom is for -->
       selfcauseofdeathdescription="You have burned to death."
       limbspecific="true"
       showiconthreshold="10000"
-      showinhealthscannerthreshold="10000"
       healcostmultiplier="2.25"
       maxstrength="200"
       burnoverlayalpha="1"
@@ -4742,7 +4741,6 @@ thats what the vomiting symptom is for -->
       burnoverlayalpha="0"
       healcostmultiplier="2.25"
       showiconthreshold="10000"
-      showinhealthscannerthreshold="10000"
       WeaponsSkillGain="0.5"
       MedicalSkillGain="0.5">
       <Effect minstrength="0" maxstrength="200" multiplybymaxvitality="true"
