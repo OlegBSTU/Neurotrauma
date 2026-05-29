@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-<!-- ITEMS -->
 
-<!-- /// Gear /// -->
+<!-- ================================================= ITEMS ================================================= -->
+<!-- ================================================= Tools ================================================= -->
 <entityname.defibrillator>Manual defibrillator</entityname.defibrillator>
 <entitydescription.defibrillator>A medical device delivering an electric shock to the heart to stabilize cardiac arythmias. Requires extensive medical training. Use on a patient with cardiac arrest.</entitydescription.defibrillator>
 
@@ -28,6 +28,7 @@
 <entitydescription.wheelchair>Makes you depend on your arms instead of your legs for movement.</entitydescription.wheelchair>
 
 <entityname.blahaj>Blue Shark</entityname.blahaj>
+<!-- <entitydescription.blahaj>No Description</entitydescription.blahaj> -->
 
 <entityname.analgesictank>Analgesic Tank</entityname.analgesictank>
 <entitydescription.analgesictank>A tank of gaseous analgesics that can be installed on a surgery table or used in an ambubag.</entitydescription.analgesictank>
@@ -50,7 +51,8 @@
 <stasisbagequipconfirmation>Equipping this will cause you to go unconscious. Are you sure?</stasisbagequipconfirmation>
 <!--<emergencysuitequipconfirmation>Equipping this will cause you to go immobile. Are you sure?</emergencysuitequipconfirmation>-->
 
-<!-- /// Surgery /// -->
+
+<!-- ================================================= Surgery Equipment ================================================= -->
 <entityname.advscalpel>Scalpel</entityname.advscalpel>
 <entitydescription.advscalpel>A tool used to make incisions during surgery.</entitydescription.advscalpel>
 
@@ -97,7 +99,7 @@
 <entitydescription.organscalpel_brain>A specialized scalpel for the removal of the brain.</entitydescription.organscalpel_brain>
 
 <entityname.multiscalpel>Multipurpose scalpel</entityname.multiscalpel>
-<entitydescription.multiscalpel>Novelty scalpel. Disabled and needs activation. In the practitioner’s hands, a button pad can be utilised to activate the scalpel and switch between between operations: making incisions, extracting organs, removing bandages, or doing malpractice.</entitydescription.multiscalpel>
+<entitydescription.multiscalpel>Novelty scalpel. Disabled and needs activation. In the practitioner's hands, a button pad can be utilised to activate the scalpel and switch between between operations: making incisions, extracting organs, removing bandages, or doing malpractice.</entitydescription.multiscalpel>
 <multiscalpel.incision>Mode active: Surgery incision</multiscalpel.incision>
 <multiscalpel.kidneys>Mode active: Extract kidneys</multiscalpel.kidneys>
 <multiscalpel.liver>Mode active: Extract liver</multiscalpel.liver>
@@ -116,9 +118,7 @@
 <multiscalpel.btn.bandage>Bandages, casts, malpractice</multiscalpel.btn.bandage>
 <multiscalpel.btn.speedflex>Adaptive organ extraction</multiscalpel.btn.speedflex>
 
-
-
-<!-- /// Treatments /// -->
+<!-- ================================================= Consumables ================================================= -->
 <entityname.mannitol>Mannitol</entityname.mannitol>
 <entitydescription.mannitol>A type of sugar alcohol. It is used to aid recovery from neurotrauma. May cause organ damage.</entitydescription.mannitol>
 
@@ -173,9 +173,7 @@
 <entityname.gelipack>Gel coolant pack</entityname.gelipack>
 <entitydescription.gelipack>A reusable cooling pack filled with organic gel that never expires. Loses its effectiveness without refrigeration.</entitydescription.gelipack>
 
-
-<!-- /// Blood stuff /// -->
-
+<!-- ================================================= Blood Stuff ================================================= -->
 <!--<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>-->
 <!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
 
@@ -185,30 +183,29 @@
 <entityname.bloodpackoplus>Blood Pack O+</entityname.bloodpackoplus>
 <entitydescription.bloodpackoplus>Administerable to: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
 
+<entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
+
 <entityname.bloodpackominus>Blood Pack O-</entityname.bloodpackominus>
 <entitydescription.bloodpackominus>A blood pack that can be used on any patient.</entitydescription.bloodpackominus>
 
 <entityname.bloodpackaplus>Blood Pack A+</entityname.bloodpackaplus>
 <entitydescription.bloodpackaplus>Administerable to: A+, AB+</entitydescription.bloodpackaplus>
 
-<entityname.bloodpackbplus>Blood Pack B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus>
-
-<entityname.bloodpackabplus>Blood Pack AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus>
-
 <entityname.bloodpackaminus>Blood Pack A-</entityname.bloodpackaminus>
 <entitydescription.bloodpackaminus>Administerable to: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
+
+<entityname.bloodpackbplus>Blood Pack B+</entityname.bloodpackbplus>
+<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackbminus>Blood Pack B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Administerable to: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
 
+<entityname.bloodpackabplus>Blood Pack AB+</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus>
+
 <entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
-
-
-<entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
-<entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
 
 <entityname.ominuscard>Donor card O-</entityname.ominuscard>
 <entitydescription.ominuscard>Can take blood from: O-
@@ -242,9 +239,7 @@ Can give blood to: AB-, AB+</entitydescription.abminuscard>
 <entitydescription.abpluscard>Can take blood from: all of them
 Can give blood to: AB+</entitydescription.abpluscard>
 
-
-
-<!-- /// New containers /// -->
+<!-- ================================================= Containers ================================================= -->
 <entityname.medtoolbox>Medical container</entityname.medtoolbox>
 <entitydescription.medtoolbox>Can store medicine and medical instruments</entitydescription.medtoolbox>
 
@@ -274,9 +269,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <!--<entityname.emergencysuit>Emergency suit</entityname.emergencysuit>
 <entitydescription.emergencysuit>Makes it relatively safe for using a defibrillator and performing all kinds of surgeries. Stops movement, but has a battery slot to power artificial ventilation.</entitydescription.emergencysuit>-->
 
-
-
-<!-- /// Limbs and organs /// -->
+<!-- ================================================= Limbs and Organ Transplants ================================================= -->
 <entityname.rarm>Right arm</entityname.rarm>
 <entitydescription.rarm>A severed right arm. Can be surgically reattached.</entitydescription.rarm>
 
@@ -341,9 +334,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <entityname.armlock2>Non-working left hand</entityname.armlock2>
 
 
-<!-- AFFLICTIONS -->
-
-
+<!-- ================================================= AFFLICTIONS ================================================= -->
 <!-- TEMPLATE -->
 
 <!-- <afflictionname.organdamage></afflictionname.organdamage> -->
@@ -351,8 +342,7 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <!-- <afflictioncauseofdeath.organdamage></afflictioncauseofdeath.organdamage> -->
 <!-- <afflictioncauseofdeathself.organdamage></afflictioncauseofdeathself.organdamage> -->
 
-<!-- /// Heart /// -->
-
+<!-- ================================================= Heart ================================================= -->
 <afflictionname.tachycardia>Increased heartrate</afflictionname.tachycardia>
 <afflictiondescription.tachycardia>The heart is beating in an alarmingly rapid fashion.</afflictiondescription.tachycardia>
 
@@ -362,14 +352,17 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.cardiacarrest>Cardiac arrest</afflictionname.cardiacarrest>
 <afflictiondescription.cardiacarrest>No pulse.</afflictiondescription.cardiacarrest>
 
+<afflictionname.tamponade>Cardiac tamponade</afflictionname.tamponade>
+<!-- <afflictiondescription.tamponade>No Description</afflictiondescription.tamponade> -->
+
 <afflictionname.heartattack>Heart attack</afflictionname.heartattack>
-<afflictiondescription.heartattack></afflictiondescription.heartattack>
+<!-- <afflictiondescription.heartattack>No Description</afflictiondescription.heartattack> -->
 
 <afflictionname.heartdamage>Heart damage</afflictionname.heartdamage>
-<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+<!-- <afflictiondescription.heartdamage>No Description</afflictiondescription.heartdamage> -->
 
 <afflictionname.heartfailure>Heart failure</afflictionname.heartfailure>
-<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+<!-- <afflictiondescription.heartfailure>No Description</afflictiondescription.heartfailure> -->
 
 <afflictionname.heartremoved>Heart removed</afflictionname.heartremoved>
 <afflictiondescription.heartremoved>The heart has been surgically removed.</afflictiondescription.heartremoved>
@@ -377,21 +370,24 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.heartswap>Replacing heart</afflictionname.heartswap>
 <afflictiondescription.heartswap>Old heart has been surgically prepared for a new transplant.</afflictiondescription.heartswap>
 
-<!-- /// Brain /// -->
+
+<!-- ================================================= Head / Brain ================================================= -->
+<afflictionname.h_arterialcut>Carotid artery bleeding</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.h_arterialcut>
 
 <afflictionname.cerebralhypoxia>Neurotrauma</afflictionname.cerebralhypoxia>
-<afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
+<!-- <afflictiondescription.cerebralhypoxia>No Description</afflictiondescription.cerebralhypoxia> -->
 <afflictioncauseofdeath.cerebralhypoxia>Death by neurotrauma</afflictioncauseofdeath.cerebralhypoxia>
 <afflictioncauseofdeathself.cerebralhypoxia>You have died of neurotrauma.</afflictioncauseofdeathself.cerebralhypoxia>
 
 <afflictionname.stroke>Stroke</afflictionname.stroke>
-<afflictiondescription.stroke></afflictiondescription.stroke>
+<!-- <afflictiondescription.stroke>No Description</afflictiondescription.stroke> -->
 
 <afflictionname.seizure>Seizure</afflictionname.seizure>
-<afflictiondescription.seizure></afflictiondescription.seizure>
+<!-- <afflictiondescription.seizure>No Description</afflictiondescription.seizure> -->
 
 <afflictionname.coma>Coma</afflictionname.coma>
-<afflictiondescription.coma></afflictiondescription.coma>
+<!-- <afflictiondescription.coma>No Description</afflictiondescription.coma> -->
 
 <afflictionname.brainremoved>Brain removed</afflictionname.brainremoved>
 <afflictiondescription.brainremoved>The brain has been surgically removed.</afflictiondescription.brainremoved>
@@ -402,16 +398,31 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.traumaticshock>Traumatic shock</afflictionname.traumaticshock>
 <afflictiondescription.traumaticshock>You shouldn't be getting dug into like this! This is very wrong!</afflictiondescription.traumaticshock>
 
-<!-- /// Blood /// -->
+<afflictionname.t_paralysis>Spinal cord injury</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>The patient is paralyzed and does not feel the body.</afflictiondescription.t_paralysis>
 
+<afflictioncauseofdeath.t_paralysis>Died of paralysis</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>You have died of paralysis.</afflictioncauseofdeathself.t_paralysis>
+
+
+<!-- ================================================= Blood ================================================= -->
 <afflictionname.bloodpressure>Blood pressure</afflictionname.bloodpressure>
-<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+<!-- <afflictiondescription.bloodpressure></afflictiondescription.bloodpressure> -->
 
 <afflictionname.hypoxemia>Hypoxemia</afflictionname.hypoxemia>
-<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+<!-- <afflictiondescription.hypoxemia>No Description</afflictiondescription.hypoxemia> -->
 
-<!-- /// Lungs /// -->
+<afflictionname.alkalosis>Alkalosis</afflictionname.alkalosis>
+<!-- <afflictiondescription.alkalosis>No Description</afflictiondescription.alkalosis> -->
 
+<afflictionname.acidosis>Acidosis</afflictionname.acidosis>
+<!-- <afflictiondescription.acidosis>No Description</afflictiondescription.acidosis> -->
+
+<afflictionname.sepsis>Sepsis</afflictionname.sepsis>
+<!-- <afflictiondescription.sepsis>No Description</afflictiondescription.sepsis> -->
+
+
+<!-- ================================================= Lungs ================================================= -->
 <afflictionname.respiratoryarrest>Respiratory arrest</afflictionname.respiratoryarrest>
 <afflictiondescription.respiratoryarrest>The patient is not breathing.</afflictiondescription.respiratoryarrest>
 
@@ -424,23 +435,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.dyspnea>Shortness of breath</afflictionname.dyspnea>
 <afflictiondescription.dyspnea>The patients breathing is labored and shallow.</afflictiondescription.dyspnea>
 
-<afflictionname.alkalosis>Alkalosis</afflictionname.alkalosis>
-<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
-
-<afflictionname.acidosis>Acidosis</afflictionname.acidosis>
-<afflictiondescription.acidosis></afflictiondescription.acidosis>
-
-<afflictionname.rili>Radiation induced lung injury</afflictionname.rili>
-<afflictiondescription.rili></afflictiondescription.rili>
-
 <afflictionname.pneumothorax>Pneumothorax</afflictionname.pneumothorax>
-<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+<!-- <afflictiondescription.pneumothorax>No Description</afflictiondescription.pneumothorax> -->
 
 <afflictionname.lungdamage>Lung damage</afflictionname.lungdamage>
-<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
-
-<afflictionname.lungfailure>Lung failure</afflictionname.lungfailure>
-<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+<!-- <afflictiondescription.lungdamage>No Description</afflictiondescription.lungdamage> -->
 
 <afflictionname.lungremoved>Lungs removed</afflictionname.lungremoved>
 <afflictiondescription.lungremoved>The lungs have been surgically removed.</afflictiondescription.lungremoved>
@@ -448,33 +447,15 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.lungswap>Replacing lungs</afflictionname.lungswap>
 <afflictiondescription.lungswap>Old lungs have been surgically prepared for a new transplant.</afflictiondescription.lungswap>
 
-<!-- /// kidneys /// -->
 
-<afflictionname.kidneydamage>Kidney damage</afflictionname.kidneydamage>
-<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+<!-- ================================================= Torso ================================================= -->
+<afflictionname.internalbleeding>Internal bleeding</afflictionname.internalbleeding>
+<!-- <afflictiondescription.internalbleeding>No Description</afflictiondescription.internalbleeding> -->
 
-<afflictionname.kidneyfailure>Kidney failure</afflictionname.kidneyfailure>
-<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+<afflictionname.t_arterialcut>Aortic rupture</afflictionname.t_arterialcut>
+<!-- <afflictiondescription.t_arterialcut>No Description</afflictiondescription.t_arterialcut> -->
 
-<afflictionname.kidneyremoved>Kidneys removed</afflictionname.kidneyremoved>
-<afflictiondescription.kidneyremoved>The kidneys have been surgically removed.</afflictiondescription.kidneyremoved>
-
-<afflictionname.kidneyswap>Replacing kidneys</afflictionname.kidneyswap>
-<afflictiondescription.kidneyswap>Old kidneys have been surgically prepared for a new transplant.</afflictiondescription.kidneyswap>
-
-<!-- /// bones /// -->
-
-<afflictionname.bonedamage>Bone damage</afflictionname.bonedamage>
-<afflictiondescription.bone></afflictiondescription.bone>
-
-<afflictionname.bonedeath>Bone death</afflictionname.bonedeath>
-<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
-
-<afflictionname.bonegrowth>Stimulated bone growth</afflictionname.bonegrowth>
-<afflictiondescription.bonegrowth>Bone regrowth has been stimulated. To cure bone death, this affliction needs to be on every bodypart.</afflictiondescription.bonegrowth>
-
-<!-- /// liver /// -->
-
+<!-- ================================================= Liver ================================================= -->
 <afflictionname.liverdamage>Liver damage</afflictionname.liverdamage>
 <afflictiondescription.liverdamage></afflictiondescription.liverdamage>
 
@@ -487,8 +468,47 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.liverswap>Replacing liver</afflictionname.liverswap>
 <afflictiondescription.liverswap>Old liver has been surgically prepared for a new transplant.</afflictiondescription.liverswap>
 
-<!-- /// surgery and related /// -->
+<!-- ================================================= Kidneys ================================================= -->
+<afflictionname.kidneydamage>Kidney damage</afflictionname.kidneydamage>
+<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
 
+<afflictionname.kidneyfailure>Kidney failure</afflictionname.kidneyfailure>
+<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+
+<afflictionname.kidneyremoved>Kidneys removed</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>The kidneys have been surgically removed.</afflictiondescription.kidneyremoved>
+
+<afflictionname.kidneyswap>Replacing kidneys</afflictionname.kidneyswap>
+<afflictiondescription.kidneyswap>Old kidneys have been surgically prepared for a new transplant.</afflictiondescription.kidneyswap>
+
+
+<!-- ================================================= Bones ================================================= -->
+<afflictionname.simple_fracture>Fractured Limb</afflictionname.simple_fracture>
+<afflictiondescription.simple_fracture>Your limb is broken.</afflictiondescription.simple_fracture>
+
+<afflictionname.dislocation>Dislocation</afflictionname.dislocation>
+<afflictiondescription.dislocation>The joint isn't supposed to bend this way...</afflictiondescription.dislocation>
+
+<afflictionname.t_fracture>Fractured ribs</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>One or more of your ribs are broken.</afflictiondescription.t_fracture>
+
+<afflictionname.h_fracture>Fractured skull</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>Your skull is broken.</afflictiondescription.h_fracture>
+
+<afflictionname.n_fracture>Fractured neck</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>Your neck is broken.</afflictiondescription.n_fracture>
+
+<afflictionname.bonedamage>Bone damage</afflictionname.bonedamage>
+<afflictiondescription.bone></afflictiondescription.bone>
+
+<afflictionname.bonedeath>Bone death</afflictionname.bonedeath>
+<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+
+<afflictionname.bonegrowth>Stimulated bone growth</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>Bone regrowth has been stimulated. To cure bone death, this affliction needs to be on every bodypart.</afflictiondescription.bonegrowth>
+
+
+<!-- ================================================= Surgery and Related ================================================= -->
 <afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
 <afflictiondescription.surgeryincision>An incision has been made by a scalpel.</afflictiondescription.surgeryincision>
 
@@ -513,9 +533,10 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.balloonedaorta>Ballooned aorta</afflictionname.balloonedaorta>
 <afflictiondescription.balloonedaorta>The aorta has stopped bleeding, but bloodflow to your extremities and organs is gone.</afflictiondescription.balloonedaorta>
 
-<afflictionname.boneclamp>Splint</afflictionname.boneclamp>
-<afflictiondescription.boneclamp>Fracture has been splinted.</afflictiondescription.boneclamp>
+<afflictionname.suturedw>Stitched wound</afflictionname.suturedw>
+<afflictiondescription.suturedw>Wounds have been sutured shut.</afflictiondescription.suturedw>
 
+<!-- ================================================= Item Applications ================================================= -->
 <afflictionname.bandaged>Bandaged</afflictionname.bandaged>
 <afflictiondescription.bandaged>Protects from infection, stabilizes dislocations. Movement is slightly slowed.</afflictiondescription.bandaged>
 
@@ -537,139 +558,109 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.iced>Chilled</afflictionname.iced>
 <afflictiondescription.iced>Heals bruises. Movement is slowed.</afflictiondescription.iced>
 
-<!-- fractures, amputations, dislocations and bleeding arteries-->
-<afflictionname.ra_fracture>Fractured right humerus</afflictionname.ra_fracture>
-<afflictiondescription.ra_fracture>Your right arm is broken.</afflictiondescription.ra_fracture>
-<afflictionname.la_fracture>Fractured left humerus</afflictionname.la_fracture>
-<afflictiondescription.la_fracture>Your left arm is broken.</afflictiondescription.la_fracture>
-<afflictionname.rl_fracture>Fractured right femur</afflictionname.rl_fracture>
-<afflictiondescription.rl_fracture>Your right leg is broken.</afflictiondescription.rl_fracture>
-<afflictionname.ll_fracture>Fractured left femur</afflictionname.ll_fracture>
-<afflictiondescription.ll_fracture>Your left leg is broken.</afflictiondescription.ll_fracture>
-<afflictionname.t_fracture>Fractured ribs</afflictionname.t_fracture>
-<afflictiondescription.t_fracture>One or more of your ribs are broken.</afflictiondescription.t_fracture>
-<afflictionname.h_fracture>Fractured skull</afflictionname.h_fracture>
-<afflictiondescription.h_fracture>Your skull is broken.</afflictiondescription.h_fracture>
-<afflictionname.n_fracture>Fractured neck</afflictionname.n_fracture>
-<afflictiondescription.n_fracture>Your neck is broken.</afflictiondescription.n_fracture>
+<afflictionname.analgesia>Analgesia</afflictionname.analgesia>
+<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
 
-<afflictionname.tra_amputation>Traumatic amputation</afflictionname.tra_amputation>
-<afflictiondescription.tra_amputation>Most of the tissue of the right arm was torn off.</afflictiondescription.tra_amputation>
-<afflictionname.tla_amputation>Traumatic amputation</afflictionname.tla_amputation>
-<afflictiondescription.tla_amputation>Most of the tissue of the left arm was torn off.</afflictiondescription.tla_amputation>
-<afflictionname.trl_amputation>Traumatic amputation</afflictionname.trl_amputation>
-<afflictiondescription.trl_amputation>Most of the tissue of the right leg was torn off.</afflictiondescription.trl_amputation>
-<afflictionname.tll_amputation>Traumatic amputation</afflictionname.tll_amputation>
-<afflictiondescription.tll_amputation>Most of the tissue of the left leg was torn off.</afflictiondescription.tll_amputation>
-<afflictionname.th_amputation>Traumatic amputation</afflictionname.th_amputation>
-<afflictiondescription.th_amputation>Most of the tissue of the head was torn off.</afflictiondescription.th_amputation>
+<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
 
-<afflictionname.sra_amputation>Amputation</afflictionname.sra_amputation>
-<afflictiondescription.sra_amputation>The right arm was surgically amputated.</afflictiondescription.sra_amputation>
-<afflictionname.sla_amputation>Amputation</afflictionname.sla_amputation>
-<afflictiondescription.sla_amputation>The left arm was surgically amputated.</afflictiondescription.sla_amputation>
-<afflictionname.srl_amputation>Amputation</afflictionname.srl_amputation>
-<afflictiondescription.srl_amputation>The right leg was surgically amputated.</afflictiondescription.srl_amputation>
-<afflictionname.sll_amputation>Amputation</afflictionname.sll_amputation>
-<afflictiondescription.sll_amputation>The left leg was surgically amputated.</afflictiondescription.sll_amputation>
-<afflictionname.sh_amputation>Amputation</afflictionname.sh_amputation>
-<afflictiondescription.sh_amputation>The head was surgically amputated.</afflictiondescription.sh_amputation>
+<afflictionname.afadrenaline>Adrenaline</afflictionname.afadrenaline>
+<!-- <afflictiondescription.afadrenaline>No Description</afflictiondescription.afadrenaline> -->
 
-<afflictionname.t_paralysis>Spinal cord injury</afflictionname.t_paralysis>
-<afflictiondescription.t_paralysis>The patient is paralyzed and does not feel the body.</afflictiondescription.t_paralysis>
-<afflictioncauseofdeath.t_paralysis>Died of paralysis</afflictioncauseofdeath.t_paralysis>
-<afflictioncauseofdeathself.t_paralysis>You have died of paralysis.</afflictioncauseofdeathself.t_paralysis>
+<afflictionname.afstreptokinase>Anti-clot</afflictionname.afstreptokinase>
+<!-- <afflictiondescription.afstreptokinase>No Description</afflictiondescription.afstreptokinase> -->
 
+<afflictionname.afthiamine>Thiamine</afflictionname.afthiamine>
+<!-- <afflictiondescription.afthiamine>No Description</afflictiondescription.afthiamine> -->
 
+<afflictionname.afpressuredrug>Blood pressure reducers</afflictionname.afpressuredrug>
+<!-- <afflictiondescription.afpressuredrug>No Description</afflictiondescription.afpressuredrug> -->
 
-<afflictionname.dislocation1>Dislocation</afflictionname.dislocation1>
-<afflictiondescription.dislocation1>The joint isn't supposed to bend this way...</afflictiondescription.dislocation1>
-<afflictionname.dislocation2>Dislocation</afflictionname.dislocation2>
-<afflictiondescription.dislocation2>The joint isn't supposed to bend this way...</afflictiondescription.dislocation2>
-<afflictionname.dislocation3>Dislocation</afflictionname.dislocation3>
-<afflictiondescription.dislocation3>The joint isn't supposed to bend this way...</afflictiondescription.dislocation3>
-<afflictionname.dislocation4>Dislocation</afflictionname.dislocation4>
-<afflictiondescription.dislocation4>The joint isn't supposed to bend this way...</afflictiondescription.dislocation4>
+<afflictionname.afsaline>Saline</afflictionname.afsaline>
+<!-- <afflictiondescription.afsaline>No Description</afflictiondescription.afsaline> -->
 
-<afflictionname.ll_arterialcut>Femoral artery bleeding</afflictionname.ll_arterialcut>
-<afflictiondescription.ll_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.ll_arterialcut>
-<afflictionname.rl_arterialcut>Femoral artery bleeding</afflictionname.rl_arterialcut>
-<afflictiondescription.rl_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.rl_arterialcut>
-<afflictionname.la_arterialcut>Brachial artery bleeding</afflictionname.la_arterialcut>
-<afflictiondescription.la_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.la_arterialcut>
-<afflictionname.ra_arterialcut>Brachial artery bleeding</afflictionname.ra_arterialcut>
-<afflictiondescription.ra_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.ra_arterialcut>
-<afflictionname.t_arterialcut>Aortic rupture</afflictionname.t_arterialcut>
-<afflictionname.h_arterialcut>Carotid artery bleeding</afflictionname.h_arterialcut>
-<afflictiondescription.h_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.h_arterialcut>
+<afflictionname.afringerssolution>Ringer's solution</afflictionname.afringerssolution>
+<!-- <afflictiondescription.afringerssolution>No Description</afflictiondescription.afringerssolution> -->
 
-<afflictionname.suturedw>Stitched wound</afflictionname.suturedw>
-<afflictiondescription.suturedw>Wounds have been sutured shut.</afflictiondescription.suturedw>
+<afflictionname.afmannitol>Mannitol</afflictionname.afmannitol>
+<!-- <afflictiondescription.afmannitol>No Description</afflictiondescription.afmannitol> -->
 
-<afflictionname.immunity>Immunity</afflictionname.immunity>
-<afflictiondescription.immunity></afflictiondescription.immunity>
+<afflictionname.afantibiotics>Antibiotics</afflictionname.afantibiotics>
+<!-- <afflictiondescription.afantibiotics>No Description</afflictiondescription.afantibiotics> -->
 
+<afflictionname.afanaesthetic>Anaesthetics</afflictionname.afanaesthetic>
+<!-- <afflictiondescription.afanaesthetic>No Description</afflictiondescription.afanaesthetic> -->
+
+<afflictionname.afopioid>Opioids</afflictionname.afopioid>
+<!-- <afflictiondescription.afopioid>No Description</afflictiondescription.afopioid> -->
+
+<afflictionname.afimmunosuppressant>Immunosuppressants</afflictionname.afimmunosuppressant>
+<!-- <afflictiondescription.afimmunosuppressant>No Description</afflictiondescription.afimmunosuppressant> -->
+
+<!-- ================================================= Any Bodypart ================================================= -->
 <afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
-<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+<!-- <afflictiondescription.infectedwound>No Description</afflictiondescription.infectedwound> -->
 
-<afflictionname.sepsis>Sepsis</afflictionname.sepsis>
-<afflictiondescription.sepsis></afflictiondescription.sepsis>
+<afflictionname.foreignbody>Foreign body</afflictionname.foreignbody>
+<!-- <afflictiondescription.foreignbody>No Description</afflictiondescription.foreignbody> -->
 
-<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
-<afflictiondescription.necrosis></afflictiondescription.necrosis>
-<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
-<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
+<afflictionname.burn_deg1>First-degree burn</afflictionname.burn_deg1>
+<afflictiondescription.burn_deg1>The area is red and painful to the touch.</afflictiondescription.burn_deg1>
+
+<afflictionname.burn_deg2>Second-degree burn</afflictionname.burn_deg2>
+<afflictiondescription.burn_deg2>There are very painful blisters littering the affected area.</afflictiondescription.burn_deg2>
+
+<afflictionname.burn_deg3>Third-degree burn</afflictionname.burn_deg3>
+<afflictiondescription.burn_deg3>The patient doesn't feel pain in the now leathery, stiff area.</afflictiondescription.burn_deg3>
+
+<!-- ================================================= Extremities ================================================= -->
+<afflictionname.arterialcut>Arterial Bleeding</afflictionname.arterialcut>
+<afflictiondescription.arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.arterialcut>
 
 <afflictionname.gangrene>Gangrene</afflictionname.gangrene>
 <afflictiondescription.gangrene>The extremity has shrunk and turned black.</afflictiondescription.gangrene>
 
-<afflictionname.afadrenaline>Adrenaline</afflictionname.afadrenaline>
-<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+<!-- Traumatic Amputations -->
+<afflictionname.tra_amputation>Traumatic amputation</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>Most of the tissue of the right arm was torn off.</afflictiondescription.tra_amputation>
 
-<afflictionname.afstreptokinase>Anti-clot</afflictionname.afstreptokinase>
-<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+<afflictionname.tla_amputation>Traumatic amputation</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>Most of the tissue of the left arm was torn off.</afflictiondescription.tla_amputation>
 
-<afflictionname.afthiamine>Thiamine</afflictionname.afthiamine>
-<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+<afflictionname.trl_amputation>Traumatic amputation</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>Most of the tissue of the right leg was torn off.</afflictiondescription.trl_amputation>
 
-<afflictionname.afpressuredrug>Blood pressure reducers</afflictionname.afpressuredrug>
-<afflictiondescription.afpressuredrug></afflictiondescription.afpressuredrug>
+<afflictionname.tll_amputation>Traumatic amputation</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>Most of the tissue of the left leg was torn off.</afflictiondescription.tll_amputation>
 
-<afflictionname.afsaline>Saline</afflictionname.afsaline>
-<afflictiondescription.afsaline></afflictiondescription.afsaline>
+<afflictionname.th_amputation>Traumatic amputation</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>Most of the tissue of the head was torn off.</afflictiondescription.th_amputation>
 
-<afflictionname.afringerssolution>Ringer's solution</afflictionname.afringerssolution>
-<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+<!-- Surgical Amputations -->
+<afflictionname.sra_amputation>Amputation</afflictionname.sra_amputation>
+<afflictiondescription.sra_amputation>The right arm was surgically amputated.</afflictiondescription.sra_amputation>
 
-<afflictionname.afmannitol>Mannitol</afflictionname.afmannitol>
-<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+<afflictionname.sla_amputation>Amputation</afflictionname.sla_amputation>
+<afflictiondescription.sla_amputation>The left arm was surgically amputated.</afflictiondescription.sla_amputation>
 
-<afflictionname.afantibiotics>Antibiotics</afflictionname.afantibiotics>
-<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+<afflictionname.srl_amputation>Amputation</afflictionname.srl_amputation>
+<afflictiondescription.srl_amputation>The right leg was surgically amputated.</afflictiondescription.srl_amputation>
 
-<afflictionname.afanaesthetic>Anaesthetics</afflictionname.afanaesthetic>
-<afflictiondescription.afanaesthetic></afflictiondescription.afanaesthetic>
+<afflictionname.sll_amputation>Amputation</afflictionname.sll_amputation>
+<afflictiondescription.sll_amputation>The left leg was surgically amputated.</afflictiondescription.sll_amputation>
 
-<afflictionname.afopioid>Opioids</afflictionname.afopioid>
-<afflictiondescription.afopioid></afflictiondescription.afopioid>
+<afflictionname.sh_amputation>Amputation</afflictionname.sh_amputation>
+<afflictiondescription.sh_amputation>The head was surgically amputated.</afflictiondescription.sh_amputation>
 
-<afflictionname.afimmunosuppressant>Immunosuppressants</afflictionname.afimmunosuppressant>
-<afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
+<!-- ================================================= Mechanics ================================================= -->
+<afflictionname.immunity>Immunity</afflictionname.immunity>
+<!-- <afflictiondescription.immunity>No Description</afflictiondescription.immunity> -->
 
 <afflictionname.hemotransfusionshock>Hemotransfusion shock</afflictionname.hemotransfusionshock>
-<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+<!-- <afflictiondescription.hemotransfusionshock>No Description</afflictiondescription.hemotransfusionshock> -->
+ 
 
-<afflictionname.foreignbody>Foreign body</afflictionname.foreignbody>
-<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
-
-<afflictionname.tamponade>Cardiac tamponade</afflictionname.tamponade>
-<afflictiondescription.tamponade></afflictiondescription.tamponade>
-
-<afflictionname.internalbleeding>Internal bleeding</afflictionname.internalbleeding>
-<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
-
-<!-- /// symptoms /// -->
-
+<!-- ================================================= Symptoms ================================================= -->
 <afflictionname.sym_cough>Cough</afflictionname.sym_cough>
 <afflictiondescription.sym_cough>The patient is coughing periodically.</afflictiondescription.sym_cough>
 
@@ -748,6 +739,8 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.sym_nausea>Nausea</afflictionname.sym_nausea>
 <afflictiondescription.sym_nausea>The skin is clammy and the patient is nauseous.</afflictiondescription.sym_nausea>
 
+
+<!-- ================================================= Meta Afflictions ================================================= -->
 <afflictionname.luabotomy>Lualess</afflictionname.luabotomy>
 <afflictiondescription.luabotomy>Lua isn't running. That means neurotrauma and any other mods that use it won't work. Please read the workshop pages of mods you plan to use.</afflictiondescription.luabotomy>
 
@@ -757,23 +750,8 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.tshocktimeout>Traumatic shock immunity</afflictionname.tshocktimeout>
 <afflictiondescription.tshocktimeout>The patient was left unattended, for some time they won't be aware about having themselves opened.</afflictiondescription.tshocktimeout>
 
-<afflictionname.analgesia>Analgesia</afflictionname.analgesia>
-<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
 
-<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
-<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
-
-
-<afflictionname.burn_deg1>First-degree burn</afflictionname.burn_deg1>
-<afflictiondescription.burn_deg1>The area is red and painful to the touch.</afflictiondescription.burn_deg1>
-
-<afflictionname.burn_deg2>Second-degree burn</afflictionname.burn_deg2>
-<afflictiondescription.burn_deg2>There are very painful blisters littering the affected area.</afflictiondescription.burn_deg2>
-
-<afflictionname.burn_deg3>Third-degree burn</afflictionname.burn_deg3>
-<afflictiondescription.burn_deg3>The patient doesn't feel pain in the now leathery, stiff area.</afflictiondescription.burn_deg3>
-
-<!-- /// SIGNALS /// -->
+<!-- ================================================= Surgery Table Signals ================================================= -->
 <connection.aliveout>Alive</connection.aliveout>
 <connection.consciousout>Conscious</connection.consciousout>
 <connection.nameout>Patient_name</connection.nameout>
@@ -788,15 +766,17 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <connection.causeofdeathout>Cause_of_death</connection.causeofdeathout>
 <connection.bloodphout>Blood_pH</connection.bloodphout>
 
-<!-- misc -->
+<!-- ================================================= Miscellaneous Translations ================================================= -->
 <roomname.surgical>Surgical</roomname.surgical>
 <ItemMsgPutInsideSelectKey>[[select]] Put inside</ItemMsgPutInsideSelectKey>
 <ItemMsgTakeOutSelectKey>[[select]] Take out</ItemMsgTakeOutSelectKey>
 
-<!-- Talents -->
+
+<!-- ================================================= Talents ================================================= -->
 <talentdescription.itemgiveslessaffliction>Administering ‖color:gui.orange‖Alien Blood‖end‖ gives [amount]% less ‖color:gui.orange‖Psychosis‖end‖ and ‖color:gui.green‖90%‖end‖ less ‖color:gui.orange‖Hemotransfusion Shock‖end‖.</talentdescription.itemgiveslessaffliction>
 
-<!-- /// Loading Screen Tips /// -->
+
+<!-- ================================================= Loading Screen Tips ================================================= -->
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Non-medical personnel can treat cardiac arrest with the use of adrenaline or an AutoPulse.</loadingscreentip>
 
@@ -914,14 +894,11 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
-<!--  //  NPC Dialogs for symptoms  // -->
 
+<!--  =================================================  NPC Dialogs for Symptoms  ================================================= -->
 <npcdialogsym.n_fracture>My neck is broken!</npcdialogsym.n_fracture>
 <npcdialogsym.h_arterialcut>I'm bleeding out from my head!</npcdialogsym.h_arterialcut>
-<npcdialogsym.ll_arterialcut>My left leg artery is cut!</npcdialogsym.ll_arterialcut>
-<npcdialogsym.rl_arterialcut>My right leg artery is cut!</npcdialogsym.rl_arterialcut>
-<npcdialogsym.ra_arterialcut>My right arm artery is cut!</npcdialogsym.ra_arterialcut>
-<npcdialogsym.la_arterialcut>My left arm artery is cut!</npcdialogsym.la_arterialcut>
+<npcdialogsym.arterialcut>One of my arteries is cut!</npcdialogsym.arterialcut>
 <npcdialogsym.sym_hematemesis>I'm vomiting blood!</npcdialogsym.sym_hematemesis>
 <npcdialogsym.sym_paleskin>My skin is turning pale!</npcdialogsym.sym_paleskin>
 <npcdialogsym.sym_confusion>I feel confused...</npcdialogsym.sym_confusion>
@@ -934,14 +911,8 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <npcdialogsym.sym_blurredvision>Everything looks blurry!</npcdialogsym.sym_blurredvision>
 <npcdialogsym.t_fracture>My ribs are fractured!</npcdialogsym.t_fracture>
 <npcdialogsym.h_fracture>My skull is broken!</npcdialogsym.h_fracture>
-<npcdialogsym.ra_fracture>My right arm is broken!</npcdialogsym.ra_fracture>
-<npcdialogsym.la_fracture>My left arm is broken!</npcdialogsym.la_fracture>
-<npcdialogsym.rl_fracture>My right leg is broken!</npcdialogsym.rl_fracture>
-<npcdialogsym.ll_fracture>My left leg is broken!</npcdialogsym.ll_fracture>
-<npcdialogsym.dislocation1>My right leg is dislocated!</npcdialogsym.dislocation1>
-<npcdialogsym.dislocation2>My left leg is dislocated!</npcdialogsym.dislocation2>
-<npcdialogsym.dislocation3>My right arm is dislocated!</npcdialogsym.dislocation3>
-<npcdialogsym.dislocation4>My left arm is dislocated!</npcdialogsym.dislocation4>
+<npcdialogsym.simple_fracture>One of my limbs is broken!</npcdialogsym.simple_fracture>
+<npcdialogsym.dislocation>One of my limbs is dislocated!</npcdialogsym.dislocation>
 <npcdialogsym.pain_chest>My chest hurts!</npcdialogsym.pain_chest>
 <npcdialogsym.sym_weakness>I feel so weak...</npcdialogsym.sym_weakness>
 <npcdialogsym.sym_sweating>I'm sweating profusely!</npcdialogsym.sym_sweating>
@@ -950,4 +921,23 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <npcdialogsym.sym_legswelling>My leg is swelling up!</npcdialogsym.sym_legswelling>
 <npcdialogsym.sym_craving>I have an intense craving!</npcdialogsym.sym_craving>
 <npcdialogsym.sym_palpitations>My heart is racing!</npcdialogsym.sym_palpitations>
+
+<!-- ================================================= Unused ================================================= -->
+<!-- Lungs -->
+<afflictionname.rili>Radiation induced lung injury</afflictionname.rili>
+<!-- <afflictiondescription.rili>No Description</afflictiondescription.rili> -->
+
+<afflictionname.lungfailure>Lung failure</afflictionname.lungfailure>
+<!-- <afflictiondescription.lungfailure>No Description</afflictiondescription.lungfailure> -->
+
+<!-- Any Bodypart -->
+<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
+<afflictiondescription.necrosis>No Description</afflictiondescription.necrosis>
+<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
+
+<!-- Items -->
+<afflictionname.boneclamp>Splint</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>Fracture has been splinted.</afflictiondescription.boneclamp>
+
 </infotexts>
