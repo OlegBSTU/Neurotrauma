@@ -163,68 +163,6 @@ NT.Afflictions = {
 			end
 		end,
 	},
-	la_fracture = {
-		update = function(c, i)
-			if c.afflictions[i].strength > 0 then
-				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
-					if
-						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.LeftArm)
-						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.LeftArm)
-					then
-						return
-					end
-				end
-				c.afflictions[i].strength = c.afflictions[i].strength
-					+ 2
-						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftArm))
-						* NT.Deltatime
-			end
-		end,
-	},
-	ra_fracture = {
-		update = function(c, i)
-			if c.afflictions[i].strength > 0 then
-				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
-					if
-						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.RightArm)
-						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.RightArm)
-					then
-						return
-					end
-				end
-				c.afflictions[i].strength = c.afflictions[i].strength
-					+ 2
-						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightArm))
-						* NT.Deltatime
-			end
-		end,
-	},
-	ll_fracture = {
-		update = function(c, i)
-			if c.afflictions[i].strength > 0 then
-				local hascast = HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftLeg)
-
-				c.afflictions[i].strength = c.afflictions[i].strength + 2 * HF.BoolToNum(not hascast) * NT.Deltatime
-
-				if not hascast and HF.HasAffliction(c.character, "afadrenaline", 1) and not c.character.IsRagdolled then
-					HF.AddAfflictionLimb(c.character, "bleeding", LimbType.LeftLeg, 15)
-				end
-			end
-		end,
-	},
-	rl_fracture = {
-		update = function(c, i)
-			if c.afflictions[i].strength > 0 then
-				local hascast = HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightLeg)
-
-				c.afflictions[i].strength = c.afflictions[i].strength + 2 * HF.BoolToNum(not hascast) * NT.Deltatime
-
-				if not hascast and HF.HasAffliction(c.character, "afadrenaline", 1) and not c.character.IsRagdolled then
-					HF.AddAfflictionLimb(c.character, "bleeding", LimbType.RightLeg, 15)
-				end
-			end
-		end,
-	},
 	n_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
@@ -1450,7 +1388,6 @@ NT.LimbAfflictions = {
 				if type == LimbType.LeftLeg or type == LimbType.RightLeg then
 					c.stats.speedmultiplier = c.stats.speedmultiplier * 0.8
 				end
-				NT.BreakLimb(c.character, type, -(100 / 300) * NT.Deltatime)
 			end
 		end,
 	},
@@ -1823,7 +1760,13 @@ NT.CharStats = {
 			-- heart isnt pumping blood? no new oxygen is getting into the bloodstream, no matter how oxygen rich the air in the lungs
 			res = res * (1 - c.afflictions.fibrillation.strength / 100)
 			-- and uuuh, maybe also dont let people without lungs or broken lungs use the oxygen where their lungs should be
-			if c.afflictions.cardiacarrest.strength > 1 or c.afflictions.lungdamage.strength == 100 or c.afflictions.lungremoved.strength > 0.1 then res = 0 end
+			if
+				c.afflictions.cardiacarrest.strength > 1
+				or c.afflictions.lungdamage.strength == 100
+				or c.afflictions.lungremoved.strength > 0.1
+			then
+				res = 0
+			end
 			return res
 		end,
 	},

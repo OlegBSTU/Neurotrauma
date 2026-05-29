@@ -19,33 +19,85 @@ for key, value in pairs(LimbType) do
 end
 
 -- Neurotrauma functions
+local Extremities = {
+	[LimbType.RightLeg] = true,
+	[LimbType.LeftLeg] = true,
+	[LimbType.RightArm] = true,
+	[LimbType.LeftArm] = true,
+}
 
+local limbToFracture = {
+	[LimbType.RightLeg] = "simple_fracture",
+	[LimbType.LeftLeg] = "simple_fracture",
+	[LimbType.RightArm] = "simple_fracture",
+	[LimbType.LeftArm] = "simple_fracture",
+	[LimbType.Head] = "h_fracture",
+	[LimbType.Torso] = "t_fracture",
+}
+
+local arteryToCut = {
+	[LimbType.RightLeg] = "arterialcut",
+	[LimbType.LeftLeg] = "arterialcut",
+	[LimbType.RightArm] = "arterialcut",
+	[LimbType.LeftArm] = "arterialcut",
+	[LimbType.Head] = "h_arterialcut",
+	[LimbType.Torso] = "t_arterialcut",
+}
+
+-- Dislocation Application
 function NT.DislocateLimb(character, limbtype, strength)
-	strength = strength or 1
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "dislocation1"
-	limbtoaffliction[LimbType.LeftLeg] = "dislocation2"
-	limbtoaffliction[LimbType.RightArm] = "dislocation3"
-	limbtoaffliction[LimbType.LeftArm] = "dislocation4"
-	if limbtoaffliction[limbtype] == nil then return end
-	HF.AddAffliction(character, limbtoaffliction[limbtype], strength)
+	if not Extremities[limbtype] then return end
+
+	HF.AddAfflictionLimb(character, "dislocation", limbtype, strength or 1)
 end
+
+-- Fracture Application
 function NT.BreakLimb(character, limbtype, strength)
+	local affliction = limbToFracture[limbtype]
+	if not affliction then return end
+
 	strength = strength or 5
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "rl_fracture"
-	limbtoaffliction[LimbType.LeftLeg] = "ll_fracture"
-	limbtoaffliction[LimbType.RightArm] = "ra_fracture"
-	limbtoaffliction[LimbType.LeftArm] = "la_fracture"
-	limbtoaffliction[LimbType.Head] = "h_fracture"
-	limbtoaffliction[LimbType.Torso] = "t_fracture"
-	if limbtoaffliction[limbtype] == nil then return end
-	HF.AddAffliction(character, limbtoaffliction[limbtype], strength)
+
+	HF.AddAfflictionLimb(character, affliction, limbtype, strength)
 
 	if strength > 0 and NTConfig.Get("NT_fracturesRemoveCasts", true) then
 		HF.SetAfflictionLimb(character, "gypsumcast", limbtype, 0)
 	end
 end
+
+-- Arterial Cut Application
+function NT.ArteryCutLimb(character, limbtype, strength)
+	local affliction = arteryToCut[limbtype]
+	if not affliction then return end
+
+	strength = strength or 5
+
+	HF.AddAffliction(character, affliction, strength)
+end
+
+-- Limb Dislocation Check
+function NT.LimbIsDislocated(character, limbtype, isarm)
+	if not Extremities[limbtype] then return false end
+
+	return HF.HasAfflictionLimb(character, "dislocation", limbtype, isarm and 100 or 1)
+end
+
+-- Limb Fracture Check
+function NT.LimbIsBroken(character, limbtype, isarm)
+	local affliction = limbToFracture[limbtype]
+	if not affliction then return false end
+
+	return HF.HasAfflictionLimb(character, affliction, limbtype, isarm and 100 or 1)
+end
+
+-- Artery Cut Check
+function NT.LimbIsArterialCut(character, limbtype)
+	local affliction = arteryToCut[limbtype]
+	if not affliction then return false end
+
+	return HF.HasAfflictionLimb(character, affliction, limbtype, 1)
+end
+
 function NT.SurgicallyAmputateLimbAndGenerateItem(usingCharacter, targetCharacter, limbtype)
 	-- drop previously worn headgear item
 	local previtem = HF.GetHeadWear(targetCharacter)
@@ -90,6 +142,7 @@ function NT.SurgicallyAmputateLimb(character, limbtype, strength, traumampstreng
 	HF.SetAffliction(character, limbtoaffliction[limbtype], traumampstrength)
 	HF.SetAfflictionLimb(character, "gangrene", limbtype, 0)
 end
+
 function NT.TraumamputateLimb(character, limbtype, attacker)
 	limbtype = HF.NormalizeLimbType(limbtype)
 	local limbtoaffliction = {}
@@ -115,6 +168,7 @@ function NT.TraumamputateLimb(character, limbtype, attacker)
 		end
 	end
 end
+
 function NT.TraumamputateLimbMinusItem(character, limbtype)
 	limbtype = HF.NormalizeLimbType(limbtype)
 	local limbtoaffliction = {}
@@ -126,56 +180,7 @@ function NT.TraumamputateLimbMinusItem(character, limbtype)
 	if limbtoaffliction[limbtype] == nil then return end
 	HF.AddAfflictionLimb(character, limbtoaffliction[limbtype], limbtype, 10)
 end
-function NT.ArteryCutLimb(character, limbtype, strength)
-	strength = strength or 5
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "rl_arterialcut"
-	limbtoaffliction[LimbType.LeftLeg] = "ll_arterialcut"
-	limbtoaffliction[LimbType.RightArm] = "ra_arterialcut"
-	limbtoaffliction[LimbType.LeftArm] = "la_arterialcut"
-	limbtoaffliction[LimbType.Head] = "h_arterialcut"
-	limbtoaffliction[LimbType.Torso] = "t_arterialcut"
-	if limbtoaffliction[limbtype] == nil then return end
-	HF.AddAffliction(character, limbtoaffliction[limbtype], strength)
-end
 
-function NT.LimbIsDislocated(character, limbtype, isarm)
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "dislocation1"
-	limbtoaffliction[LimbType.LeftLeg] = "dislocation2"
-	limbtoaffliction[LimbType.RightArm] = "dislocation3"
-	limbtoaffliction[LimbType.LeftArm] = "dislocation4"
-	if limbtoaffliction[limbtype] == nil then return false end
-	if isarm then
-		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
-	else
-		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
-	end
-end
-function NT.LimbIsBroken(character, limbtype, isarm)
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "rl_fracture"
-	limbtoaffliction[LimbType.LeftLeg] = "ll_fracture"
-	limbtoaffliction[LimbType.RightArm] = "ra_fracture"
-	limbtoaffliction[LimbType.LeftArm] = "la_fracture"
-	if limbtoaffliction[limbtype] == nil then return false end
-	if isarm then
-		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
-	else
-		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
-	end
-end
-function NT.LimbIsArterialCut(character, limbtype)
-	local limbtoaffliction = {}
-	limbtoaffliction[LimbType.RightLeg] = "rl_arterialcut"
-	limbtoaffliction[LimbType.LeftLeg] = "ll_arterialcut"
-	limbtoaffliction[LimbType.RightArm] = "ra_arterialcut"
-	limbtoaffliction[LimbType.LeftArm] = "la_arterialcut"
-	limbtoaffliction[LimbType.Head] = "h_arterialcut"
-	limbtoaffliction[LimbType.Torso] = "t_arterialcut"
-	if limbtoaffliction[limbtype] == nil then return false end
-	return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
-end
 function NT.LimbIsAmputated(character, limbtype)
 	return NT.LimbIsTraumaticallyAmputated(character, limbtype) or NT.LimbIsSurgicallyAmputated(character, limbtype)
 end

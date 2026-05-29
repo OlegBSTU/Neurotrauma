@@ -27,10 +27,7 @@ end
 local afflictions = {
 	"n_fracture", -- urgent perceivable afflictions
 	"h_arterialcut",
-	"ll_arterialcut",
-	"rl_arterialcut",
-	"ra_arterialcut",
-	"la_arterialcut",
+	"arterialcut",
 	"sym_hematemesis", -- urgent causes
 	"sym_paleskin",
 	"sym_confusion",
@@ -43,14 +40,8 @@ local afflictions = {
 	"sym_blurredvision",
 	"t_fracture", -- not urgent afflictions
 	"h_fracture",
-	"ra_fracture",
-	"la_fracture",
-	"rl_fracture",
-	"ll_fracture",
-	"dislocation1",
-	"dislocation2",
-	"dislocation3",
-	"dislocation4",
+	"simple_fracture",
+	"dislocation",
 	"pain_chest", -- not urgent causes
 	"sym_weakness",
 	"sym_sweating",
