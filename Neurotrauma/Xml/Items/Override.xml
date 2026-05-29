@@ -31,10 +31,7 @@
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,0,64,64" origin="0.5,0.5" />
             <Sprite texture="Content/Items/Tools/tools.png" sourcerect="161,235,64,20" depth="0.55" origin="0.5,0.5" />
             <Body width="60" height="15" density="30" />
-            <SuitableTreatment identifier="dislocation1" suitability="50"/>
-            <SuitableTreatment identifier="dislocation2" suitability="50"/>
-            <SuitableTreatment identifier="dislocation3" suitability="50"/>
-            <SuitableTreatment identifier="dislocation4" suitability="50"/>
+            <SuitableTreatment identifier="dislocation" suitability="50"/>
 
             <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-8,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
                 <Attack structuredamage="0" itemdamage="2" targetimpulse="5">
@@ -1787,10 +1784,7 @@
             <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
             <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
             <Body width="60" height="15" density="30" />
-            <SuitableTreatment identifier="dislocation1" suitability="50"/>
-            <SuitableTreatment identifier="dislocation2" suitability="50"/>
-            <SuitableTreatment identifier="dislocation3" suitability="50"/>
-            <SuitableTreatment identifier="dislocation4" suitability="50"/>
+            <SuitableTreatment identifier="dislocation" suitability="50"/>
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="60" msg="ItemMsgPickUpSelect">
             </Holdable>
             <aitarget sightrange="500" soundrange="500" fadeouttime="1" />

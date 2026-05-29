@@ -1,0 +1,438 @@
+<Override>
+<Items>
+    <!-- File Contains: Surgery Consumables, Surgery Tools -->
+
+    <!-- ============================================== Surgery Consumables ============================================== -->
+    <!-- Sutures -->
+    <Item name="" identifier="suture" category="Medical" maxstacksize="48" maxstacksizecharacterinventory="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="medcab" minamount="24" maxamount="32" spawnprobability="1"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="2" maxamount="6" spawnprobability="0.5"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="10" maxamount="16" spawnprobability="0.25"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="16" requiredtime="10">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="aluminium" />
+            <RequiredItem identifier="organicfiber" amount="2" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="9">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="24"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="56"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="56"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,128,128,128" depth="0.55" origin="0.5,0.5"/>
+
+        <Body width="65" height="45" density="50"/>
+
+        <SuitableTreatment identifier="lacerations" suitability="20"/>
+        <SuitableTreatment identifier="bitewounds" suitability="20"/>
+        <SuitableTreatment identifier="explosiondamage" suitability="20"/>
+        <SuitableTreatment identifier="gunshotwound" suitability="20"/>
+        <SuitableTreatment type="bleeding" suitability="40"/>
+        <SuitableTreatment identifier="surgeryincision" suitability="100"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" tags="medical" target="This, Limb">
+                <Sound file="%ModDir%/Sound/suture.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <!-- Drainage -->
+    <Item name="" identifier="drainage" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="1">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="plastic"/>
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <Price baseprice="70" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="100" height="100" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <RequiredSkill identifier="medical" level="30"/>
+            <StatusEffect type="OnUse" target="This">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+    </Item>
+
+    <!-- Needle -->
+    <Item name="" identifier="needle" category="Medical" maxstacksize="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light">
+        <PreferredContainer primary="medcab" minamount="8" maxamount="12" spawnprobability="1"/>
+        <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
+
+        <Price baseprice="60" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="40" amount="2">
+            <RequiredSkill identifier="medical" level="20"/>
+            <RequiredItem identifier="plastic" />
+            <RequiredItem identifier="aluminium" />
+        </Fabricate>
+
+        <Deconstruct/>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,128,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="640,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="35" height="65" density="20"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="3,0" holdangle="190" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90">
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <LuaHook name="NT.runItemMethod"/>
+            </StatusEffect>
+        </Projectile>
+
+        <SkillRequirementHint identifier="medical" level="20"/>
+    </Item>
+
+    <!-- Osteosynthesis Implants -->
+    <Item name="" identifier="osteosynthesisimplants" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+        <PreferredContainer primary="medcab"/>
+        <PreferredContainer secondary="locker"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.05" />
+        <Price baseprice="350" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator">
+            <RequiredSkill identifier="medical" level="35"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="titaniumaluminiumalloy"/>
+            <RequiredItem identifier="liquidoxygenite"/>
+            <RequiredItem identifier="calcium"/>
+        </Fabricate>
+
+        <Deconstruct time="10"/>
+
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="87,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="65" height="15" density="50"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb, this" comparison="and">
+                <Conditional drilledbones="gte 99"/>
+                <Conditional analgesia="gte 1"/>
+                <Sound file="%ModDir%/Sound/drill.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+
+    <!-- Spinal Cord Implants -->
+    <Item name="" identifier="spinalimplant" description="" category="Medical" scale="0.3" useinhealthinterface="True" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool">
+        <PreferredContainer primary="medcab"/>
+        <PreferredContainer secondary="locker"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.05" />
+
+        <Price baseprice="350" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator">
+            <RequiredSkill identifier="medical" level="70"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="titaniumaluminiumalloy"/>
+            <RequiredItem identifier="liquidoxygenite"/>
+            <RequiredItem identifier="calcium"/>
+        </Fabricate>
+
+        <Deconstruct time="10"/>
+
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="344,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="60" height="90" density="20"/>
+
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
+              <Conditional retractedskin="gt 50" />
+              <Sound file="%ModDir%/Sound/drill.ogg" range="500" />
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+
+
+    <!-- ============================================== Surgery Tools ============================================== -->
+    <!-- Hemostat -->
+    <Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="locker"/>
+        
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="110" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="0.02"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="0.02"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-13" holdangle="-90" reload="1.0"/>
+    </Item>
+
+    <!--  Skin Retractors-->
+    <Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.2">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,128,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="110" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="0.03"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="0.03"/>
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-13" holdangle="-90" reload="1.0"/>
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <!-- Surgical Drill -->
+    <Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="80" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="100" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-20" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and">
+                <Conditional analgesia="gte 1"/>
+                <Sound file="%ModDir%/Sound/drill.ogg" range="500"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="45"/>
+    </Item>
+
+    <!-- Surgery Saw -->
+    <Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.4">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="100" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="120" height="50" density="50"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,-7" holdangle="90" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="And">
+                <Conditional analgesia="gte 1"/>
+                <Conditional retractedskin="gte 99"/>
+                <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500"/>
+                <sound file="%ModDir%/Sound/bonebreak1.ogg" range="500"/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="50"/>
+    </Item>
+
+    <!-- Tweezers -->
+    <Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.150">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="65" height="65" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="0.05"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="0.05"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,-5" holdangle="10" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+                <Sound file="%ModDir%/Sound/squelch1.ogg"/>
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <!-- Trauma Shears -->
+    <Item name="" identifier="traumashears" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgerytool" description="" useinhealthinterface="True" scale="0.5">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct time="5"/>
+
+        <Price baseprice="50" soldbydefault="true">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="3"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="8"/>
+            <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="8"/>
+        </Price>
+
+        <Fabricate suitablefabricators="medicalfabricator" amount="1" requiredtime="10">
+            <RequiredSkill identifier="medical" level="25"/>
+            <RequiredItem identifier="steel" />
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,192,64,64" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="55" density="50"/>
+        <SuitableTreatment identifier="dirtybandage" suitability="100"/>
+        <SuitableTreatment identifier="bandaged" suitability="100"/>
+        <SuitableTreatment identifier="gypsumcast" suitability="100"/>
+        <SuitableTreatment identifier="arteriesclamp" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_green" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_yellow" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_red" suitability="100"/>
+        <SuitableTreatment identifier="triagetag_black" suitability="100"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="12,-2" holdangle="210" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and"/>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="10"/>
+    </Item>
+
+    <!-- Scalpel -->
+    <Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="locker"/>
+
+        <Deconstruct/>
+
+        <Price baseprice="35" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,188,122,8" depth="0.55" origin="0.5,0.5"/>
+        <Body width="65" height="15" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="0.01"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="0.01"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,2" holdangle="60" reload="1.0">
+            <StatusEffect type="OnUse" target="Limb" comparison="and">
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <SkillRequirementHint identifier="medical" level="30"/>
+    </Item>
+
+    <!-- Multi-Purpose Scalpel -->
+    <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="locker"/>
+
+        <Fabricate suitablefabricators="fabricator">
+            <RequiredSkill identifier="medical" level="60"/>
+            <RequiredSkill identifier="mechanical" level="20"/>
+            <RequiredItem identifier="steel"/>
+            <RequiredItem identifier="fpgacircuit"/>
+            <RequiredItem identifier="plastic"/>
+            <RequiredItem identifier="zinc" amount="2"/>
+        </Fabricate>
+
+        <Deconstruct>
+            <Item identifier="steel"/>
+        </Deconstruct>
+
+        <Price baseprice="210" soldbydefault="true">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
+        </Price>
+
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="0,256,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,218,122,8" depth="0.55" origin="0.5,0.5"/>
+        <Body width="65" height="15" density="50"/>
+        <SuitableTreatment identifier="analgesia" suitability="0.04"/>
+        <SuitableTreatment identifier="sym_unconsciousness" suitability="0.04"/>
+
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,2" holdangle="60" reload="1.0">
+            <!-- extracting organ -->
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+            <GuiFrame relativesize="0.14,0.25" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,0" style="ItemUI" />
+            <Button text="multiscalpel.btn.incision">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.incision"/>
+                </StatusEffect>
+            </Button>
+            <!--<Button text="multiscalpel.btn.kidneys"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.kidneys"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.liver"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.liver"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.lungs"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.lungs"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.heart"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.heart"/></StatusEffect></Button>-->
+            <!--<Button text="multiscalpel.btn.brain"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.brain"/></StatusEffect></Button>-->
+            <Button text="multiscalpel.btn.bandage">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.bandage"/>
+                </StatusEffect>
+            </Button>
+            <Button text="multiscalpel.btn.speedflex">
+                <StatusEffect target="This" type="OnUse" stackable="true">
+                    <LuaHook name="NT.multiscalpel.speedflex"/>
+                </StatusEffect>
+            </Button>
+        </CustomInterface>
+    </Item>
+
+</Items>
+</Override>
