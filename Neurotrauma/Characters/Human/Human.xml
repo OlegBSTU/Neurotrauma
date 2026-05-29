@@ -99,12 +99,9 @@ DisableDistance="25000" SoundInterval="10">
   </StatusEffect>
 
   <StatusEffect type="OnDeconstructing" target="Character" disabledeltatime="true" interval="1">
-    <Affliction identifier="ra_fracture" amount="50" probability="0.3" />
-    <Affliction identifier="la_fracture" amount="50" probability="0.3" />
     <Affliction identifier="h_fracture" amount="50" probability="0.3" />
     <Affliction identifier="t_fracture" amount="50" probability="0.3" />
-    <Affliction identifier="ll_fracture" amount="50" probability="0.3" />
-    <Affliction identifier="rl_fracture" amount="50" probability="0.3" />
+    <Affliction identifier="simple_fracture" amount="50" probability="0.1" />
     <!-- <LuaHook name="IsDeconstructingHuman" /> -->
   </StatusEffect>
   
