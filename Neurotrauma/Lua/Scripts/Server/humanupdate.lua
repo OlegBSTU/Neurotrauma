@@ -1823,7 +1823,13 @@ NT.CharStats = {
 			-- heart isnt pumping blood? no new oxygen is getting into the bloodstream, no matter how oxygen rich the air in the lungs
 			res = res * (1 - c.afflictions.fibrillation.strength / 100)
 			-- and uuuh, maybe also dont let people without lungs or broken lungs use the oxygen where their lungs should be
-			if c.afflictions.cardiacarrest.strength > 1 or c.afflictions.lungdamage.strength == 100 or c.afflictions.lungremoved.strength > 0.1 then res = 0 end
+			if
+				c.afflictions.cardiacarrest.strength > 1
+				or c.afflictions.lungdamage.strength == 100
+				or c.afflictions.lungremoved.strength > 0.1
+			then
+				res = 0
+			end
 			return res
 		end,
 	},
@@ -1975,13 +1981,24 @@ function NT.UpdateHuman(character)
 			charData[keystring][identifier] = { prev = strength, strength = strength }
 		end
 	end
-	local function UpdateLimb(type)
+	local function UpdateLimb(type, stasisflag)
 		local keystring = tostring(type) .. "afflictions"
 		for identifier, data in pairs(NT.LimbAfflictions) do
-			if data.update ~= nil then data.update(charData, charData[keystring], identifier, type) end
+			if
+				data.update ~= nil
+				and (
+					not stasisflag
+					or (
+						NT.LimbAfflictions[identifier].ignorestasis ~= nil
+						and NT.LimbAfflictions[identifier].ignorestasis == true
+					)
+				)
+			then
+				data.update(charData, charData[keystring], identifier, type)
+			end
 		end
 	end
-	local function ApplyLimb(type)
+	local function ApplyLimb(type, stasisflag)
 		local keystring = tostring(type) .. "afflictions"
 		for identifier, data in pairs(charData[keystring]) do
 			local newval = HF.Clamp(
@@ -1989,7 +2006,16 @@ function NT.UpdateHuman(character)
 				NT.LimbAfflictions[identifier].min or 0,
 				NT.LimbAfflictions[identifier].max or 100
 			)
-			if newval ~= data.prev then
+			if
+				newval ~= data.prev
+				and (
+					not stasisflag
+					or (
+						NT.LimbAfflictions[identifier].ignorestasis ~= nil
+						and NT.LimbAfflictions[identifier].ignorestasis == true
+					)
+				)
+			then
 				if NT.LimbAfflictions[identifier].apply == nil then
 					HF.SetAfflictionLimb(character, identifier, type, newval)
 				else
@@ -2000,16 +2026,14 @@ function NT.UpdateHuman(character)
 	end
 
 	-- stasis completely halts activity in limbs
-	if not charData.stats.stasis then
-		for type in limbtypes do
-			FetchLimbData(type)
-		end
-		for type in limbtypes do
-			UpdateLimb(type)
-		end
-		for type in limbtypes do
-			ApplyLimb(type)
-		end
+	for type in limbtypes do
+		FetchLimbData(type)
+	end
+	for type in limbtypes do
+		UpdateLimb(type, charData.stats.stasis)
+	end
+	for type in limbtypes do
+		ApplyLimb(type, charData.stats.stasis)
 	end
 
 	-- non-limb-specific late update (useful for things that use stats that are altered by limb specifics)
