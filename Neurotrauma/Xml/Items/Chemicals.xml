@@ -7,7 +7,7 @@
         <PreferredContainer primary="medcab" minamount="0" maxamount="0"/>
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.25"/>
 
-        <Price baseprice="100">
+        <Price baseprice="55">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="15"/>
         </Price>
 
