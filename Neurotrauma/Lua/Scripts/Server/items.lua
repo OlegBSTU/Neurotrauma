@@ -1739,7 +1739,7 @@ NT.ItemMethods.osteosynthesisimplants = function(item, usingCharacter, targetCha
 			HF.SetAfflictionLimb(targetCharacter, "bonegrowth", limbtype, 100, usingCharacter)
 
 			-- Make it possible to increase / decrease the amount of uses of this item
-			local ItemUses = (1 / NTConfig.Get("NTIT_OsteoImplants_uses", 4)) * 100
+			local ItemUses = (1 / NTConfig.Get("NT_OsteoImplants_uses", 4)) * 100
 			item.Condition = item.Condition - ItemUses
 
 			if item.Condition <= 1 then HF.RemoveItem(item) end
@@ -1763,7 +1763,7 @@ NT.ItemMethods.spinalimplant = function(item, usingCharacter, targetCharacter, l
 			HF.SetAffliction(targetCharacter, "t_paralysis", 0, usingCharacter)
 
 			-- Make it possible to increase / decrease the amount of uses of this item
-			local ItemUses = (1 / NTConfig.Get("NTIT_SpinalImplants_uses", 1)) * 100
+			local ItemUses = (1 / NTConfig.Get("NT_SpinalImplants_uses", 1)) * 100
 			item.Condition = item.Condition - ItemUses
 
 			if item.Condition <= 1 then HF.RemoveItem(item) end
