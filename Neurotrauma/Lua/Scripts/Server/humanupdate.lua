@@ -362,6 +362,13 @@ NT.Afflictions = {
 			if c.afflictions.heartremoved.strength > 0 then c.afflictions[i].strength = 0 end
 		end,
 	},
+	infectedperitoneal = {
+		update = function(c, i)
+			if c.afflictions[i].strength > 0 then
+				c.afflictions[i].strength = c.afflictions[i].strength + NT.Deltatime * 2
+			end
+		end,
+	},
 	heartattack = {
 		update = function(c, i)
 			c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime
@@ -1279,6 +1286,7 @@ NT.Afflictions = {
 						NTC.GetSymptom(c.character, i)
 						or c.afflictions.sepsis.strength > 5
 						or c.afflictions.alcoholwithdrawal.strength > 90
+						or c.afflictions.infectedperitoneal.strength > 5
 					),
 				2
 			)
@@ -1355,6 +1363,7 @@ NT.Afflictions = {
 						NTC.GetSymptom(c.character, i)
 						or (c.afflictions.hemotransfusionshock.strength > 0 and c.afflictions.hemotransfusionshock.strength < 80)
 						or c.afflictions.t_arterialcut.strength > 0
+						or c.afflictions.infectedperitoneal.strength > 5
 					),
 				2
 			)
@@ -1651,6 +1660,7 @@ NT.LimbAfflictions = {
 			-- sepsis
 			local sepsischance = HF.Minimum(limbaff.gangrene.strength, 15, 0) / 400
 				+ HF.Minimum(limbaff.infectedwound.strength, 50) / 1000
+				+ c.afflictions.infectedperitoneal.strength / 250
 				+ foreignbodycutchance
 			if HF.Chance(sepsischance) then
 				c.afflictions.sepsis.strength = c.afflictions.sepsis.strength + NT.Deltatime
