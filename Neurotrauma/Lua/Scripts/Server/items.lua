@@ -317,6 +317,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 	local afflictionlist = targetCharacter.CharacterHealth.GetAllAfflictions()
 	local afflictionsdisplayed = 0
+	local checkedafflictionslist = {}
 
 	for value in afflictionlist do
 		local strength = HF.Round(value.Strength)
@@ -324,6 +325,10 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 
 		if strength > 2 and HF.TableContains(NT.HematologyDetectable, prefab.Identifier.Value) then
 			local id = value.Identifier
+
+			if checkedafflictionslist[id] ~= nil then return end -- Check to see if we haven't added the affliction yet!
+			table.insert(checkedafflictionslist,id) -- Add the affliction to the list.
+
 			if not HF.TableContains(IgnoredCategory, id) then
 				local entry = "\n" .. prefab.Name.Value .. ": " .. strength .. "%"
 
