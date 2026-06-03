@@ -216,7 +216,9 @@
                 <RequiredItem identifier="chlorine" amount="2" />
             </Fabricate>
 
-            <Deconstruct time="5"/>
+            <Deconstruct time="5">
+                <Item identifier="chlorine" />
+            </Deconstruct>
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,640,64,64" origin="0.5,0.5"/>
             <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,261,83,46" depth="0.6" origin="0.5,0.5"/>
             <Body width="80" height="45" density="11"/>
