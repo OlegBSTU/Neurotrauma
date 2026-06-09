@@ -362,14 +362,19 @@ NT.Afflictions = {
 			if c.afflictions.heartremoved.strength > 0 then c.afflictions[i].strength = 0 end
 		end,
 	},
-	cavityinfection = {
+	infectedcavity = {
 		update = function(c, i)
-			if c.afflictions[i].strength > 0 then
-				c.afflictions.immunity.strength = c.afflictions.immunity.strength
-					- NT.Deltatime * (math.min(3, math.min(1, c.afflictions[i].strength / 20)))
+			if c.stats.stasis then return end
 
+			c.afflictions.immunity.strength = c.afflictions.immunity.strength
+				- NT.Deltatime * (math.min(1.4, math.max(1, 0.8 + c.afflictions[i].strength / 100))) -- lose immunity over time
+
+			if c.afflictions.afantibiotics.strength < 0.1 or c.afflictions[i].strength > 30 then
+				if c.afflictions.combatstimulant.strength > 0 then return end -- don't gain infection
 				c.afflictions[i].strength = c.afflictions[i].strength
-					+ NT.Deltatime * (2 - 0.0125 * math.max(c.afflictions.immunity.prev, 40))
+					+ NT.Deltatime * (2 - 0.0125 * math.max(c.afflictions.immunity.prev, 40)) -- gain infection over time
+			else
+				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.25 -- lose infection at fixed 0.25/s
 			end
 		end,
 	},
@@ -950,6 +955,7 @@ NT.Afflictions = {
 			c.afflictions[i].strength = c.afflictions[i].strength - 0.25 * NT.Deltatime
 		end,
 	},
+	combatstimulant = {},
 	concussion = {
 		update = function(c, i)
 			c.afflictions[i].strength = c.afflictions[i].strength - 0.01 * NT.Deltatime
@@ -1268,7 +1274,7 @@ NT.Afflictions = {
 						or c.afflictions.radiationsickness.strength > 80
 						or (c.afflictions.hemotransfusionshock.strength > 0 and c.afflictions.hemotransfusionshock.strength < 90)
 						or c.stats.withdrawal > 40
-						or c.afflictions.cavityinfection.strength > 5
+						or c.afflictions.infectedcavity.strength > 5
 					),
 				2
 			)
@@ -1291,7 +1297,7 @@ NT.Afflictions = {
 						NTC.GetSymptom(c.character, i)
 						or c.afflictions.sepsis.strength > 5
 						or c.afflictions.alcoholwithdrawal.strength > 90
-						or c.afflictions.cavityinfection.strength > 5
+						or c.afflictions.infectedcavity.strength > 5
 					),
 				2
 			)
@@ -1305,7 +1311,7 @@ NT.Afflictions = {
 					and (
 						NTC.GetSymptom(c.character, i)
 						or c.afflictions.liverdamage.strength > 65
-						or c.afflictions.cavityinfection.strength > 40
+						or c.afflictions.infectedcavity.strength > 40
 					),
 				2
 			)
@@ -1372,7 +1378,7 @@ NT.Afflictions = {
 						NTC.GetSymptom(c.character, i)
 						or (c.afflictions.hemotransfusionshock.strength > 0 and c.afflictions.hemotransfusionshock.strength < 80)
 						or c.afflictions.t_arterialcut.strength > 0
-						or c.afflictions.cavityinfection.strength > 5
+						or c.afflictions.infectedcavity.strength > 5
 					),
 				2
 			)
@@ -1669,10 +1675,11 @@ NT.LimbAfflictions = {
 			-- sepsis
 			local sepsischance = HF.Minimum(limbaff.gangrene.strength, 15, 0) / 400
 				+ HF.Minimum(limbaff.infectedwound.strength, 50) / 1000
-				+ (HF.Minimum(c.afflictions.cavityinfection.strength, 30, 0) / 100) * 2.5
+				+ (HF.Minimum(c.afflictions.infectedcavity.strength, 30, 0) / 145) ^ 2.5
 				+ foreignbodycutchance
 			if HF.Chance(sepsischance) then
-				c.afflictions.sepsis.strength = c.afflictions.sepsis.strength + NT.Deltatime
+				c.afflictions.sepsis.strength = c.afflictions.sepsis.strength
+					+ NT.Deltatime * NTConfig.Get("NT_SepsisRate", 1)
 			end
 		end,
 	},

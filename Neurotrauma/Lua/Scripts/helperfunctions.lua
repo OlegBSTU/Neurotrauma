@@ -1198,12 +1198,6 @@ function HF.DynamicUnavailableItems()
 	-- Sodium Nitroprusside
 	if NTConfig.Get("NT_DoNitroprusside", false) == false then blockedItems["pressuremeds"] = true end
 
-	-- Antiseptic (sprayer)
-	if NTConfig.Get("NT_DoAntisepticSprayer", false) == false then
-		blockedItems["antisepticspray"] = true
-		blockedItems["antiseptic"] = true
-	end
-
 	-- Organ scalpels
 	if NTConfig.Get("NT_DoOrganScalpels", false) == false then
 		blockedItems["organscalpel_liver"] = true

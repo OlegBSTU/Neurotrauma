@@ -327,7 +327,7 @@ NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, l
 			local id = value.Identifier
 
 			if checkedafflictionslist[id] ~= nil then return end -- Check to see if we haven't added the affliction yet!
-			table.insert(checkedafflictionslist,id) -- Add the affliction to the list.
+			table.insert(checkedafflictionslist, id) -- Add the affliction to the list.
 
 			if not HF.TableContains(IgnoredCategory, id) then
 				local entry = "\n" .. prefab.Name.Value .. ": " .. strength .. "%"
@@ -566,6 +566,7 @@ NT.SutureAfflictions = {
 	clampedbleeders = {},
 	surgeryincision = {},
 	retractedskin = {},
+	caviclean = {},
 }
 
 -- Sutures
@@ -2611,6 +2612,35 @@ NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
 		else
 			HF.GiveSkillScaled(usingCharacter, "medical", 10000)
 		end
+	end
+end
+
+-- Antiseptic Spray
+NT.ItemMethods.antisepticspray = function(item, usingCharacter, targetCharacter, limb)
+	local limbtype = limb.type
+
+	-- don't work on stasis
+	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
+
+	local containedItem = item.OwnInventory.GetItemAt(0)
+	if containedItem == nil or containedItem.Prefab.Identifier.Value ~= "antibloodloss1" then return end
+	if
+		limbtype == LimbType.Torso
+		and HF.HasAffliction(targetCharacter, "infectedcavity", 1)
+		and HF.HasAffliction(targetCharacter, "retractedskin", 1)
+	then
+		local skill = HF.GetSurgerySkill(usingCharacter)
+		local delay = 11000 - skill * 10
+		HF.AddAfflictionLimb(targetCharacter, "caviclean", limbtype, math.max(100 - skill / 2, 10), usingCharacter)
+		Timer.Wait(function()
+			if not HF.HasAffliction(targetCharacter, "infectedcavity", 1) then
+				if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
+					HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
+				else
+					HF.GiveSkillScaled(usingCharacter, "medical", 10000)
+				end
+			end
+		end, delay)
 	end
 end
 

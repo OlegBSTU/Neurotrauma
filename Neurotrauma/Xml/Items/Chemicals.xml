@@ -540,7 +540,7 @@
 
     <!-- Antiseptic Sprayer -->
     <Item name="" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" spawnprobability="0"/>
+        <PreferredContainer primary="medcab" amount="1" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
 
@@ -565,13 +565,15 @@
         <RepairTool range="200" barrelpos="15,5" combatpriority="10">
             <ParticleEmitter particle="extinguisher" particlespersecond="15" copyentityangle="true" velocitymin="200.0" velocitymax="250.0"/>
             <RequiredSkill identifier="medical" level="40"/>
-            <RequiredItems items="antiseptic" type="Contained" msg="Antiseptic Required"/>
+            <RequiredItems identifier="antiseptic,antibloodloss1" type="Contained" msg="Decontaminant Required"/>
 
             <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
 
             <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="2" stackable="false"/>
 
             <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" disabledeltatime="true" Condition="-10.0"/>
+
+            <StatusEffect type="OnUse" targettype="Contained" targets="antibloodloss1" disabledeltatime="true" Condition="-100.0"/>
 
             <StatusEffect statuseffecttags="medical" type="OnUse" target="Limb" disabledeltatime="true">
                 <Sound file="%ModDir:3190189044%/Sound/spray.ogg" range="500"/>
@@ -581,7 +583,7 @@
         </RepairTool>
 
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
-            <Containable items="antiseptic"/>
+            <Containable items="antiseptic,antibloodloss1"/>
         </ItemContainer>
 
         <SkillRequirementHint identifier="medical" level="40" />

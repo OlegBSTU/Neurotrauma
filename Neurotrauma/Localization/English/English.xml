@@ -513,6 +513,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.balloonedaorta>Ballooned aorta</afflictionname.balloonedaorta>
 <afflictiondescription.balloonedaorta>The aorta has stopped bleeding, but bloodflow to your extremities and organs is gone.</afflictiondescription.balloonedaorta>
 
+<afflictionname.caviclean>Cleaning cavity</afflictionname.caviclean>
+<afflictiondescription.caviclean>Stomach cavity is being washed with pressurized saline, cleaning it from infection.</afflictiondescription.caviclean>
+
 <afflictionname.boneclamp>Splint</afflictionname.boneclamp>
 <afflictiondescription.boneclamp>Fracture has been splinted.</afflictiondescription.boneclamp>
 
@@ -611,6 +614,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
 <afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+
+<afflictionname.infectedcavity>Infected stomach cavity</afflictionname.infectedcavity>
+<afflictiondescription.infectedcavity></afflictiondescription.infectedcavity>
 
 <afflictionname.sepsis>Sepsis</afflictionname.sepsis>
 <afflictiondescription.sepsis></afflictiondescription.sepsis>
@@ -911,6 +917,8 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Stasis Bags protect against pressure, and can be used for EVA.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ If the patient is dying too fast, buy some time with a Stasis Bag.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Don't end the surgery before you have fully cleaned the stomach cavity during treatment.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 

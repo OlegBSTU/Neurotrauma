@@ -839,7 +839,7 @@
   Scanned Symptom, leads to sepsis if severe enough -->
   <Affliction
     name=""
-    identifier="cavityinfection"
+    identifier="infectedcavity"
     description=""
     healableinmedicalclinic="false"
     type="gaze"
@@ -3909,7 +3909,7 @@ thats what the vomiting symptom is for -->
     iconcolors="84,211,211,255;84,211,211,255">
     <Effect minstrength="0" maxstrength="10" strengthchange="-10">
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
-        <ReduceAffliction identifier="cavityinfection" amount="1000"/>
+        <ReduceAffliction identifier="infectedcavity" amount="1000"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="100" strengthchange="-10"/>

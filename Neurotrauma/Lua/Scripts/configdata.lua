@@ -158,6 +158,16 @@ NT.ConfigData = {
 		resettable = true,
 	},
 
+	NT_SepsisRate = {
+		name = "Sepsis rate multiplier",
+		default = 1,
+		range = { 0, 100 },
+		type = "float",
+		difficultyCharacteristics = { multiplier = 1.5, max = 5 },
+		group = true,
+		resettable = true,
+	},
+
 	NT_CPRFractureChance = {
 		name = "CPR fracture chance multiplier",
 		default = 1,
@@ -1253,14 +1263,6 @@ NT.ConfigData = {
 		default = false,
 		type = "bool",
 		description = "Allow Sodium Nitroprusside to be fabricated, bought and found.",
-	},
-
-	NT_DoAntisepticSprayer = {
-		page = "availability",
-		name = "Enable Antiseptic Sprayer",
-		default = false,
-		type = "bool",
-		description = "Allow Antiseptic and the Antiseptic Sprayer to be fabricated, bought and found.",
 	},
 
 	NT_DoOrganScalpels = {

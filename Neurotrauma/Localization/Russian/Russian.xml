@@ -513,6 +513,9 @@
 <afflictionname.balloonedaorta>Закупоренная баллоном аорта</afflictionname.balloonedaorta>
 <afflictiondescription.balloonedaorta>Аортальное кровотечение остановлено, нет притока к конечностям и органам.</afflictiondescription.balloonedaorta>
 
+<afflictionname.caviclean>Промывание полости</afflictionname.caviclean>
+<afflictiondescription.caviclean>Полость живота промывается под напором солевой жидкости, очищая её от заражения.</afflictiondescription.caviclean>
+
 <afflictionname.boneclamp>Шина</afflictionname.boneclamp>
 <afflictiondescription.boneclamp>На перелом наложена шина.</afflictiondescription.boneclamp>
 
@@ -611,6 +614,9 @@
 
 <afflictionname.infectedwound>Заражённая рана</afflictionname.infectedwound>
 <afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+
+<afflictionname.infectedcavity>Заражённая полость живота</afflictionname.infectedcavity>
+<afflictiondescription.infectedcavity></afflictiondescription.infectedcavity>
 
 <afflictionname.sepsis>Сепсис</afflictionname.sepsis>
 <afflictiondescription.sepsis></afflictiondescription.sepsis>
@@ -911,6 +917,8 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Стазис-мешки защищают от давления и могут использоваться для выхода под воду.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Если пациент умирает слишком быстро, выиграйте время с помощью стазис-мешка.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Не заканчивайте операцию до того, пока вы не очистите полностью полость живота во время лечения.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
