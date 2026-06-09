@@ -366,15 +366,17 @@ NT.Afflictions = {
 		update = function(c, i)
 			if c.stats.stasis then return end
 
-			c.afflictions.immunity.strength = c.afflictions.immunity.strength
-				- NT.Deltatime * (math.min(1.4, math.max(1, 0.8 + c.afflictions[i].strength / 100))) -- lose immunity over time
+			if c.afflictions[i].strength > 0 then
+				c.afflictions.immunity.strength = c.afflictions.immunity.strength
+					- NT.Deltatime * (math.min(1.4, math.max(1, 0.8 + c.afflictions[i].strength / 100))) -- lose immunity over time
 
-			if c.afflictions.afantibiotics.strength < 0.1 or c.afflictions[i].strength > 30 then
-				if c.afflictions.combatstimulant.strength > 0 then return end -- don't gain infection
-				c.afflictions[i].strength = c.afflictions[i].strength
-					+ NT.Deltatime * (2 - 0.0125 * math.max(c.afflictions.immunity.prev, 40)) -- gain infection over time
-			else
-				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.25 -- lose infection at fixed 0.25/s
+				if c.afflictions.afantibiotics.strength < 0.1 or c.afflictions[i].strength > 30 then
+					if c.afflictions.combatstimulant.strength > 0 then return end -- don't gain infection
+					c.afflictions[i].strength = c.afflictions[i].strength
+						+ NT.Deltatime * (2 - 0.0125 * math.max(c.afflictions.immunity.prev, 40)) -- gain infection over time
+				else
+					c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.25 -- lose infection at fixed 0.25/s
+				end
 			end
 		end,
 	},
