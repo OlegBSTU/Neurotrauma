@@ -81,6 +81,9 @@ end)
 DebugConsole = LuaUserData.CreateStatic("Barotrauma.DebugConsole")
 
 local function registerDebugCommands()
+	if NT.DebugCommandsRegistered then return end
+	NT.DebugCommandsRegistered = true
+
 	LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.DebugConsole"], "GetCharacterNames")
 	LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.DebugConsole"], "FindMatchingCharacter")
 
@@ -105,6 +108,97 @@ local function registerDebugCommands()
 			character = DebugConsole.FindMatchingCharacter({ str })
 		end
 		return character
+	end
+
+	local limbAliases = {
+		leftarm = LimbType.LeftArm,
+		la = LimbType.LeftArm,
+		larm = LimbType.LeftArm,
+		bracoe = LimbType.LeftArm,
+		rightarm = LimbType.RightArm,
+		ra = LimbType.RightArm,
+		rarm = LimbType.RightArm,
+		bracod = LimbType.RightArm,
+		leftleg = LimbType.LeftLeg,
+		ll = LimbType.LeftLeg,
+		lleg = LimbType.LeftLeg,
+		pernae = LimbType.LeftLeg,
+		rightleg = LimbType.RightLeg,
+		rl = LimbType.RightLeg,
+		rleg = LimbType.RightLeg,
+		pernad = LimbType.RightLeg,
+		head = LimbType.Head,
+		cabeca = LimbType.Head,
+		torso = LimbType.Torso,
+	}
+
+	local randomExtremities = {
+		LimbType.LeftArm,
+		LimbType.RightArm,
+		LimbType.LeftLeg,
+		LimbType.RightLeg,
+	}
+
+	local function normalizeText(value)
+		if value == nil then return nil end
+		value = string.lower(tostring(value))
+		value = string.gsub(value, "[áàâã]", "a")
+		value = string.gsub(value, "[éèê]", "e")
+		value = string.gsub(value, "[íìî]", "i")
+		value = string.gsub(value, "[óòôõ]", "o")
+		value = string.gsub(value, "[úùû]", "u")
+		value = string.gsub(value, "ç", "c")
+		return value
+	end
+
+	local function randomFrom(list)
+		return list[math.random(1, #list)]
+	end
+
+	local function resolveTestLimb(value, allowTorsoHead)
+		local key = normalizeText(value)
+		if key == nil or key == "" or key == "random" or key == "any" or key == "qualquer" then
+			return randomFrom(randomExtremities)
+		end
+		if key == "arm" or key == "braco" then return randomFrom({ LimbType.LeftArm, LimbType.RightArm }) end
+		if key == "leg" or key == "perna" then return randomFrom({ LimbType.LeftLeg, LimbType.RightLeg }) end
+
+		local limb = limbAliases[key]
+		if limb == LimbType.Head or limb == LimbType.Torso then
+			return allowTorsoHead and limb or randomFrom(randomExtremities)
+		end
+		return limb or randomFrom(randomExtremities)
+	end
+
+	local function limbLabel(limb)
+		if limb == LimbType.LeftArm then return "braco esquerdo" end
+		if limb == LimbType.RightArm then return "braco direito" end
+		if limb == LimbType.LeftLeg then return "perna esquerda" end
+		if limb == LimbType.RightLeg then return "perna direita" end
+		if limb == LimbType.Head then return "cabeca" end
+		if limb == LimbType.Torso then return "torso" end
+		return "membro desconhecido"
+	end
+
+	local function sendBotTestCommand(command, args)
+		if CLIENT and Game.IsMultiplayer then
+			local limbArg = args[1] or "random"
+			local characterName = args[2]
+			if not characterName or characterName == "" or characterName == "/me" then
+				characterName = Character.Controlled and Character.Controlled.Name or ""
+			end
+			Game.client.SendConsoleCommand(command .. " " .. limbArg .. " " .. '"' .. characterName .. '"')
+			return true
+		end
+		return false
+	end
+
+	local function botTestTarget(args)
+		return findCharacter(args[2])
+	end
+
+	local function printBotTestResult(name, target, limb)
+		print("[NT BotTest] " .. name .. " aplicado em " .. tostring(target.Name) .. " (" .. limbLabel(limb) .. ")")
 	end
 
 	Game.AddCommand(
@@ -302,6 +396,100 @@ local function registerDebugCommands()
 		end,
 		true
 	)
+
+	Game.AddCommand(
+		"nt_bt_fracture",
+		"nt_bt_fracture [random/arm/leg/leftarm/rightarm/leftleg/rightleg] [character name]: breaks an arm or leg for bot first-aid testing",
+		function(args)
+			if sendBotTestCommand("nt_bt_fracture", args) then return end
+
+			local target = botTestTarget(args)
+			if not target then return end
+			local limb = resolveTestLimb(args[1], false)
+			NT.BreakLimb(target, limb, 100)
+			HF.AddAfflictionLimb(target, "blunttrauma", limb, 25, target)
+			HF.AddAfflictionLimb(target, "pain_extremity", limb, 25, target)
+			HF.AddAfflictionLimb(target, "bleeding", limb, 8, target)
+			printBotTestResult("fratura", target, limb)
+		end,
+		function()
+			return { { "random", "arm", "leg", "leftarm", "rightarm", "leftleg", "rightleg" }, DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_bt_artery",
+		"nt_bt_artery [random/arm/leg/leftarm/rightarm/leftleg/rightleg/torso/head] [character name]: cuts an artery for emergency bot testing",
+		function(args)
+			if sendBotTestCommand("nt_bt_artery", args) then return end
+
+			local target = botTestTarget(args)
+			if not target then return end
+			local limb = resolveTestLimb(args[1], true)
+			NT.ArteryCutLimb(target, limb, 25)
+			HF.AddAfflictionLimb(target, "lacerations", limb, 20, target)
+			HF.AddAfflictionLimb(target, "bleeding", limb, 45, target)
+			HF.AddAfflictionLimb(target, "bleedingnonstop", limb, 25, target)
+			HF.AddAffliction(target, "bloodloss", 15, target)
+			printBotTestResult("corte arterial", target, limb)
+		end,
+		function()
+			return { { "random", "arm", "leg", "leftarm", "rightarm", "leftleg", "rightleg", "torso", "head" }, DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_bt_bleed",
+		"nt_bt_bleed [random/arm/leg/leftarm/rightarm/leftleg/rightleg/torso/head] [character name]: creates severe bleeding and a wound for bot testing",
+		function(args)
+			if sendBotTestCommand("nt_bt_bleed", args) then return end
+
+			local target = botTestTarget(args)
+			if not target then return end
+			local limb = resolveTestLimb(args[1], true)
+			HF.AddAfflictionLimb(target, "gunshotwound", limb, 35, target)
+			HF.AddAfflictionLimb(target, "lacerations", limb, 20, target)
+			HF.AddAfflictionLimb(target, "bleeding", limb, 85, target)
+			HF.AddAfflictionLimb(target, "bleedingnonstop", limb, 12, target)
+			HF.AddAffliction(target, "bloodloss", 25, target)
+			printBotTestResult("sangramento grave", target, limb)
+		end,
+		function()
+			return { { "random", "arm", "leg", "leftarm", "rightarm", "leftleg", "rightleg", "torso", "head" }, DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
+
+	Game.AddCommand(
+		"nt_bt_cardiac",
+		"nt_bt_cardiac [character name]: causes a realistic cardiac arrest test state",
+		function(args)
+			if CLIENT and Game.IsMultiplayer then
+				local characterName = args[1]
+				if not characterName or characterName == "" or characterName == "/me" then
+					characterName = Character.Controlled and Character.Controlled.Name or ""
+				end
+				Game.client.SendConsoleCommand("nt_bt_cardiac " .. '"' .. characterName .. '"')
+				return
+			end
+
+			local target = findCharacter(args[1])
+			if not target then return end
+			HF.SetAffliction(target, "tachycardia", 0, target)
+			HF.SetAffliction(target, "fibrillation", 25, target)
+			HF.SetAffliction(target, "cardiacarrest", 100, target)
+			HF.AddAffliction(target, "oxygenlow", 60, target)
+			HF.AddAffliction(target, "hypoxemia", 45, target)
+			HF.AddAffliction(target, "sym_unconsciousness", 10, target)
+			print("[NT BotTest] parada cardiaca aplicada em " .. tostring(target.Name))
+		end,
+		function()
+			return { DebugConsole.GetCharacterNames() }
+		end,
+		true
+	)
 end
 
 Game.AddCommand("nt_debug", "nt_debug : Enables debug neurotrauma commands", function()
@@ -319,4 +507,4 @@ if CLIENT and Game.IsMultiplayer then Networking.Receive("NT_debug", function(ms
 	registerDebugCommands()
 end) end
 
-if NT.TestingEnabled then registerDebugCommands() end
+registerDebugCommands()

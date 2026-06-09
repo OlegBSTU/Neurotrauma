@@ -273,9 +273,9 @@ NT.ConfigData = {
 
 	NT_disableBotAlgorithms = {
 		name = "Disable bot treatment algorithms",
-		default = true,
+		default = false,
 		type = "bool",
-		description = "Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things for the current moment.",
+		description = "Prevents bots from attempting to treat afflictions.\nThis modified Neurotrauma build keeps this disabled and uses a dedicated first-aid triage AI for bots.",
 	},
 
 	NT_screams = {

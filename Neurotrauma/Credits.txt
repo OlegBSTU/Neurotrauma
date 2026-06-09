@@ -1,4 +1,3 @@
-
 Evil Factory - Lua help
 I only use this when bored - Better scanner code and contributions to config GUI
 Luka - Config GUI contributions
@@ -22,3 +21,4 @@ Oskar - Spanish localization
 mefy - Turkish localization
 profole - German localization
 Liatoast - Further improvements to German localization
+Dahaka - Bot AI first aid compatibility

@@ -31,10 +31,10 @@
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,0,64,64" origin="0.5,0.5" />
             <Sprite texture="Content/Items/Tools/tools.png" sourcerect="161,235,64,20" depth="0.55" origin="0.5,0.5" />
             <Body width="60" height="15" density="30" />
-            <SuitableTreatment identifier="dislocation1" suitability="50"/>
-            <SuitableTreatment identifier="dislocation2" suitability="50"/>
-            <SuitableTreatment identifier="dislocation3" suitability="50"/>
-            <SuitableTreatment identifier="dislocation4" suitability="50"/>
+            <SuitableTreatment identifier="dislocation1" suitability="20"/>
+            <SuitableTreatment identifier="dislocation2" suitability="20"/>
+            <SuitableTreatment identifier="dislocation3" suitability="20"/>
+            <SuitableTreatment identifier="dislocation4" suitability="20"/>
 
             <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-8,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
                 <Attack structuredamage="0" itemdamage="2" targetimpulse="5">
@@ -259,7 +259,8 @@
                 <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1"/>
                 <Item identifier="stabilozine" copycondition="true" mincondition="0.1"/>
             </Deconstruct>
-            <SuitableTreatment identifier="bloodloss" suitability="100"/>
+            <!-- Bot patch: keep blood bags for serious bloodloss, below saline/Ringer for routine care. -->
+            <SuitableTreatment identifier="bloodloss" suitability="80"/>
             <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="326,327,64,64" origin="0.5,0.5"/>
             <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="128,171,64,85" />
             <Body width="80" height="42" density="11"/>
@@ -297,7 +298,16 @@
             </Fabricate>
 
             <Deconstruct time="2"/>
-            <SuitableTreatment type="bleeding" suitability="30" />
+            <SuitableTreatment type="bleeding" suitability="75" />
+            <SuitableTreatment identifier="bleedingnonstop" suitability="20" />
+            <SuitableTreatment identifier="lacerations" suitability="55" />
+            <SuitableTreatment identifier="bitewounds" suitability="45" />
+            <SuitableTreatment identifier="gunshotwound" suitability="55" />
+            <SuitableTreatment identifier="explosiondamage" suitability="45" />
+            <SuitableTreatment identifier="ll_fracture" suitability="75" />
+            <SuitableTreatment identifier="rl_fracture" suitability="75" />
+            <SuitableTreatment identifier="la_fracture" suitability="75" />
+            <SuitableTreatment identifier="ra_fracture" suitability="75" />
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
             <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="310,33,26,42" depth="0.6" origin="0.5,0.5" />
             <Body width="25" height="40" density="10.05" />
@@ -333,7 +343,12 @@
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="959,771,63,59" origin="0.5,0.5" />
             <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="340,33,26,42" depth="0.6" origin="0.5,0.5" />
             <Body width="25" height="40" density="10.05" />
-            <SuitableTreatment type="bleeding" suitability="32"/>
+            <SuitableTreatment type="bleeding" suitability="75"/>
+            <SuitableTreatment identifier="bleedingnonstop" suitability="30"/>
+            <SuitableTreatment identifier="lacerations" suitability="70"/>
+            <SuitableTreatment identifier="bitewounds" suitability="60"/>
+            <SuitableTreatment identifier="gunshotwound" suitability="70"/>
+            <SuitableTreatment identifier="explosiondamage" suitability="60"/>
             <SuitableTreatment type="burn" suitability="35"/>
             <SuitableTreatment identifier="infectedwound" suitability="6"/>
             <SuitableTreatment identifier="dirtybandage" suitability="100"/>
@@ -1789,10 +1804,10 @@
             <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
             <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
             <Body width="60" height="15" density="30" />
-            <SuitableTreatment identifier="dislocation1" suitability="50"/>
-            <SuitableTreatment identifier="dislocation2" suitability="50"/>
-            <SuitableTreatment identifier="dislocation3" suitability="50"/>
-            <SuitableTreatment identifier="dislocation4" suitability="50"/>
+            <SuitableTreatment identifier="dislocation1" suitability="20"/>
+            <SuitableTreatment identifier="dislocation2" suitability="20"/>
+            <SuitableTreatment identifier="dislocation3" suitability="20"/>
+            <SuitableTreatment identifier="dislocation4" suitability="20"/>
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="60" msg="ItemMsgPickUpSelect">
             </Holdable>
             <aitarget sightrange="500" soundrange="500" fadeouttime="1" />

@@ -25,12 +25,13 @@
 
         <Body width="65" height="45" density="50"/>
 
-        <SuitableTreatment identifier="lacerations" suitability="20"/>
-        <SuitableTreatment identifier="bitewounds" suitability="20"/>
-        <SuitableTreatment identifier="explosiondamage" suitability="20"/>
-        <SuitableTreatment identifier="gunshotwound" suitability="20"/>
-        <SuitableTreatment type="bleeding" suitability="40"/>
-        <SuitableTreatment identifier="surgeryincision" suitability="100"/>
+        <SuitableTreatment identifier="lacerations" suitability="135"/>
+        <SuitableTreatment identifier="bitewounds" suitability="125"/>
+        <SuitableTreatment identifier="explosiondamage" suitability="130"/>
+        <SuitableTreatment identifier="gunshotwound" suitability="140"/>
+        <SuitableTreatment type="bleeding" suitability="35"/>
+        <SuitableTreatment identifier="bleedingnonstop" suitability="110"/>
+        <SuitableTreatment identifier="surgeryincision" suitability="160"/>
 
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
             <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
@@ -93,6 +94,10 @@
         </Fabricate>
 
         <Deconstruct time="5"/>
+        <SuitableTreatment identifier="ll_fracture" suitability="20"/>
+        <SuitableTreatment identifier="rl_fracture" suitability="20"/>
+        <SuitableTreatment identifier="la_fracture" suitability="20"/>
+        <SuitableTreatment identifier="ra_fracture" suitability="20"/>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,192,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="914,250,86,134" depth="0.6" origin="0.5,0.5"/>

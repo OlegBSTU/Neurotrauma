@@ -60,6 +60,8 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 	dofile(NT.Path .. "/Lua/Scripts/Server/fuckbots.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/lootcrates.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/multiscalpel.lua") -- its important for this to run after items.lua
+	dofile(NT.Path .. "/Lua/Scripts/Server/botfirstaid.lua")
+	dofile(NT.Path .. "/Lua/Scripts/Server/botinitiative.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/falldamage.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/screams.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/modconflict.lua")

@@ -168,7 +168,7 @@ NT.OnDamagedMethods.gunshotwound = function(character, strength, limbtype)
 		-- liver and kidney damage
 		if hitOrgan == false and strength >= 2 and HF.Chance(0.5) then
 			HF.AddAfflictionLimb(character, "organdamage", limbtype, strength / 4)
-			HF.AddAffliction(character, "cavityinfection", 5)
+			HF.AddAffliction(character, "infectedperitoneal", 5)
 			if HF.Chance(0.5) then
 				HF.AddAffliction(character, "liverdamage", strength)
 			else

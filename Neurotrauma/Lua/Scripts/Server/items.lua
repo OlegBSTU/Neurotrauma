@@ -9,14 +9,24 @@ local manuallyCalledItems = {
 	adrenaline = true,
 }
 
+local NTIsBot
+local BotTreatmentMode
+local BotCanUseComplexMedicalEquipment
+
 local function UseItemMethod(item, usingCharacter, targetCharacter, limb, manualCall)
 	-- Invalid use; don't do anything
 	if item == nil or usingCharacter == nil or targetCharacter == nil or limb == nil then return end
+	if NTIsBot ~= nil and BotTreatmentMode ~= nil and NTIsBot(usingCharacter) then
+		local allowed = BotTreatmentMode(usingCharacter, targetCharacter)
+		if not allowed then return end
+		if BotCanUseComplexMedicalEquipment ~= nil and not BotCanUseComplexMedicalEquipment(item, usingCharacter, targetCharacter) then return end
+	end
 
 	if not HF.HasAffliction(targetCharacter, "luabotomy") then HF.SetAffliction(targetCharacter, "luabotomy", 1) end
 
 	-- Get the function associated with the identifier
 	local identifier = item.Prefab.Identifier.Value
+
 	local methodtorun = NT.ItemMethods[identifier]
 
 	if methodtorun ~= nil then
@@ -33,6 +43,60 @@ local function UseItemMethod(item, usingCharacter, targetCharacter, limb, manual
 			return
 		end
 	end
+end
+
+NTIsBot = function(character)
+	if character == nil then return false end
+	local ok, isBot = pcall(function() return character.IsBot end)
+	if ok and isBot ~= nil then return isBot == true end
+	ok, isBot = pcall(function() return character.IsPlayer end)
+	return character.AIController ~= nil and not (ok and isBot == true)
+end
+
+BotTreatmentMode = function(usingCharacter, targetCharacter)
+	if not NTIsBot(usingCharacter) then return true, "player" end
+	if NT == nil or NT.BotEngagementPolicy == nil or NT.BotEngagementPolicy.GetTreatmentMode == nil then return true, "legacy" end
+
+	local ok, allowed, mode = pcall(function()
+		local canTreat, treatmentMode = NT.BotEngagementPolicy.GetTreatmentMode(usingCharacter, targetCharacter)
+		return canTreat, treatmentMode
+	end)
+	if not ok then return true, "legacy_error" end
+	return allowed == true, mode
+end
+
+local complexBotMedicalEquipment = {
+	aed = true,
+	autocpr = true,
+	bvm = true,
+	defibrillator = true,
+}
+
+local function BotIsMedicalJob(character)
+	local ok, isMedic = pcall(function() return character.IsMedic end)
+	if ok and isMedic ~= nil then return isMedic == true end
+
+	local okJob, value = pcall(function()
+		return character.Info.Job.Prefab.Identifier.Value
+	end)
+	if not okJob or value == nil then return false end
+	value = string.lower(tostring(value))
+	return value == "medicaldoctor" or value == "doctor" or value == "medic"
+end
+
+BotCanUseComplexMedicalEquipment = function(item, usingCharacter, targetCharacter)
+	if item == nil or item.Prefab == nil or item.Prefab.Identifier == nil then return true end
+	local identifier = item.Prefab.Identifier.Value
+	if identifier == nil or not complexBotMedicalEquipment[identifier] then return true end
+	if not NTIsBot(usingCharacter) then return true end
+	if usingCharacter == targetCharacter then return false end
+	return BotIsMedicalJob(usingCharacter)
+end
+
+local function BotAllowsAdvancedTreatment(usingCharacter, targetCharacter)
+	if not NTIsBot(usingCharacter) then return true end
+	local allowed, mode = BotTreatmentMode(usingCharacter, targetCharacter)
+	return allowed and mode == "full"
 end
 
 -- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
@@ -504,6 +568,8 @@ end
 -- Gypsum
 NT.ItemMethods.gypsum = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = HF.NormalizeLimbType(limb.type)
+	local isBotUser = false
+	pcall(function() isBotUser = usingCharacter ~= nil and usingCharacter.IsBot == true end)
 
 	-- Will not work on someone in Stasis
 	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
@@ -513,14 +579,16 @@ NT.ItemMethods.gypsum = function(item, usingCharacter, targetCharacter, limb)
 		and not HF.HasAfflictionLimb(targetCharacter, "gypsumcast", limbtype, 0.1)
 		and not HF.HasAfflictionLimb(targetCharacter, "surgeryincision", limbtype, 1)
 		and HF.LimbIsExtremity(limbtype)
+		and NT.LimbIsBroken(targetCharacter, limbtype)
 	then
-		if HF.GetSkillRequirementMet(usingCharacter, "medical", 40) then
+		if HF.GetSkillRequirementMet(usingCharacter, "medical", 40) or (isBotUser and BotAllowsAdvancedTreatment(usingCharacter, targetCharacter)) then
 			HF.SetAfflictionLimb(targetCharacter, "bandaged", limbtype, 0, usingCharacter)
 			HF.SetAfflictionLimb(targetCharacter, "gypsumcast", limbtype, 100, usingCharacter)
 			NT.BreakLimb(targetCharacter, limbtype, -20)
 			HF.GiveSkillScaled(usingCharacter, "medical", 6000)
 			HF.RemoveItem(item)
 		else
+			if isBotUser then return end
 			HF.RemoveItem(item)
 		end
 	end
@@ -571,9 +639,12 @@ NT.SutureAfflictions = {
 -- Sutures
 NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = HF.NormalizeLimbType(limb.type)
+	local skillMet = HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
+	local botFallback = not skillMet and NTIsBot(usingCharacter) and BotAllowsAdvancedTreatment(usingCharacter, targetCharacter)
 
-	if HF.GetSkillRequirementMet(usingCharacter, "medical", 30) then
+	if skillMet or botFallback then
 		-- In field use
+		local efficiency = botFallback and 0.45 or 1
 		local healeddamage = 0
 		healeddamage = healeddamage
 			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "lacerations", 0), 0, 20)
@@ -587,12 +658,13 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleeding", 0) / 10, 0, 40)
 		healeddamage = healeddamage
 			+ HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "bleedingnonstop", 0) / 10, 0, 40)
+		healeddamage = healeddamage * efficiency
 
-		HF.AddAfflictionLimb(targetCharacter, "lacerations", limbtype, -20, usingCharacter)
-		HF.AddAfflictionLimb(targetCharacter, "bitewounds", limbtype, -20, usingCharacter)
-		HF.AddAfflictionLimb(targetCharacter, "explosiondamage", limbtype, -20, usingCharacter)
-		HF.AddAfflictionLimb(targetCharacter, "gunshotwound", limbtype, -20, usingCharacter)
-		HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -40, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "lacerations", limbtype, -20 * efficiency, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "bitewounds", limbtype, -20 * efficiency, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "explosiondamage", limbtype, -20 * efficiency, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "gunshotwound", limbtype, -20 * efficiency, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -40 * efficiency, usingCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "suturedw", limbtype, healeddamage)
 
 		HF.GiveSkillScaled(usingCharacter, "medical", healeddamage * 100)
@@ -645,6 +717,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 			end
 		end
 	else
+		if NTIsBot(usingCharacter) then return end
 		HF.AddAfflictionLimb(targetCharacter, "internaldamage", limbtype, 6)
 	end
 end

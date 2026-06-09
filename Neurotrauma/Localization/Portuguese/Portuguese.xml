@@ -8,7 +8,7 @@
 <entityname.aed>Desfibrilador Externo Automático</entityname.aed>
 <entitydescription.aed>Um dispositivo médico que aplica um choque elétrico ao coração para estabilizar as arritmias cardíacas. Requer pouco treinamento médico. Use em um paciente com parada cardíaca.</entitydescription.aed>
 <entityname.bvm>Ressuscitador AMBU</entityname.bvm>
-<entitydescription.bvm>Uma bolsa-válvula-máscara, é um disputivo portátil comumente usado para fornecer ventilação para pacientes que não estão respirando ou não estão respirando adequadamente.</entitydescription.bvm>
+<entitydescription.bvm>Uma bolsa-válvula-máscara, é um dispositivo portátil comumente usado para fornecer ventilação para pacientes que não estão respirando ou não estão respirando adequadamente.</entitydescription.bvm>
 <entityname.autocpr>AutoPulse</entityname.autocpr>
 <entitydescription.autocpr>Um dispositivo de ressuscitação cardiopulmonar automatizado, portátil e alimentado por bateria.</entitydescription.autocpr>
 <entityname.bloodanalyzer>Analisador Hematológico</entityname.bloodanalyzer>
@@ -18,7 +18,7 @@
 <entityname.traumashears>Tesouras Médicas</entityname.traumashears>
 <entitydescription.traumashears>Uma ferramenta usada para remover bandagens e gessos.</entitydescription.traumashears>
 <entityname.wheelchair>Cadeira de Rodas</entityname.wheelchair>
-<entitydescription.wheelchair>Faz você depender de seus braços ao invés de suas pernas para a movimentação.</entitydescription.wheelchair>
+<entitydescription.wheelchair>Faz você depender de seus braços em vez de suas pernas para a movimentação.</entitydescription.wheelchair>
 <entityname.blahaj>Tubarão Azul</entityname.blahaj>
 
 <entityname.healthscanner>Visor de Saúde</entityname.healthscanner>
@@ -56,24 +56,6 @@
 <entitydescription.organscalpel_heart>Um bisturi especializado para a remoção do coração.</entitydescription.organscalpel_heart>
 <entityname.organscalpel_brain>Bisturi para Aquisição de Órgãos: Cérebro</entityname.organscalpel_brain>
 <entitydescription.organscalpel_brain>Um bisturi especializado para a remoção do cérebro.</entitydescription.organscalpel_brain>
-<!--<entityname.multiscalpel>Multipurpose scalpel</entityname.multiscalpel>
-<entitydescription.multiscalpel>A scalpel you can choose what to do with, be it make an incision, extract organs, remove bandages, or do malpractice.</entitydescription.multiscalpel>
-<multiscalpel.incision>Mode: Surgery incision</multiscalpel.incision>
-<multiscalpel.kidneys>Mode: Extract kidneys</multiscalpel.kidneys>
-<multiscalpel.liver>Mode: Extract liver</multiscalpel.liver>
-<multiscalpel.lungs>Mode: Extract lungs</multiscalpel.lungs>
-<multiscalpel.heart>Mode: Extract heart</multiscalpel.heart>
-<multiscalpel.brain>Mode: Extract brain</multiscalpel.brain>
-<multiscalpel.bandage>Mode: Remove bandages and casts / malpractice</multiscalpel.bandage>
-<multiscalpel.speedflex>Mode: Adaptive organ extraction. Use on head for brain, left arm for kidneys, torso for liver, right arm for heart, left leg for lungs.</multiscalpel.speedflex>
-<multiscalpel.btn.incision>Incision</multiscalpel.btn.incision>
-<multiscalpel.btn.kidneys>Kidneys</multiscalpel.btn.kidneys>
-<multiscalpel.btn.liver>Liver</multiscalpel.btn.liver>
-<multiscalpel.btn.lungs>Lungs</multiscalpel.btn.lungs>
-<multiscalpel.btn.heart>Heart</multiscalpel.btn.heart>
-<multiscalpel.btn.brain>Brain</multiscalpel.btn.brain>
-<multiscalpel.btn.bandage>Bandages, casts, malpractice</multiscalpel.btn.bandage>
-<multiscalpel.btn.speedflex>Adaptive organ extraction</multiscalpel.btn.speedflex>-->
 <!-- /// Treatments /// -->
 <entityname.mannitol>Manitol</entityname.mannitol>
 <entitydescription.mannitol>Um tipo de álcool de açúcar. É usado para ajudar na recuperação de neurotrauma. Pode causar danos aos órgãos.</entitydescription.mannitol>
@@ -91,11 +73,11 @@
 <entitydescription.medstent>Um tubo de plástico inserido na aorta depois do balão endovascular após uma ruptura da aorta.</entitydescription.medstent>
 <entityname.tourniquet>Torniquete</entityname.tourniquet>
 <entitydescription.tourniquet>Um dispositivo que aplica pressão a um membro e, assim, reduz o fluxo sanguíneo. Geralmente é usado em caso de grandes sangramentos nas extremidades. Não deve ser usado na cabeça.</entitydescription.tourniquet>
-<entityname.drainage>Drenaguem Torácica</entityname.drainage>
+<entityname.drainage>Drenagem Torácica</entityname.drainage>
 <entitydescription.drainage>Drena o ar da cavidade pleural durante a cirurgia corretiva de pneumotórax.</entitydescription.drainage>
 <entityname.needle>Agulha</entityname.needle>
 <entitydescription.needle>Uma agulha com uma válvula de descompressão para drenar o ar ou o líquido da cavidade pleural ou do pericárdio.</entitydescription.needle>
-<entityname.ringerssolution>Soluto de Ringer</entityname.ringerssolution>
+<entityname.ringerssolution>Solução de Ringer</entityname.ringerssolution>
 <entitydescription.ringerssolution>Uma solução de vários sais dissolvidos em água com a finalidade de tratar a pressão arterial baixa ou a perda de líquidos. Isotônico ao sangue.</entitydescription.ringerssolution>
 <entityname.antiseptic>Antisséptico</entityname.antiseptic>
 <!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
@@ -116,7 +98,7 @@
 <entitydescription.bloodpackoplus>Administrado para: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
 <entityname.bloodpackominus>Bolsa de Sangue O-</entityname.bloodpackominus>
 <entitydescription.bloodpackominus>Um pacote de sangue que pode ser usado em qualquer paciente.</entitydescription.bloodpackominus>
-<entityname.bloodpackaplus>Bolsa de Sanguek A+</entityname.bloodpackaplus>
+<entityname.bloodpackaplus>Bolsa de Sangue A+</entityname.bloodpackaplus>
 <entitydescription.bloodpackaplus>Administrado para: A+, AB+</entitydescription.bloodpackaplus>
 <entityname.bloodpackbplus>Bolsa de Sangue B+</entityname.bloodpackbplus>
 <entitydescription.bloodpackbplus>Administrado para: B+, AB+</entitydescription.bloodpackbplus>
@@ -230,31 +212,31 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 <afflictionname.cardiacarrest>Parada Cardíaca</afflictionname.cardiacarrest>
 <afflictiondescription.cardiacarrest>Sem pulso.</afflictiondescription.cardiacarrest>
 <afflictionname.heartattack>Ataque Cardíaco</afflictionname.heartattack>
-<afflictiondescription.heartattack></afflictiondescription.heartattack>
+<afflictiondescription.heartattack>O fluxo sanguíneo para o coração está comprometido.</afflictiondescription.heartattack>
 <afflictionname.heartdamage>Dano no Coração</afflictionname.heartdamage>
-<afflictiondescription.heartdamage></afflictiondescription.heartdamage>
+<afflictiondescription.heartdamage>O coração sofreu dano e está funcionando pior.</afflictiondescription.heartdamage>
 <afflictionname.heartfailure>Insuficiência Cardíaca</afflictionname.heartfailure>
-<afflictiondescription.heartfailure></afflictiondescription.heartfailure>
+<afflictiondescription.heartfailure>O coração não consegue bombear sangue adequadamente.</afflictiondescription.heartfailure>
 <afflictionname.heartremoved>Coração Removido</afflictionname.heartremoved>
 <afflictiondescription.heartremoved>O coração foi removido cirurgicamente.</afflictiondescription.heartremoved>
 <!-- /// Brain /// -->
 <afflictionname.cerebralhypoxia>Neurotrauma</afflictionname.cerebralhypoxia>
-<afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
+<afflictiondescription.cerebralhypoxia>O cérebro não está recebendo oxigênio suficiente.</afflictiondescription.cerebralhypoxia>
 <afflictioncauseofdeath.cerebralhypoxia>Morte por neurotrauma.</afflictioncauseofdeath.cerebralhypoxia>
 <afflictioncauseofdeathself.cerebralhypoxia>Você morreu de neurotrauma.</afflictioncauseofdeathself.cerebralhypoxia>
 <afflictionname.stroke>Derrame</afflictionname.stroke>
-<afflictiondescription.stroke></afflictiondescription.stroke>
+<afflictiondescription.stroke>O fluxo sanguíneo cerebral foi interrompido ou prejudicado.</afflictiondescription.stroke>
 <afflictionname.seizure>Convulsão</afflictionname.seizure>
-<afflictiondescription.seizure></afflictiondescription.seizure>
+<afflictiondescription.seizure>O paciente está sofrendo atividade neurológica anormal e convulsiva.</afflictiondescription.seizure>
 <afflictionname.coma>Coma</afflictionname.coma>
-<afflictiondescription.coma></afflictiondescription.coma>
+<afflictiondescription.coma>O paciente está em um estado prolongado de inconsciência profunda.</afflictiondescription.coma>
 <afflictionname.brainremoved>Cérebro Removido</afflictionname.brainremoved>
 <afflictiondescription.brainremoved>O cérebro foi removido cirurgicamente.</afflictiondescription.brainremoved>
 <!-- /// Blood /// -->
 <afflictionname.bloodpressure>Pressão Sanguínea</afflictionname.bloodpressure>
-<afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
+<afflictiondescription.bloodpressure>Representa a pressão atual do sangue do paciente.</afflictiondescription.bloodpressure>
 <afflictionname.hypoxemia>Hipoxemia</afflictionname.hypoxemia>
-<afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
+<afflictiondescription.hypoxemia>O sangue está com pouco oxigênio.</afflictiondescription.hypoxemia>
 <!-- /// Lungs /// -->
 <afflictionname.respiratoryarrest>Parada Respiratória</afflictionname.respiratoryarrest>
 <afflictiondescription.respiratoryarrest>O paciente não está respirando.</afflictiondescription.respiratoryarrest>
@@ -265,45 +247,41 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 <afflictionname.dyspnea>Falta de Ar</afflictionname.dyspnea>
 <afflictiondescription.dyspnea>A respiração do paciente é difícil e fraca.</afflictiondescription.dyspnea>
 <afflictionname.alkalosis>Alcalose</afflictionname.alkalosis>
-<afflictiondescription.alkalosis></afflictiondescription.alkalosis>
+<afflictiondescription.alkalosis>O sangue está alcalino demais.</afflictiondescription.alkalosis>
 <afflictionname.acidosis>Acidose</afflictionname.acidosis>
-<afflictiondescription.acidosis></afflictiondescription.acidosis>
+<afflictiondescription.acidosis>O sangue está ácido demais.</afflictiondescription.acidosis>
 <afflictionname.rili>Lesão Pulmonar induzida por Radiação</afflictionname.rili>
-<afflictiondescription.rili></afflictiondescription.rili>
+<afflictiondescription.rili>Os pulmões foram danificados por radiação.</afflictiondescription.rili>
 <afflictionname.pneumothorax>Pneumotórax</afflictionname.pneumothorax>
-<afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
+<afflictiondescription.pneumothorax>Há ar acumulado na cavidade pleural, prejudicando a respiração.</afflictiondescription.pneumothorax>
 <afflictionname.lungdamage>Dano nos Pulmões</afflictionname.lungdamage>
-<afflictiondescription.lungdamage></afflictiondescription.lungdamage>
+<afflictiondescription.lungdamage>Os pulmões sofreram dano e estão funcionando pior.</afflictiondescription.lungdamage>
 <afflictionname.lungfailure>Insuficiência Pulmonar</afflictionname.lungfailure>
-<afflictiondescription.lungfailure></afflictiondescription.lungfailure>
+<afflictiondescription.lungfailure>Os pulmões não conseguem realizar trocas gasosas adequadamente.</afflictiondescription.lungfailure>
 <afflictionname.lungremoved>Pulmões Removidos</afflictionname.lungremoved>
 <afflictiondescription.lungremoved>Os pulmões foram removidos cirurgicamente.</afflictiondescription.lungremoved>
 <!-- /// kidneys /// -->
 <afflictionname.kidneydamage>Dano nos Rins</afflictionname.kidneydamage>
-<afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
+<afflictiondescription.kidneydamage>Os rins sofreram dano e estão filtrando pior o sangue.</afflictiondescription.kidneydamage>
 <afflictionname.kidneyfailure>Falência Renal</afflictionname.kidneyfailure>
-<afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
+<afflictiondescription.kidneyfailure>Os rins falharam e não conseguem filtrar o sangue adequadamente.</afflictiondescription.kidneyfailure>
 <afflictionname.kidneyremoved>Rins Removidos</afflictionname.kidneyremoved>
 <afflictiondescription.kidneyremoved>Os rins foram removidos cirurgicamente.</afflictiondescription.kidneyremoved>
 <!-- /// bones /// -->
 <afflictionname.bonedamage>Dano Ósseo</afflictionname.bonedamage>
-<afflictiondescription.bone></afflictiondescription.bone>
+<afflictiondescription.bone>O osso sofreu dano.</afflictiondescription.bone>
 <afflictionname.bonedeath>Morte Óssea</afflictionname.bonedeath>
-<afflictiondescription.bonedeath></afflictiondescription.bonedeath>
+<afflictiondescription.bonedeath>O tecido ósseo morreu e não está se recuperando.</afflictiondescription.bonedeath>
 <afflictionname.bonegrowth>Crescimento Ósseo Estimulado</afflictionname.bonegrowth>
 <afflictiondescription.bonegrowth>O crescimento ósseo foi estimulado. Para curar a morte óssea, essa aflição precisa estar em todas as partes do corpo.</afflictiondescription.bonegrowth>
 <!-- /// liver /// -->
 <afflictionname.liverdamage>Dano no Fígado</afflictionname.liverdamage>
-<afflictiondescription.liverdamage></afflictiondescription.liverdamage>
+<afflictiondescription.liverdamage>O fígado sofreu dano e está funcionando pior.</afflictiondescription.liverdamage>
 <afflictionname.liverfailure>Insuficiência Hepática</afflictionname.liverfailure>
-<afflictiondescription.liverfailure></afflictiondescription.liverfailure>
+<afflictiondescription.liverfailure>O fígado falhou e não consegue manter suas funções vitais.</afflictiondescription.liverfailure>
 <afflictionname.liverremoved>Fígado Removido</afflictionname.liverremoved>
 <afflictiondescription.liverremoved>O fígado foi removido cirurgicamente.</afflictiondescription.liverremoved>
 <!-- /// surgery and related /// -->
-<afflictionname.surgeryincision>Incisão Cirúrgica</afflictionname.surgeryincision>
-<afflictiondescription.surgeryincision>Uma incisão foi feita por um bisturi.</afflictiondescription.surgeryincision>
-<afflictionname.clampedbleeders>Sangamentro Estancado</afflictionname.clampedbleeders>
-<afflictiondescription.clampedbleeders>Sangramentos cirúrgicos foram estancados.</afflictiondescription.clampedbleeders>
 <afflictionname.arteriesclamp>Artéria Bloqueada por Balão</afflictionname.arteriesclamp>
 <afflictiondescription.arteriesclamp>O sangramento da artéria foi interrompido, mas o fluxo sanguíneo para a extremidade está severamente reduzido.</afflictiondescription.arteriesclamp>
 <afflictionname.balloonedaorta>Aorta Bloqueada por Balão</afflictionname.balloonedaorta>
@@ -383,41 +361,41 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 <afflictionname.suturedw>Ferida Suturada</afflictionname.suturedw>
 <afflictiondescription.suturedw>As feridas foram suturadas.</afflictiondescription.suturedw>
 <afflictionname.immunity>Imunidade</afflictionname.immunity>
-<afflictiondescription.immunity></afflictiondescription.immunity>
+<afflictiondescription.immunity>Representa a resistência do organismo contra infecções e rejeições.</afflictiondescription.immunity>
 <afflictionname.infectedwound>Ferida Infectada</afflictionname.infectedwound>
-<afflictiondescription.infectedwound></afflictiondescription.infectedwound>
+<afflictiondescription.infectedwound>A ferida está infectada e pode piorar se não for tratada.</afflictiondescription.infectedwound>
 <afflictionname.sepsis>Infeção Sanguínea</afflictionname.sepsis>
-<afflictiondescription.sepsis></afflictiondescription.sepsis>
+<afflictiondescription.sepsis>Uma infecção sistêmica grave está se espalhando pelo sangue.</afflictiondescription.sepsis>
 <afflictionname.necrosis>Necrose</afflictionname.necrosis>
-<afflictiondescription.necrosis></afflictiondescription.necrosis>
+<afflictiondescription.necrosis>O tecido morreu e pode levar a complicações graves.</afflictiondescription.necrosis>
 <afflictioncauseofdeath.necrosis>Morreu de uma ferida necrótica.</afflictioncauseofdeath.necrosis>
 <afflictioncauseofdeathself.necrosis>Você morreu de necrose.</afflictioncauseofdeathself.necrosis>
 <afflictionname.gangrene>Gangrena</afflictionname.gangrene>
 <afflictiondescription.gangrene>A extremidade encolheu e se tornou preta.</afflictiondescription.gangrene>
 <afflictionname.afadrenaline>Adrenalina</afflictionname.afadrenaline>
-<afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
+<afflictiondescription.afadrenaline>Adrenalina ativa no organismo.</afflictiondescription.afadrenaline>
 <afflictionname.afstreptokinase>Anti-Coágulo</afflictionname.afstreptokinase>
-<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+<afflictiondescription.afstreptokinase>Estreptoquinase ativa no organismo, reduzindo coágulos.</afflictiondescription.afstreptokinase>
 <afflictionname.afthiamine>Tiamina</afflictionname.afthiamine>
-<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+<afflictiondescription.afthiamine>Tiamina ativa no organismo.</afflictiondescription.afthiamine>
 <afflictionname.afsaline>Soro Fisiológico</afflictionname.afsaline>
-<afflictiondescription.afsaline></afflictiondescription.afsaline>
+<afflictiondescription.afsaline>Soro fisiológico ativo no organismo.</afflictiondescription.afsaline>
 <afflictionname.afringerssolution>Solução de Ringer</afflictionname.afringerssolution>
-<afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
+<afflictiondescription.afringerssolution>Solução de Ringer ativa no organismo.</afflictiondescription.afringerssolution>
 <afflictionname.afmannitol>Manitol</afflictionname.afmannitol>
-<afflictiondescription.afmannitol></afflictiondescription.afmannitol>
+<afflictiondescription.afmannitol>Manitol ativo no organismo.</afflictiondescription.afmannitol>
 <afflictionname.afantibiotics>Antibióticos</afflictionname.afantibiotics>
-<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+<afflictiondescription.afantibiotics>Antibióticos ativos no organismo.</afflictiondescription.afantibiotics>
 <afflictionname.afimmunosuppressant>Imunossupressores</afflictionname.afimmunosuppressant>
-<afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
+<afflictiondescription.afimmunosuppressant>Imunossupressores ativos no organismo.</afflictiondescription.afimmunosuppressant>
 <afflictionname.hemotransfusionshock>Choque de Hemotransfusão</afflictionname.hemotransfusionshock>
-<afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
+<afflictiondescription.hemotransfusionshock>O paciente está reagindo mal a uma transfusão incompatível.</afflictiondescription.hemotransfusionshock>
 <afflictionname.foreignbody>Corpo Estranho</afflictionname.foreignbody>
-<afflictiondescription.foreignbody></afflictiondescription.foreignbody>
+<afflictiondescription.foreignbody>Há uma bala, estilhaço ou outro corpo estranho alojado no tecido.</afflictiondescription.foreignbody>
 <afflictionname.tamponade>Tamponamento Cardíaco</afflictionname.tamponade>
-<afflictiondescription.tamponade></afflictiondescription.tamponade>
+<afflictiondescription.tamponade>Fluido ou sangue está comprimindo o coração e prejudicando seu funcionamento.</afflictiondescription.tamponade>
 <afflictionname.internalbleeding>Sangramento Interno</afflictionname.internalbleeding>
-<afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
+<afflictiondescription.internalbleeding>Há sangramento dentro do corpo.</afflictiondescription.internalbleeding>
 <!-- /// symptoms /// -->
 <afflictionname.sym_cough>Tosse</afflictionname.sym_cough>
 <afflictiondescription.sym_cough>O paciente está tossindo periodicamente.</afflictiondescription.sym_cough>
@@ -514,6 +492,176 @@ Pode dar sangue para: AB+</entitydescription.abpluscard>
 <connection.bloodphout>Blood_pH</connection.bloodphout>
 <!-- misc -->
 <roomname.surgical>Sala de Cirurgia</roomname.surgical>
+
+<!-- Traduções complementares -->
+<entityname.analgesictank>Tanque de Analgésico</entityname.analgesictank>
+<entitydescription.analgesictank>Um tanque de analgésicos gasosos que pode ser instalado em uma mesa cirúrgica ou usado em um AMBU.</entitydescription.analgesictank>
+<entityname.anesthetictank>Tanque de Anestésico</entityname.anesthetictank>
+<entitydescription.anesthetictank>Um tanque de anestésicos gasosos que pode ser instalado em uma mesa cirúrgica ou usado em um AMBU.</entitydescription.anesthetictank>
+<entityname.dialyzer>Filtro de Diálise</entityname.dialyzer>
+<entitydescription.dialyzer>Um filtro avançado que pode ser instalado em uma mesa cirúrgica para combater alcalose e acidose.</entitydescription.dialyzer>
+<entityname.toxfilter>Filtro de Toxinas</entityname.toxfilter>
+<entitydescription.toxfilter>Um filtro avançado que pode ser instalado em uma mesa cirúrgica para ajudar a remover venenos da corrente sanguínea.</entitydescription.toxfilter>
+<itemmsgmodifytable>[[attack]] Interagir</itemmsgmodifytable>
+<operatingtabellabel>Melhorias da Mesa Cirúrgica</operatingtabellabel>
+
+<entityname.multiscalpel>Bisturi multiuso</entityname.multiscalpel>
+<entitydescription.multiscalpel>Bisturi experimental. Desativado e precisa ser ativado. Nas mãos do profissional, um painel de botões pode ativar o bisturi e alternar entre operações: fazer incisões, extrair órgãos, remover bandagens ou cometer negligência médica.</entitydescription.multiscalpel>
+<multiscalpel.incision>Modo ativo: incisão cirúrgica</multiscalpel.incision>
+<multiscalpel.kidneys>Modo ativo: extrair rins</multiscalpel.kidneys>
+<multiscalpel.liver>Modo ativo: extrair fígado</multiscalpel.liver>
+<multiscalpel.lungs>Modo ativo: extrair pulmões</multiscalpel.lungs>
+<multiscalpel.heart>Modo ativo: extrair coração</multiscalpel.heart>
+<multiscalpel.brain>Modo ativo: extrair cérebro</multiscalpel.brain>
+<multiscalpel.bandage>Modo ativo: remover bandagens e gessos / negligência médica</multiscalpel.bandage>
+<multiscalpel.speedflex>Modo ativo: extração adaptativa de órgãos. Use na cabeça para cérebro, braço esquerdo para rins, torso para fígado, braço direito para coração e perna esquerda para pulmões.</multiscalpel.speedflex>
+<multiscalpel.btn.incision>Incisão</multiscalpel.btn.incision>
+<multiscalpel.btn.kidneys>Rins</multiscalpel.btn.kidneys>
+<multiscalpel.btn.liver>Fígado</multiscalpel.btn.liver>
+<multiscalpel.btn.lungs>Pulmões</multiscalpel.btn.lungs>
+<multiscalpel.btn.heart>Coração</multiscalpel.btn.heart>
+<multiscalpel.btn.brain>Cérebro</multiscalpel.btn.brain>
+<multiscalpel.btn.bandage>Bandagens, gessos, negligência</multiscalpel.btn.bandage>
+<multiscalpel.btn.speedflex>Extração adaptativa de órgãos</multiscalpel.btn.speedflex>
+
+<entityname.pressuremeds>Nitroprussiato de sódio</entityname.pressuremeds>
+<entitydescription.pressuremeds>Um medicamento usado para reduzir a pressão arterial.</entitydescription.pressuremeds>
+<entityname.skinaid>Pomada regenerativa</entityname.skinaid>
+<entitydescription.skinaid>Um gel regenerativo potente que promove a cura natural da maior parte dos traumas superficiais.</entitydescription.skinaid>
+<entityname.gelipack>Bolsa de gel refrigerante</entityname.gelipack>
+<entitydescription.gelipack>Uma bolsa refrigerante reutilizável cheia de gel orgânico que nunca vence. Perde efetividade sem refrigeração.</entitydescription.gelipack>
+<entitydescription.antiseptic>Pode ser usado para desinfetar feridas com um pulverizador antisséptico.</entitydescription.antiseptic>
+<entitydescription.antisepticspray>Usado para aplicar antisséptico em feridas infectadas.</entitydescription.antisepticspray>
+
+<displayname.surgerysetscalpel>[itemname] (kit, bisturis de órgãos)</displayname.surgerysetscalpel>
+<entityname.medstartercrate>Caixa médica inicial</entityname.medstartercrate>
+<entitydescription.medstartercrate>Uma caixa que contém todos os itens essenciais, convenientemente reunidos em uma única receita de fabricação.</entitydescription.medstartercrate>
+<entityname.headta>Restos de cabeça</entityname.headta>
+<entitydescription.headta>Uma cabeça decepada, ou o que restou dela.</entitydescription.headta>
+<entityname.headsa>Cabeça amputada</entityname.headsa>
+<entitydescription.headsa>Uma cabeça decepada para reciclagem.</entitydescription.headsa>
+<ItemMsgPutInsideSelectKey>[[select]] Colocar dentro</ItemMsgPutInsideSelectKey>
+<ItemMsgTakeOutSelectKey>[[select]] Retirar</ItemMsgTakeOutSelectKey>
+
+<afflictionname.brainswap>Substituindo cérebro</afflictionname.brainswap>
+<afflictiondescription.brainswap>O cérebro antigo foi preparado cirurgicamente para um novo transplante.</afflictiondescription.brainswap>
+<afflictionname.heartswap>Substituindo coração</afflictionname.heartswap>
+<afflictiondescription.heartswap>O coração antigo foi preparado cirurgicamente para um novo transplante.</afflictiondescription.heartswap>
+<afflictionname.kidneyswap>Substituindo rins</afflictionname.kidneyswap>
+<afflictiondescription.kidneyswap>Os rins antigos foram preparados cirurgicamente para um novo transplante.</afflictiondescription.kidneyswap>
+<afflictionname.liverswap>Substituindo fígado</afflictionname.liverswap>
+<afflictiondescription.liverswap>O fígado antigo foi preparado cirurgicamente para um novo transplante.</afflictiondescription.liverswap>
+<afflictionname.lungswap>Substituindo pulmões</afflictionname.lungswap>
+<afflictiondescription.lungswap>Os pulmões antigos foram preparados cirurgicamente para um novo transplante.</afflictiondescription.lungswap>
+<afflictionname.iced>Resfriado</afflictionname.iced>
+<afflictiondescription.iced>Cura contusões. O movimento fica mais lento.</afflictiondescription.iced>
+<afflictionname.skinointmented>Pomada regenerativa</afflictionname.skinointmented>
+<afflictiondescription.skinointmented>Uma camada de gel regenerativo acelera a cura de queimaduras e trauma contundente.</afflictiondescription.skinointmented>
+<afflictionname.tshocktimeout>Imunidade a choque traumático</afflictionname.tshocktimeout>
+<afflictiondescription.tshocktimeout>O paciente foi deixado sem supervisão; por algum tempo ele não perceberá que foi aberto.</afflictiondescription.tshocktimeout>
+<afflictionname.modconflict>Conflito de mod</afflictionname.modconflict>
+<afflictiondescription.modconflict>Há um conflito de mod. Outro mod está sobrescrevendo alguns dos mesmos itens que o Neurotrauma altera. Algumas coisas podem não funcionar corretamente. Ajuste a ordem de carregamento.</afflictiondescription.modconflict>
+<afflictionname.afanaesthetic>Anestésicos</afflictionname.afanaesthetic>
+<afflictiondescription.afanaesthetic>Anestésicos ativos no organismo.</afflictiondescription.afanaesthetic>
+<afflictionname.afopioid>Opioides</afflictionname.afopioid>
+<afflictiondescription.afopioid>Opioides ativos no organismo.</afflictiondescription.afopioid>
+<afflictionname.afpressuredrug>Redutores de pressão arterial</afflictionname.afpressuredrug>
+<afflictiondescription.afpressuredrug>Medicamentos redutores de pressão arterial ativos no organismo.</afflictiondescription.afpressuredrug>
+
+<talentdescription.itemgiveslessaffliction>Administrar ‖color:gui.orange‖Sangue Alienígena‖end‖ causa [amount]% menos ‖color:gui.orange‖Psicose‖end‖ e ‖color:gui.green‖90%‖end‖ menos ‖color:gui.orange‖Choque de Hemotransfusão‖end‖.</talentdescription.itemgiveslessaffliction>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Pessoal não médico pode tratar parada cardíaca usando adrenalina ou um AutoPulse.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Está pegando fogo? Talvez você esteja mais perto de um traje de mergulho do que do lastro ou de um extintor.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Morfina não serve apenas para cirurgia. Analgesia suficiente aumenta a resistência a dano e atordoamento.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O AED sempre reinicia a fibrilação, independentemente do treinamento médico.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Drogas ainda podem ser administradas a um paciente em uma bolsa de estase.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Oxygenite líquido previne inconsciência causada por hipoxemia.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Lembre-se de pegar seu membro depois que ele for amputado traumaticamente. Procure-o no cadáver do monstro que o arrancou.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Dano nos rins e no fígado causará neurotrauma. Bons médicos mantêm órgãos sobressalentes por perto.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Para diagnóstico completo, lembre-se de verificar a interface de saúde, o visor de saúde e o analisador hematológico.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Vários sintomas são exclusivos do choque de hemotransfusão.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Se você sofreu dano demais em um membro, ele pode não regenerar mais naturalmente. Bandagens e bolsas de gelo aceleram a regeneração natural, em vez de tratar feridas diretamente.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Você pode administrar um AutoPulse pela interface de saúde para equipá-lo imediatamente no paciente. Usar uma chave inglesa no torso o colocará de volta no seu inventário.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Enfaixar uma fratura no pescoço impede que ela cause lesão na medula espinal.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O AutoPulse é sempre melhor que CPR, e os dois não acumulam.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Hipoxemia significa oxigênio insuficiente no sangue. Não confunda com hipóxia, também conhecida como oxigênio baixo.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Manitol só trata neurotrauma se a pressão arterial estiver acima de 70% e a hipoxemia abaixo de 30%. Se as condições não forem atendidas, ele desacelera a progressão do neurotrauma.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A regeneração natural de neurotrauma pode ser mais rápida se o paciente tiver menos de 20% das causas. Mantenha o paciente absolutamente saudável para uma recuperação mais rápida.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bots às vezes reclamam dos próprios sintomas. Lembre-se de examiná-los regularmente.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Você pode usar pinça através de feridas abertas de tiro ou feridas profundas, mas isso sempre causará um pequeno choque traumático.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Fibrilação é sempre perigosa. A pressão arterial cai muito mais rápido do que sobe.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Concussões nunca são perigosas, mas causam vários sintomas que podem ser confundidos com aflições perigosas.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O corpo humano sempre rejeitará sangue alienígena, independentemente da força da imunidade.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A força da imunidade afeta a cura natural de feridas infectadas, rejeição de órgãos e rejeição de tipos sanguíneos incompatíveis.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Se estiver usando o guia do Trello, confirme que está usando a versão para o Community Fork.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Feridas internas, como trauma contundente, não têm risco de infecção.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Sepse só pode ser tratada com antibióticos de amplo espectro. Mantenha alguns por perto.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Camas não médicas só previnem choque traumático se o paciente estiver deitado nelas.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Você pode coletar uma bolsa de sangue por vez de humanos saudáveis, desde que a aplicação seja bem-sucedida.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Para tratar gangrena acima de 15%, é necessário remover o membro e anexar um novo.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A maioria das chances e taxas de ganho de aflições pode ser configurada. Para encontrar a configuração, abra o menu Esc depois de carregar uma partida. Gritos, comportamento do gesso e rejeição de órgãos também podem ser configurados.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O preço da maioria dos itens pode ser configurado. Para encontrar a configuração, abra o menu Esc depois de carregar uma partida e selecione a aba "Preços de itens" no canto superior esquerdo. Alguns custos de uso e disponibilidade de itens também podem ser configurados.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ É possível, mas mentalmente exigente, jogar sem visor de saúde ou analisador hematológico. A maioria das aflições pode ser diagnosticada por contexto, sintomas e efeitos visuais.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Luxações são extremamente comuns depois de ser pego em uma explosão.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A chance de ganhar aflições ao ser atingido, como fraturas e tamponamento cardíaco, depende do dano recebido. Se você receber menos dano, precisará de menos tratamento.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Com pouco gesso? Membros e humanos podem ser desconstruídos em cálcio.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Abstinência de drogas nunca é letal, mas abstinência alcoólica severa pode ser perigosa.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Dano no coração e nos pulmões não é letal até chegar a 100%.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Mantenha um tubarão azul por perto. Você nunca sabe quando pode precisar dele.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Alguns sintomas se sobrepõem. Você não consegue ouvir palpitações se o coração não está batendo.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ No Neurotrauma, sua cabeça recebe mais dano, mas seus braços e pernas recebem menos.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Se quiser remover um órgão em vez de substituí-lo, use o bisturi multiuso duas vezes.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Tente não serrar acidentalmente a cabeça do paciente. Se isso acontecer, médicos de posto avançado podem desfazer ossos serrados.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Enfaixar uma luxação ou fratura no braço impede que ela trave sua mão, e enfaixar uma luxação na perna restaura a velocidade de movimento.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Evite usar armas se tiver luxação ou fratura no braço.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Enfaixar uma fratura no braço impede que ela trave sua mão com o tempo.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Você pode forçar um paciente inconsciente a ir para uma mesa cirúrgica para usar o filtro instalado nela.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Lembre-se de tratar as condições subjacentes, não os sintomas. Sintomas servem como método de diagnóstico.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O submarino não começa com suprimentos médicos suficientes? Verifique se há um armário médico marcado corretamente e se o submarino não está equipado manualmente.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A velocidade da cirurgia é afetada pela habilidade relevante. Médicos ou cirurgiões melhores operam mais rápido.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Membros biônicos não apodrecem fora da geladeira, mas no restante são idênticos aos biológicos.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O sangue circula sem parar. Garanta que o paciente tenha sangue suficiente e que o coração esteja funcionando.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ O ar entra e sai. Garanta que o paciente tenha oxigênio suficiente.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ A única cura para coma é o tempo. Manter o paciente com órgãos e sangue saudáveis acelera a recuperação.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Um tripulante distraído pode sofrer queimaduras de terceiro grau antes que você perceba. Estoque plastiseal ou cola antibiótica.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Tente não escanear o paciente com frequência demais. Ele pode receber muita radiação.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Bolsas de estase protegem contra pressão e podem ser usadas para EVA.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Se o paciente estiver morrendo rápido demais, ganhe tempo com uma bolsa de estase.</loadingscreentip>
+
+<npcdialogsym.n_fracture>Meu pescoço quebrou!</npcdialogsym.n_fracture>
+<npcdialogsym.h_arterialcut>Estou sangrando pela cabeça!</npcdialogsym.h_arterialcut>
+<npcdialogsym.ll_arterialcut>Minha artéria da perna esquerda foi cortada!</npcdialogsym.ll_arterialcut>
+<npcdialogsym.rl_arterialcut>Minha artéria da perna direita foi cortada!</npcdialogsym.rl_arterialcut>
+<npcdialogsym.ra_arterialcut>Minha artéria do braço direito foi cortada!</npcdialogsym.ra_arterialcut>
+<npcdialogsym.la_arterialcut>Minha artéria do braço esquerdo foi cortada!</npcdialogsym.la_arterialcut>
+<npcdialogsym.sym_hematemesis>Estou vomitando sangue!</npcdialogsym.sym_hematemesis>
+<npcdialogsym.sym_paleskin>Minha pele está ficando pálida!</npcdialogsym.sym_paleskin>
+<npcdialogsym.sym_confusion>Estou me sentindo confuso...</npcdialogsym.sym_confusion>
+<npcdialogsym.sym_lightheadedness>Estou ficando tonto...</npcdialogsym.sym_lightheadedness>
+<npcdialogsym.pain_abdominal>Meu estômago está doendo muito!</npcdialogsym.pain_abdominal>
+<npcdialogsym.inflammation>Estou queimando de inflamação!</npcdialogsym.inflammation>
+<npcdialogsym.gangrene>Alguma coisa está apodrecendo no meu corpo!</npcdialogsym.gangrene>
+<npcdialogsym.fever>Estou com febre alta!</npcdialogsym.fever>
+<npcdialogsym.sym_headache>Minha cabeça está latejando!</npcdialogsym.sym_headache>
+<npcdialogsym.sym_blurredvision>Está tudo embaçado!</npcdialogsym.sym_blurredvision>
+<npcdialogsym.t_fracture>Minhas costelas estão fraturadas!</npcdialogsym.t_fracture>
+<npcdialogsym.h_fracture>Meu crânio quebrou!</npcdialogsym.h_fracture>
+<npcdialogsym.ra_fracture>Meu braço direito quebrou!</npcdialogsym.ra_fracture>
+<npcdialogsym.la_fracture>Meu braço esquerdo quebrou!</npcdialogsym.la_fracture>
+<npcdialogsym.rl_fracture>Minha perna direita quebrou!</npcdialogsym.rl_fracture>
+<npcdialogsym.ll_fracture>Minha perna esquerda quebrou!</npcdialogsym.ll_fracture>
+<npcdialogsym.dislocation1>Minha perna direita está luxada!</npcdialogsym.dislocation1>
+<npcdialogsym.dislocation2>Minha perna esquerda está luxada!</npcdialogsym.dislocation2>
+<npcdialogsym.dislocation3>Meu braço direito está luxado!</npcdialogsym.dislocation3>
+<npcdialogsym.dislocation4>Meu braço esquerdo está luxado!</npcdialogsym.dislocation4>
+<npcdialogsym.pain_chest>Meu peito está doendo!</npcdialogsym.pain_chest>
+<npcdialogsym.sym_weakness>Estou tão fraco...</npcdialogsym.sym_weakness>
+<npcdialogsym.sym_sweating>Estou suando muito!</npcdialogsym.sym_sweating>
+<npcdialogsym.dyspnea>Não consigo respirar direito!</npcdialogsym.dyspnea>
+<npcdialogsym.sym_bloating>Meu estômago está inchado!</npcdialogsym.sym_bloating>
+<npcdialogsym.sym_legswelling>Minha perna está inchando!</npcdialogsym.sym_legswelling>
+<npcdialogsym.sym_craving>Estou com uma fissura intensa!</npcdialogsym.sym_craving>
+<npcdialogsym.sym_palpitations>Meu coração está disparado!</npcdialogsym.sym_palpitations>
 
 <!-- A1.8 -->
 

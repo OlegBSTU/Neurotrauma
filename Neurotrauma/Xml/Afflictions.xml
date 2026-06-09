@@ -835,28 +835,6 @@
     <icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="0,5" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
-  <!-- Cavity infection
-  Scanned Symptom, leads to sepsis if severe enough -->
-  <Affliction
-    name=""
-    identifier="cavityinfection"
-    description=""
-    healableinmedicalclinic="false"
-    type="gaze"
-    isbuff="false"
-    targets="human"
-    causeofdeathdescription=""
-    selfcauseofdeathdescription=""
-    limbspecific="false"
-    indicatorlimb="Torso"
-    maxstrength="100"
-    showiconthreshold="500"
-    showinhealthscannerthreshold="20"
-    damageoverlayalpha="0">
-
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
-  </Affliction>
-
   <!-- CPR
   Invisible Status -->
   <Affliction
@@ -3892,28 +3870,6 @@ thats what the vomiting symptom is for -->
       </StatusEffect>
     </Effect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,7" sheetelementsize="128,128" origin="0,0"/>
-  </Affliction>
-
-  <!-- Cleaning cavity -->
-  <Affliction
-    name=""
-    identifier="caviclean"
-    description=""
-    healableinmedicalclinic="true"
-    type="gaze"
-    isbuff="true"
-    limbspecific="true"
-    maxstrength="100"
-    showinhealthscannerthreshold="700"
-    showiconthreshold="1"
-    iconcolors="84,211,211,255;84,211,211,255">
-    <Effect minstrength="0" maxstrength="10" strengthchange="-10">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
-        <ReduceAffliction identifier="cavityinfection" amount="1000"/>
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100" strengthchange="-10"/>
-    <icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="0,7" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
   <!-- Traumatic Shock / caused by operating w/o table or analgesia
