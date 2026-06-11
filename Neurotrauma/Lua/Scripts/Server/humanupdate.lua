@@ -370,12 +370,12 @@ NT.Afflictions = {
 				c.afflictions.immunity.strength = c.afflictions.immunity.strength
 					- NT.Deltatime * (math.min(1.4, math.max(1, 0.8 + c.afflictions[i].strength / 100))) -- lose immunity over time
 
-				if c.afflictions.afantibiotics.strength < 0.1 or c.afflictions[i].strength > 30 then
+				if c.afflictions.afantibiotics.strength < 0.1 or c.afflictions[i].strength > 20 then
 					if c.afflictions.combatstimulant.strength > 0 then return end -- don't gain infection
 					c.afflictions[i].strength = c.afflictions[i].strength
-						+ NT.Deltatime * (2 - 0.0125 * math.max(c.afflictions.immunity.prev, 40)) -- gain infection over time
+						+ NT.Deltatime * (0.65 - 0.0125 * math.max(0.44 * c.afflictions.immunity.prev, 20)) -- gain infection over time
 				else
-					c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.25 -- lose infection at fixed 0.25/s
+					c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime * 0.8 -- lose infection at rate 0.8/s
 				end
 			end
 		end,
@@ -1677,7 +1677,7 @@ NT.LimbAfflictions = {
 			-- sepsis
 			local sepsischance = HF.Minimum(limbaff.gangrene.strength, 15, 0) / 400
 				+ HF.Minimum(limbaff.infectedwound.strength, 50) / 1000
-				+ (HF.Minimum(c.afflictions.infectedcavity.strength, 30, 0) / 145) ^ 2.5
+				+ (HF.Minimum(c.afflictions.infectedcavity.strength, 70, 0) / 100) ^ 10
 				+ foreignbodycutchance
 			if HF.Chance(sepsischance) then
 				c.afflictions.sepsis.strength = c.afflictions.sepsis.strength
