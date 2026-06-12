@@ -144,12 +144,12 @@ function NTCyb.UpdateHuman(character)
 			1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberheart", 0) / 200
 		) -- 0.25 (augmented) or 0.5 (cybernetic)
 	end
-	if HF.HasAfflictionLimb(character, "ntc_cyberbrain", LimbType.Torso, 1) then
+	if HF.HasAfflictionLimb(character, "ntc_cyberbrain", LimbType.Head, 1) then
 		-- NT.Afflictions.ntc_cyberbrain below also boosts neurotrauma healing rate
 		NTC.SetMultiplier(
 			character,
 			"neurotraumagain",
-			1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberbrain", 0) / 200
+			1 - HF.GetAfflictionStrengthLimb(character, LimbType.Head, "ntc_cyberbrain", 0) / 200
 		) -- 0.25 (augmented) or 0.5 (cybernetic)
 	end
 
