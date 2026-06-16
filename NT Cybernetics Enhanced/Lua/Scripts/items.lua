@@ -31,6 +31,7 @@ NTCyb.OrganConfigDatas = {
 		limb = LimbType.Torso,
 		damageAffliction = "kidneydamage",
 		removedAffliction = "kidneyremoved",
+		swapAffliction = "kidneyswap",
 		cyberAffliction = "ntc_cyberkidney",
 		secondarySkillName = "mechanical",
 		surgerySkillRemoval = 30,
@@ -43,6 +44,7 @@ NTCyb.OrganConfigDatas = {
 		limb = LimbType.Torso,
 		damageAffliction = "liverdamage",
 		removedAffliction = "liverremoved",
+		swapAffliction = "liverswap",
 		cyberAffliction = "ntc_cyberliver",
 		secondarySkillName = "mechanical",
 		surgerySkillRemoval = 40,
@@ -55,6 +57,7 @@ NTCyb.OrganConfigDatas = {
 		limb = LimbType.Torso,
 		damageAffliction = "lungdamage",
 		removedAffliction = "lungremoved",
+		swapAffliction = "lungswap",
 		cyberAffliction = "ntc_cyberlung",
 		secondarySkillName = "mechanical",
 		surgerySkillRemoval = 50,
@@ -67,6 +70,7 @@ NTCyb.OrganConfigDatas = {
 		limb = LimbType.Torso,
 		damageAffliction = "heartdamage",
 		removedAffliction = "heartremoved",
+		swapAffliction = "heartswap",
 		cyberAffliction = "ntc_cyberheart",
 		secondarySkillName = "mechanical",
 		surgerySkillRemoval = 60,
@@ -472,7 +476,10 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 
 	local workcondition = HF.Clamp(item.Condition + conditionmodifier, 0, 100)
 	if
-		HF.HasAffliction(targetCharacter, organName .. "removed", 1)
+		(
+			HF.HasAffliction(targetCharacter, organName .. "removed", 1)
+			or HF.HasAffliction(targetCharacter, organName .. "swap", 1)
+		)
 		and limbtype == LimbType.Torso
 		and HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 99)
 	then
@@ -662,12 +669,26 @@ Timer.Wait(function()
 		if limbtype ~= organConfig.limb or not HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype, 1) then
 			return
 		end
-		if HF.HasAfflictionLimb(targetCharacter, organConfig.cyberAffliction, limbtype) then
+		local procureready = HF.GetAfflictionStrength(targetCharacter, organConfig.removedAffliction, 0) <= 0
+			and HF.GetAfflictionStrength(targetCharacter, organConfig.swapAffliction, 0) >= 0.1
+		if not procureready then
+			if HF.GetSurgerySkillRequirementMet(usingCharacter, organConfig.surgerySkillRemoval) then
+				if HF.GetAfflictionStrength(targetCharacter, organConfig.damageAffliction, 0) >= 100 then
+					HF.SetAffliction(targetCharacter, organConfig.removedAffliction, 100, usingCharacter)
+				else
+					HF.SetAffliction(targetCharacter, organConfig.swapAffliction, 100, usingCharacter)
+				end
+			else
+				HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
+				HF.AddAfflictionLimb(targetCharacter, "organdamage", limbtype, 5, usingCharacter)
+				HF.AddAffliction(targetCharacter, organConfig.damageAffliction, 20, usingCharacter)
+			end
+		elseif HF.HasAfflictionLimb(targetCharacter, organConfig.cyberAffliction, limbtype) then
 			local damage = HF.GetAfflictionStrength(targetCharacter, organConfig.damageAffliction, 0)
 			local removed = HF.GetAfflictionStrength(targetCharacter, organConfig.removedAffliction, 0)
 			if removed <= 0 then
 				HF.SetAffliction(targetCharacter, organConfig.removedAffliction, 100, usingCharacter)
-				return
+				HF.SetAffliction(targetCharacter, organConfig.swapAffliction, 0, usingCharacter)
 			end
 
 			if HF.GetSurgerySkillRequirementMet(usingCharacter, organConfig.surgerySkillRemoval) then
@@ -683,48 +704,69 @@ Timer.Wait(function()
 						HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
 					end
 				end
+				local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
+				if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
+					container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
+				end
+				local toContainer = container ~= nil
+					and container.OwnInventory ~= nil
+					and not container.OwnInventory.IsFull()
+				local function postSpawnFunc(args)
+					local tags = {}
 
-				HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
+					if args.acidosis > 0 then
+						table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
+					elseif args.alkalosis > 0 then
+						table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
+					end
+					if args.sepsis > 10 then table.insert(tags, "sepsis") end
+
+					local tagstring = ""
+					for index, value in ipairs(tags) do
+						tagstring = tagstring .. value
+						if index < #tags then tagstring = tagstring .. "," end
+					end
+
+					args.item.Tags = tagstring
+					args.item.Condition = args.condition
+				end
+				local params = {
+					acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
+					alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
+					sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
+					condition = 100 - damage,
+				}
 				if organConfig.cyberAffliction == "ntc_cyberbrain" then
 					-- tier 2 and 3 brains are both synthetic implants
 					if HF.HasAfflictionLimb(targetCharacter, organConfig.cyberAffliction, limbtype, 99) then
-						HF.GiveItemAtCondition(usingCharacter, organConfig.tier3Item, 100)
+						if toContainer then
+							HF.SpawnItemPlusFunction(organConfig.tier3Item, nil, nil, container.OwnInventory)
+						else
+							HF.GiveItemAtCondition(usingCharacter, organConfig.tier3Item, 100)
+						end
 					else
-						HF.GiveItemAtCondition(usingCharacter, organConfig.tier2Item, 100)
+						if toContainer then
+							HF.SpawnItemPlusFunction(organConfig.tier2Item, nil, nil, container.OwnInventory)
+						else
+							HF.GiveItemAtCondition(usingCharacter, organConfig.tier2Item, 100)
+						end
 					end
 				elseif HF.HasAfflictionLimb(targetCharacter, organConfig.cyberAffliction, limbtype, 99) then
 					-- cybernetic
-					HF.GiveItemAtCondition(usingCharacter, organConfig.tier3Item, HF.Clamp(100 - damage, 1, 100))
+					if toContainer then
+						HF.SpawnItemPlusFunction(organConfig.tier3Item, postSpawnFunc, params, container.OwnInventory)
+					else
+						HF.GiveItemAtCondition(usingCharacter, organConfig.tier3Item, HF.Clamp(100 - damage, 1, 100))
+					end
 				else
 					-- augmented
-					-- add acidosis, alkalosis and sepsis to the bloodpack if the donor has them
-					local function postSpawnFunc(args)
-						local tags = {}
-
-						if args.acidosis > 0 then
-							table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
-						elseif args.alkalosis > 0 then
-							table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
-						end
-						if args.sepsis > 10 then table.insert(tags, "sepsis") end
-
-						local tagstring = ""
-						for index, value in ipairs(tags) do
-							tagstring = tagstring .. value
-							if index < #tags then tagstring = tagstring .. "," end
-						end
-
-						args.item.Tags = tagstring
-						args.item.Condition = args.condition
+					if toContainer then
+						HF.SpawnItemPlusFunction(organConfig.tier2Item, postSpawnFunc, params, container.OwnInventory)
+					else
+						HF.GiveItemPlusFunction(organConfig.tier2Item, postSpawnFunc, params, usingCharacter)
 					end
-					local params = {
-						acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
-						alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
-						sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
-						condition = HF.Clamp(100 - damage, 1, 100),
-					}
-					HF.GiveItemPlusFunction(organConfig.tier2Item, postSpawnFunc, params, usingCharacter)
 				end
+				HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
 				HF.SetAfflictionLimb(targetCharacter, organConfig.cyberAffliction, limbtype, 0, usingCharacter)
 			else
 				HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, 15, usingCharacter)
