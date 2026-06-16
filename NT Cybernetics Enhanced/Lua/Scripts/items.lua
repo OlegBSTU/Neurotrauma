@@ -39,6 +39,7 @@ NTCyb.OrganConfigDatas = {
 		tier2Item = "augmentedkidney",
 		tier3Item = "cyberkidney",
 		baseMethod = NT.ItemMethods.organscalpel_kidneys,
+		baseImplantMethod = NT.ItemStartsWithMethods.kidneytransplant,
 	},
 	liver = {
 		limb = LimbType.Torso,
@@ -52,6 +53,7 @@ NTCyb.OrganConfigDatas = {
 		tier2Item = "augmentedliver",
 		tier3Item = "cyberliver",
 		baseMethod = NT.ItemMethods.organscalpel_liver,
+		baseImplantMethod = NT.ItemStartsWithMethods.livertransplant,
 	},
 	lung = {
 		limb = LimbType.Torso,
@@ -65,6 +67,7 @@ NTCyb.OrganConfigDatas = {
 		tier2Item = "augmentedlung",
 		tier3Item = "cyberlung",
 		baseMethod = NT.ItemMethods.organscalpel_lungs,
+		baseImplantMethod = NT.ItemStartsWithMethods.lungtransplant,
 	},
 	heart = {
 		limb = LimbType.Torso,
@@ -85,6 +88,7 @@ NTCyb.OrganConfigDatas = {
 		tier2Item = "augmentedheart",
 		tier3Item = "cyberheart",
 		baseMethod = NT.ItemMethods.organscalpel_heart,
+		baseImplantMethod = NT.ItemStartsWithMethods.hearttransplant,
 	},
 	brain = {
 		limb = LimbType.Head,
@@ -456,6 +460,7 @@ local function possiblyRejectOrgan(targetCharacter, usingCharacter, organName)
 	end
 end
 
+-- Let's allow this to swap between cyber and regular organs for once and for all... hopefully
 local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 	local organName
 	for organ, _ in pairs(NTCyb.OrganConfigDatas) do
@@ -469,6 +474,16 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 		return
 	end
 	local limbtype = limb.type
+	if
+		not (
+			string.find(item.Prefab.Identifier.Value, "cyber")
+			or string.find(item.Prefab.Identifier.Value, "augmented")
+		) and not HF.HasAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, 1)
+	then
+		-- If using a regular organ on a patient with regular organ, use base method
+		NTCyb.OrganConfigDatas[organName].baseImplantMethod(item, usingCharacter, targetCharacter, limb)
+		return
+	end
 	local conditionmodifier = 0
 	if not HF.GetSkillRequirementMet(usingCharacter, NTCyb.OrganConfigDatas[organName].secondarySkillName, 60) then
 		conditionmodifier = conditionmodifier - 20
