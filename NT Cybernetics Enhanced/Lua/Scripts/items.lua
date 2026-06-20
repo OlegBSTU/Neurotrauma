@@ -600,8 +600,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 		HF.RemoveItem(item)
 		if organName == "kidney" then
 			if isArtificial then
-				print("case1")
-				print("damage = " .. damage)
 				if patientHasArtificial then
 					-- artificial to artificial kidney replacement, give and place artificial organs, no timer for swap/removed status removal
 					giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
@@ -630,7 +628,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 				end
 				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
 			elseif patientHasArtificial then
-				print("case2")
 				-- artificial to organic kidney replacement, place one organic kidney and give artificial, add timer for swap/removed status removal
 				newdamage = HF.Clamp(((100 - damage) - workcondition) / 2, -100, 100)
 				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
@@ -651,7 +648,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 		end
 		if damage == 100 then
 			if isArtificial then
-				print("case3")
 				-- in place of destroyed one, insert artificial organ
 				damageOrgan(targetCharacter, organName, -workcondition, usingCharacter)
 				HF.SetAfflictionLimb(
@@ -665,7 +661,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 				end
 				HF.AddAffliction(targetCharacter, "organdamage", -workcondition / 5, usingCharacter)
 			else
-				print("case4")
 				-- insert the organic
 				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
 				damageOrgan(targetCharacter, organName, -workcondition, usingCharacter)
@@ -674,7 +669,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 			end
 		elseif isArtificial then
 			if patientHasArtificial then
-				print("case5")
 				-- artificial to artificial organ replacement, give and place artificial organs
 				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
 				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
@@ -686,7 +680,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 					string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
 				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
 			else
-				print("case6")
 				-- organic to artificial organ replacement, give organic and place artificial organ
 				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
 				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
@@ -699,7 +692,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
 			end
 		else
-			print("case7")
 			-- artificial to organic organ replacement, give artificial and place organic organ
 			HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
 			HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
