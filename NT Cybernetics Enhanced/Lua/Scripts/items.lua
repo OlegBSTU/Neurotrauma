@@ -460,6 +460,95 @@ local function possiblyRejectOrgan(targetCharacter, usingCharacter, organName)
 	end
 end
 
+-- Helper functions for implantOrgan
+local function giveOrganic(item, usingCharacter, targetCharacter, damage, organName)
+	print("giveOrganic")
+	-- add acidosis, alkalosis and sepsis to the bloodpack if the donor has them
+	local function postSpawnFunc(args)
+		local tags = {}
+
+		if args.acidosis > 0 then
+			table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
+		elseif args.alkalosis > 0 then
+			table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
+		end
+		if args.sepsis > 10 then table.insert(tags, "sepsis") end
+
+		local tagstring = ""
+		for index, value in ipairs(tags) do
+			tagstring = tagstring .. value
+			if index < #tags then tagstring = tagstring .. "," end
+		end
+
+		args.item.Tags = tagstring
+		args.item.Condition = args.condition
+	end
+	local params = {
+		acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
+		alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
+		sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
+		condition = 100 - damage,
+	}
+	local parentInventory = item.ParentInventory
+	local inventorySpot = nil
+	if parentInventory ~= nil then inventorySpot = parentInventory.FindIndex(item) end
+	local transplantidentifier = organName .. "transplant_q1"
+
+	if NTC.HasTag(usingCharacter, "organssellforfull") then transplantidentifier = organName .. "transplant" end
+
+	if string.find(item.Prefab.Identifier.Value, "kidney") then
+		local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
+		if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
+			container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
+		end
+		if container ~= nil and container.OwnInventory ~= nil and container.OwnInventory.IsFull() == false then
+			HF.SpawnItemPlusFunction(transplantidentifier, postSpawnFunc, params, container.OwnInventory)
+		else
+			HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
+		end
+	else
+		HF.SpawnItemPlusFunction(transplantidentifier, postSpawnFunc, params, parentInventory, inventorySpot)
+	end
+end
+
+local function giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
+	local function postSpawnFunc(args)
+		local tags = {}
+
+		if args.acidosis > 0 then
+			table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
+		elseif args.alkalosis > 0 then
+			table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
+		end
+		if args.sepsis > 10 then table.insert(tags, "sepsis") end
+
+		local tagstring = ""
+		for index, value in ipairs(tags) do
+			tagstring = tagstring .. value
+			if index < #tags then tagstring = tagstring .. "," end
+		end
+
+		args.item.Tags = tagstring
+		args.item.Condition = args.condition
+	end
+	local params = {
+		acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
+		alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
+		sepsis = HF.GetAfflictionStrength(targetCharacter, "sepsis"),
+		condition = 100 - damage,
+	}
+	local inventorySpot = nil
+	local parentInventory = item.ParentInventory
+	if parentInventory then inventorySpot = parentInventory.FindIndex(item) end
+	-- augmented
+	local transplantidentifier = NTCyb.OrganConfigDatas[organName].tier2Item
+	if cyberStrength > 50 then
+		-- cybernetic
+		transplantidentifier = NTCyb.OrganConfigDatas[organName].tier3Item
+	end
+	HF.SpawnItemPlusFunction(transplantidentifier, postSpawnFunc, params, parentInventory, inventorySpot)
+end
+
 -- Let's allow this to swap between cyber and regular organs for once and for all... hopefully
 local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 	local organName
@@ -474,12 +563,10 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 		return
 	end
 	local limbtype = limb.type
-	if
-		not (
-			string.find(item.Prefab.Identifier.Value, "cyber")
-			or string.find(item.Prefab.Identifier.Value, "augmented")
-		) and not HF.HasAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, 1)
-	then
+	local isArtificial = string.find(item.Prefab.Identifier.Value, "cyber")
+		or string.find(item.Prefab.Identifier.Value, "augmented")
+	local patientHasArtificial = HF.HasAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, 1)
+	if not isArtificial and not patientHasArtificial then
 		-- If using a regular organ on a patient with regular organ, use base method
 		NTCyb.OrganConfigDatas[organName].baseImplantMethod(item, usingCharacter, targetCharacter, limb)
 		return
@@ -505,21 +592,122 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 			HF.AddAfflictionLimb(targetCharacter, "internalbleeding", limbtype, HF.RandomRange(0, 10))
 			HF.GiveItem(targetCharacter, "ntsfx_slash")
 		end
-		damageOrgan(targetCharacter, organName, -workcondition, usingCharacter) -- heal "liverdamage"
-		HF.AddAffliction(targetCharacter, "organdamage", -workcondition / 5, usingCharacter) -- heal a bit of vanilla organ damage
-		HF.SetAffliction(targetCharacter, organName .. "removed", 0, usingCharacter) -- clear "liverremoved"
-		HF.SetAfflictionLimb(
-			targetCharacter,
-			"ntc_cyber" .. organName,
-			limbtype,
-			string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
-		) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
-		for _, affliction in ipairs(NTCyb.OrganConfigDatas[organName].curedAfflictions) do
-			HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
-		end
-		HF.RemoveItem(item)
 
-		possiblyRejectOrgan(targetCharacter, usingCharacter, organName)
+		local cyberStrength = HF.GetAfflictionStrength(targetCharacter, "ntc_cyber" .. organName)
+		local damage = HF.GetAfflictionStrength(targetCharacter, organName .. "damage", 0)
+		local newdamage = HF.Clamp((100 - damage) - workcondition, -100, 100) -- define organdamage swap as the default newdamage
+
+		HF.RemoveItem(item)
+		if organName == "kidney" then
+			if isArtificial then
+				print("case1")
+				print("damage = " .. damage)
+				if patientHasArtificial then
+					-- artificial to artificial kidney replacement, give and place artificial organs, no timer for swap/removed status removal
+					giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
+				elseif damage > 45 and damage < 95 then
+					-- organic to artificial kidney replacement, place artificial organ and give one organic kidney
+					giveOrganic(item, usingCharacter, targetCharacter, damage - 50, organName)
+				elseif damage < 45 then
+					-- give two organic kidneys
+					giveOrganic(item, usingCharacter, targetCharacter, damage * 2, organName)
+					giveOrganic(item, usingCharacter, targetCharacter, 0, organName)
+				end
+				if damage > 95 then
+					newdamage = -workcondition
+					damageOrgan(targetCharacter, organName, -workcondition, usingCharacter)
+				else
+					HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
+				end
+				HF.SetAfflictionLimb(
+					targetCharacter,
+					"ntc_cyber" .. organName,
+					limbtype,
+					string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
+				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+				for _, affliction in ipairs(NTCyb.OrganConfigDatas[organName].curedAfflictions) do
+					HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
+				end
+				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
+			elseif patientHasArtificial then
+				print("case2")
+				-- artificial to organic kidney replacement, place one organic kidney and give artificial, add timer for swap/removed status removal
+				newdamage = HF.Clamp(((100 - damage) - workcondition) / 2, -100, 100)
+				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
+				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition / 2, targetCharacter)
+				giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
+				HF.SetAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, -999)
+				Timer.Wait(function()
+					HF.SetAffliction(targetCharacter, organName .. "removed", 0, usingCharacter)
+					HF.SetAffliction(targetCharacter, organName .. "swap", 0, usingCharacter)
+				end, 3000)
+				return
+			end
+
+			print("case12")
+			HF.SetAffliction(targetCharacter, organName .. "removed", 0, usingCharacter)
+			HF.SetAffliction(targetCharacter, organName .. "swap", 0, usingCharacter)
+			return
+		end
+		if damage == 100 then
+			if isArtificial then
+				print("case3")
+				-- in place of destroyed one, insert artificial organ
+				damageOrgan(targetCharacter, organName, -workcondition, usingCharacter)
+				HF.SetAfflictionLimb(
+					targetCharacter,
+					"ntc_cyber" .. organName,
+					limbtype,
+					string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
+				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+				for _, affliction in ipairs(NTCyb.OrganConfigDatas[organName].curedAfflictions) do
+					HF.SetAffliction(targetCharacter, affliction, 0, usingCharacter)
+				end
+				HF.AddAffliction(targetCharacter, "organdamage", -workcondition / 5, usingCharacter)
+			else
+				print("case4")
+				-- insert the organic
+				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
+				damageOrgan(targetCharacter, organName, -workcondition, usingCharacter)
+				HF.AddAffliction(targetCharacter, "organdamage", -workcondition / 5, usingCharacter)
+				HF.SetAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, -999)
+			end
+		elseif isArtificial then
+			if patientHasArtificial then
+				print("case5")
+				-- artificial to artificial organ replacement, give and place artificial organs
+				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
+				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
+				giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
+				HF.SetAfflictionLimb(
+					targetCharacter,
+					"ntc_cyber" .. organName,
+					limbtype,
+					string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
+				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+			else
+				print("case6")
+				-- organic to artificial organ replacement, give organic and place artificial organ
+				HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
+				HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
+				giveOrganic(item, usingCharacter, targetCharacter, damage, organName)
+				HF.SetAfflictionLimb(
+					targetCharacter,
+					"ntc_cyber" .. organName,
+					limbtype,
+					string.find(item.Prefab.Identifier.Value, "augmented") and 50 or 100
+				) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+			end
+		else
+			print("case7")
+			-- artificial to organic organ replacement, give artificial and place organic organ
+			HF.SetAffliction(targetCharacter, organName .. "damage", 100 - workcondition, targetCharacter)
+			HF.AddAffliction(targetCharacter, "organdamage", newdamage / 5, usingCharacter)
+			giveCyber(item, usingCharacter, targetCharacter, damage, organName, cyberStrength)
+			HF.SetAfflictionLimb(targetCharacter, "ntc_cyber" .. organName, limbtype, -999)
+		end
+		HF.SetAffliction(targetCharacter, organName .. "removed", 0, usingCharacter)
+		HF.SetAffliction(targetCharacter, organName .. "swap", 0, usingCharacter)
 	end
 end
 NTCyb.ItemMethods.augmentedliver = implantOrgan
