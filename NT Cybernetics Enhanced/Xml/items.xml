@@ -3,9 +3,7 @@
 
   <Item name="" identifier="cyberarm" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-    <Price baseprice="500" soldbydefault="false">
-      <Price storeidentifier="merchantmedical" sold="true" />
-      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1"/>
+    <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
@@ -39,9 +37,7 @@
 
   <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
-      <Price storeidentifier="merchantmedical" sold="true" />
-      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+    <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
@@ -77,9 +73,7 @@
 
   <Item name="" identifier="cyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-    <Price baseprice="500" soldbydefault="false">
-      <Price storeidentifier="merchantmedical" sold="true" />
-      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1"/>
+    <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
@@ -113,9 +107,7 @@
 
   <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
-      <Price storeidentifier="merchantmedical" sold="true" />
-      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+    <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.1"/>
@@ -150,9 +142,8 @@
   </Item>
 
   <Item name="" identifier="augmentedliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="3000" soldbydefault="false" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
     <Body width="39" height="18" density="10"/>
@@ -198,9 +189,8 @@
     <SuitableTreatment identifier="liverremoved" suitability="90"/>
   </Item>
   <Item name="" identifier="cyberliver" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
-    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="5500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
     <Body width="39" height="18" density="10"/>
@@ -226,9 +216,8 @@
   </Item>
 
   <Item name="" identifier="augmentedkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="3000" soldbydefault="false" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="20" density="10"/>
@@ -274,9 +263,8 @@
     <SuitableTreatment identifier="kidneyremoved" suitability="90"/>
   </Item>
   <Item name="" identifier="cyberkidney" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
-    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="5500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="20" density="10"/>
@@ -302,9 +290,8 @@
   </Item>
 
   <Item name="" identifier="augmentedlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="3000" soldbydefault="false" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
     <Body width="30" height="30" density="10"/>
@@ -350,9 +337,8 @@
     <SuitableTreatment identifier="lungremoved" suitability="90"/>
   </Item>
   <Item name="" identifier="cyberlung" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
-    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="5500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
     <Body width="30" height="30" density="10"/>
@@ -378,9 +364,8 @@
   </Item>
 
   <Item name="" identifier="augmentedheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="3000" soldbydefault="false" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="22" density="10"/>
@@ -426,9 +411,8 @@
     <SuitableTreatment identifier="heartremoved" suitability="90"/>
   </Item>
   <Item name="" identifier="cyberheart" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
-    <Price baseprice="3500" soldbydefault="false" minleveldifficulty="30">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="5500" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10"/>
@@ -454,9 +438,8 @@
   </Item>
 
   <Item name="" identifier="augmentedbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="160,255,255,255" inventoryiconcolor="160,255,255,255">
-    <Price baseprice="2000" soldbydefault="false" minleveldifficulty="8">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="3000" soldbydefault="false" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="22" density="10"/>
@@ -478,9 +461,8 @@
     <SkillRequirementHint identifier="electrical" level="60" />
   </Item>
   <Item name="" identifier="cyberbrain" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_metal_light" cargocontaineridentifier="organcrate" Tags="smallitem,organ" spritecolor="60,255,255,255" inventoryiconcolor="60,255,255,255">
-    <Price baseprice="4000" soldbydefault="false" minleveldifficulty="30">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" sold="true" />
+    <Price baseprice="6000" soldbydefault="false" minleveldifficulty="30">
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1"/>
     </Price>
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="22" density="10"/>
