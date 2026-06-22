@@ -512,7 +512,7 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
     </Price>
     <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="0,0,64,85" depth="0.6" origin="0.5,0.5"/>
-    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas2.png" sourcerect="0,0,65,65" origin="0.5,0.5"/>
+    <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas2.png" sourcerect="0,0,65,65" origin="0.5,0.5"/>
   </Item>
   <Item name="" identifier="abcpluscard" category="Equipment" description=""
         Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
