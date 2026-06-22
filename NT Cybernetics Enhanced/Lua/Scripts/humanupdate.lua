@@ -330,7 +330,6 @@ local function cyberiRoulette(createdCharacter, rollAmount)
 	end
 end
 Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
-	if Level.Difficulty < 20 then return end -- needs at least 20 level difficulty
 	if createdCharacter.IsHuman and CharacterTeamType.None then
 		if HasJob("commoner") and HF.Chance(0.005) then -- 0.5% cyber chance
 			cyberiRoulette(createdCharacter, 1)
