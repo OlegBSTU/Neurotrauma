@@ -347,7 +347,7 @@ Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
 				cyberiRoulette(createdCharacter, 1)
 			elseif createdCharacter.HasJob("prisoner") and HF.Chance(0.04) then -- 4% cyber chance
 				cyberiRoulette(createdCharacter, 1)
-			elseif createdCharacter.HasJob("structuredefender") and HF.Chance(0.8) then -- 8% cyber chance
+			elseif createdCharacter.HasJob("structuredefender") and HF.Chance(0.08) then -- 8% cyber chance
 				cyberiRoulette(createdCharacter, 1)
 			elseif
 				(createdCharacter.HasJob("vipsecurityofficer") or createdCharacter.HasJob("outpostsecurityofficer"))
