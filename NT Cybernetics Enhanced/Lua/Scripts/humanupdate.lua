@@ -343,19 +343,19 @@ Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
 			print(createdCharacter.JobIdentifier)
 			if
 				(createdCharacter.HasJob("commoner") or genericJobs[createdCharacter.JobIdentifier] ~= nil)
-				and HF.Chance(0.05)
-			then -- 0.5% cyber chance
+				and HF.Chance(0.02)
+			then -- 2% cyber chance
 				cyberiRoulette(createdCharacter, 1)
-			elseif createdCharacter.HasJob("prisoner") and HF.Chance(0.01) then -- 1% cyber chance
+			elseif createdCharacter.HasJob("prisoner") and HF.Chance(0.04) then -- 4% cyber chance
 				cyberiRoulette(createdCharacter, 1)
-			elseif createdCharacter.HasJob("structuredefender") and HF.Chance(0.02) then -- 2% cyber chance
+			elseif createdCharacter.HasJob("structuredefender") and HF.Chance(0.8) then -- 8% cyber chance
 				cyberiRoulette(createdCharacter, 1)
 			elseif
 				(createdCharacter.HasJob("vipsecurityofficer") or createdCharacter.HasJob("outpostsecurityofficer"))
-				and HF.Chance(0.05)
-			then -- 5% cyber chance
+				and HF.Chance(0.2)
+			then -- 20% cyber chance
 				cyberiRoulette(createdCharacter, 1)
-			elseif createdCharacter.HasJob("vip") and HF.Chance(0.15) then -- 15% cyber chance
+			elseif createdCharacter.HasJob("vip") and HF.Chance(0.3) then -- 30% cyber chance
 				cyberiRoulette(createdCharacter, 3)
 			elseif createdCharacter.HasJob("killer") and HF.Chance(0.5) then -- 50% cyber chance (pretty rare job)
 				cyberiRoulette(createdCharacter, 1)
