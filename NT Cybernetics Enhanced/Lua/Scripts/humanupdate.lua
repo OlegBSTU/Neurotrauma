@@ -313,19 +313,19 @@ local function cyberiRoulette(createdCharacter, rollAmount)
 			end
 		elseif HF.Chance(0.33) then -- arms
 			if HF.Chance(0.5) then
-				NTCyb.CyberifyLimb(targetCharacter, LimbType.LeftArm, waterproofFlag)
+				NTCyb.CyberifyLimb(createdCharacter, LimbType.LeftArm, waterproofFlag)
 			else
-				NTCyb.CyberifyLimb(targetCharacter, LimbType.RightArm, waterproofFlag)
+				NTCyb.CyberifyLimb(createdCharacter, LimbType.RightArm, waterproofFlag)
 			end
 		else -- legs
 			if HF.Chance(0.5) then
-				NTCyb.CyberifyLimb(targetCharacter, LimbType.LeftLeg, waterproofFlag)
+				NTCyb.CyberifyLimb(createdCharacter, LimbType.LeftLeg, waterproofFlag)
 			else
-				NTCyb.CyberifyLimb(targetCharacter, LimbType.RightLeg, waterproofFlag)
+				NTCyb.CyberifyLimb(createdCharacter, LimbType.RightLeg, waterproofFlag)
 			end
 		end
 		if organName ~= nil then
-			HF.SetAfflictionLimb(targetCharacter, "ntc_cyber" .. implantName, limbtype, tier2Flag and 50 or 100) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+			HF.SetAfflictionLimb(createdCharacter, "ntc_cyber" .. organName, limbtype, tier2Flag and 50 or 100) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
 		end
 	end
 end
