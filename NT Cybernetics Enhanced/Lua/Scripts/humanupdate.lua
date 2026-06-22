@@ -296,7 +296,7 @@ local function cyberiRoulette(createdCharacter, rollAmount)
 		tier2Flag = false
 		waterproofFlag = true
 	end
-	for i = 0, rollAmount, 1 do -- apply one random organ every roll
+	for i = 0, rollAmount - 1, 1 do -- apply one random organ every roll
 		organName = nil
 		if HF.Chance(0.33) then -- organs
 			if HF.Chance(0.2) then -- heart
@@ -329,22 +329,39 @@ local function cyberiRoulette(createdCharacter, rollAmount)
 		end
 	end
 end
+local genericJobs = {
+	"medicaldoctor",
+	"engineer",
+	"mechanic",
+	"captain",
+	"assistant",
+	"securityofficer",
+}
 Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
-	if createdCharacter.IsHuman and CharacterTeamType.None then
-		if HasJob("commoner") and HF.Chance(0.005) then -- 0.5% cyber chance
-			cyberiRoulette(createdCharacter, 1)
-		elseif HasJob("prisoner") and HF.Chance(0.01) then -- 1% cyber chance
-			cyberiRoulette(createdCharacter, 1)
-		elseif HasJob("structuredefender") and HF.Chance(0.02) then -- 2% cyber chance
-			cyberiRoulette(createdCharacter, 1)
-		elseif (HasJob("vipsecurityofficer") or HasJob("outpostsecurityofficer")) and HF.Chance(0.05) then -- 5% cyber chance
-			cyberiRoulette(createdCharacter, 1)
-		elseif HasJob("vip") and HF.Chance(0.15) then -- 15% cyber chance
-			cyberiRoulette(createdCharacter, 3)
-		elseif HasJob("killer") and HF.Chance(0.5) then -- 50% cyber chance (pretty rare job)
-			cyberiRoulette(createdCharacter, 1)
+	Timer.Wait(function()
+		if createdCharacter.IsHuman and CharacterTeamType.None then
+			print(createdCharacter.JobIdentifier)
+			if
+				(createdCharacter.HasJob("commoner") or genericJobs[createdCharacter.JobIdentifier] ~= nil)
+				and HF.Chance(0.05)
+			then -- 0.5% cyber chance
+				cyberiRoulette(createdCharacter, 1)
+			elseif createdCharacter.HasJob("prisoner") and HF.Chance(0.01) then -- 1% cyber chance
+				cyberiRoulette(createdCharacter, 1)
+			elseif createdCharacter.HasJob("structuredefender") and HF.Chance(0.02) then -- 2% cyber chance
+				cyberiRoulette(createdCharacter, 1)
+			elseif
+				(createdCharacter.HasJob("vipsecurityofficer") or createdCharacter.HasJob("outpostsecurityofficer"))
+				and HF.Chance(0.05)
+			then -- 5% cyber chance
+				cyberiRoulette(createdCharacter, 1)
+			elseif createdCharacter.HasJob("vip") and HF.Chance(0.15) then -- 15% cyber chance
+				cyberiRoulette(createdCharacter, 3)
+			elseif createdCharacter.HasJob("killer") and HF.Chance(0.5) then -- 50% cyber chance (pretty rare job)
+				cyberiRoulette(createdCharacter, 1)
+			end
 		end
-	end
+	end, 10000) -- hopefully enough to not trigger obj reference error
 end)
 
 local limbtypes = {
