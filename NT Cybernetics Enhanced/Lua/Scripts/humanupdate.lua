@@ -287,6 +287,66 @@ function NTCyb.ConvertDamageTypes(character, limbtype)
 		end
 	end
 end
+local function cyberiRoulette(createdCharacter, rollAmount)
+	local tier2Flag = true
+	local waterproofFlag = false
+	local organName = nil
+	local limbtype = LimbType.Torso
+	if HF.Chance(0.05) then -- tier 3 if hit 5%
+		tier2Flag = false
+		waterproofFlag = true
+	end
+	for i = 0, rollAmount, 1 do -- apply one random organ every roll
+		organName = nil
+		if HF.Chance(0.33) then -- organs
+			if HF.Chance(0.2) then -- heart
+				organName = "heart"
+			elseif HF.Chance(0.2) then -- liver
+				organName = "liver"
+			elseif HF.Chance(0.2) then -- kidney
+				organName = "kidney"
+			elseif HF.Chance(0.2) then -- brain
+				organName = "brain"
+				limbtype = LimbType.Head
+			else -- lungs
+				organName = "lung"
+			end
+		elseif HF.Chance(0.33) then -- arms
+			if HF.Chance(0.5) then
+				NTCyb.CyberifyLimb(targetCharacter, LimbType.LeftArm, waterproofFlag)
+			else
+				NTCyb.CyberifyLimb(targetCharacter, LimbType.RightArm, waterproofFlag)
+			end
+		else -- legs
+			if HF.Chance(0.5) then
+				NTCyb.CyberifyLimb(targetCharacter, LimbType.LeftLeg, waterproofFlag)
+			else
+				NTCyb.CyberifyLimb(targetCharacter, LimbType.RightLeg, waterproofFlag)
+			end
+		end
+		if organName ~= nil then
+			HF.SetAfflictionLimb(targetCharacter, "ntc_cyber" .. implantName, limbtype, tier2Flag and 50 or 100) -- add "ntc_cyberliver", at 50% strength if its Augmented (tier 2), 100% if Cyber (tier 3)
+		end
+	end
+end
+Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
+	if Level.Difficulty < 20 then return end -- needs at least 20 level difficulty
+	if createdCharacter.IsHuman and CharacterTeamType.None then
+		if HasJob("commoner") and HF.Chance(0.005) then -- 0.5% cyber chance
+			cyberiRoulette(createdCharacter, 1)
+		elseif HasJob("prisoner") and HF.Chance(0.01) then -- 1% cyber chance
+			cyberiRoulette(createdCharacter, 1)
+		elseif HasJob("structuredefender") and HF.Chance(0.02) then -- 2% cyber chance
+			cyberiRoulette(createdCharacter, 1)
+		elseif (HasJob("vipsecurityofficer") or HasJob("outpostsecurityofficer")) and HF.Chance(0.05) then -- 5% cyber chance
+			cyberiRoulette(createdCharacter, 1)
+		elseif HasJob("vip") and HF.Chance(0.15) then -- 15% cyber chance
+			cyberiRoulette(createdCharacter, 3)
+		elseif HasJob("killer") and HF.Chance(0.5) then -- 50% cyber chance (pretty rare job)
+			cyberiRoulette(createdCharacter, 1)
+		end
+	end
+end)
 
 local limbtypes = {
 	LimbType.Torso,
