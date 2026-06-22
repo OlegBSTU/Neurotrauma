@@ -340,7 +340,6 @@ local genericJobs = {
 Hook.Add("characterCreated", "NTCyb.CyberNPC", function(createdCharacter)
 	Timer.Wait(function()
 		if createdCharacter.IsHuman and CharacterTeamType.None then
-			print(createdCharacter.JobIdentifier)
 			if
 				(createdCharacter.HasJob("commoner") or genericJobs[createdCharacter.JobIdentifier] ~= nil)
 				and HF.Chance(0.02)
