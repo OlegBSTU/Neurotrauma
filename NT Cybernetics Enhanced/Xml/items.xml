@@ -10,7 +10,6 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="locker"/>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
     <Fabricate suitablefabricators="fabricator" requiredtime="60">
       <RequiredSkill identifier="mechanical" level="70"/>
       <RequiredSkill identifier="medical" level="20"/>
@@ -47,7 +46,6 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
     <PreferredContainer primary="locker" />
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
@@ -86,7 +84,6 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
     <PreferredContainer primary="locker"/>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.15" />
     <Fabricate suitablefabricators="fabricator" requiredtime="60">
       <RequiredSkill identifier="mechanical" level="70"/>
       <RequiredSkill identifier="medical" level="20"/>
@@ -123,7 +120,6 @@
     </Price>
     <PreferredContainer primary="toxcontainer" spawnprobability="0.1"/>
     <PreferredContainer primary="locker"/>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
       <RequiredSkill identifier="medical" level="35" />
@@ -206,7 +202,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
       <Price storeidentifier="merchantresearch" sold="true" />
     </Price>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
     <Body width="39" height="18" density="10"/>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -283,7 +278,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
       <Price storeidentifier="merchantresearch" sold="true" />
     </Price>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="20" density="10"/>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -360,7 +354,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
       <Price storeidentifier="merchantresearch" sold="true" />
     </Price>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
     <Body width="30" height="30" density="10"/>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -437,7 +430,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
       <Price storeidentifier="merchantresearch" sold="true" />
     </Price>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5" />
     <Body width="14" height="22" density="10"/>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -490,7 +482,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
       <Price storeidentifier="merchantresearch" sold="true" />
     </Price>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="22" density="10"/>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" requiresrecipe="true">
@@ -516,7 +507,6 @@
   <Item name="" identifier="bloodpackabcplus" nameidentifier="bloodpackabcplus" variantof="antibloodloss2">
     <PreferredContainer primary="medcab" minamount="0" maxamount="0" notcampaign="true"/>
     <PreferredContainer secondary="outpostmedcompartment,outpostmedcab" minamount="0" maxamount="0" spawnprobability="0"/>
-    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="0" spawnprobability="0" />
     <PreferredContainer secondary="medcontainer"/>
     <Price baseprice="80">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
@@ -541,7 +531,6 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
     </Price>
     <PreferredContainer primary="medcab" spawnprobability="0.2"/>
-    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.1"/>
     <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.03"/>
     <Sprite texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,0,84,128" depth="0.6" origin="0.5,0.5"/>
     <Body width="14" height="22" density="10"/>
