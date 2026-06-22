@@ -511,7 +511,8 @@
     <Price baseprice="80">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
     </Price>
-    <Sprite texture="%ModDir:3190189044%/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5"/>
+    <Sprite texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="0,0,64,85" depth="0.6" origin="0.5,0.5"/>
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas2.png" sourcerect="0,0,65,65" origin="0.5,0.5"/>
   </Item>
   <Item name="" identifier="abcpluscard" category="Equipment" description=""
         Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
@@ -521,7 +522,7 @@
     <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
     <Deconstruct/>
   </Item>
-  
+
   <Item name="" identifier="immunosuppressantinhaler" description="" impactsoundtag="impact_soft"
     useinhealthinterface="True" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical"
     maxstacksize="32" maxstacksizecharacterinventory="3"
@@ -673,9 +674,9 @@
     <Item name="" identifier="screwdriver" category="Equipment" Tags="smallitem,simpletool,tool,electricalrepairtool,screwdriveritem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="engcab" secondary="reactorcab"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2"/>  
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2"/>
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.5"/>
-      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.5"/>   
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.5"/>
       <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.3"/>
       <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
       <Price baseprice="10" minavailable="10">
@@ -1024,5 +1025,5 @@
     </Item>
 
   </Override>
- 
+
 </Items>
