@@ -30,11 +30,12 @@ Hook.Patch("Barotrauma.Explosion", "Explode", function(instance, ptable)
 
 					for _, organConfig in pairs(NTCyb.OrganConfigDatas) do
 						local isTier3Mul = HF.GetAfflictionStrength(character, organConfig.cyberAffliction, 0) / 100 -- tier 2 takes half the damage of tier 3
-						if isTier3Mul > 0.01 and organConfig.damageAffliction then
+						local organDmgAff = organConfig.empAffliction or organConfig.damageAffliction
+						if isTier3Mul > 0.01 and organDmgAff then
 							HF.AddAffliction(
 								character,
-								organConfig.damageAffliction,
-								affliction_strength / 5 * isTier3Mul,
+								organDmgAff,
+								affliction_strength / (organConfig.empAffliction ~= nil and 0.5 or 10) * isTier3Mul,
 								explode_attacker
 							)
 						end
