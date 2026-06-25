@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+
+	<!-- Afflictions -->
+	<afflictionname.af_calyxanide>Каликсанид</afflictionname.af_calyxanide>
+	<afflictiondescription.af_calyxanide></afflictiondescription.af_calyxanide>
+
+	<afflictionname.surgery_huskhealth>Хаск Паразит</afflictionname.surgery_huskhealth>
+	<afflictiondescription.surgery_huskhealth.low>Паразит больше не двигается, но он всё ещё там. Настало время чтобы вытащить его оттуда.</afflictiondescription.surgery_huskhealth.low>
+	<afflictiondescription.surgery_huskhealth.medium>Вы ослабили паразита, но будет ли этого достаточно...?</afflictiondescription.surgery_huskhealth.medium>
+	<afflictiondescription.surgery_huskhealth.high>Вы видите волнистую кучу тентаклей. Смотрите, чтобы она не набросилась на вас.</afflictiondescription.surgery_huskhealth.high>
+
+	<afflictionname.bonecuttorso>Распиленные Рёбра</afflictionname.bonecuttorso>
+	<afflictiondescription.bonecuttorso>Рёбра были распилены, раскрывая вид на торс пациента.</afflictiondescription.bonecuttorso>
+
+	<afflictionname.husklamp>Миазмы Ритуальной Лампы</afflictionname.husklamp>
+	<afflictiondescription.husklamp>Бодрящие пары задерживаются в ваших ноздрях.</afflictiondescription.husklamp>
+
+	<afflictionname.huskstasis>Стазис Симбиота</afflictionname.huskstasis>
+	<afflictiondescription.huskstasis>Видимо как их симбиот извивается на всю катушку, чтобы поддержать жизнь своего владельца.</afflictiondescription.huskstasis>
+
+</infotexts>
