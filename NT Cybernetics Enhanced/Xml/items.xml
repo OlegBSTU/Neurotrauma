@@ -6,7 +6,7 @@
     <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
-    <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+    <PreferredContainer primary="toxcontainer"/>
     <PreferredContainer primary="locker"/>
     <Fabricate suitablefabricators="fabricator" requiredtime="60">
       <RequiredSkill identifier="mechanical" level="70"/>
@@ -40,7 +40,7 @@
     <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
-    <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
+    <PreferredContainer primary="toxcontainer" />
     <PreferredContainer primary="locker" />
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
@@ -76,7 +76,7 @@
     <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
-    <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+    <PreferredContainer primary="toxcontainer"/>
     <PreferredContainer primary="locker"/>
     <Fabricate suitablefabricators="fabricator" requiredtime="60">
       <RequiredSkill identifier="mechanical" level="70"/>
@@ -110,7 +110,7 @@
     <Price baseprice="2500" soldbydefault="false" minleveldifficulty="15">
       <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
     </Price>
-    <PreferredContainer primary="toxcontainer" spawnprobability="0.1"/>
+    <PreferredContainer primary="toxcontainer"/>
     <PreferredContainer primary="locker"/>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="70" />
