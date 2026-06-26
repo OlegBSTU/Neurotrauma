@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Cybernetics Enhanced Forked" path="%ModDir%/filelist.xml" corepackage="false" gameversion="0.16.7.0" >
+<contentpackage name="NT Cybernetics Enhanced Forked" modversion="1.0.1" corepackage="False" steamworkshopid="3751439557" gameversion="1.13.4.0">
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />

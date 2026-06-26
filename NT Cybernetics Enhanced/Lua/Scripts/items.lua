@@ -997,4 +997,30 @@ Timer.Wait(function()
 	if NTP ~= nil and NTP.PillData ~= nil then
 		NTP.PillData.items.bloodpackabcplus = NTP.PillData.items["antibloodloss2"]
 	end
+
+	local tit_cybereye = NTEYE.ItemMethods.it_cybereye
+	NTEYE.ItemMethods.it_cybereye = function(item, usingCharacter, targetCharacter, targetLimb)
+		if not HF.HasAffliction(targetCharacter, "vi_cyber", 0) then
+			HF.DMClient(
+				HF.CharacterToClient(targetCharacter),
+				"Tech CrosshairHUD and AC6 TargetingHUD lock-on system active. Weapon accuracy turbo boosted..."
+			)
+			Timer.Wait(function()
+				HF.DMClient(
+					HF.CharacterToClient(targetCharacter),
+					"Tech CrosshairHUD: Enhanced reticle vision mode. Aiming the weapon displays remaining ammo in the gun."
+				)
+				Timer.Wait(function()
+					HF.DMClient(
+						HF.CharacterToClient(targetCharacter),
+						"AC6 TargetingHUD: Enemy targeting system mode. Automatically lock onto enemy targets when holding your gun. Remaining ammo is also displayed on the right curved bar."
+					)
+					Timer.Wait(function()
+						HF.DMClient(HF.CharacterToClient(targetCharacter), "Press V to switch between HUDs.")
+					end, 1500)
+				end, 1500)
+			end, 1500)
+		end
+		tit_cybereye(item, usingCharacter, targetCharacter, targetLimb)
+	end
 end, 500)

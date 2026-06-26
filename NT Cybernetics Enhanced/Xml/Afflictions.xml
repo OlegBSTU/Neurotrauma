@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
+  <Override>
 
   <!-- Artifical limb
   invisible
@@ -547,4 +548,13 @@
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,0" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
+  <!-- NT Eyes Cybereye interaction-->
+
+  <Affliction identifier="vi_cyber" showiconthreshold="0.99" showinhealthscannerthreshold="1000" limbspecific="false" indicatorlimb="Head" maxstrength="2" type="vi_type" isbuff="true" healableinmedicalclinic="false">
+    <icon texture="%ModDir:NT Eyes%/Textures/AfflictionIcons.png" origin="0.512293,0.50444984" sourcerect="256,0,128,128" />
+    <Effect minstrength="0" maxstrength="2">
+      <StatValue stattype="RangedSpreadReduction" value="100.0" />
+    </Effect>
+  </Affliction>
+</Override>
 </Afflictions>
