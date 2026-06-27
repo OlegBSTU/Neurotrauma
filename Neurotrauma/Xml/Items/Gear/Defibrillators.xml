@@ -58,6 +58,10 @@
             <Item identifier="copper"/>
         </Deconstruct>
 
+        <Price baseprice="200" soldbydefault="false">
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
+        </Price>
+
         <Price baseprice="400" soldbydefault="false"/>
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="128,0,128,128" depth="0.55" origin="0.5,0.5"/>
