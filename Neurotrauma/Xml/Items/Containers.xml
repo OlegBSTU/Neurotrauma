@@ -76,6 +76,54 @@
         
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     </Item>
+    
+    <Item name="" identifier="organtoolboxstarter" category="Equipment" tags="mediumitem,mobilecontainer,tool,refrigerated,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer secondary="locker"/>
+        
+        <Price baseprice="100"/>
+        
+        <Deconstruct time="10">
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="2" />
+        </Deconstruct>
+        
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <Item identifier="steel" />
+            <Item identifier="potassium" amount="2" />
+            <Item identifier="phosphorus" />
+        </Fabricate>
+        
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="173,403,84,67" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        
+        <ItemContainer capacity="6" keepopenwhenequipped="true" movableframe="true">
+            <Containable items="smallitem,organ" excludeditems="toolbelt,toolbox" />
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="gelipack" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="gelipack" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
+        
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    </Item>
    
     <Item name="" identifier="medtoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
         <PreferredContainer primary="medcab" minamount="2" maxamount="2"/>
