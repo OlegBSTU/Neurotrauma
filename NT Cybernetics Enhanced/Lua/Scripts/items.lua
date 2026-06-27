@@ -464,7 +464,6 @@ end
 
 -- Helper functions for implantOrgan
 local function giveOrganic(item, usingCharacter, targetCharacter, damage, organName)
-	print("giveOrganic")
 	-- add acidosis, alkalosis and sepsis to the bloodpack if the donor has them
 	local function postSpawnFunc(args)
 		local tags = {}
@@ -643,7 +642,6 @@ local function implantOrgan(item, usingCharacter, targetCharacter, limb)
 				return
 			end
 
-			print("case12")
 			HF.SetAffliction(targetCharacter, organName .. "removed", 0, usingCharacter)
 			HF.SetAffliction(targetCharacter, organName .. "swap", 0, usingCharacter)
 			return
@@ -1002,6 +1000,7 @@ Timer.Wait(function()
 		local tit_cybereye = NTEYE.ItemMethods.it_cybereye
 		NTEYE.ItemMethods.it_cybereye = function(item, usingCharacter, targetCharacter, targetLimb)
 			if not HF.HasAffliction(targetCharacter, "vi_cyber", 0) then
+				tit_cybereye(item, usingCharacter, targetCharacter, targetLimb)
 				HF.DMClient(
 					HF.CharacterToClient(targetCharacter),
 					"Tech CrosshairHUD and AC6 TargetingHUD lock-on system active. Weapon accuracy turbo boosted..."
@@ -1021,8 +1020,9 @@ Timer.Wait(function()
 						end, 1500)
 					end, 1500)
 				end, 1500)
+			else
+				tit_cybereye(item, usingCharacter, targetCharacter, targetLimb)
 			end
-			tit_cybereye(item, usingCharacter, targetCharacter, targetLimb)
 		end
 	end
 end, 500)
