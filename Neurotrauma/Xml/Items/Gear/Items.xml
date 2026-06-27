@@ -103,7 +103,7 @@
 
     <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.9.3.0" scale="0.40"/>
-        <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
 
         <Price baseprice="300" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>

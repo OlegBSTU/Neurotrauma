@@ -266,7 +266,7 @@
     </Item>
 
     <Item name="" identifier="surgerytoolboxsetstarter" nameidentifier="surgerytoolboxset" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="">
-        <PreferredContainer primary="medcab" minamount="2" maxamount="2" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer secondary="locker"/>
        
         <Deconstruct time="10">
@@ -303,12 +303,13 @@
                 <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="spinalimplant" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="multiscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="suture" count="16" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
             </StatusEffect>
         </GreaterComponent>
        

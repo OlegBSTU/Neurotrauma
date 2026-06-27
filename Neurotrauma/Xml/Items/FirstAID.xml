@@ -85,10 +85,7 @@
     <!-- Gel ice pack / a better version of bandage for blunt force trauma / worsens infection on open wounds -->
     <Item name="" identifier="gelipack" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical,canexpire" useinhealthinterface="true" description="" scale="0.275" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.10.0.0" scale="0.5"/>
-        <PreferredContainer primary="medcab" minamount="2" maxamount="3"/>
-        <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.35"/>
-        <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
-        <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
+        <PreferredContainer primary="medcab" minamount="0" maxamount="0"/>
 
         <Price baseprice="100">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
