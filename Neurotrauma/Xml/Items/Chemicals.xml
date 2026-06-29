@@ -540,9 +540,9 @@
 
     <!-- Antiseptic Sprayer -->
     <Item name="" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" amount="1" spawnprobability="1"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
-        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.1"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.05"/>
 
         <Price baseprice="75" CanBeSpecial="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
@@ -585,6 +585,56 @@
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
             <Containable items="antiseptic,antibloodloss1"/>
         </ItemContainer>
+
+        <SkillRequirementHint identifier="medical" level="40" />
+    </Item>
+
+    <!-- Antiseptic Sprayer starter -->
+    <Item name="" identifier="antisepticspraystarter" nameidentifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
+        <PreferredContainer primary="medcab" amount="1" spawnprobability="1"/>
+
+        <Price baseprice="75" CanBeSpecial="false"/>
+
+        <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="384,256,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Deconstruct time="5">
+        </Deconstruct>
+
+        <Body width="150" height="60" density="40"/>
+        <SuitableTreatment identifier="infectedwound" suitability="45"/>
+
+        <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="30,0" handle1="0,-7" handle2="95, 10" msg="ItemMsgPickUpSelect"/>
+
+        <RepairTool range="200" barrelpos="15,5" combatpriority="10">
+            <ParticleEmitter particle="extinguisher" particlespersecond="15" copyentityangle="true" velocitymin="200.0" velocitymax="250.0"/>
+            <RequiredSkill identifier="medical" level="40"/>
+            <RequiredItems identifier="antiseptic,antibloodloss1" type="Contained" msg="Decontaminant Required"/>
+
+            <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="2" stackable="false"/>
+
+            <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" disabledeltatime="true" Condition="-10.0"/>
+
+            <StatusEffect type="OnUse" targettype="Contained" targets="antibloodloss1" disabledeltatime="true" Condition="-100.0"/>
+
+            <StatusEffect statuseffecttags="medical" type="OnUse" target="Limb" disabledeltatime="true">
+                <Sound file="%ModDir:3190189044%/Sound/spray.ogg" range="500"/>
+                <ReduceAffliction identifier="infectedwound" amount="100"/>
+                <Affliction identifier="ointmented" amount="20"/>
+            </StatusEffect>
+        </RepairTool>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
+            <Containable items="antiseptic,antibloodloss1"/>
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="antiseptic" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
 
         <SkillRequirementHint identifier="medical" level="40" />
     </Item>

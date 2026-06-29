@@ -43,7 +43,7 @@
     </Item>
 
     <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
-        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
 
         <Fabricate suitablefabricators="fabricator" requiredtime="40">
             <RequiredSkill identifier="electrical" level="50"/>
@@ -82,6 +82,45 @@
         <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
             <Containable items="mobilebattery"/>
         </ItemContainer>
+    </Item>
+
+    <Item name="" identifier="aedstarter" nameidentifier="aed" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+
+        <Deconstruct time="5">
+            <Item identifier="plastic"/>
+            <Item identifier="copper"/>
+        </Deconstruct>
+
+        <Price baseprice="200" soldbydefault="false"/>
+
+        <Price baseprice="400" soldbydefault="false"/>
+        <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5"/>
+        <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="128,0,128,128" depth="0.55" origin="0.5,0.5"/>
+        <Body width="90" height="80" density="20"/>
+        <SuitableTreatment identifier="tachycardia" suitability="60"/>
+        <SuitableTreatment identifier="fibrillation" suitability="60"/>
+        <SuitableTreatment identifier="cardiacarrest" suitability="15"/>
+
+        <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
+        <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
+            <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
+            <StatusEffect type="OnUse" target="This" Condition="-100"/>
+            <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false"/>
+        </MeleeWeapon>
+
+        <Pickable msg="ItemMsgPickUpSelect"/>
+
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+            <Containable items="mobilebattery"/>
+        </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <SpawnItem identifier="batterycell" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+            </StatusEffect>
+        </GreaterComponent>
     </Item>
 </Items>
 </Override>
