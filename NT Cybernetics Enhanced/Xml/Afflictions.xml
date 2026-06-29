@@ -37,6 +37,9 @@
     showinhealthscannerthreshold="500"
     iconcolors="76,102,145,255;76,102,145,255">
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="5,0" sheetelementsize="128,128" origin="0,0"/>
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="RangedSpreadReduction" value="0.3" />
+    </Effect>
   </Affliction>
 
   <Affliction
@@ -372,6 +375,7 @@
       <StatValue stattype="MechanicalSkillBonus" minvalue="0" maxvalue="10" />
       <StatValue stattype="MedicalSkillBonus" minvalue="0" maxvalue="10" />
       <StatValue stattype="WeaponsSkillBonus" minvalue="0" maxvalue="10" />
+      <StatValue stattype="RangedSpreadReduction" minvalue="0.0" maxvalue="0.3" />
       <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" comparison="and">
         <Conditional ishuman="true" analgesia="lte 3"/>
         <Affliction identifier="analgesia" amount="1"/> <!-- Little bit of anaesthetic for easier surgery -->
@@ -546,15 +550,6 @@
     showinhealthscannerthreshold="500"
     iconcolors="191,171,57,255;191,57,57,255">
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,0" sheetelementsize="128,128" origin="0,0"/>
-  </Affliction>
-
-  <!-- NT Eyes Cybereye interaction-->
-
-  <Affliction identifier="vi_cyber" showiconthreshold="0.99" showinhealthscannerthreshold="1000" limbspecific="false" indicatorlimb="Head" maxstrength="2" type="vi_type" isbuff="true" healableinmedicalclinic="false">
-    <icon texture="%ModDir:NT Eyes%/Textures/AfflictionIcons.png" origin="0.512293,0.50444984" sourcerect="256,0,128,128" />
-    <Effect minstrength="0" maxstrength="2">
-      <StatValue stattype="RangedSpreadReduction" value="100.0" />
-    </Effect>
   </Affliction>
 </Override>
 </Afflictions>
