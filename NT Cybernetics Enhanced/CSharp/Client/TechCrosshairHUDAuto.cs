@@ -26,9 +26,11 @@ namespace NTCeHUDAutoMod.TechCrosshairHUDAuto
         public static Color TechGray { get; } = new Color(80, 90, 100, 180);
 
         private static readonly Identifier CyberEyeAffliction = new Identifier("vi_cyber");
+        private static readonly Identifier CyberBrainAffliction = new Identifier("ntc_cyberbrain");
         public static bool CyberEyeEnabled { get; private set; } = false;
-        private static float cyberEyeCheckTimer = 0f;
-        private const float CyberEyeCheckInterval = 0.5f;
+        public static bool CyberBrainEnabled { get; private set; } = false;
+        private static float cyberCheckTimer = 0f;
+        private const float CyberCheckInterval = 0.5f;
 
         private static bool vKeyPressedLastFrame = false;
         public Harmony harmonyInstance;
@@ -61,6 +63,16 @@ namespace NTCeHUDAutoMod.TechCrosshairHUDAuto
             return false;
         }
 
+        public static bool ShouldTargetingHUD()
+        {
+            var character = Character.Controlled;
+            if (character == null || character.IsDead) return false;
+
+            if (CyberBrainEnabled) return true;
+
+            return false;
+        }
+
         private static void UpdateCyberEyeStatus()
         {
             var character = Character.Controlled;
@@ -74,16 +86,30 @@ namespace NTCeHUDAutoMod.TechCrosshairHUDAuto
             CyberEyeEnabled = affliction != null && affliction.Strength >= 0.1f;
         }
 
+        private static void UpdateCyberBrainStatus()
+        {
+            var character = Character.Controlled;
+            if (character == null || character.IsDead || character.CharacterHealth == null)
+            {
+                CyberBrainEnabled = false;
+                return;
+            }
+
+            var affliction = character.CharacterHealth.GetAffliction(CyberBrainAffliction);
+            CyberBrainEnabled = affliction != null && affliction.Strength >= 100.0f;
+        }
+
         public static object[]? UpdateHUD(object[]? args)
         {
             HitHintTimer -= (float)Timing.Step;
             HitHintTimer = Math.Max(HitHintTimer, 0);
 
-            cyberEyeCheckTimer += (float)Timing.Step;
-            if (cyberEyeCheckTimer >= CyberEyeCheckInterval)
+            cyberCheckTimer += (float)Timing.Step;
+            if (cyberCheckTimer >= CyberCheckInterval)
             {
-                cyberEyeCheckTimer = 0f;
+                cyberCheckTimer = 0f;
                 UpdateCyberEyeStatus();
+                UpdateCyberBrainStatus();
             }
 
             bool vKeyDown = GUI.KeyboardDispatcher.Subscriber == null && PlayerInput.KeyDown(Microsoft.Xna.Framework.Input.Keys.V);

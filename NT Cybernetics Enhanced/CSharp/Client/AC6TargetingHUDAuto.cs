@@ -172,7 +172,7 @@ namespace NTCeHUDAutoMod.AC6TargetingHUDAuto
                 return null;
             }
 
-            if (!TechCrosshairHUDAuto.TechCrosshairHUDAuto.ShouldEnableHUD())
+            if (!TechCrosshairHUDAuto.TechCrosshairHUDAuto.ShouldTargetingHUD())
             {
                 if (LockModeEnabled)
                 {
