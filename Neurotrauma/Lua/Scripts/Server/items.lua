@@ -2634,9 +2634,9 @@ NT.ItemMethods.antisepticspray = function(item, usingCharacter, targetCharacter,
 		HF.AddAfflictionLimb(targetCharacter, "caviclean", limbtype, math.max(100 - skill / 2, 10), usingCharacter)
 		Timer.Wait(function()
 			local strength = HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "caviclean", 0)
-			if strength > 0 and strength < 15 then
-				HF.AddAfflictionLimb(targetCharacter, "caviclean", limbtype, -999, usingCharacter)
-				HF.AddAfflictionLimb(targetCharacter, "infectedcavity", limbtype, -999, usingCharacter)
+			if strength > 0 then
+				HF.SetAffliction(targetCharacter, "caviclean", 0, usingCharacter)
+				HF.SetAffliction(targetCharacter, "infectedcavity", 0, usingCharacter)
 				if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
 					HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
 				else

@@ -367,7 +367,7 @@
             <QualityStat stattype="Condition" value="0.05"/>
         </Quality>
     </Item>
-    
+
      <!-- Toxin Filter -->
     <Item name="" identifier="toxfilter" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,toxfilter" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         <Price baseprice="485" soldbydefault="false">
@@ -404,7 +404,7 @@
 
     <!-- Dialyzer -->
     <Item name="" identifier="dialyzer" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,dialyzer" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-        
+
         <Price baseprice="420" soldbydefault="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="1"/>
             <Price storeidentifier="merchantcity" multiplier="1.8" minavailable="2"/>
@@ -434,7 +434,7 @@
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="447,924,76,95" depth="0.52" origin="0.5,0.5" />
         <Body width="22" height="64" density="9.7" />
         <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect"/>
-        
+
         <Quality>
             <QualityStat stattype="Condition" value="0.05"/>
         </Quality>
@@ -443,7 +443,7 @@
 
     <!-- Regenerative ointment / increases natural healing of most surface trauma -->
     <Item name="" identifier="skinaid" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
-        
+
         <!-- We're gonna do something with this item later
         <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
         <PreferredContainer primary="supplycab" minamount="1" maxamount="2" spawnprobability="0.1"/>
@@ -592,9 +592,9 @@
     <!-- Antiseptic -->
     <Item name="" identifier="antiseptic" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,chem,medical" scale="0.3">
         <Upgrade gameversion="0.10.0.0" scale="0.3"/>
-        <PreferredContainer primary="medcab" minamount="4" maxamount="4" spawnprobability="1"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.25"/>
-        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.15"/>
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.15"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.05"/>
 
         <Price baseprice="100" CanBeSpecial="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
