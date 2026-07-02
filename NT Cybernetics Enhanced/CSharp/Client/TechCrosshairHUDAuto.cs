@@ -68,7 +68,7 @@ namespace NTCeHUDAutoMod.TechCrosshairHUDAuto
             var character = Character.Controlled;
             if (character == null || character.IsDead) return false;
 
-            if (CyberBrainEnabled) return true;
+            if (CyberEyeEnabled && CyberBrainEnabled) return true;
 
             return false;
         }
