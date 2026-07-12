@@ -1491,31 +1491,36 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 			if damage == 100 then
 				return
 			else
+
 				local transplantidentifier = "kidneytransplant_q1"
 				if NTC.HasTag(usingCharacter, "organssellforfull") then transplantidentifier = "kidneytransplant" end
-				if damage < 50 then
-					HF.SetAffliction(targetCharacter, "kidneydamage", 50, usingCharacter)
-					HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
-					-- add acidosis, alkalosis and sepsis to the bloodpack if the donor has them
-					local function postSpawnFunc(args)
-						local tags = {}
 
-						if args.acidosis > 0 then
-							table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
-						elseif args.alkalosis > 0 then
-							table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
-						end
-						if args.sepsis > 10 then table.insert(tags, "sepsis") end
+				local function postSpawnFunc(args)
+					local tags = {}
 
-						local tagstring = ""
-						for index, value in ipairs(tags) do
-							tagstring = tagstring .. value
-							if index < #tags then tagstring = tagstring .. "," end
-						end
-
-						args.item.Tags = tagstring
-						args.item.Condition = args.condition
+					if args.acidosis > 0 then
+						table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
+					elseif args.alkalosis > 0 then
+						table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
 					end
+					if args.sepsis > 10 then table.insert(tags, "sepsis") end
+
+					local tagstring = ""
+					for index, value in ipairs(tags) do
+						tagstring = tagstring .. value
+						if index < #tags then tagstring = tagstring .. "," end
+					end
+
+					args.item.Tags = tagstring
+					args.item.Condition = args.condition
+				end -- ^ moved this function outside of the if statements since it was the same in both
+				
+				if damage < 50 then
+
+					HF.AddAffliction(targetCharacter, "kidneydamage", 50, usingCharacter) -- < this has been changed since if your taking a kidney out, it should just give 50 kidney damage
+					HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
+					-- ^ the way kidney damage works in this is already kinda scuffed, so simplifying it to add instead of set makes it so that the "second" kidney would retain damage
+	
 					local params = {
 						acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
 						alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
@@ -1536,32 +1541,15 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					else
 						HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
 					end
+
 					damage = damage + 50
 				elseif damage < 95 then
+
 					HF.SetAffliction(targetCharacter, "kidneyremoved", 100, usingCharacter)
 					HF.SetAffliction(targetCharacter, "kidneyswap", 0, usingCharacter)
 					HF.SetAffliction(targetCharacter, "kidneydamage", 100, usingCharacter)
 					HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
-					-- add acidosis, alkalosis and sepsis to the bloodpack if the donor has them
-					local function postSpawnFunc(args)
-						local tags = {}
 
-						if args.acidosis > 0 then
-							table.insert(tags, "acid:" .. tostring(HF.Round(args.acidosis)))
-						elseif args.alkalosis > 0 then
-							table.insert(tags, "alkal:" .. tostring(HF.Round(args.alkalosis)))
-						end
-						if args.sepsis > 10 then table.insert(tags, "sepsis") end
-
-						local tagstring = ""
-						for index, value in ipairs(tags) do
-							tagstring = tagstring .. value
-							if index < #tags then tagstring = tagstring .. "," end
-						end
-
-						args.item.Tags = tagstring
-						args.item.Condition = args.condition
-					end
 					local params = {
 						acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
 						alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
@@ -1582,6 +1570,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					else
 						HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
 					end
+
 				end
 			end
 		end
