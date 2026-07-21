@@ -1164,7 +1164,7 @@
                 <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" duration="20" delay="1">
                     <Affliction identifier="burn" amount="0.2" />
                     <Affliction identifier="bloodpressure" amount="2" />
-                    <ReduceAffliction type="organdamage" amount="1" />
+                    <ReduceAffliction identifier="organdamage" amount="1" />
                     <ReduceAffliction type="internaldamage" amount="1" />
                     <ReduceAffliction identifier="hypoxemia" amount="5" />
                     <ReduceAffliction identifier="bloodloss" amount="2.5" />
@@ -1177,7 +1177,7 @@
                 <StatusEffect statuseffecttags="medical" multiplyafflictionsbymaxvitality="true" type="OnFailure" target="UseTarget" duration="20" delay="1">
                     <Affliction identifier="burn" amount="1" />
                     <Affliction identifier="bloodpressure" amount="1" />
-                    <ReduceAffliction type="organdamage" amount="0.5" />
+                    <ReduceAffliction identifier="organdamage" amount="0.5" />
                     <ReduceAffliction type="internaldamage" amount="0.5" />
                     <ReduceAffliction identifier="hypoxemia" amount="2" />
                     <ReduceAffliction identifier="bloodloss" amount="1.25" />

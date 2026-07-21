@@ -4734,7 +4734,7 @@ thats what the vomiting symptom is for -->
       name=""
       identifier="organdamage"
       description=""
-      type="organdamage"
+      type="damage"
       causeofdeathdescription=""
       selfcauseofdeathdescription=""
       limbspecific="false"
