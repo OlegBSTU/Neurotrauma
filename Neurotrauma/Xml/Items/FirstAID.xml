@@ -65,7 +65,7 @@
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
-            <StatusEffect type="OnUse" target="UseTarget">
+            <StatusEffect type="OnUse" target="Limb">
                 <LuaHook name="NT.runItemMethod"/>
             </StatusEffect>
         </MeleeWeapon>
@@ -74,7 +74,7 @@
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
-            <StatusEffect type="OnImpact" target="UseTarget">
+            <StatusEffect type="OnImpact" target="Limb">
                 <LuaHook name="NT.runItemMethod"/>
             </StatusEffect>
         </Projectile>
