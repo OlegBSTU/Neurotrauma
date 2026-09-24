@@ -244,7 +244,7 @@
       <!-- Partial Pressure Protection: at most once every 30 seconds, if you're in pressure, give 5-10 seconds of Pressure Stabilization.
         ntc_cyberlung_pressure_recovery being > 0 means its been triggered recently, and is a countdown until its next allowed to trigger.
        -->
-      <StatusEffect target="Character" setvalue="true" interval="1" comparison="And">
+      <StatusEffect target="Character" multiplybymaxvitality="true" setvalue="true" interval="1" comparison="And">
         <Conditional InPressure="true"/>
         <Conditional pressureProtection="lt 1000"/>
         <Conditional ntc_cyberlung_pressure_recovery="lte 0.1"/>
