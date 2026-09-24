@@ -98,7 +98,7 @@ NT.ContainerFills.surgerytoolboxsetstarter = {
 			HF.SpawnItemPlusFunction("suture", nil, nil, item.OwnInventory, 11)
 		end
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 NT.ContainerFills.organtoolbox = {
@@ -106,46 +106,44 @@ NT.ContainerFills.organtoolbox = {
 		HF.SpawnItemPlusFunction("gelipack", nil, nil, item.OwnInventory, 0)
 		HF.SpawnItemPlusFunction("gelipack", nil, nil, item.OwnInventory, 1)
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 NT.ContainerFills.aed = {
 	func = function(item)
 		HF.SpawnItemPlusFunction("batterycell", nil, nil, item.OwnInventory, 0)
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 NT.ContainerFills.antisepticspray = {
 	func = function(item)
 		HF.SpawnItemPlusFunction("antiseptic", nil, nil, item.OwnInventory, 0)
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 NT.ContainerFills.bvm = {
 	func = function(item)
 		HF.SpawnItemPlusFunction("oxygentank", nil, nil, item.OwnInventory, 0)
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 NT.ContainerFills.autocpr = {
 	func = function(item)
 		HF.SpawnItemPlusFunction("batterycell", nil, nil, item.OwnInventory, 0)
 	end,
-	desiredcontainer = "medicine cabinet",
+	desiredcontainer = "medcabinet",
 }
 
 -- Hooks XML Lua event "NT.container.spawn" to create container items and put them inside it
 Hook.Add("NT.containerfills.spawn", "NT.containerfills.spawn", function(effect, deltaTime, item, targets, worldPosition)
 	if item == nil then return end
 
-	local parentEntityString = string.lower(item.ParentInventory.Owner.ToString())
+	local parentEntityString = string.lower(item.ContainerIdentifier.ToString())
 	local identifier = item.Prefab.Identifier.Value
-	print(NT.ContainerFills[identifier].desiredcontainer)
-	print(not NT.ContainerFills[identifier].desiredcontainer == "any")
-	print(not string.find(parentEntityString, NT.ContainerFills[identifier].desiredcontainer))
+
 	if
 		not string.find(NT.ContainerFills[identifier].desiredcontainer, "any")
 		and not string.find(parentEntityString, NT.ContainerFills[identifier].desiredcontainer)
