@@ -675,7 +675,7 @@ end
 NT.ItemMethods.emptybloodpack = function(item, usingCharacter, targetCharacter, limb)
 	if item.Condition <= 0 then return end
 
-	if not targetCharacter.Character.IsHuman then return end
+	if not targetCharacter.IsHuman then return end
 
 	if targetCharacter.Bloodloss <= 31 then
 		local success = HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
