@@ -245,7 +245,7 @@
             <SkillRequirementHint identifier="medical" level="10"/>
         </Item>
 
-        <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+        <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag,disallowduplicatedeconstructoutput" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer primary="medcab" minamount="0" maxamount="0"/>
             <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
@@ -258,8 +258,9 @@
                 <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="2"/>
             </Price>
             <Deconstruct time="5">
-                <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1"/>
-                <Item identifier="stabilozine" copycondition="true" mincondition="0.1"/>
+                <Item identifier="antibloodloss1"/>
+                <Item identifier="stabilozine"/>
+                <Item identifier="emptybloodpack"/>
             </Deconstruct>
             <SuitableTreatment identifier="bloodloss" suitability="100"/>
             <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="326,327,64,64" origin="0.5,0.5"/>
