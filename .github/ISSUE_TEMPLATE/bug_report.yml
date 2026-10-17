@@ -15,26 +15,6 @@ body:
 
         For general modding help and support visit the [Undertow Games: baro-modding channel](https://discord.com/channels/103209684680323072/426913209602146315).
   - type: dropdown
-    id: lua-version
-    attributes:
-      label: LuaForBarotrauma version
-      options:
-        - 1.0.109
-        - 1.0.108
-        - 1.0.107
-        - 1.0.106
-        - 1.0.105
-        - 1.0.104
-        - 1.0.103
-        - 1.0.102
-        - 1.0.101
-        - 1.0.100
-        - 1.0.99
-        - 1.0.98
-        - 1.0.97
-    validations:
-      required: true
-  - type: dropdown
     id: addons-used
     attributes:
       label: Expansions in use
@@ -55,7 +35,7 @@ body:
     id: version
     attributes:
       label: Neurotrauma Version
-      placeholder: "A1.18.2"
+      placeholder: "A1.19.0"
     validations:
       required: true
   - type: textarea
