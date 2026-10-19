@@ -567,19 +567,15 @@
             <RequiredSkill identifier="medical" level="40"/>
             <RequiredItems identifier="antiseptic,antibloodloss1" type="Contained" msg="Decontaminant Required"/>
 
-            <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+            <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true">
+                <Sound file="%ModDir:3190189044%/Sound/spray.ogg" range="500"/>
+            </StatusEffect>
 
             <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="2" stackable="false"/>
 
             <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" disabledeltatime="true" Condition="-10.0"/>
 
             <StatusEffect type="OnUse" targettype="Contained" targets="antibloodloss1" disabledeltatime="true" Condition="-100.0"/>
-
-            <StatusEffect statuseffecttags="medical" type="OnUse" target="Limb" disabledeltatime="true">
-                <Sound file="%ModDir:3190189044%/Sound/spray.ogg" range="500"/>
-                <ReduceAffliction identifier="infectedwound" amount="100"/>
-                <Affliction identifier="ointmented" amount="20"/>
-            </StatusEffect>
         </RepairTool>
 
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">

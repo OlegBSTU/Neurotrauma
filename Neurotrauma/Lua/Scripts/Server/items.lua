@@ -558,6 +558,14 @@ NT.SutureAfflictions = {
 			return NTConfig.Get("NT_OpenCloseTamponade", false)
 		end,
 	},
+	infectedcavity = {
+		xpgain = 3,
+		case = "retractedskin",
+		-- If cavity cleaning complete, proceed to suture it
+		condition = function(item, usingCharacter, targetCharacter, limb)
+			return HF.HasAfflictionLimb(targetCharacter, "caviclean", LimbType.Torso, 100)
+		end,
+	},
 
 	arteriesclamp = { xpgain = 0, case = "retractedskin" },
 	internalbleeding = { xpgain = 3, case = "retractedskin" },
@@ -629,7 +637,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 			if
 				prefab ~= nil
 				and (value.case == nil or HF.HasAfflictionLimb(targetCharacter, value.case, limbtype))
-				-- Additional check for config
+				-- Additional check for config / conditions
 				and (value.condition == nil or value.condition(item, usingCharacter, targetCharacter, limb))
 			then
 				if value.func ~= nil then
@@ -2610,27 +2618,17 @@ NT.ItemStartsWithMethods.antisepticspray = function(item, usingCharacter, target
 	if HF.HasAffliction(targetCharacter, "stasis", 0.1) then return end
 
 	local containedItem = item.OwnInventory.GetItemAt(0)
-	if containedItem == nil or containedItem.Prefab.Identifier.Value ~= "antibloodloss1" then return end
-	if
-		limbtype == LimbType.Torso
-		and HF.HasAffliction(targetCharacter, "infectedcavity", 1)
+	if containedItem == nil then return end
+	if containedItem.Prefab.Identifier.Value == "antiseptic" then
+		HF.AddAfflictionLimb(targetCharacter, "infectedwound", limbtype, -100, usingCharacter)
+		HF.AddAfflictionLimb(targetCharacter, "ointment", limbtype, 25, usingCharacter)
+	elseif
+		containedItem.Prefab.Identifier.Value == "antibloodloss1"
+		and limbtype == LimbType.Torso
 		and HF.HasAffliction(targetCharacter, "retractedskin", 1)
 	then
 		local skill = HF.GetSurgerySkill(usingCharacter)
-		local delay = 11000 - skill * 10
-		HF.AddAfflictionLimb(targetCharacter, "caviclean", limbtype, math.max(100 - skill / 2, 10), usingCharacter)
-		Timer.Wait(function()
-			local strength = HF.GetAfflictionStrengthLimb(targetCharacter, limbtype, "caviclean", 0)
-			if strength > 0 then
-				HF.SetAffliction(targetCharacter, "caviclean", 0, usingCharacter)
-				HF.SetAffliction(targetCharacter, "infectedcavity", 0, usingCharacter)
-				if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill", true) then
-					HF.GiveSkillScaled(usingCharacter, "surgery", 20000)
-				else
-					HF.GiveSkillScaled(usingCharacter, "medical", 10000)
-				end
-			end
-		end, delay)
+		HF.AddAfflictionLimb(targetCharacter, "caviclean", limbtype, 1 + skill / 2, usingCharacter)
 	end
 end
 
