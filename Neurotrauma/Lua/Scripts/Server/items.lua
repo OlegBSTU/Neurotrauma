@@ -1493,7 +1493,6 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 			if damage == 100 then
 				return
 			else
-
 				local transplantidentifier = "kidneytransplant_q1"
 				if NTC.HasTag(usingCharacter, "organssellforfull") then transplantidentifier = "kidneytransplant" end
 
@@ -1516,13 +1515,12 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					args.item.Tags = tagstring
 					args.item.Condition = args.condition
 				end -- ^ moved this function outside of the if statements since it was the same in both
-				
-				if damage < 50 then
 
+				if damage < 50 then
 					HF.AddAffliction(targetCharacter, "kidneydamage", 50, usingCharacter) -- < this has been changed since if your taking a kidney out, it should just give 50 kidney damage
 					HF.AddAffliction(targetCharacter, "organdamage", (100 - damage) / 5, usingCharacter)
 					-- ^ the way kidney damage works in this is already kinda scuffed, so simplifying it to add instead of set makes it so that the "second" kidney would retain damage
-	
+
 					local params = {
 						acidosis = HF.GetAfflictionStrength(targetCharacter, "acidosis"),
 						alkalosis = HF.GetAfflictionStrength(targetCharacter, "alkalosis"),
@@ -1546,7 +1544,6 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 
 					damage = damage + 50
 				elseif damage < 95 then
-
 					HF.SetAffliction(targetCharacter, "kidneyremoved", 100, usingCharacter)
 					HF.SetAffliction(targetCharacter, "kidneyswap", 0, usingCharacter)
 					HF.SetAffliction(targetCharacter, "kidneydamage", 100, usingCharacter)
@@ -1572,7 +1569,6 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					else
 						HF.GiveItemPlusFunction(transplantidentifier, postSpawnFunc, params, usingCharacter)
 					end
-
 				end
 			end
 		end
