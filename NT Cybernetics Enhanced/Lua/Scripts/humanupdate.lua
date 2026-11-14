@@ -35,7 +35,7 @@ function NTCyb.UpdateHuman(character)
 			if limb ~= nil and limb.InWater then inwater = true end
 			if inwater then
 				-- add damaged electronics
-				Timer.Wait(function(limb)
+				Timer.Wait(function()
 					if limb ~= nil then
 						local spawnpos = limb.WorldPosition
 						HF.SpawnItemAt("ntcvfx_malfunction", spawnpos)
