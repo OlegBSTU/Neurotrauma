@@ -35,7 +35,7 @@ function NTCyb.UpdateHuman(character)
                         local spawnpos = limb.WorldPosition
                         HF.SpawnItemAt("ntcvfx_malfunction",spawnpos) end
                 end,math.random(1,500))
-                HF.AddAfflictionLimb(character,"ntc_damagedelectronics",limbtype,2*(1+loosescrews/100)*(1+materialloss/100)*NT.Config.NTCybWaterDamage*NT.Deltatime)
+                HF.AddAfflictionLimb(character,"ntc_damagedelectronics",limbtype,2*(1+loosescrews/100)*(1+materialloss/100)*NTConfig.Get("NTCyb_waterDamage",0)*NT.Deltatime)
             end
         end
 
